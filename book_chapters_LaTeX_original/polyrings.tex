@@ -1,0 +1,1187 @@
+% Important results -- Gauss lemma, solution by radicals
+% make sure definition of multiplication props is correct
+% multiplication -- usual definition (term by term). Then show rearrangement. Make sure the same result is not duplicated elsewhere.
+% Matrices -- similarity of multiplication with matrix multiplication.  Shows associativity immediately. Matrices also form a ring (not commutative)
+% Preparation for coding theory.
+
+
+\chap{Polynomials}{poly}
+ 
+\section{Polynomials of various stripes}
+In high school we learn how to do algebraic operations on polynomials.\footnote{This chapter contains contributions by David Weathers and Johnny Watts (edited by C.T.} For instance, if we have
+\begin{align*} 
+p(x) & = x^3 -3x +2 \\
+q(x) & = 3x^2 -6x +5,
+\end{align*}
+then we can compute 
+\begin{align*}
+p(x) + q(x) 
+& =  ( x^3 - 3 x + 2 ) + ( 3 x^2 - 6 x + 5 ) \\
+& = x^3 + 3x^2 - 3x - 6x + 5 + 2\\
+& = x^3 + 3 x^2 - 9 x + 7
+\end{align*}
+Notice that we have grouped together like terms, that is terms which have the same power of our variable x, which is not only pretty but also very useful later on.  Multiplication of polynomials is a bit more involved, so let us start with polynomials of single terms (monomials) and then move up from there.  Suppose we have,
+\begin{align*} 
+p(x) & = 5x^3 \\
+q(x) & = 3x^2,
+\end{align*}
+Then their product is
+\begin{align*}
+p(x)  q(x) 
+& =  5x^3 3 x^2 \\
+& = (5*3)x^{(3 + 2)}\\
+& = 15x^5
+\end{align*}
+where we combined the coefficients and the exponents (remember that exponents of like variables are added together when those variables are multiplied with each other).  If you recall the distributive law, we can multiply a polynomial of two terms by a monomial, where we multiply each term in the first polynomial,$ 5x^3 + 2x$, with the second polynomial, $3x^2$,
+\begin{align*} 
+p(x) & = 5x^3 + 2x \\
+q(x) & = 3x^2,
+\end{align*}
+Then their product is
+\begin{align*}
+p(x)  q(x) 
+& = ( 5x^3 +2x)  3x^2 \\
+&= 5x^3 3x^2 + 2x 3x^2\\
+& = (5*3)x^{(3 + 2)} + (2*3)x^{(1+2)}\\ 
+& = 15x^5 + 6x^3
+\end{align*}
+We can extend the distributive law further to allow us to multiply a two term polynomial by another two term polynomial.  Like before, each term in the first polynomial is being multiplied by every term in the second polynomial,
+\begin{align*} 
+p(x) & = 5x^3 + 2x \\
+q(x) & = 3x^2 - 6x,
+\end{align*}
+Then their product is
+\begin{align*}
+p(x)  q(x) 
+& = ( 5x^3 +2x)  (3x^2 - 6x) \\
+& = 5x^3 (3x^2 - 6x) +2x(3x^2 - 6x) 
+\end{align*}
+At this point we just have the sum of two monomials times a two term polynomial, which we now know can be calculated using the distributive property,
+\begin{align*}
+& = 5x^3 (3x^2 - 6x) +2x(3x^2 - 6x) \\
+& = (15x^5 -30x^4) + (6x^3-12x^2)\\
+&= 15x^5 - 30x^4 + 6x^3 - 12x^2
+\end{align*}
+Try using the FOIL method\index{FOIL method} you learned in high school algebra and you will get the same result, but thinking in terms of the distributive property has the advantage of being applicable to polynomials that have more than just two terms each.  Suppose the first polynomial has three terms and the second polynomial has two terms.  FOIL will not work here, but if we use the distributive property, where every term in the first polynomial is multiplied by every term in the second and the results added up, we can arrive at the correct answer
+\begin{align*}
+p(x) & = 5x^3 + 4x^2 - 2x \\
+q(x) & = 3x^2 - 6x,
+\end{align*}
+\begin{align*}
+p(x) q(x)
+& = 5x^3 (3x^2 - 6x) +4x^2(3x^2 - 6x)-2x(3x^2 - 6x) \\
+& = (15x^5 -30x^4) + (12x^4 - 24x^3)  + (-6x^3 + 12x^2)\\
+&= 15x^5 - 30x^4 + 12x^4-24x^3 - 6x^3 + 12x^2\\
+&= 15x^5 + (-30+12)x^4 + (-24-6)x^3 +12x^2 \\
+&= 15x^5 - 18x^4 - 30x^3 +12x^2
+\end{align*}
+Again notice that we are grouping like terms by exponent.  Later, when we give a more general way of multiplying polynomials, this method of distributing is what you need to have in mind.
+
+Similar rules apply if we perform algebraic operations on polynomials with integer, rational, real, or complex coefficents. We may identify different sets of polynomials according to the type of coefficient used. For instance we may define:
+\begin{itemize}
+\item
+$\mathbb{Z}[x]$ is the set of polynomials in the variable $x$ with integer coefficients;
+\item
+$\mathbb{R}[x]$ is the set of polynomials in the variable $x$ with real coefficients.
+\end{itemize}
+Similarly we may define $\mathbb{N}[x], \mathbb{Q}[x], \mathbb{C}[x]$, and so on. We may even define $\mathbb{Z}_n[x]$ for the integers mod $n$. For example, two polynomials $p(x)$ and $q(x)$ in $\mathbb{Z}_4[x]$ are
+\begin{align*} 
+p(x) & = x^3 + 3x +1 \\
+q(x) & = 3x^3 + 3x^2 + 2x +2.
+\end{align*}
+We may add them as follows:
+\begin{align*}
+p(x) + q(x) &= (1\oplus 3)x^3 + (0\oplus 3)x^2 + (3\oplus 2)x + (1\oplus 2)\\
+&= 3x^2 + x + 3,
+\end{align*}
+and multiply as folows:
+\begin{align*}
+p(x)  q(x) 
+& =  (1 \odot 3)x^6 + (1 \odot 3)x^5 + (2\oplus 3\odot 3)x^4 + (1\odot 2 \oplus 3\odot 3 \oplus  1 \odot 3)x^3 \\
+&~~+ (3 \odot 2 \oplus  1 \odot 3)x^2 + (3 \odot 2) + 1 \odot 2)x + 1\odot 2 \\
+& = 3x^6 + 3x^5 + 3x^4 + 2x^3 + 1x^2 + 2.
+\end{align*}
+In this case, arithmetic mod 4 is used on the coefficients to compute the sum and product of $p(x)$ and $q(x)$.  Although we will not do much in the future with $\mathbb{Z}_4[x]$, we will be working quite a bit with $\mathbb{Z}_2[x]$.
+
+\begin{exercise}{}
+Compute the sum and product of $p(x)$ and $q(x)$, where both polynomials are in $\mathbb{Z}_2[x]$.
+\begin{enumerate}[(a)]
+\item
+$p(x)= x^2 + x + 1$, $q(x)=x^3 +x^2+x+1$
+\item
+$p(x)= x^4 + x^2+1$, $q(x)=x^4 +x^3+x^2$.
+\item
+$p(x)= x^4 + x^3+x^2+x+1$, $q(x)=p(x)$.
+\end{enumerate}
+\end{exercise}
+
+Are these sets of polynomials also groups? I'm glad you asked! See if you can figure it out:
+
+\begin{exercise}{}
+For each of the following parts, \emph{explain} your answer. 
+\begin{enumerate}[(a)]
+\item
+Which of the following are groups under addition: $\mathbb{N}[x], \mathbb{Z}[x], \mathbb{Q}[x], \mathbb{R}[x]$, $\mathbb{C}[x]$, $\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$? 
+\item
+Which of the following are groups under multiplication: $\mathbb{N}[x]$, $\mathbb{Z}[x]$,$\mathbb{Q}[x]$,$\mathbb{R}[x]$, $\mathbb{C}[x]$, $\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$? 
+
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+Compute the sum and product of $p(x)$ and $q(x)$.
+\begin{enumerate}[(a)]
+\item
+$p(x)= 2x^2 + x + 1$, $q(x)=x^3 +3x^2$,where both polynomials are in $\mathbb{Z}_5[x]$.
+\item
+$p(x)= 2x^4 + 3x^3 + 4x^2+1$, $q(x)=x^3 +2x^2+5$, where both polynomials are in $\mathbb{Z}_6[x]$.
+\end{enumerate}
+\end{exercise}
+
+In some sense, polynomials are more complicated than groups because they have two operations, while groups have only one. It turns out that polynomial sets are important examples of a second type of mathematical object called a \emph{ring}. Later in this chapter we will define rings in general; but for now, we will look at polynomials in particular (and generalize our results later).
+
+\section {Polynomial rings}
+ We have noted above that polynomials can have different types of coefficients. 
+In this section we will  impose some properties on the coefficients that, although quite general, will enable us to prove several interesting properties. But first, let's relate polynomials to the summation notation that we discussed in the previous chapter:
+
+\begin{defn} (\emph{Polynomial notation}) A polynomial may be written as
+
+\[f(x) = \sum^{n}_{i=0} a_i x^i = a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n, \]
+
+Where $\{ a_i \}, i=1,2,\ldots$ are called the \bfii{ coefficients} \index{Polynomial!coefficients} of $\{x^i\}$. It is possible for $a_i = 0$, in which case we usually omit the corresponding $x^i$ term (for instance, we write $x^2 -7$ rather than $x^2 + 0x -7$). When we write a polynomial as a sum in this way we will \emph{assume} that $a_n \neq 0$ (here $a_n$ is called the \bfii{leading coefficient}\index{Polynomial! leading coefficient}.  Thus the largest power of $x$ that appears in the polynomial is $x^n$: this largest power is called the \bfii{degree}\index{Degree!of a polynomial} of the polynomial.
+\end{defn}
+%%% Give example of polynomial that can be re-expressed in summation notation.
+\begin{exercise}{}
+Re-express the following polynomials in summation notation,  and give the degree of each polynomial.
+\begin{enumerate}[(a)]
+\item
+$1 + 0x + 3x^2 + 0x^3 + 5x^4 + 0x^5 + 7x^6 +0x^7 +  9x^8$
+\item
+$1 + 0x + \cis(\pi/2)x^2 + 0x^3 + \cis(\pi)x^4 + 0x^5  + \cis(3\pi/2)x^6 + 0x^7$
+\item
+$1+ 2x + 4x^2 + 8x^3 + 16x^4 + 32x^5$
+\item
+$1+4x+11x^2+30x^3+85x^4$ ( \emph{Hint:} Note $4=3+1$ and $11=3^2+2$.)
+\item
+$1-\frac{1}{3}x + \frac{1}{5}x^2 - \frac{1}{7}x^3 + \frac{1}{9}x^4 - \frac{1}{11}^5$
+\end{enumerate}
+\end{exercise}
+
+
+
+\begin{defn} \label{def:polyring}(\emph{Polynomial rings})~~
+A set of polynomials is called a \bfii{ polynomial ring}\index{polynomial!ring}\index{ring!polynomial} if two operations (which we denote as $+$ and $\cdot$)  are defined on the set of coefficients and
+\begin{itemize}
+\item
+The coefficients form an Abelian group under +, with identity element 0;
+\item
+The nonzero coefficients form an Abelian group under $\cdot$, with identity element 1.
+\item The operations $+$ and $\cdot$ on the set of coefficients satisfy the distributive property: for any three coefficients $a,b,c$, we have $a \cdot (b + c) = a \cdot b + a \cdot c$ and 
+$(b + c) \cdot a = b \cdot a + c \cdot a$.
+\end{itemize}
+\end{defn}
+
+\begin{rem}
+\begin{itemize}
+\item
+Many other references define polynomial rings differently (for instance, they may not require that the nonzero coefficients form a group under multiplication). Our definition is more restrictive than most.
+\item
+In the following, we will assume that the polynomials are elements of a polynomial ring.
+\end{itemize}
+\end{rem}
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+According to Definition~\ref{def:polyring},is $\mathbb{Z}_6[x]$ a polynomial ring? \emph{Explain} your answer.
+\item
+According to Definition~\ref{def:polyring},is $\mathbb{Z}_{11}[x]$ a polynomial ring? \emph{Explain} your answer.
+\item
+What are the conditions on $n$ such that $\mathbb{Z}_n[x]$ is a polynomial ring?
+\end{enumerate}
+\end{exercise}
+We see from the previous exercise that $F[x]$ fails to be a polynomial ring when $F^*$ is not an Abelian group. Why do we require this? It turns out that if we don't, then the polynomials have some nasty properties that we don't want.
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+Find two nonzero polynomials in $\mathbb{Z}_4[x]$ of degree 1 and 3 respectively  whose product is 0.
+\item
+Is it possible to find two nonzero polynomials $\mathbb{Z}_5[x]$ whose product is 0? \emph{Explain} your answer.
+\item
+Suppose $n=p\cdot q$, where $p$ and $q$ are positive integers. Show that there exist two nonzero polynomials in $\mathbb{Z}_n[x]$ whose product is 0.
+\end{enumerate}
+\end{exercise}
+In the previous section, we showed properties of polynomials in the familiar case where the coefficients are real numbers. Now let's 
+do the same thing, but this time for arbitrary polynomial rings.
+ 
+\begin{defn} Two polynomials are said to be \bfii{ equal}\index{equality!of polynomials}  if and only if their corresponding coefficients are equal. That is, if we let    
+\begin{align*}
+p(x)  = \sum^{n}_{i=0} a_i x^i; \qquad
+q(x)  = \sum^{m}_{i=0} b_i x^i,
+\end{align*}
+then $p(x) = q(x)$ if and only if $n=m$ and $a_i = b_i$ for all $0 \leq i \leq n$.
+\end {defn}
+
+\begin {defn}
+We define the \bfii{ sum of two polynomials}\index{sum! of polynomials} as follows.  Let
+\begin{align*}
+p(x)  = \sum^{n}_{i=0} a_i x^i ; \qquad
+q(x)  = \sum^{m}_{i=0} b_i x^i,
+\end{align*}
+Then the sum of $p(x)$ and $q(x)$ is
+\[
+p(x) + q(x) =  \sum_{i=0}^{\max(m,n)} (a_i + b_i) x^i.
+\]
+(If $a_i$ or $b_i$ is not specified for some power $i \leq \max(m,n),$ then it is assumed to be 0.)
+  
+\end{defn}
+Notice that we have taken the upper limit of the sum to $\max(n,m)$ in order to make sure to include all nonzero terms from both polynomials. 
+
+Throughout this book, we have encountered various mathematical structures and shown that in many cases they possess group properties. Let's now give polynomials that same treatment. Since we have two operations, addition and multiplication, it is possible that polynomials are groups under either or both of these operations. Of course, it's possible that polynomials may have have different properties depending on what type of coefficients they have, so all of the following proofs will depend \emph{only} on the coefficient properties listed in Definition 5.  
+
+First let us take a look at the commutativity and associativity of addition.  While commutativity is not a necessary property for groups, we include the following proof because it uses techniques that are useful in many polynomial proofs.
+
+\begin {prop}{polysumcommuteassociate} Polynomial addition is both commutative: 
+	\[p(x)+q(x) = q(x) + p(x),\]	
+and associative:	
+	\[(p(x) + q(x)) + r(x)  = p(x) + (q(x) + r(x)).\]	
+\end {prop}
+\begin {proof}{}
+First, we show commutativity:	
+Given polynomials,
+\begin{align*}
+p(x)  = \sum^{n}_{i=0} a_i x^i; \qquad
+q(x)  = \sum^{m}_{i=0} b_i x^i,
+\end{align*}	
+then 
+\[
+p(x) + q(x) =  \sum_{i=0}^{\max(m,n)} (a_i + b_i) x^i,
+\]
+and
+\[
+p(x) + q(x) =  \sum_{i=0}^{\max(m,n)} (b_i + a_i) x^i.
+\]
+Since the coefficients are Abelian under +, we have $a_i + b_i = b_i + a_i$ for all $i$. It follows that all coefficents of $p(x) + q(x)$ are equal to the corresponding coefficients of $q(x) + p(x)$. By the definition of polynomial equality, this means that 
+$p(x) + q(x) = q(x) + p(x)$.  Note that the condition that the coefficients be commutative is satisfied for all of the polynomials we have been considering so far, including $\mathbb{Z}[x]$, $\mathbb{R}[x]$, $\mathbb{C}[x]$, and so on.
+
+\end {proof}
+
+\begin {exercise}{}
+Using the definition of polynomial equality and polynomial addition, complete Proposition \ref{proposition:poly:polysumcommuteassociate} by proving the associativity of polynomial addition.
+\end {exercise}
+
+It is also true that polynomials under addition have an identity and an inverse.
+
+\begin {prop}{polyadditiveidentity} Polynomials have an additive identity.
+\end{prop}
+\begin{exercise}{}
+Show that polynomials have an additive identity by specifying the identity polynomial, and showing that it satisfies the identity property.
+\end{exercise}
+
+\begin{prop}{polyadditiveinverse} Every polynomial has an additive inverse.  (In the following, we will write the additive inverse of $p(x)$ as $-p(x)$).
+\end{prop}
+\begin{exercise}{}
+Given any polynomial $f(x) = \sum_{i=0}^{n} a_i x^i$, show that an additive inverse to that polynomial exists by (a) specifying the inverse and (b) showing that it satisfies the inverse property.
+\end{exercise}
+
+\begin {prop}{polyadditivegroup} Polynomials under addition form a group. The group is Abelian if the additive group of coefficients is Abelian.
+\end{prop}
+
+\begin{exercise}{}
+Prove Proposition \ref{proposition:poly:polyadditivegroup}.
+\end{exercise}
+
+If we have a formula for adding polynomials, we must surely have a formula for multiplying polynomials, and sure enough we do.  The easy part is knowing what degree (the value of the highest exponent) of polynomial the result will be, because that is just the sum of the degrees of polynomials being multiplied. For example, a first degree polynomial like $2x+1$ times a second degree polynomial like $4x^2$ gives us $8x^3+4x^2$, which is a third degree polynomial.  By looking at similar examples, you may convince yourself that for \emph{any} two polynomials, if $p(x)$ is a polynomial of degree $m$ and $q(x)$ is a polynomial of degree $n$, then their product will produce a polynomial with a degree of $m+n$:
+\[
+p(x) q(x) = c_0 + c_1 x + \cdots + c_{m + n} x^{m + n},
+\]
+And we know that if a power doesn't show up in the result, it just means the coefficient is zero.  For instance, our earlier result of $8x^3+4x^2$ could also have been written as $8x^3+4x^2 + 0x^1 + 0x^0$.  So we have a general formula that gives the correct exponents for our variable, in this case $x$, but we still don't know what the coefficients $c$ are.
+ 
+
+To find a general expression for those coefficients we need to use the same techniques as we did earlier when multiplying polynomials, except this time look at it in a general way.  So instead of giving you an example with specific numbers, let us define two general polynomials and see what we get when we multiply them:
+\[ p(x)=a_0x^0 + a_1x^1 + \ldots + a_mx^m \]
+\[ q(x)=b_0x^0 + b_1x^1 + \ldots + b_nx^n \]
+Remember from basic algebra that when you multiply polynomials you multiply the first term of the first polynomial by each term in the second polynomial.  You then add that result to multiplying the second term of the first polynomial by each term in the second polynomial, and do the same for the other terms.  Going by that rule, the product of our two polynomials is:
+\begin{align*}
+p(x)q(x)=& a_0x^0(b_0x^0+b_1x^1+ \ldots + b_nx^n) + a_1x^1(b_0x^0+b_1x^1+ \ldots + b_nx^n) \\
+&+ \ldots + a_mx^m(b_0x^0+b_1x^1+ \ldots + b_nx^n) 
+\end{align*}
+We can also write this in summation notation, which will be useful later on when we try to prove that multiplication of polynomials is associative.
+\[
+p(x) q(x) =\sum_{i=0}^{m}\sum_{j=0}^{n}a_i b_j x^{i+j}
+\]
+%%% Distribute all terms and write in summation notation. (Explain that this will be useful when we try to prove associative)
+%%% We know this is a polynomial since it's a sum of polynomial terms, but it's not written in a very simple form. To really see what the polynomial is, we need to collect all constant terms, all terms with $x$, all terms with $x^2$, and so on.
+Let us get back to finding a formula for those coefficience.  Given the expanded form of the product $p(x)q(x)$, we can collect some common terms, we will call them $R_t$ (the index $t$ tells us what exponent is associated with the variable $x$), and see what we come up with, where we define common terms as the sum of all values of $x$ that share the same exponent.  Let us start with the terms associated with $x^0$, in our case the term labeled $R_0$, where there is only one possible combination that results in $x^0$:
+\[ R_0=a_0x^0b_0x^0 = a_0b_0(x^0\cdot x^0)=a_0b_0(x^0) \]
+Then the coefficient, $c_0$, will be:
+\[ c_0= a_0b_0 \]
+How about $R_1$ and $R_2$, where we collect every possible combination that will result in $x$ having an exponent of 1 and 2, respectively:
+\[ R_1= a_0x^0b_1x^1 + a_1x^1b_0x^0 = (a_0b_1+a_1b_0)x^1  \implies c_1= a_0b_1+a_1b_0 \]
+\[R_2= a_0x^0b_2x^2 + a_1x^1b_1x^1 + a_2x^2b_0x^0 = (a_0b_2 + a_1b_1 +a_2b_0)x^2 \implies c_2 = a_0b_2 + a_1b_1 +a_2b_0 \]
+Looking at the indices of the coefficients, especially once we get to the third coefficient,you can see the pattern:  
+\[
+c_i = \sum_{k = 0}^i a_k b_{i - k} = a_0  b_i + a_1 b_{i -1} + \cdots + a_{i -1} b _1 + a_i b_0
+\]
+Which we can combine with what we already know about the exponents to give a general formula:
+
+\begin{defn}\label{Product of polynomials}
+
+The \emph{product}\index{product!of polynomials} of polynomials $p(x)$ and $q(x)$ is: 
+\[
+p(x) q(x) = c_0 + c_1 x + \cdots + c_{m + n} x^{m + n},
+\]
+where
+\[
+c_i = \sum_{k = 0}^i a_k b_{i - k} = a_0  b_i + a_1 b_{i -1} + \cdots + a_{i -1} b _1 + a_i b_0
+\]
+for each $i$.  Notice that in each case some of the coefficients may be zero.
+\end {defn}
+
+If you are still not convinced the formula given in the definion works, look at the fourth coefficient.  The formula in the definition gives:
+\[ c_3 = \sum_{k = 0}^3 a_k b_{i - k} =  a_0b_3 + a_1b_2 +a_2b_1 + a_3b_0  \]
+If you go about it the long way, that is to write out the polynomial and then pick out and add together every single combination that results in $x^3$, you will get the exact same thing.  Having established that the definition works, we can actually use it with confidence.  Suppose we have two polynomials, $p(x)$ and $q(x)$ we want to multiply, and let us call the result $f(x)$:
+\[ f(x)=(1+x^2-2x^3)(x+4x^3) \]
+So $p(x)$ and $q(x)$ are:
+\[p(x)= 1x^0 + 0x^1 + 1x^2 + (-2)x^3 \]
+\[q(x)= 0x^0 + 1x^1 + 0x^2 + 4x^3 \]
+The highest exponent on both of these is 3, so going by the formula given in the definition we have $m=3$ and $n=3$:
+\[
+p(x) q(x) = c_0 + c_1 x + \cdots + c_{m + n} x^{m + n} = c_0 + c_1 x + \cdots + c_{3 + 3} x^{3 + 3} 
+\]
+Or in other words:
+\[ f(x)= c_0x^0 + c_1x^1 + c_2x^2 + c_3x^3 + c_4x^4 + c_5x^5 + c_6x^6 \]
+Now all we have to do is find the values of those coefficients, some of which may be zero.  Let us start with $c_0$:
+\[ c_i = \sum_{k = 0}^i a_k b_{i - k} \implies  c_0 = a_0b_0= 0 \cdot 1 = 0 \]
+Already we found a term that is zero.  Six more coefficients to find...how about we look at the fifth coefficient:
+\[ c_4 =  \sum_{k = 0}^4 a_k b_{i - k} =   a_0b_4 + a_1b_3 +a_2b_2 + a_3b_1 + a_4b_0.\]
+Notice that $a_4=b_4=0$ since $p(x)$ and $q(x)$ both have degree 3, so the first and last terms are both 0. Altogether we have 
+\[ c_4=0+0\cdot 4+1\cdot 0+(-2)\cdot 1+0=-2.\]
+Doing the same for the other coefficients gives us:
+\[ 0x^0+ 1x^1 + 0x^2 + 5x^3 + (-2)x^4 + 4x^5 + (-8)x^6 \]
+Getting rid of the zero terms and dealing with the negatives gives us the simplified version:
+\[x+5x^3-2x^4+4x^5-8x^6. \]
+\begin {exercise}{}
+Perform the following polynomial multiplications in two ways: first, by distributing and collecting terms; and second, by using the coefficent formula in Definition \ref{Product of polynomials} directly.  Verify that the two methods agree.
+\begin {enumerate}[(a)]
+\item
+$(x-5)(x^2+3x)$
+\item
+$(x-\sqrt{3})(5x^3+2\sqrt{3})$
+\item
+$(4x^2 - 3x + 7/2)(x^3+2)$
+\item
+$(8x^5 + 4x^3 - 7x^2)(10x^2 - 5x + 3)$
+\end{enumerate}
+\end {exercise}
+
+\begin {exercise}{}
+Use the coefficent formula in Definition \ref{Product of polynomials} to evaluate the following products.
+\begin {enumerate}[(a)]
+\item
+$p(x)^2$, where $p(x) = \sum_{i=0}^{3} x^i$
+\item
+$p(x) \cdot q(x)$, where $p(x) = \sum_{i=1}^{3} (i-1)x^i$  and $q(x) = \sum_{j=0}^{2} (3-j)x^j$
+\item
+$p(x) \cdot q(x)$, where $p(x) = \sum_{i=0}^{4} (i-3)x^i$  and $q(x) = \sum_{j=0}^{4} (j-2)x^j$ 
+\item
+$p(x) \cdot q(x)$, where $p(x) = \sum_{i=0}^{4} (2i-6)x^i$  and $q(x) = \sum_{j=0}^{4} (3j-6)x^j$ (\emph{Hint}: Are there any common factors you can take outside 
+the summations before multiplying?)
+\end{enumerate}
+\end {exercise}
+
+
+Polynomials also have \emph{some} group properties under multiplication.
+
+\begin{exercise}{}
+Show that the polynomial $p(x) = 1x^0$ is a multiplicative identity for the set of polynomials $\mathbb{C}[x]$.
+\end{exercise}
+
+Polynomials in general do not have multiplicative inverses \emph{that are polynomials}.  Of course, in high-school algebra you defined $1/p(x)$ as the multiplicative inverse of the polynomial $p(x)$, but $1/p(x)$ is not a polynomial so it doesn't count!
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+Consider the  polynomial $p(x)= 1x$ as an element of $\mathbb{R}[x]$. Show there is no polynomial in $\mathbb{R}[x]$ that is a multiplicative inverse of $p(x)$.
+\item
+Prove or disprove: Polynomial rings are also commutative groups over multiplication.
+\end{enumerate}
+\end{exercise}
+
+%%% rewrite and use the summation notation form of polynomial product
+Another useful fact to keep in mind is that polynomial multiplication is associative.  We could show this with some finite examples, like three quadratics for example. But in mathematics we like to be general, which means that a proof must cover \emph{all} cases.  One possible approach is to use summation notation. To show associativity, we need to show that $r(x)(p(x)q(x))=(r(x)p(x))q(x)$.  As we stated before, the product of two polynomials $p(x)$ and $q(x)$ written in summation notation is:
+\[
+p(x) q(x) =\sum_{i=0}^{m}\sum_{j=0}^{n}a_i b_j x^{i+j}
+\]
+So let us introduce a third polynomial, $r(x)$, with degree $l$ and coefficients $c$, and calculate its product with $(p(x)q(x))$:
+\begin{align*}
+r(x)(p(x) q(x)) =& \sum_{k=0}^{l} \left( \sum_{i=0}^{m}\sum_{j=0}^{n}a_i b_j x^{i+j} \right) c_k x^k \\
+=&\sum_{k=0}^{l} \sum_{i=0}^{m}\sum_{j=0}^{n} a_i b_j x^{i+j} \cdot c_k x^k \\
+=& \sum_{k=0}^{l} \sum_{i=0}^{m}\sum_{j=0}^{n} a_i b_j  c_k x^{i+j+k} 
+\end{align*}
+Here we used our summation rules, the fact that when bases (in this case $x$) are multiplied their exponents are added, and that multiplication is commutative.  Now let's see if we get the same result for $(r(x)p(x))q(x)$:
+\begin{align*}
+(r(x)p(x))q(x) =& \left(  \sum_{k=0}^{l} \sum_{i=0}^{m} c_k a_i x^{k+i} \right)\sum_{j=0}^{n}  b_j x^j \\
+=& \sum_{j=0}^{n} \sum_{k=0}^{l} \sum_{i=0}^{m}  c_k a_i x^{k+i} \cdot  b_j x^j\\
+=&  \sum_{k=0}^{l} \sum_{i=0}^{m}\sum_{j=0}^{n} c_k a_i b_j x^{k+i+j}\\
+=& \sum_{k=0}^{l} \sum_{i=0}^{m}\sum_{j=0}^{n} a_i b_j  c_k x^{i+j+k} 
+\end{align*}
+Again we use our summation rules which in this case allows us to switch the order of the summation symbols without changing the result, the properties of exponents and the commutative properties for our variable $x$ and the coefficients $a$, $b$, and $c$.  What we end up with is the exact same expression as before, so it is true that $r(x)(p(x)q(x))=(r(x)p(x))q(x)$; therefore, multiplication of polynomials is associative. 
+%With summation notation, we can prove that polynomials are associative by using definition 13; however, such a proof can get quite involved.  There is an easier proof that we will show in the next section, but in the mean time let us look at a specific example of the associativity of polynomials.  Suppose we have three linear terms:
+%\[A(x)=a_0x^0 + a_1x^1 \qquad B(x)=b_0x^0 +b_1x^1  \qquad  C(x)=c_0x^0 + c_1x^1  \]
+%To show associativity, we need to show that $A*(B*C)=(A*B)*C$.  Lets do this term by term, $A*(B*C)$ is:
+%\[a_0x^0 + a_1x^1 [(b_0x^0 +b_1x^1)*( c_0x^0 + c_1x^1)] \]
+%\[=a_0x^0 + a_1x^1 [b_0x^0c_0x^0 + b_0x^0c_1x^1 + b_1x^1c_0x^0 + b_1x^1c_1x^1]  \]
+%\begin{align*}
+%&=a_0x^0(b_0x^0c_0x^0 + b_0x^0c_1x^1 + b_1x^1c_0x^0 + b_1x^1c_1x^1 )\\
+%& + a_1x^1(b_0x^0c_0x^0 + b_0x^0c_1x^1 + b_1x^1c_0x^0 + b_1x^1c_1x^1 ) 
+%\end{align*}
+%\begin{align*}
+%=& a_0x^0b_0x^0c_0x^0+a_0x^0b_0x^0c_1x^1 + a_0x^0b_1x^1c_0x^0 + a_0x^0b_1x^1c_1x^1  \\
+%&+ a_1x^1b_0x^0c_0x^0 + a_1x^1b_0x^0c_1x^1 +a_1x^1b_1x^1c_0x^0 +  a_1x^1b_1x^1c_1x^1 
+%\end{align*}
+%So without attempting to simplify these terms, try as you might, we have 8 seperate terms.  Now let us see the terms we get from $(A*B)*C$:
+%\[ [(a_0x^0 + a_1x^1)*(b_0x^0 +b_1x^1)]*(c_0x^0 + c_1x^1) \]
+%\[ =(a_0x^0b_0x^0 + a_0x^0b_1x^1 +a_1x^1b_0x^0 + a_1x^1b_1x^1)*(c_0x^0 + c_1x^1 ) \]
+%\begin{align*}
+%=& a_0x^0b_0x^0c_0x^0 + a_0x^0b_1x^1c_0x^0 +a_1x^1b_0x^0c_0x^0 + a_1x^1b_1x^1c_0x^0 \\
+%&+ a_0x^0b_0x^0c_1x^1 + a_0x^0b_1x^1c_1x^1 +a_1x^1b_0x^0c_1x^1 + a_1x^1b_1x^1c_1x^1 
+%\end{align*}
+%Again we end up with 8 terms, which turn out to be the same terms as $A*(B*C)$, thus $A*(B*C)=(A*B)*C$ for this \emph{specific} example.  That was a lot of work just to prove that two linear terms with one quadratic term is associative.  What if we had three cubic terms, or three 5th order polynomials?  Clearly this method is not feasible if we want to prove the general case of associativity, which should hold true for all orders of polynomials, not just the linear or quadratic versions .  That is the motivation behind the next section where we can prove associativity for any order of polynomials we can think of using matricies, so when the next section gets tough, just imagine sitting there and multiplying out an infinite combination of polynomials!
+
+\begin{exercise}{}
+Show that the multiplication of two linear terms and one quadratic term is associative.
+\end{exercise}
+
+%To show that polynomial multiplication is associative, let
+%\begin{align*}
+%p(x)  = \sum_{i=0}^{m} a_i x^i; \qquad
+%q(x)  = \sum_{i=0}^{n} b_i x^i; \qquad
+%r(x) = \sum_{i=0}^{p} c_i x^i. 
+%\end{align*}
+%Then
+%\begin{align*}
+%[p(x) q(x)] r(x) 
+%& =
+%\left[
+%\left(
+%\sum_{i=0}^{m} a_i x^i 
+%\right)
+%\left( 
+%\sum_{k=0}^{n} b_k x^k
+%\right)
+%\right]
+%\left(
+%\sum_{i=0}^{p} c_i x^i
+%\right) 
+%\end{align*}
+%For the first two terms we can use Definition 13 to combine them:
+%%need to put in a ref statement there
+%\begin{align*}
+%& =
+%\left[
+%\sum_{j=0}^{m+n}
+%\left( 
+%\sum_{k=0}^{i} a_k b_{i-k}
+%\right) x^i
+%\right]
+%\left(
+%\sum_{i=0}^{p} c_i x^i
+%\right) \\
+%& =
+%\sum_{i=0}^{m+n+p} 
+%\left[
+%\sum_{k=0}^{i}
+%\left(
+%\sum_{j=0}^k a_j b_{k-j} 
+%\right) c_k
+%\right]
+% x^i \\
+%& =
+%\sum_{i=0}^{m+n+p} 
+%\left(
+%\sum_{j+k+l=i} a_j b_k c_r
+%\right) x^i 
+%\end{align*}
+%That was the crucial line in the proof, because at this point we can freely choose which pair we want to multiply first.  We already started by multiplying the $a$ and $b$ terms first, so in order to show associativity we need to multiply the $b$ and $c$ terms first.  So at this point we are essentially working in reverse:
+%\begin{align*}
+%& =
+%\sum_{i=0}^{m+n+p}
+%\left[
+%\sum_{j=0}^{i} a_j 
+%\left(
+%\sum_{k=0}^{i-j} b_k c_{i-j-k}
+%\right)
+%\right]  x^i \\
+%& =
+%\left(
+%\sum_{i=0}^{m} a_i x^i 
+%\right)
+%\left[
+%\sum_{i=0}^{n+p} 
+%\left(
+%\sum_{j=0}^{i} b_j c_{i-j}
+%\right) x^i
+%\right] \\
+%& =
+%\left(
+%\sum_{i=0}^{m} a_i x^i 
+%\right)
+%\left[
+%\left( 
+%\sum_{i=0}^{n} b_i x^i
+%\right)
+%\left(
+%\sum_{i=0}^{p} c_i x^i
+%\right)
+%\right] \\
+%& = p(x) [ q(x) r(x) ]
+%\end{align*}
+%This proof seems very involved: we will show a much easier proof shortly. The commutativity and distribution properties of polynomial multiplication are proven similarly (but much more easily!).  We shall leave the proofs of these properties as exercises:
+
+\begin {exercise}{polymult}
+Using summation notation, prove the following properties of polynomial multiplication:
+\begin {enumerate}[(1)]
+\item
+Commutativity 
+$p(x)\cdot q(x) = q(x)\cdot p(x)$
+\item
+Distributivity across addition
+$p(x)\cdot (q(x) + r(x)) =p(x)q(x) + p(x)r(x)$
+
+\end {enumerate}
+\end {exercise}
+
+%\section {Isomorphism with Matrices}
+%Another way of proving associativity and commutativity of polynomial multiplication is by using an isomorphism to matrices.  We can take polynomials, rewrite them in a very specific way as a matrix, and then add or multiply these matricies to get the same result.  This is the same idea as the isomorphism between complex numbers and ordered pairs that you studied in the isomorphism chapter, except here it is polynomials and matrices that are isomorphic:
+%
+%%%%\begin{figure}[htb]
+%%%%	   \center{\includegraphics[width=4.in]
+%%%%	         {images/matrixpolyiso.png}}
+%%%%	  \caption{\label{fig:groups:matrixpolyiso} Multiplication is the ``same'' for polynomials and matrices. }
+%%%%\end{figure}
+%
+%To show that polynomials and matrices are isomorphic, we first need to define how to represent a polynomial using a matrix:
+%\[ M_{ij}=
+%\begin{cases}
+%a_{i-j} ~ i \ge j \\
+%0 ~ i \le j
+%\end{cases} \]
+%If you write this out, it takes the form:
+%\[
+%\left( \begin{array}{cccccc}
+%a_0 & 0 & 0 & 0 & 0 & \cdots\\
+%a_1 & a_0 & 0 & 0 & 0 & \cdots\\
+%a_2 & a_1 & a_0 & 0 & 0 & \cdots\\
+%a_3 & a_2 & a_1 & a_0 & 0 & \cdots\\
+%a_4 & a_3 & a_2 & a_1 & a_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)\\
+%\] 
+%Take the following polynomial product:
+%\[(x^3+2x+3)\cdot (x^2+3)\]
+%Through simple multiplication we know the product is:
+%\[x^5 + 2x^3 + 3x^2 + 3x^3 + 6x + 9 = x^5 + 5x^3 + 3x^2 + 6x + 9\]
+%Now let's take the two polynomials and convert them to $6\times 6$ matrices.  (The reason to use a $6 \times 6$ matrix will be apparent after the conversion.)
+%\[ \left( \begin{array}{cccccc}
+%3 & 0 & 0 & 0 & 0 & 0\\
+%2 & 3 & 0 & 0 & 0 & 0\\
+%0 & 2 & 3 & 0 & 0 & 0\\
+%1 & 0 & 2 & 3 & 0 & 0\\
+%0 & 1 & 0 & 2 & 3 & 0\\
+%0 & 0 & 1 & 0 & 2 & 3\\
+%\end{array} \right)\] 
+%Here the constant coefficient is assigned to every entry on the main diagonal of the matrix, the $x$ coefficient is assigned to the diagonal one space below, and so on.  Now to do the same with the second polynomial.
+%\[ \left( \begin{array}{cccccc}
+%3 & 0 & 0 & 0 & 0 & 0\\
+%0 & 3 & 0 & 0 & 0 & 0\\
+%1 & 0 & 3 & 0 & 0 & 0\\
+%0 & 1 & 0 & 3 & 0 & 0\\
+%0 & 0 & 1 & 0 & 3 & 0\\
+%0 & 0 & 0 & 1 & 0 & 3\\
+%\end{array} \right)\] 
+%Now multiply the two matrices.
+%\[ \left( \begin{array}{cccccc}
+%3 & 0 & 0 & 0 & 0 & 0\\
+%2 & 3 & 0 & 0 & 0 & 0\\
+%0 & 2 & 3 & 0 & 0 & 0\\
+%1 & 0 & 2 & 3 & 0 & 0\\
+%0 & 1 & 0 & 2 & 3 & 0\\
+%0 & 0 & 1 & 0 & 2 & 3\\
+%\end{array} \right)\cdot \\
+%\left( \begin{array}{cccccc}
+%3 & 0 & 0 & 0 & 0 & 0\\
+%0 & 3 & 0 & 0 & 0 & 0\\
+%1 & 0 & 3 & 0 & 0 & 0\\
+%0 & 1 & 0 & 3 & 0 & 0\\
+%0 & 0 & 1 & 0 & 3 & 0\\
+%0 & 0 & 0 & 1 & 0 & 3\\
+%\end{array}\right)=\\
+%\left( \begin{array}{cccccc}
+%9 & 0 & 0 & 0 & 0 & 0\\
+%6 & 9 & 0 & 0 & 0 & 0\\
+%3 & 6 & 9 & 0 & 0 & 0\\
+%5 & 3 & 6 & 9 & 0 & 0\\
+%0 & 5 & 3 & 6 & 9 & 0\\
+%1 & 0 & 5 & 3 & 6 & 9\\
+%\end{array} \right)\] 
+%
+%Now reversing the process, we use the main diagonal to get the constant coefficient, the second diagonal as the $x$ coefficient and so on to yield:
+%\[x^5 + 5x^3 + 3x^2 + 6x + 9\]
+%Which happens to be the the same answer as our polynomial multiplication above.  Now the reason we picked a $6\times6$ matrix was to account for each term in the answer.  If we had used a smaller matrix, the $x^5$ term would not have been accounted for in the lower left hand corner of the answer matrix.  
+%
+%\begin {exercise}
+%Given two quadratic polynomials:
+%\[ 2x^2-8x+3 \quad \text{and} \quad -9x^2+3x+3 \]
+%Find the sum of the two by writing them as $4\times4$ matrices and using matrix addition.
+%\end {exercise}
+%
+%\begin {exercise}{matrixcommute}
+%\begin {enumerate}[(a)]
+%\item
+%Matrices are known for not being commutative over matrix multiplication.  Mutiply the above matrices in opposite order to show the result is the same.
+%\end {enumerate}
+%\end {exercise}
+%
+%Now while the above example is nice, it takes a bit more rigor to prove that there is an isomorphism.  Given polynomials:
+%\[p(x) = \sum_{i=0}^{m} a_i x^i\]
+%\[q(x) = \sum_{j=0}^{n} b_j x^i\]
+%Where $a_i$ and $b_i$ are arbitrary coefficients of index $i$ and $j$, and $m$ and $n$ are the orders of the polynomials, define a relation $\Phi$ from a polynomial to an $m+n+1 \times m+n+1$ matrix as:
+%\[\Phi(p(x)) = \\
+%\left( \begin{array}{cccccc}
+%a_0 & 0 & 0 & 0 & 0 & \cdots\\
+%a_1 & a_0 & 0 & 0 & 0 & \cdots\\
+%a_2 & a_1 & a_0 & 0 & 0 & \cdots\\
+%a_3 & a_2 & a_1 & a_0 & 0 & \cdots\\
+%a_4 & a_3 & a_2 & a_1 & a_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)\\
+%\] 
+%To show this is an isomorphism, we must first show that $\Phi$ is 1 to 1 and onto.
+%
+%\noindent
+%\emph{Proof of 1 to 1}:~~
+%If $\Phi(p) = \Phi(q)$
+%then
+%\[\Phi(p(x)) = \\
+%\left( \begin{array}{cccccc}
+%a_0 & 0 & 0 & 0 & 0 & \cdots\\
+%a_1 & a_0 & 0 & 0 & 0 & \cdots\\
+%a_2 & a_1 & a_0 & 0 & 0 & \cdots\\
+%a_3 & a_2 & a_1 & a_0 & 0 & \cdots\\
+%a_4 & a_3 & a_2 & a_1 & a_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)\\
+%=\\
+%\left( \begin{array}{cccccc}
+%b_0 & 0 & 0 & 0 & 0 & \cdots\\
+%b_1 & b_0 & 0 & 0 & 0 & \cdots\\
+%b_2 & b_1 & b_0 & 0 & 0 & \cdots\\
+%b_3 & b_2 & b_1 & b_0 & 0 & \cdots\\
+%b_4 & b_3 & b_2 & b_1 & b_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)=\\
+%\Phi(q(x)) \\
+%\] 
+%For two matrices to be equal, each of the terms in a given row/column in one matrix must be equal to the corresponding term in the other matrix.  Therefore, $a_0 = b_0$ ; $a_1 = b_1 \cdots$ for all indeces of $a$ and $b$.  Which means all the coefficients $a_i$ and $b_i$ are equal.  Which by definition of polynomials, means $p=q$.  Therefore $\Phi(p) = \Phi(q) \Rightarrow p = q$.
+%
+%Proof of onto.
+%\noindent For any given matrix:
+%
+%\[M=\left( \begin{array}{cccccc}
+%a_0 & 0 & 0 & 0 & 0 & \cdots\\
+%a_1 & a_0 & 0 & 0 & 0 & \cdots\\
+%a_2 & a_1 & a_0 & 0 & 0 & \cdots\\
+%a_3 & a_2 & a_1 & a_0 & 0 & \cdots\\
+%a_4 & a_3 & a_2 & a_1 & a_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)\\
+%\] 
+%
+%Select the polynomial \[p=\sum_{i=0}^{m} a_i x^i.\]
+%It follows from the definition of $\Phi$ that $\Phi(p) = M$.
+%
+%
+%\noindent \emph{Proof of operation preservation:}~~ 
+%Rather than giving a formal proof, we observe the pattern.  On the one hand, we have
+%\[\Phi(pq)= \Phi(\sum_{i=0}^{m+n}(\sum_{j=0}^{i}a_jb_{i-j})x^i)=\Phi(a_0b_0 + (a_1b_0 + a_0b_1)x + (a_2b_0 + a_1b_1 + a_0b_2)x^2\cdots)\]
+%\[\left( \begin{array}{cccccc}
+%{a_0b_0} & 0 & 0 & 0 & 0 & \cdots\\
+%{a_1b_0+a_0b_1} & {a_0b_0} & 0 & 0 & 0 & \cdots\\
+%{a_2b_0 + a_1b_1 + a_0b_2} & {a_1b_0+a_0b_1} & {a_0b_0} & 0 & 0 & \cdots\\
+%\vdots & {a_2b_0 + a_1b_1 + a_0b_2} & {a_1b_0+a_0b_1} & {a_0b_0} & 0 & \cdots\\
+%\vdots & \vdots & {a_2b_0 + a_1b_1 + a_0b_2} & {a_1b_0+a_0b_1} & {a_0b_0} & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right).
+%\]
+%On the other hand, we have
+%\[
+%\Phi(p)\cdot\Phi(q) =
+%\left( \begin{array}{cccccc}
+%a_0 & 0 & 0 & 0 & 0 & \cdots\\
+%a_1 & a_0 & 0 & 0 & 0 & \cdots\\
+%a_2 & a_1 & a_0 & 0 & 0 & \cdots\\
+%a_3 & a_2 & a_1 & a_0 & 0 & \cdots\\
+%a_4 & a_3 & a_2 & a_1 & a_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right)\\
+%\cdot\\
+%\left( \begin{array}{cccccc}
+%b_0 & 0 & 0 & 0 & 0 & \cdots\\
+%b_1 & b_0 & 0 & 0 & 0 & \cdots\\
+%b_2 & b_1 & b_0 & 0 & 0 & \cdots\\
+%b_3 & b_2 & b_1 & b_0 & 0 & \cdots\\
+%b_4 & b_3 & b_2 & b_1 & b_0 & \cdots\\
+%\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+%\end{array} \right).\\
+%\] 
+%If we multiply these two matrices, we will find the result is the same as $\Phi(pq)$. This completes the proof of isomorphism.
+%
+%This was a lot of work, but it has an immediate benefit. Since matrix multiplication is associative, it follows immediately that polynomial multiplication is also associative. This replaces the long proof of associativity that we used earlier.
+%
+%%Split into different section.%also define fields = rings+multiplicative inverse.
+%We have seen that polynomials have two closed operations: addition and multiplication. Under addition, the polynomials are an abelian group. Under multiplication, the polynomials possess all the properties of a commutative group \emph{except} identity. Also, multiplication distributes over addition (just like with real numbers). When a set of objects possesses two operations satisfying these conditions, it is known as a \emph{commutative ring} \index{commutative ring}.   
+%
+%%In other words, a set $R$ is a commutative ring if:
+%%
+%%\begin {enumerate}[1.]
+%%\item
+%%$a+b = b + a$ for all $a,b \in R$
+%%\item
+%%(a+b) + c = a + (b + c) for all $a,b,c \in R$
+%%\item
+%%There is a $z \in R$ such that $z+a = a$ for all $a\in R$
+%%\item
+%%For all $a\in R$ there exists a $-a$ such that $a + (-a) = z$
+%%\item
+%%For all $a,b,c \in R$ it is true that $(ab)c = a(bc)$
+%%\item
+%%For $a,b,c\in R$; $a(b+c) = ab + bc$ and $(a+b)c = ac + bc$
+%
+%%Use different coefficients for polynomials as exercises, Q[x], Z[x], 
+%%add exercise for proof of field, Q[x], Z[x], Z5[x]
+%%\end {enumerate}
+%\begin {exercise}{proofofring}
+%Prove or disprove that the following sets are rings.
+%\begin{enumerate}[(a)]
+%\item
+%The set of complex numbers with integer coefficients with complex addition and multiplication.
+%\item
+%$M \times N$ matrices using matrix addition of the form $a_{mn} + b_{mn} = c_{mn}$  and matrix multiplication.
+%\item
+%The set of golden rectangles composed of pairs $l,w$ such that $l$ is the length, $w$ is the width and it is always true that $w*(1+\sqrt{5}) / 2 = l$ where addition is defined as $l_3 = l_1 + l_2$ and $w_3 = w_2 + w_1$; and multiplication is defined as $w_3 = w_1 * w_2$ and $l_3 = (l_2 * l_1) / [ (1 + \sqrt{5}) / 2 ]$.
+%\end{enumerate}
+%\end {exercise}
+
+\section{The Division Algorithm for Polynomials}
+%only works if polynomial coefficients are in a field.
+In the chapter on modular arithmetic, we used the following fact about integers: for any two integers $a$ and $b$  with $b > 0$, then there exist unique
+integers $q$ and $r$ such that $a = bq+r$, where $0 \leq r < b$. This fact was known to the ancient Greeks, who proved it using what's known as the \emph{division algorithm}.\footnote{As we said before, you may find a proof in any book on number theory. Or, take a look at:  \url{http://2000clicks.com/mathhelp/NumberTh09EuclidsAlgorithm.aspx}.} It turns out that a similar
+division algorithm\index{division algorithm!for polynomials} exists for
+polynomials. Here we will actually give the proof.
+%add exercise for long division of polynomials with coefficients of Z[p]; p=2,3,5,7
+%work an example in Z2 before giving exercise.
+
+\begin{example}{poly_division} 
+Dividing polynomials is very similar to long division of real numbers.  
+ For example,
+suppose that we divide $x^3 - x^2 + 2 x - 3$ by $x - 2$.  
+\begin{center}
+\begin{tabular}{rrcrcrcr}
+        &  $x^2$  &  $+$  &      $x$  &  $+$  &    $4$  &       &       \\ \cline{2-8}
+ \multicolumn{1}{r|}{$x - 2$}
+        &  $x^3$  &  $-$  &    $x^2$  &  $+$  &  $2 x$  &  $-$  &  $3$  \\
+        &  $x^3$  &  $-$  &  $2 x^2$  &       &         &       &       \\ \cline{2-8}
+        &         &       &    $x^2$  &  $+$  &  $2 x$  &  $-$  &  $3$  \\
+        &         &       &    $x^2$  &  $-$  &  $2 x$  &       &       \\ \cline{4-8}
+        &         &       &           &       &  $4 x$  &  $-$  &  $3$  \\
+        &         &       &           &       &  $4 x$  &  $-$  &  $8$  \\ \cline{6-8}
+        &         &       &           &       &         &       &  $5$
+\end{tabular}
+\end{center}
+In the example, we need to take the leading power term of $x$ in the divisor and multiply by something that will make it equal to the the leading power term in the dividend.  In this case it is $x^2$.  This gives $x^2\cdot(x-2) = x^3 - 2x^2$  Subtract from the dividend to yield a remainder of $x^2 + 2x - 3$ and repeat until the remainder is of a degree less than the divisor.
+ 
+Hence, $x^3 - x^2 + 2 x - 3 = (x - 2) (x^2 + x + 4 ) + 5$.  And simply multiplying out the right side will show that these are indeed equal.
+\end{example}
+
+\begin{example}{poly_division} 
+Divide $(2x^3+3x^2+x+4)$ by $(x+2)$ where  both polynomials are in $\mathbb{Z}_5$.
+\begin{center}
+\begin{tabular}{rrcrcrcr}
+        &  $2x^2$  &  $+$  &      $4x$  &  $+$  &    $3$  &       &       \\ \cline{2-8}
+ \multicolumn{1}{r|}{$x + 2$}
+        &  $2x^3$  &  $+$  &    $3x^2$  &  $+$  & $ x$  &  $+$  &  $4$  \\
+        &  $2x^3$  &  $+$  &    $4 x^2$  &       &         &       &       \\ \cline{2-8}
+        &         &       &                $4x^2$  & $+$  &  $ x$  &  $+$  &  $4$  \\
+        &         &       &                $4x^2$  &  $+$  & $ 3x$  &       &       \\ \cline{4-8}
+        &         &       &           &       &                         $3 x$  & $+$  & $4$  \\
+        &         &       &           &       &                          $3x$  & $+$  & $1$  \\ \cline{6-8}
+        &         &       &           &       &         &       &                               $3$
+\end{tabular}
+\end{center}
+\end{example}
+
+
+\begin {exercise}{}
+Find $q(x)$ and $r(x)$ in the following equations.
+\begin {enumerate} [(1)]
+\item $x^2+3x+27=(x-2)q(x) + r(x)$
+\item $15x^3+13x-27=(x-5)q(x) + r(x)$
+\item $10x^3 - x^2+3x+27=(2x^2-4)q(x) + r(x)$
+\end {enumerate}
+\end {exercise}
+
+\begin {exercise}{}
+\begin {enumerate} [(1)]
+\item Divide  $ ( 3x^6 + x^5 +4x^4 +2)$  by $ ( x+3) $ where both polynomials are in  $\mathbb{Z}_5$.
+\item Divide $ (x^7 + x^5 + x^3 + x)$  by $ ( x + 1 ) $ where both polynomials are in $ \mathbb{Z}_2$.
+\end {enumerate}
+\end {exercise}
+
+
+%DLW This proof uses Fields, however I don't see it using any properties of fields.  I think this can be reworded to sets.
+\begin {prop} {Division for Polynomials}
+Let $f(x)$ and $g(x)$ be non-zero polynomials where $g(x)$ has a degree greater than 0.  Then there exists unique polynomials $q(x)$ and $r(x)$ such that 
+\[
+f(x) = g(x)q(x) + r(x)
+\]
+where the degree of $r(x)$ is less than the degree of $q(x)$.
+\end {prop}
+
+\begin {rem}
+This proposition is true for \emph{any} polynomial ring (according to our definition). You may check the following proof works for any polynomial ring, not just real polynomials.
+\end{rem}
+
+
+\begin{proof}
+We will first consider the existence of $q(x)$ and $r(x)$. Let $S = \{
+f(x) - g(x) h(x) \}$ and assume that 
+\[
+g(x) = a_0 + a_1 x + \cdots + a_n x^n
+\]
+is a polynomial of degree $n$. This set is nonempty since $f(x) \in
+S$. If $f(x)$ is the zero polynomial, then 
+\[
+0 = f(x) = 0 \cdot g(x) + 0;
+\]
+hence, both $q$ and $r$ must also be the zero polynomial. 
+ 
+ 
+Now suppose that the zero polynomial is not in $S$. In this case the
+degree of every polynomial in $S$ is nonnegative.  Choose a polynomial
+$r(x)$ of smallest degree in $S$; hence, there must exist a $q(x)$ such that  
+\[
+r(x) = f(x) - g(x) q(x),
+\]
+or 
+\[
+f(x) = g(x ) q(x) + r(x).
+\]
+
+%DLW Ugh, here is where I need to come up with a much better way of showing deg(q(x)) > deg(r(x))
+%--------------------------------------------------------------------------------------------------------------------------------
+
+We need to show that the degree of $r(x)$ is less than the degree of
+$g(x)$. Assume that $\deg g(x) \leq \deg r(x)$. Say $r(x) = b_0 + b_1 
+x + \cdots + b_m x^m$ and $m \geq n$. Then
+\begin{align*}
+f(x) - g(x) [ q(x) - (b_m\cdot a_n^{-1}) x^{m-n} ]
+& = f(x) - g(x) q(x) 
+    +  (b_m\cdot a_n^{-1}) x^{m-n} g(x)  \\
+& = r(x) + (b_m\cdot a_n^{-1}) x^{m-n} g(x) \\
+& = r(x) + b_m x^m    + \mbox{ terms of lower degree}
+\end{align*}
+is in $S$. This is a polynomial of lower degree than $r(x)$, which
+contradicts the fact that $r(x)$ is a polynomial of smallest degree
+in $S$; hence, $\deg r(x) < \deg g(x)$.
+ %-----------------------------------------------------------------------------------------------------------------------------------
+ 
+To show that  $q(x)$ and $r(x)$ are unique, suppose that there exist
+two other polynomials $q'(x)$ and $r'(x)$ such that $f(x) = g(x) q'(x)
++ r'(x)$ and $\deg r'(x) < \deg g(x)$ or $r'(x) = 0$, so that
+\[
+f(x) = g(x) q(x) + r(x) = g(x) q'(x) + r'(x),
+\]
+and
+\[
+g(x) [q(x) - q'(x) ] = r'(x) - r(x).
+\]
+If $g$ is not the zero polynomial, then 
+\[
+\deg( g(x) [q(x) - q'(x) ] )= \deg( r'(x) - r(x) ) \geq \deg g(x).
+\]
+However, the degrees of both $r(x)$ and $r'(x)$ are strictly less than
+the degree of $g(x)$; therefore, $r(x) = r'(x)$ and $q(x) = q'(x)$.
+\end{proof}
+ 
+\begin {prop}{polyremainder}
+When dividing $f(x)$ by $x-a$, the remainder is $f(a)$.
+\end {prop}
+
+\begin {proof}
+By the division algorithm above, if we divide $f(x)$ by $x-a$, it will produce two unique polynomials $q(x)$ and $r(x)$ such that $f(x) = (x-a)q(x) + r(x)$.  Since the degree of $x-a$ is 1, then according to the division algorithm, the degree of $r(x)$ must be less than 1.  Therefore $r(x)$ has to be a constant.  We will show this replacing $r(x)$ with $r$ where $r$ is an real number.  This yields:
+\[f(x) = (x-a)q(x) + r\]
+If we set $x=a$ then we get:
+\[f(a) = (a-a)q(x) + r \rightarrow f(a) = 0 \cdot q(x) + r \rightarrow f(a) = r\]
+\end {proof}
+
+The following proposition in an important special case of Proposition~\ref{proposition:poly:polyremainder}.
+
+\begin {prop}{}
+$a$ is a root of $f(x)$ if and only if $x-a$ divides $f(x)$.
+\end {prop}
+
+From Proposition~\ref{proposition:poly:polyremainder} $f(x) = (x-a) \cdot q(x) + f(a)$, so $f(a) = 0$ if and only if $f(x)=(x-a) \cdot q(x)$ which is true if and only if $x-a$ divides $f(x)$.
+
+%irreduceable polynomials
+%It is possible for a polynomial to always have a remainder regardless of which polynomial is used to divide it.  A polynomial that cannot be evenly divided cannot be further factored.  A polynomial that cannot be further factored we call an \bfii{ irreducible polynomial}.  \index{Irreducible Polynomial} These polynomials serve a similar function for polynomials as prime numbers do for integers.  Since these polynomials cannot be reduced, we can make deductions as to the behavior of a product of irreducible polynomials.  For example the polynomial $(x+a)$ where $a$ is a real number cannot be factored any further, and the polynomial $mx+b$ where $m$ and $b$ are reals can only be factored into $(x+b/m)(m)$.  A like with real numbers, if we know that $f(x) \cdot g(x) = 0$ then either $f(x) = 0$ or $g(x) = 0$.  Now it is possible to get a higher degree polynomial to be irreducible, but the number set that is used can affect the irreducibility of a polynomial.  For example $x^2 + 1$ is irreducible over the reals, but could be factored over the complex numbers into $(x-i)(x+i)$.  
+
+
+\begin {prop}{polyremainder}
+Suppose $F(x)$ is a polynomial ring, and suppose $p(x),  q(x) \in F(x)$. Then $p(x) \cdot q(x)=0$ iff either $p(x)=0$ or $q(x)=0$.
+\end {prop}
+\begin {proof}
+Notice the similarity between this proposition and proposition 22 of Chapter 3. In both cases, we see that a product is 0 iff one of the factors is 0.
+Suppose$ p(x)\neq\ 0$ and  $ q(x)\neq\ 0$.
+Let \[p(x) =  \sum_{i=0}^{m} a_i x^i\]  and \[ q(x) =  \sum_{j=0}^{n} b_j x^j\] where $a_m \neq\ 0$ and $b_n\neq\ 0$.
+We can write \[p(x) \cdot q(x) = \sum_{i=0}^{m}\sum_{j=0}^{n}a_i b_j x^{i+j}\]
+According to our formula we have \[c_{m+n} =  \sum_{l=0}^{m+n}a_l b_{m+n-l}\]
+Since $p(x) \cdot q(x) =0$, almost all the terms in the sum are 0. For instance, when $l=0$ we have $a_0 b_{m+n}$, but since the degree of $q(x)$ is $n \leq m+n$ we have $a_0 b{m+n}=0$.
+When $l=m+n$ we have $a_{m+n} b_0$, but since the degree of $p(x)$ is $m \leq m+n$ we have $a_{m+n} b_0=0$.
+So, we see all the terms  in the sum are 0 except $a_m b_n$. But since $p(x) \cdot q(x) = 0$, we have $c_{m+n} = 0 \Rightarrow  a_m b_n =0$. This implies $a_m=0$ or $b_n=0$.
+This contradicts our supposition. Therefore, if $p(x) \cdot q(x)=0$ then $p(x)=0$ or $q(x)=0$.
+\end{proof}
+
+\begin {prop}{}
+Let $c \in  {\mathbb{Z}_n}^*$. Then equation $x^m-c=0$ has at most m solutions in  ${\mathbb{Z}_n}^*$.
+\end {prop}
+
+
+
+\begin {proof}
+Suppose c is a root then by Prop.27, $x-a_1$ divides $x^n-c$. So $x^n-c = (x-a_1) g_{n-1}(x)$ where the degree of $g_{n-1}(x)=n-1$. Suppose $a_2 \neq a_1$ is another root then, ${a_2}^n - c = 0
+ \Rightarrow (a_2 - a_1)g_{n-1}(a_2) = 0
+ \Rightarrow g(a_2) = 0
+ \Rightarrow x - a_2$ divides $g_{n-1}(x)$. So we can write $g_{n - 1}(x) = (x-a_2)g_{n-2}(x)$ where the degree of $g_2(x) = n-2$. Continuing in the same way, if I have distinct roots $a_1,a_2,...,a_n$ I can write $x^n - c = (x - a_1)(x - a_2)...(x - a_n)g_0$ where the degree of $g_0$ is 0 ( so $g_0$ is a constant.). So there can't be any more solutions, $a_{n+1}$, because $(x-a_{n+1})$ doesn't divide $g_0$.
+\end {proof}
+
+\begin {prop}{}
+ ${\mathbb{Z}_p}^*$ is cyclic.
+\end {prop}
+
+\begin {proof}
+The factorization for Abelian groups says,
+\[{\mathbb {Z}_p}^*  \cong {\mathbb{Z}_{{p_1}^{e_1}}}  \times   {\mathbb{Z}_{{p_2}^{e_2}}}  \times  ... \times   {\mathbb{Z}_{{p_k}^{e_k}}}\]
+Suppose $p_1 = p_2$. 
+Consider the following 2 elements of ${\mathbb {Z}_p}^*  \cong {\mathbb{Z}_{{p_1}^{e_1}}}  \times   {\mathbb{Z}_{{p_2}^{e_2}}}  \times  ... \times   {\mathbb{Z}_{{p_k}^{e_k}}}$.
+
+$g_1 = ( p_1^{e_1-1}, 0, 0,...,0)$ and $g_2 = ( 0, p_2^{e_2-1}, 0, 0,...,0)$
+
+You can prove
+$\theta(g_1) = p_1$,                     $  \theta(g_2) = p_1$
+
+$\theta(g_1^n) = p_1$               $ (n = 1,...,p_1-1)$
+
+$\theta(g_2^n) = p_1$              $ (n = 1,...,p_1-1)$
+
+We have at least $2p_1$ elements of order $p_1$. But we've shown there are at most $p_1$ elements of order $p_1$.
+So by contradiction, $p_1 \neq p_2$. In this way we can show all of the $p_i's$ are different.
+So the group is cyclic.
+\end{proof}
+
+Sorry to cut this short, but we'll stop here for now.\footnote{But more is coming in the next edition!}  There's a lot more to say about polynomial rings, but we've shown enough that we can move on to our next topic, which is polynomial codes.
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ Sum: $x^3$ , Product: $x^5+x^3+x^2+1$
+\item
+ Sum: $x^3+1$ , Product: $x^8+x^7+x^5+x^3+x^2$
+\item
+ Sum: $0$ , Product: $x^8+x^6+x^4+x^2+1$
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ $\mathbb{Z}[x]$,$\mathbb{Q}[x]$,$\mathbb{R}[x]$,$\mathbb{C}[x]$,$\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$
+\item
+ None
+\item
+ $\mathbb{Q}^*[x],\mathbb{R}^*[x], \mathbb{C}^*[x], {\mathbb{Z}_5}^*[x]$
+\item
+ None
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ Sum: $x^3+x+1$ , Product: $2x^5+2x^4+4x^3+3x^2$
+\item
+ Sum: $2x^4+4x^3$ , Product: $2x^7+x^6+4x^5+4x^3+4x^2+5$
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ $\sum_{i=0}^{4} (2i+1)x^2i$, degree: 8
+\item
+ $\sum_{i=0}^{3} \cis(i\pi/2)x^2i$, degree: 6
+\item 
+$\sum_{i=0}^{3} (7i^3-18i^2+13i+1)x^i$, degree: 3
+\item
+ $\sum_{i=0}^{5} ((-1)^i/(2i+1))x^i$, degree: 5
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ No
+\item 
+Yes
+\item
+ n is a prime number.
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+ $p(x)=2x$, $q(x)=2x^3+2$
+\item 
+No
+\item
+ $p(x) \cdot q(x)=0$, where $p(x)=3x^3$ and $q(x)=2x^2$ are in $\mathbb{Z}_6[x]$.
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item 
+ $x^3-2x^2-15x$
+\item
+ $5x^4-5\sqrt{3}x^2+2\sqrt{3}x-6$
+\item
+$4x^5-3x^4+\frac{7}{2}x^3+8x^2-6x+7$
+\item
+$80x^7-40x^6+64x^5-90x^4+47x^3-21x^2$
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item 
+ $x^6+2x^5+3x^4+4x^3+3x^2+2x+1$
+\item
+ $2x^5+5x^4+8x^3+3x^2$
+\item
+$2x^8+x^7-2x^6-6x^5-10x^4-2x^3+4x^2+7x+6$
+\item
+$12x^8+6x^7-12x^6-36x^5-60x^4-12x^3+24x^2+42x+36$
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item 
+ $q(x)=x+5$, $r(x)=37$
+\item
+ $q(x)=15x^2+75x+388$, $r(x)=1913$
+\item
+$q(x)=5x-\frac{1}{2}$, $r(x)=23x+25$
+\end {enumerate}
+%\end {answer}
+
+%\begin {answer}{}
+\begin {enumerate} [(1)]
+\item
+$3x^5 + 2x^4 + 3x^3 + x^2 +2x +4$
+\item
+$x^6 + x^5 + x^2 + x$
+\end {enumerate}
+%\end {answer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\section{Irreducible Polynomials}
+% 
+% 
+%A nonconstant polynomial $f(x) \in F[x]$ is \bfii{
+%irreducible\/}\index{Polynomial!irreducible}\index{Irreducible polynomial}
+%over a field $F$ if $f(x)$ cannot be expressed as a product of two
+%polynomials $g(x)$ and $h(x)$ in $F[x]$, where the degrees of $g(x)$
+%and $h(x)$ are both smaller than the degree of $f(x)$.  Irreducible
+%polynomials function as the ``prime numbers'' of polynomial rings.
+% 
+% 
+%\begin{example}{poly_irred}
+%The polynomial $x^2 - 2 \in {\mathbb Q}[x]$ is irreducible since it
+%cannot be factored any further over the rational numbers. Similarly,
+%$x^2 + 1$ is  irreducible over the real numbers. 
+%\end{example}
+% 
+% 
+%\begin{example}{finite_poly}
+%The polynomial $p(x) = x^3 + x^2 + 2$ is irreducible over ${\mathbb
+%Z}_3[x]$. Suppose that this polynomial was reducible over ${\mathbb
+%Z}_3[x]$.  By the division algorithm there would have to be a factor
+%of the form $x - a$, where $a$ is some element in ${\mathbb Z}_3[x]$.
+%Hence, it would have to be true that $p(a) = 0$.  However,
+%\begin{align*}
+%p(0) & = 2 \\
+%p(1) & = 1 \\
+%p(2) & = 2.
+%\end{align*}
+%Therefore, $p(x)$ has no zeros in ${\mathbb Z}_3$ and must be
+%irreducible. 
+%\end{example}
+%
+%
+%\begin{lemma}\label{poly:integer_coef_lemma}
+%Let $p(x) \in {\mathbb Q}[x]$.  Then
+%\[
+%p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n),
+%\]
+%where $r, s, a_0, \ldots, a_n$ are integers, the $a_i$'s are
+%relatively prime, and $r$ and $s$ are relatively prime. 
+%\end{lemma}
+% 
+% 
+%\begin{proof}
+%Suppose that
+%\[
+%p(x) = \frac{b_0}{c_0} + \frac{b_1}{c_1} x + \cdots + \frac{b_n}{c_n}
+%x^n,
+%\]
+%where the $b_i$'s and the $c_i$'s are integers. We can rewrite $p(x)$
+%as 
+%\[
+%p(x) = \frac{1}{c_0 \cdots c_n} (d_0 + d_1 x + \cdots + d_n x^n),
+%\]
+%where $d_0, \ldots, d_n$ are integers. Let $d$ be the greatest common
+%divisor of $d_0, \ldots, d_n$.  Then
+%\[
+%p(x) = \frac{d}{c_0 \cdots c_n} (a_0 + a_1 x + \cdots + a_n x^n),
+%\]
+%where $d_i = d a_i$ and the $a_i$'s are relatively prime. Reducing $d
+%/(c_0 \cdots c_n)$ to its lowest terms, we can write
+%\[
+%p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n), 
+%\]
+%where $\gcd(r,s) = 1$.
+%\end{proof}

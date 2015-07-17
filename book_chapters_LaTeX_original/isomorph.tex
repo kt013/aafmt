@@ -1,0 +1,1656 @@
+%%%%(c)
+%%%%(c)  This file is a portion of the source for the textbook
+%%%%(c)
+%%%%(c)    Abstract Algebra: Theory and Applications
+%%%%(c)    Copyright 1997 by Thomas W. Judson
+%%%%(c)
+%%%%(c)  See the file COPYING.txt for copying conditions
+%%%%(c)
+%%%%(c)
+\chap{Isomorphisms of Groups}{isomorph}
+
+\section{Preliminary examples}\label{isomorph_defn_ex}
+
+Several times in the book so far we have run into the idea of isomorphic groups.  For instance:
+
+\begin{example}{chap1_ex}
+In Chapter 1 we pointed out that ${\mathbb C}$ under complex addition and ${\mathbb R} \times {\mathbb R}$ under pairwise addition act exactly the same. In order to introduce the new concepts of this chapter, let's go over this again. 
+
+If $z = a+bi$ and $w = c+di$ are complex numbers, we can identify  them as real ordered pairs according to the following ``translation'':
+\[ a+bi \longrightarrow (a,b). \]
+If we add two complex numbers and ``translate'' the result to an ordered pair, we find:
+\[
+z + w = (a + bi) + (c + di)  \longrightarrow (a+b,c+d).
+\]
+On the other hand, if map $z$ and $w$ separately we get:
+\[
+z = a + bi  \longrightarrow (a,b);\qquad w = c+di  \longrightarrow (c,d),
+\]
+and then if we add the resulting  coordinate pairs, we obtain
+\begin{align*}
+(a,b) +  (c,d) 
+&= (a+c,b+d). 
+\end{align*}
+which is the same as before. So we get the same result whether we add the complex numbers or their corresponding ordered pairs.  
+
+What we've shown  is illustrated in Figure~\ref{fig:groups:CommDiag}. If we start with the complex numbers $z,w$, we get the same result whether we follow first the arrow to the right (``translation'' to ${\mathbb R} \times {\mathbb R}$) and then go down (addition in ${\mathbb R} \times {\mathbb R}$), or whether we follow first the down arrow (addition in ${\mathbb C}$) and then go right (``translation'' to ${\mathbb R} \times {\mathbb R}$).\footnote{This type of diagram is called a \emph{commutative diagram}\index{commutative diagram}, and is widely used in abstract algebra.} The ``translation map'' we are using is the function 
+\begin{center}
+$f : {\mathbb C} \longrightarrow {\mathbb R} \times {\mathbb R}$ such that $f(a + bi) = (a,b)$.
+\end{center}
+
+\begin{figure}[htb]
+	   \center{\includegraphics[width=4.in]
+	         {images/CommDiag.png}}
+	  \caption{\label{fig:groups:CommDiag} Addition is the ``same'' for complex numbers and real ordered pairs. }
+\end{figure}
+
+\end{example}
+
+\begin{exercise}{iso_1}
+Let $f$ be  the function used in Example \ref{example:isomorph:chap1_ex} to rename complex numbers as ordered pairs. Recall that $r \cis \theta$ is the polar form of a complex number. How would you write $f(r \cis \theta$)?
+\end{exercise}
+
+Previously when we talked informally about two groups being isomorphic, we emphasized that  the two groups are "equivalent"  in some sense.  So for instance, in the case of Example 1 it should be possiible to exchange the roles of  ${\mathbb C}$ and ${\mathbb R} \times {\mathbb R}$ and get the same result.  For this to work, there should  be a function from ${\mathbb R} \times {\mathbb R}$ to ${\mathbb C}$  that shows how to replace ordered pairs with complex numbers without ``changing anything".  What would that function be?  A prime suspect is the inverse of $f$:
+
+\begin{center}
+$f^{-1} : {\mathbb R} \times {\mathbb R} \longrightarrow {\mathbb C}$ such that $f^{-1}(a,b) = (a + bi)$
+\end{center}
+
+But for this to work,  what does that mean about $f$?  What type of function does it have to be in order to have an inverse?  You guessed it--a bijection.
+
+\begin{exercise}{iso_2}
+Prove that the function in Example 1 is a bijection.
+\end{exercise}
+
+\begin{exercise}{iso_3} 
+Draw a diagram similar to Figure~\ref{fig:groups:CommDiag}  for the function $g: {\mathbb C} \rightarrow {\mathbb R} \times {\mathbb R}$ defined by $g(a + bi) = (3a, 3b)$. Show that the same ``arrow-following'' property holds: that is, you can follow the arrows from the upper left to lower right in either order, and still end up with the same result.
+\end{exercise} 
+
+\begin{exercise}{iso_4}
+Prove that the function $h(a + bi) = (a+2, b+2)$ is {\bf not} an isomorphism from ${\mathbb C}$ to  ${\mathbb R} \times {\mathbb R}$ ({\it Hint:} show a counterexample where the sum of two complex numbers is not the same as the sum of their corresponding ordered pairs)
+\end{exercise}
+
+
+%With that in mind, we have a couple of questions.  Could  ${\mathbb C}$ be isomorphic to ${\mathbb Z} \times {\mathbb Z}$?  No.  Certainly it works right to left:  if we replace any two integer-ordered pairs with their corresponding complex numbers, the sum would be equivalent both ways.  But it does not work left to right.  There are complex numbers, such as $2+1.5i$, that have no integer equivalent; another way of saying this is to say that there are more complex numbers than their are integer-ordered pairs (even though the cardinality of both sets is infinity).  So there would be some complex numbers that we couldn't 
+
+%possible footnote about countably infinite and uncountably infinite here
+
+
+\begin{example}{sym_ex}
+In the Symmetries chapter we also saw some  examples of isomorphic groups.  In particular, we saw that ${\mathbb Z_4}$, the $4^{th}$ roots of unity, and the rotations of a square act exactly the same under modular addition, modular multiplication, and function composition respectively. Let's remind ourselves why. 
+The following are the Cayley tables for ${\mathbb Z_4}$, the $4^{th}$ roots of unity (which we'll denote by $\langle i \rangle$), and the rotations of a square ($R_4$):
+
+\begin{table}[H]
+\caption{Cayley table for ${\mathbb Z}_4$}
+\label{Z4_add_table}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\oplus$ & 0 & 1 & 2 & 3  \\
+\hline
+0        & 0 & 1 & 2 & 3  \\
+1       & 1 & 2 & 3 & 0  \\
+2       & 2 & 3 & 0 & 1 \\
+3       & 3 & 0 & 1 & 2 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\begin{table}[H]
+\caption{Cayley table for $\langle i \rangle$}
+\label{4_roots_table}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\cdot$ & 1 &$i$ & -1 & $-i$  \\
+\hline
+1        & 1 &$i$ & -1 &$-i$  \\
+i       &$i$ & -1 & $-i$ & 1  \\
+-1       & -1 & $-i$ & 1 & $i$ \\
+-i       & $-i$ & 1 & $i$ & -1 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\begin{table}[H]
+\caption{Cayley table for the $R_4$}
+\label{4_rotations_table}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\circ$ & $\var{id}$ & $r_{90}$ & $r_{180}$ & $r_{270}$  \\
+\hline
+$\var{id}$        & $\var{id}$ & $r_{90}$ & $r_{180}$ & $r_{270}$  \\
+$r_{90}$       & $r_{90}$ & $r_{180}$ & $r_{270}$ & $\var{id}$  \\
+$r_{180}$       & $r_{180}$ & $r_{270}$ & $\var{id}$ & $r_{90}$ \\
+$r_{270}$       & $r_{270}$ & $\var{id}$ & $r_{90}$ & $r_{180}$ \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\begin{enumerate}[(1)]
+\item
+Comparing ${\mathbb Z_4}$ and $\langle i \rangle$, notice that if we identify 
+
+\begin{align*}
+  0 \leftrightarrow 1 \qquad
+    1 \leftrightarrow i \qquad
+    2 \leftrightarrow -1 \qquad
+    3 \leftrightarrow -i, 
+\end{align*}
+    
+then the two Cayley tables match each other exactly.  This means that if you add any two elements in ${\mathbb Z_4}$ (say 1 and 2), and then multiply their corresponding elements in $\langle i \rangle$ ($i$ and -1), your results from each of these actions are in fact the same (3 and $-i$).
+
+Hence the function $f: {\mathbb Z_4} \longrightarrow \langle i \rangle$  that takes 
+\begin{align*}
+    0 \longrightarrow 1 ,~~     1 \longrightarrow i,~~    2 \longrightarrow -1,~~   3 \longrightarrow -i  
+\end{align*}
+ is an isomorphism from ${\mathbb Z_4}$ to the $4^{th}$ roots of unity, and these groups are isomorphic to each other.
+
+\item
+Now if we compare $\langle i \rangle$ and $R_4$, using the function  $g: \langle i \rangle \longrightarrow R_4$  defined by
+\begin{align*}
+1 \longrightarrow \var{id}, ~~\
+i \longrightarrow  r_{90},~~
+-1 \longrightarrow r_{180},~~
+ -i \longrightarrow r_{270}, 
+\end{align*}
+we see that their Cayley tables are in fact exactly the same.  Hence the $4^{th}$ roots of unity and the rotations of a square are isomorphic to each other, and $g$ is an isomorphism between them.  
+
+\item
+Finally, using the  function
+$h: {\mathbb Z_4} \longrightarrow R_4$  that takes
+\begin{align*}
+ 0\longrightarrow \var{id},~~
+    1 \longrightarrow r_{90},~~
+    2 \longrightarrow r_{180},~~
+    3 \longrightarrow r_{270}, 
+\end{align*}
+we see that the Cayley tables for ${\mathbb Z_4}$ and $R_4$ are exactly the same.  Hence ${\mathbb Z_4}$ and the rotations of a square are isomorphic to each other, and $h$ is an isomorphism between them.
+\end{enumerate}
+
+\noindent
+So ${\mathbb Z_4}$, $R_4$, and $\langle i \rangle$ are all isomorphic to each other. Mathematically we state this as follows:
+
+\[ {\mathbb Z_4} \cong  R_4 \cong \langle i \rangle \]
+ 
+ \end{example}
+ 
+% \begin{exercise}{iso_5}
+ %Prove that  the functions $f,g,h$ in Example~\ref{example:isomorph:sym_ex} are all bijections.
+ %\end{exercise}
+ 
+
+ \begin{exercise}{iso_7}
+ Determine whether each of the following functions are isomorphisms between the groups in Example~\ref{example:isomorph:sym_ex}. Justify your answers. 
+ \begin{enumerate}[(a)]
+ \item
+ $ \phi: {\mathbb Z_4}  \longrightarrow \langle i \rangle$ defined by 
+\[  
+\phi(0) = 1,~~
+ \phi(1) = -1,~~
+ \phi(2) = i,~~
+ \phi(3) = -i.
+\]
+ 
+ \item
+$ \theta: {\mathbb Z_4}  \longrightarrow R_4$ defined by 
+\[ 
+\theta(0) = \var{id},~~
+ \theta(1) = r_{270},~~
+ \theta(2) = r_{90} ,~~
+ \theta(3) = r_{180}. 
+ \]
+
+ \item
+ $ \omega: \langle i \rangle \longrightarrow R_4$ defined by 
+\[ 
+ \omega(1) = \var{id},~~ 
+\omega(i) = r_{270},~~
+\omega(-1) = r_{180},~~
+ \omega(-i) = r_{90}.
+\]
+ \end{enumerate}
+ \end{exercise}
+
+ \begin{exercise}{iso_6}
+ Come up with a \emph{different} isomorphism for each pairing of groups in Example \ref{example:isomorph:sym_ex}. For instance, find a  function  different from $f$ that maps ${\mathbb Z_4} \longrightarrow \langle i \rangle$  that matches the the two Cayley tables. Do the same thing with $g$ and $h$.
+ \end{exercise}
+  
+\section{Formal definition and basic properties of isomorphisms}
+So let's buckle down and get mathematical. We start with a rigorous definition of isomorphic groups:
+
+\begin{defn}\label{isomorph_defn}
+Two groups $(G, \cdot)$ and $(H, \circ)$ are \bfii{ isomorphic\/}\index{Group!isomorphic} if there exists a bijection $\phi : G \rightarrow H$ such that the group operation is preserved;  that~is, 
+\[
+\phi( a \cdot b) = \phi( a) \circ \phi( b)
+\]
+for all $a$ and $b$ in $G$. If $G$ is isomorphic to $H$, we write $G \cong H$\label{noteisomorph}. The function $\phi$ is called an \bfii{ isomorphism}\index{Group!isomorphism of}\index{Isomorphism!of groups}. 
+\end{defn}
+
+\begin{exercise}{}
+Let $a$ be a real number, and consider the function $f_a : \mathbb{R} \rightarrow \mathbb{R}$ defined by:  $f_a(x) = ax$.  Use Definition~\ref{isomorph_defn} to show that $f_a$ defines an isomorphism. What are the two isomorphic groups involved?
+\end{exercise}
+
+Some important properties of isomorphisms follow directly from the above definition. First we have:
+
+\begin{thm}\label{IsoId}
+Given that  $\phi : G \rightarrow H$ is an  isomorphism, then $\phi$ takes the identity to the identity: that is, if $e$ is the identity of $G$, then  $\phi(e)$ is the identity of $H$.
+\end{thm}
+
+\begin{exercise}{}
+Fill in the blanks in the following proof of Proposition~\ref{IsoId}:
+\medskip
+
+\noindent
+Given that $e$ is the identity of $ \_\_\_\_$ and $h$ is an arbitrary element of $\_\_\_\_$.  Since $\phi$ is a bijection, then there exists $g \in \_\_\_\_$ such that $\phi(\_\_\_\_) = h$.  Then  we have:
+\begin{align*}
+\phi(e) \circ h &= \phi(e) \circ \phi(\_\_\_\_) & \textrm{(substitution)}\\
+&= \phi( e \cdot \_\_\_\_) & \textrm{(definition of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)}\\
+&= \phi( \_\_\_\_) & \textrm{(definition of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)}\\
+&= h & \textrm{(substitution)}
+\end{align*}
+Following the same steps, we can also show
+\begin{align*}
+h \circ \phi(e) = \_\_\_\_\_.
+\end{align*}
+It follows from the definition of identity that $\_\_\_\_\_$ is the identity of the group $\_\_\_\_$.
+\end{exercise}
+
+
+Another important property of isomorphisms is:
+
+\begin{thm}\label{IsoInv}
+Given that  $\phi : G \rightarrow H$ is an  isomorphism, then $\phi$ preserves the operation of inverse: that is, for any $g \in G$ we have
+\begin{equation*}
+\phi(g^{-1}) = (\phi(g))^{-1}.
+\end{equation*}
+\end{thm}
+
+\begin{exercise}{}
+Fill in the blanks in the following proof of Proposition~\ref{IsoInv}:
+\medskip
+
+\noindent
+Let $e$ and $f$ be the identities of $G$ and $H$, respectively. Given that $g \in \_\_\_\_\_$, we have:
+\begin{align*}
+\phi(g) \circ \phi(g^{-1}) &= \phi(g \cdot g^{-1}) & \textrm{(definition of}~\_\_\_\_\_ \_\_\_\_\_ \_\_\_\_\_)\\
+&= \phi(e) &\textrm{(definition of}~\_\_\_\_\_ \_\_\_\_\_ \_\_\_\_\_)\\
+&= f &\textrm{(Proposition}~\_\_\_\_\_ ).
+\end{align*}
+Using the same steps, we can also show
+\begin{align*}
+\phi(g^{-1}) \circ \phi(g) = \_\_\_\_.
+\end{align*}
+By the definition of inverse, it follows that
+\begin{align*}
+( \phi(g))^{-1} = \_\_\_\_.
+\end{align*}
+\end{exercise} 
+
+It's possible to use isomorphisms to create other isomorphisms:
+
+\begin{exercise}{InvCompIso}
+\begin{enumerate}[(a)]
+\item
+Given that  $\phi : G \rightarrow H$ is an  isomorphism, show that that  $\phi^{-1} : H \rightarrow G$ is also an  isomorphism.  (\emph{Hint:} According to Definition~\ref{isomorph_defn}, this involves proving two things about $\phi^{-1}$.  What are they?)
+\item
+Given that  $\phi : G \rightarrow H$ and $\psi : H \rightarrow K$ is an  isomorphism, show that that  $\psi \circ\phi:G \rightarrow K$ is also an  isomorphism.  (\emph{Hint:} You need to prove the same two things as in part (a).  Use results from the Functions chapter.)
+\end{enumerate}
+\end{exercise}
+
+We said in the previous section that isomorphic groups are ``equivalent'' in some sense. This fact has a formal mathematical statement as well:
+
+\begin{thm}\label{GpEquivRel}
+Isomorphism is an equivalence relation on groups. 
+\end{thm}
+
+\begin{exercise}{}
+Prove Proposition~\ref{GpEquivRel}.  (\emph{Hint:} Recall that this involves proving the three properties: reflexive, symmetric, and transitive. You may find that Exercise~\ref{exercise:isomorph:InvCompIso}  is useful.)
+\end{exercise}
+
+\section{More Examples}\label{iso_more_ex}
+
+Now that we have a formal definition of what it means for two groups to be isomorphic, let's look at some more examples, in order to get a good feel for identifying groups that are isomorphic and those that aren't.
+%In the previous examples we only looked at isomorphisms between finite groups.  This simplified our proof process in a couple ways.  One, in showing that the isomorphism was a bijection, all we had to do was verify it visually with the arrow diagram we created, because the arrow diagram contained all the information needed to show that the function was one-to-one and onto.  Two, to show that the function preserved the operations of the respective groups, all we needed was to verify it visually with the Cayley tables, since again the Cayley tables contained all the information needed.
+
+%We were able to take advantage of visual tools like these because the groups we were dealing with were finite (and relatively small in number), and therefore we could represent all the information we needed concisely in a "picture".  However, if we were proving that two \emph{infinite} groups were isomorphic, it would be physically impossible to construct the required arrow diagrams or Cayley tables.  For that matter, if the two groups were finite but large in number, though you could construct the arrow diagrams and Cayley tables, the time required for such an endeavor would make the proof process very long.
+
+%So in such cases, it is necessary to prove our two properties of isomorphisms--that they are bijections and that they preserve the group operations--using the functional and algebraic proofs we introduced in Chapters 4 and 9.  For instance:
+
+From high school and college algebra we are well familiar with the fact that when you multiply exponentials (with the same bases), the result of this operation is the same as if you had just kept the base and added the exponents.  This equivalence of operations is a telltale sign for identifying possible isomorphic groups.  The next two examples illustrate this observation.
+
+For our first example, we   denote the set of integer powers of 2 as $2^{\mathbb Z}$, that is:
+\[ 2^{\mathbb Z} \equiv \{\ldots, 2^{-2}, 2^{-1}, 2^0, 2^1, 2^2, \ldots\}. \]
+\begin{exercise}{}
+Show that $2^{\mathbb Z}$ with the operation of multiplication is a subgroup of ${\mathbb Q}^{\ast}$.
+\end{exercise}
+
+\begin{example}{rational_isomorph}
+When elements of $2^{\mathbb Z}$ are multiplied together, their exponents add: we know this from basic algebra. This suggests there should be an isomorphism between ${\mathbb Z}$ and   $2^{\mathbb Z}$. In fact, we may define the function
+$\phi: {\mathbb Z} \rightarrow 2^{\mathbb Z}$ by $\phi( n ) = 2^n$.
+To show that this is indeed an isomorphism, by our definition we must show two things: (a)  that the function preserves the operations of the respective groups; and (b) that the function is a bijection:
+\begin{enumerate}[(a)] 
+\item
+We may compute
+\[
+\phi( m + n ) = 2^{m + n} = 2^m 2^n = \phi( m ) \phi( n ).
+\]
+\item
+By definition the function $\phi$ is onto the subset $\{2^n :n \in {\mathbb Z} \}$ of  ${\mathbb Q}^\ast$.  To show that the map is injective, assume that $m \neq n$.  If we can show that $\phi(m) \neq \phi(n)$, then we are done.  Suppose that $m>n$ and assume that $\phi(m) = \phi(n)$.  Then $2^m = 2^n$ or $2^{m-n} = 1$, which is impossible since $m-n>0$. 
+\end{enumerate}
+
+This completes the proof that $ {\mathbb Z} \cong 2^{\mathbb Z}$.
+\end{example}      
+
+ 
+\begin{example}{RealIsomorph}
+As in the previous example, the real powers of $e$ under multiplication acts exactly like addition of those real exponents.  
+This suggests that the function $f(x)=e^x$ is an isomorphism between an additive group and a multiplicative group.  The reader will complete this proof of this fact as an exercise.  
+\end{example}
+
+\begin{exercise}{e_isomorph_proof}
+\begin{enumerate}[(a)]
+\item
+What is the domain and range of $f$?
+\item
+Prove that $f(x)$ is a bijection.
+\item
+Prove that $f(x)$ preserves the operations of the two groups; that $f(x + y) = f(x)f(y)$.
+\item
+Now that we know $f(x)$ is an isomorphism, what can we conclude about $({\mathbb R},+)$ and $({\mathbb R}^+,\cdot)$?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+What is the domain and range of the natural logarithm function $\ln(x)$?
+\item
+Using the results of the previous exercise and a result from an earlier exercise in this chapter, show that the natural logarithm function is an isomorphism. What are the two isomorphic groups?
+\item
+* Using the fact that $\log_{10}(x) = \ln(x) / \ln(10)$, show that the base 10 logarithm function is also an isomorphism.  What are the two isomorphic groups?
+\item 
+* Explain how the fact that $\log_{10}(x)$ is an isomorphism enables us to find the product of any two positive real numbers using addition and a base-10 logarithm table. 
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{iso_prac1}
+Prove that ${\mathbb Z} \cong n{\mathbb Z}$ for $n \neq 0$.
+\end{exercise}
+ 
+\begin{exercise}{iso_prac2}
+Prove that ${\mathbb C}^\ast$ is isomorphic to the subgroup of $GL_2(
+{\mathbb R} )$ consisting of matrices of the form 
+\[
+\begin{pmatrix}
+a & b \\
+-b & a
+\end{pmatrix}
+\]
+\end{exercise}
+
+
+In some cases, it is easy to show that two groups are \emph{not} isomorphic to each other.
+
+\begin{example}{nonisom}
+Consider the groups ${\mathbb Z}_8$ and ${\mathbb Z}_{12}$. Can you tell right away that there can't be an isomorphism between them?  Remember, an isomorphism is a one-to-one and onto function: but since 
+$|{\mathbb Z}_{12}|>|{\mathbb Z}_{8}|$ there is no onto function from ${\mathbb Z}_8$ to ${\mathbb Z}_{12}$, and so they can not be isomorphic to each other.  Similarly it can be shown that any two finite groups that have differing numbers of elements cannot be isomorphic to each other.
+\end{example}
+%\[
+%\phi( x + y) = e^{x + y} = e^x e^y = \phi( x ) \phi( y).
+%\]
+
+\begin{example}{units}
+Let us look now at  the group of units of ${\mathbb Z}_8$ and the group of units of ${\mathbb Z}_{12}$; i.e. $U(8)$ and $U(12)$.  We have seen that these  consist of the elements in ${\mathbb Z}_8$ and ${\mathbb Z}_{12}$, that are relatively prime to $8$ and $12$, respectively, so
+
+%cannot be isomorphic since they have different orders; however, it is true that   
+\begin{align*}
+U(8) & = \{1, 3, 5, 7 \} \\
+U(12) & = \{1, 5, 7, 11 \}.
+\end{align*}
+
+\begin{exercise}{U8_U12_Cayley}
+Give the Cayley tables for $U(8)$ and $U(12)$.
+\end{exercise}
+
+An isomorphism $\phi : U(8) \rightarrow U(12)$ is then given by
+\begin{align*}
+1 & \mapsto  1 \\
+3 & \mapsto  5 \\
+5 & \mapsto  7 \\
+7 & \mapsto  11.
+\end{align*}
+
+$\phi$ is one-to-one and onto by observation, and we can verify visually that $\phi$ preserves the operations of $U(8)$ and $U(12)$ by the Cayley tables you gave.  Hence $U(8) \cong U(12)$.
+\end{example}
+
+\begin{exercise}{U8_U12_other}
+The function $\phi$ is not the only possible isomorphism between $U(8)$ and $U(12)$.  Define another isomorphism between $U(8)$ and $U(12)$.
+\end{exercise}
+
+\begin{exercise}{U8_U12_Z2Z2}
+Prove that both $U(8)$ and $U(12)$ are isomorphic to ${\mathbb Z}_2 \times {\mathbb Z}_2$ (recall $Z_2 \times Z_2$ is the set of all pairs $(a,b)$ with $a,b \in Z_2$, where 
+the group operation is addition mod 2 on each element in the pair). 
+\end{exercise}
+
+ \begin{exercise}{iso_prac3}
+Prove that $U(8)$ is isomorphic to the group of matrices
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix},
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix},
+\begin{pmatrix}
+-1 & 0 \\
+0 & 1
+\end{pmatrix},
+\begin{pmatrix}
+-1 & 0 \\
+0 & -1
+\end{pmatrix}.
+\]
+\end{exercise} 
+
+\begin{exercise}{iso_prac4}
+Show that the matrices
+\begin{gather*}
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\quad
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{pmatrix}
+\quad
+\begin{pmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{pmatrix} \\
+\begin{pmatrix}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{pmatrix}
+\quad
+\begin{pmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{pmatrix}
+\quad
+\begin{pmatrix}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{pmatrix}
+\end{gather*}
+form a group. Find an isomorphism of $G$ with a more familiar group of
+order~6.
+\end{exercise} 
+
+Above we have seen two examples where  Cayley tables make it easy to show that two groups are isomorphic. (Of course, this works best if the groups are not too large, and it certainly doesn't work if the groups are infinite!)  Let us now consider whether it is possible to use Cayley tables to show when groups are \emph{not} isomorphic to each other: 
+
+\begin{example}{Cayley_noniso}
+The following are the Cayley tables for ${\mathbb Z}_4$ and $U(5)$.
+
+\begin{table}[H]
+\caption{Cayley table for ${\mathbb Z}_4$}
+\label{Z4_add_table}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\oplus$ & 0 & 1 & 2 & 3  \\
+\hline
+0        & 0 & 1 & 2 & 3  \\
+1       & 1 & 2 & 3 & 0  \\
+2       & 2 & 3 & 0 & 1 \\
+3       & 3 & 0 & 1 & 2 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\begin{table}[H]
+\caption{Cayley table for $U(5)$\label{U5_table}}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\odot$ & 1 & 2 & 3 & 4  \\
+\hline
+1        & 1 & 2 & 3 & 4  \\
+2       & 2 & 4 & 1 & 3  \\
+3       & 3 & 1 & 4 & 2 \\
+4       & 4 & 3 & 2 & 1 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+Notice that the main diagonals (left to right) of the Cayley tables seem to have a different pattern.  The main diagonal for ${\mathbb Z}_4$ is the alternating sequence, $0, 2, 0, 2$, while the main diagonal of $U(5)$ is the  non-alternating sequence $1, 4, 4, 1$.  It appears at first sight that these two groups must be non-isomorphic.  However, we may rearrange the row and column labels  in Table~\ref{U5_table} to obtain Table~\ref{U5_table2}. From the rearranged table we may read off the isomorphism: $0 \rightarrow 1, 1\rightarrow 2, 2\rightarrow 4, 3 \rightarrow 3$.
+
+\begin{table}[H]
+\caption{Rearranged Cayley table for $U(5)$\label{U5_table2}}
+
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\odot$ & 1 & 2 & 4 & 3  \\
+\hline
+1        & 1 & 2 & 4 & 3  \\
+2       & 2 & 4 & 3 & 1  \\
+4       & 4 & 3 & 1 & 2 \\
+3       & 3 & 1 & 2 & 4 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+Note the important point that when we rearranged the table, we used the \emph{same} ordering $(1,2,4,3)$ for both rows and columns.   You don't want to use one ordering for rows, and a different ordering for columns.
+\end{example} 
+We conclude that it is more difficult to use Cayley tables to prove non-isomorphism, because we have to consider all possible rearrangements of the table. However, in some cases we can still use this method.
+
+\begin{exercise}{another_pattern}
+\begin{enumerate}[(a)]
+\item
+Give the Cayley table for $U(12)$. What do you notice about the diagonal entries?
+\item
+If you rearranged the rows and columns of this Cayley table (always using the same ordering for the rows as for columns) then what happens to the diagonal entries?
+\item
+Explain why we can use this result to conclude that ${\mathbb Z}_4 \ncong U(12)$.
+\end{enumerate}
+\end{exercise} 
+
+\begin{exercise}{iso_prac5}
+Prove or disprove: $U(8) \cong {\mathbb Z}_4$.
+\end{exercise}
+  
+\begin{exercise}{iso_prac6}
+Let $\sigma$ be the permutation $(12)$, and let $\tau$ be the permutation $(34)$.
+Let $G$ be the set $\{ \var{id}, \sigma, \tau, \sigma\tau \}$ together with the operation of composition.
+\begin{enumerate}[(a)]
+\item
+Give the Cayley table for the group $G$.
+\item
+Prove or disprove: $G \cong {\mathbb Z}_4$.
+\item
+Prove or disprove: $G \cong U(12)$.
+\end{enumerate}
+\end{exercise}
+
+
+
+%$\psi$ by $\psi(1) = 1$, $\psi(3) = 11$, $\psi(5) = 5$, $\psi(7) = 7$. In fact, both of these groups are isomorphic to 
+
+\begin{example}{not_isomorph_Abelian}
+Even though $D_3$ and ${\mathbb Z}_6$ possess the same number of elements, we might suspect that they are not isomorphic, because ${\mathbb Z}_6$ is Abelian and $D_3$ is non-Abelian.  Let's see if the  Cayley tables can help us here:
+
+\begin{table}[H]
+{\small
+\begin{center}
+\begin{tabular}{c|cccccc}
+$\circ$  & $\var{id}$     & $\rho_1$ & $\rho_2$ & $\mu_1$ & $\mu_2$ & $\mu_3$ \\
+\hline
+$\var{id}$     & $\var{id}$     & $\rho_1$ & $\rho_2$ & $\mu_1$ & $\mu_2$ & $\mu_3$ \\
+$\rho_1$ & $\rho_1$ & $\rho_2$ & $\var{id}$     & $\mu_3$ & $\mu_1$ & $\mu_2$ \\
+$\rho_2$ & $\rho_2$ & $\var{id}$     & $\rho_1$ & $\mu_2$ & $\mu_3$ & $\mu_1$ \\
+$\mu_1$  & $\mu_1$  & $\mu_2$  & $\mu_3$  & $\var{id}$    & $\rho_1$& $\rho_2$\\
+$\mu_2$  & $\mu_2$  & $\mu_3$  & $\mu_1$  & $\rho_2$& $\var{id}$    & $\rho_1$\\
+$\mu_3$  & $\mu_3$  & $\mu_1$  & $\mu_2$  & $\rho_1$& $\rho_2$& $\var{id}$
+\end{tabular}
+\end{center}
+}
+\caption{Cayley table for $D_3$}
+\label{D3_table}
+\end{table}
+
+\begin{table}[H]
+\caption{Cayley table for ${\mathbb Z}_6$}
+\label{Z6_add_table}
+{\small
+\begin{center}
+\begin{tabular}{c|cccccccc}
+$\oplus$ & 0 & 1 & 2 & 3 & 4 & 5  \\
+\hline
+0        & 0 & 1 & 2 & 3 & 4 & 5  \\
+1       & 1 & 2 & 3 & 4 & 5 & 0  \\
+2       & 2 & 3 & 4 & 5 & 0 & 1\\
+3       & 3 & 4 & 5 & 0 & 1 & 2 \\
+4       & 4 & 5 & 0 & 1 & 2 & 3 \\
+5       & 5 & 0 & 1 & 2 & 3 & 4 \\
+
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+Note that the Cayley table for ${\mathbb Z}_6$ is symmetric across the main diagonal while the Cayley table for $D_3$ is not.  Furthermore, no matter how we rearrange the row and column headings for the Cayley table for ${\mathbb Z}_6$, the  table will always be symmetric. It follows that there is no way to to match up the two groups' Cayley tables: so $D_3 \ncong {\mathbb Z}_6$.
+
+This  argument via Cayley table works in the case where the two groups being compared are both small, but if the groups are large then it's far too time-consuming (especially if the groups are infinite!). So let us take a different approach, and fall back on our time-tested strategy of proof by contradiction. In the case at hand, this means that we first suppose that $D_3 \cong {\mathbb Z}_6$, and  then find a contradiction based on that supposition. 
+
+So, suppose that the two groups are isomorphic, which means there exists an isomorphism $\phi : {\mathbb Z}_6 \rightarrow  D_3$.  Let $a , b \in D_3$ be two elements such that $a\circ b \neq b \circ a$.  Since $\phi$ is an isomorphism, there exist elements $m$ and $n$ in ${\mathbb Z}_6$ such~that 
+\[
+\phi( m )  = a \quad \text{and} \quad
+\phi( n )  = b.
+\]
+However,
+\[
+a\circ b = \phi(m ) \circ  \phi(n) = \phi(m \oplus  n) = \phi(n \oplus m) = \phi(n ) \circ \phi(m) = b \circ a,
+\]
+which contradicts the fact that $a$ and $b$ do not commute.
+\end{example}
+
+Although we have only proven the non-isomorphicity of Abelian and non-Abelian groups for one particular case, the same  method of proof can be used to prove the following general result.
+%Notice that in the general method for proving $D_3 \ncong {\mathbb Z}_6$, the elements $a, b, m$ and $n$ used were completely general and could have been picked from any two groups, one Abelian and one not.  Therefore, that proof would work just as well for proving that any Abelian group couldn't be isomorphic to a non-Abelian group.  Hence 
+
+\begin{thm}\label{Abelian_non-Abelian}
+If $G$ is an Abelian group and $H$ is a non-Abelian group, then $G \ncong H$.
+\end{thm}
+
+\begin{exercise}{}
+Prove Proposition ~\ref{Abelian_non-Abelian} by imitating the proof in Example ~\ref{example:isomorph:not_isomorph_Abelian}.
+\end{exercise}
+
+\begin{exercise}{iso_prac7}
+Prove $D_4 \ncong {\mathbb Z}_8$.
+\end{exercise}
+
+
+Finally, let's look at ${\mathbb Z}$ and ${\mathbb R}$.  We know ${\mathbb Z}$ is a cyclic group with $1$ as the generator, while ${\mathbb R}$ is not cyclic. (Do you remember why?)  We might suspect  that  ${\mathbb Z} \ncong {\mathbb R}$, since one group is cyclic and the other isn't.  This is in fact true, and we'll prove it.   Since ${\mathbb Z}$ and ${\mathbb R}$ are infinite groups though, we can't use Cayley tables, so we have to use another method (three guessess as to what it is):
+
+\begin{thm}\label{not_isomorph_cyclic}
+${\mathbb Z}$ is not isomorphic to ${\mathbb R}$.
+\end{thm}
+\begin{proof}
+We will use a proof by contradiction.   Suppose that there exists an isomorphism $\phi: {\mathbb Z} \rightarrow {\mathbb R}$.  Choose any $x \in {\mathbb R}$, and let $m \in {\mathbb Z}$ be the pre-image of $x$, that is $\phi(m) = x$.  It follows that: 
+
+\begin{align*}
+x &= \phi(m) = \phi(\underbrace{1 + \ldots + 1}_{m~\textrm{times}})= \underbrace{\phi(1) + \ldots + \phi(1)}_{m~\textrm{times}}.
+\end{align*}
+Thus $x \in \langle  \phi(1) \rangle$.  But since this is true for \emph{any} $x \in {\mathbb R}$, this means that  $\phi(1)$ is a generator of  ${\mathbb R}$, which means that ${\mathbb R}$ is cyclic. But we've already seen that 
+${\mathbb R}$ is \emph{not} cyclic. This contradiction shows that our original supposition must be false: namely, there \emph{cannot} exist an isomorphism $\phi: {\mathbb Z} \rightarrow {\mathbb R}$. This completes the proof.
+\end{proof}
+
+\noindent
+Again we can generalize this proof to prove that a cyclic group cannot be isomorphic to a non-cyclic group. The contrapositive of this statement is:
+
+\begin{thm}\label{cyclic_noncyclic}
+If $G$ is cyclic and $G \cong H$, then $H$ is also cyclic.
+\end{thm}
+
+
+\begin{exercise}{cyclic_noncyclic} 
+Prove Proposition \ref{cyclic_noncyclic}. (\emph{Hint:} follow Proposition~\ref{not_isomorph_cyclic}.)
+\end{exercise}
+
+
+
+\begin{exercise}{noniso_cyclic}
+\begin{enumerate}[(a)]
+\item
+Prove that ${\mathbb Q}$ is not isomorphic to ${\mathbb Z}$.
+\item
+Prove that  ${\mathbb Z}_3 \times {\mathbb Z}_3$ is not isomorphic to ${\mathbb Z}_9$. 
+\end{enumerate}
+\end{exercise}
+
+
+
+\section{More properties of isomorphisms}\label{iso_properties}
+In the last two sections we  proved several properties of isomorphic groups and their corresponding isomorphisms.  We collect these properties (and add a few more) in the following proposition:
+
+\begin{thm}\label{isomorph_theorem_1}
+Let $\phi : G \rightarrow H$ be an isomorphism of two groups.  Then the following statements are true. 
+\begin{enumerate}[(1)]
+ 
+
+\rm \item 
+$|G| = |H|$. 
+
+\rm \item 
+$\phi^{-1} : H \rightarrow G$ is an isomorphism. 
+
+\rm \item 
+$G$ is Abelian if and only if $H$ is Abelian. 
+
+\rm \item 
+$G$ is cyclic if and only if $H$ is cyclic. 
+
+\rm \item
+If $g \in G$ is an element of order $n$ (that is, $| \langle g \rangle | = n$), then 
+$\phi(g) \in H$ is also an element of order $n$.
+
+\rm \item 
+If $G'$  is a subgroup of $G$, then $\phi(G') $ is a subgroup of  $H$ and $G' \cong \phi(G')$  (Recall that $\phi(G') = \{ \phi(g), g \in G'\}$.)
+ 
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Assertion (1) follows from the fact that $\phi$ is a bijection.  The proofs of (2)--(6) are indicated in the following exercises.
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item 
+Show part (2) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Exercise~\ref{exercise:isomorph:InvCompIso}.)
+\item
+Show part (3) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Proposition~\ref{Abelian_non-Abelian}. )
+\item
+Show part (4) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Proposition~\ref{cyclic_noncyclic}. )
+\end{enumerate}
+\end{exercise} 
+
+\begin{exercise}{}
+Suppose, $G, H, \phi$ are as given  in Proposition~\ref{isomorph_theorem_1}, and suppose $g \in G$ is an element of order $n$, where $n>1$ . Show that 
+$\phi(g)^k \neq {\var id}_H$ for $k=1,\ldots n-1$ , where ${\var id}_H$ is the identity of $H$.  Use your result to prove part (5) of  Proposition~\ref{isomorph_theorem_1}.
+\end{exercise}
+
+\noindent
+We will complete the proof of part (6) in two steps:
+\begin{enumerate}[Step (I):~~]
+\item
+$\phi(G')$ is a subgroup of $H$;
+\item
+$\phi(G')$ is isomorphic to $G'$.
+\end{enumerate}
+
+\begin{exercise}{} Fill in the blanks of the following proof of Step (I)  (that is, $\phi(G')$ is a subgroup of $H$):
+\medskip
+
+Let us suppose that $G'$ is a subgroup of $G$. We claim that $\phi(G')$ is actually a subgroup of $\_\_\_\_$.  To show this, by Proposition~\ref{proposition:groups:subgroup_prove_2} it's enough to show that if $h_1$ and $h_2$ are elements of  $\phi(G')$, then $h_1 h_2^{-1}$ is also an element of $\_\_\_\_\_\_\_\_\_\_\_\_$.
+
+Now given that  $h_1, h_2 \in \phi(G')$, by the definition of $\phi(G')$ it must be true that there exist $g_1, g_2 \in \_\_\_\_\_$ such that $\phi(g_1) = h_1, \phi(g_2) = h_2$. But then we have 
+\begin{align*}
+h_1 h_2^{-1} &= \phi(g_1) \phi(g_2)^{-1} &\text{(by substitution)}\\
+&= \phi(g_1) \phi(g_2^{-1}) &(\text{by Proposition~}\_\_\_\_\_\_\_\_\_\_\_\_)\\
+&= \phi(g_1 g_2^{-1}) &(\text{by the definition of }\_\_\_\_\_\_\_\_\_\_\_\_).
+\end{align*}
+Since $g_1 g_2^{-1}$ is an element of $G'$, it follows that $h_1 h_2^{-1} \in \_\_\_\_\_\_\_\_\_\_\_\_$. This completes the proof of Step (I).
+\end{exercise}
+
+\begin{exercise}{}
+Complete the following proof of Step (II) (that is, $G'$ and $\phi(G')$ are isomorphic). 
+\medskip
+
+Consider the function $\phi$ restricted to the set $G'$: that is, $\phi: G' \rightarrow \phi(G')$.  To  prove this gives an isomorphism from $G'$ to $\phi(G')$, we need to show (i) $\phi: G' \rightarrow \phi(G')$ is a bijection; and (ii) $\phi: G' \rightarrow \phi(G')$ has the operation-preserving property.
+
+To show (i), we note that by the definition of $\phi(G')$, for every $h \in \phi(G')$ there exists a $g \in \_\_\_\_\_$ such that $\phi(\_\_\_\_) = h$. It follows that $\phi$ maps $G'$ onto $\_\_\_\_\_\_\_\_\_\_$.  Also, if $g_1, g_2 \in G'$ and $\phi(g_1) = \phi(g_2)$, then since $\phi$ is a one-to-one function on $G$ it follows that $g_1 = \_\_\_\_\_$. From this it follows that $\phi$ is also a one-to-one function on $\_\_\_\_\_$.  We conclude that $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$ is a bijection.
+
+To show (ii), given $g_1, g_2 \in \_\_\_\_\_$ we have that $\phi(g_1 g_2) = \_\_\_\_\_\_$ since by assumption $\phi$ is an isomorphism from $\_\_\_\_$ to $\_\_\_\_$. This implies that $\phi$ also has the operation-preserving  property when it's considered as a function from  $\_\_\_\_$ to $\_\_\_\_$.  This completes the proof of Step (II).
+ \end{exercise}
+
+\end{proof}
+
+\begin{exercise}{}
+Prove $S_4$ is not isomorphic to $D_{12}$. 
+\end{exercise}
+
+\begin{exercise}{}
+Prove $A_4$ is not isomorphic to $D_{6}$. (Recall that $A_4$ is the alternating group (group of even permutations) on 4 letters.) 
+\end{exercise}
+
+\begin{exercise}{}
+The \emph{quaternion group}\index{quaternion group ($Q_8$)} (denoted by $Q_8$) consists of 8 elements: $1$, $i$, $j$, $k$, $-1$, $-i$, $-j$, $-k$. You may find the Cayley table for $Q_8$ on \url{wolframalpha.com} or Wikipedia. Show that the quaternion group is not isomorphic to $D_4$.
+\end{exercise}
+
+\section{Classification up to isomorphism}
+We have been emphasizing that two groups that are isomorphic are the ``same'' as far as all group properties are concerned. So if we can characterize a class of groups as isomorphic to a well-understood set of groups, then all of the properties of the well-understood groups carry over to the entire class of groups. We will see two examples of this in the following subsections.
+
+\subsection*{Classifying cyclic groups}
+
+Our first classification result concerns cyclic groups.
+
+\begin{thm}\label{isomorph_theorem_2}
+If $G$ is a  cyclic group of infinite order, then $G$ is isomorphic to ${\mathbb Z}$.
+\end{thm}
+
+\begin{proof}
+Let $G$ be a cyclic group with infinite order and suppose that $a$ is a generator of $G$.  Define a map $\phi : {\mathbb Z} \rightarrow  G$ by $\phi : n \mapsto a^n$. Then 
+\[
+\phi( m+n ) = a^{m+n} = a^m a^n = \phi( m ) \phi( n ).
+\]
+To show that $\phi$ is one-to-one, suppose that $m$ and $n$ are two elements in ${\mathbb Z}$, where $m \neq n$.  We can assume that $m > n$.  We must show that $a^m \neq a^n$. Let us suppose the contrary; that is, $a^m = a^n$. In this case $a^{m - n} = e$, where $m - n>0$, which contradicts the fact that $a$ has infinite order.  Our map is onto since any element in $G$ can be written as $a^n$ for some integer $n$ and $\phi(n) = a^n$.   
+\end{proof}
+
+\begin{exercise}{cyclic_inf_isomorph}
+Using Proposition ~\ref{isomorph_theorem_2}, prove again that $\{2^n | n \in {\mathbb Z} \} \cong {\mathbb Z}$.
+\end{exercise}
+
+\begin{exercise}{cyclic_inf_isomorph2}
+Prove again that $n{\mathbb Z} \cong {\mathbb Z}$ for $n \neq 0$.
+\end{exercise}
+
+
+\begin{thm}\label{isomorph_theorem_3}
+If $G$ is a cyclic group of order $n$, then $G$ is isomorphic to~${\mathbb Z}_n$.  
+\end{thm}
+ 
+\begin{proof}
+Let $G$ be a cyclic group of order $n$ generated by $a$ and define a map $\phi : {\mathbb Z}_n \rightarrow  G$ by $\phi : k \mapsto a^k$, where $0 \leq k < n$. The proof that $\phi$ is an isomorphism is left as the next exercise. 
+\end{proof}
+
+\begin{exercise}{phi_cyclic}
+Prove that $\phi$ defined in Proposition ~\ref{isomorph_theorem_3} is an isomorphism.
+\end{exercise}
+
+\begin{exercise}{cyclic_inf_isomorph3}
+\begin{enumerate}[(a)]
+\item
+In fact, the \emph{converse} of Proposition~\ref{isomorph_theorem_3} is true: that is,   If $G$ is isomorphic to ${\mathbb Z_n}$
+then $G$ is a  cyclic group of order $n$.  How do we know this?
+\item
+Is the converse of Proposition~\ref{isomorph_theorem_3} also true?  \emph{Justify} your answer.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}{cyclic_n_isomorph}
+Show that the multiplicative group of the complex $n$th roots of unity is isomorphic to ${\mathbb Z}_n$.
+\end{exercise} 
+
+\begin{corollary}\label{isomorph_theorem_4}
+If $G$ is a  group of order $p$, where $p$ is a prime number, then $G$ is isomorphic to ${\mathbb Z}_p$. 
+\end{corollary}
+
+\begin{proof}
+This  is a direct result of Corollary~\ref{cosets_theorem_7}.
+\end{proof}
+
+
+ 
+
+\subsection*{Characterizing all finite groups (Cayley's theorem) }
+ 
+In the previous section, we saw that any cyclic group is ``equivalent'' (in the sense of isomorphism) to one of the groups $\mathbb{Z}_n$.  This enables us to easily conceptualize any cyclic group in terms of a standardized set of  groups that we're very familiar with. 
+
+Now, can we do something similar with \emph{all} 
+groups? In other words, can we find  a standardized set of groups so that any group can be characterized as equivalent (up to isomorphism)  to one of these standard groups?. 
+
+In a way we already have a standardized characterization of finite groups, because we have seen that every finite group can be represented with a Cayley table.  But this is not really satisfactory, because there are many Cayley tables which do not correspond to any group.
+
+\begin{exercise}{CayleyNotGroup}
+Give examples of Cayley tables for binary operations that meet each of the following criteria.  (You can make your row and column labels be the set of integers $\{1,2,..n\}$, for an appropriate value of $n$.
+\begin{enumerate}
+\item
+The binary operation has no identity.
+\item
+The binary operation has an identity, but not inverses for every element
+\item
+*The binary operation has an identity and inverses, but  the associative law fails.
+\end{enumerate}
+\end{exercise} 
+
+Although Cayley tables are not adequate for our purpose, it turns out that they provide the key to the characterization we're seeking. Consider first the following simple example.
+
+\begin{example}{cayley_isomorph}
+The Cayley table for ${\mathbb Z}_3$ is  
+\begin{center}
+\begin{tabular}{c|ccc}
+$\oplus$   & 0 & 1 & 2 \\
+\hline
+0     & 0 & 1 & 2 \\
+1     & 1 & 2 & 0 \\
+2     & 2 & 0 & 1
+\end{tabular}
+\end{center}
+The addition table of ${\mathbb Z}_3$ suggests that it is the isomorphic to the permutation group $ \{ \var{id}, (0 1 2), (0 2 1) \}$.  One possible isomorphism  is 
+\begin{align*}
+0 & \mapsto
+\begin{pmatrix}
+0 & 1 & 2 \\
+0 & 1 & 2
+\end{pmatrix}
+= \var{id} \\
+1 & \mapsto
+\begin{pmatrix}
+0 & 1 & 2 \\
+1 & 2 & 0
+\end{pmatrix}
+= (0 1 2) \\
+2 & \mapsto
+\begin{pmatrix}
+0 & 1 & 2 \\
+2 & 0 & 1
+\end{pmatrix}
+= (0 2 1).
+\end{align*}
+Notice the interesting ``coincidence'' that  the rows of the Cayley table ( $(0~1~2), (1~2~0)$ and $2~1~0)$ respectively)  ``just happen'' to agree exactly with the second rows of the three tableaus! 
+
+Of course, this ``coincidence'' is no accident.
+For example, the second row of the Cayley table is obtained as $(1\oplus 0~~1\oplus 1~~1\oplus 2)$, and the permutation $\begin{pmatrix}
+0 & 1 & 2 \\
+1 & 2 & 0
+\end{pmatrix}$ 
+that is the isomorphic image of 1 is actually the function from ${\mathbb Z}_3 \rightarrow {\mathbb Z}_3$ that takes $n$ to $1 \oplus n$.   The following proposition is basically a generalization of this simple observation.
+
+\end{example}
+
+
+\begin{thm}[Cayley's theorem]\index{Cayley's Theorem}\label{isomorph_theorem_6}
+Every group is isomorphic to a group of permutations.
+\end{thm}
+
+\begin{proof}
+Let $G$ be a group with $|G|$ elements.  We seek a group of permutations $P \subset S_{|G|}$ that is isomorphic to $G$.  For any $g \in G$ we may  define a  function $\sigma_g : G \rightarrow G$ by 
+\[
+\sigma_g(a) := ga.
+\]
+  We claim that $\sigma_g$ is a permutation on $G$: you will show this in Exercise~\ref{exercise:isomorph:finish_proof} below.  Let us define the set $P\subset S_{|G|}$ as
+\[
+P = \{ \sigma_g : g \in G \}.
+\]
+Let us now define a function $\Phi: G \rightarrow P$ just as we did in Example~\ref{example:isomorph:cayley_isomorph}:
+\[ \Phi(g) := \sigma_g. \]
+Let's pause for a minute here, to make sure that you understand what's going on. According to the definition, $\Phi$ is a function whose domain is the group $G$ and whose range is a subset of the permutation group on $|G|$ letters. Now permutations are functions in their own right: so  $\Phi$ is a function (from $G$ to $P$), and for each $g \in G$, $\Phi(g)$ is \emph{also} a function (from $G$ to $G$). We could say that $\Phi$ is a function-valued function. This can be quite unnerving the first time you see it -- but such constructions are an integral part of higher mathematics, so it's best to get used to them! In this case, you should understand that $\Phi(g)$ is a permutation, and $\Phi(g) (a)$ is the permutation $\Phi(g)$ applied to the group element $a$. According to the definition of $\Phi(g)$,  $\Phi(g) (a)$ is equal to $\sigma_g(a)$, which by the definition of $\sigma_g$ is equal to $ga$.
+
+OK, now let's get back to the argument. To show that $\Phi$ is an isomorphism, we must show that $\Phi$ is one-to-one, onto, and preserves the group operation. 
+You will show that $\Phi$ is one-to-one and onto in Exercise~\ref{exercise:isomorph:finish_proof} below. To show that $\Phi$ preserves the group operation, we need to show that $\Phi(gh) = \Phi(g) \circ \Phi(h)$ for any elements $g, h \in G$. We may show this element-by-element: that is, we show that $\Phi(gh)(a) = (\Phi(g) \circ \Phi(h))(a)$ for an arbitrary $a \in G$ as follows:
+\begin{align*}
+ \Phi(gh)(a) &= (gh)a & [\text{definition of } \Phi(gh)]\\
+&= g(ha) & [\text{associativity of }G]\\
+ &= g(\Phi(h)(a)) & [\text{definition of } \Phi(h)]\\
+ &=\Phi(g) \circ \Phi(h)(a). & [\text{definition of } \Phi(g)]
+ \end{align*}
+\end{proof}
+\medskip
+
+\begin{exercise}{finish_proof}
+\begin{enumerate}[(a)]
+\item
+Show that $\sigma_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It is enough to show that $\sigma_g$ is one-to-one and onto.) 
+\item
+Complete the proof of Proposition~\ref{isomorph_theorem_6} by showing that $\Phi:G \rightarrow P$ is one-to-one and onto. 
+\end{enumerate}
+\end{exercise}
+
+The isomorphism $\Phi: G \rightarrow S_{|G|}$ defined in the proof is known as the \bfii{ left regular representation\/}\index{Left regular representation}\index{Regular representation!left} of~$G$. This is not the only possible isomorphism. There is another isomorphism called the \bfii{ right regular representation\/}\index{Right regular representation}\index{Regular representation!right}, which is presented in the following exercise.
+
+\begin{exercise}{r_reg}
+The right regular representation  $\Psi: G \rightarrow S_{|G|}$  is defined as follows. For any $g \in G$ define the  function $\tilde{\sigma}_g : G \rightarrow G$ by 
+\[
+\tilde{\sigma}_g(a) := ag^{-1}.
+\]
+Define the set $\tilde{P}$ as
+\[
+\tilde{P} = \{ \tilde{\sigma}_g : g \in G \},
+\]
+and define the function $\tilde{\Phi}: G \rightarrow P$ as
+\[ \tilde{\Phi}(g) := \tilde{\sigma}_g. \]
+\begin{enumerate}[(a)]
+\item
+Show that $\tilde{\sigma}_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It follows that the set $\tilde{P}$ is a subset of $S_{|G|}$.)
+\item
+Show that $\tilde{\Phi}:G \rightarrow \tilde{P}$ is one-to-one and onto. 
+ \item
+Complete the proof that $G \cong \tilde{P}$ by showing that $\tilde{\Phi}$ preserves the group operation, that is: $\tilde{\Phi}(gh) = \tilde{\Phi}(g) \circ \tilde{\Phi}(h)$ for any elements $g, h \in G$.
+\item
+Give the isomorphism  $\tilde{\Phi}$ for the group $\mathbb{Z}_3$.  Is this isomorphism different from $\Phi$ defined on the same group?
+\end{enumerate}
+\end{exercise}
+
+\histhead
+
+\noindent{\small \histf
+Arthur Cayley\index{Cayley, Arthur} was born in England in 1821, though he spent much of the first part of his life in Russia, where his father was a merchant.  Cayley was educated at Cambridge, where he took the first Smith's Prize in mathematics.  A lawyer for much of his adult life, he wrote several papers in his early twenties before entering the legal profession at the age of 25.  While practicing law he continued his mathematical research, writing more than 300 papers during this period of his life.  These included some of his best work.  In 1863 he left law to become a professor at Cambridge.  Cayley wrote more than 900 papers in fields such as group theory, geometry, and linear algebra. His legal knowledge was very valuable to Cambridge; he participated in the writing of many of the university's statutes.  Cayley was also one of the people responsible for the admission of women to Cambridge. 
+\histbox
+} 
+ 
+
+\section{Direct Products}\label{isomorph_section_2}
+
+Given two groups $G$ and $H$, it is possible to construct a new group from the Cartesian product of $G$ and $H$, $G \times H$.  Conversely, given a large group, it is sometimes possible to decompose the group; that is, a group is sometimes isomorphic to the direct product of two smaller groups. In this case, all of the properties of the large group can be derived from the properties of the smaller groups, which can lead to tremendous simplification.
+ 
+ 
+\subsection*{External Direct Products}
+
+If $(G,\cdot)$ and $(H, \circ)$ are groups, then we can make the Cartesian product of $G$ and $H$ into a new group.  As a set, our group is just the ordered pairs $(g, h) \in G \times H$ where $g \in G$ and $h \in H$. We can define a binary operation on $G \times H$ by 
+\[
+(g_1, h_1)(g_2, h_2) = (g_1 \cdot g_2, h_1 \circ h_2);
+\]
+that is, we just multiply elements in the first coordinate as we do in $G$ and elements in the second coordinate as we do in $H$.  We have specified the particular operations $\cdot$ and $\circ$ in each group here for the sake of clarity; we usually just write $(g_1, h_1)(g_2, h_2) = (g_1  g_2, h_1 h_2)$.  
+
+\begin{thm}\label{isomorph_theorem_7}
+Let $G$ and $H$ be groups. The set $G \times H$ is a group under the operation $(g_1, h_1)(g_2, h_2) = (g_1  g_2, h_1 h_2)$ where $g_1, g_2 \in G$ and $h_1, h_2 \in H$. 
+\end{thm}
+The proof is outlined in the following exercise. (\emph{Hint}: for each group property to be proved, use the corresponding group property for $G$ and $H$.)
+
+\begin{exercise}{proof_thm_7}
+\begin{enumerate}
+\item
+Show that the set $G \times H$ is closed under the binary operation defined in Proposition~\ref{isomorph_theorem_7}. 
+\item Show that $(e_G, e_H)$ is the identity of $G \times H$,
+where $e_G$ and $e_H$ are the identities of the groups $G$ and $H$ respectively.
+\item Show that the inverse of $(g, h) \in G \times H$ is $(g^{-1}, h^{-1})$.  
+\item Show that the operation defined in Proposition~\ref{isomorph_theorem_7} is associative.
+\end{enumerate}
+\end{exercise}
+
+\begin{example}{R2_prodiuct}
+Let ${\mathbb R}$ be the group of real numbers under addition.  The Cartesian product of ${\mathbb R}$ with itself, ${\mathbb R} \times {\mathbb R} = {\mathbb R}^2$, is also a group, in which the group operation is just addition in each coordinate; that is, $(a, b) + (c, d) = (a + c, b + d)$.  The identity is $(0,0)$ and the inverse of $(a, b)$ is $(-a, -b)$.
+\end{example}
+
+\begin{example}{Z2xZ2}
+Consider
+\[
+{\mathbb Z}_2 \times {\mathbb Z}_2 = \{ (0, 0), (0, 1), (1, 0),(1, 1) \}.
+\]
+Although ${\mathbb Z}_2 \times {\mathbb Z}_2$ and ${\mathbb Z}_4$ both contain four elements,  they are not isomorphic. We can prove this by noting that ${\mathbb Z}_4$ is cyclic, while  every element $(a,b)$ in ${\mathbb Z}_2 \times {\mathbb Z}$ has order 2 (verify this).	
+\end{example}
+
+The group $G \times H$ is called the \bfii{ external direct product\/}\index{Direct product of groups!external}\index{External direct product} of  $G$ and $H$. Notice the difference between `Cartesian product' and 'external direct product': the external direct product is a group whose underlying set is a Cartesian product; but in addition, the external direct product has a group operation, which generic off-the-shelf Cartesian products don't ordinarily have. 
+
+In the previous example, we used two groups to build a new group. But there's no reason to stop with two! The direct product
+\[
+\prod_{i = 1}^n G_i = G_1 \times G_2 \times \cdots \times G_n
+\]
+of the groups $G_1, G_2, \ldots, G_n$ may be defined in a similar way. 
+
+\begin{exercise}{}
+How would you write an element in $\prod_{i = 1}^n G_i$? Write two different elements of $\prod_{i = 1}^n G_i$, and show how you would define the group operation in terms of these two elements. (You may denote the group operation on each group $G_i$ by the symbol `$\cdot$'.
+\end{exercise}	
+
+If $G = G_1 = G_2 = \cdots = G_n$, we often write $G^n$ instead of $G_1 \times G_2 \times \cdots \times G_n$.
+ 
+\begin{example}{Z2^n}
+The group ${\mathbb Z}_2^n$, considered as a set, is just the set of all
+binary $n$-tuples. The group operation is the ``exclusive or'' of two
+binary $n$-tuples. For example, 
+\[
+(01011101) + (01001011) = (00010110).
+\]
+This group is important in coding theory, in cryptography, and in many
+areas of computer science.  
+\end{example}
+
+What is the difference between $G \times H$ and $H \times G$?  Not much, as the following exercise shows:
+ 
+\begin{exercise}{direct_commute}
+Show that for any groups $G$ and $H$,  $G \times H \cong H \times G$. (\emph{Hint}: Define a function $\phi:G \times H \rightarrow H \times G$ by:  $\phi(g,h) = \_\_\_\_\_\_$ (you fill in the blank).  Show that this function is in fact an isomorphism.)
+\end{exercise}
+
+By extending this same idea, we find that we can rearrange the groups in a direct product arbitrarily and still end up with the ``same'' group:
+
+\begin{thm}\label{isomorph:DPorder}
+Let $G_1,G_2, \ldots G_n$ be arbitrary groups, and let  $\sigma \in S_n$ be any permutation on $\{1,2,\ldots n\}$. Then
+\[ G_1 \times G_2 \times \ldots \times G_n \cong G_{\sigma(1)} \times G_{\sigma(2)} \times \ldots \times G_{\sigma(n)}.\]
+\end{thm}
+
+\begin{exercise}{}
+What isomorphism would you need to define in order to prove Proposition~\ref{isomorph:DPorder}? (We won't ask you to give a complete proof of the proposition, but you can if you want to!)
+\end{exercise}
+
+Suppose you start out with groups that are isomorphic, and take direct products of them.  Are the direct products also isomorphic? It just so happens that they are:
+
+\begin{thm}\label{isomorph:dp_isom}
+Suppose that $G_1 \cong H_1, G_2 \cong H_2, \ldots, G_n \cong H_n$. Then $G_1 \times \ldots \times G_n  \cong H_1 \times \ldots \times H_n$.
+\end{thm}
+
+\noindent
+We won't give the full proof, but you can get the idea of how it goes by doing the following exercise.
+
+\begin{exercise}{}
+Prove Proposition~\ref{isomorph:dp_isom} for the case where $n=2$. (Remember that the default method for proving that groups are isomorphic is to define a suitable function and prove that it's an isomorphism.)
+\end{exercise}
+
+
+Let's explore further the idea of isomorphisms of direct products. To do this, it is helpful to examine the orders of various elements in a direct product group:
+
+\begin{thm}\label{isomorph:lcm_theorem}
+Let $(g, h) \in G \times H$. If $g$ and $h$ have finite orders $r$ and
+$s$ respectively, then the order of $(g, h)$ in $G \times H$ is the
+least common multiple of $r$ and $s$. \index{Isomorphism!least common multiple theorem}
+\end{thm}
+
+ 
+\begin{proof}
+Suppose that $m$ is the least common multiple of $r$ and $s$ and let
+$n = |(g,h)|$. Then 
+\begin{gather*}
+(g,h)^m  = (g^m, h^m) = (e_G,e_H) \\
+(g^n, h^n)  = (g, h)^n = (e_G,e_H).
+\end{gather*}
+Hence, $n$ must divide $m$, and $n \leq m$.  However, by the second
+equation, both $r$ and $s$ must divide $n$; therefore, $n$ is a common
+multiple of $r$ and $s$. Since $m$ is the {\em least common multiple\/}
+of $r$ and $s$, $m \leq n$.  Consequently, $m$ must be equal to~$n$.
+\end{proof}
+
+We may extend the idea of this proof to  arbitrary direct products:
+
+\begin{corollary}
+Let $(g_1, \ldots, g_n) \in \prod G_i$. If $g_i$ has finite order
+$r_i$ in $G_i$, then the order of $(g_1, \ldots, g_n)$ in $\prod G_i$
+is the least common multiple of $r_1, \ldots, r_n$.
+\end{corollary}
+ 
+ 
+\begin{example}{Z12xZ60}
+Let $(8, 56) \in {\mathbb Z}_{12} \times  {\mathbb Z}_{60}$. Since
+$\gcd(8,12) = 4$, the order of 8 is $12/4 = 3$ in ${\mathbb Z}_{12}$.
+Similarly, the order of $56$ in ${\mathbb Z}_{60}$ is $15$. The least
+common multiple of 3 and 15 is 15; hence, $(8, 56)$ has order 15 in
+${\mathbb Z}_{12} \times  {\mathbb Z}_{60}$.
+\end{example}
+
+ 
+\begin{example}{Z2xZ3}
+The group ${\mathbb Z}_2 \times {\mathbb Z}_3$ consists of the pairs
+\[
+\begin{array}{cccccc}
+(0,0),& (0, 1),& (0, 2),& (1,0),& (1, 1),& (1, 2).
+\end{array}
+\]
+In this case, unlike that of ${\mathbb Z}_2 \times {\mathbb Z}_2$ and
+${\mathbb Z}_4$, it 
+is true that ${\mathbb Z}_2  \times {\mathbb Z}_3 \cong {\mathbb Z}_6$. We need
+only show that ${\mathbb Z}_2  \times {\mathbb Z}_3$ is cyclic.  It is
+easy to see that $(1,1)$ is a generator for ${\mathbb Z}_2  \times {\mathbb
+Z}_3$. 
+\end{example}
+
+\begin{exercise}{}
+Find the order of each of the following elements.
+\begin{enumerate}
+  \item
+$(3, 4)$ in ${\mathbb Z}_4 \times {\mathbb Z}_6$
+ \item
+$(6, 15, 4)$ in ${\mathbb Z}_{30} \times {\mathbb Z}_{45} \times {\mathbb
+Z}_{24}$
+ \item
+$(5, 10, 15)$ in ${\mathbb Z}_{25} \times {\mathbb Z}_{25} \times {\mathbb
+Z}_{25}$
+ \item
+$(8, 8, 8)$ in ${\mathbb Z}_{10} \times {\mathbb Z}_{24} \times {\mathbb
+Z}_{80}$
+ \end{enumerate}
+ \end{exercise}
+
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+Show that $\mathbb{Z}_4 \times \mathbb{Z}_9$ is cyclic, and find 6 different generators for the group. 
+\item
+Show that $\mathbb{Z}_3 \times \mathbb{Z}_5$ is cyclic. How many different generators does it have?
+\end{enumerate} 
+\end{exercise}
+ 
+The next proposition tells us exactly when the direct product of two
+cyclic groups is cyclic. 
+ 
+
+\begin{thm}\label{Z_pq_theorem}
+The group ${\mathbb Z}_m \times {\mathbb Z}_n$ is isomorphic to ${\mathbb
+Z}_{mn}$ if and only if $\gcd(m,n)=1$. 
+\end{thm}
+ 
+
+\begin{proof}
+Assume first that if ${\mathbb Z}_m \times {\mathbb Z}_n \cong {\mathbb
+Z}_{mn}$, then $\gcd(m, n) = 1$. To show this, we will prove the
+contrapositive; that is, we will show that if $\gcd(m, n) = d >
+1$, then ${\mathbb Z}_m \times {\mathbb Z}_n$ cannot be cyclic. Notice that
+$mn/d$ is divisible by both $m$ and $n$; hence, for any element $(a,b)
+\in {\mathbb Z}_m \times {\mathbb Z}_n$,  
+\[
+\underbrace{(a,b) + (a,b)+ \cdots + (a,b)}_{mn/d \; {\rm
+times}}
+= (0, 0).
+\]
+Therefore, no $(a, b)$ can generate all of ${\mathbb Z}_m \times {\mathbb
+Z}_n$. 
+
+ 
+The converse follows directly from Proposition~\ref{isomorph:lcm_theorem} since
+$\lcm(m,n) = mn$ if and only if $\gcd(m,n)=1$. 
+\end{proof}
+\medskip 
+
+As we've seen before, this idea extends directly to arbitrary direct products:
+
+\begin{thm}\label{RelativelyPrime}
+Let $n_1, \ldots, n_k$ be positive integers. Then
+\[
+\prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
+\]
+if and only if $\lcm( n_1, \ldots, n_k) =\prod_{i=1}^k n_i$.
+\end{thm}
+
+\begin{proof}
+Use the same argument as in Proposition~\ref{Z_pq_theorem}, except with indices $n_1,\ldots n_k$ instead of $n$ and $m$.
+\end{proof}
+
+A special case of this proposition is:
+ 
+\begin{corollary}
+If
+\[
+m = p_1^{e_1} \cdots  p_k^{e_k},
+\]
+where the $p_i$'s are distinct primes, then
+\[
+{\mathbb Z}_m \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb
+Z}_{p_k^{e_k}}.
+\]
+\end{corollary}
+ 
+ 
+\begin{proof}
+Since  $\gcd(p_i^{e_i},p_j^{e_j}) = 1$ for $i \neq j$, the proof follows from Corollary~\ref{RelativelyPrime}.
+\end{proof}
+
+\begin{exercise}{}
+Find three non-isomorphic Abelian groups of order 8, and show that they are not isomophic.
+\end{exercise}
+
+
+Remember that in the Permutations chapter we showed that every permutation can be ``factored''  as the product of disjoint cycles. (At that time, we compared this to the factorization of integers into prime factors).  It turns out that Abelian groups can also be ``factored''.  This beautiful and general result is summarized in the following proposition. We will not give a complete proof of the proposition (which uses induction)\footnote{Many proofs can be found on the web: search for ``structure of finite abelian groups''.}, but we hope that it makes sense to you in light of the foregoing discussion.
+
+\begin{thm}\label{FactorAbelianGroup} \bfii{ (Factorization of Abelian Groups)}~~
+If $G$ is an Abelian group, then there exist prime numbers $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ such that
+\[
+G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb
+Z}_{p_k^{e_k}}
+\]
+Note that the prime numbers $p_1, \ldots, p_k$  may not necessarily be distinct.
+\end{thm}
+
+\begin{exercise}{prodfacabel}
+Show that the primes  $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ in Proposition~ \ref{FactorAbelianGroup} must satisfy
+$|G| = p_1^{e_1} \cdots p_k^{e_k}$.
+\end{exercise}
+
+\begin{exercise}{prodfacabel2}
+\begin{enumerate}[(a)] 
+\item
+Prove or disprove: There is an Abelian group of order 22 that is \emph{not} cyclic. 
+\item
+Prove or disprove: There is an Abelian group of order 24 that is \emph{not} cyclic. 
+\item
+Prove or disprove: There is an Abelian group of order 30 that is \emph{not} cyclic. 
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+\begin{enumerate}
+\item
+Show that $\mathbb{Z}_{3^n}$ contains an element of order 3, for any positive integer $n$.
+\item
+Show that every Abelian group of order divisible by 3 contains an element of order 3.  
+\item
+Show that every Abelian group of order divisible by 9 contains a subgroup of order 9.  (\emph{Hint}. Consider 2 cases: (i) 9 divides one of the factors $p_i^{e_i}$ in Proposition~\ref{FactorAbelianGroup}; (ii) 9 does not divide any of the factors.
+\item
+Prove or disprove: for any prime $p$, every Abelian group of order divisible by $p^2$  contains a subgroup of order $p^2$. 
+\end{enumerate}
+\end{exercise}
+ 
+\subsection*{Internal Direct Products}
+ 
+
+The external direct product of two groups builds a large group out of
+two smaller groups.   We would like to be able to reverse this process
+and conveniently break down a group into its direct product
+components; that is, we would like to be able to say when a group is
+isomorphic to the direct product of two of its subgroups.
+ 
+\begin{defn}
+Let $G$ be a group with subgroups $H$ and $K$ satisfying the following
+conditions.
+\begin{itemize}
+ 
+\item
+$G = HK = \{ hk : h \in H, k \in K  \}$;
+ 
+\item
+$H \cap K = \{ e \}$;
+ 
+\item
+$hk = kh$ for all $k \in K$ and $h \in H$.
+ 
+\end{itemize}
+Then $G$ is the \bfii{ internal direct product\/}\index{Direct product of
+groups!internal}\index{Internal direct product} of $H$ and $K$.
+\end{defn}
+ 
+\begin{example}{U8}
+The group $U(8)$ is the internal direct product of
+\[
+H  = \{1, 3 \} \quad \text{and} \quad K  = \{1, 5 \}.
+\]
+\end{example}
+
+ 
+\begin{example}{D6_product}
+The dihedral group $D_6$ is an internal direct product of its two
+subgroups 
+\[
+H  = \{\var{id}, r^3  \} \quad \textrm{and} \quad
+K  = \{\var{id}, r^2, r^4, s, r^2s, r^4 s   \}.
+\]
+It can  be shown that $K \cong S_3$; consequently, $D_6 \cong
+{\mathbb Z}_2 \times S_3$. 
+\end{example}
+
+ 
+\begin{example}{S3_not_a_product}
+Not every group can be written as the internal direct product of two
+of its proper subgroups.  If the group $S_3$ were an internal direct
+product of its proper subgroups $H$ and $K$, then one of the  subgroups,
+say $H$, would have to have order 3. In this case $H$ is the subgroup $\{
+(1), (123), (132) \}$. The subgroup $K$ must have order 2, but no
+matter which subgroup we choose for $K$, the condition that $hk = kh$
+will never be satisfied for $h \in H$ and $k \in K$.
+\mbox{\hspace{1in}}
+\end{example}
+
+ 
+\begin{thm}\label{IntDirProd}
+Let $G$ be the internal direct product of  subgroups $H$ and $K$. Then
+$G$ is isomorphic to $H \times K$. 
+\end{thm}
+ 
+
+\begin{proof}
+Since $G$ is an internal direct product, we can write any element $g
+\in G$ as $g =hk$ for some $h \in H$ and some $k \in K$. Define a map
+$\phi : G \rightarrow H \times K$ by $\phi(g) = (h,k)$.
+
+ 
+The first problem that we must face is to show that $\phi$ is a
+well-defined map; that is, we must show that $h$ and $k$ are uniquely
+determined by $g$. Suppose that $g = hk=h'k'$. Then $h^{-1} h'= k
+(k')^{-1}$ is in both $H$ and $K$, so it must be the identity.
+Therefore, $h = h'$ and $k = k'$, which proves that $\phi$ is, indeed,
+well-defined. 
+
+ 
+To show that $\phi$ preserves the group operation, let $g_1 = h_1 k_1$
+and $g_2 = h_2 k_2$ and observe that 
+\begin{align*}
+\phi( g_1 g_2 ) & = \phi( h_1 k_1 h_2 k_2 )\\
+& = \phi(h_1  h_2 k_1 k_2) \\
+& = (h_1  h_2, k_1 k_2) \\
+& = (h_1, k_1)( h_2, k_2) \\
+& = \phi( g_1 ) \phi(  g_2 ).
+\end{align*}
+We will leave the proof that $\phi$ is a bijection as an exercise:
+
+\begin{exercise}{}
+Prove that  $\phi$ defined in the proof of Proposition~\ref{IntDirProd} is a bijection, thus completing the proof of the proposition.
+ \end{exercise}
+
+
+\end{proof}
+
+ 
+\begin{example}{Z6_product}
+The group ${\mathbb Z}_6$ is an internal direct product isomorphic to $\{
+0, 2, 4\} \times \{ 0, 3 \}$. 
+\end{example}
+
+\begin{exercise}{}
+Prove that the subgroup of ${\mathbb Q}^\ast$ consisting of elements of
+the form $2^m 3^n$ for $m,n \in {\mathbb Z}$ is an internal direct
+product isomorphic to ${\mathbb Z} \times {\mathbb Z}$.
+ \end{exercise}
+
+\begin{exercise}{DirProd}
+In this problem, we define  $G \subset S_2  \times S_n$ by:
+\noindent
+
+$G = ({\var id} , A_n) \cup ( (12) , (S_n \setminus  A_n))$.
+\begin{enumerate}[(a)]
+\item
+Show that $S_2  \times S_n $ is isomorphic to a subgroup of $S_{n+2}$.  
+\item
+ Show that $G$  is  a subgroup of $S_2  \times S_n $.
+\item
+Show that $G$ is isomorphic to a subgroup of $A_{n+2}$.
+\item
+Show that $G$ is isomorphic to $S_n$ .
+\item
+Show that $S_n$ is isomorphic to a subgroup of $A_{n+2}$.  
+\end{enumerate}
+\end{exercise}
+
+A (sort of) converse of Proposition~\ref{IntDirProd} is also true:
+
+\begin{thm}\label{ConvIntDirProd}
+Let $H$ and $K$ be subgroups of $G$, and define the map $\phi:H \times K \rightarrow G$  by $\phi(\, (h,k)\,) = hk$.  Suppose that $\phi$ is an isomorphism.  Then $G$ is the internal direct product of  $H$ and $K$.
+.\end{thm}
+
+\begin{exercise}{}
+Prove Proposition~\ref{ConvIntDirProd}.
+\end{exercise}
+
+\begin{exercise}{}
+Let $G$ be a group of order 20. If $G$ has subgroups $H$ and $K$ of
+orders 4 and 5 respectively such that $hk = kh$ for all $h \in H$ and
+$k \in K$, prove that $G$ is the internal direct product of $H$ and $K$. 
+ \end{exercise}
+
+\begin{exercise}{}
+Prove the following: Let $G$, $H$, and $K$ be
+groups such that $G \times K \cong H \times K$. Then is is also true that $G \cong H$. 
+(\emph{Hint}: Show that $G \times {\var id}_K$ is a subgroup of $G \times K$, and that $G \times {\var id}_K \cong G$; and similarly for $H$.)
+\end{exercise}
+
+We can extend the definition of an internal direct product of $G$ to a
+collection of subgroups $H_1, H_2, \ldots, H_n$ of $G$, by requiring
+that 
+\begin{itemize}
+ 
+\item
+$G = H_1 H_2 \cdots H_n = \{ h_1 h_2 \cdots h_n : h_i \in H_i \}$;
+ 
+\item
+$H_i \cap \langle \cup_{j \neq i} H_j \rangle = \{ e \}$;
+ 
+\item
+$h_i h_j = h_j h_i$ for all $h_i \in H_i$ and $h_j \in H_j$.
+ 
+\end{itemize}
+We will leave the proof of the following proposition as an exercise. 
+ 
+\begin{thm}\label{isomorph:mult_dir_prod}
+Let $G$ be the internal direct product of subgroups $H_i$, where $i =
+1, 2, \ldots, n$. Then $G$ is isomorphic to $\prod_i H_i$. 
+\end{thm}
+
+\begin{exercise}{}
+Prove Proposition~\ref{isomorph:mult_dir_prod}.
+\end{exercise}
+ 
+
+
+ 
+\markright{EXERCISES}
+\section*{Additional Exercises}
+\exrule
+
+ 
+ 
+{\small
+\begin{enumerate}[(1)]
+ 
+%**********************Computations
+ 
+\item
+Let $\omega = \cis(2 \pi /n)$.  Show that $\omega^n = 1$, and  prove that the matrices 
+\[
+A=
+\begin{pmatrix}
+\omega & 0 \\
+0 & \omega^{-1}
+\end{pmatrix}
+\quad \text{and} \quad
+B =
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+\]
+generate a multiplicative group isomorphic to $D_n$.
+ 
+
+\item
+Show that the set of all matrices of the form
+\[
+B =
+\begin{pmatrix}
+\pm 1 & n \\
+0 & 1
+\end{pmatrix},
+\]
+where $n \in {\mathbb Z}_n$, is a group isomorphic to $D_n$. 
+
+
+\item
+Let $G = {\mathbb R} \setminus \{ -1 \}$ and define a binary operation on
+$G$ by 
+\[
+a \ast b = a + b + ab.
+\]
+Prove that $G$ is a group under this operation. Show that $(G, *)$ is
+isomorphic to the multiplicative group of nonzero real numbers.
+  
+
+\item
+Prove that $D_4$ cannot be the internal direct product of two of its
+proper subgroups. 
+ 
+
+
+
+\item
+* Prove that $S_3 \times {\mathbb Z}_2$ is isomorphic to $D_6$. Can you
+make a conjecture about $D_{2n}$? Prove your conjecture. [{\em Hint:\/}
+If you take every other vertex in a hexagon, you get an equilateral triangle. Also note that 180-degree rotation is an element of order 2.] 
+ 
+
+\item
+The \bfii{ quaternion group} is a well-known group of order 8.  (You may find the Cayley table of the quaternion group by doing a web search.)  Prove or disprove:  The quaternion group is isomorphic to $D4$. 
+
+
+%\item
+%Prove or disprove: Every non-Abelian group of order divisible by 6
+%contains a subgroup of order 6. 
+ 
+
+ \item
+Prove $U(5) \cong {\mathbb Z}_4$. Can you generalize this result to show
+that $U(p) \cong {\mathbb Z}_{p-1}$? 
+ 
+
+\item
+Write out the permutations associated with each element of $S_3$ in
+the proof of Cayley's Theorem. 
+
+
+\item
+Prove that $A \times B$ is Abelian if and only if $A$ and $B$ are
+Abelian. 
+ 
+
+ 
+
+\item
+Let $H_1$ and $H_2$ be subgroups of $G_1$ and $G_2$, respectively. Prove that $H_1 \times H_2$ is a subgroup of $G_1 \times G_2$. 
+ 
+
+\item
+Let $m, n \in {\mathbb Z}$, so that $(m,n) \in \mathbb{Z} \times \mathbb{Z}$. Prove that $\langle (m,n) \rangle \cong \langle d \rangle$ if and only if $d = \gcd(m,n)$.
+ 
+
+\item
+Let $m, n \in {\mathbb Z}$. Prove that $\langle m \rangle \cap \langle n \rangle \cong \langle l \rangle$ if and only if $d = \lcm(m,n)$. 
+
+ \bigskip
+
+\bigskip
+%*****************Automorphisms
+ 
+
+\noindent
+The following exercises  will require this definition: An \bfii{ automorphism\/}\index{Automorphism!of a
+group}\index{Group!automorphism of} of a group $G$ is an isomorphism
+with itself. 
+
+\item
+Prove that complex conjugation is an automorphism of the
+additive group of complex numbers; that is, show that the map $\phi(
+a + bi ) = a - bi$ is an isomorphism from ${\mathbb C}$ to ${\mathbb C}$. 
+ 
+
+\item
+Prove that $a + ib \mapsto a - ib$ is an automorphism of ${\mathbb C}^*$. 
+ 
+
+\item
+Prove that $A \mapsto B^{-1}AB$ is an automorphism of $SL_2({\mathbb R})$
+for all $B$ in $GL_2({\mathbb R})$. 
+ 
+\item
+We will denote the set of all automorphisms of $G$ by
+$Aut(G)$\label{noteauto}.  Prove that  $Aut(G)$ is a subgroup of
+$S_G$, the group of permutations of $G$. 
+ 
+\item
+Find $Aut( {\mathbb Z}_6)$.
+
+\item
+Find $Aut( {\mathbb Z})$.
+ 
+\item
+Find two nonisomorphic groups $G$ and $H$ such that $Aut(G) \cong Aut(
+H)$. 
+ 
+\item
+\begin{enumerate}[(a)]
+\item
+Let $G$ be a group and $g \in G$. Define a map $i_g : G \rightarrow
+G$\label{noteinner} 
+by $i_g(x) = g x g^{-1}$.  Prove that $i_g$ defines an automorphism of
+$G$.  Such an automorphism is called an \bfii{ inner
+automorphism}\index{Automorphism!inner}.  
+\item
+The set of all inner
+automorphisms is denoted by $Inn(G)$. Prove that $Inn(G)$ is a subgroup of $Aut(G)$.
+\item
+What are the inner automorphisms of the quaternion group $Q_8$? Is
+$Inn(G) = Aut(G)$ in this case? 
+\end{enumerate} 
+
+\item
+Let $G$ be a group and $g \in G$.  Define maps $\sigma_g :G
+\rightarrow G$ and $\tau_g :G \rightarrow G$\label{noterightreg}
+ by $\sigma_g(x) = gx$
+and $\tau_g(x) = xg^{-1}$. Show that $i_g := \tau_g \circ \sigma_g$ is
+an automorphism of $G$. 
+ 
+ 
+\end{enumerate}
+}
+
+
+
+
+

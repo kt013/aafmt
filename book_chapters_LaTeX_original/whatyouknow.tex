@@ -1,0 +1,180 @@
+\chap{In the beginning...}{BeforeWeBegin}
+\section{Prologue}
+Abstract algebra is a beautiful subject that brings amazing insights into the nature of numbers, and the nature of Nature itself. Like all mathematics, the subject of abstract algebra is built up step by step, block by block. The ``building blocks'' in mathematics  are \emph{theorems}, and theorems are established by \emph{proofs}: mathematical arguments that establish general principles.
+
+When creating a proof, one must create an airtight  argument that shows a claim to be true based on  ``known facts''.  Proofs never start from nothing: there is always something that is assumed to be known.  Mathematicians tend to start from the simplest possible ``knowns'', because mathematicians are the ultimate skeptics: they refuse to take anything for granted. However, this often means that they spend a lot of time proving things that are common knowledge. We will take a different approach, and take as ``known'' the things you learned in high school and regular college algebra. In this chapter  we remind you of some of these ``knowns''.  When doing the exercises, you may freely use any of these facts.  You don't have to give a detailed justification--just give the reason as  ``basic algebra''.\index{algebra!basic}\footnote{This chapter was written by David Weathers (edited by CT).}
+
+
+\section {Integers, rational numbers, real numbers}
+
+We assume that you are already familiar with the following number systems: integers, rational numbers, and real numbers.  These number systems possess the well-known arithmetic operations of addition, subtraction, multiplication, and division. The following statements hold for all of these number systems. 
+
+***NOTE there are number systems for which the following properties do NOT hold (as we shall see later). So they may be safely assumed ONLY for integers, rational numbers, and real numbers.
+
+\subsection{Operations and relations }
+
+We assume the following properties of these arithmetic operations:
+
+\begin{itemize}
+\item
+\emph{Commutative}:  Two numbers can be either added or multiplied in any order and yield the same result.
+\item
+\emph{Associative}:  Three or more numbers added together can be added in any order.  The same goes for three or more numbers multiplied together.
+\item
+\emph{Distributive}:   Multiplying a number by a sum yields the same as the sum of the products.
+\item
+\emph{Order}:   Either two numbers are the same, or one must be greater than the other.
+\item
+\emph{Identity}:   Addition by 0 or multiplication by 1 result in no change of original number.
+\item
+The sum of two  positive numbers  is positive. The sum of two negative numbers is negative.
+\item
+The product of two  numbers with the same sign is positive. The product of two numbers with different signs is negative.
+\item
+If  the product of two numbers is zero, then one or the other number must be zero.
+\end {itemize}
+
+\begin{exercise}{1}
+Write equations corresponding to each statement  given above. For example, the associative property for addition can be expressed as: $x + (y+z) = (x+y)+z$.
+\end{exercise}
+\begin{exercise}{2}
+\begin{enumerate}[(a)]
+\item
+Give an example that shows that subtraction is \emph{not} commutative 
+.\item
+Give an example that shows that division is \emph{not} associative. 
+\end{enumerate}
+\end{exercise}
+\begin{exercise}{3}
+Suppose $a > b$,  $b \ge 0$ and $ab = 0$.  What can you conclude about $b$? Use one (or more)  of the properties we have mentioned to justify your answer.
+\end{exercise}
+
+\subsection {Manipulating equations and inequalities}
+
+Here are some common rules for manipulating an equation:
+
+\begin {itemize}
+\item
+\emph{Balanced operations}: Given an equation, one can perform the same operation to both sides of the equation and maintain equality.  
+\item
+\emph{Substitution}: An alternate representation of the same quantity can be substituted in an equation without changing the result. 
+\item
+Multiplying or dividing an inequality by a negative value will reverse the inequality symbol.
+\item
+The ratio of two integers can always be reduced to lowest terms, so that the numerator and denominator have no common factors.
+\end {itemize}
+\begin{exercise}{4}
+Give specific examples for each statement  given above. Use actual numbers in your example (rather than variables).
+\end{exercise}
+
+
+%\section {Number Theory Rules}
+%
+%Given that a prime number $p$ evenly divides into a number $q$, it is true that the prime number $p$ must divide one of the factors of $q$.
+%
+%Given that the product of two numbers is equal to 0, then it is true that one of the numbers must be 0.
+
+\subsection {Exponentiation (VERY important)}
+
+Exponentiation is one of the key tools of abstract algebra. It is \emph{imperative} that you know your exponent rules inside and out!  
+
+\begin{itemize}
+\item
+Any nonzero number raised to the power of 0 is equal to 1.
+\footnote{ Technically $0^0$ is undefined, although often it is taken to be 1. Try it on your calculator!}
+\item
+A number raised to the sum of two exponents  is the product of the same number raised to each individual exponent.
+\item
+A number raised to the power which is then raised to another power is equal to the same number raised to the product of the two powers.
+\item
+A number raised to a negative exponent is equal to the reciprocal of the number  raised to a positive .
+\item
+Taking the  product of two numbers  and raising to a given power is the same as taking the powers of the two numbers separately, then multiplying the results.
+\end{itemize}
+
+\begin{exercise}{5}
+Write equations that express each of the exponentiation rules given above.
+\end{exercise}
+\begin{exercise}{6}
+Write an equation that shows another way to express a number raised to a power that is the difference of two numbers.
+\end{exercise}
+
+\section{Test yourself}
+Test yourself with the following exercises. If you feel totally lost, I strongly recommend that you improve your basic algebra skills before continuing with this course. This may seem harsh, but I only mean to spare you agony. All too often students go through the motions of learning this material, and in the end they learn nothing because their basic skills are deficient. If you want to play baseball, you'd better learn how to throw, catch, and  the ball first.
+
+\begin{exercise}{7}
+Simplify the following expressions. Factor whenever possible
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item
+$ 2^4 4^2$
+\item
+$ \dfrac{3^9}{9^3}$
+\item
+$\left( \dfrac{5}{9} \right)^7 \left( \dfrac{9}{5} \right)^6$
+\item
+$\dfrac{a^5}{a^7} \, \cdot \, \dfrac{a^3}{a}$
+\item
+$x(y-1) - y(x-1)$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+
+\begin{exercise}{8}
+Same instructions as the previous exercise. These examples are  harder. (\emph{Hint:} It's usually best to make the base of an exponent as simple as possible. Notice for instance that $4^7 = (2^2)^7 = 2^{14}$.)
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item
+$6^{1/2\cdot}2^{1/6}\cdot3^{3/2}\cdot2^{1/3}$
+\item
+$(9^3)(4^7)\left(\frac{1}{2}\right)^8\left(\frac{1}{12}\right)^6$
+\item
+$4^5 \cdot 2^3 \cdot \left(\frac{1}{2}\right)^5 \cdot \left( \frac{1}{4} \right) ^3$
+\item
+$2^3 \cdot 3^4 \cdot 4^5 \cdot 2^{-5} \cdot 3^{-4} \cdot 4^{-3}$
+\item
+$\dfrac{x(x-3)+3(3-x)}{(x-3)^2}$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+
+\begin{exercise}{9}
+Same instructions as the previous exercise. These examples are even harder. (\emph{Hint:} Each answer is a single term, there are no sums or differences of terms.)
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item
+$\dfrac{a^5 +a^3 - 2a^4}{(a-1)^2}$
+\item
+$a^x b^{3x}(ab)^{-2x}(a^2 b)^{x/2}$
+\item
+$(x+y^{-1})^{-2}(xy+1)^2$
+\item
+$\dfrac{(3^x+9^x)(1-3^x)}{1-9^x})$
+\item
+$\dfrac{3x^2 - x}{x-1} + \dfrac{2x}{1-x}$
+
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+\begin{exercise}{10}
+Find ALL  real solutions to the following equations. 
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item
+$x^2 = 5x$
+\item
+$(x - \sqrt{7})(x+\sqrt{7}) = 2$
+\item
+$2^{4+x} = 4(2^{2x})$
+\item
+$3^{-x} = 3(3^{2x})$
+\item
+$16^5 = x^4$
+\item
+$\dfrac{1}{1 + 1/x} -1= -1/10$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
