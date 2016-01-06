@@ -17,10 +17,21 @@
 %%%%(c)
 \chap{Complex Numbers}{complex}
 
+\begin{dialogue}
+\speak{Horatio} O day and night, but this is wondrous strange!
+\speak{Hamlet} And therefore as a stranger give it welcome.
+There are more things in heaven and earth, Horatio,
+Than are dreamt of in your philosophy.
+\noindent
+\end{dialogue}
+(Source: Shakespeare, \emph{Hamlet}, Act 1 Scene 5.)
+\bigskip
 
-\section{The Origin of Complex Numbers}\label{origin_complex}
+Although complex numbers are defined to include ``imaginary'' numbers, the practical applications of complex numbers are far from ``imaginary''.  We shall touch on some of the applications in this chapter: but there are many many more in engineering, in physics, and in other sciences as well.\footnote{Thanks to Tom Judson for material used in this chapter.}
 
-\subsection*{A Number That Can't be Real (and we can prove it!)}
+\section{The origin of complex numbers}\label{origin_complex}
+
+\subsection{A number that can't be real (and we can prove it!)}
 
 Way back in your first algebra class, you saw equations like:
 \begin{itemize}
@@ -50,9 +61,9 @@ proof that you should try to imitate when you write up proofs for
 homework exercises.
 \medskip{}
 \newline
-\noindent \textbf{Long Drawn-Out Proof of Proposition~\ref{proposition:complex:no_sqrt} With All the Gory Details:} 
+\noindent \textbf{Long drawn-out proof of Proposition~\ref{proposition:complex:no_sqrt} with all the gory details:} 
 
-We will use a common proof technique called {\bf \emph{ proof by contradiction}}\index{proof by contradiction}. 
+We will use a common proof technique called {\bf \emph{ proof by contradiction}}\index{Proof by contradiction}. 
 Here's how it goes:
 
 First we \emph{suppose} that there exists a real number \emph{a} such that
@@ -82,13 +93,13 @@ What's wrong is the \emph{supposition}. It \underbar{must} be the case that the 
 true. Consequently, the statement ``there exists a real number
 \emph{a} such that $a^{2}=-1$'' must be \underbar{false}. In other
 words, -1 has no real square root. This completes the proof. $\square$
-\footnote{The $\square$ symbol will be used to indicate the end of a proof. In other words: Ta-da!}
+\footnote{The '$\square$' symbol will be used to indicate the end of a proof. In other words: Ta-da!}
 \medskip{}
 \newline
-We have just given a thorough proof of Proposition~\ref{proposition:complex:no_sqrt}. However, when mathematicians write up proofs they leave out many of the details--and you should too. Following is a more typical proof:
+The above proof is pretty wordy. When mathematicians write up proofs they leave out many of the details--and you should too. Following is a more typical proof:
 \medskip{}
 \newline
-\noindent \textbf{Streamlined Proof of Proposition~\ref{proposition:complex:no_sqrt} (suitable for writing up homework exercises)}
+\noindent \textbf{Streamlined proof of Proposition~\ref{proposition:complex:no_sqrt} (suitable for writing up homework exercises)}
 
 The proof is by contradiction. Suppose $\exists \emph{a} \in \mathbb{R}$
 such that $a^{2}=-1$ (note the symbol ``$\exists$" means ``there exists,'' the symbol $\mathbb{R}$ denotes the real numbers, and the expression ``$\emph{a} \in \mathbb{R}$'' means that $a$ is a real number).
@@ -103,6 +114,7 @@ $>0$, which contradicts the supposition.
 
 By contradiction, it follows that $-1$ has no real square root.
 \end{proof}
+You may note that in the streamlined case, we reduced the number of cases from three to two.  That's because we noticed that we really could combine the ``positive'' and the ``zero'' case into a single case.
 
 \begin{exercise}\label{exercise:complex:root1}
  Imitate the proof of Propostion~\ref{proposition:complex:no_sqrt} to prove that $-2$ has no real fourth root.
@@ -112,23 +124,6 @@ By contradiction, it follows that $-1$ has no real square root.
 Try to use the method of Propostion~\ref{proposition:complex:no_sqrt} to prove that -4 has no real cube root. At what step does the method fail?
 \end{exercise}
 
-\begin{exercise}\label{exercise:complex:root3}
-\begin{enumerate}[(a)]
-\item
-Suppose that:
-\begin{itemize}
-\item
-$a$ is a negative number;
-\item
-$n$ is a positive integer;
-\item
-the equation $x^n = a$ has a real solution for the unknown $x$.
-\end{itemize}
-What can you conclude about $n$? Make a clear statement and \emph{prove} your statement. (\emph{Hint:} You may prove your statement by contradiction.)
-\item
-Replace the condition ``$n$ is a positive integer'' in part (a) with ``$n$ is a negative integer.'' Now what can you conclude about $n$? Make a clear statement and \emph{prove} your statement.
-\end{enumerate}
-\end{exercise}
 
 \begin{exercise}\label{exercise:complex:graph}
 \begin{enumerate}[(a)]
@@ -144,10 +139,10 @@ Graph the function $f(x) = x^6 + 7x^2 + 5$ (you may use a graphing calculator). 
 Exercise~\ref{exercise:complex:graph} underscores an important point. A graph can be a good visual aid, but it's not a mathematical proof.  We will often use pictures and graphs to clarify things, but in the end we're only certain of what we can prove. After all, pictures can be misleading.
 
 \begin{exercise}\label{exercise:complex:more}
-*\footnote{Asterisks (*) indicate problems that are more difficult. Try them if you dare!}~~Suppose that $a \cdot x^{2n} + b \cdot x^{2m} +a = 0$ has a real root, where $a,b,m,n$ are nonzero integers. What can you conclude about the signs of $a$ and $b$? \emph{Prove} your answer.
+*\footnote{Asterisks (*) indicate problems that are more difficult. Take the challenge!}~~Suppose that $a \cdot x^{2n} + b \cdot x^{2m} +a = 0$ has a real root, where $a,b,m,n$ are nonzero integers. What can you conclude about the signs of $a$ and $b$? \emph{Prove} your answer.
 \end{exercise}
 
-\subsection*{Unreal, but Unavoidable}
+\subsection{Unreal, but unavoidable}
 
 Mathematicians have known Proposition~\ref{proposition:complex:no_sqrt} for thousands of years, and
 for a long time that settled the question. Unfortunately, that nasty
@@ -161,7 +156,7 @@ But how can you cancel something that doesn't exist?
 
 Since mathematicians couldn't completely avoid those embarrassing 
 $\sqrt{-1}$'s, they decided to put up with them as best they could. They
-called $\sqrt{-1}$ an \emph{imaginary }number\index{imaginary number}, just to emphasize
+called $\sqrt{-1}$ an \emph{imaginary }number\index{Imaginary number}, just to emphasize
 that it wasn't up to par with the \emph{real} numbers. They also used the symbol \emph{i }to represent $\sqrt{-1}$, to make it less
 conspicuous (and easier to write). Finally, they created a larger
 set of numbers that included both real and imaginary numbers, called
@@ -200,7 +195,7 @@ Write down a complex number that is also a real number.
 \end{enumerate}
 \end{exercise}
 
-\subsection*{A Mathematical Revolution}
+\subsection{A mathematical revolution}
 
 The creation of complex numbers was a revolutionary event in
 the history of mathematics. Mathematicians were forced to recognize
@@ -213,7 +208,20 @@ with\emph{ new} symbols (\emph{i}) and \emph{new} arithmetic rules
 In fact, this was not the first time that a controversial new number
 system was founded. The ancient Greeks thought that all numbers could
 be expressed as a ratio of integers $\frac{m}{n}$ --- in other words, the Greeks thought all numbers were rational.  It came as a huge
-shock when someone proved that some real numbers are \emph{not} rational. Here we give the original proof.
+shock when someone proved that some real numbers are \emph{not} rational. We will presently give the original proof, but first we will need some properties odd and even integers:
+
+\begin{exercise}\label{exercise:complex:m2even}
+\begin{enumerate}[(a)]
+\item
+Fill in the blanks:  The product of two odd integers is \underline{~~~~~~~}, and the product of two even integers is \underline{~~~~~~~~}.
+\item
+Use proof by contradiction to prove the following statement: If $m$ is an integer and $m^2$ is even, then $m$ is also even.
+\hyperref[sec:complex:hints]{(*Hint*)}
+\item 
+It is possible to make a more general statement than part (b).Use proof by contradiction to prove the following statement: If $m$ is an integer $d$ is a positive integer, and $m^d$ is even, then $m$ is also even. 
+\hyperref[sec:complex:hints]{(*Hint*)}
+\end{enumerate}
+\end{exercise}
 
 \begin{prop}\label{proposition:complex:irrational}
 Given a right isosceles triangle where both legs have length 1 (see Figure~\ref{fig:complex:isosceles_right}) .  Let $x$ be the length of the hypotenuse.  Then $x$ is irrational--that is, it cannot be expressed as a ratio of integers.\index{Irrational number!definition of} 
@@ -224,40 +232,84 @@ Given a right isosceles triangle where both legs have length 1 (see Figure~\ref{
 	  \caption{\label{fig:complex:isosceles_right} Isosceles right triangle }
 \end{figure}
 \begin{proof}
-The proof is by contradiction.\index{Irrational number!existence proof}   \emph{Suppose} that $x$ is rational: that is, $x = \frac{m}{n}$ for some integers $m$ and $n$. We can always reduce a fraction to lowest terms, so we can assume $m$ and $n$ have no common factors. 
+The proof is by contradiction.\index{Irrational number!existence proof}   \emph{Suppose} that $x$ is rational: that is, $x = \frac{m}{n}$ for some integers $m$ and $n$. We can always reduce a fraction to lowest terms, so we can assume $m$ and $n$ have no common factors.\footnote{Note that this is another one of those facts that ``everyone knows'', but is not easy to prove mathematically. We will make use of it in our current discussion, but note that technically it requires a proof.} 
 
 Since $x$ is the hypotenuse of a right triangle, the Pythagorean Theorem gives us $x^2 = 1^2 + 1^2 = 2$.
-We can plug $x=\frac{m}{n}$ into the Pythagorean Theorem to get $\left(\frac{m}{n}\right) ^2 = 2$, which can be rearranged to give 
+We can plug $x=\frac{m}{n}$ into $x^2 = 2$ to get $\left(\frac{m}{n}\right) ^2 = 2$, which can be rearranged to give 
 \begin{equation}\label{m_is_even}
 m^2 = 2n^2.
 \end{equation}
-The right-hand side is divisible by 2, so the left-hand side is also divisible by 2.  Hence $2$ divides $m^2$ (in mathematical notation, we write this as $2 | m^2$). But since 2 is prime, it follows that $2$ divides $m$ (that is, $2 | m$).\footnote{Here we are using the fact (from ``basic algebra'') that a prime number that divides a composite number $m$ must also divide at least one of the  factors of $m$. You may find a proof of this fact in any book on number theory.}  
+From this we see that $m^2$  is divisible by 2, which means that $m^2$ is even. Exercise~\ref{exercise:complex:m2even} part (b) then tells us that $m$ is even, so there must be an integer $j$ such that  $m = 2j$.  Plugging $m=2j$ into Equation~\ref{m_is_even} gives $4j^2 = 2n^2$, which simplifies to $2j^2 = n^2$.  Hence $ n^2$ is even, and as before we conclude that $n$ is even.  So $n = 2k$ for some integer $k$.
 
-Since $2 | m$, there must be some integer $j$ such that  $m = 2j$.  Plugging $m=2j$ into Equation~\ref{m_is_even} gives $4j^2 = 2n^2$, which simplifies to $2j^2 = n^2$.  Hence $2 | n^2$, and as before we conclude $2 | n$.  So $n = 2k$ for some integer $k$.
-
-We have $m = 2j$ and $n = 2k$; so $m$ and $n$ have a common factor of 2.  But, we already know that $m$ and $n$ have no common factor.  This is a contradiction.  Therefore our \emph{supposition} must be false, so $x$ cannot be rational.
+At this point, we have $m = 2j$ and $n = 2k$, which means that $m$ and $n$ have a common factor of 2.  But at the beginning of the proof, we said that  $m$ and $n$ were reduced to lowest terms, so they  have no common factor.  This is a contradiction.  Therefore our \emph{supposition} must be false, so $x$ cannot be rational.
 \end{proof}
 
-\begin{rem}
-\begin{itemize}
+We have seen in our proofs that whenever we make a statement, we also need to give a reason that justifies the statement. In many cases, it's possible to state a proof very succinctly in  ``statement$-$reason'' format.\index{Proofs!``statement$-$reason'' format} For instance, here is a ``statement$-$reason'' proof of Proposition~\ref{proposition:complex:irrational}:
+
+\begin{tabular}{l| l}
+Statement& Reason\\
+\hline
+$x$ is the hypoteneuse of the right & Given\\
+~~ triangle in Figure~\ref{fig:complex:isosceles_right} & ~\\
+$x$ is rational & \emph{supposition} (will be contradicted)\\
+$x^2 = 2$ & Pythagorean Theorem\\
+$x = m/n$ where $m,n$ are integers& Definition of rational\\
+$m, n$ are relatively prime & Fraction can always be reduced\\
+$(m/n)^2 = 2$ & Substitution\\
+$m^2 = 2n^2$ & Rearrangement\\
+$m = 2k$ where $k$ is an integer & Exercise~\ref{exercise:complex:m2even} part (b)\\
+$(2k/n)^2 = 2$ & Substitution\\
+$n^2 = 2k^2$& Rearrangement\\
+$n = 2j$ where  $j$ is an integer&Exercise~\ref{exercise:complex:m2even} part (b)\\
+$m$ and $n$ are not relatively prime& Definition of relatively prime\\
+\emph{supposition} is false & Contradictory statements\\
+$x$ cannot be rational &  Negation of supposition
+\end{tabular}
+
+Note that the preceding proof amounts to a proof that $\sqrt{2}$ is irrational, since we know that $\sqrt{2}$ is the length of the hypothesis in question. Given the results of Exercise~\ref{exercise:complex:m2even}, we can use a similar proof to find more irrational numbers.
+
+\begin{exercise}\label{exercise:complex:6}
+\begin{enumerate}[(a)]
 \item
-Note that the length of the above hypotenuse is the number we know as $\sqrt{2}$.  Hence we've proven that $\sqrt{2}$ is irrational.
+Prove that the cube root of 2 is irrational.
+\hyperref[sec:complex:hints]{(*Hint*)} 
 \item
-Note that several times in the course of the proof, we ``plugged in'' or substituted one expression for another.   For example, when we discovered that $m$ was divisible by 2 we substituted $2j$ for $m$, which was useful for the algebra that followed.
-\emph{Substitution} is a key technique used throughout all of abstract algebra.
-\end{itemize}
-\end{rem}
+Prove that the $n$th root of 2 is irrational, if $n$ is a positive integer greater than 1.
+\item
+Prove that $2^{1/n}$ is irrational, if $n$ is a negative integer less than -1.
+\end{enumerate}
+\end{exercise}
+
+In the proof of Proposition~\ref{proposition:complex:irrational},  we ``plugged in'' or substituted one expression for another.   For example, when we discovered that $m$ was divisible by 2 we substituted $2j$ for $m$, which was useful for the algebra that followed.
+\emph{Substitution}\index{Substitution!as proof technique} is a key technique used throughout all of abstract algebra.
 
 \begin{exercise}\label{exercise:complex:2}
-Use substitution to prove the following statement:  if $3 | n$ and $4 | m$, then $12 | mn$ (recall that ``$3 | n$'' means that 3 divides $n$). (\emph{Hint:} Since $3 | n$, it follows that $n=3j$ for some integer $j$. Obtain a similar equation from $4|m$, and multiply your equations together.) 
+Use substitution to prove the following statement:  if $3 | n$ and $4 | m$, then $12 | mn$ (the notation ``$3 | n$'' means that 3 divides $n$). 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:3}
-Use substitution to prove the following statement:  if $12 | n$ and $n | 4m$, where $n$ and $m$ are integers, then $3 | m$. (\emph{Hint:} Since $n | 4m$, it follows that $4m=n\cdot j$ for some integer $j$. Since $12 | n$, then what can you substitute for $n$?) 
+Use substitution to prove the following statement:  if $12 | n$ and $n | 4m$, where $n$ and $m$ are integers, then $3 | m$.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
+We should also come clean and admit that our proof of Proposition~\ref{proposition:complex:irrational} falls short of true mathematical rigor. The reason is that we made use of Exercise~\ref{exercise:complex:m2even}, and we never actually \emph{proved} part (a) of the exercise. Even though it's something that ``everybody knows", mathematicians still want a proof! Now, part (a) is a consequence of the following more general proposition, which is known as \bfii{Euclid's Lemma}:\index{Euclid's lemma}
+
+\begin{prop}\label{proposition:complex:EuclidLemma}
+Let $a$ and $b$ be integers, and let $p$ be a prime number. Then either $p$ divides $a$, or $p$ divides $b$.
+
+\begin{rem}
+In mathematics, when we say ``either X is true or Y is true'', we also include the possibility that both X and Y are true. So in this case, when we say ``$p$ divides $a$, or $p$ divides $b$'', it's possible that $p$ divides both $a$ and $b$.
+\end{rem}
+
+\end{prop}
+\begin{proof}
+We're not ready to give a proof yet, but we'll give one later (see Exercise~\ref{exercise:modular:EuclidLemmaProof}  in Section~\ref{sec:diophantine}).
+\end{proof}
+
+
 \begin{exercise}\label{exercise:complex:4}
-Modify the proof of Proposition~\ref{proposition:complex:irrational} to prove that $\sqrt{3}$ is irrational.
+Modify the proof of Proposition~\ref{proposition:complex:irrational} to prove that $\sqrt{3}$ is irrational. (You will find Proposition~\ref{proposition:complex:EuclidLemma} to be useful in the proof.)
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:5}
@@ -265,16 +317,7 @@ Prove that $\sqrt{6}$ is irrational.
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:6}
-\begin{enumerate}[(a)]
-\item
-Prove that the cube root of 2 is irrational.
-\item
-Prove that the $n$th root of 2 is irrational, if $n$ is a positive integer greater than 1.
-\item
-Prove that $2^{1/n}$ is irrational, if $n$ is a negative integer less than -1.
-\item
 Prove that $p^{1/n}$ is irrational, if $p$ is a prime and $n$ is any integer with $|n|>1$.
-\end{enumerate}
 \end{exercise}
 
 The inconvenient truth expressed in Proposition~\ref{proposition:complex:irrational} forced mathematicians to extend
@@ -287,51 +330,133 @@ that mathematicians started studying the properties of general numbers
 systems. This was the beginning of what we today call  abstract
 algebra!
 
+To close this section, here's another exercise to practice using substitution:
+
+\begin{exercise}\label{exercise:complex:root3}
+\begin{enumerate}[(a)]
+\item
+Suppose that:
+\begin{itemize}
+\item
+$a$ is a negative number;
+\item
+$n$ is a positive integer;
+\item
+the equation $x^n = a$ has a real solution for the unknown $x$.
+\end{itemize}
+What can you conclude about $n$? Make a clear statement and \emph{prove} your statement.
+\hyperref[sec:complex:hints]{(*Hint*)}
+
+\item
+Replace the condition ``$n$ is a positive integer'' in part (a) with ``$n$ is a negative integer.'' Now what can you conclude about $n$? Make a clear statement and \emph{prove} your statement.
+\end{enumerate}
+\end{exercise}
+
+
 \begin{exercise}\label{exercise:complex:7} Do imaginary numbers ``really'' exist? Write
 two or three sentences to express your opinion.\footnote{There is no ``right'' answer to this question.}
 \end{exercise}
 
 
-\section{Arithmetic with Complex Numbers}\label{complex_arith}
-\subsection*{Complex Addition, Multiplication, and Division}
+\section{Arithmetic with complex numbers}\label{complex_arith}
+\subsection{Complex arithmetic}
 
-To add \index{Complex numbers!addition and subtraction}two complex numbers $z=a+bi$ and $w=c+di$, we just add the
+To add \index{Complex numbers!addition}two complex numbers $z=a+bi$ and $w=c+di$, we just add the
 corresponding real and imaginary parts: 
 \[(a+bi)+(c+di)=(a+c)+(b+d)i.\]
- Remembering that $i^{2}=-1$, we multiply\index{Complex numbers!multiplication} complex numbers just like
+Using this definition, we may prove directly that complex addition (like regular addition) is commutative:\footnote{It is important to realize that this \emph{must} be proved and \emph{can't} just be assumed.  Later on we will define operations that are \emph{not} commutative.}
+
+\begin{prop}\label{proposition:complex:complex_comm}
+Addition on complex numbers is commutative.
+\end{prop}
+\begin{proof}
+We just need to show that for any two complex numbers $z$ and $w$, it's always true that $z + w = w + z$.  Writing $z = a + bi$ and $w = c + di$ as above, the proof using statement-reason format runs as follows:
+
+\begin{tabular}{l| l}
+Statement& Reason\\
+\hline
+$z + w = (a + bi) + (c + di)$ &substitution\\
+~~~~~~ $= (a + c) + (b + d)i$ & definition of complex addition\\
+~~~~~~ $= (c + a) + (d + b)i$ & real addition is commutative\\
+~~~~~~ $= (c + di) + (a + bi)$ & def. of complex addition\\
+~~~~~~ $= w + z$. & substitution\\
+\end{tabular}
+\end{proof}
+
+Notice how we started in this proof with one side of the equality, and through a series of steps ended up with the other side. This is a good method to follow, when you're trying to prove two things are equal.
+
+\begin{exercise}
+Prove that addition on complex numbers is associative.
+\end{exercise}
+
+Now that we have addition worked out, let's do multiplication. We observe that the complex number $a + bi$ looks just  like the polynomial $a + bx$, except the imaginary $i$ replaces the unknown $x$. So we'll take a cue from polynomial multiplication, and  multiply complex numbers just like
 polynomial factors, using the FOIL (first, outside, inside, last)\index{FOIL method} method. (Actually, with complex numbers it's more convenient to use FLOI (first, last, outside, inside)\index{FLOI method} instead.) The product of $z$ and
 $w$ is \[
 (a+bi)(c+di)=ac+bdi^{2}+adi+bci=(ac-bd)+(ad+bc)i.\]
+Question: How did we get rid of the $i^2$ in the final equality?  Answer: Remember, we defined $i^2 = -1$, and we just made the substitution.
 
-To understand how to divide two complex numbers, first we consider division of a complex number by a real number.  We simply divide the real and imaginary parts separately.  That is:
+A bevy of nice properties follow from this definition:
+
+\begin{example}\label{example:complex:complex_commute}
+Complex multiplication is commutative.  This may be proved as follows. (Note that here we are combining statement$-$reason and paragraph proof formats.  It's OK to mix and match formats, as long as you get the job done!) 
+\begin{align*}
+(a + bi)(c + di) &= (ac - bd) + (bc + ad)i \qquad \mathrm{(FLOI)}\\
+& = (ca - db) + (cb + da)i \qquad \mathrm{(commutativity~of~real~multiplication)}\\
+\text{On the other }&\text{hand:}\\
+(c + di)(a + bi) &= (ca - db) + (cb + da)i \qquad \mathrm{(FLOI)}
+\end{align*}
+Since we obtain the same expression for $(a + bi)(c + di)$ and $(c + di)(a + bi)$, it follows that 
+$(a + bi)(c + di) = (c + di)(a + bi)$.
+\end{example}
+
+Similar proofs can be given for other multiplicative properties:
+
+\begin{exercise}\label{exercise:complex:16}
+Prove the associative law for multiplication of nonzero complex numbers. (Follow the style of Example~\ref{example:complex:complex_commute}).
+\end{exercise}
+
+\begin{exercise}\label{exercise:complex:17}
+Prove the distributive law for complex arithmetic: that is, if $u,w,$ and $z$ are complex numbers, then $(u)(w+z) = uw + uz$.
+\end{exercise}
+
+Two arithmetic operations down, two to go!  Let's consider subtraction of complex numbers. We may define $z - w$ using complex addition and multiplication as:  $z - w = z + (-1)\cdot w$.\index{Complex numbers!subtraction}
+
+\begin{exercise}
+Using this definition of complex subtraction, Given that  $z = a + bi$ and $w = c + di$ then express $z - w$ as (Real part)  + (Imaginary part)$i$.
+\end{exercise}
+
+Division is a little more complicated. First we consider division of a complex number by a real number.  In this case we can define division as multiplication by the reciprocal, just as with real numbers:
 \begin{equation}\label{eq:complex:1}
-\frac{a + bi}{c} = \frac{a}{c} + \frac{b}{c}i
+\frac{a + bi}{c} = (a + bi) \cdot \frac{1}{c} = a \cdot \frac{1}{c} + (bi) \cdot \frac{1}{c} = \frac{a}{c} + \cdot \frac{b}{c}i , 
 \end{equation}
+where we have used the distributive, associative, and commutative properties of complex multiplication. 
 
-Now, say we want to find the complex number $w/z=(c+di) / (a+bi)$. This notation suggests that it should be true that  $w/z = (c+di) \cdot 1/(a+bi)$. But what is $1/(a+bi)$?
-To understand this, let's go back to ordinary arithmetic. If we have an ordinary real number $r$, then $1/r$ is the \emph{multiplicative inverse}\index{Inverse!multiplicative} of $r$: that is, $r \cdot 1/r =1/r \cdot r = 1$. We also write $1/r$ as $r^{-1}$. By analogy, to make sense of $1/z = 1/(a+bi)$, we need to find a complex number $z^{-1}$ such that $z^{-1} \cdot z = z \cdot z^{-1} = 1$.
+Now let's try to make sense of the ratio of two complex numbers: $w/z=(c+di) / (a+bi)$. This notation suggests that it should be true that  $w/z = (c+di) \cdot 1/(a+bi)$. But what is $1/(a+bi)$?
+To understand this, let's go back to arithmetic with real numbers. If we have an ordinary real number $r$, then $1/r$ is the \emph{multiplicative inverse}\index{Inverse!multiplicative} of $r$: that is, $r \cdot 1/r =1/r \cdot r = 1$. We also write $1/r$ as $r^{-1}$. By analogy, to make sense of $1/z = 1/(a+bi)$, we need to find a complex number $z^{-1}$ such that $z^{-1} \cdot z = z \cdot z^{-1} = 1$.
 
 \begin{exercise}\label{exercise:complex:complex_mult_inv}  Given that $z = a+bi$ is a complex number and $z \neq 0$ (recall that $0$ is the same as $0+0i$).  Show that the complex number
-\[
-z^{-1}=\frac{a-bi}{a^{2}+b^{2}}.\]
+\[ z^{-1}=\frac{a-bi}{a^{2}+b^{2}}.\]
 satisfies $zz^{-1}=z^{-1}z=1$, where $z=a+bi$.
-\emph{Beware}: Many students try to evaluate  $z z^{-1}$ by first multiplying $(a + bi) \cdot (a - bi)$, and then dividing by $a^2 + b^2$.  \emph{This is illegal.}   The reason is that you are using a common property of  real numbers (namely, $x \cdot (y/z) = (x \cdot y) / z$), and \emph{assuming} that it's also true for complex numbers. Remember that we told you in chapter 1 that you can't take these things for granted, if you are using numbers other than real numbers! To do a correct proof, you will need to use the definition in equation (\ref{eq:complex:1}) and FLOI. If you didn't use both of these facts, then you did the problem incorrectly.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 Based on the previous exercise, we finally arrive at the formula for dividing two complex numbers:\index{Complex numbers!division rule}
 \[\frac{c+di}{a+bi}=
-(c + di) \cdot \frac{a-bi}{a^2 + b^2}. \]
-(This formula holds as long as $a+bi \neq 0$). 
+(c + di) \cdot \frac{a-bi}{a^2 + b^2}, \]
+or alternatively
+\[\frac{c+di}{a+bi}=  \frac{a-bi}{a^2 + b^2} \cdot (c + di).\]
+(These formulas holds as long as $a+bi \neq 0$). 
 
-It seems obvious that we should be able to write this formula more simply as
+It seems obvious that we should be able to write this formula more compactly as
 \[\frac{c+di}{a+bi}=
  \frac{(c+di)(a-bi)}{a^2 + b^2}, \]
-but we need to be a little careful here. We can rearrange like this when dealing with \emph{real} numbers, but that doesn't mean that complex numbers will necessarily work the same way. Fortunately they do, as you will show in the next exercise.
-
-\begin{exercise}\label{exercise:complex:8} Show that
-\[(c + di) \cdot \frac{a-bi}{a^2 + b^2} = \frac{(c+di)(a-bi)}{a^2 + b^2}. \]
-(\emph{Hint:} use Equation (\ref{eq:complex:1}) and FLOI)
-\end{exercise}
-\bigskip
+and in fact we can. This is because the distributive and associative laws once again comes to our rescue. Starting with the first expression above for $(c + di) / (a + bi)$ we have:
+\begin{align*}
+\frac{c+di}{a+bi}&=
+(c + di) \cdot \frac{a-bi}{a^2 + b^2} \qquad \qquad \qquad  \qquad \textrm{(from above)}\\
+& = (c + di) \cdot \left( (a-bi) \cdot \frac{1}{a^2 + b^2}\right) \qquad \textrm{(distributive law)}\\
+& = ((c + di) \cdot  (a-bi)) \cdot \frac{1}{a^2 + b^2} \qquad ~~\textrm{(associative law)}\\
+& = \frac{(c + di) \cdot  (a-bi)}{a^2 + b^2} \qquad \qquad ~~\textrm{(definition of division).}\\
+\end{align*}
 
 We summarize the formulas for complex addition, multiplication, and division below:
 \begin{itemize}
@@ -368,7 +493,7 @@ $(1+i)(-1+i)(-1-i)(1-i)$
 $(\sqrt{3}+i)(-1+ \sqrt{3}i)(-\sqrt{3}-i)(1 -\sqrt{3}i)$
 \item
 $\left(\sqrt{5 + \sqrt{5}} + i\sqrt{5 - \sqrt{5}}\right)^4$
-(In the answer $x + yi$, $x$ and $y$ both turn out to be integers!)
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
 $\dfrac{1+2i}{2-3i}$
 \item
@@ -378,9 +503,11 @@ $\dfrac{1+i}{1-i} + \dfrac{1-i}{1+i}$
 \item
 $\dfrac{\sqrt{3} - \sqrt{5}i}{\sqrt{5} + \sqrt{3}i}$
  \item
-$i^{45}$ (Yes, you can do it! Find the first few powers of $i$, and see the pattern)
+$i^{45}$
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
-$(1 + i)^4$  (\emph{Hint}: it's easiest to compute $(1+i)^2 \cdot (1+i)^2$.)
+$(1 + i)^4$  
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
 $(1 + i)^{41}$
 \item
@@ -392,10 +519,11 @@ $i^{1001} + i^{1003}$
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:10}
-If the nonzero complex number $z$ has equal real and imaginary parts, then what can you conclude about $z^2$?   What can you conclude about $z^4$? (Hint: if you have trouble with this one, do some examples.)
+If the nonzero complex number $z$ has equal real and imaginary parts, then what can you conclude about $z^2$?   What can you conclude about $z^4$? 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
-\begin{exercise}\label{exercise:complex:11}
+\begin{exercise}\label{exercise:complex:findk}
 $z = 3+i$ is a solution to $z^2 - 6z + k = 0$.  What is the value of $k$?
 \end{exercise}
 
@@ -423,8 +551,7 @@ Since our supposition has led to a false conclusion, it follows that our supposi
 \end{exercise}
 
 
-\subsection*{Comparison of Integer, Rational, Real and Complex
-Addition Properties}
+\subsection{Comparison of integer, rational, real and complex addition properties}
 
 It is obvious that addition with integers, rational numbers, and
 real numbers have very similar properties. In this section, we explore some of these properties.
@@ -447,9 +574,9 @@ Notice an {*}\emph{important difference}{*} between additive
 identity and additive inverse: the number 0 is the identity for all
 integers, but each integer has a \emph{different} inverse.
 
-\begin{exercise}\label{exercise:complex:13}
-Complete the formulas in each entry of Table~\ref{additive_table} that compares the additive properties of integers,
-rationals, reals, and complex numbers.\index{complex numbers!additive properties}
+\begin{exercise}\label{exercise:complex:tableentries}
+Complete all entries of Table~\ref{additive_table}, which shows the additive properties of integers,
+rationals, reals, and complex numbers.\index{Complex numbers!additive properties}
 \begin{table}[!htb]
 \caption{Additive properties of different number systems}\label{additive_table}
 \begin{tabular}{|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{3.0cm}|}
@@ -470,8 +597,8 @@ rationals, reals, and complex numbers.\index{complex numbers!additive properties
 
 \end{exercise}
 
-\subsection*{Comparison of Integer, Rational, Real and Complex
-Multiplication Properties}
+\subsection{Comparison of integer, rational, real and complex
+multiplication properties}
 
 Just as we've talked about the \emph{additive} identity and inverse
 for different number systems, in the same way we can talk about the
@@ -493,8 +620,8 @@ have a multiplicative inverse? \emph{Explain} your answer.
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:15}
-Complete the formulas in each entry of Table~\ref{multiplicative_table} that compares the multiplicative properties
-of \emph{nonzero} rationals, reals, and complex numbers.\index{complex numbers!additive properties}
+Complete all entries of Table~\ref{multiplicative_table}, which shows the multiplicative properties
+of \emph{nonzero} rationals, reals, and complex numbers.\index{Complex numbers!additive properties}
 
 \begin{table}[!htb]
 \caption{Multiplicative properties of different number systems}\label{multiplicative_table}
@@ -515,35 +642,12 @@ of \emph{nonzero} rationals, reals, and complex numbers.\index{complex numbers!a
 \end{table}
 \end{exercise}
 
-\begin{example}\label{example:complex:complex_commute}
-The commutative law for complex multiplication is proved as follows. 
-\begin{align*}
-(a + bi)(c + di) &= (ac - bd) + (bc + ad)i \qquad \mathrm{(FLOI)}\\
-& = (ca - db) + (cb + da)i \qquad \mathrm{(commutativity~of~real~multiplication)}
-\end{align*}
-On the other hand,
-\begin{align*}
-(c + di)(a + bi) &= (ca - db) + (cb + da)i \qquad \mathrm{(FLOI)}
-\end{align*}
-Since we obtain the same expression for $(a + bi)(c + di)$ and $(c + di)(a + bi)$, it follows that 
-$(a + bi)(c + di) = (c + di)(a + bi)$.
-\end{example}
-
-\begin{exercise}\label{exercise:complex:16}
-Prove the associative law for multiplication of nonzero complex numbers. (Follow the style of Example~\ref{example:complex:complex_commute}).
-\end{exercise}
-
-Until now we have looked separately at additive and multiplicative laws for complex numbers. We should not neglect to mention the distributive law, which involves both addition and multiplication:\index{complex numbers!distributive law}
-
-\begin{exercise}\label{exercise:complex:17}
-Prove the distributive law for complex numbers: that is, if $u,w,$ and $z$ are complex numbers, then $(u)(w+z) = uw + uz$.
-\end{exercise}
 
 \begin{exercise}\label{exercise:complex:complexFOIL}
 Prove FOIL for complex numbers: that is, if $u,v,w,$ and $z$ are complex numbers, then $(u+v)(w+z) = uw + uz+vw+vz$.
 \end{exercise}
 
-\subsection*{Modulus and Complex Conjugate}
+\subsection{Modulus and complex conjugate}
 
 We are familiar with the absolute value of a real number: for instance,
 $|-\sqrt{7}|=\sqrt{7}$. In general, for a real number $x$ the absolute
@@ -631,11 +735,16 @@ $z \overline{z} = |z|^2$
  \item
 $|z w| = |z|  |w|$
 \item
-$|z|^3 = |z^3|$ (\emph{Hint}: Use (e).)
+$|z|^3 = |z^3|$ 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
-$z^{-1} = \dfrac{\overline{z}}{|z|^2}$ (see Exercise~\ref{exercise:complex:complex_mult_inv}.)
+$z^{-1} = \dfrac{\overline{z}}{|z|^2}$ 
+\hyperref[sec:complex:hints]{(*Hint*)}
+
 \item
-$|z^{-1}| = \dfrac{1}{|z|}$(see Exercise~\ref{exercise:complex:complex_mult_inv}.)
+$|z^{-1}| = \dfrac{1}{|z|}$
+\hyperref[sec:complex:hints]{(*Hint*)}
+
 \item
 $(\overline{z})^{-1} = \overline {\left( z^{-1} \right )}$
 \end{enumerate}
@@ -654,17 +763,19 @@ In view of part (a), complete the following statement:  ``The complex number $z=
 Now that we have proved properties of complex numbers in the previous two exercises, we may make use of these properties to prove facts about complex numbers  without having to write everything out as $a + bi$.  
 
 \begin{exercise}\label{exercise:complex:abs2}
-* If $|z| = 1$ and $z \neq 1$, show that $\frac{z - 1}{z+1}$ is a pure imaginary number. (\emph{Hint}: Use part (b) of the previous exercise, plus
-some of the results from Exercise~\ref{exercise:complex:cxprops}).
+* If $|z| = 1$ and $z \neq 1$, show that $\frac{z - 1}{z+1}$ is a pure imaginary number. 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:abs3}
 \begin{enumerate}[(a)]
-\item *Show that for any nonzero complex number $z$, the absolute value of $z + \bar{z}^{-1}$ is greater than $\sqrt(3)$. (Hint: use the formula
-$|w|^2 = w\cdot \overline{w}$.)
+\item *Show that for any nonzero complex number $z$, the absolute value of $z + \bar{z}^{-1}$ is greater than $\sqrt(3)$. 
+\hyperref[sec:complex:hints]{(*Hint*)}
+
 \item Give an example of $z$ such that $|z + \bar{z}^{-1}| = 2$. 
 \item Give three additional examples of $z$ such that $|z + \bar{z}^{-1}| = 2$. 
-\item **Show that for any nonzero complex number $z$, $|z + \bar{z}^{-1}| \ge 2$. (\emph{Hint}: this one uses calculus.)
+\item **Show that for any nonzero complex number $z$, $|z + \bar{z}^{-1}| \ge 2$. 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item Show by example that part (d) is \emph{not} true if $z + \bar{z}^{-1}$ is replaced with $z + z^{-1}$.  Find the smallest possible 
 value for $|z + z^{-1}|$.
 \end{enumerate}
@@ -715,8 +826,8 @@ Modify your Excel sheet to compute the square of a complex number. Put the real 
 \end{enumerate}
 \end{exercise} 
 
-\section{Alternative Representations of Complex Numbers}\label{complex_graphical}
-\subsection*{Cartesian Representation of Complex Numbers}
+\section{Alternative representations of complex numbers}\label{complex_graphical}
+\subsection{Cartesian representation of complex numbers}
 There are several ways to represent complex numbers, that have different conceptual advantages.
 For instance, a complex number $z=a+bi$ can be considered simply as a pair of real numbers $(a,b)$, where the first number is the real part and the second number is the imaginary part. We are used to plotting ordered pairs $(a,b)$  on an $xy$ plane, where $a$ is the $x$ coordinate and $b$
 is the $y$ coordinate. Representing a complex number in this way as an ordered pair $(a,b)$  is called the 
@@ -754,7 +865,7 @@ Mathematicians naturally think of complex numbers as points on a plane -- in fac
 \label{rectcoord}
 \end{figure}
 
-\subsection*{Vector Representation of Complex Numbers}
+\subsection{Vector representation of complex numbers}
 
 You should already know that a point in a plane can also be considered as a \emph{vector}: in other words, the ordered pair $(a,b)$ can be identified with the vector $a$\textbf{i} + $b$ \textbf{j}, where \textbf{i} and \textbf{j} are the unit vectors in the $x+$ and $y+$ directions, respectively. So complex numbers can also be considered as two-dimensional vectors.\index{Complex numbers!vector representation} 
 
@@ -793,7 +904,7 @@ to get the gist of the idea consider two mathematicians (Stan and Ollie) with ve
 
 Of course this correspondence between complex numbers and vectors breaks down when we consider multiplication, because we have never seen multiplication of 2-D vectors before. But it works perfectly well if we stick with addition.
 
-\subsection*{Polar Representation of Complex Numbers}
+\subsection{Polar representation of complex numbers}
 
 Nonzero complex numbers can also be represented using {\textbf{\emph{ polar
 coordinates}}. To specify any nonzero point on the plane, it suffices
@@ -827,7 +938,7 @@ The distance  $r$ is the absolute value or modulus defined previously, while the
 \end{figure}
 
 
-\subsection*{Converting Between Rectangular and Polar Form}
+\subsection{Converting between rectangular and polar form}
 
 We can see from the figure that \[
 z=a+bi=r(\cos\theta+i\sin\theta).\]
@@ -836,7 +947,7 @@ r=|z|=\sqrt{a^{2}+b^{2}}\]
  and \begin{align*}
 a & =r\cos\theta\\
 b & =r\sin\theta.\end{align*}
- We will frequently use the abbreviation\index{cis!definition}
+ We will frequently use the abbreviation\index{Cis!definition}
 \[ \cis\theta := \cos\theta+i\sin\theta \]
 (note the symbol ``:='' means ``is defined as''), so that
 \[ r\cis\theta := r(\cos\theta+i\sin\theta).\]
@@ -944,7 +1055,7 @@ Use complex numbers to specify the set of all points on a circle of radius 3 tha
 \end{enumerate}
 \end{exercise}
 
-\subsection*{Multiplication and Powers in Complex Polar Form}
+\subsection{Multiplication and powers in complex polar form}
 
 The polar representation of a complex number makes it easy to find
 products, quotients, and powers of complex numbers. 
@@ -1039,7 +1150,7 @@ Subtract the argument of the denominator from the argument of the numerator to g
 \end{itemize}
 
 \begin{example}\label{example:complex:polarmult} If $z=3\cis(\pi/3)$ and $w=2\cis(\pi/6)$,
-then $zw=6\cis(\pi/2)=6i$. \end{example}
+then $$zw=(2\cdot3)\cis(\pi/3 + \pi/6)= 6 \cis(\pi/2)=6i.$$ \end{example}
 
 \begin{exercise}\label{exercise:complex:25}
 Calculate each of the following products using complex polar arithmetic. Give the answer in rectangular form if you can do so without using roots or decimals. Otherwise, leave the answer in polar form.
@@ -1082,17 +1193,19 @@ $\dfrac{\sqrt{17} - \sqrt{51} i}{-17 - 17i}$
 \noindent
 Proposition~\ref{proposition:complex:polar_mult} is the key fact used in finding the following formula for powers of complex numbers in polar form:
 
-\begin{prop}\label{proposition:complex:DeMoivre}\index{de Moivre's Theorem} \textbf{\emph{de Moivre's Theorem}}
+\begin{prop}\label{proposition:complex:DeMoivre}\index{De Moivre's Theorem} (\textbf{\emph{de Moivre's Theorem}})
 
-Let $z=r\cis\theta$ be a nonzero complex number. Then 
-\[ [r\cis\theta]^{n}=r^{n}\cis(n\theta)\]
- for $n=1,2,\ldots$. 
+Let $z=r\cis\theta$ be a nonzero complex number. Then for $n=1,2,\ldots$ we have
+\[ [r\cis\theta]^{n}=r^{n}\cis(n\theta).\tag{$P(n)$}\]
  \end{prop}
+(We identify this statement as ``$P(n)$'' for later convenience.)
 
-\begin{proof}  Before giving the proof, we first give some general explanation of the ideas behind the proof.
+ Before giving the proof, we first give some general explanation of the ideas behind the proof.
 \bigskip
 \newline
-\noindent {\bf Ideas Behind the Proof}:  We will use a very common proof technique called \bfii{ induction}\index{Induction}. Induction is commonly used to prove statements of the form ``blah blah blah is true for $n = 1,2,3,\ldots$'' (notice that de Moivre's Theorem has this form). 
+\noindent {\bf Ideas Behind the Proof}:  We will use a very common proof technique called \bfii{ induction}\index{Induction}.
+\footnote{In the Appendix we give a more thorough treatment of the topic of induction. Here we give only a brief presentation.}
+ Induction is commonly used to prove statements of the form ``$P(n)$ is true for $n = 1,2,3,\ldots$'', where $n$ is some equation or statement involving the quantity $n$. 
 
 Notice that we actually want to prove an \emph{infinite} number of statements: that is, we want to prove:
 \begin{itemize}
@@ -1126,33 +1239,41 @@ The third statement (for $n=3$) can be proved using the statement for $n=2$:
 \noindent So we have actually used the statement for $n=2$ to prove the statement for $n=3$. We could continue in this fashion to prove $n=4$ from $n=3$:
 
 \begin{exercise}\label{exercise:complex:29} Prove $[r\cis\theta]^{4}=r^{4}\cis(4\theta)$, using Proposition
-\ref{proposition:complex:polar_mult} and the result of the previous exercise {\it (Hint: just make minor changes to the previous exercise)}.
+\ref{proposition:complex:polar_mult} and the result of the previous exercise 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
  \noindent Obviously it would take a long time to prove $n=5$ from $n=4$, $n=6$ from $n=5$, and so on. So instead, we will prove the following statement that covers all these cases:
 
-\[ \mbox{If } [r\cis\theta]^{n}=r^{n}\cis(n\theta) \mbox{ is true, then } [r\cis\theta]^{n+1}=r^{n+1}\cis((n+1)\theta) \mbox{ is also true.} \]
+\[ \mbox{If } [r\cis\theta]^{k}=r^{k}\cis(k\theta) \mbox{ is true, then } [r\cis\theta]^{k+1}=r^{k+1}\cis((k+1)\theta) \mbox{ is also true.} \]
 
-This allows us to ``ladder up'': if the statement is true for $n$, then it's also true for the {\it next} $n$.
+This allows us to ``ladder up'': if the statement is true for some integer, then it's also true for the {\it next} integer.
 
 In summary, the induction proof has two basic elements:
 \begin{itemize}
 \item
-Prove the statement for $n=1$
+Prove the statement $P(n)$ for $n=1$ (this is called the ``base case'');
 \item
-Assuming that the statement for $n$ is true, it follows that the statement for $n+1$ is also true.
+Assuming that $P(n)$  is true for $n=k$, it follows that $P(n)$  is also true for for $n=k+1$ (this is called the ``induction step'').
 \end{itemize}
 
-\noindent Now that we've given the ideas, here is the actual proof:
+\noindent Now that we've given the ideas, here is the actual proof  of Proposition \ref{proposition:complex:DeMoivre}}:
 \medskip{}
 \newline
-\noindent {\bf Actual Proof of Proposition \ref{proposition:complex:DeMoivre}}: We will use induction  on $n$. First, for $n=1$ the proposition
-is trivial. Next, assume that the proposition is true for $n$. Then \begin{align*}
-z^{n+1} & =z^{n}z\\
- & =r^{n}(\cis(n\theta)\,r(\cis\theta)\\
- & =r^{n+1}[(\cis(n\theta + \theta)]\\
- & =r^{n+1}[\cis[(n+1)\theta].\end{align*}
- \end{proof}
+\begin{proof}
+We will use induction  on $n$. First, for $n=1$ the proposition
+is trivial. This establishes the ``base case''. 
+
+Next, assume that $P(n)$ is true for $n=k$: that is, 
+$z^k = r^k \cis(k \theta)$. Then using this fact and exponent rules, we may rewrite $z^{k+1}$ as
+\begin{align*}
+z^{k+1} & =z^{k}z\\
+ & =r^{k}(\cis(k\theta)\,r(\cis\theta)\\
+ & =r^{k+1}[(\cis(k\theta + \theta)]\\
+ & =r^{k+1}[\cis[(k+1)\theta].
+\end{align*}
+This establishes the ``induction step'', which completes the proof.
+\end{proof}
 
 \begin{example}\label{example:complex:DeMoivre} We will compute $z^{10}$ where $z=1+i$. Rather than computing $(1+i)^{10}$ directly, it
 is much easier to switch to polar coordinates and calculate $z^{10}$
@@ -1210,7 +1331,7 @@ $(\sqrt{2 + \sqrt{2}} - i\sqrt{2 - \sqrt{2}})^{16}$
 \end{exercise}
 
 
-\subsection*{A Remark on Representations of Complex Numbers}
+\subsection{A Remark on representations of complex numbers}
 
 We have seen that a complex number \emph{z} can be expressed in a
 number of different ways: 
@@ -1232,14 +1353,15 @@ structures that are the ``same'' algebraically are said to be
 \textbf{\emph{isomorphic}}. We will be seeing isomorphic structures
 throughout this course.
 
-The importance of isomorphism in mathematics cannot be overstated\footnote{There are other types of ``morphisms'' as well, such as homeomorphism (in topology), diffeomorphism (in differential topology), and just plain morphism (in category theory).} . Realizing that the same thing can be represented in two different ways is often the key to mathematical progress, and can lead to enormous simplifications. For instance, we have seen that it's  easier to add complex numbers in Cartesian form, while it's much simpler to multiply complex numbers in polar form.  Since Cartesian and polar forms are are simply two different ways of representing the same thing, we can freely switch back and forth between the two forms, using whichever is most convenient at the moment. 
+The importance of isomorphism in mathematics cannot be overstated.\footnote{There are other types of ``morphisms'' as well, such as homeomorphism (in topology), diffeomorphism (in differential topology), and just plain morphism (in category theory).}  Realizing that the same thing can be represented in two different ways is often the key to mathematical progress, and can lead to enormous simplifications. For instance, we have seen that it's  easier to add complex numbers in Cartesian form, while it's much simpler to multiply complex numbers in polar form.  Since Cartesian and polar forms are are simply two different ways of representing the same thing, we can freely switch back and forth between the two forms, using whichever is most convenient at the moment. 
 
 \begin{exercise}\label{exercise:complex:cos form}
 \begin{enumerate}[(a)]
  \item
 Using de Moivre's formula for $z^3$ where $z = r \cis \theta$, find formulas for $\cos 3 \theta$ and $\sin 3 \theta$ in terms of $\cos \theta$ and $\sin \theta$.  
 \item
-Using part (a), find a formula for $\cos 3 \theta$ in terms of $\cos \theta$.  (\emph{Hint}: Use a basic identity involving cosine and sine.)
+Using part (a), find a formula for $\cos 3 \theta$ in terms of $\cos \theta$.  
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
 * Show that for any $n$, it is always possible to find a formula for $\cos n\theta$ in terms of $\cos \theta$.
 \item
@@ -1249,7 +1371,7 @@ Using part (a), find a formula for $\cos 3 \theta$ in terms of $\cos \theta$.  (
 
 We also wish to emphasize the importance of representations using \emph{pictures}.  These are essential for developing a deep, intuitive grasp of how complex numbers work.
 
-\begin{exercise}\label{exercise:complex:cos form}
+\begin{exercise}\label{exercise:complex:cos form2}
 \begin{enumerate}[(a)]
 \item
 Figure~\ref{polarcoord} shows  polar and Cartesian representations of a complex number $z$  in the complex plane.  Redraw the figure, and put $\overline{z}$ in the picture as well. Show the Cartesian coordinates of $\overline{z}$, as well as the modulus and the complex argument (angle).
@@ -1258,11 +1380,11 @@ Use your picture to obtain the polar representation of $\bar{z}$ in terms of the
 \end{enumerate}
 \end{exercise}
 
-\section{Applications of Complex Numbers}
+\section{Applications of complex numbers}
 
-\subsection*{General Remarks on the Usefulness of Complex Numbers}
+\subsection{General remarks on the usefulness of complex numbers}
 
-We have already discussed that it took some time for complex numbers to be generally accepted by mathematicians, who tended to have a preference for ``pure'' numbers such as the integers. But complex numbers have had their revenge. Today the ``purest'' form of mathematics, namely number theory, is heavily dependent on complex numbers. The famous Fermat's Last Theorem was proved using techniques that involved complex numbers.\footnote{See \url{http://www-history.mcs.st-and.ac.uk/HistTopics/Fermat's_last_theorem.html} for some of the long and sordid history of Fermat's Last Theorem.}
+We have already discussed that it took some time for complex numbers to be generally accepted by mathematicians, who tended to have a preference for ``pure'' numbers such as the integers. But complex numbers have had their revenge. Today the ``purest'' form of mathematics, namely number theory, is heavily dependent on complex numbers. The famous Fermat's Last Theorem\index{Fermat!last theorem} was proved using techniques that involved complex numbers.\footnote{See \url{http://www-history.mcs.st-and.ac.uk/HistTopics/Fermat's_last_theorem.html} for some of the long and sordid history of Fermat's Last Theorem.}
 
 But quite apart from pure mathematics, complex numbers have proved to be extremely practical. Complex numbers are indispensable tools for
 scientists and engineers. Virtually all of modern physics is based
@@ -1277,7 +1399,7 @@ Complex numbers give a powerful way to express complicated functions
 of sine and cosine in a very simple way. We will give an introduction of this in the next section--you may see it again, or have already seen it, in your differential equations course.
 
 
-\subsection*{Complex Numbers, Sine and Cosine Waves, and Phasors}
+\subsection{Complex numbers, sine and cosine waves, and phasors}
 
 We have already seen there is a close relationship between complex numbers and the trigonometric functions sine and cosine. This relationship is the basis for much of the usefulness of complex numbers -- as we shall explain in this section.
 
@@ -1345,7 +1467,8 @@ Sketch the function $y = \sin(t)$.
 \item
 Find three different  choices of $A,\theta$ such that 
 $ \sin(t) = A  \cos (t + \theta)$.  What are the possible values of $A$?
-(\hint{Hint:} What left shifts will change a cosine curve into a sine curve?)
+\hyperref[sec:complex:hints]{(*Hint*)}
+
 \end{enumerate}
 \end{exercise}
 
@@ -1355,9 +1478,9 @@ In summary, amplitude and phase are two important properties of cosine and sine 
 Recall that the \emph{real part} of the complex number $z = a + bi$ is $a$, and the \emph{imaginary part} is $b$. We also use the notation Re$[z]$ to denote the real part of the complex number $z$, and the notation Im$[z]$ to denote the imaginary part.
 
 \begin{exercise}\label{exercise:complex:43}
-Show that Re$ [A  \cis\theta \cdot \cis( t)]  = A  \cos ( t +  \theta). $ (\emph{Hint:} Use 
-Proposition~\ref{proposition:complex:polar_mult} to evaluate $\cis\theta \cdot \cis( t)$, and recall that $\cis(\alpha)$ means the same as as $\cos(\alpha) + i \sin(\alpha)$).
-\end{exercise}
+Show that Re$ [A  \cis\theta \cdot \cis( t)]  = A  \cos ( t +  \theta). $
+\hyperref[sec:complex:hints]{(*Hint*)}
+ \end{exercise}
 
 \begin{exercise}\label{exercise:complex:44}
 Show that Im$ [A \cis\theta \cdot \cis (t)] = A \sin (t + \theta). $
@@ -1382,7 +1505,7 @@ We may also understand this situation in terms of two-dimensional vectors with t
 	  \caption{\label{fig:complex:3} Graphs of the vector representation and the wave representation of cosine }
 \end{figure}
 
-Now it's possible to add two waves together; we've all seen at the beach or pool (or physics class) how two water waves that cross each other create another wave of with a different shape. This is called {\bf \emph{wave superposition}}\index{wave superposition}. In general, the superposition of two waves is a wave with a different shape; we will now see how complex numbers make it easy to compute this new wave.
+Now it's possible to add two waves together; we've all seen at the beach or pool (or physics class) how two water waves that cross each other create another wave of with a different shape. This is called {\bf \emph{wave superposition}}\index{Wave superposition}. In general, the superposition of two waves is a wave with a different shape; we will now see how complex numbers make it easy to compute this new wave.
 
 \begin{exercise}\label{exercise:complex:45}
 \begin{enumerate}[(a)]
@@ -1439,7 +1562,7 @@ What is the phase shift of the sum of the three signals?
 
 We hope that from the examples in this section, you may get some idea of how important complex numbers are in the study of signals. In fact, for many electrical engineers complex numbers are their ``bread and butter''. 
 
-\subsection*{Roots of unity and regular polygons}
+\subsection{Roots of unity and regular polygons}\label {sec:RootsOfUnity}
 As we mentioned before, complex numbers got their start when mathematicians started considering the solutions to algebraic  equations. One particularly important equation is
 \[z^{n}=1.\]
 For example, when $n=4$ the complex numbers which solve $z^4=1$ are $z=1$, $-1$, $i$, and $-i$. In general, the complex numbers that satisfy the
@@ -1476,29 +1599,33 @@ Using Proposition~\ref{proposition:complex:nth_roots_of_1}, write four 4th roots
 \end{enumerate}
 \end{exercise}
 
-We have not actually shown that Proposition~\ref{proposition:complex:nth_roots_of_1} gives \emph{all} of the $n$th roots of unity, but in fact it does. The following exercises show this is true in the case where $n=4$:
+We have not actually shown that Proposition~\ref{proposition:complex:nth_roots_of_1} gives \emph{all} of the $n$th roots of unity, but in fact it does. First we'll  show this is true in the case where $n=4$:
+
+\begin{prop}\label{proposition:complex:4throot}
+ The only 4th roots of unity are the elements of the set $\{1,-1,i,-i\}$.
+\end{prop}
+
+\begin{proof}
+What this proposition is saying is that any complex number $w$ that is not in the set $\{1,-1,i,-i\}$ can't possibly be a fourth root of unity. We'll show  this in the following exercise: 
 
 \begin{exercise}\label{exercise:complex:50}
-This exercise involves proving the following proposition:
 
-\noindent
-\textbf{Proposition:}  The only 4th roots of unity are the elements of the set $\{1,-1,i,-i\}$.
-
-\noindent  The proof is by contradiction as follows:
 \begin{enumerate}[(a)]
 \item
-Suppose that $w$ is a complex number that is is not equal to 1, -1, $i$, or $-i$ (in mathematical shorthand we write this as: $w \notin \{1,-1,i,-i \}$). Show that $(w-1)(w+1)(w-i)(w+i) \neq 0$. (Hint: we have already shown  in Proposition~\ref{proposition:complex:nonzero_complex_product} that the product of two nonzero complex numbers is never equal to 0. Use this to show that the product of four nonzero complex numbers is never equal to 0.)
+Suppose that $w$ is a complex number that is not equal to 1, -1, $i$, or $-i$ (in mathematical shorthand we write this as: $w \notin \{1,-1,i,-i \}$). Show that $(w-1)(w+1)(w-i)(w+i) \neq 0$.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
-Show that this implies that $w$ is not a 4th root of unity. (\emph{Hint}: multiply out the inequality that you proved in (a)).
-\emph
-Complete the argument that the only 4th roots of unity are  $\{1,-1,i,-i \}$.
+Show that this implies that $w$ is not a 4th root of unity.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
+\end{proof}
 
 \begin{exercise}\label{exercise:complex:51}
 \begin{enumerate}[(a)]
 \item
 Multiply out the product $(z - 1)(z - \cis\left(\frac{2\pi}{3}\right))(z - \cis\left(\frac{4\pi}{3}\right))$ and simplify.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item
 Use youre result in (a) to show that there are exactly 3 cube root of unity. 
 \end{enumerate}
@@ -1671,7 +1798,8 @@ What geometrical motion corresponds to the following algebraic operation:
 \end{enumerate}
 \end{exercise}
 
-Exercise~\ref{exercise:complex:non_comm} also gives us our first exposure to a phenomenon that is quite common in abstract algebra, namely the existence of \textbf{\emph{non-commutative}} operations (also known as \textbf{\emph{non-Abelian}}\index{Abelian} operations). We saw that both multiplication by a $n$th root of unity and complex conjugation corresponded to motions of a regular $n$-gon. However, the \emph{order} of the motions matters: rotating first and then conjugating (i.e. ``flipping'') gives a \emph{different} result than conjugating first, then performing the rotation afterwards.
+Exercise~\ref{exercise:complex:non_comm} also gives us our first exposure to a phenomenon that is quite common in abstract algebra, namely the existence of \textbf{\emph{non-commutative}} operations (also known as \textbf{\emph{non-abelian}}\index{abelian} operations).
+ We saw that both multiplication by a $n$th root of unity and complex conjugation corresponded to motions of a regular $n$-gon. However, the \emph{order} of the motions matters: rotating first and then conjugating (i.e. ``flipping'') gives a \emph{different} result than conjugating first, then performing the rotation afterwards.
 
 \begin{exercise}\label{exercise:complex:56}
 If you've studied matrix multiplication, then you may have seen non-commutative operations before: 
@@ -1683,7 +1811,7 @@ Give an example of two $2\times2$ matrices that \emph{do} commute.
 \end{enumerate}
 \end{exercise}
 
-The previous exercises give a small hint as to the extensive and beautiful relationship between the complex numbers and plane geometry.  The following exercises further explore  this relationship.  (\emph{Hint:} you may find that complex polar form is useful in these exercises.)
+The previous exercises give a small hint as to the extensive and beautiful relationship between the complex numbers and plane geometry.  The following exercises further explore  this relationship.  (\emph{Hint}: you may find that complex polar form is useful in these exercises.)
 
 \begin{exercise}\label{exercise:complex:57}
 Consider a plane with Cartesian coordinates. Let $O$ be the point $(0,0)$, let $A$ be the point $(a,b)$, and let $C$ be the point $(c,d)$. Also, let $z = a+bi$ and $w = c+di$.
@@ -1695,9 +1823,10 @@ Consider a plane with Cartesian coordinates. Let $O$ be the point $(0,0)$, let $
 \item
 * Show that $\overline{OA}$ is perpendicular to $\overline{OC}$ if and only if $z \bar{w} + \bar{z} w = 0$.
 \item
-* Use complex arithmetic to prove the \emph{Law of cosines}\index{law of cosines}:
+* Use complex arithmetic to prove the \emph{Law of cosines}\index{Law of cosines}:
 \[ AC^2 = OA^2 + OC^2 - 2(OA)(OC)\cos(\angle AOC),\]
-where $AC,OA$, and $OC$ denote the lengths of segments $\overline{AC}, \overline{OA}$ amd $\overline{OC}$ respectively. (\emph{Hint}: Note that $OA = |z|, OC = |w|.$ and $AC = |z-w|$.)
+where $AC,OA$, and $OC$ denote the lengths of segments $\overline{AC}, \overline{OA}$ amd $\overline{OC}$ respectively. 
+\hyperref[sec:complex:hints]{(*Hint*)}
 
 \end{enumerate}
 \end{exercise}
@@ -1705,7 +1834,7 @@ where $AC,OA$, and $OC$ denote the lengths of segments $\overline{AC}, \overline
 In fact, many intricate theorems in plane geometry that require long proofs using conventional methods can be proven much more easily using complex numbers. We will not be exploring this further; but we hope these examples will whet your appetite!
 
 
-\subsection*{Arbitrary $n$th roots}
+\subsection{Arbitrary $n$th roots}
 In the previous section, we characterized all complex solutions of the equation $z^n = 1$; we called these solutions the $n$th roots of unity. A natural question to ask then is, What about the $n$th roots of any complex number? That is, given a complex number $a + bi$, can we find all solutions to the equation $z^n = a + bi$? Let's explore some simple cases first.
 
 \begin{exercise}\label{exercise:complex:58}
@@ -1715,7 +1844,8 @@ Find all square roots of -1.
 \item
 The complex number $1 + i$ is one square root of $2i$. Can you find another one?
 \item
-Find all square roots of $8i$. (\emph{Hint}: Use your answer to part (b).)
+Find all square roots of $8i$.
+\hyperref[sec:complex:hints]{(*Hint*)}
 \item 
 In parts (a), (b), and (c) you found two square roots in each case. In each case, what is the relation between the two square roots?
 \end{enumerate}
@@ -1730,7 +1860,7 @@ z &= (\sqrt{2})^{1/3} \cis \left( \frac{\pi}{4}/3 \right) \\
 &= 2^{1/6} \cis(\pi/12).
 \end{align*}
 But are there others? In fact, if we multiply this solution by the three cube roots of unity, we obtain
-\[ 2^{1/6} \cis\left(\frac{\pi}{12}\right); \qquad 2^{1/6} \cis\left(\frac{\pi}{12}\right) \cdot \cis\left(\frac{2\pi}{3}\right); \qquad \cis\left(\frac{\pi}{12}\right) \cdot \cis\left(\frac{4\pi}{3}\right). \]
+\[ 2^{1/6} \cis\left(\frac{\pi}{12}\right); \qquad 2^{1/6} \cis\left(\frac{\pi}{12}\right) \cdot \cis\left(\frac{2\pi}{3}\right); \qquad 2^{1/6} \cis\left(\frac{\pi}{12}\right) \cdot \cis\left(\frac{4\pi}{3}\right). \]
 You may check that all three of these complex numbers satisfy $z^3 = 1 + i$.
 
 \begin{exercise}\label{exercise:complex:59}
@@ -1750,27 +1880,25 @@ Find all fifth roots of $-i$.
 \item
 Find all fourth roots of $-1 + \sqrt{3}i$.
 \item
-Find all fourth roots of $ \sqrt{1/2 + \sqrt{2}/4} + i\sqrt{1/2 - \sqrt{2}/4}$. (\emph{Hint:} To find the polar form of this number, try squaring it.)
+Find all fourth roots of $ \sqrt{1/2 + \sqrt{2}/4} + i\sqrt{1/2 - \sqrt{2}/4}$. 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
 
-\section{The Fundamental Theorem of Algebra}
+\section{Complex roots of polynomial equations}\label{sec:FTOA}
 
-Next we consider more general algebraic equations than the basic $n$'th root equations we've been looking at so far. As a first example, consider the equation $z^2 + pz = q$, where $p$ and  $q$ are real numbers. Using  the quadratic formula, it is not too hard to show that if $a + bi$ is a solution of $z^2 + pz = q$ then the complex conjugate $a - bi$ is also a solution:
-
-\begin{exercise}\label{exercise:complex:61}
-Show that if $a + bi$ is a solution of $z^2 + pz = q$ then $a - bi$ is also a solution.
-\end{exercise}
-
-In fact, the same result is true for more complicated equations. For example, let us consider the cubic equation $z^3 + pz^2 + qz = r$, where $p, q$ and  $r$ are all real numbers:
+Next we consider more general algebraic equations than the basic $n$'th root equations we've been looking at so far. As a first example, consider the equation $z^2 + pz = q$, where $p$ and  $q$ are real numbers. Using  the quadratic formula, it is not too hard to show that if $a + bi$ is a solution of $z^2 + pz = q$ then the complex conjugate $a - bi$ is also a solution. This is because  $z^2 + pz = q$ can also be written as  $z^2 + pz - q = 0$, and the quadratic formula tells us that there are two solutions, given by:
+$$ z = \frac{-p \pm \sqrt{p^2 - (4)(1)(-q)}}{2} = \frac{-p}{2}  \pm \frac{\sqrt{p^2 + 4q}}{2}.$$
+The $-p/2$ term is always real, but the square root term is either real or imaginary depending on the sign of $p^2 + 4q$  (since $q$ could be negative).  If the square root term is real, then both roots are real, and each root is its own complex conjugate.  If the square root term is imaginary, then the $\pm$ means that the imaginary parts of the two roots are negatives of each other, so that the two roots are complex conjugates.
 
 \begin{exercise}\label{exercise:complex:cubic_conj}
+Consider the cubic equation $z^3 + pz^2 + qz = r$, where $p, q$ and  $r$ are all real numbers.
 \begin{enumerate}[(a)]
 \item
 Using a previous exercise (which?), show that $\overline{z^3} = \overline{z}^3$.
 \item
-Similarly, show  $\overline{pz^2} = p\overline{z}^2$ and $\overline{qz} = q\overline{z}$.
+Similarly, show  $\overline{pz^2} = p\overline{z}^2$ and $\overline{qz} = q\overline{z}$, and $\overline{r} = r$.
 \item 
 Use (a) and (b) to show that $\overline{z^3 + pz^2 + qz - r} = \overline{z}^3 + p\overline{z}^2 + q\overline{z} - r$.
 \item
@@ -1789,23 +1917,23 @@ Based on the result of the previous exercise, fill in the blank: Given that the 
 \item
 Given that $3 - 7i$ and $-2+i$ are solutions to an equation of the form $z^4 + a_{3}z^{3} + a_{2} z^{n-2}+ a_1 z + a_0 = 0$ where $a_0, a_1, a_2, a_3$ are real. Find two other solutions to the same equation.
 \item
-*Find $a_0, a_1, a_2, a_3$. (\emph{Hint:} if $r$ is a solution to the above equation, then $z-r$ divides  $z^4 + a_{3}z^{3} + a_{2} z^{2}+ a_1 z  + a_0$.)
+*Find $a_0, a_1, a_2, a_3$. 
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
 \begin{exercise}\label{exercise:complex:conjugate_root2}
 Using the statement in Exercise~\ref{exercise:complex:conjugate_root}, prove the following proposition:
 Given the equation  $z^n + a_{n-1}z^{n-1} + a_{n-2} z^{n-2} + \ldots + a_1 z =a_0,$ where $a_0, a_1, ... a_{n-1}$ are real numbers. Let $N$ be the number of solutions of the equation that are \emph{not} real. Then either $N=0$ or $N$ is divisible by 2. 
-
-\noindent (\hint{Hint:} Let $M$ be the number of distinct solutions with positive imaginary part. Then how many distinct solutions are there with negative imaginary part? And how many non-real solutions are there altogether?)
+\hyperref[sec:complex:hints]{(*Hint*)}
 \end{exercise}
 
-Finally, we mention a famous result known as the {\bf \emph{Fundamental Theorem of Algebra}}:
+The most famous result concerning complex roots of polynomials is known as the {\bf \emph{Fundamental Theorem of Algebra}}:
 
 \begin{prop}\label{proposition:complex:FTOA} Given any equation of the form $z^n + a_{n-1}z^{n-1} + a_{n-2} z^{n-2} + \ldots + a_1 z =a_0,$ where $n>0$ and $a_0, a_1, ... a_{n-1}$ are real numbers. Then there exists at least one and at most $n$ distinct complex numbers which solve the given equation. 
 \end{prop}
 
-The proof of this theorem is beyond the scope of this course.
+The Fundamental Theorem of Algebra actually has two parts. The easy part is the ``at most $n$ distinct complex roots'' part, and the hard part is the ``at least one complex root'' part. We will eventually prove the easy part in Chapter~\ref{poly}, but sadly the hard part is beyond our scope.\footnote{You may see a proof if you take a class in complex analysis}
 
 \begin{exercise}\label{exercise:complex:70}
 \begin{enumerate}[(a)]
@@ -1826,3 +1954,17 @@ Using the Fundamental Theorem of Algebra and our previous results on roots of un
 Using the Fundamental Theorem of Algebra and Exercise~\ref{exercise:complex:conjugate_root2}, prove the following proposition: 
 Given an equation of the form $z^n + a_{n-1}z^{n-1} + a_{n-2} z^{n-2} + \ldots + a_1 z =a_0,$ where $n>0$ and $a_0, a_1, ... a_{n-1}$ are real numbers. Suppose the equation has no real solutions. Then the equation has at least two distinct solutions.
 \end{exercise}
+
+
+\begin{exercise}
+Give an example of a polynomial of the form  $z^6 + a_{5}z^{5} + a_{4} z^{4} + \ldots + a_1 z =a_0,$ that has no real solutions, and exactly two distinct complex solutions.
+\end{exercise}
+
+
+\histhead
+ 
+ 
+\noindent{\small \histf
+Several great mathematicians (Euler, Lagrange, Laplace, and Gauss) produced ``proofs'' that every polynomial has at least one complex root which turned out to be faulty. The first correct proof was given by Argand in 1806. See \url{en.wikipedia.org/wiki/Fundamental_theorem_of_algebra} for the fascinating detals.
+\histbox 
+}

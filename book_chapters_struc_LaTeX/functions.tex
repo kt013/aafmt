@@ -1,14 +1,13 @@
 % Some problems are to simple, they are confusing.
-% ##### Corrections needed
-% ### examples are too similar
 % ### more varied examples -- collection of examples at the end of each section
 % ### when proving 1-1, give piecewise examples
 % ### proving 1-1 and onto -- give more examples of algebraic functions
 % ### bivariate example for 1-1, and for onto
 \chap{Functions: basic concepts}{functions}
 
+The idea of a function should be familiar to you from previous math classes. Your calculus class no doubt was all about functions defined on real numbers. In this book, we will be more interested in functions on \emph{finite} sets.  Rather than ``doing things'' to these functions (such as integrating and differentiating), instead we will dig more deeply into the basic nature of functions themselves. This will eventually lead us to discover profound connections between groups and functions (see the Permutations chapter).\footnote{This chapter  is an adapted and expanded version of a chapter by D. and J. Morris.} 
 
-\section{The Cartesian Product: a different type of set operation}
+\section{The Cartesian product: a different type of set operation}
 
 In the previous chapter, we introduced set operations such as $\cup$ and $\cap$.  In this chapter we are going to need yet another set operation. This operation is called the "Cartesian product", and is denoted by the symbol $\times$. In order to define the Cartesian product, we will first need a preliminary definition:
 
@@ -61,6 +60,7 @@ In view of the previous example, is $\times$ commutative?  \emph{Explain} your a
  
 \begin{exercise}
 Specify each set by listing its elements. 
+\begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item
 $\{a, i\} \times \{n, t\}$
@@ -68,7 +68,10 @@ $\{a, i\} \times \{n, t\}$
 $\{Q, K\} \times \{ \clubsuit, \heartsuit, \spadesuit, \diamondsuit \}$
 \item
 $\{1, 2, 3\} \times \{3, 4, 5\}$
+\item
+$\{y,g,Y,G\} \times \{y,g,Y,G\}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
 Now $A \times B$ can be considered an operation on the sets $A$ and $B$, just like $A \cup B$ and $A \cap B$. But there is a very significant difference. Recall that if $A$ and $B$ are both subsets of the same universal set $U$, then so are $A \cup B$ and $A \cap B$. This is \emph{not} the case for $A \times B$! The operation $A \times B$ takes the sets $A$ and $B$ and creates another set with a \emph{completely new} type of element!
@@ -135,10 +138,10 @@ Using the definition of Cartesian product, show that for any set $A$, $A \times 
 
 
 
-\section{Introduction to Functions}
+\section{Introduction to functions}
 
 
-\subsection*{Informal Look at Functions}
+\subsection{Informal look at functions}
 
 You have seen many examples of functions in your previous math classes. 
 Most of these were probably given by formulas, for example $f(x) = x^3$. 
@@ -246,7 +249,7 @@ The second row is represented by $(\var{banana}, 83)$. Continuing in this way yi
   (\var{eggs}, 155) \,\bigr\} . \]
   This set of ordered pairs contains exactly the same information as a table of values, but the set is a more convenient form for mathematical manipulations.
 
-\begin{exercise}
+\begin{exercise}\label{exercise:functions:funtable}
 Here is a function~$f$ given by a table of values.
 
 \begin{center}
@@ -271,7 +274,8 @@ What is $f(3)$?
 \item  \label{FunctionByTableEx-pairs}
 Represent $f$ as a set of ordered pairs.
 \item  \label{FunctionByTableEx-formula}
-Find a formula to represent~$f$. (Hint: There is a formula of the form $f(x) = ax^2 + bx + c$)
+Find a formula to represent~$f$.
+\hyperref[sec:functions:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -323,20 +327,11 @@ Why would $C$ not represent a function?  Bear in mind that the domain is still $
 %In other words, if $B = \{ \mbox{ price (in cents) } \}$ is the codomain, then $C$ is not a function because $ \mbox{ price(donut) } \notin B$. 
 
 \begin{exercise}\label{exercise:functions:ExOrderPairs}
-Let 
-\begin{itemize}
-\item $A = \{ \var{a}, \var{b}, \var{c}, \var{d} \}$,
-and
-\item $B = \{1,3,5,7,9\}$.
-\end{itemize}
-\begin{enumerate}[(a)]
-\item
-List the elements of $A \times B$.\
-\medskip
+Let  $A = \{ \var{a}, \var{b}, \var{c}, \var{d} \}$ and  $B = \{1,3,5,7,9\}$.
+Which of the following sets of ordered pairs represent functions from~$A$ to~$B$?
 
-\noindent
-Which of the following sets of ordered pairs represent functions from~$A$ to~$B$?\
-\medskip
+\begin{multicols}{2}
+\begin{enumerate}[a.]
 \item \label{WhichAreFuncsEx-a1b3c5d7e9}
 $\{ (\var{a}, 1), (\var{b}, 3), (\var{c}, 5), (\var{d}, 7) \}$
 \item \label{WhichAreFuncsEx-a1b2c3d4e5}
@@ -360,6 +355,7 @@ $\{ (\var{c}, 1), (\var{b}, 3), (\var{a}, 7), (\var{d},9) \}$
 \item \label{WhichAreFuncsExACrossB}
 $A \times B$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
 \begin{exercise}
@@ -400,7 +396,7 @@ Notice that:
 \end{enumerate}
 
 
-\subsection*{Official Definition of Functions}
+\subsection{Official definition of functions}
 
 The preceding section provided some intuition about how and why functions are represented as sets of ordered pairs, and since ordered pairs are elements created by a Cartesian product, we learned how to view a function from $A$ to $B$ as a particular subset of $A \times B$.  This view leads to our official definition of a function:\index{Function!formal definition}
 
@@ -424,7 +420,7 @@ We also call
 $A$  the \terminology{domain}\index{Domain!of a function} of~$f$, and
 $B$ the \terminology{codomain}\index{Codomain!of a function} of~$f$.
 
-If the pair $(a, b) \in f$, then we say that $b$ is the \terminology{image}\index{image!of an element under a function} of $a$ under the function $f$.
+If the pair $(a, b) \in f$, then we say that $b$ is the \terminology{image}\index{Image!of an element under a function} of $a$ under the function $f$.
 
 
 \end{defn}
@@ -471,7 +467,7 @@ $n$ & $f(n)$ \\
 \end{example}
 
 
-\begin{exercise} \ 
+\begin{exercise}\label{exercise:functions:23} \ 
  The following table describes a certain function~$g$.
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -546,6 +542,7 @@ $\{(\var{y}, \var{a}), (\var{x},\var{c}), (\var{z},\var{a})\}$
  Which of the following are functions from
 $\{1, 2, 3\}$ to $\{\var{w},\var{h},\var{o}\}$?
 (If it is not such a function, then explain why not.)
+\begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item \label{FunctionsChapExers-Which123-1w1h1o}
 $\{(1, \var{w}), (1, \var{h}), (1,\var{o})\}$
@@ -556,16 +553,18 @@ $\{(1, \var{h}), (2,\var{o}), (3,\var{w})\}$
 \item \label{FunctionsChapExers-Which123-w1h2o3}
 $\{(\var{w},1), (\var{h},2), (\var{o},3)\}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:functions:27}
  For the given sets $A$ and~$B$:
-\begin{enumerate}[i] 
+\begin{enumerate}[(a)] 
 \item Write each function from~$A$ to~$B$ as a set of ordered pairs. (It turns out that if $|A| = m$
 and $|B| = n$, then the number of functions from~$A$ to~$B$ is~$n^m$. Do you see why?)
 \item Find the range of each function.
 \end{enumerate}
-\begin{enumerate}[(a)]
+\begin{multicols}{2}
+\begin{enumerate}[i.]
 \item \label{FunctionsChapExers-FindAll-abc,d}
 $A = \{\var{a},\var{b},\var{c}\}$, $B = \{\var{d}\}$
 \item \label{FunctionsChapExers-FindAll-ab,cd}
@@ -576,9 +575,10 @@ $A = \{\var{a}\}$, $B = \{\var{b},\var{c},\var{d}\}$
 $A = \{\var{a},\var{b}\}$, $B = \{\var{c},\var{d},\var{e}\}$
 %\item $A = \{\var{a},\var{b},\var{c}\}$, $B = \{\var{d},\var{e}\}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
-\subsection*{Summary of basic function concepts}
+\subsection{Summary of basic function concepts}
 \begin{itemize}
 \item A function accepts inputs, and provides a single output for each input.
 \item The set of allowable inputs is called the domain of the function.
@@ -605,9 +605,9 @@ $A = \{\var{a},\var{b}\}$, $B = \{\var{c},\var{d},\var{e}\}$
 %\item well-defined???
 
 
-\section{One-to-One Functions}
+\section{One-to-one functions}
 
-\subsection*{Concept and definition}
+\subsection{Concept and definition}
 
 \medskip\noindent
 We begin this chapter with an example.
@@ -683,6 +683,7 @@ $f(a_1) = f(a_2)$, we have $a_1 = a_2$. \index{One-to-one!formal definition}
 \begin{exercise}\label{exercise:functions:11Exers-pairs}
  
  Each of the following sets of ordered pairs is a function from $\{1,2,3,4\}$ to $\{\var{a},\var{b},\var{c},\var{d},\var{e}\}$. Either prove that the function is one-to-one, or prove that it is not.
+\begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item  \label{11Exers-pairs-f}
 $f = \{ (1,\var{a}), (2,\var{b}), (3,\var{d}), (4,\var{e})\}$
@@ -697,9 +698,10 @@ $j = \{ (1,\var{a}), (2,\var{c}), (3,\var{e}), (4,\var{c})\}$
 \item  \label{11Exers-pairs-k}
 $k = \{ (1,\var{a}), (2,\var{c}), (3,\var{e}), (4,\var{d})\}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
-\subsection*{Proving that a function is one-to-one}
+\subsection{Proving that a function is one-to-one}
 
 The concept of one-to-one will be very important in this course, and one of the tools we will need is the ability to prove that a function is one-to-one.  Though many of the functions we will encounter throughout this book are not algebraic, we will learn this style of proof using algebraic functions, as they are a bit easier to deal with.  Here are some examples of this type of proof. 
 
@@ -765,6 +767,7 @@ In summary, the horizontal line test can only \emph{suggest} whether a function 
 \begin{exercise}\label{exercise:functions:11Exers}
 
  Each formula defines a function from~$\mathbb{R}$ to~$\mathbb{R}$. Either prove the function is one-to-one, or prove that it is not.
+\begin{multicols}{2}
  \begin{enumerate}[(a)]
 \item \label{11Exers-formula-f}
 $f(x) = 1$.
@@ -777,11 +780,12 @@ $i(x) = 3x + 2$.
 \item \label{11Exers-formula-j}
 $j(x) = 1/ \bigl( |x| + 1 \bigr)$.
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
 
 
-There is an equivalent way to show functions are one-to-one that is also useful.  To see it, recall the $\var{wife}$ function from the beginning of the section.  The $\var{wife}$ function is one-to-one because one woman can't be (legally) married to two different husbands. We can express the same thing in a different way by saying that two different husbands must be married to two different wives. These two statements are \bfii{ contrapositives}\index{contrapositive} of each other, and are in fact equivalent.  (``contrapositive'' is a logical term--you may have run across it before in a Discrete Math class.)
+There is an equivalent way to show functions are one-to-one that is also useful.  To see it, recall the $\var{wife}$ function from the beginning of the section.  The $\var{wife}$ function is one-to-one because one woman can't be (legally) married to two different husbands. We can express the same thing in a different way by saying that two different husbands must be married to two different wives. These two statements are \bfii{ contrapositives}\index{Contrapositive} of each other, and are in fact equivalent.  (``contrapositive'' is a logical term--you may have run across it before in a Discrete Math class.)
  
 If we generalize this reasoning to arbitrary one-to-one functions, we have the following two equivalent statements:
 \begin{itemize}
@@ -884,7 +888,7 @@ $f$ is \emph{not} one-to-one because $f(1) = 2$ and $f(3) = 2$.
 So the writeup is easy: two values is all it takes. The hard thing is finding the two values!
 \end{example}
 
-\begin{exercise} 
+\begin{exercise}\label{exercise:functions:40} 
 For each function, either prove that it is one-to-one, or prove that it is not.
 \begin{enumerate}[(a)]
 \item \label{IsIt11?-linear}
@@ -893,11 +897,11 @@ For each function, either prove that it is one-to-one, or prove that it is not.
  $f \colon {\mathbb N} \to {\mathbb N}$ defined by $f(x)=x^2$.
 \item \label{IsIt11?-abs}
  $g \colon \real \to \real$ defined by $g(x)= \left|(x+1)/2 \right|$.
-\item \label{modular}
+\item \label{modular_g}
  $g \colon {\mathbb Z}_6 \to {\mathbb Z}_6$ defined by $g(x)= x \oplus 2$ .
 \item \label{modular_m}
  $g \colon {\mathbb Z}_8 \to {\mathbb Z}_8$ defined by $g(x) = x \odot 2 $ .
-\item \label{modular_m}
+\item \label{modular_m2}
  $g \colon {\mathbb Z}_{11} \to {\mathbb Z}_{11}$ defined by $g(x) =  x \odot 2$ .
 \item 
  $g \colon {\mathbb Z}_7 \to {\mathbb Z}_7$ defined by $g(x)= x \odot x$ .
@@ -914,7 +918,7 @@ For each function, either prove that it is one-to-one, or prove that it is not.
 %Many mathematicians use the word ``\emph{injective}," rather than ``one-to-one." (This comes from French.) Also, a function that is one-to-one can be called an \emph{injection}.
 %\end{rem}
 
-%\subsection*{Summary of one-to-one}
+%\subsection{Summary of one-to-one}
 %\item Important definitions:
 %\begin{itemize}
 %\item one-to-one
@@ -925,9 +929,9 @@ For each function, either prove that it is one-to-one, or prove that it is not.
 %\end{itemize}
 %\end{summary}
 
-\section{Onto Functions}
+\section{Onto functions}
 
-\subsection*{Concept and definition}
+\subsection{Concept and definition}
 In an arrow diagram of a function $f \colon A \to B$, the definition of a function requires that there is exactly one arrow out of each element of~$A$,  but it says nothing about the number of arrows into each element of~$B$. There may be elements of~$B$ with lots of arrows into them (unless the function is one-to-one), and there may be other elements of~$B$ that have no arrows into them. 
 The function is called ``onto"\index{Onto}\index{Surjective!also see onto}\index{Function!onto}
 \footnote{Some math terms use the word ``surjective" instead of ``onto": the two are synonymous.}
@@ -935,16 +939,6 @@ The function is called ``onto"\index{Onto}\index{Surjective!also see onto}\index
 
 \begin{example}
 Figure \ref{arrowontofig} shows arrow diagrams of various functions, some onto and some not.
-\end{example}
-
-\begin{center}
-\begin{figure}[h]
-\includegraphics[scale=0.6]{images/arrowonto.pdf}
-\caption{Arrow diagrams for various functions}
-\label{arrowontofig}
-\end{figure}
-\end{center}
-
 In Figure~\ref{arrowontofig},
 \begin{itemize}
 \item
@@ -956,6 +950,16 @@ $h$ is neither one-to-one nor onto.
 \item
 $i$ is one-to-one, but not onto.
 \end{itemize}
+\end{example}
+
+\begin{center}
+\begin{figure}[h]
+\includegraphics[scale=0.6]{images/arrowonto.pdf}
+\caption{Arrow diagrams for various functions}
+\label{arrowontofig}
+\end{figure}
+\end{center}
+
 
 \begin{example}
  Not every woman is a mother. 
@@ -978,12 +982,13 @@ there is some $a \in A$, such that $f(a) = b$.
 
 In words: if I pick any value in the codomain of $f$, there is some value in the domain that produces it.
 
-\begin{exercise}
-If the function $f$ is onto, then what is the relation between the range of $f$ and the codomain of $f$? \emph{(Hint: can there be any elements in the codomain that are not in the range?).}
+\begin{exercise}\label{exercise:functions:45}
+If the function $f$ is onto, then what is the relation between the range of $f$ and the codomain of $f$?
+\hyperref[sec:functions:hints]{(*Hint*)}
 \end{exercise}
 
 
-\subsection*{Proving that a function is onto}
+\subsection{Proving that a function is onto}
 
 The following examples show how to prove that a function is onto.
 
@@ -1038,10 +1043,8 @@ Define $g \colon \mathbb{R} \to \mathbb{R}$ by $g(x) = 5x - 2$. Show $g$ is onto
 \begin{scratchwork}
 Just as in the previous examples, given any $y \in \mathbb{R}$  we need to find a value of~$x$ that makes $g(x) = y$. So we start with the equation $g(x) = y$ and solve for $x$:
 \begin{align*}
-g(x) &= y \\
-5x-2 &= y \\
-5x &= y + 2 \\
-x &= \frac{y+2}{5}
+g(x) = y  &\implies 5x-2 = y \qquad \text{[by substitution]}\\
+ & \implies x = \frac{y+2}{5}\qquad \text{[solve for $x$ using basic algebra]}
 \end{align*}
 
 \noindent
@@ -1079,6 +1082,7 @@ On the other hand, to disprove a function is onto, you only need a counterexampl
   
 \begin{exercise}\label{exercise:functions:OntoExers} \ 
 Each formula defines a function from~$\mathbb{R}$ to~$\mathbb{R}$. Either prove that the function is onto, or prove that it is not.
+\begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item \label{OntoExers-formula-a(x)}
  $a(x) = 1$.
@@ -1095,6 +1099,7 @@ Each formula defines a function from~$\mathbb{R}$ to~$\mathbb{R}$. Either prove 
 \item \label{OntoExers-formula-g(x)}
  $g(x) = \root 3 \of {x+5} - 5$.
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
 \begin{exercise}\label{exercise:functions:OntoExers-pairs}
@@ -1120,7 +1125,7 @@ $e = \{ (1,\clubsuit), (2,\spadesuit), (3, \heartsuit), (4,\spadesuit), (5, \clu
 \begin{exercise}
 For each of the following  functions, either prove that it is onto, or prove that it is not.
 \begin{enumerate}[(a)]
-\item \label{modular_m}
+\item \label{modular_m3}
  $g \colon {\mathbb Z}_5 \to {\mathbb Z}_{5}$ defined by $g(x) =  (x \odot 2) \oplus 3$ .
 \item 
  $g \colon {\mathbb Z}_7 \to {\mathbb Z}_7$ defined by $g(x)= (x \odot x) \oplus 1 $ .
@@ -1146,48 +1151,86 @@ e^x & \mbox{if $x > 0$} \\
 If you graph this function, you wil find that the horizontal line tests suggest $f(x)$ is indeed one-to-one and onto. To complete the actual proof, we need to prove four separate statements:
 \begin{enumerate}[(a)] 
 \item
-If $y > 1$, there exists a unique $x>0$ such that $e^x = y$ (thus $f(x)=y$).
+If $y > 1$, there exists a unique $x>0$ such that $e^x = y$.
 \item
-If $y \le 1$, there exists a unique $x \le 0$ such that $1-x^2 = y$ (thus $f(x)=y$).
+If $y \le 1$, there exists a unique $x \le 0$ such that $1-x^2 = y$.
 \end{enumerate}
-From these two facts, we see that $f(x)$ is onto, because for any $y$ (whether $>1$ or $\le 1$) there exists an $x$ such that $f(x)=y$. 
+From these two facts, it follows that $f(x)$ is onto, because for any $y$ (whether $>1$ or $\le 1$) there exists an $x$ such that $f(x)=y$. 
+\bigskip
+
 
 To show that $f(x)$ is one-to-one, we will need two additional statements:
-\begin{enumerate}[(c)] 
+\begin{enumerate}[(a)]
+\setcounter{enumi}{2} 
 \item
-If $y > 1$, there exists no $x\le0$ such that $1 - x^2 = y$ (thus $f(x)=y$).
+If $y > 1$, there exists no $x\le0$ such that $1 - x^2 = y$.
 \item
-If $y \le 1$, there exists a unique $x \le 0$ such that $1-x^2 = y$ (thus $f(x)=y$).
+If $y \le 1$, there exists a unique $x \le 0$ such that $1-x^2 = y$.
 \end{enumerate}
 From these two facts (together with (a) and (b)) we find that for any $y$ (whether $>1$ or $\le 1$) there is \emph{exactly} one $x$ such that $f(x)=y$.
 \end{example}
  
+\begin{exercise}
+Prove statements (a)$-$(d) in Example~\ref{example:functions:piecewise}.  For example, you can prove (a)  as follows. Given $y>1$, setting $x = \ln(y)$ gives $e^x = y$; furthermore if $x > \ln(y)$ (respectively  $x < \ln(y)$) then $e^x > y$ (respectively $e^x < y$).
+\end{exercise}
+
+
+
 \begin{exercise} \label{OntoCasesExer}
- Deine functions $f$ and~$g$ from~$\mathbb{R}$ to~$\mathbb{R}$ by:
+ Define function $f$  from~$\mathbb{R}$ to~$\mathbb{R}$ by:
 $$ f(x) = 
 \begin{cases}
 1/x & \mbox{if $x > 0$} \\
-x + 1 & \mbox{if $x \le 0$}
+x + 1 & \mbox{if $x \le 0$.}
 \end{cases} $$
-and
+Prove or disprove:
+\begin{multicols}{2}
+ \begin{enumerate}[(a)]
+ \item \label{OntoCasesExer-fOnto}
+ $f$ is onto;
+ \item \label{OntoCasesExer-fNot11}
+ $f$ is one-to-one;
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+\begin{exercise} \label{OntoCasesExer2}
+ Define function~$g$ from~$\mathbb{R}$ to~$\mathbb{R}$ by:
 $$ g(x) = 
 \begin{cases}
 1/x & \mbox{if $x > 0$} \\
 x - 1 & \mbox{if $x \le 0$}
  . \end{cases} $$
- Show:
+Prove or disprove:
+\begin{multicols}{2}
  \begin{enumerate}[(a)]
- \item \label{OntoCasesExer-fOnto}
- $f$ is onto;
  \item \label{OntoCasesExer-gNotOnto}
- $g$ is not onto;
- \item \label{OntoCasesExer-fNot11}
- $f$ is not one-to-one;
- and
+ $g$ is onto;
  \item \label{OntoCasesExer-g11} 
  $g$ is one-to-one.
 \end{enumerate}
+\end{multicols}
 \end{exercise}
+
+\begin{exercise} \label{OntoCasesExer2}
+ Define function~$h$ from~$\mathbb{R}$ to~$\mathbb{R}$ by:
+$$ h(x) = 
+\begin{cases}
+x^{3} & \mbox{if $|x| > 1$} \\
+x^{1/3} & \mbox{if $|x| \le 1$}
+ . \end{cases} $$
+Prove or disprove:
+\begin{multicols}{2}
+ \begin{enumerate}[(a)]
+ \item \label{OntoCasesExer-gNotOnto}
+ $h$ is onto;
+ \item \label{OntoCasesExer-g11} 
+ $h$ is one-to-one.
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+
 
 %\begin{exers} \label{OntoTheoreticalExers} \ 
 %\begin{enumerate}
@@ -1204,7 +1247,7 @@ x - 1 & \mbox{if $x \le 0$}
 %\end{exers}
 
 %CPT  There are no exercises in this section, and I'm not sure that we need it at this point
-%\subsection*{Image and pre-image}
+%\subsection{Image and pre-image}
 %
 %Given a function $f: A \rightarrow B$ and $x \in A$, we have referred to $f(x)$ as the \emph{image} of $x$. But suppose instead of considering how $f$ acts on one particular input $x \in A$, instead we consider what $f$ does to a %\emph{set} of inputs. Naturally, a set of inputs will produce a set of outputs.  The following definition formalizes this concept.
 %
@@ -1305,7 +1348,7 @@ x - 1 & \mbox{if $x \le 0$}
  
 \section{Bijections}
 
-\subsection*{Concept and definition}
+\subsection{Concept and definition}
 
 \medskip\noindent
 Some ``especially nice" functions are both one-to-one and onto.
@@ -1366,7 +1409,7 @@ Is the function $\var{Atomic Number} \colon \{ \mbox{ Chemical elements } \} \to
 \end{exercise}
 
 
-\subsection*{Proving that a function is a bijection}
+\subsection{Proving that a function is a bijection}
 
 Since a bijection  is both one-to-one and onto, a proof that a function is a bijection (usually) has two parts:
 	\begin{enumerate}
@@ -1476,11 +1519,11 @@ Show that if $a = 0$, then $f$ is \emph{not} a bijection.
 \begin{exercise} 
 For each function, either prove that it is a bijection, or prove that it is not.
 \begin{enumerate}[(a)]
-\item \label{modular}
+\item \label{modular9}
  $g \colon {\mathbb Z}_9 \to {\mathbb Z}_9$ defined by $g(x)= (x \odot 3) \oplus 3$ .
-\item \label{modular_m}
+\item \label{modular_m6}
  $g \colon {\mathbb Z}_7 \to {\mathbb Z}_7$ defined by $g(x) = (x \odot 4) \oplus 4 $ .
-\item \label{modular_m}
+\item \label{modular_m7}
  $g \colon {\mathbb Z}_{11} \to {\mathbb Z}_{11}$ defined by $g(x) =  x \odot 2$ .
 \item 
  $g \colon {\mathbb Z}_7 \to {\mathbb Z}_7$ defined by $g(x)= x \odot x$ .
@@ -1499,24 +1542,28 @@ For each function, either prove that it is a bijection, or prove that it is not.
  Define $f \colon \mathbb{N} \times \mathbb{N} \to \mathbb{N}$ by $f(m,n) = m^2 + n - 1$. 
  \begin{enumerate}[(a)]
  \item \label{NxNBijection-m2+n-onto}  
- Show that $f$ is onto. (\emph{Hint:} consider the values $f(1,i)$  for $i=1,2,3,\ldots$.)
+ Show that $f$ is onto.
+ \hyperref[sec:functions:hints]{(*Hint*)}
 % Show that these values include every possible natural number.)
  \item \label{NxNBijection-m2+n-not11}  
- Show that $f$ is \emph{not} one-to-one.  (\emph{Hint:} consider  the values $f(2,j)$ and $f(1,i)$.)
+ Show that $f$ is \emph{not} one-to-one.
+ \hyperref[sec:functions:hints]{(*Hint*)}
 %  for $j=1,2,3,\ldots$, and show that there exists an $i$ and $j$ such that  $f(1,i) = f(2,j)$).
 \item
 Is $f$ a bijection?
  \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:functions:NxN}
 Define $g \colon \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}$ by $g(m,n) = (m + n, m + 2n)$. 
  \begin{enumerate}[(a)]
  \item  \label{NxNBijection-mpmn-notonto1}  
-Show that $g$ is onto. (\emph{Hint}: Given any element $(i,j)$ of $\mathbb{Z} \times \mathbb{Z}$, set $i=m+n$ and $j=m+2n$ and solve for $m$ and $n$ in terms of $i$ and $j$.  
+Show that $g$ is onto.
+\hyperref[sec:functions:hints]{(*Hint*)} 
 %Then show that $g(m,n) = (i,j)$ for the $m$ and $n$ that you have found.
  \item  \label{NxNBijection-mpmn-111}  
-Show that $g$ is one-to-one. (\emph{Hint}:  Suppose that $g(m,n) = g(p,q)$. It follows that $(m + n, m + 2n) = (p + q, p + 2q)$. %This gives two separate equations:  $m+n=p+q$ and $m+2n = p+2q$. 
+Show that $g$ is one-to-one.
+\hyperref[sec:functions:hints]{(*Hint*)}
 % Use these two equations to conclude that $m=p$ and $n=q$.)
 \item
 Is $g$ a bijection?
@@ -1550,9 +1597,9 @@ Show that $f$ is a bijection.
 %\end{itemize}
 % \end{summary} 
   
- \section{Composition of Functions}
+ \section{Composition of functions}
  
- \subsection*{Concept and Definition}
+ \subsection{Concept and definition}
 
 %\begin{quote}
 %\it Nothing goes by luck in composition. It allows of no tricks.
@@ -1635,7 +1682,7 @@ To calculate the value of the function $g \compose f$ at the point~$a$, do \emph
 \end{warn}
 
 \begin{exercise}\label{exercise:functions:func_comp_assoc}
-Fill in the blanks of the following proof to show that function composition is associative.\index{composition!Associative property}
+Fill in the blanks of the following proof to show that function composition is associative.\index{Composition!Associative property}
 
 \begin{proof}
 Suppose $f: X \to Y$, $g: Y \to W$, and $h: W \to Z$.  Now suppose $x \in X$, $y \in Y$, $w \in W$, and $z \in Z$ such that 
@@ -1742,7 +1789,7 @@ Is it possible to define $g \compose f$? \emph{Explain} your answer.
 \end{exercise}
 
 
-\subsection*{Proofs involving function composition}
+\subsection{Proofs involving function composition}
 
 The properties of $f \compose g$ depend on the properties of $f$ and $g$, and vice versa. Usually these properties are proven by using the definition of composition, along with the definitions of other functional properties.  Here is one example.
 
@@ -1814,7 +1861,8 @@ The preceding exercises and examples can be used to prove the following:
  Suppose $f \colon A \to B$ and $g \colon B \to C$.
  \begin{enumerate}[(a)]
  \item \label{BijectionComposeExer-gf}
- Show that if $f$ and~$g$ are bijections, then $g \compose f$ is a bijection. (\emph{Hint}: You just need to show that $g \compose f$ is both one-to-one and onto. Use the previous exercises.)
+ Show that if $f$ and~$g$ are bijections, then $g \compose f$ is a bijection.
+ \hyperref[sec:functions:hints]{(*Hint*)}
  \item  \label{BijectionComposeExer-g}
 Show that if $f$ and $g\compose f$ are bijections, then $g$ is a bijection.
  \item \label{BijectionComposeExer-f}
@@ -1850,7 +1898,7 @@ Show that if $g$ and~$g \compose f$ are bijections, then $f$ is a bijection.
 
 
  
- \section{Inverse Functions}
+ \section{Inverse functions}
 
 %\begin{quote}
 %\it Backwards poets write inverse.
@@ -1860,7 +1908,7 @@ Show that if $g$ and~$g \compose f$ are bijections, then $f$ is a bijection.
 %Author unknown\break
 %\end{quote}
 
-\subsection*{Concept and Definition}
+\subsection{Concept and definition}
 
 \medskip\noindent
 The word "inverse" commonly means something that is ``backwards'' or ``opposite'' to something else.  So an inverse of a function should be  a function that is somehow backwards or opposite to the original  function.  
@@ -1884,10 +1932,10 @@ The following proof provides a restatement of this result that will be used in t
 
  \begin{example}\label{example:functions:xgyInverseExer}
  Suppose  that $f \colon X \to Y$
- and $g \colon Y \to X$, such that
+ and $g \colon Y \to X$ are functions such that
  $$ \forall x \in X, \forall y \in Y, \bigl(y = f(x) \eiff x = g(y) \bigr). $$
 Then the following statements are also true:
-  \begin{enumerate} \renewcommand{\theenumi}{\alph{enumi}}
+  \begin{enumerate}[(a)]
  \item  \label{x=g(y)->InverseExer-f(g(y))}
  $f \bigl( g(y) \bigr) = y$ for all $y \in Y$,
  and
@@ -1908,8 +1956,8 @@ $$f \bigl( g(y) \bigr) = f(x) = y, \forall y \in Y$$
 \end{enumerate}
 \end{proof}
 
-\begin{exercise}
-Prove part (b) of Example~\ref{example:functions:xgyInverseExer}
+\begin{exercise}\label{exercise:functions:88}
+Prove part (b) of Example~\ref{example:functions:xgyInverseExer}.
 \end{exercise}
  \end{example}
 
@@ -1959,11 +2007,11 @@ $f \colon \real^+ \to \real^+$ is defined by $f(x) = \sqrt{x+1} - 1$ and
  \end{enumerate}
  \end{exercise}
    
-\subsection*{Which functions have inverses?}
+\subsection{Which functions have inverses?}
 
-It turns out that most functions do \emph{not} have an inverse.  
+It turns out that most functions do \emph{not} have inverses.  
 
-\begin{exercise}
+\begin{exercise}\label{exercise:functions:92}
 Which of the functions depicted  in Figure~\ref{arrowontofig} have inverses?
  \end{exercise}
 
@@ -2025,7 +2073,7 @@ This is simply a restatement of the fact that
 For any set~$A$, define the \terminology{identity map} $\Id_A \colon A \to A$ by $\Id_A(a) = a$ for every $a \in A$.
 \end{defn}\index{Identity map} 
 
-\begin{exercise}
+\begin{exercise}\label{exercise:functions:98}
 \begin{enumerate}[(a)]
 \item
 Show that $\Id_A$ is invertible
@@ -2045,6 +2093,8 @@ $$ \mbox{$f \compose g = \Id_Y$ \quad and \quad $g \compose f = \Id_X$} .$$
 Suppose $f \colon X \to Y$ is a bijection. Show that the inverse of~$f^{-1}$ is~$f$. That is, $(f^{-1})^{-1} = f$.
 \end{enumerate}
 \end{exercise}
+
+
 
 % CPT put this back in if we put in pre-image section
 %\begin{warn}

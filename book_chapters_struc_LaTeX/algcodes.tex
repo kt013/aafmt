@@ -7,7 +7,7 @@
 %%%%(c)  See the file COPYING.txt for copying conditions
 %%%%(c)
 %%%%(c)
-\chap{Algebraic Coding Theory}{algcodes}
+\chap{Algebraic Coding}{algcodes}
  
 Coding theory is an application of algebra that has become
 increasingly important over the last several decades. When we transmit
@@ -19,7 +19,7 @@ arises in many areas of communications, including radio, telephone,
 television, computer communications, and even compact disc player
 technology. Probability, combinatorics, group theory, linear algebra,
 and polynomial rings over finite fields all play important roles in
-coding theory.  
+coding theory. \footnote{Thanks to Tom Judson for material used in this chapter.} 
  
  
  
@@ -205,11 +205,14 @@ the number of bits by which each received 3-tuple differs from each
 original codeword. 
 \end{example}
 
-\subsection*{Maximum-Likelihood Decoding\footnote{This section
-requires a knowledge of probability, but can be
-skipped without loss of continuity.}}
+\subsection{Maximum-Likelihood Decoding}
  
- 
+\begin{quote}
+\emph{This section
+requires a knowledge of probability, It can be
+skipped without loss of continuity.} 
+\end{quote}
+
 The coding scheme presented in Example~\ref{example:algcodes:bit3} is not a complete solution to
 the problem because it does not account for the possibility of
 multiple errors. For example, either a (000) or a (111) could be sent
@@ -372,7 +375,7 @@ probability of exactly two errors occurring?  Repeat this problem for
 $p = 0.0001$.
 \end{exercise}
  
-\subsection*{Block Codes}
+\subsection{Block Codes}
  
 In Figure~\ref{encoding} we illustrated the case where $m$-digit message words 
 are encoded into $n$-digit codewords. This is certainly not the only scheme possible. For instance, we could encode different message words with codewords of differing sizes. Alternatively, we could use some kind of scheme which doesn't break the message into words at all. Such coding schemes have extremely important practical uses. Nonetheless, we will focus on the simple case where message words all have equal size, and all codewords also have equal size. We shall see shortly that group
@@ -381,7 +384,7 @@ theory  can be used in this case to design  codes with ``good'' properties.
 We begin as usual with a definition.
 
 \begin{defn}\label{definition:algcodes:BlockCode}
-a $(n, m)$-\bfii{ block code\/} \index{Block code} is a code that divides information into $m$-bit message words, and encodes each message word as a $n$-bit codeword. In order to accomplish this, the specification of an $(n,
+a $(n, m)$ \bfii{ block code\/} \index{Block code} is a code that divides information into $m$-bit message words, and encodes each message word as a $n$-bit codeword. In order to accomplish this, the specification of an $(n,
 m)$-block code must include a \emph{one-to-one} \bfii{ encoding function} \index{Encoding function}
 \[
 E:{\Bbb Z}^{m}_{2} \rightarrow {\Bbb Z}^{n}_{2}
@@ -523,7 +526,7 @@ $(1011)$
 
 \begin{exercise}\label{exercise:algcodes:MinDist}
 What is the minimum distance for each of the following 
-codes? 
+block codes? 
 \begin{enumerate}
  
  \bf\item\rm
@@ -543,7 +546,7 @@ $(1001001) \; (1000011) \; (0001111) \; (0000000)$
 \end{enumerate}
  \end{exercise}
  
-The weights in a particular code are usually much easier to compute
+The weights in a particular block code are usually much easier to compute
 than the Hamming distances between all codewords in the code. As we shall see later, if a
 code is set up carefully then we can use this fact to our advantage.
  
@@ -553,7 +556,7 @@ In order to prove statements about Hamming distance and weight, it is useful to 
 Let ${\bold x} = (x_1, \ldots, x_n)$ and  ${\bold y} = (y_1, \ldots, y_n)$ be binary $n$-tuples. Then the Hamming distance $d({\bold x},{\bold y})$ may be computed by the following formula:
 \[d({\bold x},{\bold y}) = (x_1\oplus y_1) + \ldots (x_n\oplus y_n) ), \]
 where ``$\oplus$'' denotes addition mod 2 and ``+'' denotes ordinary addition. Using summation notation, the formula can also be written
-\[d({\bold x},{\bold y} = \sum_{j=1}^n x_j\oplus y_j.\]
+\[d({\bold x},{\bold y}) = \sum_{j=1}^n x_j\oplus y_j.\]
 \end{prop}
 
 \begin{proof}
@@ -598,7 +601,7 @@ z}, {\bold y})$.
 \end{enumerate}
 \end{prop}
 
-In higher mathematics, any function that satisfies the properties listed in Proposition~\ref{proposition:algcodes:Metric} is called a \bfii{ metric}.\index{metric!definition}
+In higher mathematics, any function that satisfies the properties listed in Proposition~\ref{proposition:algcodes:Metric} is called a \bfii{ metric}.\index{Metric!definition}
 
  \begin{exercise}
  Using the formula in Proposition~\ref{proposition:algcodes:HammingDistFormula}, prove the statements in Proposition~\ref{proposition:algcodes:Metric}.
@@ -730,7 +733,7 @@ What are the error detection and correction capabilities for the codes given in 
 \end{exercise} 
  
 \begin{exercise}
-Suppose that a linear code $C$ has a minimum weight of 7. What are the
+Suppose that a  block code $C$ has a minimum weight of 7. What are the
 error-detection and error-correction capabilities of $C$?
 \end{exercise}
  
@@ -739,7 +742,7 @@ Construct a $(5,2)$-block code. Discuss the error-detection and
 error-correction capabilities of your code.
  \end{exercise}
  
-\section{Group Codes and Linear Codes}
+\section{Group codes and linear codes}
 
 So far in this book, we have tried to relate everything we've talked about to groups. Codes are no exception to this rule!  In fact, we know that all codewords of length $n$ are elements of ${\Bbb Z}_2^n$, which in fact turns out to be a group. To show this, we must first define a group operation:
 
@@ -770,7 +773,7 @@ If ${\bold x} \in {\Bbb Z}_2^n$, then what is ${\bold x} + {\bold x}$?
 \item
 Explain why the above results show that ${\Bbb Z}_2^n$ is a group under the operation +.
 \item
-Is the group Abelian? \emph{Prove} your answer.
+Is the group abelian? \emph{Prove} your answer.
 \end{enumerate}
 \end{exercise} 
 
@@ -794,11 +797,11 @@ $d({\bold x},{\bold y}) = d({\bold x}+{\bold z},{\bold y}+{\bold z})$
 We have already shown (a) in the definition of weight (Definition~\ref{defn:algcodes:weight}).
 Parts (b) and (c) are for you to prove:
 
-\begin{exercise}
+\begin{exercise}\label{exercise:algcodes:hamming}
 \begin{enumerate}[(a)]
 \item
 Prove part (b) of Proposition~\ref{proposition:algcodes:norm} by using part (a) of Proposition~\ref{proposition:algcodes:norm} and the formula in Proposition~\ref{proposition:algcodes:HammingDistFormula}.
-\item Prove part (c) (\emph{Hint:} apply part (b) to both sides of the equation, and show they are equal.)  
+\item Prove part (c) \hyperref[sec:algcodes:hints]{(*Hint*)} 
 \end{enumerate}
 \end{exercise}
 The codes we discussed in Section~\ref{section:algcodes:1} were all subsets of ${\Bbb Z}_2^n$, for some positive integer $n$. We shall now see that codes that are also \emph{subgroups} have special properties that enable efficient encoding and decoding. Accordingly, we define:
@@ -812,11 +815,11 @@ Z}_2^n$.
  
  To check that a set of codewords is a group code, we need only verify closure under addition. It turns out that identity and inverse are guaranteed by closure:
 
-\begin{exercise}
+\begin{exercise}\label{exercise:algcodes:ctns0}
 \begin{enumerate}[(a)]
 \item
 Show that a set of codewords in
-${\Bbb Z}_2^n$ which is closed under the operation + must also contain ${\bold 0}$ (\emph{Hint:} add any codeword to itself).
+${\Bbb Z}_2^n$ which is closed under the operation + must also contain ${\bold 0}$ 
 \item
 Show that any set of codewords always includes the inverses of those codewords.
 \item
@@ -880,9 +883,9 @@ d_{\min} &= & \min \{ d({\bold x},{\bold y}) : {\bold x}
  Proposition~\ref{proposition:algcodes:GroupCodeMinDist}  \emph{only} applies to \emph{group codes}, and not to codes in general.
  \end{warn}
  
-\subsection*{Linear Codes}
+\section{Linear Block Codes}
   
-Using Proposition~\ref{proposition:algcodes:GroupCodeMinDist}, it is now a simple matter to find the error detection and correction capabilities of a group code. However, so far we don't have a good way of creating group codes. In this section, we will use some techniques from linear algebra to remedy this situation.\footnote{To understand this section, readers should familiar with basic notions of linear algebra such as vectors, linear combination, matrix multiplication, and transpose. Readers may find a brief refresher on matrix multiplication in Chapter~\ref{Sigma}.}
+Using Proposition~\ref{proposition:algcodes:GroupCodeMinDist}, it is now a simple matter to find the error detection and correction capabilities of a group code. However, so far we don't have a good method  for creating group codes. In this section, we will use some techniques from linear algebra to give one such method. This method is widely used in digital information processing: for instance, in CD's DVD's and satellite communications.\footnote{To understand this section, readers should familiar with basic notions of linear algebra such as vectors, linear combination, matrix multiplication, and transpose. Readers may find a brief refresher on matrix multiplication in Chapter~\ref{Sigma}.}
  
  \begin{defn}
 The \bfii{ inner product\/}\index{Inner product} of two binary
@@ -1166,12 +1169,11 @@ $(1,0,1,0,1,0)^{\rm T}$
 
 
  
-\section{Parity-Check and Generator Matrices}
+\section{Code words and encoding in block linear codes}
  
- \subsection*{Canonical Parity-check matrices}
- 
- So far we have only looked at the code words in linear codes -- we haven't considered encoding and decoding. One of the great advantages of linear codes is that they enable  very
-efficient methods of encoding and decoding messages. It's easiest to see how this works in the case where $H$ has a special form, which we will now define.
+We have shown how to define a set of codewords for a block linear code. But so far we don't understand too well what code words look like, and we haven't considered encoding and decoding. One of the great advantages of linear codes is that they enable  very efficient methods of encoding and decoding.  It's easiest to see how this works in the case where $H$ has a special form, which we will now define.
+
+\subsection{Canonical Parity-check matrices}
 
 \begin{defn}
   Suppose that $H$ is an $k \times n$ matrix with entries in
@@ -1204,12 +1206,12 @@ and $I_k$ is the $k \times k$ identity matrix
 \end{defn}
 
 \begin{exercise}
-Oly one of the matrices in Exercise~\ref{exercise:algcodes:LinearCodes} is a canonical parity-check matrix. Which one is it?
+Only one of the matrices in Exercise~\ref{exercise:algcodes:LinearCodes} is a canonical parity-check matrix. Which one is it?
 \end{exercise}
 
 Readers who have had a class in linear algebra may notice the similarity between canonical parity-check matrices and reduced row-echelon form. The only difference is that reduced row-echelon matrices have the identity submatrix on the left, while the canonical parity-check matrix has it on the right.
 
-In the following example, we will explore the relation between the canonical parity-check matrix $H$ and the corresponding standard generator matrix $G$.
+In the following example, we will explore the relation between the canonical parity-check matrix $H$ and the structure of the codewords.
 % Our goal will be to show that $G {\bold x} = {\bold y}$ if and only if
 % $H{\bold y} = {\bold 0}$.  Given a message block\index{Message block} ${\bold x}$ to be
 % encoded, $G$ will allow us to quickly encode it into a linear
@@ -1316,7 +1318,7 @@ It is possible to implement the odd parity-check code using a parity-check matri
 \end{exercise}
 
  
- \subsection*{Standard Generator Matrices}
+ \subsection{Standard Generator Matrices}
  
 We now have a relatively straightforward way to generate the codewords in Null($H$), if $H$ is a canonical parity-check matrix. But there's an even easier way -- and one that gives us an encoding function in the bargain. But first, another definition: 
 
@@ -1608,7 +1610,7 @@ A
 so that ${\bold y}$ is in $C$.
 \end{proof}
  
- \subsection*{Error detection and correction}
+ \subsection{Error detection and correction}
  
 In this section, we will show how to  obtain the error correction and detection properties of a code directly from its matrix $H$. First, we will look at detection and correction of single errors.
 
@@ -1778,7 +1780,7 @@ It is necessary that the columns ${\bold 0}, {\bold e}_1, \ldots,
 information if we are still to maintain the ability not only to detect
 but also to correct single errors. 
  
- \begin{exercise}
+ \begin{exercise}\label{exercise:algcodes:code_dsn}
  Suppose we want to design a code that encodes each of the 128 ASCII characters as a single codeword, such that the code also can detect and/or correct single-bit errors. We also want codewords to be as short as possible to speed up transmission. 
  \begin{enumerate}[(a)]
  \item
@@ -1786,7 +1788,8 @@ but also to correct single errors.
  \item
  In order to \emph{detect} single-bit errors, what is the smallest possible codeword size?
 \item
- In order to \emph{correct} single-bit errors, what is the smallest possible codeword size? (\emph{Hint}: use the  paragraph just above this exercise.)
+ In order to \emph{correct} single-bit errors, what is the smallest possible codeword size?  \hyperref[sec:algcodes:hints]{(*Hint*)}
+
 \item
 Redo parts (a), (b), (c) if we want instead to encode the extended ASCII character set of 256 characters.
 \end{enumerate}
@@ -1805,12 +1808,16 @@ What is the smallest possible codeword size for a single error-correcting code w
  
  
 We are now at the stage where we are able to generate linear codes
-that detect and correct errors fairly easily, but it is still a 
-time-consuming process to decode a received $n$-tuple and determine which
-is the closest codeword, because the received $n$-tuple must be compared 
-to each possible codeword to determine the proper decoding.
-This can be a serious impediment if the code is very large.
+that detect and correct errors fairly easily. However, we haven't yet seen  a good way 
+ to decode a received $n$-tuple that has some errors. The only thing we can do so far is compare  the received $n$-tuple, 
+to each possible codeword, and find the closest one.
+If the code is large, this may be very time-consuming. 
+
+In the following subsections, we will explore two different decoding methods which are much efficient and practical.
  
+\subsection{Decoding using syndromes}
+
+The following example introduces the notion of \emph{syndrome}.
  
 \begin{example}\label{example:algcodes:Syndrome}
 Given the binary matrix
@@ -1942,16 +1949,16 @@ errors.
 \begin{enumerate}
  
  \bf\item\rm 
-An error in the first bit
+An error in the first bit.
  
  \bf\item\rm 
-An error in the third bit
+An error in the third bit.
  
  \bf\item\rm 
-An error in the last bit
+An error in the last bit.
  
  \bf\item\rm 
-Errors in the third and fourth bits
+Errors in the third and fourth bits.
  
 \end{enumerate}
  \end{exercise}
@@ -1983,19 +1990,20 @@ List all possible syndromes for the codes associated with each the parity
 matrices in Exercise~\ref{exercise:algcodes:StandardGenerator}. 
 \end{exercise} 
  
-\subsection*{Coset Decoding}
+\subsection{Coset Decoding}
  
  
-We can use group theory to obtain another way of decoding messages.  A
-linear code $C$ is a subgroup of ${\Bbb Z}_2^n$. \bfii{
-Coset\/}\index{Coset decoding} or \bfii{ standard
-decoding\/}\index{Standard decoding} uses the cosets \index{Coset!coset decoding}of $C$ in ${\Bbb
-Z}_2^n$ to implement maximum-likelihood decoding\index{Maximum-likelihood decoding}. Suppose that $C$ is
-an $(n,m)$-linear code. A coset of $C$ in ${\Bbb Z}_2^n$ is written in
-the form ${\bold x} + C$, where ${\bold x} \in {\Bbb Z}_2^n$. By
-Lagrange's Theorem, there are $2^{n-m}$ distinct cosets of $C$ in 
-${\Bbb Z}_2^n$.
- 
+We can use group theory to obtain another way of decoding messages that makes use of \emph{cosets}. (If you've 
+forgotten what cosets are, you may look back at Chapter~\ref{cosets} to refresh your memory.) 
+
+Since the
+linear code $C$ is a subgroup of ${\Bbb Z}_2^n$, it follows that ${\Bbb Z}_2^n$ 
+may be partitioned into cosets of $C$. 
+In particular,  if $C$ is an $(n,m)$-linear code, then a coset of $C$ in ${\Bbb Z}_2^n$ is written in
+the form ${\bold x} + C$, where ${\bold x} \in {\Bbb Z}_2^n$. By Lagrange's Theorem, 
+there are $2^{n-m}$ distinct cosets of $C$ in ${\Bbb Z}_2^n$. The following example shows how 
+this works in a particular case:
+
  
 \begin{example}\label{example:algcodes:SyndromeExample}
 Let $C$ be the $(5,3)$-linear code given by the parity-check matrix
@@ -2042,8 +2050,7 @@ order $2^2 =4$.  These cosets are listed in Table~\ref{table:algcodes:cosets}.
 \end{table}
  
  
-Our task is to find out how knowing the cosets might help us to 
-decode a
+Let's see how knowing the cosets helps us to decode a
 message. Suppose that ${\bold x}$ was the original codeword sent and
 that ${\bold r}$ is the \mbox{$n$-tuple received}. If ${\bold e}$ is the
 transmission error, then ${\bold r} = {\bold e} + {\bold x}$ or,
@@ -2069,11 +2076,9 @@ hence, the originally transmitted codeword must have been $(01101) =
  
 A potential problem with this method of decoding is that we might have
 to examine every coset for the received codeword. The following
-proposition gives a method of implementing coset decoding. It states
-that we can associate a syndrome with each coset; hence, we can make a
-table that designates a coset leader corresponding to each syndrome \index{Coset!as a syndrome}. Such
-a list is called a \bfii{ decoding table}\index{Decoding table}.
- 
+proposition shows us that we can avoid this because the syndrome
+that we  calculate from the received codeword points to exactly one coset:
+
  \begin{prop}
 Let $C$ be an $(n,k)$-linear code given by the matrix $H$ and suppose
 that ${\bold x}$ and ${\bold y}$ are in ${\Bbb Z}_2^n$. Then ${\bold
@@ -2088,7 +2093,19 @@ $C$ exactly when ${\bold x} - {\bold y} \in C$; however, this is
 equivalent to $H({\bold x} - {\bold y}) = 0$ or $H {\bold x} = H
 {\bold y}$. 
 \end{proof}
- 
+
+This proposition gives us a three-step process for finding decoding:
+\begin{enumerate}[(a)]
+\item
+Compute the syndrome for the received codeword;
+\item
+Find the coset leader of the coset associated with this syndrome;
+\item
+Subtract the coset leader from the received codeword to find the most likely transmitted codeword.
+\end{enumerate}
+
+To facilitate step (b) of this process, we may make a lookup table that displays the coset leader associated
+with each syndrome. Such a table is called a \bfii{ decoding table}\index{Decoding table}. 
  
 \begin{example}
 Table~\ref{table:algcodes:DecodingTable} is a decoding table for the code $C$ given in Example~\ref{example:algcodes:SyndromeExample}. If
@@ -2239,6 +2256,120 @@ possible.
 \end{exercise}
  
 
+\section{Additional algebraic coding exercises}\label{AlgCodeEx}
+ 
+
+\begin{exercise}\label{exercise:algcodes:lincode0}  
+Let $C$ be a linear code. Show that either the $i$th coordinates in the
+codewords of $C$ are all zeros or exactly half of them are zeros. \hyperref[sec:algcodes:hints]{(*Hint*)}
+\end{exercise} 
+
+\begin{exercise}\label{exercise:algcodes:linlin}
+Show that the codewords of even weight in a linear code $C$ are also a
+linear code.  \hyperref[sec:algcodes:hints]{(*Hint*)}
+\end{exercise}	 
+
+
+\begin{exercise}\label{exercise:algcodes:lineven}
+Let $C$ be a linear code. Show that either every codeword has even
+weight or exactly half of the codewords have even weight.  \hyperref[sec:algcodes:hints]{(*Hint*)}
+\end{exercise} 
+ 
+ 
+\begin{exercise}
+Let $C$ be an $(n,k)$-linear code. Define the \bfii{
+dual\/}\index{Code!dual} or \bfii{ Orthogonal code\/}\index{Code!orthogonal} of $C$  to be 
+\[
+C^\perp = \{ {\bold x} \in {\Bbb Z}_2^n :  {\bold x} \cdot {\bold y} =
+0 \mbox{ for all } {\bold y} \in C \}. 
+\]
+
+\begin{enumerate}[(a)]
+\item
+Find the dual code of the linear code $C$ where $C$ is given by the
+matrix 
+\[
+\left(
+\begin{array}{ccccc}
+1 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+1 & 0 & 0 & 1 & 0
+\end{array}
+\right).
+\]
+ 
+\item
+Show that $C^\perp$ is an $(n, n-k)$-linear code.
+ 
+\item
+Find the standard generator and parity-check matrices of $C$ and
+$C^\perp$. What happens in general? Prove your conjecture. 
+\end{enumerate}
+
+ \end{exercise}
+ 
+\begin{exercise}
+Let $H$ be an $m \times n$ matrix over ${\Bbb Z}_2$, where the $i$th
+column is the number $i$ written in binary with $m$ bits. The null
+space of such a matrix is called a \bfii{ Hamming
+code}\index{Code!Hamming!definition of}\index{Hamming code}. 
+
+\begin{enumerate}[(a)]
+\item
+Show  that the matrix
+\[
+H =
+\left(
+\begin{array}{cccccc}
+0 & 0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 & 0
+\end{array}
+\right)
+\]
+generates a Hamming code. What are the error-correcting properties of
+a Hamming code? 
+ 
+\item
+The column corresponding to the syndrome also marks the bit that was
+in error; that is, the $i$th column of the matrix is $i$ written as a
+binary number, and the syndrome 
+immediately tells us which bit is in error. If the received word is 
+$(101011)$, compute the syndrome.  In
+which bit did the error occur in this case, and what codeword was
+originally transmitted?
+ 
+\item
+Give a binary matrix $H$ for the Hamming code with six information
+positions and four check positions. What are the check positions and
+what are the information positions? Encode the messages $(101101)$ and
+$(001001)$. Decode the received words $(0010000101)$ and
+$(0000101100)$.  What are the possible syndromes for this code?
+ 
+\item
+What is the number of check bits and the number of information bits in an
+$(m,n)$-block Hamming code? Give both an upper and a lower bound on the
+number of information bits in terms of the number of check bits.
+Hamming codes having the maximum possible number of information bits
+with $k$ check bits are called \bfii{
+perfect}\index{Code!Hamming!perfect}. Every possible syndrome except
+${\bold 0}$ occurs as a column. If the number of information bits is
+less than the maximum, then the code is called \bfii{
+shortened}\index{Code!Hamming!shortened}. In this case, give an example
+showing that some syndromes can represent multiple errors.  
+ 
+\end{enumerate}
+ \end{exercise}
+
+\begin{exercise}
+Write a program to implement a $(16, 12)$-linear code.  Your program
+should be able to encode and decode messages using coset decoding.
+Once your program is written, write a program to simulate a binary
+symmetric channel with transmission noise.  Compare the results of
+your simulation with the theoretically predicted error probability. 
+\end{exercise}
+  
+
 \histhead
  
  
@@ -2261,141 +2392,7 @@ codes, which are heavily dependent on algebraic geometry.
 \histbox
 } 
  
- \markright{EXERCISES}
-\section*{Additional Exercises}
-\exrule
- 
-
-{\small
-\begin{enumerate}
- 
-  
- 
- 
- 
-%**********************Theory
- 
- 
-  
-\bf\item\rm
-Let $C$ be a linear code. Show that either the $i$th coordinates in the
-codewords of $C$ are all zeros or exactly half of them are zeros. (\emph{Hint}: Show that the codewords in $C$ that have $i$'th coordinate equal to 0 form a subgroup of $C$, and consider the cosets of this subgroup in $C$.
- 
- \bf\item\rm
-Show that the codewords of even weight in a linear code $C$ are also a
-linear code. (\emph{Hint:} What row should you add to the parity check matrix?)
-	 
-\bf\item\rm
-Let $C$ be a linear code. Show that either every codeword has even
-weight or exactly half of the codewords have even weight. (\emph{Hint}: Use the previous exercise to show the codewords of even weight in $C$ form a subgroup. Then consider the cosets of this subgroup in $C$).
- 
- 
- 
-%***************Theory
- 
- 
- 
-\bf\item\rm
-Let $C$ be an $(n,k)$-linear code. Define the \bfii{
-dual\/}\index{Code!dual} or \bfii{ Orthogonal code\/}\index{Code!orthogonal} of $C$  to be 
-\[
-C^\perp = \{ {\bold x} \in {\Bbb Z}_2^n :  {\bold x} \cdot {\bold y} =
-0 \mbox{ for all } {\bold y} \in C \}. 
-\]
-\begin{enumerate}
- 
- \bf\item\rm
-Find the dual code of the linear code $C$ where $C$ is given by the
-matrix 
-\[
-\left(
-\begin{array}{ccccc}
-1 & 1 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 1 \\
-1 & 0 & 0 & 1 & 0
-\end{array}
-\right).
-\]
- 
- \bf\item\rm
-Show that $C^\perp$ is an $(n, n-k)$-linear code.
- 
- \bf\item\rm
-Find the standard generator and parity-check matrices of $C$ and
-$C^\perp$. What happens in general? Prove your conjecture. 
- 
-\end{enumerate}
- 
- 
-\bf\item\rm
-Let $H$ be an $m \times n$ matrix over ${\Bbb Z}_2$, where the $i$th
-column is the number $i$ written in binary with $m$ bits. The null
-space of such a matrix is called a \bfii{ Hamming
-code}\index{Code!Hamming!definition of}\index{Hamming code}. 
-\begin{enumerate}
- 
- \bf\item\rm
-Show  that the matrix
-\[
-H =
-\left(
-\begin{array}{cccccc}
-0 & 0 & 0 & 1 & 1 & 1 \\
-0 & 1 & 1 & 0 & 0 & 1 \\
-1 & 0 & 1 & 0 & 1 & 0
-\end{array}
-\right)
-\]
-generates a Hamming code. What are the error-correcting properties of
-a Hamming code? 
- 
- \bf\item\rm
-The column corresponding to the syndrome also marks the bit that was
-in error; that is, the $i$th column of the matrix is $i$ written as a
-binary number, and the syndrome 
-immediately tells us which bit is in error. If the received word is 
-$(101011)$, compute the syndrome.  In
-which bit did the error occur in this case, and what codeword was
-originally transmitted?
- 
- \bf\item\rm
-Give a binary matrix $H$ for the Hamming code with six information
-positions and four check positions. What are the check positions and
-what are the information positions? Encode the messages $(101101)$ and
-$(001001)$. Decode the received words $(0010000101)$ and
-$(0000101100)$.  What are the possible syndromes for this code?
- 
- \bf\item\rm
-What is the number of check bits and the number of information bits in an
-$(m,n)$-block Hamming code? Give both an upper and a lower bound on the
-number of information bits in terms of the number of check bits.
-Hamming codes having the maximum possible number of information bits
-with $k$ check bits are called \bfii{
-perfect}\index{Code!Hamming!perfect}. Every possible syndrome except
-${\bold 0}$ occurs as a column. If the number of information bits is
-less than the maximum, then the code is called \bfii{
-shortened}\index{Code!Hamming!shortened}. In this case, give an example
-showing that some syndromes can represent multiple errors.  
- 
-\end{enumerate}
- 
- 
-\end{enumerate}
- 
- 
-\subsection*{Programming Exercises}
- 
- 
-{\small
-Write a program to implement a $(16, 12)$-linear code.  Your program
-should be able to encode and decode messages using coset decoding.
-Once your program is written, write a program to simulate a binary
-symmetric channel with transmission noise.  Compare the results of
-your simulation with the theoretically predicted error probability. 
-}
- 
- 
-\subsection*{References and Suggested Readings}
+\section{References and Suggested Readings}
  
 {\small
 \begin{itemize}

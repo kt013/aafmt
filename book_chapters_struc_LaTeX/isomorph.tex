@@ -11,7 +11,7 @@
 
 \section{Preliminary examples}\label{isomorph_defn_ex}
 
-Several times in the book so far we have run into the idea of isomorphic groups.  For instance:
+Several times in the book so far we have run into the idea of isomorphic groups.\footnote{Thanks to Tom Judson for material used in this chapter.}  For instance:
 
 \begin{example}\label{example:isomorph:chap1_ex}
 In Chapter 1 we pointed out that ${\mathbb C}$ under complex addition and ${\mathbb R} \times {\mathbb R}$ under pairwise addition act exactly the same. In order to introduce the new concepts of this chapter, let's go over this again. 
@@ -22,7 +22,7 @@ If we add two complex numbers and ``translate'' the result to an ordered pair, w
 \[
 z + w = (a + bi) + (c + di)  \longrightarrow (a+b,c+d).
 \]
-On the other hand, if map $z$ and $w$ separately we get:
+On the other hand, if we map $z$ and $w$ separately we get:
 \[
 z = a + bi  \longrightarrow (a,b);\qquad w = c+di  \longrightarrow (c,d),
 \]
@@ -33,7 +33,7 @@ and then if we add the resulting  coordinate pairs, we obtain
 \end{align*}
 which is the same as before. So we get the same result whether we add the complex numbers or their corresponding ordered pairs.  
 
-What we've shown  is illustrated in Figure~\ref{fig:groups:CommDiag}. If we start with the complex numbers $z,w$, we get the same result whether we follow first the arrow to the right (``translation'' to ${\mathbb R} \times {\mathbb R}$) and then go down (addition in ${\mathbb R} \times {\mathbb R}$), or whether we follow first the down arrow (addition in ${\mathbb C}$) and then go right (``translation'' to ${\mathbb R} \times {\mathbb R}$).\footnote{This type of diagram is called a \emph{commutative diagram}\index{commutative diagram}, and is widely used in abstract algebra.} The ``translation map'' we are using is the function 
+What we've shown  is illustrated in Figure~\ref{fig:groups:CommDiag}. If we start with the complex numbers $z,w$, we get the same result whether we follow first the arrow to the right (``translation'' to ${\mathbb R} \times {\mathbb R}$) and then go down (addition in ${\mathbb R} \times {\mathbb R}$), or whether we follow first the down arrow (addition in ${\mathbb C}$) and then go right (``translation'' to ${\mathbb R} \times {\mathbb R}$).\footnote{This type of diagram is called a \emph{commutative diagram}\index{Commutative diagram}, and is widely used in abstract algebra.} The ``translation map'' we are using is the function 
 \begin{center}
 $f : {\mathbb C} \longrightarrow {\mathbb R} \times {\mathbb R}$ such that $f(a + bi) = (a,b)$.
 \end{center}
@@ -67,8 +67,9 @@ Draw a diagram similar to Figure~\ref{fig:groups:CommDiag}  for the function $g:
 \end{exercise} 
 
 \begin{exercise}\label{exercise:isomorph:iso_4}
-Prove that the function $h(a + bi) = (a+2, b+2)$ is {\bf not} an isomorphism from ${\mathbb C}$ to  ${\mathbb R} \times {\mathbb R}$ ({\it Hint:} show a counterexample where the sum of two complex numbers is not the same as the sum of their corresponding ordered pairs)
-\end{exercise}
+Prove that the function $h(a + bi) = (a+2, b+2)$ is {\bf not} an isomorphism from ${\mathbb C}$ to  ${\mathbb R} \times {\mathbb R}$.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
+ \end{exercise}
 
 
 %With that in mind, we have a couple of questions.  Could  ${\mathbb C}$ be isomorphic to ${\mathbb Z} \times {\mathbb Z}$?  No.  Certainly it works right to left:  if we replace any two integer-ordered pairs with their corresponding complex numbers, the sum would be equivalent both ways.  But it does not work left to right.  There are complex numbers, such as $2+1.5i$, that have no integer equivalent; another way of saying this is to say that there are more complex numbers than their are integer-ordered pairs (even though the cardinality of both sets is infinity).  So there would be some complex numbers that we couldn't 
@@ -117,7 +118,7 @@ i       &$i$ & -1 & $-i$ & 1  \\
 \end{table}
 
 \begin{table}[H]
-\caption{Cayley table for the $R_4$}
+\caption{Cayley table for $R_4$}
 \label{4_rotations_table}
 {\small
 \begin{center}
@@ -191,30 +192,30 @@ So ${\mathbb Z_4}$, $R_4$, and $\langle i \rangle$ are all isomorphic to each ot
  Determine whether each of the following functions are isomorphisms between the groups in Example~\ref{example:isomorph:sym_ex}. Justify your answers. 
  \begin{enumerate}[(a)]
  \item
- $ \phi: {\mathbb Z_4}  \longrightarrow \langle i \rangle$ defined by 
+ $ f: {\mathbb Z_4}  \longrightarrow \langle i \rangle$ defined by 
 \[  
-\phi(0) = 1,~~
- \phi(1) = -1,~~
- \phi(2) = i,~~
- \phi(3) = -i.
+f(0) = 1,~~
+ f(1) = -1,~~
+ f(2) = i,~~
+ f(3) = -i.
 \]
  
  \item
-$ \theta: {\mathbb Z_4}  \longrightarrow R_4$ defined by 
+$ g: {\mathbb Z_4}  \longrightarrow R_4$ defined by 
 \[ 
-\theta(0) = \var{id},~~
- \theta(1) = r_{270},~~
- \theta(2) = r_{90} ,~~
- \theta(3) = r_{180}. 
+g(0) = \var{id},~~
+ g(1) = r_{270},~~
+ g(2) = r_{90} ,~~
+ g(3) = r_{180}. 
  \]
 
  \item
- $ \omega: \langle i \rangle \longrightarrow R_4$ defined by 
+ $ h: \langle i \rangle \longrightarrow R_4$ defined by 
 \[ 
- \omega(1) = \var{id},~~ 
-\omega(i) = r_{270},~~
-\omega(-1) = r_{180},~~
- \omega(-i) = r_{90}.
+ h(1) = \var{id},~~ 
+h(i) = r_{270},~~
+h(-1) = r_{180},~~
+ h(-i) = r_{90}.
 \]
  \end{enumerate}
  \end{exercise}
@@ -224,7 +225,7 @@ $ \theta: {\mathbb Z_4}  \longrightarrow R_4$ defined by
  \end{exercise}
   
 \section{Formal definition and basic properties of isomorphisms}
-So let's buckle down and get mathematical. We start with a rigorous definition of isomorphic groups:
+So let's buckle down and get mathematical. We start with a rigorous definition of isomorphism:
 
 \begin{defn}\label{isomorph_defn}
 Two groups $(G, \cdot)$ and $(H, \circ)$ are \bfii{ isomorphic\/}\index{Group!isomorphic} if there exists a bijection $\phi : G \rightarrow H$ such that the group operation is preserved;  that~is, 
@@ -234,8 +235,12 @@ Two groups $(G, \cdot)$ and $(H, \circ)$ are \bfii{ isomorphic\/}\index{Group!is
 for all $a$ and $b$ in $G$. If $G$ is isomorphic to $H$, we write $G \cong H$\label{noteisomorph}. The function $\phi$ is called an \bfii{ isomorphism}\index{Group!isomorphism of}\index{Isomorphism!of groups}. 
 \end{defn}
 
+\begin{rem}
+We'll often use greek letters ($\phi$ (`phi'), $\gamma$ ('gamma'), $\psi$('psi'), etc.) to denote isomorphisms--partially because `phi' is reminiscent of isomor`phi'sm, and partially because we don't want to confuse isomorphisms with group elements  (which are denoted by $g,h,$ and so on.)
+\end{rem}
+
 \begin{exercise}
-Let $a$ be a real number, and consider the function $f_a : \mathbb{R} \rightarrow \mathbb{R}$ defined by:  $f_a(x) = ax$.  Use Definition~\ref{isomorph_defn} to show that $f_a$ defines an isomorphism. What are the two isomorphic groups involved?
+Let $a$ be a real number, and consider the function $\phi_a : \mathbb{R} \rightarrow \mathbb{R}$ defined by:  $\phi_a(x) = ax$.  Use Definition~\ref{isomorph_defn} to show that $\phi_a$ defines an isomorphism. What are the two isomorphic groups involved?
 \end{exercise}
 
 Some important properties of isomorphisms follow directly from the above definition. First we have:
@@ -249,18 +254,18 @@ Fill in the blanks in the following proof of Proposition~\ref{IsoId}:
 \medskip
 
 \noindent
-Given that $e$ is the identity of $ \_\_\_\_$ and $h$ is an arbitrary element of $\_\_\_\_$.  Since $\phi$ is a bijection, then there exists $g \in \_\_\_\_$ such that $\phi(\_\_\_\_) = h$.  Then  we have:
+Given that $e$ is the identity of \underline{$~<1>~$} and $h$ is an arbitrary element of \underline{$~<2>~$}.  Since $\phi$ is a bijection, then there exists $g \in \underline{~<3>~}$ such that $\phi(\underline{~<4>~}) = h$.  Then  we have:
 \begin{align*}
-\phi(e) \circ h &= \phi(e) \circ \phi(\_\_\_\_) & \textrm{(substitution)}\\
-&= \phi( e \cdot \_\_\_\_) & \textrm{(definition of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)}\\
-&= \phi( \_\_\_\_) & \textrm{(definition of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)}\\
+\phi(e) \circ h &= \phi(e) \circ \phi(\underline{~<5>~}) & \textrm{(substitution)}\\
+&= \phi( e \cdot \underline{~<6>~}) & \textrm{(definition of~} \underline{~<7>~})\\
+&= \phi( \underline{~<8>~}) & \textrm{(definition of \underline{$~<9>~$})}\\
 &= h & \textrm{(substitution)}
 \end{align*}
 Following the same steps, we can also show
 \begin{align*}
-h \circ \phi(e) = \_\_\_\_\_.
+h \circ \phi(e) = \underline{~<10>~}.
 \end{align*}
-It follows from the definition of identity that $\_\_\_\_\_$ is the identity of the group $\_\_\_\_$.
+It follows from the definition of identity that $\underline{~<11>~}$ is the identity of the group $\underline{~<12>~}$.
 \end{exercise}
 
 
@@ -278,19 +283,19 @@ Fill in the blanks in the following proof of Proposition~\ref{IsoInv}:
 \medskip
 
 \noindent
-Let $e$ and $f$ be the identities of $G$ and $H$, respectively. Given that $g \in \_\_\_\_\_$, we have:
+Let $e$ and $f$ be the identities of $G$ and $H$, respectively. Given that $g \in \underline{~<1>~}$, we have:
 \begin{align*}
-\phi(g) \circ \phi(g^{-1}) &= \phi(g \cdot g^{-1}) & \textrm{(definition of}~\_\_\_\_\_ \_\_\_\_\_ \_\_\_\_\_)\\
-&= \phi(e) &\textrm{(definition of}~\_\_\_\_\_ \_\_\_\_\_ \_\_\_\_\_)\\
-&= f &\textrm{(Proposition}~\_\_\_\_\_ ).
+\phi(g) \circ \phi(g^{-1}) &= \phi(g \cdot g^{-1}) & \textrm{(definition of}~\underline{~<2>~})\\
+&= \phi(e) &\textrm{(definition of}~\underline{~<3>~})\\
+&= f &\textrm{(Proposition}~\underline{~<4>~} ).
 \end{align*}
 Using the same steps, we can also show
 \begin{align*}
-\phi(g^{-1}) \circ \phi(g) = \_\_\_\_.
+\phi(g^{-1}) \circ \phi(g) = \underline{~<5>~}.
 \end{align*}
 By the definition of inverse, it follows that
 \begin{align*}
-( \phi(g))^{-1} = \_\_\_\_.
+( \phi(g))^{-1} = \underline{~<6>~}.
 \end{align*}
 \end{exercise} 
 
@@ -299,9 +304,11 @@ It's possible to use isomorphisms to create other isomorphisms:
 \begin{exercise}\label{exercise:isomorph:InvCompIso}
 \begin{enumerate}[(a)]
 \item
-Given that  $\phi : G \rightarrow H$ is an  isomorphism, show that that  $\phi^{-1} : H \rightarrow G$ is also an  isomorphism.  (\emph{Hint:} According to Definition~\ref{isomorph_defn}, this involves proving two things about $\phi^{-1}$.  What are they?)
+Given that  $\phi : G \rightarrow H$ is an  isomorphism, show that that  $\phi^{-1} : H \rightarrow G$ is also an  isomorphism.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \item
-Given that  $\phi : G \rightarrow H$ and $\psi : H \rightarrow K$ is an  isomorphism, show that that  $\psi \circ\phi:G \rightarrow K$ is also an  isomorphism.  (\emph{Hint:} You need to prove the same two things as in part (a).  Use results from the Functions chapter.)
+Given that  $\phi : G \rightarrow H$ and $\psi : H \rightarrow K$ is an  isomorphism, show that that  $\psi \circ\phi:G \rightarrow K$ is also an  isomorphism.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -311,8 +318,9 @@ We said in the previous section that isomorphic groups are ``equivalent'' in som
 Isomorphism is an equivalence relation on groups. 
 \end{thm}
 
-\begin{exercise}
-Prove Proposition~\ref{GpEquivRel}.  (\emph{Hint:} Recall that this involves proving the three properties: reflexive, symmetric, and transitive. You may find that Exercise~\ref{exercise:isomorph:InvCompIso}  is useful.)
+\begin{exercise}\label{exercise:isomorph:GpEquivRel}
+Prove Proposition~\ref{GpEquivRel}.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{exercise}
 
 \section{More Examples}\label{iso_more_ex}
@@ -352,19 +360,19 @@ This completes the proof that $ {\mathbb Z} \cong 2^{\mathbb Z}$.
  
 \begin{example}\label{example:isomorph:RealIsomorph}
 As in the previous example, the real powers of $e$ under multiplication acts exactly like addition of those real exponents.  
-This suggests that the function $f(x)=e^x$ is an isomorphism between an additive group and a multiplicative group.  The reader will complete this proof of this fact as an exercise.  
+This suggests that the function $\psi(x)=e^x$ is an isomorphism between an additive group and a multiplicative group.  The reader will complete this proof of this fact as an exercise.  
 \end{example}
 
 \begin{exercise}\label{exercise:isomorph:e_isomorph_proof}
 \begin{enumerate}[(a)]
 \item
-What is the domain and range of $f$?
+What is the domain and range of $\psi$?
 \item
-Prove that $f(x)$ is a bijection.
+Prove that $\psi(x)$ is a bijection.
 \item
-Prove that $f(x)$ preserves the operations of the two groups; that $f(x + y) = f(x)f(y)$.
+Prove that $\psi(x)$ preserves the operations of the two groups; that $\psi(x + y) = \psi(x)\psi(y)$.
 \item
-Now that we know $f(x)$ is an isomorphism, what can we conclude about $({\mathbb R},+)$ and $({\mathbb R}^+,\cdot)$?
+Now that we know $\psi(x)$ is an isomorphism, what can we conclude about $({\mathbb R},+)$ and $({\mathbb R}^+,\cdot)$?
 \end{enumerate}
 \end{exercise}
 
@@ -504,7 +512,64 @@ form a group. Find an isomorphism of $G$ with a more familiar group of
 order~6.
 \end{exercise} 
 
-Above we have seen two examples where  Cayley tables make it easy to show that two groups are isomorphic. (Of course, this works best if the groups are not too large, and it certainly doesn't work if the groups are infinite!)  Let us now consider whether it is possible to use Cayley tables to show when groups are \emph{not} isomorphic to each other: 
+\begin{example}\label{example:isomorph:factor_S3_iso}
+In Example~\ref{example:cosets:factor_S3} of the Cosets chapter, we looked at  the normal subgroup  $N = \{ (1), (123), (132)  \}$ of $S_3$.
+The cosets of $N$ in $S_3$ were $N$ and $(12) N$; and the factor group $S_3
+/ N$ had the following multiplication table.
+\begin{center}
+\begin{tabular}{c|cc}
+         & $N$      & $(12) N$ \\
+\hline
+$N$      & $N$      & $(12) N$ \\
+$(12) N$ & $(12) N$ & $N$
+\end{tabular}
+\end{center}
+
+As we mentioned there,$N = A_3$, the group of even
+permutations, and $(12) N = \{ (12), (13), (23) \}$ is the set of odd
+permutations. The information captured in $S_3/N$ is parity; that is,
+multiplying two even or two odd permutations results in an even
+permutation, whereas multiplying an odd permutation by an even
+permutation yields an odd permutation. This suggests a possible isomorphism to ${\mathbb Z}_2$.
+\end{example}
+
+%Let's look at an interesting example of isomorphic groups that was brought up and hinted at in the Cosets chapter %(Example~\ref{example:cosets:factor_S3}. 
+
+\begin{exercise}\label{exercise:isomorph:factor_S3}
+Prove then that the factor group $S_3/A_3 \cong {\mathbb Z}_2$.
+\end{exercise}
+
+In Section~\ref{sec:factor_groups} of the Cosets chapter we hinted at several examples of possible isomorphisms,  which we'll have you prove now:
+
+\begin{exercise}\label{exercise:isomorph:factor_iso}
+Prove the following:
+\begin{enumerate}[(a)]
+\item
+ ${\mathbb Z}/ 3 {\mathbb Z} \cong {\mathbb Z}_3$
+\item
+$D_n / R_n \cong {\mathbb Z}_2$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{exercise:isomorph:factor_iso2}
+And based on your work in Exercise~\ref{exercise:cosets:factor_cayley_prac} of that section, you can prove the following :)
+\begin{enumerate}[(a)]
+\item
+ ${\mathbb Z}/ 6 {\mathbb Z} \cong {\mathbb Z}_6 $
+
+\item
+ ${\mathbb Z}_{24} / \langle 8 \rangle \cong {\mathbb Z}_8 $ 
+
+\item
+$U(20) / \langle 3 \rangle \cong  {\mathbb Z}_2 $
+
+\end{enumerate}
+\end{exercise}
+
+ 
+
+
+We have now seen several examples where  Cayley tables made it easy to show that two groups are isomorphic. (Of course, this works best if the groups are not too large, and it certainly doesn't work if the groups are infinite!)  Let us now consider whether it is possible to use Cayley tables to show when groups are \emph{not} isomorphic to each other: 
 
 \begin{example}\label{example:isomorph:Cayley_noniso}
 The following are the Cayley tables for ${\mathbb Z}_4$ and $U(5)$.
@@ -600,8 +665,8 @@ Prove or disprove: $G \cong U(12)$.
 
 %$\psi$ by $\psi(1) = 1$, $\psi(3) = 11$, $\psi(5) = 5$, $\psi(7) = 7$. In fact, both of these groups are isomorphic to 
 
-\begin{example}\label{example:isomorph:not_isomorph_Abelian}
-Even though $D_3$ and ${\mathbb Z}_6$ possess the same number of elements, we might suspect that they are not isomorphic, because ${\mathbb Z}_6$ is Abelian and $D_3$ is non-Abelian.  Let's see if the  Cayley tables can help us here:
+\begin{example}\label{example:isomorph:not_isomorph_abelian}
+Even though $D_3$ and ${\mathbb Z}_6$ possess the same number of elements, we might suspect that they are not isomorphic, because ${\mathbb Z}_6$ is abelian and $D_3$ is non-abelian.  Let's see if the  Cayley tables can help us here:
 
 \begin{table}[H]
 {\small
@@ -658,19 +723,23 @@ a\circ b = \phi(m ) \circ  \phi(n) = \phi(m \oplus  n) = \phi(n \oplus m) = \phi
 which contradicts the fact that $a$ and $b$ do not commute.
 \end{example}
 
-Although we have only proven the non-isomorphicity of Abelian and non-Abelian groups for one particular case, the same  method of proof can be used to prove the following general result.
-%Notice that in the general method for proving $D_3 \ncong {\mathbb Z}_6$, the elements $a, b, m$ and $n$ used were completely general and could have been picked from any two groups, one Abelian and one not.  Therefore, that proof would work just as well for proving that any Abelian group couldn't be isomorphic to a non-Abelian group.  Hence 
+Although we have only proven the non-isomorphicity of abelian and non-abelian groups for one particular case, the same  method of proof can be used to prove the following general result.
+%Notice that in the general method for proving $D_3 \ncong {\mathbb Z}_6$, the elements $a, b, m$ and $n$ used were completely general and could have been picked from any two groups, one abelian and one not.  Therefore, that proof would work just as well for proving that any abelian group couldn't be isomorphic to a non-abelian group.  Hence 
 
-\begin{thm}\label{Abelian_non-Abelian}
-If $G$ is an Abelian group and $H$ is a non-Abelian group, then $G \ncong H$.
+\begin{thm}\label{abelian_non-abelian}
+If $G$ is an abelian group and $H$ is a non-abelian group, then $G \ncong H$.
 \end{thm}
 
 \begin{exercise}
-Prove Proposition ~\ref{Abelian_non-Abelian} by imitating the proof in Example ~\ref{example:isomorph:not_isomorph_Abelian}.
+Prove Proposition ~\ref{abelian_non-abelian} by imitating the proof in Example ~\ref{example:isomorph:not_isomorph_abelian}.
 \end{exercise}
 
 \begin{exercise}\label{exercise:isomorph:iso_prac7}
 Prove $D_4 \ncong {\mathbb Z}_8$.
+\end{exercise}
+
+\begin{exercise}\label{exercise:isomorph:iso_prac8}
+Prove  ${\mathbb Z}/ 6 {\mathbb Z} \ncong S_3$.
 \end{exercise}
 
 
@@ -698,7 +767,8 @@ If $G$ is cyclic and $G \cong H$, then $H$ is also cyclic.
 
 
 \begin{exercise}\label{exercise:isomorph:cyclic_noncyclic} 
-Prove Proposition \ref{cyclic_noncyclic}. (\emph{Hint:} follow Proposition~\ref{not_isomorph_cyclic}.)
+Prove Proposition \ref{cyclic_noncyclic}.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{exercise}
 
 
@@ -709,6 +779,8 @@ Prove Proposition \ref{cyclic_noncyclic}. (\emph{Hint:} follow Proposition~\ref{
 Prove that ${\mathbb Q}$ is not isomorphic to ${\mathbb Z}$.
 \item
 Prove that  ${\mathbb Z}_3 \times {\mathbb Z}_3$ is not isomorphic to ${\mathbb Z}_9$. 
+\item
+Prove that  $D_4 \ncong {\mathbb Z}_{24} / \langle 8 \rangle$
 \end{enumerate}
 \end{exercise}
 
@@ -729,7 +801,7 @@ $|G| = |H|$.
 $\phi^{-1} : H \rightarrow G$ is an isomorphism. 
 
 \rm \item 
-$G$ is Abelian if and only if $H$ is Abelian. 
+$G$ is abelian if and only if $H$ is abelian. 
 
 \rm \item 
 $G$ is cyclic if and only if $H$ is cyclic. 
@@ -747,14 +819,17 @@ If $G'$  is a subgroup of $G$, then $\phi(G') $ is a subgroup of  $H$ and $G' \c
 \begin{proof}
 Assertion (1) follows from the fact that $\phi$ is a bijection.  The proofs of (2)--(6) are indicated in the following exercises.
 
-\begin{exercise}
+\begin{exercise}\label{exercise:isomorph:PhiBij}
 \begin{enumerate}[(a)]
 \item 
-Show part (2) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Exercise~\ref{exercise:isomorph:InvCompIso}.)
+Show part (2) of Proposition~\ref{isomorph_theorem_1}.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \item
-Show part (3) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Proposition~\ref{Abelian_non-Abelian}. )
+Show part (3) of Proposition~\ref{isomorph_theorem_1}.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \item
-Show part (4) of Proposition~\ref{isomorph_theorem_1}. (\emph{Hint:} Use Proposition~\ref{cyclic_noncyclic}. )
+Show part (4) of Proposition~\ref{isomorph_theorem_1}.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise} 
 
@@ -775,15 +850,15 @@ $\phi(G')$ is isomorphic to $G'$.
 \begin{exercise} Fill in the blanks of the following proof of Step (I)  (that is, $\phi(G')$ is a subgroup of $H$):
 \medskip
 
-Let us suppose that $G'$ is a subgroup of $G$. We claim that $\phi(G')$ is actually a subgroup of $\_\_\_\_$.  To show this, by Proposition~\ref{proposition:groups:subgroup_prove_2} it's enough to show that if $h_1$ and $h_2$ are elements of  $\phi(G')$, then $h_1 h_2^{-1}$ is also an element of $\_\_\_\_\_\_\_\_\_\_\_\_$.
+Let us suppose that $G'$ is a subgroup of $G$. We claim that $\phi(G')$ is actually a subgroup of \underline{$~<1>~$}.  To show this, by Proposition~\ref{proposition:groups:subgroup_prove_2} it's enough to show that if $h_1$ and $h_2$ are elements of  $\phi(G')$, then $h_1 h_2^{-1}$ is also an element of \underline{$~<2>~$}.
 
-Now given that  $h_1, h_2 \in \phi(G')$, by the definition of $\phi(G')$ it must be true that there exist $g_1, g_2 \in \_\_\_\_\_$ such that $\phi(g_1) = h_1, \phi(g_2) = h_2$. But then we have 
+Now given that  $h_1, h_2 \in \phi(G')$, by the definition of $\phi(G')$ it must be true that there exist $g_1, g_2 \in \underline{~<3>~}$ such that $\phi(g_1) = h_1, \phi(g_2) = h_2$. But then we have 
 \begin{align*}
 h_1 h_2^{-1} &= \phi(g_1) \phi(g_2)^{-1} &\text{(by substitution)}\\
-&= \phi(g_1) \phi(g_2^{-1}) &(\text{by Proposition~}\_\_\_\_\_\_\_\_\_\_\_\_)\\
-&= \phi(g_1 g_2^{-1}) &(\text{by the definition of }\_\_\_\_\_\_\_\_\_\_\_\_).
+&= \phi(g_1) \phi(g_2^{-1}) &(\text{by Proposition~}\underline{~<4>~})\\
+&= \phi(g_1 g_2^{-1}) &(\text{by the definition of }\underline{~<5>~}).
 \end{align*}
-Since $g_1 g_2^{-1}$ is an element of $G'$, it follows that $h_1 h_2^{-1} \in \_\_\_\_\_\_\_\_\_\_\_\_$. This completes the proof of Step (I).
+Since $g_1 g_2^{-1}$ is an element of $G'$, it follows that $h_1 h_2^{-1} \in \underline{~<6>~}$. This completes the proof of Step (I).
 \end{exercise}
 
 \begin{exercise}
@@ -792,9 +867,9 @@ Complete the following proof of Step (II) (that is, $G'$ and $\phi(G')$ are isom
 
 Consider the function $\phi$ restricted to the set $G'$: that is, $\phi: G' \rightarrow \phi(G')$.  To  prove this gives an isomorphism from $G'$ to $\phi(G')$, we need to show (i) $\phi: G' \rightarrow \phi(G')$ is a bijection; and (ii) $\phi: G' \rightarrow \phi(G')$ has the operation-preserving property.
 
-To show (i), we note that by the definition of $\phi(G')$, for every $h \in \phi(G')$ there exists a $g \in \_\_\_\_\_$ such that $\phi(\_\_\_\_) = h$. It follows that $\phi$ maps $G'$ onto $\_\_\_\_\_\_\_\_\_\_$.  Also, if $g_1, g_2 \in G'$ and $\phi(g_1) = \phi(g_2)$, then since $\phi$ is a one-to-one function on $G$ it follows that $g_1 = \_\_\_\_\_$. From this it follows that $\phi$ is also a one-to-one function on $\_\_\_\_\_$.  We conclude that $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$ is a bijection.
+To show (i), we note that by the definition of $\phi(G')$, for every $h \in \phi(G')$ there exists a $g \in \underline{~<1>~}$ such that $\phi(\underline{~<2>~}) = h$. It follows that $\phi$ maps $G'$ onto $\underline{~<3>~}$.  Also, if $g_1, g_2 \in G'$ and $\phi(g_1) = \phi(g_2)$, then since $\phi$ is a one-to-one function on $G$ it follows that $g_1 = \underline{~<4>~}$. From this it follows that $\phi$ is also a one-to-one function on \underline{$~<5>~$}.  We conclude that \underline{$~<6>~$} is a bijection.
 
-To show (ii), given $g_1, g_2 \in \_\_\_\_\_$ we have that $\phi(g_1 g_2) = \_\_\_\_\_\_$ since by assumption $\phi$ is an isomorphism from $\_\_\_\_$ to $\_\_\_\_$. This implies that $\phi$ also has the operation-preserving  property when it's considered as a function from  $\_\_\_\_$ to $\_\_\_\_$.  This completes the proof of Step (II).
+To show (ii), given $g_1, g_2 \in \underline{~<7>~}$ we have that $\phi(g_1 g_2) = \underline{~<8>~}$ since by assumption $\phi$ is an isomorphism from \underline{$~<9>~$} to \underline{$~<10>~$}. This implies that $\phi$ also has the operation-preserving  property when it's considered as a function from  \underline{$~<11>~$} to \underline{$~<12>~$}.  This completes the proof of Step (II).
  \end{exercise}
 
 \end{proof}
@@ -808,13 +883,13 @@ Prove $A_4$ is not isomorphic to $D_{6}$. (Recall that $A_4$ is the alternating 
 \end{exercise}
 
 \begin{exercise}
-The \emph{quaternion group}\index{quaternion group ($Q_8$)} (denoted by $Q_8$) consists of 8 elements: $1$, $i$, $j$, $k$, $-1$, $-i$, $-j$, $-k$. You may find the Cayley table for $Q_8$ on \url{wolframalpha.com} or Wikipedia. Show that the quaternion group is not isomorphic to $D_4$.
+The \emph{quaternion group}\index{Quaternion group ($Q_8$)} (denoted by $Q_8$) consists of 8 elements: $1$, $i$, $j$, $k$, $-1$, $-i$, $-j$, $-k$. You may find the Cayley table for $Q_8$ on \url{wolframalpha.com} or Wikipedia. Show that the quaternion group is not isomorphic to $D_4$.
 \end{exercise}
 
 \section{Classification up to isomorphism}
 We have been emphasizing that two groups that are isomorphic are the ``same'' as far as all group properties are concerned. So if we can characterize a class of groups as isomorphic to a well-understood set of groups, then all of the properties of the well-understood groups carry over to the entire class of groups. We will see two examples of this in the following subsections.
 
-\subsection*{Classifying cyclic groups}
+\subsection{Classifying cyclic groups}\label{ClassificationOfCylic}
 
 Our first classification result concerns cyclic groups.
 
@@ -866,18 +941,16 @@ Is the converse of Proposition~\ref{isomorph_theorem_3} also true?  \emph{Justif
 Show that the multiplicative group of the complex $n$th roots of unity is isomorphic to ${\mathbb Z}_n$.
 \end{exercise} 
 
-\begin{corollary}\label{isomorph_theorem_4}
+\begin{thm}\label{isomorph_theorem_4}
 If $G$ is a  group of order $p$, where $p$ is a prime number, then $G$ is isomorphic to ${\mathbb Z}_p$. 
-\end{corollary}
+\end{thm}
 
 \begin{proof}
-This  is a direct result of Corollary~\ref{cosets_theorem_7}.
+This  is a direct result of Proposition~\ref{cosets_theorem_7} in the Cosets chapter.
 \end{proof}
-
-
  
 
-\subsection*{Characterizing all finite groups (Cayley's theorem) }
+\subsection{Characterizing all finite groups: Cayley's theorem}
  
 In the previous section, we saw that any cyclic group is ``equivalent'' (in the sense of isomorphism) to one of the groups $\mathbb{Z}_n$.  This enables us to easily conceptualize any cyclic group in terms of a standardized set of  groups that we're very familiar with. 
 
@@ -944,22 +1017,22 @@ that is the isomorphic image of 1 is actually the function from ${\mathbb Z}_3 \
 \end{example}
 
 
-\begin{thm}[Cayley's theorem]\index{Cayley's Theorem}\label{isomorph_theorem_6}
+\begin{thm} (\emph{Cayley's theorem})\index{Cayley's Theorem}\label{isomorph_theorem_6} 
 Every group is isomorphic to a group of permutations.
 \end{thm}
 
 \begin{proof}
-Let $G$ be a group with $|G|$ elements.  We seek a group of permutations $P \subset S_{|G|}$ that is isomorphic to $G$.  For any $g \in G$ we may  define a  function $\sigma_g : G \rightarrow G$ by 
+Let $G$ be a group with $|G|$ elements.  We seek a group of permutations $P \subset S_{|G|}$ that is isomorphic to $G$.  For any $g \in G$ we may  define a  function $\phi_g : G \rightarrow G$ by 
 \[
-\sigma_g(a) := ga.
+\phi_g(a) := ga.
 \]
-  We claim that $\sigma_g$ is a permutation on $G$: you will show this in Exercise~\ref{exercise:isomorph:finish_proof} below.  Let us define the set $P\subset S_{|G|}$ as
+  We claim that $\phi_g$ is a permutation on $G$: you will show this in Exercise~\ref{exercise:isomorph:finish_proof} below.  Let us define the set $P\subset S_{|G|}$ as
 \[
-P = \{ \sigma_g : g \in G \}.
+P = \{ \phi_g : g \in G \}.
 \]
 Let us now define a function $\Phi: G \rightarrow P$ just as we did in Example~\ref{example:isomorph:cayley_isomorph}:
-\[ \Phi(g) := \sigma_g. \]
-Let's pause for a minute here, to make sure that you understand what's going on. According to the definition, $\Phi$ is a function whose domain is the group $G$ and whose range is a subset of the permutation group on $|G|$ letters. Now permutations are functions in their own right: so  $\Phi$ is a function (from $G$ to $P$), and for each $g \in G$, $\Phi(g)$ is \emph{also} a function (from $G$ to $G$). We could say that $\Phi$ is a function-valued function. This can be quite unnerving the first time you see it -- but such constructions are an integral part of higher mathematics, so it's best to get used to them! In this case, you should understand that $\Phi(g)$ is a permutation, and $\Phi(g) (a)$ is the permutation $\Phi(g)$ applied to the group element $a$. According to the definition of $\Phi(g)$,  $\Phi(g) (a)$ is equal to $\sigma_g(a)$, which by the definition of $\sigma_g$ is equal to $ga$.
+\[ \Phi(g) := \phi_g. \]
+Let's pause for a minute here, to make sure that you understand what's going on. According to the definition, $\Phi$ is a function whose domain is the group $G$ and whose range is a subset of the permutation group on $|G|$ letters. Now permutations are functions in their own right: so  $\Phi$ is a function (from $G$ to $P$), and for each $g \in G$, $\Phi(g)$ is \emph{also} a function (from $G$ to $G$). We could say that $\Phi$ is a function-valued function. (This can be quite unnerving the first time you see it -- but such constructions are common in higher mathematics, so it's best to get used to them!) In this case, you should understand that $\Phi(g)$ is a permutation, and $\Phi(g) (a)$ is the permutation $\Phi(g)$ applied to the group element $a$. According to the definition of $\Phi(g)$,  $\Phi(g) (a)$ is equal to $\phi_g(a)$, which by the definition of $\phi_g$ is equal to $ga$.
 
 OK, now let's get back to the argument. To show that $\Phi$ is an isomorphism, we must show that $\Phi$ is one-to-one, onto, and preserves the group operation. 
 You will show that $\Phi$ is one-to-one and onto in Exercise~\ref{exercise:isomorph:finish_proof} below. To show that $\Phi$ preserves the group operation, we need to show that $\Phi(gh) = \Phi(g) \circ \Phi(h)$ for any elements $g, h \in G$. We may show this element-by-element: that is, we show that $\Phi(gh)(a) = (\Phi(g) \circ \Phi(h))(a)$ for an arbitrary $a \in G$ as follows:
@@ -975,28 +1048,28 @@ You will show that $\Phi$ is one-to-one and onto in Exercise~\ref{exercise:isomo
 \begin{exercise}\label{exercise:isomorph:finish_proof}
 \begin{enumerate}[(a)]
 \item
-Show that $\sigma_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It is enough to show that $\sigma_g$ is one-to-one and onto.) 
+Show that $\phi_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It is enough to show that $\phi_g$ is one-to-one and onto.) 
 \item
 Complete the proof of Proposition~\ref{isomorph_theorem_6} by showing that $\Phi:G \rightarrow P$ is one-to-one and onto. 
 \end{enumerate}
 \end{exercise}
 
-The isomorphism $\Phi: G \rightarrow S_{|G|}$ defined in the proof is known as the \bfii{ left regular representation\/}\index{Left regular representation}\index{Regular representation!left} of~$G$. This is not the only possible isomorphism. There is another isomorphism called the \bfii{ right regular representation\/}\index{Right regular representation}\index{Regular representation!right}, which is presented in the following exercise.
+The isomorphism $\Phi: G \rightarrow S_{|G|}$ defined in the proof is known as the \bfii{ left regular representation\/}\index{Left regular representation}\index{Regular representation!left} of~$G$. This is not the only possible isomorphism. Another isomorphism is presented in the following exercise.
 
 \begin{exercise}\label{exercise:isomorph:r_reg}
-The right regular representation  $\Psi: G \rightarrow S_{|G|}$  is defined as follows. For any $g \in G$ define the  function $\tilde{\sigma}_g : G \rightarrow G$ by 
+The \bfii{ right regular representation\/}\index{Right regular representation}\index{Regular representation!right}  $\tilde{\Phi}: G \rightarrow S_{|G|}$  is defined as follows. For any $g \in G$ define the  function $\tilde{\phi}_g : G \rightarrow G$ by 
 \[
 \tilde{\sigma}_g(a) := ag^{-1}.
 \]
 Define the set $\tilde{P}$ as
 \[
-\tilde{P} = \{ \tilde{\sigma}_g : g \in G \},
+\tilde{P} = \{ \tilde{\phi}_g : g \in G \},
 \]
 and define the function $\tilde{\Phi}: G \rightarrow P$ as
-\[ \tilde{\Phi}(g) := \tilde{\sigma}_g. \]
+\[ \tilde{\Phi}(g) := \tilde{\phi}_g. \]
 \begin{enumerate}[(a)]
 \item
-Show that $\tilde{\sigma}_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It follows that the set $\tilde{P}$ is a subset of $S_{|G|}$.)
+Show that $\tilde{\phi}_g : G \rightarrow G$ defined in the above proof is a permutation on $G$. (It follows that the set $\tilde{P}$ is a subset of $S_{|G|}$.)
 \item
 Show that $\tilde{\Phi}:G \rightarrow \tilde{P}$ is one-to-one and onto. 
  \item
@@ -1019,7 +1092,7 @@ Arthur Cayley\index{Cayley, Arthur} was born in England in 1821, though he spent
 Given two groups $G$ and $H$, it is possible to construct a new group from the Cartesian product of $G$ and $H$, $G \times H$.  Conversely, given a large group, it is sometimes possible to decompose the group; that is, a group is sometimes isomorphic to the direct product of two smaller groups. In this case, all of the properties of the large group can be derived from the properties of the smaller groups, which can lead to tremendous simplification.
  
  
-\subsection*{External Direct Products}
+\subsection{External Direct Products}
 
 If $(G,\cdot)$ and $(H, \circ)$ are groups, then we can make the Cartesian product of $G$ and $H$ into a new group.  As a set, our group is just the ordered pairs $(g, h) \in G \times H$ where $g \in G$ and $h \in H$. We can define a binary operation on $G \times H$ by 
 \[
@@ -1030,9 +1103,10 @@ that is, we just multiply elements in the first coordinate as we do in $G$ and e
 \begin{thm}\label{isomorph_theorem_7}
 Let $G$ and $H$ be groups. The set $G \times H$ is a group under the operation $(g_1, h_1)(g_2, h_2) = (g_1  g_2, h_1 h_2)$ where $g_1, g_2 \in G$ and $h_1, h_2 \in H$. 
 \end{thm}
-The proof is outlined in the following exercise. (\emph{Hint}: for each group property to be proved, use the corresponding group property for $G$ and $H$.)
+The proof is outlined in the following exercise. 
 
 \begin{exercise}\label{exercise:isomorph:proof_thm_7}
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \begin{enumerate}
 \item
 Show that the set $G \times H$ is closed under the binary operation defined in Proposition~\ref{isomorph_theorem_7}. 
@@ -1083,7 +1157,8 @@ areas of computer science.
 What is the difference between $G \times H$ and $H \times G$?  Not much, as the following exercise shows:
  
 \begin{exercise}\label{exercise:isomorph:direct_commute}
-Show that for any groups $G$ and $H$,  $G \times H \cong H \times G$. (\emph{Hint}: Define a function $\phi:G \times H \rightarrow H \times G$ by:  $\phi(g,h) = \_\_\_\_\_\_$ (you fill in the blank).  Show that this function is in fact an isomorphism.)
+Show that for any groups $G$ and $H$,  $G \times H \cong H \times G$.
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{exercise}
 
 By extending this same idea, we find that we can rearrange the groups in a direct product arbitrarily and still end up with the ``same'' group:
@@ -1110,8 +1185,9 @@ We won't give the full proof, but you can get the idea of how it goes by doing t
 Prove Proposition~\ref{isomorph:dp_isom} for the case where $n=2$. (Remember that the default method for proving that groups are isomorphic is to define a suitable function and prove that it's an isomorphism.)
 \end{exercise}
 
+\subsection{Classifying abelian groups by factorization}
 
-Let's explore further the idea of isomorphisms of direct products. To do this, it is helpful to examine the orders of various elements in a direct product group:
+We have used isomorphisms to classify cyclic groups (Proposition~\ref{isomorph_theorem_2}) and general groups (Cayley's theorem, Proposition~\ref{isomorph_theorem_6}). In this section, we will make use of direct products to prove a classification of abelian groups up to isomorphism. The bottom line is that every abelian group is isomorphic to a direct product of cyclic groups. To get to the bottom line, we'll have to establish some more properties of direct products, especially in relation to cyclic groups.  The following  proposition characterizes the order of the elements in a direct product.
 
 \begin{thm}\label{isomorph:lcm_theorem}
 Let $(g, h) \in G \times H$. If $g$ and $h$ have finite orders $r$ and
@@ -1133,7 +1209,7 @@ multiple of $r$ and $s$. Since $m$ is the {\em least common multiple\/}
 of $r$ and $s$, $m \leq n$.  Consequently, $m$ must be equal to~$n$.
 \end{proof}
 
-We may extend the idea of this proof to  arbitrary direct products:
+By applying Proposition~\ref{isomorph:lcm_theorem} inductively, it is possible to prove an analogous result for direct products of more than two groups. We'll leave it to you to fill in the details of the proof.
 
 \begin{corollary}
 Let $(g_1, \ldots, g_n) \in \prod G_i$. If $g_i$ has finite order
@@ -1141,7 +1217,8 @@ $r_i$ in $G_i$, then the order of $(g_1, \ldots, g_n)$ in $\prod G_i$
 is the least common multiple of $r_1, \ldots, r_n$.
 \end{corollary}
  
- 
+ For the rest of the section, we will be dealing with direct products of $\ZZ_n$ (we know that any cyclic group is isomorphic to $\ZZ_n$ for some $n$). 
+
 \begin{example}\label{example:isomorph:Z12xZ60}
 Let $(8, 56) \in {\mathbb Z}_{12} \times  {\mathbb Z}_{60}$. Since
 $\gcd(8,12) = 4$, the order of 8 is $12/4 = 3$ in ${\mathbb Z}_{12}$.
@@ -1224,19 +1301,25 @@ $\lcm(m,n) = mn$ if and only if $\gcd(m,n)=1$.
 \end{proof}
 \medskip 
 
-As we've seen before, this idea extends directly to arbitrary direct products:
+This idea extends directly to arbitrary direct products: a product of cyclic groups is cyclic if and only if the 
+orders of the groups in the product are all relatively prime.
 
 \begin{thm}\label{RelativelyPrime}
 Let $n_1, \ldots, n_k$ be positive integers. Then
 \[
 \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
 \]
-if and only if $\lcm( n_1, \ldots, n_k) =\prod_{i=1}^k n_i$.
+if and only if $\lcm( n_1, \ldots, n_k) =\prod_{i=1}^k n_i$ (in other words, $n_1, \ldots, n_k$ are all relatively prime).
 \end{thm}
 
 \begin{proof}
-Use the same argument as in Proposition~\ref{Z_pq_theorem}, except with indices $n_1,\ldots n_k$ instead of $n$ and $m$.
+Use the argument in Proposition~\ref{Z_pq_theorem} first with $n_1$ and $n_2$, then with $n_1n_2$ and $n_3$,
+then with $n_1n_2n_3$ and $n_4$, and so on. (The best way to do this proof is using induction.)
 \end{proof}
+
+\begin{exercise}
+Prove Proposition~\ref{RelativelyPrime} using induction.
+\end{exercise}
 
 A special case of this proposition is:
  
@@ -1258,14 +1341,14 @@ Since  $\gcd(p_i^{e_i},p_j^{e_j}) = 1$ for $i \neq j$, the proof follows from Co
 \end{proof}
 
 \begin{exercise}
-Find three non-isomorphic Abelian groups of order 8, and show that they are not isomophic.
+Find three non-isomorphic abelian groups of order 8, and show that they are not isomophic.
 \end{exercise}
 
 
-Remember that in the Permutations chapter we showed that every permutation can be ``factored''  as the product of disjoint cycles. (At that time, we compared this to the factorization of integers into prime factors).  It turns out that Abelian groups can also be ``factored''.  This beautiful and general result is summarized in the following proposition. We will not give a complete proof of the proposition (which uses induction)\footnote{Many proofs can be found on the web: search for ``structure of finite abelian groups''.}, but we hope that it makes sense to you in light of the foregoing discussion.
+Remember that in the Permutations chapter we showed that every permutation can be ``factored''  as the product of disjoint cycles. (At that time, we compared this to the factorization of integers into prime factors).  It turns out that abelian groups can also be ``factored''.  This beautiful and general result is summarized in the following proposition. We will not give a complete proof of the proposition (which uses induction), but we hope that it makes sense to you in light of the foregoing discussion.\footnote{Many proofs can be found on the web: search for ``structure of finite abelian groups''.}
 
-\begin{thm}\label{FactorAbelianGroup} \bfii{ (Factorization of Abelian Groups)}~~
-If $G$ is an Abelian group, then there exist prime numbers $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ such that
+\begin{thm}\label{FactorabelianGroup} \bfii{ (Factorization of abelian groups)}~~
+If $G$ is an abelian group, then there exist prime numbers $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ such that
 \[
 G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb
 Z}_{p_k^{e_k}}
@@ -1274,35 +1357,36 @@ Note that the prime numbers $p_1, \ldots, p_k$  may not necessarily be distinct.
 \end{thm}
 
 \begin{exercise}\label{exercise:isomorph:prodfacabel}
-Show that the primes  $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ in Proposition~ \ref{FactorAbelianGroup} must satisfy
+Show that the primes  $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ in Proposition~ \ref{FactorabelianGroup} must satisfy
 $|G| = p_1^{e_1} \cdots p_k^{e_k}$.
 \end{exercise}
 
 \begin{exercise}\label{exercise:isomorph:prodfacabel2}
 \begin{enumerate}[(a)] 
 \item
-Prove or disprove: There is an Abelian group of order 22 that is \emph{not} cyclic. 
+Prove or disprove: There is an abelian group of order 22 that is \emph{not} cyclic. 
 \item
-Prove or disprove: There is an Abelian group of order 24 that is \emph{not} cyclic. 
+Prove or disprove: There is an abelian group of order 24 that is \emph{not} cyclic. 
 \item
-Prove or disprove: There is an Abelian group of order 30 that is \emph{not} cyclic. 
+Prove or disprove: There is an abelian group of order 30 that is \emph{not} cyclic. 
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:isomorph:exel}
 \begin{enumerate}
 \item
 Show that $\mathbb{Z}_{3^n}$ contains an element of order 3, for any positive integer $n$.
 \item
-Show that every Abelian group of order divisible by 3 contains an element of order 3.  
+Show that every abelian group of order divisible by 3 contains an element of order 3.  
 \item
-Show that every Abelian group of order divisible by 9 contains a subgroup of order 9.  (\emph{Hint}. Consider 2 cases: (i) 9 divides one of the factors $p_i^{e_i}$ in Proposition~\ref{FactorAbelianGroup}; (ii) 9 does not divide any of the factors.
+Show that every abelian group of order divisible by 9 contains a subgroup of order 9. 
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \item
-Prove or disprove: for any prime $p$, every Abelian group of order divisible by $p^2$  contains a subgroup of order $p^2$. 
+Prove or disprove: for any prime $p$, every abelian group of order divisible by $p^2$  contains a subgroup of order $p^2$. 
 \end{enumerate}
 \end{exercise}
  
-\subsection*{Internal Direct Products}
+\subsection{Internal Direct Products}
  
 
 The external direct product of two groups builds a large group out of
@@ -1447,10 +1531,10 @@ orders 4 and 5 respectively such that $hk = kh$ for all $h \in H$ and
 $k \in K$, prove that $G$ is the internal direct product of $H$ and $K$. 
  \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:isomorph:isomex}
 Prove the following: Let $G$, $H$, and $K$ be
 groups such that $G \times K \cong H \times K$. Then is is also true that $G \cong H$. 
-(\emph{Hint}: Show that $G \times {\var id}_K$ is a subgroup of $G \times K$, and that $G \times {\var id}_K \cong G$; and similarly for $H$.)
+\hyperref[sec:isomorph:hints]{(*Hint*)}
 \end{exercise}
 
 We can extend the definition of an internal direct product of $G$ to a
@@ -1483,7 +1567,7 @@ Prove Proposition~\ref{isomorph:mult_dir_prod}.
 
  
 \markright{EXERCISES}
-\section*{Additional Exercises}
+\section*{Additional exercises}
 \exrule
 
  
@@ -1532,26 +1616,35 @@ a \ast b = a + b + ab.
 Prove that $G$ is a group under this operation. Show that $(G, *)$ is
 isomorphic to the multiplicative group of nonzero real numbers.
   
+\item
+Find all the subgroups of $D_4$. Which subgroups are normal? What are
+all the factor groups of $D_4$ up to isomorphism?
+
 
 \item
 Prove that $D_4$ cannot be the internal direct product of two of its
 proper subgroups. 
  
 
-
-
-\item
+\item \label{exercise:isomorph:eoc}
 * Prove that $S_3 \times {\mathbb Z}_2$ is isomorphic to $D_6$. Can you
-make a conjecture about $D_{2n}$? Prove your conjecture. [{\em Hint:\/}
-If you take every other vertex in a hexagon, you get an equilateral triangle. Also note that 180-degree rotation is an element of order 2.] 
+make a conjecture about $D_{2n}$? Prove your conjecture. 
+\hyperref[sec:isomorph:hints]{(*Hint*)}
  
+%% TWJ, 2011/11/21
+%% Notation corrected in the quaternion group.  Suggested by S. Hansen.
 
 \item
 The \bfii{ quaternion group} is a well-known group of order 8.  (You may find the Cayley table of the quaternion group by doing a web search.)  Prove or disprove:  The quaternion group is isomorphic to $D4$. 
 
 
+\item
+Find all the subgroups of the quaternion group, $Q_8$. Which subgroups
+are normal? What are all the factor groups of $Q_8$ up to isomorphism?
+
+
 %\item
-%Prove or disprove: Every non-Abelian group of order divisible by 6
+%Prove or disprove: Every non-abelian group of order divisible by 6
 %contains a subgroup of order 6. 
  
 
@@ -1566,8 +1659,8 @@ the proof of Cayley's Theorem.
 
 
 \item
-Prove that $A \times B$ is Abelian if and only if $A$ and $B$ are
-Abelian. 
+Prove that $A \times B$ is abelian if and only if $A$ and $B$ are
+abelian. 
  
 
  
@@ -1590,9 +1683,13 @@ Let $m, n \in {\mathbb Z}$. Prove that $\langle m \rangle \cap \langle n \rangle
  
 
 \noindent
-The following exercises  will require this definition: An \bfii{ automorphism\/}\index{Automorphism!of a
+The following exercises  will require this definition:
+
+\begin{defn}
+ An \bfii{ automorphism\/}\index{Automorphism!of a
 group}\index{Group!automorphism of} of a group $G$ is an isomorphism
 with itself. 
+\end{defn}
 
 \item
 Prove that complex conjugation is an automorphism of the

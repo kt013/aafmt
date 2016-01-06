@@ -3,7 +3,7 @@
 % ### Show relation on R x R using a graph of the subset
 %!TEX root = proofs+concepts.tex
 
-\chap{Equivalence Relations}{EquivalenceRelationsChap}
+\chap{Equivalence Relations and Equivalence Classes}{EquivalenceRelationsChap}
 
 % new command for equivalence class
 \newcommand{\class}[1]{\overline{#1}}
@@ -11,7 +11,8 @@
 
 \medskip\noindent
 
-
+This can be thought of as a ``pivotal'' chapter. It generalizes the notion of ``function'', and relates this generalization to properties that we discussed in the Modular Arithmetic chapter. We will find that the new concepts we develop in this chapter will be foundational to the notions of \emph{coset} and \emph{conjugate}, two key group-theoretic structures which play central roles in group theory.
+\footnote{This chapter  is an adapted and expanded version of a chapter by D. and J. Morris.}
 
 \section{Binary relations} \label{sec.relation}
 
@@ -91,18 +92,23 @@ The first of these relations  is a \emph{subset} of the second.
 \end{eg}
 
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:7}
 \begin{enumerate}[(a)]
 \item
-Let $A = \{a\}$ and $B = \{1\}$. List \emph{all} relations from $A$ to $B$ (Hint: there are two).
+Let $A = \{a\}$ and $B = \{1\}$. List \emph{all} relations from $A$ to $B$.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
-Let $A = \{a\}$ and $B = \{1,2\}$. List \emph{all} relations from $A$ to $B$ (Hint: there are four).
+Let $A = \{a\}$ and $B = \{1,2\}$. List \emph{all} relations from $A$ to $B$.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
-Let $A = \{a,b\}$ and $B = \{1\}$. List \emph{all} relations from $A$ to $B$ (Hint: there are four).
+Let $A = \{a,b\}$ and $B = \{1\}$. List \emph{all} relations from $A$ to $B$.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
-** Let $A = \{a,b\}$. List all the binary relations on $A$ (Hint: there are sixteen).
+** Let $A = \{a,b\}$. List all the binary relations on $A$.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
-** Let $A = \{a,b,c\}$. How many binary relations are there on the set $A$? (Hint: the answer is bigger than 500!)
+** Let $A = \{a,b,c\}$. How many binary relations are there on the set $A$?
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -188,7 +194,8 @@ For example, using the symbol $<$ we can define the following binary relation on
  \item  
  Define the set $R_=$ associated with the symbol ``$=$'' applied to the complex numbers. In your definition assume that equality of real numbers has been defined, and write complex numbers in rectangular form (for example, $a + bi$ or $c + di$).
  \item  
- List all the elements of the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2\}$. (The set of subsets of $A$ is denoted as $P(A)$, the \bfii{ power set}\index{power set} of $A$.) (\emph{Hint}:  there are 9.)
+ List all the elements of the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2\}$. (The set of subsets of $A$ is denoted as $P(A)$, the \bfii{ power set}\index{Power set} of $A$.)
+ \hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
  \item  
 Consider the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2,3\}$. How many elements does $R_\subset$ have?
  \end{enumerate}
@@ -254,10 +261,11 @@ Not Transitive:  $4 \rel 3$ and $3 \rel 2$, but $4 \not\rel 2$ ($4 \neq 2 + 1$).
 
 Notice that in the above examples, we used specific counterexamples to demonstrate when properties were not true.  We recommend that you do this also, because it is both clear and convincing (and it's usually the easiest way). It only takes \emph{one} counterexample to show a property is not true! 
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:17}
 For each of the following, explain your answers. 
 \begin{enumerate}[(a)]
-\item Is $\leq$ defined on the set $\mathbb{R}$ transitive? Is it reflexive? Is it symmetric? (\emph{Hint}:  $\leq$ is \emph{not} symmetric -- you may show this by giving a counterexample.)
+\item Is $\leq$ defined on the set $\mathbb{R}$ transitive? Is it reflexive? Is it symmetric?
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item Is $\subset$ defined on the set $P(\mathbb{N})$ transitive? Is it reflexive? Is it symmetric? (Recall that $P(\mathbb{N})$ is the set of subsets of $\mathbb{N}$).
 \item Define the relation $\rel$ on $\mathbb{C}$ as follows: $ z_1 \rel z_2$ iff $z_1 = |z_2|$. Is $\rel$ transitive? Is it reflexive? Is it symmetric?
 \item Define the relation $\rel$ on $\mathbb{Z}$ as follows: $ a \rel b$ iff $|a - b|< 4$. Is $\rel$ transitive? Is it reflexive? Is it symmetric?
@@ -323,18 +331,20 @@ $$B_\rel = \{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3), (3,2) \}$$
 
 Transitivity can sometimes be a little tricky:
 
-\begin{exer}\label{trickyTransitive}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:trickyTransitive}
 \begin{enumerate}[(a)]
 \item
 Explain why the binary relation 
 \[ R_{\sim} = \{(1,4), (1,1),(4,1) \} \]
-is \emph{not} transitive. (\emph{Hint}: give a specific example where $a \sim b$ and $b \sim c$ but $a \not\sim c$.  In other words, $(a,b)$ and $(b,c)$ are elements of $R_{\sim}$, but $(a,c)$ is not in  $R_{\sim}$. It is not necessary for $a,b,$ and $c$ to be distinct.
+is \emph{not} transitive.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)} 
 \item
 Explain why the binary relation 
 \[ R_{\sim} = \{(1,2), (1,3),(1,4) \} \]
-\emph{is} transitive. (\emph{Hint}: explain why it is impossible to find a counterexample.)
+\emph{is} transitive.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \end{enumerate}
-\end{exer}
+\end{exercise}
 
 \begin{exer} \label{BinRelSomePropsEx}
 Find binary relations on $\{1,2,3\}$ that meet each of the following conditions 
@@ -350,9 +360,9 @@ transitive and symmetric, but not reflexive.
 neither reflexive, nor symmetric, nor transitive.
 \end{enumerate}
 \end{exer}
-Arrow diagrams are useful because they represent the relation in such a way that it is easy to deduce the relation's properties: 
+Digraphs are useful because they represent the relation in such a way that it is easy to deduce the relation's properties: 
 
-\begin{exer}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:21}
 \begin{enumerate}[(a)]
 \item
 How can you tell from looking at a digraph whether or not the corresponding relation is reflexive?
@@ -361,7 +371,7 @@ How can you tell from looking at a digraph whether or not the corresponding rela
 \item
 **How can you tell from looking at a digraph whether or not the corresponding relation is transitive? (\emph{This one is harder.})
 \end{enumerate}
-\end{exer}
+\end{exercise}
 
 
 %\begin{exer} \label{EvenLengthRelExer}
@@ -493,17 +503,17 @@ so $(a_1,b_1) \sim (a_3,b_3)$.
 \end{eg}
 
 
-\begin{exer} \label{EquivRelShowEx}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:EquivRelShowEx}
 Show that each of these binary relations is an equivalence relation.
 \begin{enumerate}[(a)]
 \item \label{EquivRelShowEx-x2min3x}
 The binary relation $\sim$ on $\real$ defined by $x \sim y$ iff $x^2 - 3x = y^2 - 3y$.
 \item \label{EquivRelShowEx-xminyinZ}
 The binary relation $\sim$ on $\real$ defined by $x \sim y$ iff $x - y \in \integer$.
-(\emph{Hint}: You may assume (without proof) that the negative of any integer is an integer, and that the sum of any two integers is an integer. For transitivity, notice that $x - z = (x - y) + (y - z)$.).
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item \label{EquivRelShowEx-ab=ab}
 The binary relation $\sim$ on $\mathbb{N} \times \mathbb{N}$ defined by $(a_1,b_1) \sim (a_2,b_2)$ iff $a_1 b_2 = a_2 b_1$.
-(\emph{Hint}: This is similar to the proof in Example \ref{NxNEquivRelEg}, but with multiplication in place of addition.)
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item \label{EquivRelComplex1}
 The binary relation $\sim$ on $\mathbb{C}$ defined by $z_1 \sim z_2$ iff $|z_1|=|z_2|$.
 \item \label{EquivRelComplex1}
@@ -512,7 +522,7 @@ The binary relation $\sim$ on $\mathbb{C}$  defined by $z_1 \sim z_2$ iff Re[$z_
 The binary relation $\sim$ on the collection of all finite sets defined by
 	$$ \text{$A \sim B$ \quad iff \quad $|A|=|B|$ (that is, $A$ and $B$ have the same number of elements)} $$
 \end{enumerate}
-\end{exer}
+\end{exercise}
 
 
 Any time we have a function, we also get an equivalence relation on its domain:
@@ -535,9 +545,9 @@ Suppose $f \colon A \to B$. If we define a binary relation~$\sim$ on~$A$ by
 then $\sim$ is an equivalence relation.
 \end{prop}
 
-\begin{exer} \label{EquivRelFromFuncPfEx}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:EquivRelFromFuncPfEx}
 Prove Proposition~\ref{proposition:EquivalenceRelationsChap:EquivRelFromFunc}. (That is, prove that the relation defined in the proposition is (a) reflexive, (b) symmetric, and (c) transitive.
-\end{exer}
+\end{exercise}
 
 
 
@@ -621,7 +631,7 @@ Suppose $\sim$ is an equivalence relation on a set~$S$. Then:
 \end{enumerate}
 \end{thm}
 
-\begin{exer} \label{EquivRelPropsPfEx}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:EquivRelPropsPfEx}
 Prove the assertions in Proposition~\ref{EquivRelProps}. You may use the following hints:
 \begin{enumerate}[(a)]
 \item
@@ -648,7 +658,7 @@ Use a similar proof to show that every element of $[a_2]$ is also an element of 
 \item
 You can prove this one by contradiction. Suppose the intersection is non-empty. Choose an element in the intersection. Use Definition~\ref{DefEquivRel} and the transitive property to derive a contradiction.
 \end{enumerate}
-\end{exer}
+\end{exercise}
 
 Proposition~ \ref{EquivRelProps} also gives us this important fact:
 
@@ -677,11 +687,11 @@ Therefore $\_\_\_\_\_\_\_\_ = [a] = \_\_\_\_\_\_\_\_$, as desired.
 \end{exercise}
 
 
-\section{Modular Arithmetic Redux} \label{EquivalenceRelationsModArithSect}
+\section{Modular arithmetic redux} \label{EquivalenceRelationsModArithSect}
 
 Abstract algebra often involves looking at familiar concepts and structures in a more general more abstract and ``elegant" way. As an example of this, we will now revisit modular arithmetic and describe it from an entirely different point of view, with the benefit of the concepts we have been developing in previous sections.
 
-In the Modular Arithmetic chapter we defined the concept of ``modular equivalence".  You may recall that we actually gave two definitions: 
+In the Modular Arithmetic chapter we defined the concept of ``modular equivalence".  You may recall that we actually gave two definitions, which we repeat here: 
 
 \begin{defn}\label{mod_eqiv_def_1} \emph{(Modular Equivalence, first definition)}
 
@@ -703,7 +713,7 @@ Using Definition \ref{DefEquivRel} and Definition  \ref{mod_eqiv_def_2}, show th
 
 Exercise~\ref{exercise:EquivalenceRelationsChap:ProveModEquiv} enables us to apply the concepts we've been developing to modular arithmetic. In particular, it enables us to describe modular arithmetic in terms of equivalence classes. We will do this first with a simple example: the integers mod 3.
 
-\subsection*{The integers modulo 3}
+\subsection{The integers modulo 3}
 
 We have proven in Exercise~\ref{exercise:EquivalenceRelationsChap:ProveModEquiv} that equivalence mod 3 is a bona fide equivalence relation. So what are the equivalence classes? And how many are there?
 \medskip
@@ -759,7 +769,7 @@ $$ \text{%the result of any arithmetic operation (modulo~$3$) will be either $[0
 \it If $r$ is the remainder when $a + b$ is divided by\/~$3$, then $\class{a} + \class{b} = \class{r}$.} $$
 You may recognize that this is essentially the same rule that we used in our previous discussion of modular arithmetic.
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:47}
 Write down similar rules for (a) subtraction mod 3; (b) multiplication mod 3.
 \end{exercise}
 
@@ -793,7 +803,7 @@ $\class{2}$&$\class{2}$&$\class{0}$&$\class{1}$ \\
 \end{eg}
 
 
-\begin{exer} \label{Mod3TablesEx}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:Mod3TablesEx}
 Make tables that show the results of:
 \begin{enumerate}[(a)]
 \item \label{Mod3TablesEx-multiplication}
@@ -802,11 +812,11 @@ multiplication modulo~$3$.
 subtraction modulo~$3$ (For $\class{a} - \class{b}$,  put the result in row $\class{a}$ and column; $\class{b}$.)
 \end{enumerate}
 For both (a) and (b), all table entries should be  either\/ $\class{0}$, $\class{1}$, or\/ $\class{2}$.
-\end{exer}
+\end{exercise}
 
 
 
-\subsection*{The integers modulo $n$}
+\subsection{The integers modulo $n$}
 The preceding discussion can be generalized to apply with any integer~$n$ in place of~$3$. This results in \bfii{ modular arithmetic}.
 
 \begin{defn} \label{integ_mod_n}
@@ -836,7 +846,7 @@ and\/ $\class{0}, \class{1}, \class{2}, \ldots, \class{n-1}$ are all distinct.
 \end{prop}
 
 
-\begin{exer} \label{ModArithEx}  
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:ModArithEx}  
 Make tables that show the results of:
 \begin{enumerate}[(a)]
 \item \label{ModArithEx-tables-addition} 
@@ -846,13 +856,13 @@ subtraction modulo~$5$.
 \item \label{ModArithEx-tables-multiplication} 
 multiplication modulo~$6$.
 \end{enumerate}
-\end{exer}
+\end{exercise}
 
-\begin{exer} \label{ModArithEx2}  
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:ModArithEx2}  
 Find $x,y \in \integer_{12}$ such that $x \neq \class{0}$ and $y \neq \class{0}$, but $x \cdot y = \class{0}$.
-\end{exer}
+\end{exercise}
 
-\subsection*{Something We Have Swept Under the Rug} \label{EquivalenceRelationsWellDefSect}
+\subsection{Something we have swept under the rug} \label{EquivalenceRelationsWellDefSect}
 
 The discussion of modular arithmetic ignored a very important point. When we evaluate $\class{a} \mathbin{+} \class{b}$, we use the following process:
 \begin{itemize}
@@ -874,7 +884,7 @@ So there's a little more work we have to do here to make sure that we don't get 
 \end{enumerate}
 Fortunately, these statements are all true, as you will show in the following exercise.
 
-\begin{exercise} 
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:54} 
 \begin{enumerate}[(a)]
 \item 
 Fill in the blanks in the following proof of statement (a) above that $\mathbin{+}$ is well-defined: 
@@ -902,12 +912,12 @@ By Definition~\ref{integ_mod_n} (c) then $\class{a_1} \mathbin{+} \class{b_1} = 
 
 Actually, finding operations that are well-defined on equivalence classes is somewhat of a big deal. In many cases, candidate operations turn out to be \emph{not} well-defined:
 
-\begin{exer} \label{ExpModNotWellDef}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:ExpModNotWellDef}
 Suppose we try to define an exponentiation operation on $\integer_3$ by:
 \[
  {[a]_3}^{\,\wedge} \, [b]_3 = [a^b]_3 \quad \text{ for } [a]_3, [b]_3 \in \integer_3. \]
 Show that $\;^{\wedge}$ is not well-defined: that is, find $a, b, c, d \in \integer$, such that $[a]_3 = [c]_3$ and $[b]_3 = [d]_3$, but $\left[a^b \right]_3 \neq \left[c^d \right]_3$.
-\end{exer}
+\end{exercise}
 
 \begin{exercise}\label{exercise:EquivalenceRelationsChap:WellDefEx}
 \begin{enumerate}[(a)]
@@ -918,7 +928,7 @@ Show that $\;^{\wedge}$ is not well-defined: that is, find $a, b, c, d \in \inte
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:57}
 \begin{enumerate}[(a)]
 \item
 Show that there is a well-defined function 
@@ -947,7 +957,7 @@ That is, show that there exists integers $a$, $b$ such that $[a]_n = [b]_n$ and 
 
 \section{Partitions}  \label{EquivalenceRelationsPartitionsSect}
 
-Whenever we classify the elements of a particular set, essentially what we are doing is dividing the set up into several disjoint subsets. This is called a  \bfii{ partition}\index{partition!of a set} of the set. Figure~\ref{partitionfig} below shows a schematic representation of a partition.
+Whenever we classify the elements of a particular set, essentially what we are doing is dividing the set up into several disjoint subsets. This is called a  \bfii{ partition}\index{Partition!of a set} of the set. Figure~\ref{partitionfig} below shows a schematic representation of a partition.
 
 \begin{center}
 \begin{figure}[ht]
@@ -1032,7 +1042,7 @@ Suppose $\sim$ is an equivalence relation on a set~$A$. The set of all equivalen
 Suppose we define an equivalence relation~$\sim$ on~$\integer$ by $a \sim b$ iff $a \equiv b \pmod{n}$. Then $\integer/\mathord{\sim}$ is simply another name for~$\integer_n$.
 \end{eg}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:66}
 Let $f\colon \{-3,-2,-1,0,1,2,3\} \to \mathbb{N}$ be defined by $f(x) =  x^2$. Define a relation $\sim$ on $\{-3,-2,-1,0,1,2,3\}$ by: $n \sim m$ iff $f(n) = f(m)$.
 \begin{enumerate}[(a)]
 \item
@@ -1042,19 +1052,21 @@ According to Proposition~\ref{EquivRel->Part}, this equivalence relation produce
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:EquivalenceRelationsChap:67}
 Consider the Cartesian plane $\mathbb{R}^2$. Let $C_r$ be the circle of radius $r$ centered at $(0,0)$, for $r \in [0,\infty)$.(Note that in mathematics, ``circle'' means just the circumference and not the interior: the interior of the circle is called a ``disk''.)
 \begin{enumerate}[(a)]
 \item
-If the point $(x,y) \in C_r$, then write an equation that $(x,y)$ must satisfy. (Hint: what is the equation of a circle?)
+If the point $(x,y) \in C_r$, then write an equation that $(x,y)$ must satisfy.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
 Show that $C_{r}$ and $C_{s}$ are disjoint whenever $r \neq s$. (Do this by showing that any element of $C_{r}$ is not an element of $C_{s}$, and vice versa).
 \item
 Show that the union of the set of all circles $\{C_r, r \in [0,\infty)$ is all of $\mathbb{R}^2$. (Do this by showing that every element of $\mathbb{R}^2$ is in at least one circle.)
 \item
-Show that the set of circles centered at $(0,0)$ form a partition of the Cartesian plane. (Hint: use (b) and (c).)
+Show that the set of circles centered at $(0,0)$ form a partition of the Cartesian plane.
+\hyperref[sec:EquivalenceRelationsChap:hints]{(*Hint*)}
 \item
-According to Proposition~\ref{Part->EquivRel} part~\ref{Part->EquivRel-equiv}, this partition  defines an equivalence relation $\sim$ on $\mathbb{R}^2$. Use the equation in part (a) of this exercise to complete the following sentence:  $(x_1,y_1) \sim (x_2,y_2)$ iff $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$.
+According to Proposition~\ref{Part->EquivRel} part~\ref{Part->EquivRel-equiv}, this partition  defines an equivalence relation $\sim$ on $\mathbb{R}^2$. Use the equation in part (a) of this exercise to complete the following sentence:  $(x_1,y_1) \sim (x_2,y_2)$ iff $\underline{~~~~~~~~~~~~~~}$.
 \end{enumerate}
 \end{exercise}
 
@@ -1065,11 +1077,6 @@ According to Proposition~\ref{Part->EquivRel} part~\ref{Part->EquivRel-equiv}, t
 
 %\section{Connected components of a graph}
 %???
-
-
-
- 
-  
 
 \begin{summary}
 \item Important definitions:

@@ -1,0 +1,1998 @@
+\chap{Appendix: Induction proofs--patterns and examples}{induction}
+
+
+\section{ Basic examples of induction proofs}\label{sec:basic_induction}
+
+Below is a complete proof of the
+formula for the sum of the first $n$ integers, that can serve as a model
+for proofs of similar sum/product formulas. \footnote{This entire section was ripped off (with permission!) from A. J. Hildebrand's excellent notes on induction (reformatted and minor edits  by C.T.).}
+
+\begin{prop}\label{proposition:induction:Induction1} For all $n\in\NN$,  it is true that
+\[
+\sum_{i=1}^n i=\frac{n(n+1)}{2}.
+\tag{$P(n)$}
+\]
+\end{prop}
+\begin{proof} \emph{(By induction)}:
+
+\noindent
+\textbf{Base case:} When $n=1$, the left side of $P(n)$ is $1$, and the
+right side is $1(1+1)/2=1$, so both sides are equal and ($*$) holds  
+for $n=1$.
+
+\noindent
+\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+formula $P(n)$ holds for $n=k$. Then
+\begin{align*}
+\sum_{i=1}^{k+1}i&=\sum_{i=1}^k i + (k+1)\quad\text{(by 
+definition of $\sum$ notation)}
+\\
+&=\frac{k(k+1)}{2}+(k+1)\quad \text{(by induction hypothesis)}
+\\
+&=\frac{k(k+1)+2(k+1)}{2}\quad \text{(by algebra)}
+\\
+&=\frac{(k+1)((k+1)+1)}{2}\quad \text{(by algebra)}.
+\end{align*}
+Thus, $P(n)$ holds for $n=k+1$, and the proof of the induction step is complete. 
+
+\noindent
+\textbf{Conclusion:} By the principle of induction, 
+we have proved that $P(n)$ holds for all $n\in\NN$.  
+\end{proof}
+
+
+\section{Advice on writing up induction proofs}
+Here are four things to keep in mind as you write up induction proofs.
+
+\noindent
+ \textbf{\#1: Begin any induction proof by stating precisely, 
+and prominently, the
+statement  you plan to prove.} 
+This statement typically involves an equation (or assertion) in the variable $n$, and we're trying to prove this equation (or assertion) for all natural numbers $n$ bigger than a certain value.  A good idea is to write out the statement and label it as ``$P(n)$'', so that it's easy to spot, and easy to reference; see the sample proofs for
+examples.
+
+\noindent
+\textbf{\#2: Be sure to properly begin and end the induction step.} 
+From a logical point of view, an induction step is a proof of a statement of the
+form, ``for all  $ k\in\NN, P(k)\Rightarrow P(k+1)$''. To prove such a statement,
+you need to start out by asserting,``let $k\in \NN$ be
+given''), then assume $P(k)$ is true (``Suppose $P(n)$ is true for $n=k$''), 
+and, after a sequence of logical deductions, derive $P(k+1)$ (``Therefore
+$P(n)$ is true for $n=k+1$''). 
+
+\noindent
+ \textbf{\#3: Use different letters for the general variable appearing in the
+statement you seek to prove ($n$ in the above example)
+and the variable used for the induction step 
+($k$ in the above example).} 
+The reason for this distinction is that in the induction step 
+you want to be able to say something like the following:
+``Let $k\in\NN$ be given, and suppose $P(k)$ .... 
+[Proof of induction step goes here] ...  
+Therefore $P(k+1)$ is true.''  Without introducing a second variable
+$k$, such a statement wouldn't make sense.
+
+\noindent
+\textbf{\#4: Always clearly state, at the appropriate place in the induction step,
+when the induction hypothesis is being used.} E.g., say
+``By the induction hypthesis we have ...'', or use a parenthetical
+note ``(by induction hypothesis)'' in a chain of equations as in the above
+example.  The induction hypothesis is the case $n=k$ of the statement we seek
+to prove (i.e., the statement ``$P(k)$'' and it is what you assume at the
+start of the induction step.  The place where this hypothesis is used is the
+most crucial step in an induction argument, and you must get this hypothesis into
+play at some point during the proof of the induction step---if not, you are
+doing something wrong. 
+
+
+\section{Induction proof patterns \& practice problems} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% induction, basic examples
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Induction proofs, type I: Sum/product formulas}
+ 
+The most common, and the easiest, application of induction is to prove
+formulas for sums or products of $n$ terms.  All of these proofs follow
+the same pattern.
+\medskip
+
+\noindent
+\bfii{Examples:}
+\begin{enumerate}
+
+\item
+$\sum_{i=0}^n r^i=\frac{1-r^{n+1}}{1-r}$ ($r\not=1$)
+(sum of finite geometric series)
+
+\item 
+$\sum_{i=1}^n i(i+1)=\frac{n(n+1)(n+2)}{3}$ 
+
+\item 
+$\sum_{i=0}^n 2^i=2^{n+1}-1$ (sum of powers of $2$)
+
+
+\item
+$\sum_{i=0}^n i! i = (n+1)!-1$. 
+
+\end{enumerate}
+
+We will give outlines for parts (a) and (d). Fill in the blanks for (a), and supply the items for (d). Parts (b) and (c) are up to you!
+
+\textbf{Proof of (a):}
+We seek to show that, for all $n\in\NN$,  
+\[
+\sum_{i=1}^n i(i+1)=\frac{n(n+1)(n+2)}{3}. 
+\tag{ 	$P(n)$}
+\]
+
+\textbf{Base case:} When $n=1$, the left side of $P(1)$ is equal to \underline{~~~~~},
+and the
+right side is equal to \underline{~~~~~~~}, so both sides are equal and $P(1)$ is
+true.
+
+\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+$P(k)$ is true. Then
+\begin{align*}
+\sum_{i=1}^{k+1}i(i+1)
+&=
+\sum_{i=1}^{k}i(i+1)
++\underline{~~~~~~~}
+\\
+&=\frac{k(k+1)(k+2)}{3} 
++\underline{~~~~~~~}
+\quad \text{(by induction hypothesis)}
+\\
+&=\frac{(k+1)(k+2)(k+3)}{3}.
+\end{align*}
+Thus, $P(\underline{~~~}$ holds, and the proof of the induction step is complete. 
+
+\textbf{Conclusion:} By the principle of induction,  it follows that
+\underline{~~~~} is true for all $n\in\NN$.  
+  {\hspace\fill$\square$\par\medskip}
+\medskip
+
+\textbf{Proof of (d):}
+\begin{enumerate}[(i)]
+\item
+What is the equation that must be shown  for all $n\in\NN$?  (Call this equation ``$P(n)$'').
+\item
+Identify the base case, and show that equation $P(n)$  holds for the base case.
+\item
+Write the left-hand side of  $P( k+1)$.
+\item
+Separate off the last term in the sum, so that you have a sum from 1 to $k$ plus an additional term.
+\item
+Use the induction hypothesis to replace the sum from 1 to $k$ with a simpler expression.
+\item
+Use algebra to obtain $P(k+1)$, which completes the proof of the induction step. 
+\end{enumerate}
+
+\textbf{Conclusion:} By the principle of induction, 
+$P(n)$ is true for all $n\in\NN$.  
+
+
+%We seek to show that, for all $n\in\NN$,
+%\[
+%\sum_{i=0}^n i! i
+%	= \underline{~~~~~~~~~~~}. 
+%	{$*$}
+%\]
+%
+%\textbf{Base case:} When $n=1$, the left side of ($*$) is equal to \underline{~~~~~},
+%and the
+%right side is equal to \underline{~~~~~}, so both sides are equal and ($*$) is
+%true for $n=$\underline{~~~}.
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+%($*$) is true for $n=$\underline{~~~~}. Then
+%\begin{align*}
+%\sum_{i=1}^{k+1}i\cdot i!
+%&=
+%\underline{~~~~~~~} + (k+1)(k+1)!
+%\\
+%&= \underline{~~~~~} + (k+1)(k+1)!
+%\quad \text{(by induction hypothesis)}
+%\\
+%&=(k+1)!(k+2)- \underline{~~~}
+%\\
+%&=(k+2)!-1.
+%\end{align*}
+%Thus, (2) holds for $n=$\underline{~~~~~}, and the proof of the induction step is complete. 
+%
+%\textbf{Conclusion:} By the principle of induction, 
+%($*$) is true for all $n\in\NN$.  
+  {\hspace\fill$\square$\par\medskip}
+
+
+\subsection*{Induction proofs, type II: Inequalities} 
+A second general type of application of induction is to prove inequalities
+involving a  natural number $n$.   These proofs also tend to be on the
+routine side; in fact, the algebra required is usually very minimal, in
+contrast to some of the summation formulas.
+
+In some cases the inequalities don't ``kick in'' until $n$ is 
+large enough. By checking the first few values of $n$ one can
+usually quickly determine the first  $n$-value, say $n_0$,
+for which the inequality holds.  Induction with $n=n_0$ as base case
+\medskip
+
+\noindent
+\bfii{Examples:}
+\begin{enumerate}
+
+\item $2^n>n$ 
+
+\item $2^n\ge n^2$ ($n\ge4$)
+
+\item $n!> 2^n$ ($n\ge4$)
+
+\item $(1-x)^n\ge 1-nx$ ($0<x<1$)
+
+\item $(1+x)^n\ge 1+nx$ ($x>0$)
+
+\end{enumerate}
+
+
+
+We will give outlines for (c) and (d). The other inequalities can
+be proved similarly.
+
+\medskip
+
+\textbf{Proof of (c):}
+A direct check of the inequality for the first few values of $n$ shows
+that the  inequality fails for $n=1,2,3$. But this doesn't matter, because we only have to show that it works for for all $n$ from $4$ onwards. 
+
+We are trying to show that 
+\[
+n!>2^n
+\tag{$P(n)$}
+\]
+holds for all $n\ge4$.
+
+\textbf{Base case:} For $n=4$, the left and right sides of $P(4)$ are equal to
+\underline{~~~}  and \underline{~~~~}, respectively, so $P(4)$ is true. 
+
+\textbf{Induction step:} Let $k\ge4$ be given and suppose 
+\underline{~~~~~~} is true. Then
+\begin{align*}
+(k+1)!&=k! \cdot (k+1)
+\\
+&>2^k \cdot \underline{~~~~~}
+\quad \text{(by \underline{~~~~~~~~~~~~})}
+\\
+&\ge 2^k\cdot 2
+\quad \text{(since $k\ge4$ and so $k+1\ge2$))}
+\\
+&=\underline{~~~~~~}.
+\end{align*}
+Thus, $\underline{~~~~~}$ holds, and the proof of the induction step is complete. 
+
+\textbf{Conclusion:} By the principle of induction, 
+it follows that  $P(n)$ is true for all $n\ge4$.  
+  {\hspace\fill$\square$\par\medskip}
+
+\bigskip
+
+\textbf{Proof of (d):}
+\begin{enumerate}[(i)]
+\item
+What statement do you need to prove for every  real number $0<x<1$  
+and any $n\in\NN$?  Call this statement ``$P(n)$''.
+\item  \textbf{Base case:} Show that  the left and right sides of $P(n)$ are 
+ equal in the base case.
+\item
+\textbf{Induction step:} Let $k\in\NN$ be given and suppose $P(k)$ is true
+for any real number $0<x<1$.   What do we seek to show?
+\item
+Rewrite $(1-x)^{k+1}$ as $(1-x)^k \cdot (1-x)$. Then use ($*$) for $n=k$ to obtain an inequality. Using basic algebra, simplify the right-hand side until you obtain a quantity that is greater than $1-(k+1)x$.
+\item
+What may you conclude about $P(k+1)$?
+\end{enumerate}
+\textbf{Conclusion:} By the principle of induction, it follows that $P(n)$
+holds for all $n\in\NN$.
+  {\hspace\fill$\square$\par\medskip}
+
+
+%We will prove that for any real number $0<x<1$  
+%\[
+%(1-x)^n\ge 1-nx.
+%\tag{$*$}
+%\]
+%holds for any $n\in\NN$.
+%
+%\textbf{Base case:} For $n=$\underline{~~}, the left and right sides of ($*$) are 
+%both equal to  \underline{~~~~}, so ($*$) holds.
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given and suppose ($*$) is true
+%for $n=$\underline{~~} and any real number $0<x<1$.   We seek to show that ($*$) holds
+%for $n=$\underline{~~~~} and any real number $0<x<1$.
+%
+%Let $0<x<1$ be given. Then
+%\begin{align*}
+%(1-x)^{k+1}
+%&=(1-x)^k \cdot \underline{~~~~}
+%\\
+%&\ge (1-kx) \cdot \underline{~~~~} 
+%\quad\text{(by \underline{~~~~} since $0<x<1$, so $(1-x)>0$)}
+%\\
+%&=1-(k+1)x +\underline{~~~~}
+%\quad\text{(by algebra)}
+%\\
+%&\ge 1-(k+1)x 
+%\quad\text{(since \underline{~~~~~~~})}.
+%\end{align*}
+%Hence ($*$) holds for $n=$\underline{~~~~~}, and the proof of the induction step is
+%complete.
+%
+%\textbf{Conclusion:} By the principle of induction, it follows that ($*$)
+%holds for all $n\in\NN$.
+%  {\hspace\fill$\square$\par\medskip}
+
+
+\subsection*{Induction proofs, type III:
+Extension of theorems from $2$ variables to $n$ variables}
+Another very common and usually routine application of induction is to
+extend general results that have been proved for the case of $2$
+variables to the case of $n$ variables.  Below are some examples.
+In proving these results, use the case $n=2$ as base case. To see how to
+carry out the general induction step (from the case $n=k$ to
+$n=k+1$), it may be  helpful to first try to see how get from the base
+case $n=2$ to the next case $n=3$.
+\medskip
+
+\noindent
+\bfii{Examples:}
+\begin{enumerate}
+
+\item{} 
+% [Problem 3.15]
+Show that if $x_1,\dots,x_n$ are odd, then $x_1x_2\dots x_n$ is odd.
+(Use the fact (proved earlier) that the product of two odd numbers is
+odd, as starting point, and use induction to 
+extend this result to the product of $n$ odd numbers.)
+
+\item{}
+Show that if $a_i$ and $b_i$ ($i=1,2,\dots,n$) are real numbers such that 
+$a_i\le b_i$ for all $i$, then 
+\[
+\sum_{i=1}^na_i\le \sum_{i=1}^nb_i. 
+\]
+(Use the fact (from Chapter 1) that $a\le b$ and $c\le d$ implies
+$a+c\le b+d$.)
+
+
+\item
+Show that if $x_1,\dots,x_n$ are real numbers, then
+\[
+\left|\sin\left(\sum_{i=1}^n x_i\right)\right|
+\le \sum_{i=1}^n\left|\sin x_i\right|.
+\]
+(Use the trig identity for $\sin(\alpha+\beta)$.)  
+
+\item{}
+Show that if $A_1,\dots, A_n$ are sets, then 
+\[
+\left(A_1\cup \dots \cup A_n\right)^c
+=A_1^c\cap\dots \cap A_n^c.
+\]
+(This is a generalization of De Morgan's Law to unions of $n$ sets.
+Use De Morgan's Law for two sets ($(A\cup B)^c=A^c\cap B^c$) and induction
+to prove this result.)
+
+
+\end{enumerate}
+
+
+We'll give outlines of the proofs of (a) and (b):
+\bigskip
+
+\textbf{Proof of (a):} We will prove by induction on $n$ the following statement: 
+\[
+\tag{$P(n)$}
+\text{\slshape If $x_1,\dots,x_n$ are odd numbers, then 
+$x_1x_2\dots x_n$ is odd.}
+\]
+
+We will use the following fact (proved earlier): 
+\[
+\tag{$**$}
+\text{If $x$ and $y$ are odd, then $xy$ is odd.}
+\]
+
+\textbf{Base case:} For $n=1$, the product $x_1\dots x_n$ reduces to 
+\underline{~~~~}, which  is odd whenever $x_1$ is odd. 
+Hence $P(n)$ is true for $n=1$.
+
+\textbf{Induction step.}
+\begin{itemize}
+\item Let $k\ge 1$, and suppose ($*$) is true for $n=k$, i.e.,
+suppose that any product of \underline{~~~}  odd numbers is again odd.
+\item
+We seek to show that \underline{~~~~} is true, i.e., that any product of \underline{~~~}
+odd numbers is odd. 
+\item
+Let $x_1,\dots,x_{k+1}$ be odd numbers. 
+\item
+Applying the induction hypothesis to $x_1,\dots,x_k$, we obtain that the
+product \underline{~~~~~~} is odd. 
+\item
+Since $x_{k+1}$ is \underline{~~~}  and, by ($**$), the product of two odd numbers is
+again odd, it follows that $x_1x_2\dots x_{k+1} = (x_1\dots x_k)x_{k+1}$
+is odd.
+\item
+As $x_1,\dots,x_{k+1}$ were arbitrary odd numbers, we have proved
+\underline{~~~~~}, so the induction step is complete.
+\end{itemize}
+
+\textbf{Conclusion:} By the principle of induction, it follows that 
+($*$) is true for all $n\in\NN$.
+  {\hspace\fill$\square$\par\medskip}
+
+\bigskip
+
+\textbf{Proof of (b):} 
+
+\begin{enumerate}[(i)]
+\item
+What statement do we want to prove  for all natural numbers $n$ and for all real numbers $a_i$ and $b_i$ ($i=1,\dots,n$)
+such that $a_i\le b_i$? Call this statement ``P(n)''.
+(Note that the condition ``for all real numbers $a_i$ and $b_i$''
+must be part of the induction statement we seek to prove.)
+\item
+\textbf{Base case:} Show that $P(1)$ is true.
+\item
+\textbf{Induction step:}  Let $k\ge 1$. Write $P(k)$.
+\item
+What do you seek to prove?
+\item
+(Fill in the blanks) 
+Let $a_1,\dots,a_{k+1}$ and $b_1,\dots,b_{k+1}$ be given real numbers
+such that \underline{~~~~~} for each $i$.
+\item Then
+\begin{align*}
+\sum_{i=1}^{k+1}a_i
+&=\underline{~~~~~} + a_{k+1}.
+\end{align*}
+\item
+Use basic algebra to show that  $P(k+1)$ and the given numbers $a_1,\dots,a_{k+1}$ 
+and $b_1,\dots,b_{k+1}$.
+\item 
+What may we conclude?
+\end{enumerate}
+
+
+\textbf{Conclusion:} By the principle of induction, 
+it follows that $P(n)$ is true for all $n\in\NN$.  
+  {\hspace\fill$\square$\par\medskip}
+
+
+%We will prove by induction on $n$ the following statement: 
+%
+%\[
+%\tag*{$P(n)$:}
+%\parbox{5in}{\slshape For all real numbers $a_i$ and $b_i$ ($i=1,\dots,n$)
+%such that $a_i\le b_i$ for all $i$ we
+%have}
+%\]
+%\[
+%\sum_{i=1}^na_i\le \underline{~~~~~~~}. 
+%\tag{$*$}
+%\]
+%(Note that the condition ``for all real numbers $a_i$ and $b_i$''
+%must be part of the induction statement we seek to prove.)
+%
+%\textbf{Base case:} For $n=1$, the 
+%left and right sides are \underline{~~~} and \underline{~~~~}, respectively, and the
+%inequality ($*$) therefore follows from our hypothesis that
+%$a_i\le b_i$ for all $i=1,\dots,n$.  Hence \underline{~~~~} is true.
+%
+%\textbf{Induction step:}
+%\begin{itemize}
+%\item Let $k\ge 1$, and suppose $P(k)$ is true, i.e.,
+%suppose that 
+%for $n=$\underline{~~~} and any choice of real numbers 
+%$a_1,\dots,a_k$ and $b_1,\dots,b_k$ 
+%satisfying \underline{~~~~} for each $i$, the inequality ($*$) holds.
+%\item
+%We seek to show that \underline{~~~} is true, i.e., that 
+%for $n=$\underline{~~~~}
+%any choice of real numbers $a_1,\dots,a_{k+1}$ and $b_1,\dots,b_{k+1}$
+%satisfying \underline{~~~~~} for each $i$, the inequality ($*$) holds.
+%\item
+%Let $a_1,\dots,a_{k+1}$ and $b_1,\dots,b_{k+1}$ be given real numbers
+%such that \underline{~~~~~} for each $i$.
+%\item Then
+%\begin{align*}
+%\sum_{i=1}^{k+1}a_i
+%&=\underline{~~~~~} + a_{k+1}
+%\\
+%&\le \underline{~~~~~~} + a_{k+1}
+%\quad \text{(by induction hypothesis applied to $a_1,\dots a_k$)}
+%\\
+%&\le \sum_{i=1}^{k}b_i + \underline{~~~~~}
+%\quad \text{(by assumption $a_{k+1}\le b_{k+1}$)}
+%\\
+%&=\sum_{i=1}^{k+1}b_i.
+%\end{align*}
+%\item 
+%Thus, ($*$) holds for $n=$\underline{~~~~} and the given numbers $a_1,\dots,a_{k+1}$ 
+%and $b_1,\dots,b_{k+1}$.
+%\item Since the $a_1,\dots,a_{k+1}$ 
+%and $b_1,\dots,b_{k+1}$ were arbitrary
+%real numbers satisfying $a_i\le b_i$ for each $i$,
+%we have obtained statement $P(k+1)$, 
+%and the proof of the induction step is complete.
+%\end{itemize}
+%
+%
+%\textbf{Conclusion:} By the principle of induction, 
+%it follows that $P(n)$ is true for all $n\in\NN$.  
+%  {\hspace\fill$\square$\par\medskip}
+
+
+%} 
+%\longsol{
+%We seek to prove by induction on $n$ the following statement: 
+%\[
+%\tag*{$P(n)$:}
+%\parbox{5in}{\slshape For all real numbers $x_1,\dots,x_n$ 
+%we have}
+%\]
+%\[
+%\left|\sin\left(\sum_{i=1}^n x_i\right)\right|
+%\le \sum_{i=1}^n\left|\sin x_i\right|.
+%\tag{$*$}
+%\]
+%
+%The key to the argument is the trig identity
+%\[
+%\sin(\alpha+\beta)=\sin\alpha \cos \beta+\sin\beta\cos\alpha,
+%\]
+%which is valid for any real $\alpha$ and $\beta$. Since $|\cos x|\le 1$,
+%this identity implies, via the triangle inequality,
+%\begin{align*}
+%\tag{$**$}
+%|\sin(\alpha+\beta)|
+%&\le|\sin\alpha \cos \beta|+|\sin\beta\cos\alpha|
+%\\
+%&\le|\sin\alpha|+|\sin\beta|.
+%\end{align*}
+%The inequality $(**)$ is the case $n=2$ of the statement $(*)$ 
+%we seek to prove, and will be needed in the induction proof. (One could
+%also use it as the base case of an induction proof that starts with $n=2$, 
+%but it is easier to start the induction with $n=1$, where the base case
+%is trivial.)
+%
+%\bigskip
+%
+%
+%\textbf{Base case:} For $n=1$, the 
+%left and right sides of ($*$) are both equal to $|\sin x_1|$, so  
+%($*$) holds trivially in this case. Hence $P(1)$ is true.
+%
+%\textbf{Induction step:}
+%\begin{itemize}
+%\item Let $k\ge 1$, and suppose $P(k)$ is true, i.e.,
+%suppose that ($*$) holds for $n=k$ and any choice of real numbers 
+%$x_1,\dots,x_k$.
+%\item
+%We seek to show that $P(k+1)$ is true, i.e., that for
+%any choice of real numbers $x_1,\dots,x_{k+1}$
+%the inequality ($*$) holds. 
+%\item
+%Let $x_1,\dots,x_{k+1}$  be given real numbers. 
+%\item Then
+%\begin{align*}
+%\left|\sin\left(\sum_{i=1}^{k+1} x_i\right)\right|
+%&=\left|\sin\left(\left(\sum_{i=1}^{k} x_i\right) + x_{k+1}\right)\right|
+%\\
+%&\le \left|\sin\left(\sum_{i=1}^{k} x_i\right)\right|
+%+ \left|\sin x_{k+1}\right|
+%\quad \text{(by ($**$)
+%with $\alpha=\sum_{i=1}^k x_i$ and $\beta=x_{k+1}$)}
+%\\
+%&\le \sum_{i=1}^k\left|\sin x_i\right|
+%+ \left|\sin x_{k+1}\right|
+%\quad \text{(by induction hypothesis applied to $x_1,\dots, x_k$)}
+%\\
+%&=\sum_{i=1}^{k+1}\left|\sin x_i\right|.
+%\end{align*}
+%\item 
+%Thus, ($*$) holds for $n=k+1$ and the given numbers $x_1,\dots,x_{k+1}$.
+%\item
+%Since the $x_1,\dots,x_{k+1}$ were
+%arbitrary real numbers, we have obtained statement $P(k+1)$, and 
+%proof of the induction step is complete.
+%\end{itemize}
+%
+%\textbf{Conclusion:} By the principle of induction, 
+%it follows that $P(n)$ is true for all $n\in\NN$.  
+%} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\longsol{
+%We seek to prove by induction on $n$ the following statement: 
+%\[
+%\tag*{$P(n)$:}
+%\parbox{5in}{\slshape For all sets $A_1,\dots,A_n$  
+%we have}
+%\]
+%\[
+%\left(A_1\cup \dots \cup A_n\right)^c
+%=A_1^c\cap\dots \cap A_n^c.
+%\tag{$*$}
+%\]
+%
+%The key to the argument is two set version of De Morgan's Law:
+%\[
+%(A\cup B)^c = A^c\cap B^c,
+%\tag{$**$}
+%\]
+%which holds for any sets $A$ and $B$.
+%
+%
+%\textbf{Base case:} For $n=1$, the 
+%left and right sides of ($*$) are both equal to $A_1^c$,
+%so ($*$) holds trivially in this case. Hence $P(1)$ is true.
+%\iffalse
+%Though not necessary, we can also easily verify the next case,
+%$n=2$: In this case, the left and right sides of ($*$) are $(A_1\cup A_2)^c$
+%and $A_1^c\cap A_2^c$, respectively, so the identity is just the two set
+%version of De Morgan's Law, i.e., ($**$) with $A=A_1$ and $B=A_2$.
+%\fi
+%
+%\textbf{Induction step:} 
+%\begin{itemize}
+%\item Let $k\ge 1$, and suppose $P(k)$ is true, i.e.,
+%suppose that ($*$) holds for $n=k$ and any sets $A_1,\dots,A_k$.
+%\item
+%We seek to show that $P(k+1)$ is true, i.e., that for
+%any sets $A_1,\dots,A_{k+1}$, ($*$) holds. 
+%\item
+%Let $A_1,\dots,A_{k+1}$  be given sets.
+%\item
+%Then
+%\begin{align*}
+%\left(A_1\cup \dots \cup A_{k+1}\right)^c
+%&=\left(\left(A_1\cup \dots \cup A_{k}\right)\cup A_{k+1}\right)^c
+%\\
+%&=\left(A_1\cup \dots \cup A_{k}\right)^c\cap A_{k+1}^c
+%\quad \text{(by ($**$) with $A=(A_1\cup \dots \cup A_k)$ and 
+%$B=A_{k+1}$)}
+%\\
+%&=\left(A_1^c\cap\dots \cap A_k^c\right)\cap A_{k+1}^c
+%\quad \text{(by induction hypothesis applied to $A_1,\dots, A_k$)}
+%\\
+%&=A_1^c\cap\dots \cap A_k^c\cap A_{k+1}^c.
+%\end{align*}
+%\item
+%Thus, ($*$) holds for $n=k+1$
+%and the given sets $A_1,\dots,A_{k+1}$.
+%\item 
+%Since the $A_1,\dots,A_{k+1}$ were
+%arbitrary sets, we have obtained statement $P(k+1)$, and the 
+%proof of the induction step is complete.
+%\end{itemize}
+%
+%\textbf{Conclusion:} By the principle of induction, 
+%it follows that $P(n)$ is true for all $n\in\NN$.  
+%} 
+
+
+
+\section{Strong Induction, with applications}\label{strong_induction}
+
+
+One of the most common applications of induction is to problems involving
+recurrence sequences such as the Fibonacci numbers, and to representation
+problems such as the representation of integers as a product of primes
+(Fundamental Theorem of Arithmetic), sums of powers of $2$ (binary
+representation), and sums of stamp denominations (postage stamp problem).
+
+In applications of this type, the case $n=k$ in the induction step is
+not enough to deduce the case $n=k+1$; one usually needs additional
+predecessors predecessors to get the induction step to work, e.g., 
+the two preceding cases $n=k$ and $n=k-1$, or 
+\emph{all} preceding cases
+$n=k,k-1,\dots,1$.  This variation of the induction
+method is called \textbf{strong induction}.  The induction principle
+remains valid in this modified form. 
+
+
+\subsection*{Strong induction and recurrences}
+In the induction proofs we've looked at so far, we first had to prove a base case, and then used a preceding case ($n=k$) to prove the case $n=k+1$ in the induction step. But when we aply  induction to two-term recurrence sequences like the Fibonacci
+numbers, we'll need \emph{two} preceding cases, $n=k$ and $n=k-1$, in
+the induction step, and \emph{two} base cases (e.g., $n=1$ and $n=2$) to get
+the induction going.  The logical structure of such a proof is of the
+following form:
+
+\noindent
+\textbf{Base step:}  $P(n)$ is true for $n=1,2$.
+\smallskip
+
+\noindent
+\textbf{Induction step:} Let $k\in\NN$ with $k\ge 2$ be given
+and assume $P(n)$ holds for $n=k$ and $n=k-1$.
+\medskip
+
+[... Work goes here ...] 
+\medskip
+
+\noindent
+Therefore $P(n)$ holds for $n=k+1$.
+\smallskip
+
+\noindent
+\textbf{Conclusion:} By the principle of strong induction, 
+$P(n)$ holds for all $n\in\NN$.
+\smallskip
+
+\noindent
+Note that in the induction step, one could also say ``Assume
+$P(n)$ holds for `` $n=1,2,\dots, k$''; this is a bit redundant as only
+the last two of the cases $n=1,2,\dots,k$ are needed, though logically
+correct. 
+
+Here is a worked-out example of a proof by strong induction.
+
+
+\begin{prop}
+Let $a_n$ be the sequence defined by 
+$a_1=1$, $a_2=8$, and $a_n=a_{n-1}+2a_{n-2}$ for $n\ge3$.
+Then
+$a_n=3\cdot 2^{n-1}+2(-1)^n$ for all $n\in\NN$.
+\end{prop}
+
+\begin{proof}
+We'll prove by strong induction that, for all $n\in\NN$, 
+\[
+\tag{$P(n)$}
+a_n=3\cdot 2^{n-1}+2(-1)^n.
+\]
+
+\textbf{Base case:} 
+When $n=1$, the left side of $P(1)$ is $a_1 =1$, and
+the right side is $3\cdot 2^{0}+2\cdot(-1)^1=1$,
+so both sides are equal and $P(1)$ is
+true. 
+
+When $n=2$, the left and right sides of $P(2)$ are
+$a_2=8$ and $3\cdot 2^1+2\cdot(-1)^2=8$, so $P(2)$ also holds.
+
+
+\textbf{Induction step:} Let $k\in\NN$ with $k\ge2$ be given and suppose 
+$P(n)$ is true for $n=1,2,\dots,k$. Then
+\begin{align*}
+a_{k+1}&=a_{k}+2a_{k-1}
+\quad \text{(by recurrence for $a_n$)}
+\\
+&=
+3\cdot 2^{k-1}+2\cdot(-1)^k
++2\left(3\cdot 2^{k-2}+2\cdot(-1)^{k-1}\right)
+\quad \text{(by $P(k)$ and $P(k-1)$)}
+\\
+&=
+3\cdot \left(2^{k-1}+2^{k-1}\right) 
++2\left((-1)^k+2(-1)^{k-1}\right)
+\quad \text{(by algebra)}
+\\
+&=
+3\cdot 2^k+2(-1)^{k+1}
+\quad \text{(more algebra).}
+\end{align*}
+Thus, $P(k+1)$) holds, and the proof of the induction step is complete. 
+
+\textbf{Conclusion:} By the strong induction principle,  it follows that
+$P(n)$ is true for all $n\in\NN$.  
+\end{proof}
+
+\subsection*{Strong Induction and representation problems}
+For applications to representation problems one 
+typically requires the induction hypothesis in its strongest possible
+form, where one assumes \emph{all} preceding
+cases (i.e., for $n=1,2,\dots,k$) instead of just the immediate
+predecessor (as in simple induction) or two predecessors (as in strong induction applied to two-term recurrences). 
+
+Below is a classic example of this type, a proof that every integer
+$\ge2$ can be written as a product of prime numbers. This is the
+existence part of what is called the Fundamental Theorem of Arithmetic;
+the other part guarantees uniquess of the representation, which we will
+not be concerned with here.  
+
+The precise definitions of ``prime'' and ``composite'' are as follows:
+An integer $n\ge2$ is called \textbf{composite}
+if it can be written as $n=ab$
+with integers $a,b$ satisfying $2\le a,b<n$.
+An integer $n\ge 2$ is called \textbf{prime} if it cannot 
+be factored in this way.
+(Only integers $\ge2$ are classified in this way. In
+particular, the number $1$ is neither prime nor composite.)
+
+Using these definitions, we may now state and prove:
+
+\begin{prop}\emph{(Fundamental Theorem of Arithmetic: existence)}
+
+Any integer $n\ge 2$
+is either a prime or can be represented as a product of (not
+necessarily distinct) primes, i.e., in the form $n=p_1p_2\dots p_r$,
+where the $p_i$ are primes.
+\end{prop}
+
+\begin{proof}
+We will prove by strong induction that the following statement  
+holds for all integers $n\ge2$.
+\[
+\text{$n$ can be represented as a product of one or more primes.}
+\tag{$P(n)$}
+\]
+
+\textbf{Base case:} The integer $n=2$ is a prime since it cannot be
+written as a product $ab$, with integers $a,b\ge 2$,  so $P(n)$ holds
+for $n=2$.
+
+
+\textbf{Induction step:} 
+\begin{itemize}
+
+\item Let $k\ge2$ be given and suppose $P(n)$ is true for all 
+integers $2\le n\le k$, i.e., suppose that all such $n$ can be represented 
+as a product of one or more primes.
+\item We seek to show that $k+1$ also has a
+representation of this form.
+\item
+If $k+1$ itself is prime, then $P(n)$ holds for $n=k+1$, and we are done.
+\item
+Now consider the case when $k+1$ is composite.
+\item 
+By definition, this means that $k+1$
+can be written in the form $k+1=ab$, where $a$ and $b$ are integers satisfying
+$2\le a,b< k+1$, i.e., $2\le a,b\le k$. 
+\item
+Since $2\le a,b\le k$, the induction hypothesis can be applied to $a$ and $b$
+and shows that $a$ and $b$ can be represented as products
+of one or more primes.
+\item
+Multiplying these two representations gives a representation of $k+1$ as
+a product of primes. 
+\item
+Hence $k+1$ has a representation of the desired form, so $P(n)$ holds
+for $n=k+1$, and the induction step is
+complete.
+\end{itemize}
+
+\textbf{Conclusion:} By the strong induction principle, 
+it follows that $P(n)$  is true for all $n\ge2$, i.e., every integer
+$n\ge2$ is either a prime or can be represented as a product of primes.
+\end{proof}
+
+\section{More advice on  induction and strong induction proofs}
+
+\noindent
+\bfii{Should I use ordinary induction or strong induction?}
+With some standard types of problems (e.g., sum formulas) 
+it is clear ahead of time what type of induction is \emph{likely} to be
+required, but usually this question answers itself during 
+the exploratory/scratch phase of the argument. In the induction step you
+will need to reach the $k+1$ case, and you should ask yourself which of
+the previous cases you need to get there. If all you need to prove the
+$k+1$ case is the case $k$ of the statement, then ordinary induction is
+appropriate. If two preceding cases, $k-1$ and $k$, are necessary to get
+to $k+1$, then (a weak form of) strong induction is appropriate. If one
+needs the full range of preceding cases (i.e., all cases
+$n=1,2,\dots,k$), then the full force of strong induction is needed.
+
+
+\noindent
+\bfii{ How many base cases are needed?} 
+The number of base cases to be checked depends on how far back one needs to
+``look'' in the induction step. In standard induction proofs (e.g., for summation
+formulas) the induction step requires only the immediately preceding case (i.e., the
+case $n=k$), so a single base case is enough to start the induction.   
+\begin{itemize}
+\item 
+For Fibonacci-type problems, 
+the induction step usually requires the result for the two preceding cases,
+$n=k$ and $n=k-1$. To get the induction started, one therefore needs to know 
+the result for two consecutive cases, e.g., $n=1$ and $n=2$. 
+\item 
+In postage stamp type problems, getting the result for
+$n=k+1$  might require knowing the result for $n=k-2$ and  
+$n=k-6$, say. This amounts to ``looking back'' $7$ steps  (namely
+$n=k,k-1,\dots,k-6$), so $7$ consecutive cases are needed to get the
+induction started.
+\item 
+On the other hand, in problems involving the full strength of the strong
+induction hypothesis (i.e., if in the induction step one needs to assume the
+result for \emph{all} preceding cases $n=k,k-1,\dots,1$),  a single base
+case may be sufficient.  An example is the Fundamental Theorem of
+Arithmetic.
+\end{itemize}
+
+\noindent
+ \bfii{How do I write the induction step?}
+As in the case of ordinary induction, at the beginning of the 
+induction step \emph{state precisely 
+what you are assuming, including any constraints on the induction variable
+$k$}.  Without an explicitly stated assumption, the argument is incomplete.  The
+appropriate induction hypothesis depends on the nature of the problem and the
+type of induction used.  Here are some common ways to start out an induction
+step:
+\begin{itemize}
+\item ``Let $k\in \NN$ be given and assume $P(k)$ is true.''    
+(typical form for standard induction proofs)
+\item ``Let $k\ge 2$ be given and assume $P(n)$ holds for $n=k-1$ and $n=k$.''
+(typical form for induction involving recurrences)
+\item ``Let $k\in \NN$ be given and assume $P(n)$ holds for $n=1,2,\dots,k$.''
+(typical form for representation problems)
+\end{itemize}
+
+\section{Common mistakes}
+ The following examples illustrate
+some common mistakes in setting up base case(s) and the induction step.
+
+\begin{itemize}
+
+\item[]  \textbf{Example 1.}
+\begin{itemize}
+\item \textbf{Base step:} $n=3$.
+\item \textbf{Induction step:} Let $k\in \NN$ with $k\ge 3$ be given and
+assume $(*)$ is true for $n=k$ and $n=k-1$. 
+\item \textbf{Comment:}
+\textbf{BAD:} When $k=3$ (the first case of the induction step), the induction 
+step requires the cases $3$ and $2$, but only $2$ is covered in the base
+step.\\
+\textbf{FIX:} Add the case $n=2$ to the base step. 
+\end{itemize}
+\item[]   \textbf{Example 2.}
+\begin{itemize}
+\item \textbf{Base step:} $n=1$ and $n=2$.
+\item \textbf{Induction step:} Let $k\in \NN$ with $k>2$ be given and
+assume $P(n)$ is true for $n=k$ and $n=k-1$. 
+\item \textbf{Comment:}
+\textbf{BAD.} Gap between base case and the first case  
+of the induction step: The first case $k=3$ of the induction step
+requires the cases $3$ and $2$, but the base step only gives the cases
+$1$ and $2$.\\
+\textbf{FIX:} Start induction step at $k=2$ rather than $k=3$:
+``Let $k\in\NN$ with $k\ge 2$ be given \dots''
+\end{itemize}
+
+\item[]   \textbf{Example 3.}
+\begin{itemize}
+\item \textbf{Base step:} $n=1$ and $n=2$.
+\item \textbf{Induction step:} Assume 
+$P(n)$ is true for $n=k$ and $n=k-1$.   Then ...
+\item \textbf{Comment:} \textbf{BAD.} The variable $k$ in the  induction
+step is not quantified.\\
+\textbf{FIX:} Add ``Let $k\in\NN$ with $k\ge2$ be given.''
+\end{itemize}
+
+\item[]   \textbf{Example 4.}
+\begin{itemize}
+\item \textbf{Base step:} $n=1$ and $n=2$.
+\item \textbf{Induction step:} Let $k\in \NN$ be given and
+assume $P(n)$ is true for $n=k$ and $n=k-1$.
+\item \textbf{Comment:} 
+\textbf{BAD.}  Here the first case induction step is $k=1$, with the induction
+hypothesis being the cases $n=k$ and $n=k-1$. But when $k=1$, the second of
+these cases, $n=k-1=0$, is out of range.\\
+\textbf{FIX:} Add the restriction $k\ge2$ to the induction step:
+``Let $k\in\NN$ with $k\ge2$ be given.''
+
+\end{itemize}
+
+\end{itemize}
+
+
+
+
+\section{Strong induction practice problems}\label{strong_induction_practice} 
+
+
+\begin{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% recurrence sequences 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item \textbf{Recurrences:} 
+The first  few problems deal with properties of the Fibonacci sequence
+and related recurrence sequences.
+The Fibonacci sequence is defined by $F_1=1$, $F_2=1$, and
+$F_n=F_{n-1}+F_{n-2}$ for $n\ge 3$. Its first few terms are
+$1,1,2,3,5,8,13,21,34,55,89,144,\dots$.
+
+In the following problems, use an appropriate form of
+induction (standard induction or strong induction) 
+to establish the desired properties and formulas. (Note that
+some of these problems require only ordinary induction.)
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+\textbf{Fibonacci sums:}
+Prove that $\sum_{i=1}^n F_i=F_{n+2}-1$ for all $n\in\NN$.
+
+\item 
+\textbf{Fibonacci matrix:}
+\newcommand{\mat}[4]{\begin{pmatrix}#1 & #2 \\ #3 & #4\end{pmatrix}}
+Show that, for all $n\in\NN$, 
+\[
+\tag{$P(n)$}
+\mat 1110^n
+=\mat
+{F_{n+1}}{F_n}
+{F_n}{F_{n-1}}.
+\]
+
+
+\item \textbf{Odd/even Fibonacci numbers:}
+Prove that the Fibonacci numbers follow the pattern odd,odd,even:
+that is, show that for any positive integer $m$, 
+$F_{3m-2}$ and $F_{3m-1}$ are odd and $F_{3m}$ is even.
+
+
+\item
+\textbf{Inequalities for recurrence sequences:}
+Let the sequence $T_n$ (``Tribonacci sequence'')
+be defined by $T_1=T_2=T_3=1$ and $T_n=T_{n-1}+T_{n-2}+T_{n-3}$ for
+$n\ge4$.  Prove that  
+\[
+T_n<2^n
+\tag{$P(n)$}
+\]
+holds for all $n\in\NN$.
+
+
+We'll give an outline for the proof of (d). 
+
+%\longsol{
+%We seek to show that, for all $n\in\NN$, 
+%\[
+%\tag{$*$}
+%\sum_{i=1}^n F_i=F_{n+2}-1.
+%\]
+%
+%\textbf{Base case:} When $n=1$, the left side of ($*$) is $F_1 =1$,
+%and the
+%right side is $F_3-1=2-1=1$, so both sides are equal and ($*$) is
+%true for $n=1$.
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+%($*$) is true for $n=k$. Then
+%\begin{align*}
+%\sum_{i=1}^{k+1}F_i
+%&=
+%\sum_{i=1}^{k}F_i
+%+F_{k+1}
+%\\
+%&=F_{k+2}-1 + F_{k+1}
+%\quad \text{(by ind. hyp. $(*)$ with $n=k$)}
+%\\
+%&=F_{k+3}-1 
+%\quad \text{(by recurrence for $F_n$)}
+%\end{align*}
+%Thus, ($*$) holds for $n=k+1$, and the proof of the induction step is complete. 
+%
+%\textbf{Conclusion:} By the principle of induction,  it follows that
+%($*$) is true for all $n\in\NN$.  
+%
+%\bigskip
+%
+%\textbf{Remark:} Here standard induction was sufficient, since we were
+%able to relate the $n=k+1$ case directly to the $n=k$ case, in the
+%same way as in the induction proofs for summation formulas like 
+%$\sum_{i=1}^n i=n(n+1)/2$.  Hence, a single base case was sufficient.
+%}
+
+%(For convenience, we define $F_0=0$; with this definition, the recurrence
+%relation $F_n=F_{n-1}+F_{n-2}$ holds for all $n\ge2$ and the above matrix
+%is well defined for all $n\ge1$.)
+%
+%\textbf{Base case:} When $n=1$, 
+%the four entries of the matrix on the right are $F_2=1$, $F_1=1$, $F_1=1$, 
+%and $F_0=0$, so ($*$) holds in this case. 
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+%($*$) holds for $n=k$. Then
+%\begin{align*}
+%\mat 1110^{k+1}
+%&=\mat 1110^k\mat1110
+%\\
+%&=\mat{F_{k+1}}{F_k}
+%{F_k}{F_{k-1}}\mat1110
+%\quad\text{(by $(*)$ with $n=k$)}
+%\\
+%&=\mat{F_{k+1}+F_k}{F_{k+1}}{F_{k}+F_{k-1}}{F_k}
+%\quad \text{(by matrix multiplication)}
+%\\
+%&=\mat{F_{k+2}}{F_{k+1}}{F_{k+1}}{F_k}
+%\quad \text{(by recurrence for $F_n$)}.
+%\end{align*}
+%Thus, ($*$) holds for $n=k+1$, and the proof of the induction step is complete. 
+%
+%\textbf{Conclusion:} By the principle of induction,  it follows that
+%($*$) is true for all $n\in\NN$.  
+%}
+%\longsol{
+%We will use induction to show that the following statement 
+%holds for all $m\in\NN$:
+%\[
+%\tag*{$P(m):$}
+%\text{
+%$F_{3m-2}$ and $F_{3m-1}$ are odd,
+%and $F_{3m}$ is even.}
+%\]
+%
+%\textbf{Base case:} When $m=1$, the three Fibonacci numbers appearing in 
+%$P(m)$ are $F_1=1$, $F_2=1$, and $F_3=2$, and thus are of the required
+%parity. Hence $P(1)$ is true.
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given and suppose 
+%$P(m)$ is true for $m=k$. Thus, $F_{3k-2}$ and $F_{3k-1}$ are odd and 
+%$F_{3k}$ is even.
+%
+%By the recurrence for $F_n$, we have $F_{3k+1}=F_{3k}+F_{3k-1}$. Hence
+%$F_{3k+1}$ is the sum of an even number $F_{3k}$, and an odd number,
+%$F_{3k-1}$, and therefore odd. 
+%
+%Similarly, $F_{3k+2}=F_{3k+1}+F_{3k}$, so $F_{3k+2}$ is the sum of an odd
+%number, $F_{3k+1}$, and an even number, $F_{3k}$, and hence odd.
+%
+%Finally, $F_{3k+3}=F_{3k+2}+F_{3k+1}$, so $F_{3k+3}$ is the sum of two odd
+%numbers and hence even. 
+%
+%Altogether, we have shown that, of the three numbers
+%$F_{3k+1},F_{3k+2},F_{3k+3}$, the first two are odd and the last one is
+%even. Thus $P(m)$ holds for $m=k+1$, and the proof of the 
+%induction step is complete. 
+%
+%\textbf{Conclusion:} By the principle of induction,  it follows that
+%$P(m)$ is true for all $m\in\NN$.  
+%
+%\bigskip
+%
+%\textbf{Alternative argument:} The above proof lumps together groups of
+%three consecutive Fibonacci numbers and establishes the desired parity
+%properties simultaneously for all three numbers.  
+%Alternatively, one can treat the sequences $F_{3m-2}$, $F_{3m-1}$, and
+%$F_{3m}$ separately using  the following identity, valid for 
+%all $n\ge4$:
+%\[
+%F_{n}=F_{n-1}+F_{n-2}=(F_{n-2}+F_{n-3})+F_{n-2}=2F_{n-2}+F_{n-3}.
+%\]
+%It follows from this identity that if $F_{n-3}$ is odd, then so is $F_{n}$,
+%and if $F_{n-3}$ is even, then so is $F_n$.  Using 
+%induction with $n=1$ as the base case then shows that the numbers
+%$F_1=1,F_4,F_7,\dots$ are all odd.  With $n=2$ as base case one gets that 
+%$F_2=1,F_5,F_8,\dots$ are all odd, and taking $n=3$ as base case 
+%shows that $F_3=2,F_6,F_9,\dots$ are all even.
+%}
+
+
+We will prove $P(n)$ by strong induction.
+
+\textbf{Base step:} 
+For $n=1,2,3$, $T_n$ is equal to \underline{~~~}, whereas the
+right-hand side of $P(n)$ is equal to $2^1=2$, $2^2=4$, and $2^3=8$,
+respectively. Thus, $P(n)$ holds for $n=1,2,3$.
+
+\textbf{Induction step:} Let $k\ge3$ be given and suppose 
+$P(n)$ is true for all $n=1,2,\dots,k$. Then
+\begin{align*}
+T_{k+1}&=T_{k}+T_{k-1}+\underline{~~~~}
+\quad \text{(by recurrence for $T_n$)}
+\\
+&<2^{k}+2^{k-1}+\underline{~~~~} \quad \text{(strong ind. hyp. \& ($P(k), P(k-1),P(k-2)$)}
+\\
+&=2^{k+1}\left(\frac12+\frac14+\underline{~~~~}\right)
+\\
+&=2^{k+1}\cdot \underline{~~~~}
+<2^{k+1}.
+\end{align*}
+Thus, \underline{~~~~~~} holds, and the proof of the induction step is complete. 
+
+\textbf{Conclusion:} By the strong induction principle,  it follows that
+$P(n)$  is true for all $n\in\NN$.  
+ 
+\end{enumerate}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% strong induction: representation problems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item\textbf{Representation problems.}
+One of the main applications of strong induction is to prove the existence of
+representations of integers of various types. In these applications, strong
+induction is usually needed in its full force, i.e., in the induction step, one
+needs to assume that all predecessor cases $n=1,2,\dots,k$. 
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% postage stamp problems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{The postage stamp problem:}
+Determine which postage amounts can be created using the stamps  of $3$
+and $7$ cents.  In other words, determine the exact set of positive
+integers $n$ that can be written in the form $n=3x+7y$ with $x$ and $y$
+nonnegative integers.  (\emph{Hint}: Check the first few values of $n$ directly,
+then use strong induction to show that, from a certain point $n_0$
+onwards, all numbers $n$ have such a representation.) 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% binary representation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{Binary representation:}
+Using strong induction prove that every positive integer $n$ can be
+represented as a sum of \emph{distinct} powers of $2$, i.e., in the form
+$n=2^{i_1}+\dots + 2^{i_h}$ with integers $0\le i_1<\dots < i_h$.
+(\emph{Hint}: To ensure distinctness, use the \emph{largest} 
+power of $2$ as the first ``building block'' in the induction step.
+)
+
+
+\item
+\textbf{Factorial representation.}
+Show that any integer $n\ge1$ has a  represention in the form
+$n=d_11!+d_22!+\cdots+d_rr!$
+with ``digits'' $d_i$ in the range $d_i\in\{0,1,\dots,i\}$.
+(\emph{Hint}: Use again the ``greedy'' trick (pick the largest factorial that ``fits'' 
+as your first building block), and use the 
+fact (established in an earlier problem) that
+$\sum_{i=1}^ki!i=(k+1)!-1$.)
+
+
+\end{enumerate}
+
+
+%\longsol{A quick direct check shows that the 
+%positive numbers $n<15$ that have a
+%representation $n=3x+7y$ with $x,y\in\NN\cup \{0\}$) are exactly
+%$3,6,7,9,10,12,13,14$.  We now use strong induction to show that from
+%$12$ onwards every integer has a representation in the above form.
+%In other words, we will prove that the following 
+%statement holds for all $n\ge12$:
+%\[
+%\text{$n$ has a representation $(*)$ $n=3x+7y$ with $x,y\in\NN\cup \{0\}$}
+%\tag{$P(n)$}
+%\]
+%\textbf{Base case:} For $n=12,13,14$, the representations $12=3\cdot 4$,
+%$13=3\cdot 2+7$ and $14=7\cdot 2$ show that $P(n)$ is true.
+%
+%\textbf{Induction step:} 
+%Let $k\ge14$ be given and suppose $P(k')$ is true for all $k'$ with 
+%$k'=12,13,\dots,k$, i.e., suppose that all such $k'$ have a representation in
+%the form $(*)$. We seek to show that $k+1$ also has a representation of
+%this form. 
+%
+%Write  $k+1=3+k'$, so that $k'=k-2$. Note that $k'\le k$ and  also
+%$k'\ge 12$ since we assumed $k\ge14$. Thus, we can apply the strong
+%induction hypothesis to $k'$ and obtain a representation 
+%\[
+%k'=3x+7y,
+%\]
+%where $x,y\in\NN\cup\{0\}$. Adding $3$ to both sides of this
+%representation, we get
+%\[
+%k+1=k'+3= 3x+7y+3=3(x+1)+7y,
+%\]
+%which is a representation of the desired form for $k+1$.
+%Hence $P(k+1)$ is true, and the proof of the induction step is complete.
+%
+%\textbf{Conclusion:} By the strong induction principle, 
+%it follows that $P(n)$  is true for all $n\ge12$.
+%
+%\bigskip
+%
+%\textbf{Remark:} Note that, in the induction step, in order to be able
+%to apply the induction hypothesis with $k'=k-2$ we need to ensure that 
+%$k'$ is at least $12$. This in turn requires $k$ 
+%to be at least $14$ in the induction step,
+%and the cases $k=12,13,14$ to be treated as base
+%cases.
+%}
+%\longsol{
+%We will prove by strong induction that the following statement  
+%holds for all $n\in\NN$.
+%\[
+%\text{$n$ has a representation $(*)$ $n=2^{i_1}+\dots + 2^{i_h}$
+%with distinct integers $i_1,\dots,i_h\in\NN\cup\{0\}$.}
+%\tag{$P(n)$}
+%\]
+%\textbf{Base case:} The integer $n=1$ has the representation $1=2^0$,
+%which is of the desired form. Hence $P(n)$ holds for $n=1$.
+%
+%
+%\textbf{Induction step:} 
+%Let $k\ge1$ be given and suppose $P(n)$ is true for all positive
+%integers $ n\le k$, i.e., suppose that all such $n$ have a
+%representation in the form $(*)$. We seek to show that $n=k+1$ also has a
+%representation of this form. 
+%
+%Let $2^m$ be the largest (integer) power of $2$ that satisfies $2^m\le k+1$.
+%
+%If $2^m=k+1$, then $k+1$ has a representation of the desired form
+%(namely as a sum of a single power of $2$, $2^m$), and we are done.
+%
+%If $2^m<k+1$, we let $k'=k+1-2^m$.  Since $2^m\ge1$
+%and $2^m<k+1$, $k'$ is an integer with $1\le k'\le k$. 
+%Hence we can apply the strong induction hypothesis to $k'$ and obtain a
+%representation of $k'$ as a sum of distinct powers of $2$.
+%
+%Adding $2^m$ to this representation gives a representation of $k+1=k'+2^m$
+%as a sum of powers of $2$. To complete the proof of the induction step,
+%we still need to show that the powers of $2$ involved here are distinct.
+%
+%Since the powers of $2$ representing $k'$ were already distinct, it
+%suffices to show that the added power $2^m$ cannot occur among the
+%powers in the representation for $k'$. 
+%To do this, we exploit the fact that $2^m$ was chosen as the largest
+%power of $2$ below $k+1$. Thus, we have
+%\[
+%2^m< k+1 < 2^{m+1}.
+%\]
+%Subtracting $2^m$ from both sides, we get 
+%\[
+%0< k+1-2^m<2^{m+1}-2^m=2^m,
+%\]
+%and since $k'=k+1-2^m$, it follows that $k'$ is strictly less than
+%$2^m$, and so $2^m$ cannot occur in the representation for $k'$.
+%This is what we wanted to show.
+%
+%Thus, the representation for $k+1$ that we obtained is indeed a
+%representation of the desired form and the proof of the 
+%induction step is complete.
+%
+%\textbf{Conclusion:} By the strong induction principle, 
+%it follows that $P(n)$  is true for all $n\ge1$.
+%
+%\bigskip
+%
+%\textbf{Remarks:} The argument used above in the induction step is called a
+%``greedy'' algorithm: In constructing a binary representation for $k+1$, one
+%starts  out by using the largest possible ``building block'' (namely, the
+%largest power of $2$ that is $\le k+1$), and then uses the strong induction
+%hypothesis to make up for the left over part. 
+%
+%
+%An alternative, but less flexible, approach to the induction step is as
+%follows: If $k+1$ is even, then $k+1=2k'$, where $k'$ is an integer in
+%the range $1\le k'\le k$. By the strong induction hypothesis $k'$
+%has a representation as sum of distinct powers of $2$, and multiplying this
+%representation by $2$ gives a representation of the desired form for $k+1$. 
+%If $k+1$ is odd, a similar argument based on the representation $k+1=2k'+1$
+%yields the same conclusion. 
+%
+%The latter approach, however, relies heavily on specific arithmetic properties
+%of the powers of $2$ and does not generalize to other sequences like Fibonacci
+%numbers or factorials. By contrast, the ``greedy'' approach is one that can be
+%used for many representation problems and, in fact, is the standard way to
+%handle such problems.
+%
+%\bigskip
+%
+%\textbf{Uniquess of representation:} The above argument proves only the
+%\emph{existence} of a representation, not its uniqueness.  One way to prove the
+%uniqueness is by contradiction: Assume there are positive integers with
+%multiple representations, let $n$  be the smallest of these exceptional
+%integers, and derive a contradiction from this assumption.
+%
+%Another way to prove uniquess is to incorporate the uniqueness claim into the
+%statement $P(n)$ to be proved. The strengthened statement requires an additional
+%argument in the induction step showing that uniqueness holds for $k+1$,
+%provided it holds for all $k'\le k$. This is not difficult; the key observation
+%is that any representation of $k+1$ must necessarily involve the power $2^m$ 
+%defined above.
+%
+%}
+%\longsol{
+%We will prove by strong induction that the following statement  
+%holds for all $n\in\NN$.
+%\[
+%\text{$n$ has a representation 
+%$(*)$ $\sum_{i=1}^rd_ii!$
+%with $d_i\in\{0,1,\dots,i\}$.}
+%\tag{$P(n)$}
+%\]
+%\textbf{Base case:} The integer $n=1$ has the representation $1=1\cdot 1!$,
+%which is of the desired form. Hence $P(n)$ holds for $n=1$.
+%
+%
+%\textbf{Induction step:} 
+%Let $k\ge1$ be given and suppose $P(n)$ is true for all positive
+%integers $ n\le k$, i.e., suppose that all such $n$ have a
+%representation in the form $(*)$. We seek to show that $n=k+1$ also has a
+%representation of this form. 
+%
+%Let $r$ be the \emph{largest} integer such that $r!\le k+1$; i.e., $r$ is the
+%unique integer for which  
+%\[
+%r!\le k+1 < (r+1)!.
+%\tag{1}
+%\]
+%
+%If $r!=k+1$, then $k+1$ has a representation of the desired form,
+%and we are done.
+%
+%If $r!<k+1$, we let $k'=k+1-r!$.  Since $1\le r!<k+1$, 
+%$k'$ is an integer in the range $1\le k'\le k$. 
+%Hence we can apply the strong induction hypothesis to $k'$ and obtain a
+%representation of $k'$ as a finite sum of terms $d_ii!$, with ``digits'' 
+%$d_i$ in the range $0\le d_i\le i$.  
+%
+%Adding $r!$ to this representation gives a representation of $k+1=k'+r!$
+%as a sum of factorials.  To complete the induction step, we need to make sure
+%that this new representation still satisfies the constraints $0\le d_i\le i$ 
+%on the digits. 
+%
+%If $r!$ does not occur in the representation of $k'$, this is clearly the case.
+%
+%If $r!$ does occur in the representation of $k'$ with an associated
+%``digit'' $d_r$ satisfying $d_r\le r-1$, 
+%then adding $r!$ to this representation gives a
+%representation with $d_r$ replaced by $d_r+1$ and all other digits unchanged, 
+%and since $d_r\le r-1$, the new digit $d_r+1$ satisfies the required
+%constraint, $d_r+1\le r$.
+%
+%It remains to consider the case when $k'$ has a representation involving $r!$
+%in which the associated digit is maximal, i.e., $d_r=r$. But then 
+%\[
+%k+1=k'+r!\ge d_rr!+r! =r\cdot r! + r!=(r+1)!,
+%\]
+%so $(r+1)!\le k+1$, contradicting (1). Therefore this case is impossible. 
+%
+%Hence, in each case we have obtained a representation of $k+1$ of the 
+%desired form and the proof of the 
+%induction step is complete.
+%
+%\textbf{Conclusion:} By the strong induction principle, 
+%it follows that $P(n)$  is true for all $n\ge1$.
+%}
+
+
+
+
+\end{enumerate}
+
+
+\section{Non-formula induction proofs.}
+Below is a sample proof of the statement that any $n$-element set (i.e.,
+any set with $n$ elements) has $2^n$ subsets. 
+This illustrates a case where the result we seek to prove is not a
+formula, but a statement that must be expressed verbally, and where the
+induction step requires some verbal explanation, and not just a chain of
+equalities.  Additional practice  problems follow below.
+
+
+\begin{prop}
+For all $n\in\NN$, the following holds:
+\[
+{\text{Any $n$-element set has $2^n$ subsets.}}
+\tag{$P(n)$}
+\]
+\end{prop}
+\begin{proof}(\emph{By induction}):
+
+\textbf{Base case:} Since any $1$-element set has $2$
+subsets, namely the empty set and the set itself,
+and $2^1=2$, the statement $P(n)$ is true for $n=1$.
+
+\textbf{Induction step:} 
+\begin{itemize}
+\item 
+Let $k\in\NN$ be given and suppose 
+$P(k)$ is true, i.e., that any $k$-element set has $2^k$ subsets.
+We seek to show that $P(k+1)$  is true as well,
+i.e., that any $(k+1)$-element set has $2^{k+1}$ subsets.
+
+\item 
+Let $A$ be a set with $k+1$ elements.  
+
+\item 
+Let $a$ be an element of $A$, and let $A'=A-\{a\}$ (so that   
+$A'$ is a set with $k$ elements).
+
+\item 
+We classify the subsets of $A$ into two types: (I) subsets that do
+\emph{not} contain $a$, and (II) subsets that do contain $a$.
+
+\item 
+The subsets of type (I) are exactly the subsets of the set
+$A'$. Since $A'$ has $k$ elements, the induction
+hypothesis can be applied to this set and we conclude that there are $2^k$
+subsets of type (I).
+
+\item 
+The subsets of type (II) are exactly the sets of the form $B=B'\cup
+\{a\}$, where $B'$ is a subset of $A'$.
+By the induction hypothesis there are $2^k$ such sets $B'$, and hence
+$2^k$ subsets of type (II).
+
+\item 
+Since there are $2^k$ subsets of each of the two types, the total number
+of subsets of  $A$ is $2^k+2^k=2^{k+1}$. 
+
+\item 
+Since $A$ was an arbitrary $(k+1)$-element set, we have proved that any
+$(k+1)$-element set has $2^{k+1}$ subsets.
+Thus $P(k+1)$ is true, completing the induction step. 
+\end{itemize}
+
+\textbf{Conclusion:} By the principle of induction, 
+$P(n)$  is true for all $n\in\NN$.
+\end{proof}
+
+\section{Practice problems for non-formula induction}\label{practice_non_formula}
+
+\begin{enumerate}
+
+
+\item \textbf{Number of subsets with an even (or odd) number of elements:}
+Using induction, prove that an $n$-element set  has $2^{n-1}$ subsets
+with an even number of elements and $2^{n-1}$ subsets with an odd number
+of elements.
+
+%\sol{
+%We use a variation of the above argument (showing that an
+%$n$-element set has $2^n$ subsets).  For brevity, we call a subset with an odd
+%number of elements an ``odd subset'', and a subset with an even number of
+%elements an ``even subset.'' 
+%
+%Let $P(n)$ denote the statement that \textbf{any set with $n$ elements has
+%$2^{n-1}$ odd subsets and $2^{n-1}$ even subsets.}
+%We use induction to show that $P(n)$ holds for all $n\in\NN$.
+%
+%
+%
+%\textbf{Base case:} A $1$-element set $A=\{a_1\}$ has exactly 
+%one even subset, the empty set $\emptyset$ (since the empty set has $0$
+%elements, and $0$ is an even number), and one odd subset, $\{a_1\}$, so $P(1)$
+%is true.
+%
+%\textbf{Induction step:} 
+%Let $k\in\NN$ be given and suppose 
+%$P(k)$ is true, i.e., that any $k$-element set has $2^{k-1}$ even subsets and
+%$2^{k-1}$ odd subsets. 
+%We seek to show that $P(k+1)$  is true as well, i.e., that
+%any $(k+1)$-element set has $2^{k}$ even subsets and $2^k$ odd subsets.
+%
+%Let $A$ be a set with $(k+1)$ elements.  
+%Choose an element $a$ in $A$, and set $A'=A-\{a\}$. 
+%
+%We again classify the subsets of $A$ into two types: (I) subsets that do
+%\emph{not} contain $a$, and (II) subsets that do contain $a$.
+%The subsets of type (I) are exactly the subsets of the set
+%$A'$. Since $A'$ has $k$ elements, the induction
+%hypothesis can be applied to this set and we get that there are 
+%$2^{k-1}$ even subsets and $2^{k-1}$ odd subsets of type (I).
+%
+%The subsets of type (II) are exactly the sets of the form $B=B'\cup
+%\{a\}$, where $B'$ is a subset of $A'$, and hence are in one-to-one
+%correspondence with subsets $B'$ of $A'$.  Moreover, $B$ is
+%an odd subset of
+%$A$ if and only if the associated set $B'$ is an even subset of $A'$,
+%and an even subset of
+%$A$ if and only if the associated set $B'$ is an odd subset of $A'$.
+%By the
+%induction hypothesis there are $2^{k-1}$ even subsets of $A'$, and $2^{k-1}$
+%odd subsets of $A'$.   Hence there are $2^{k-1}$ odd subsets of type (II), and
+%$2^{k-1}$ even subsets of type (II).
+%
+%Since there are $2^{k-1}$ even subsets of each of the types (I) and
+%(II), the total number of even subsets of  $A$ is $2^{k-1}+2^{k-1}=2^{k}$. 
+%Similarly, the total number of odd subsets of $A$ is $2^{k-1}+2^{k-1}=2^k$.
+%
+%Since $A$ was an arbitrary $(k+1)$-element set, we have proved that any
+%$(k+1)$-element set has $2^{k}$ even subsets and $2^k$ odd 
+%subsets. Thus $P(k+1)$ is true,
+%completing the induction step. 
+%
+%\textbf{Conclusion:}
+%By the principle of induction, it follows that
+%$P(n)$  is true for all $n\in\NN$.
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% regions created by n lines 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{Number of regions created by $n$ lines:}
+How many regions are created by $n$ lines in the plane such that no two lines
+are parallel and no three lines intersect at the same point? Guess the
+answer from the first few cases, then use induction to prove your guess. 
+
+%\sol{
+%For brevity, we call a set of lines \emph{generic} if it satisfies the
+%conditions in the statement, namely that no two lines are parallel, and no
+%three lines intersect at the same point.
+%
+%Let $P(n)$ denote the statement that 
+%\textbf{the number of regions created by $n$ generic lines in the plane is
+%$1+\frac{n(n+1)}{2}$}. 
+%We will use induction to show that $P(n)$ holds for all $n\in\NN$.
+%
+%
+%\textbf{Base case:} A single line divides the plane into $2$ regions. Since 
+%$1+1(1+1)/2=2$, this proves $P(1)$.
+%for $n=1$. 
+%
+%\textbf{Induction step:} Let $k\in\NN$ be given, and suppose $P(n)$
+%holds for $n=k$, i.e., suppose that any $k$ generic lines in the plane create
+%$1+k(k+1)/2$ regions.  
+%
+%Let $k+1$ lines $L_1,L_2,\dots,L_{k+1}$ be given that are generic in the above
+%sense.  Then the first $k$ lines, $L_1,\dots,L_k$ are also generic and, by the
+%induction hypothesis, these $k$ lines divide the plane into $1+k(k+1)/2$
+%regions.
+%
+%Now consider the line $L_{k+1}$.  By the ``generic'' property, this line
+% intersects each of the lines $L_1,\dots,L_k$ at exactly one point,
+%and the $k$ intersection points are all distinct and hence divide $L_{k+1}$
+%into $k+1$ segments.  Each of these segments divides one of the regions created
+%by the first $k$ lines into two parts, and hence increases the region count by
+%$1$.  Since there are $k+1$ such segments, the added line $L_{k+1}$ increases
+%the region count by $k+1$. Thus the total number of regions created by
+%the lines $L_1,\dots,L_{k+1}$ is  
+%\[
+%1+\frac{k(k+1)}{2}+k+1=\frac{k(k+1)+2k+4}{2}=1+\frac{(k+1)(k+2)}{2},
+%\]
+%which is the desired formula for the number of regions created by $k+1$
+%lines.  Hence $P(k+1)$ holds, and the proof of the induction step is
+%complete.
+%
+%\textbf{Conclusion:} By the principle of induction, $P(n)$ holds for all
+%$n\in\NN$.
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sum angles in polygon 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \textbf{Sum of angles in a polygon:}
+The sum of the interior angles in a triangle is $180$ degrees, or $\pi$.
+Using this result and induction, prove that for any $n\ge3$, the sum of
+the interior angles in an $n$-sided polygon is $(n-2)\pi$.
+
+%\sol{
+%Let $P(n)$ denote the statement that \textbf{the sum of the interior
+%angles in an $n$-sided polygon is $(n-2)\pi$.}
+%We will use induction to show that $P(n)$ holds for 
+%all integers $n\ge3$.
+%
+%
+%\textbf{Base case:} The sum of the angles in a triangle is $\pi$, which
+%agrees with the formula 
+%$(n-2)\pi$ when $n=3$. Thus the statement $P(n)$
+%holds for $n=3$. 
+%
+%\textbf{Induction step:} Let $k\in\NN$ with $k\ge 3$ be given, and
+%assume $P(n)$ holds for $n=k$, i.e., suppose that, for any $k$-sided polygon,
+%the sum of the interior angles is $(k-2)\pi$. 
+%
+%
+%Let $P$ be a $(k+1)$-sided polygon. Pick a vertext $P_1$ of $P$ at which the
+%interior angle is $<\pi$. (It is clear that such a vertex must exist.)
+%Let $P_0$ and $P_1$ denote the vertices of $P$ adjacent to $P_1$,
+%let $T$ be the triangle $P_0P_1P_2$, and 
+%$P'$ the polygon obtained from $P$ by removing the triangle $T$,
+%i.e., with the two sides $P_0P_1$ and $P_1P_2$ replaced by $P_0P_2$
+%
+%Then $P'$ has $k$ sides, so by the induction hypothesis the sum of the
+%interior angles in $P'$ is $(k-2)\pi$. Also, since $T$ is a triangle,
+%the sum of the interior angles in $T$ is $\pi$.  
+%The sum of the interior angles in the original polygon $P$ is equal
+%to the sum of the interior angles of $P'$ plus the sum of the interior
+%angles of $T$, i.e.,  $(k-2)\pi + \pi = ((k+1)-2)\pi$. 
+%This is the desired formula for the sum of the interior angles of a
+%$(k+1)$-sided polygon, so we have proved $P(k+1)$. 
+%
+%\textbf{Conclusion:} By the principle of induction, $P(n)$ holds for
+%every integer $n\ge3$.
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item \textbf{Pie-throwing problem:}
+Here is a harder, but fun problem.  Consider a group of $n$ fraternity members
+standing in a yard, such that their mutual distances are all distinct.  Suppose
+each of throws a pie at his nearest neighbor.  Show that if $n$ is odd, then
+there is one person in the group who does not get hit by a pie. (\emph{Hint}: Let
+$n=2m+1$ with $m\in\NN$, and use $m$ as the induction variable. Consider first
+some small cases, e.g., $n=3$ and $n=5$.)
+
+%\sol{Let $P(m)$ denote the statement that,  \textbf{given any group of $2m+1$ people
+%with pairwise distinct mutual distances, there is at least one survivor in the
+%pie fight (in the sense of not getting hit by a pie)}.
+%We will show by induction on $m$ that $P(m)$ holds for all $m\in\NN$.
+%
+%\textbf{Base case:} When $m=1$, there are $2m+1=3$ fraternity members in the
+%group, By the ``distinct distance'' assumption, the triangle created by these
+%three members has a unique minimal side. Therefore the two members standing at
+%the endpoints of this side throw pies at each other, while the third person
+%hits one of these two, but does not get hit. Thus, this third person
+%``survives'' the fight, and hence the statement $P(m)$ holds for $m=1$.
+%
+%\textbf{Induction step:} Let $k\in\NN$ and suppose $P(m)$ holds for $m=k$.
+%Consider a group of $2(k+1)+1=2k+3$ fraternity members, say
+%$F_1,\dots,F_{2k+2},F_{2k+3}$,
+%with distinct mutual distances.  Since the distances are
+%distinct, there exists a unique minimal distance among the distances between
+%pairs of fraternity members. Without loss of generality, we may assume that
+%$F_{2k+2}$ and $F_{2k+3}$ are the two members whose mutual distance is minimal. 
+%Then these two members throw pies at each other, while the remaining members, 
+%i.e., $F_1,\dots, F_{2k+1}$, throw pies at each other or at $F_{2k+2}$
+%or $F_{2k+3}$. 
+%
+%If all remaining members $F_1,\dots, F_{2k+1}$ only throw  pies at themselves
+%(and  not at $F_{2k+2}$ or $F_{2k+3}$), then the induction hypothesis
+%immediately guarantees that there is a survivor among these members. 
+%
+%Now consider the case when some of the members
+%$F_1,\dots,F_{2k+1}$
+%have  $F_{2k+2}$ or
+%$F_{2k+3}$ as their nearest target, and thus, by the rules of the game, throw a
+%pie at $F_{2k+2}$ or $F_{2k+3}$.  In this case, removing   $F_{2k+2}$ and
+%$F_{2k+3}$ as possible targets forces these members to target the nearest
+%neighbor among 
+%$F_1,\dots,F_{2k+1}$.
+%We can then again apply   the
+%induction hypothesis to obtain a survivor among $F_1,\dots,F_{2k+1}$.
+%Since $F_{2k+2}$ and $F_{2k+3}$ only target themselves, that person remains a
+%survivor after adding these two members back in. 
+%
+%Thus, in either case, we have shown that there is a survivor in the given group of 
+%$2(k+1)+1$ fraternity members. Hence $P(k+1)$ holds, and the induction step is
+%complete.   
+%
+%\textbf{Conclusion:} By the principle of induction, $P(m)$ holds for all
+%$m\in\NN$.
+%}
+\end{enumerate}
+
+
+\section{~Fallacies and pitfalls }\label{sec:fallacies} 
+
+By now, induction proofs should feel routine to you, to the point that you
+could almost do them in your sleep.  However, it is important not to become
+complacent and careless, for example, by skipping seemingly minor details in
+the write-up, omitting quantifiers, or neglecting to check conditions and
+hypotheses. 
+
+Below are some examples of false induction proofs that illustrate what can
+happen when some minor details are left out.  In each case, the statement 
+claimed is clearly nonsensical (e.g., that all numbers are equal), but the
+induction argument sounds perfectly fine, and in some cases the errors are quite
+subtle and hard to spot. Try to find them!
+
+\begin{example}\label{example:induction:fall1} Let us ``prove'' that for all $n\in\NN$,  
+
+\[
+\tag{$P(n)$} \sum_{i=1}^n i=\frac12(n+\frac12)^2
+\]
+
+\textbf{Proof:} We prove the claim by induction. 
+
+\textbf{Base step:} When $n=1$, $P(n)$ holds.
+
+\textbf{Induction step:} 
+Let $k\in\NN$ and 
+suppose $(*)$ holds for $n=k$. Then
+\begin{align*}
+\sum_{i=1}^{k+1} i &=\sum_{i=1}^k i + (k+1)
+\\
+&=\frac12\left(k+\frac12\right)^2+ (k+1)
+\quad\text{(by ind. hypothesis)}
+\\
+&=\frac12\left(k^2+k+\frac14+2k+2\right)
+\quad\text{(by algebra)}
+\\
+&=\frac12\left(\left(k+1+\frac12\right)^2-3k-\frac94 +k+\frac14+2k+2\right)
+\quad\text{(more algebra)}
+\\
+&=\frac12\left((k+1)+\frac12\right)^2
+\quad\text{(simplifying).}
+\end{align*}
+Thus, $P(n)$ holds for $n=k+1$,  so the induction
+step is complete.
+
+\textbf{Conclusion:} By the principle of induction, $P(n)$ holds for all
+$n\in\NN$.
+\end{example}
+
+%
+%\analysis{Here there is no problem with the induction step, but the base case
+%is not valid despite the claim that it is true in this case.
+%Moral: Make sure to \emph{really} check the base case. Simply 
+%stating that it is true doesn't make it true!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{example}\label{example:induction:fall2}
+Now we will ``prove'' that all real numbers are equal. To prove the claim, we will prove by induction that, for all $n\in\NN$,
+the following statement holds:
+\[
+\text{For any real numbers $a_1,a_2,\dots, a_n$, we have $a_1=a_2=\dots=a_n$.}
+\tag{$P(n)$}
+\]
+\textbf{Base step:} When $n=1$, the statement is trivially true, so $P(1)$
+holds.  
+
+\textbf{Induction step:} 
+Let $k\in\NN$ be given and suppose 
+$P(k)$ is true, i.e., that any $k$ real numbers must be equal.
+We seek to show that $P(k+1)$  is true as well,
+i.e., that any $k+1$ real numbers must also be equal.
+
+Let $a_1,a_2,\dots,a_{k+1}$ be given real numbers.  Applying the induction
+hypothesis to the first $k$ of these numbers, $a_1,a_2,\dots,a_k$, we obtain
+\[
+\tag{1}
+a_1=a_2=\dots=a_k.
+\]
+Similarly, applying the induction hypothesis to the last $k$ of these numbers, 
+$a_2,a_3,\dots,a_k,a_{k+1}$, we get
+\[
+\tag{2}
+a_2=a_3=\dots=a_k=a_{k+1}.
+\]
+Combining (1) and (2) gives
+\[
+\tag{3}
+a_1=a_2=\dots=a_k=a_{k+1},
+\]
+so the numbers $a_1,a_2,\dots,a_{k+1}$ are equal.
+Thus, we have proved $P(k+1)$, and the induction step is complete. 
+
+\textbf{Conclusion:} By the principle of induction, 
+$P(n)$  is true for all $n\in\NN$. Thus, any $n$ real numbers must be equal.
+\end{example}
+
+%\analysis{The base step is valid, as is the induction step \emph{provided $k$
+%is at least $2$.} However, when $k=1$, the induction step breaks down since in
+%this case there is no overlap in the variables in (1) and (2), so one cannot
+%``chain together'' these equalities. Formally, this means that in the
+%implication chain $P(1)\implies P(2)\implies P(3)\implies P(4)\implies\cdots$, the
+%first link (from $P(1)$ to $P(2)$) is broken, while all other links are valid.
+%This single broken link is enough to render the induction argument invalid.} 
+%
+
+
+\begin{example}\label{example:induction:fall3} 
+Here is a ``proof'' that for every nonnegative integer $n$, 
+
+\[ \tag{$P(n)$} 5n=0.  \]
+
+\textbf{Proof:} We prove that $P(n)$ holds for all $n=0,1,2,\dots$, using
+strong induction with the case $n=0$ as base case.
+
+\textbf{Base step:} When $n=0$, $5n=5\cdot0=0$, so $(*)$ holds in this case.
+
+\textbf{Induction step:} 
+Suppose $P(n)$ is true for all integers $n$ in the range $0\le n\le k$, i.e.,
+that for all integers in this range $5n=0$.  We will show that $P(k+1)$ also holds, so that
+\[ \tag{$P(k+1)$} 5(k+1)=0.  \]
+
+Write $k+1=i+j$ with integers $i,j$ satisfying $0\le i,j\le k$. 
+Applying the induction hypothesis to $i$ and $j$, we get $5i=0$ and $5j=0$.
+Then
+\[
+5(k+1)=5(i+j)=5i+5j=0+0=0,
+\]
+proving $P(k+1)$.  Hence the induction step is complete.
+
+\textbf{Conclusion:} By the principle of strong induction, $P(n)$ holds for all
+nonnegative integers $n$.
+\end{example}
+
+%\analysis{The base step is valid, and the induction step is valid, too,
+%\emph{provided $k$ is at least $1$.} However, the first $k$-value for which
+%we need the induction step is $k=0$ (since $n=0$ is our base case). When
+%$k=0$, the equation $k+1=i+j$ reduces to $1=i+j$, 
+%and the constraints on $i,j$ become $0\le i,j\le 0$. Since there is no  
+%choice of $i,j$ satisfying both these constraints  and the equation $i+j=1$,
+%the argument breaks down in this case. (When $k\ge1$, there is no problem
+%since choosing $i=1$ and $j=k$ we can satisfy both $i+j=k+1$ and 
+%the constraints $0\le i,j\le k$.)}
+
+
+\begin{example}\label{example:induction:fall4} Let's ``prove'' that for every nonnegative integer $n$, 
+\[
+\tag{$P(n)$} 2^n=1
+\]
+\textbf{Proof:} We prove that $(*)$ holds for all $n=0,1,2,\dots$, using
+strong induction with the case $n=0$ as base case.
+
+\textbf{Base step:} When $n=0$, $2^0=1$, so $P(0)$ holds. (Note: it is perfectly OK to begin with a base case of $n=0$.)
+
+\textbf{Induction step:} 
+Suppose $P(n)$ is true for all integers $n$ in the range $0\le n\le k$, i.e.,
+assume that for all integers in this range $2^n=1$.
+We will show that $P(k+1)$ also holds, i.e., 
+\[
+\tag{$P(k+1)$} 2^n=1
+\]
+
+We have
+\begin{align*}
+2^{k+1}&=\frac{2^{2k}}{2^{k-1}}
+\quad~\text{(by algebra)}
+\\
+&=\frac{2^k\cdot 2^k}{2^{k-1}}
+\quad\text{(by algebra)}
+\\
+&=\frac{1\cdot 1}{1}
+\quad~~\text{(by strong ind. hypothesis applied to each term)}
+\\
+&=1
+\qquad~~~\text{(simplifying),}
+\end{align*}
+proving $P(k+1)$. Hence the induction step is complete.
+
+\textbf{Conclusion:} By the principle of strong induction, $P(n)$ holds for all
+nonnegative integers $n$.
+\end{example}
+
+%\analysis{The base step is valid, and the induction step is valid, too,
+%\emph{provided $k$ is at least $1$.} However, as in the previous example, 
+%when $k=0$ (the first $k$-value we need in the induction step), something goes wrong:
+%Namely, in this case, $k-1=0-1=-1$ is negative and hence out of range of 
+%the induction hypothesis.}
+
+\begin{example}\label{example:induction:fall5}
+We will ``prove'' that all positive integers are equal. To prove this claim, we will prove by induction that, for all $n\in\NN$,
+the following statement holds:
+\[
+\text{For any $x,y\in\NN$, if $\max(x,y)=n$, then $x=y$.}
+\tag{$P(n)$}
+\]
+(Here $\max(x,y)$ denotes the larger of the two numbers $x$ and $y$, or the
+common value if both are equal.)
+
+\textbf{Base step:} When $n=1$,
+the condition in $P(1)$ becomes $\max(x,y)=1$. But this forces
+$x=1$ and $y=1$, and hence $x=y$. 
+
+\textbf{Induction step:} 
+Let $k\in\NN$ be given and suppose $P(k)$ is true.  We seek to show that
+$P(k+1)$ is true as well.
+
+Let $x,y\in\NN$ such that $\max(x,y)=k+1$. Then
+$\max(x-1,y-1)=\max(x,y)-1=(k+1)-1=k$. By the induction hypothesis, it follows
+that $x-1=y-1$, and therefore  $x=y$. This proves $P(k+1)$, so the induction
+step is complete.
+
+\textbf{Conclusion:} By the principle of induction, 
+$P(n)$  is true for all $n\in\NN$. In particular, since $\max(1,n)=n$ for any
+positive integer $n$, it follows that $1=n$ for any positive integer $n$. 
+Thus, all positive integers must be equal to $1$
+\end{example}
+
+%\analysis{The base step is valid, 
+%but there is a problem with the induction step: In this step
+%the induction hypothesis is applied with $x-1$ and $y-1$ in place
+%of $x$ and $y$. However, this requires that $x-1$ and $y-1$ be positive
+%integers, something that we are not assured.
+%For example, if $x=1$, then $x-1=0$, so $x-1$ is out of range, and therefore we
+%cannot apply the induction hypothesis with $x-1$ as the $x$-value. 
+%This renders the induction step invalid \emph{for all values of $k$}.}
