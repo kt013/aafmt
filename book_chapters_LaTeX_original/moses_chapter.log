@@ -1,0 +1,223 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdftex 2015.10.25)  25 OCT 2015 17:50
+entering extended mode
+**C:/Users/Moses/Google*Drive/AbstractAlgebra/tex_files/moses_chapter.aux
+("C:/Users/Moses/Google Drive/AbstractAlgebra/tex_files/moses_chapter.aux"
+! Undefined control sequence.
+l.2 \providecommand
+                   \hyper@newdestlabel[2]{}
+? 
+! Undefined control sequence.
+l.2 \providecommand\hyper
+                         @newdestlabel[2]{}
+? 
+! Undefined control sequence.
+l.3 \@
+      writefile{toc}{\contentsline {chapter}{\numberline {1}Further topics i...
+
+? 
+! Undefined control sequence.
+l.3 \@writefile{toc}{\contentsline
+                                   {chapter}{\numberline {1}Further topics i...
+
+? 
+! Undefined control sequence.
+l.3 ...le{toc}{\contentsline {chapter}{\numberline
+                                                   {1}Further topics in Cryp...
+
+? 
+! Undefined control sequence.
+l.4 \@
+      writefile{lof}{\addvspace {10\p@ }}
+? 
+! Undefined control sequence.
+l.4 \@writefile{lof}{\addvspace
+                                {10\p@ }}
+? 
+! Undefined control sequence.
+l.4 \@writefile{lof}{\addvspace {10\p
+                                     @ }}
+? 
+! Undefined control sequence.
+l.5 \@
+      writefile{lot}{\addvspace {10\p@ }}
+? 
+! Undefined control sequence.
+l.5 \@writefile{lot}{\addvspace
+                                {10\p@ }}
+? 
+! Undefined control sequence.
+l.5 \@writefile{lot}{\addvspace {10\p
+                                     @ }}
+? 
+! Undefined control sequence.
+l.6 \newlabel
+             {Crypto}{{1}{1}{Further topics in Cryptography}{chapter.1}{}}
+? 
+! Undefined control sequence.
+l.7 \@
+      writefile{toc}{\contentsline {section}{\numberline {1.1}Diffie Hellman...
+
+? 
+! Undefined control sequence.
+l.7 \@writefile{toc}{\contentsline
+                                   {section}{\numberline {1.1}Diffie Hellman...
+
+? 
+! Undefined control sequence.
+l.7 ...le{toc}{\contentsline {section}{\numberline
+                                                   {1.1}Diffie Hellman Key E...
+
+? 
+! Undefined control sequence.
+l.8 \newlabel
+             {sec:DHKE:1}{{1.1}{1}{Diffie Hellman Key Exchange}{section.1.1}{}}
+
+? 
+! Undefined control sequence.
+l.9 \@
+      writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces ...
+
+? 
+! Undefined control sequence.
+l.9 \@writefile{lof}{\contentsline
+                                   {figure}{\numberline {1.1}{\ignorespaces ...
+
+? 
+! Undefined control sequence.
+l.9 ...ile{lof}{\contentsline {figure}{\numberline
+                                                   {1.1}{\ignorespaces  Key ...
+
+? 
+! Undefined control sequence.
+l.10 \newlabel
+              {fig:DH:DHKE_1}{{1.1}{2}{Key exchange between Moses and Rachae...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.10 \newlabel{fig:DH:DHKE_
+                           1}{{1.1}{2}{Key exchange between Moses and Rachae...
+
+? 
+! Extra }, or forgotten $.
+l.10 \newlabel{fig:DH:DHKE_1}
+                             {{1.1}{2}{Key exchange between Moses and Rachae...
+
+? 
+! Undefined control sequence.
+l.11 \newlabel
+              {proposition:Crypto:\nobreakspace  {}}{{1}{2}{Diffie Hellman K...
+
+? 
+! Undefined control sequence.
+l.11 \newlabel{proposition:Crypto:\nobreakspace
+                                                 {}}{{1}{2}{Diffie Hellman K...
+
+? 
+! Undefined control sequence.
+l.12 \newlabel
+              {def:DLP}{{5}{3}{Diffie Hellman Key Exchange}{example.1.5}{}}
+? 
+! Undefined control sequence.
+l.13 \@
+       writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.13 \@writefile{lof}{\contentsline
+                                    {figure}{\numberline {1.2}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.13 ...le{lof}{\contentsline {figure}{\numberline
+                                                   {1.2}{\ignorespaces  Key ...
+
+? 
+! Undefined control sequence.
+l.14 \newlabel
+              {fig:DH:DHKE_2}{{1.2}{4}{Key exchange between Moses and Rachae...
+
+? 
+! Undefined control sequence.
+l.15 \@
+       writefile{toc}{\contentsline {section}{\numberline {1.2}Elliptic Curv...
+
+? 
+! Undefined control sequence.
+l.15 \@writefile{toc}{\contentsline
+                                    {section}{\numberline {1.2}Elliptic Curv...
+
+? 
+! Undefined control sequence.
+l.15 ...e{toc}{\contentsline {section}{\numberline
+                                                   {1.2}Elliptic Curve Crypt...
+
+? 
+! Undefined control sequence.
+l.16 \newlabel
+              {sec:ECC:2}{{1.2}{4}{Elliptic Curve Cryptography}{section.1.2}{}}
+
+? 
+! Undefined control sequence.
+l.17 \@
+       writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Galois F...
+
+? 
+! Undefined control sequence.
+l.17 \@writefile{toc}{\contentsline
+                                    {subsection}{\numberline {1.2.1}Galois F...
+
+? 
+! Undefined control sequence.
+l.17 ...oc}{\contentsline {subsection}{\numberline
+                                                   {1.2.1}Galois Field}{4}{s...
+
+? 
+! Undefined control sequence.
+l.18 \@
+       writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.18 \@writefile{lof}{\contentsline
+                                    {figure}{\numberline {1.3}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.18 ...le{lof}{\contentsline {figure}{\numberline
+                                                   {1.3}{\ignorespaces  Alge...
+
+? 
+! Undefined control sequence.
+l.19 \newlabel
+              {fig:DH:DHKE_3}{{1.3}{5}{Algebraic structures and types of FFs...
+
+? 
+! Undefined control sequence.
+l.20 \newlabel
+              {def:Bezout's Identity}{{11}{7}{Galois Field}{example.1.11}{}}
+? 
+! Undefined control sequence.
+l.21 \@
+       writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.21 \@writefile{lof}{\contentsline
+                                    {figure}{\numberline {1.4}{\ignorespaces...
+
+? 
+! Undefined control sequence.
+l.21 ...le{lof}{\contentsline {figure}{\numberline
+                                                   {1.4}{\ignorespaces  E: $...
+
+? 
+! Emergency stop.
+l.21 ...le{lof}{\contentsline {figure}{\numberline
+                                                   {1.4}{\ignorespaces  E: $...
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,1436 @@
+%!TEX root = proofs+concepts.tex
+
+\newif\ifhyperref
+\hyperreffalse  
+ \hyperreftrue
+
+\ifhyperref \else \def\texorpdfstring#1#2{#1} \def\href#1{} \fi
+
+
+% need these for compatibility with ntheorem
+\makeatletter
+\let\th@plain=\undefined
+\makeatletter
+\let\proofname=\undefined
+\let\proof=\undefined
+\let\endproof=\undefined
+\let\openbox=\undefined
+\let\thm=\undefined
+\let\cor=\undefined
+\let\prop=\undefined
+\let\lem=\undefined
+\let\defn=\undefined
+\let\rem=\undefined
+
+\ifhyperref\usepackage[pdftex]{hyperref}\fi
+\usepackage[amsmath, amsthm,thmmarks \ifhyperref,hyperref \fi]{ntheorem}
+\usepackage[ntheorem \ifhyperref,hyperref \fi]{cleveref}
+
+ \usepackage[singlelinecheck, position=below, textfont={sf}, labelfont={sf,bf}]{caption}
+ \abovecaptionskip=10pt % between caption and figure
+ \belowcaptionskip=0pt % between caption and rest of text
+ 
+ \usepackage{hhline}
+ 
+\makeindex
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{proofs+concepts}[2007/01/04 support for textbook on abstract math]
+
+\usepackage{pdfsync}
+\ifhyperref \usepackage[pdftex]{hyperref,color} 
+\else \usepackage[pdftex]{color} \fi
+\RequirePackage
+	{amssymb,
+	url,
+	multicol,
+	ifthen,
+	array,  
+	tabularx,
+	amsmath,
+	graphicx,
+	color,
+	epic,
+	fancyhdr,
+	paralist}
+
+	
+\usepackage[perpage,symbol]{footmisc}
+
+\setlength{\multicolsep}{0pt plus 4 pt}
+
+
+\newif\iftwocolumn \twocolumntrue
+ \twocolumnfalse
+
+\newcommand{\twoonone}
+ {\twocolumn
+\setlength{\textwidth}{9.5 in}
+\setlength{\textheight}{7.25 in}
+\setlength{\columnsep}{0.5in}
+%\setlength{\textwidth}{9.0 in} %% for U of L???
+%\setlength{\textheight}{7.25 in} %% for U of L ???
+%\setlength{\evensidemargin}{0.75in} %% for U of L ???
+%\setlength{\oddsidemargin}{1.25in} %% for U of L ???
+\hoffset=-1in
+\voffset=-1in  %% -0.875in
+ }
+\iftwocolumn \twoonone
+\else 
+\setlength{\textwidth}{6.25 in}
+\setlength{\textheight}{9.0 in}
+\setlength{\columnwidth}{\textwidth}
+%\setlength{\evensidemargin}{0.25in}
+\setlength{\oddsidemargin}{1.0in}
+\voffset-0.5in
+\hoffset-0.75in
+%% this is for binding and printing at the U of L ???
+%\setlength{\textwidth}{6.5 in}
+%\setlength{\textheight}{9.5 in}
+%\setlength{\columnwidth}{\textwidth}
+%\setlength{\evensidemargin}{0.25in}
+%\setlength{\oddsidemargin}{0.75in}
+%\voffset-0.85in
+%\hoffset-0.5in
+ \fi
+
+%    ****************************************
+%    *            LOGICAL SYMBOLS           *
+%    ****************************************
+%
+% There are, of course, many different symbols used for the truth-functional
+% connectives. In order to make the book adaptable, the symbols are defined
+% here in the style sheet and these commands are used throughout the book.
+% To change conjunction from the ampersand to the carat, for instance,
+% change the definition of \eand from ~\&~ to \wedge. To change negation from
+% the hoe to the tilde, change \enot from \neg to {\sim}.
+%
+\def\therefore{\ensuremath{\ldotp\dot{}\ldotp}\,}
+\def\hence{\hbox to 0pt{\hss\therefore\quad}}
+% disjunction
+\def\eor{\ensuremath{\vee}}
+% conjunction
+\def\eand{\ensuremath{\mathbin{\&}}}
+% conditional
+%\def\eif{\ensuremath{\rightarrow}}
+\def\eif{\ensuremath{\Rightarrow}}
+% biconditional
+%\def\eiff{\ensuremath{\leftrightarrow}}
+\def\eiff{\ensuremath{\Leftrightarrow}} % could use \iff (but then get big spaces)
+% negation
+\def\enot{\ensuremath{\neg}}
+
+\newcommand{\true}{\ensuremath{\mathsf{T}}}
+\newcommand{\false}{\ensuremath{\mathsf{F}}}
+\newcommand{\speq}{\quad=\quad}
+
+
+\newcommand{\qeq}{\quad=\quad}
+
+%    ****************************************
+%    *        TITLE AND VERSION DATA        *
+%    ****************************************
+% the title of the book
+\newcommand*{\forallx}{{\tt forall\script{x}}}
+
+
+
+%    ****************************************
+%    *       SYMBOLS AND SCRIPTY BITS       *
+%    ****************************************
+% equivalent to commenting something out, but usable on multiple lines
+\providecommand{\nix}[1]{}
+% script letters are rendered in Zaph Chancery,
+% which has both upper and lower case.
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [1.200] pzcmi7t}{}
+\DeclareMathAlphabet{\mathscr}{OT1}{pzc}{m}{it}
+\newcommand*{\script}[1]{\ensuremath{\mathscr{#1}}}
+% create a blank
+\newcommand*{\blank}{\underline{\hspace*{2.5em}}}
+% These are included for discussing formal semantics in predicate logic.
+\newcommand*{\model}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand*{\extension}[1]{\ensuremath{\mbox{extension}(#1)}}
+\newcommand*{\referent}[1]{\ensuremath{\mbox{referent}(#1)}}
+%definitions
+\newcommand*{\terminology}[2][\dwmtempa]{\def\dwmtempa{#2}\textsf{\textbf{#2}}\index{#1}}
+
+ % to refer reader to a different entry in the index:
+\newcommand{\indsee}[2]{{\it see\/} #1}
+\newcommand{\indseealso}[2]{{\it see also\/} #1}
+
+% we always capitalize, so no difference at start of sentence:
+\renewcommand{\Cref}{\cref}
+
+
+
+%    ****************************************
+%    *          LIST  ENVIRONMENTS          *
+%    ****************************************
+
+% don't want itemsep to be 0
+\def\@listI{\leftmargin\leftmargini \parsep\z@skip
+  \topsep\listisep \itemsep4pt % ??? was \z@skip
+  \listparindent\normalparindent}
+\let\@listi\@listI
+\def\@listii{\leftmargin\leftmarginii
+  \labelwidth\leftmarginii \advance\labelwidth-\labelsep
+  \topsep4pt \parsep\z@skip \partopsep\z@skip \itemsep4pt} % ??? was \z@skip
+  
+\labelsep=0.5em
+\renewcommand{\labelenumi}{\theenumi)}
+
+%% don't indent lists so much:
+\normalparindent=20pt
+% The {earg} environment is used for deductions (or "arguments" in the terminology of forallx).
+% The {assertlist} environment is used for example sentences.
+% The {ekey} environment is used for symbolization keys.
+\newcounter{eargnum}
+\newcounter{OLDeargnum}
+\newenvironment{earg}%
+{\par\medbreak\hskip\parindent \begin{minipage}{5.4in} \emph{Hypotheses:} % was 6.0
+\par \begin{list}{\arabic{eargnum}.}{\usecounter{eargnum}\def\makelabel##1{\hss\llap{\upshape##1}}}%
+ \renewcommand{\theenumi}{\alph{enumi}}\renewcommand{\theenumii}{\roman{enumii}}}%
+{\setcounter{OLDeargnum}{\arabic{eargnum}}\end{list}\end{minipage}\medbreak}
+
+\crefformat{eargnum}{Hypothesis~#2#1#3}
+
+\newcounter{assertsnum}
+\newcounter{OLDassertsnum}
+\newenvironment{assertlist}%
+{\begin{list}{\arabic{assertsnum}.}{\usecounter{assertsnum}\def\makelabel##1{\hss\llap{\upshape##1}}}%
+ \renewcommand{\theenumi}{\alph{enumi}}\renewcommand{\theenumii}{\roman{enumii}}}%
+{\setcounter{OLDassertsnum}{\arabic{assertsnum}}\end{list}}
+
+\newcommand{\ekeylabel}[1]{{\makebox[15ex][r]{$#1$:}}}
+\newenvironment{ekey}{\begin{list}{}{\renewcommand{\makelabel}{\ekeylabel}}}{\end{list}}
+
+\newcommand{\assert}[1]{Assertion~\ref{#1}}
+\newcommand{\asserts}[2]{Assertions~\ref{#1} and~\ref{#2}}
+
+% Used in conjunction with {earg}, this handles the numbering and
+% references to example sentences:
+\newcounter{Example}[chapter]
+\newcommand*{\ex}[1]{\refstepcounter{Example}\arabic{Example}.\label{#1}}
+% Used in specifying partial models, this keeps the lines justified so
+% so that the = signs all line up. For example:
+%	\begin{partialmodel}
+%		UD			& \{Duke, Miles\}\\
+%		\extension{B}	& \{Duke\}
+%	\end{partialmodel}
+\newenvironment{partialmodel}{\par\begin{tabular}{r@{~=~}l}}{\end{tabular}\par}
+% define the bullet for {itemize} lists
+%\renewcommand{\labelitemi}{$\triangleright$}
+\renewcommand{\labelitemii}{$\circ$}
+
+% \factoidbox{...} produces an inset paragraph of text with a line around it
+% Neither for lists nor an environment, but it really didn't
+% belong anywhere else.
+%\newcommand{\factoidbox}[1]{$$\hbox to 0pt{\hss\framebox{\parbox{\linewidth}{
+%\centering{#1}}}\hss}$$}
+\newcommand{\factoidbox}[1]{\begingroup
+\setlength{\abovedisplayskip}{\smallskipamount}
+\setlength{\belowdisplayskip}{0pt}
+$$\factoidboxit{
+$\begin{array}{>{$}c<{$}}
+#1
+\end{array}$
+}$$
+\endgroup
+}
+
+
+
+%Summary is an environment from the set theory book, that produces a list environment for a summary at the end of a chapter.
+\newenvironment{summary}{\par\filbreak\vskip0.5in
+\addcontentsline{toc}{summary}{Summary}
+%\vbox{\vskip0.5in}\nobreak\vfil
+\vbox{\hbox to \columnwidth{\hrulefill} \vskip - 8 pt \hbox to \columnwidth{\hrulefill}}
+\medskip \noindent{\normalfont\bfseries\sffamily \large SUMMARY:} 
+\begin{itemize}}{\end{itemize}
+\vbox{\hbox to \columnwidth{\hrulefill} \vskip - 8 pt \hbox to \columnwidth{\hrulefill}}
+}
+
+\newenvironment{problist}{\begin{enumerate}
+%\setlength{\itemsep}{2pt}
+}{\end{enumerate}}
+
+
+
+
+
+%    ****************************************
+%    *          PRACTICE PROBLEMS           *
+%    ****************************************
+\newcounter{ProbPart}
+\renewcommand{\theProbPart}{\Alph{ProbPart}}
+% This inserts a heading and resets the counter:
+\newcommand*{\practiceproblems}{
+	\setcounter{ProbPart}{0}\section*{Practice Exercises}%
+	\addcontentsline{toc}{section}{Practice Exercises}
+}
+% This starts a new section which is automatically numbered:
+\newcommand*{\problempart}{
+	\refstepcounter{ProbPart}\textbf{Part \Alph{ProbPart}}\ 
+}
+% This bullet is used to indicate that solutions appear at the end of
+% the book.
+\newcommand*{\solutions}{$\star$}
+% When solutions are only given for selected problems, the
+% star is placed left of the problem number.
+\newcommand*{\leftsolutions}{\hspace{-2.2em}\makebox[2em][l]{\solutions}}
+
+% This is used at the beginning of a section in the solutions
+% appendix.
+\newcommand*{\solutionsection}[2]{%
+	\section*{Chapter {\ref{#1}} Part {\ref{#2}}}%
+	\markright{solutions for ch.~\ref{#1}}%
+	\setcounter{countSeq}{0}
+}
+
+% This is used to enumerate things that have a given property.
+% For example: \nextSeq\nextSeq\noSeq\lastSeq are valid.
+% produces   : 1, 2, and 4 are valid.
+\newcounter{countSeq}
+\newcommand*{\nextSeq}{\stepcounter{countSeq}\arabic{countSeq}, }
+\newcommand*{\noSeq}{\stepcounter{countSeq}}
+\newcommand*{\lastSeq}{and \stepcounter{countSeq}\arabic{countSeq} }
+
+% This is used to place (eg) a partial model or proof as an item
+% in a list. Without it, the item tag will be vertically centered next
+% to the model or proof.
+%		--- doesn't actually work yet ---
+\newenvironment{solutioninlist}{\ \vspace{-1em}}{}
+
+
+%    ****************************************
+%    *         TABLE OF CONTENTS, ETC.      *
+%    ****************************************
+\setcounter{tocdepth}{2}  % we want subsections in the Table of Contents
+\setcounter{secnumdepth}{2}  % we want subsections to be numbered
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}\Alph{section}}
+%\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\crefformat{section}{Section~#2#1#3}
+
+
+%\renewcommand{\chaptermark}[1]{\markboth%
+%{\forallx}%
+%{\textrm{ch.~\thechapter\ \lowercase{#1}}}%
+%}
+%\renewcommand{\sectionmark}[1]{}
+\renewcommand{\partrunhead}[3]{%
+  \@ifnotempty{#2}{%\uppercase
+  {\ignorespaces#1 #2\unskip}\@ifnotempty{#3}{. }}%
+  \def\@tempa{#3}%
+  \ifx\@empty\@tempa\else
+    \begingroup \def\\{ \ignorespaces}% defend against questionable usage
+    %\uppercasenonmath
+    \@tempa%\@tempa
+    \endgroup
+  \fi
+}
+\let\chapterrunhead\partrunhead
+\let\sectionrunhead\partrunhead
+
+
+
+
+%    ****************************************
+%    *             TRUTH TABLES             *
+%    ****************************************
+
+% This facilitates the typesetting of truth tables by
+% effectively eliminating the intercolumn space.
+% This allows truth tables with the Ts and Fs immediately
+% below arbitrary connectives.
+% An example follows:
+%\begin{center}
+%\begin{tabular}{c|c|c*{4}T}
+%$A$&$B$&$(A$&\eand&$B)$&\eif&A\\
+%\hline
+% T & T &    &  T  &    &  T & \\
+% T & F &    &  F  &    &  T & \\
+% F & T &    &  F  &    &  T & \\
+% F & F &    &  T  &    &  T &
+%\end{tabular}
+%\end{center}
+
+%\newcommand*{\TTon}{\hspace{1.5em}\extracolsep{-1em}}
+%\newcommand*{\TToff}{\extracolsep{-1em}\hspace{.3em}}
+\newcommand*{\TTbf}[1]{\textbf{\large #1}}
+
+
+
+%    ****************************************
+%    *                PROOFS                *
+%    ****************************************
+
+% based on fitch.sty by Peter Selinger, University of Ottawa
+% v 0.4, (C) 2002 Peter Selinger
+% revised 2003--5 by P.D. Magnus
+
+% Selinger released this code under the GNU General Public License,
+% version 2 or later. So this bit of the style is free to you under
+% the GPL.
+
+% ----------------------------------------------------------------------
+% The comments in this file are intended for programmers who
+% might want to hack this package. For information on how to use the
+% package, the file fitchdoc.tex is a better place to look.
+% ----------------------------------------------------------------------
+
+% Global identifiers defined by this package start with '\nd*'. The
+% only exceptions are \ndref, \nddim, and the "nd" and "ndresume"
+% latex environments.
+
+{\chardef\x=\catcode`\*
+\catcode`\*=11
+\global\let\nd*astcode\x}
+\catcode`\*=11
+
+% The macros provided by this package mix TeX and LaTeX primitives.
+% LaTeX is used for \rule, \settowidth, \addtolength, \hspace...
+% All macros are assumed to be called in math mode.
+
+% Translation proceeds through several layers of macros. Each layer
+% consist of macros which expand into macros of the previous
+% layer. Each layer may have some global state and initialization
+% functions. Only the topmost layer (layer C) is directly
+% user-accessible. 
+
+
+% References
+
+% We start with some macros to facilitate automatic line numbering, and
+% for referencing of lines by labels. The macros defined here are:
+% \nd*reset to reset the line number count. \nd*num{x}, to generate the next
+% line number and store it in reference x; \nd*ref{x} to print the line
+% number referenced by x, \ndref{xxx} to parse a list of references,
+% separated by commas, periods, and hyphens, and translate all references to
+% line numbers. Note: \ndref ignores spaces in its argument, but puts
+% a space after each comma or period in the output. Also note: \nd*ref can be
+% useful outside a natded environment, and thus it has a user
+% accessible name. Most general ``line numbers'' actually consist of a
+% name (such as ``n'') and a number (such as ``2''), to produce output
+% such as $n+2$. \nd*set{n}{m} is called to set the letter to n and
+% the number to m. As special cases, if the second argument is empty,
+% it is not set, and if the first argument is \relax, it is not set.
+
+% Example for references:
+
+% \nd*reset \nd*num{x}; \nd*num{y}; \nd*numopt{n+1}{z}; \nd*num{zz}; 
+% \nd*ref{y}; \ndref{x, y-zz, z}
+% will produce: 1; 2; n+1; 3; 2; 1, 2-3, n+1
+
+\newcount\nd*ctr
+\def\nd*render{\expandafter\ifx\expandafter\nd*x\nd*base\nd*x\the\nd*ctr\else\nd*base\ifnum\nd*ctr<0\the\nd*ctr\else\ifnum\nd*ctr>0+\the\nd*ctr\fi\fi\fi}
+\expandafter\def\csname nd*-\endcsname{}
+
+%\def\nd*num#1{\global\advance\nd*ctr1\nd*numo{\the\nd*ctr}{#1}}
+\def\nd*num#1{\nd*numo{\nd*render}{#1}\global\advance\nd*ctr1}
+\def\nd*numopt#1#2{\nd*numo{$#1$}{#2}}
+\def\nd*numo#1#2{\edef\x{#1}\mbox{$\x$}\expandafter\global\expandafter\let\csname nd*-#2\endcsname\x}
+\def\nd*ref#1{\expandafter\let\expandafter\x\csname nd*-#1\endcsname\ifx\x\relax%
+  \errmessage{Undefined natdeduction reference: #1}\else\mbox{$\x$}\fi}
+\def\nd*noop{}
+\def\nd*set#1#2{\ifx\relax#1\nd*noop\else\global\def\nd*base{#1}\fi\ifx\relax#2\relax\else\global\nd*ctr=#2\fi}
+\def\nd*reset{\nd*set{}{1}}
+\def\nd*refa#1{\nd*ref{#1}}
+\def\nd*aux#1#2{\ifx#2-\nd*refa{#1}--\def\c{\nd*aux{}}%
+  \else\ifx#2,\nd*refa{#1}, \def\c{\nd*aux{}}%
+  \else\ifx#2;\nd*refa{#1}; \def\c{\nd*aux{}}%
+  \else\ifx#2.\nd*refa{#1}. \def\c{\nd*aux{}}%
+  \else\ifx#2)\nd*refa{#1})\def\c{\nd*aux{}}%
+  \else\ifx#2(\nd*refa{#1}(\def\c{\nd*aux{}}%
+  \else\ifx#2\nd*end\nd*refa{#1}\def\c{}%
+  \else\def\c{\nd*aux{#1#2}}%
+  \fi\fi\fi\fi\fi\fi\fi\c}
+\def\ndref#1{\nd*aux{}#1\nd*end}
+
+
+% Layer A
+
+% Layer A provides primitive picture elements which can be combined
+% into natural deduction derivations. These are: \nd*t to make a
+% topmost vertical line segment; \nd*v to make a continuation vertical
+% line segment, \nd*i to produce the indentation for a subproof,
+% \nd*s to produce the horizontal space between a vertical line and a
+% formula, \nd*u{x} to underline x with appropriate spacing for a
+% hypothesis. \nd*f{x} typesets the formula x with the appropriate vertical
+% spacing. \nd*g{x} is like \nd*i, except it puts a guard in the
+% space it creates. These elements are spaced so that they are appropriate
+% as left-aligned array entries. Line numberings and justifications
+% must be provided manually in this layer. All explicit spacing
+% information is contained in this layer; higher layers manipulate only
+% layer A primitives.
+
+% define various dimensions (explained in fitchdoc.tex):
+\newlength{\nd*dim} 
+\newdimen\nd*depthdim
+\newdimen\nd*hsep
+% user command to redefine dimensions
+\def\nddim#1#2#3#4#5#6#7#8{\nd*depthdim=#3\relax\nd*hsep=#6\relax%
+\def\nd*height{#1}\def\nd*thickness{#8}\def\nd*initheight{#2}%
+\def\nd*indent{#5}\def\nd*labelsep{#4}\def\nd*justsep{#7}}
+% set initial dimensions
+\nddim{4.5ex}{3.5ex}{1.5ex}{1em}{1.6em}{.5em}{2.5em}{.2mm}
+
+\def\nd*v{\rule[-\nd*depthdim]{\nd*thickness}{\nd*height}}
+\def\nd*t{\rule[-\nd*depthdim]{0mm}{\nd*height}\rule[-\nd*depthdim]{\nd*thickness}{\nd*initheight}}
+\def\nd*i{\hspace{\nd*indent}} 
+\def\nd*s{\hspace{\nd*hsep}}
+\def\nd*g#1{\nd*f{\makebox[\nd*indent][c]{$#1$}}}
+\def\nd*f#1{\raisebox{0pt}[0pt][0pt]{$#1$}}
+\def\nd*u#1{\makebox[0pt][l]{\settowidth{\nd*dim}{\nd*f{#1}}%
+    \addtolength{\nd*dim}{2\nd*hsep}\hspace{-\nd*hsep}\rule[-\nd*depthdim]{\nd*dim}{\nd*thickness}}\nd*f{#1}}
+
+% Example of a derivation using layer A syntax:
+
+%\begin{array}{lll}
+%  1  &  \nd*t\nd*s\nd*f            {P\vee Q}                           \\
+%  2  &  \nd*v\nd*s\nd*u            {\neg Q}                            \\
+%  3  &  \nd*v\nd*i\nd*t\nd*s\nd*u  {P}                                 \\
+%  4  &  \nd*v\nd*i\nd*v\nd*s\nd*f  {P}       &  \mbox{by 3}            \\
+%  5  &  \nd*v\nd*i\nd*t\nd*s\nd*u  {Q}                                 \\
+%  6  &  \nd*v\nd*i\nd*v\nd*s\nd*f  {\neg Q}  &  \mbox{by 2}            \\
+%  7  &  \nd*v\nd*i\nd*v\nd*s\nd*f  {\bot}    &  \mbox{by 5, 6}         \\
+%  8  &  \nd*v\nd*i\nd*v\nd*s\nd*f  {P}       &  \mbox{by 7}            \\
+%  9  &  \nd*v\nd*s\nd*f            {P}       &  \mbox{by 1, 3-4, 5-8}  \\
+%\end{array}
+
+
+% Lists
+
+% This is a bit of a hack. We implement linked lists as follows: a
+% list is either \nd*nil, or \nd*cons{T}{H}, where T is another list,
+% and H is some arbitrary code. Note that lists grow to the right. 
+% The following macros operate on a list that is stored in a macro
+% \list. 
+% \nd*push\list{item} pushes the item onto the list
+% \nd*pop\list{item} pops and discards the last item from the list
+% \nd*item\list{command} applies command to each element of the list
+% \nd*modify\list\n{elt} modifies the \n-th element of the
+% list, if there is such an element. Here \n is a counter. Elements
+% are counted from the right, starting from 1.
+
+\def\nd*push#1#2{\expandafter\gdef\expandafter#1\expandafter%
+  {\expandafter\nd*cons\expandafter{#1}{#2}}}
+\def\nd*pop#1{{\def\nd*nil{\gdef#1{\nd*nil}}\def\nd*cons##1##2%
+    {\gdef#1{##1}}#1}}
+\def\nd*iter#1#2{{\def\nd*nil{}\def\nd*cons##1##2{##1#2{##2}}#1}}
+\def\nd*modify#1#2#3{{\def\nd*nil{\gdef#1{\nd*nil}}\def\nd*cons##1##2%
+    {\advance#2-1 ##1\advance#2 1 \ifnum#2=1\nd*push#1{#3}\else%
+      \nd*push#1{##2}\fi}#1}}
+
+% we use lists of items of the forms \nd*t, \nd*v, \nd*i, and
+% \nd*g{...} to represent the current indentation level and
+% format (see Layer A, above). The following function 
+% computes the indentation for the following line by replacing all
+% items of the form \nd*t by \nd*v and \nd*g{...} by \nd*i. 
+
+\def\nd*cont#1{{\def\nd*t{\nd*v}\def\nd*v{\nd*v}\def\nd*g##1{\nd*i}%
+    \def\nd*i{\nd*i}\def\nd*nil{\gdef#1{\nd*nil}}\def\nd*cons##1##2%
+    {##1\expandafter\nd*push\expandafter#1\expandafter{##2}}#1}}
+
+% With the list syntax, a derivation can be expressed like this:
+
+% \[\begin{array}{lll}
+%   \gdef\stack{\nd*nil}
+%   \newcount\n
+%   \nd*push\stack{\nd*t}
+%   1 & \nd*iter\stack\relax\nd*s\nd*u       {\neg\exists xP(x)} \\
+%   \nd*cont\stack
+%   \nd*push\stack{\nd*i}
+%   \nd*push\stack{\nd*t}
+%   \nd*n=2\nd*modify\stack\n{\nd*g{u}}
+%   \nd*push\stack{\nd*i}
+%   \nd*push\stack{\nd*t}
+%   2 & \nd*iter\stack\relax\nd*s\nd*u       {P(u)} \\
+%   \nd*cont\stack
+%   3 & \nd*iter\stack\relax\nd*s\nd*f       {\exists xP(x)} \\
+%   \nd*cont\stack
+%   4 & \nd*iter\stack\relax\nd*s\nd*f       {\neg\exists xP(x)} \\
+%   \nd*cont\stack
+%   5 & \nd*iter\stack\relax\nd*s\nd*f       {\bot} \\
+%   \nd*cont\stack
+%   \nd*pop\stack
+%   \nd*pop\stack
+%   6 & \nd*iter\stack\relax\nd*s\nd*f       {\neg P(u)} \\
+%   \nd*cont\stack
+%   \nd*pop\stack
+%   \nd*pop\stack
+%   7 & \nd*iter\stack\relax\nd*s\nd*f       {\forall y\neg P(y)} \\
+%   \nd*cont\stack
+%  \end{array}
+% \]
+
+
+% Layer B
+
+% Layer B is simply a wrapper around layer A. It provides commands
+% \nd*beginb, \nd*resumeb, \nd*endb, \nd*openb, \nd*closeb,
+% \nd*guardb, \nd*hypob, and \nd*haveb which abstract from the layer A 
+% primitives. This includes automatic line numbering, and automatic
+% indentation. \nd*beginb and \nd*endb enclose a natural deduction in
+% layer B syntax. \nd*resumeb is like \nd*beginb, except that it
+% resumes a deduction in progress (for instance, after a manual page
+% break). \nd*openb and \nd*closeb open, respectively close, a
+% subproof.  \nd*guardb{n}{g} adds the guard g to the nth enclosing
+% subderivation (counted from 1 from the inside). \nd*hypob 
+% introduces a hypothesis, and \nd*haveb introduces a non-hypothesis
+% line in a proof.  Line numbering is integrated, but justifications
+% must still be given manually. Also, proof lines must still be
+% terminated by '\\'. An idiosyncracy of this layer is that in a list
+% of several hypotheses, all but the last one must be called with
+% \nd*haveb, not \nd*hypob, to avoid drawing a horizontal line under
+% each of them.
+
+\newcount\nd*n
+\def\nd*beginb{\begingroup\nd*reset\gdef\nd*stack{\nd*nil}\nd*push\nd*stack{\nd*t}%
+  \begin{array}{l@{\hspace{\nd*labelsep}}l@{\hspace{\nd*justsep}}l}}
+\def\nd*resumeb{\begingroup\begin{array}{r@{\hspace{\nd*labelsep}}l@{\hspace{\nd*justsep}}l}}
+\def\nd*endb{\end{array}\endgroup}
+\def\nd*hypob#1#2{\nd*f{\nd*num{#1}}&\nd*iter\nd*stack\relax\nd*cont\nd*stack\nd*s\nd*u{#2}&}
+\def\nd*haveb#1#2{\nd*f{\nd*num{#1}}&\nd*iter\nd*stack\relax\nd*cont\nd*stack\nd*s\nd*f{#2}&}
+\def\nd*openb{\nd*push\nd*stack{\nd*i}\nd*push\nd*stack{\nd*t}}
+\def\nd*closeb{\nd*pop\nd*stack\nd*pop\nd*stack}
+\def\nd*guardb#1#2{\nd*n=#1\multiply\nd*n by 2 \nd*modify\nd*stack\nd*n{\nd*g{#2}}}
+
+% Example of a derivation using layer B syntax. Note that the "line
+% numbers" are really labels, which will be replaced by consecutive
+% line numbers in the output.
+
+% \[
+%   \nd*beginb
+%   \nd*haveb  {1}{P\vee Q}                               \\
+%   \nd*hypob  {2}{\neg Q}                                \\
+%   \nd*openb
+%   \nd*hypob  {3}{P}                                     \\
+%   \nd*haveb  {4}{P}       \mbox{by \ndref{3}}           \\
+%   \nd*closeb
+%   \nd*openb
+%   \nd*hypob  {5}{Q}                                     \\
+%   \nd*haveb  {6}{\neg Q}  \mbox{by \ndref{2}}           \\
+%   \nd*haveb  {6a}{\bot}   \mbox{by \ndref{5,6}}         \\
+%   \nd*haveb  {6b}{P}      \mbox{by \ndref{6a}}          \\
+%   \nd*closeb
+%   \nd*haveb  {8}{P}       \mbox{by \ndref{1,3-4,5-6b}}  \\
+%   \nd*endb
+% \]
+
+% Here is another example, using a guard.
+
+% \[
+%   \nd*beginb
+%   \nd*hypob  {1}{\neg\exists xP(x)}   \\
+%   \nd*openb
+%   \nd*guardb {1}{u}
+%   \nd*openb
+%   \nd*hypob  {2}{P(u)}                \\
+%   \nd*haveb  {3}{\exists xP(x)}       \mbox{by \ndref{2}}  \\
+%   \nd*haveb  {4}{\neg\exists xP(x)}   \mbox{by \ndref{1}}  \\
+%   \nd*haveb  {5}{\bot}                \mbox{by \ndref{3,4}}\\
+%   \nd*closeb
+%   \nd*haveb  {6}{\neg P(u)}           \mbox{by \ndref{2-5}}\\
+%   \nd*closeb
+%   \nd*haveb  {7}{\forall y\neg P(y)}  \mbox{by \ndref{2-6}}\\
+%   \nd*endb
+% \]
+
+
+% Layer C
+
+% Layer C is the syntax used by the end user. It is implemented as a
+% wrapper around layer B, providing six additional conveniences: 
+% (1) no more need for explicit '\\', (2) all hypotheses 
+% are denoted \hypo, (3) a convenient syntax for writing justification
+% labels, (4) a latex environment, (5) guard as optional argument to
+% \have, \hypo, or \open, (6) optional relabeling arguments. The user
+% level commands are similar to those of layer B: they are called
+% \begin{nd}, \end{nd}, \open, \close, \hypo, \have. In addition there
+% is a \by command for writing justification labels, in the style of
+% \by{$\vee$E}{1,2-4,5-6}. For convenience, a number of abbreviations
+% is also provided, for instance \ie for \by{$\Rightarrow$E}
+% etc. These commands are only visible inside an nd-environment; thus
+% they do not interfere with the global name space. There is also an
+% environment ndresume which is like nd, except that it continues a
+% proof in progress (with continuous nesting and labeling).
+
+% The layer C macros work by storing each line in a data structure
+% \ppp,\nd*typ,\nd*byt. The line is ejected when the beginning of the next
+% line is read, and once at the very end. In this way, we can put in
+% the correct line breaks (whether or not the line carries a
+% justification), and a hypothesis does not get typeset until we know
+% whether it is followed by another hypothesis. \nd*sto stores a new
+% line, \nd*clr clears the current line, \nd*cmd outputs the current
+% line. Finally, \nd*init puts all the commands which are visible
+% inside an nd-environment in the current name space.
+
+\def\nd*clr{\gdef\nd*cmd{}}
+\def\nd*sto#1#2#3{\gdef\nd*typ{#1}\gdef\nd*byt{}%
+  \gdef\nd*cmd{\nd*typ{#2}{#3}\nd*byt\\}}
+\def\nd*hyc#1#2{\def\nd*typ{\nd*haveb}\nd*cmd\nd*sto{\nd*hypob}{#1}{#2}}
+\def\nd*hac#1#2{\nd*cmd\nd*sto{\nd*haveb}{#1}{#2}}
+
+% usage: \optarg{default}{continuation}xxx - reads an optional argument, 
+% supplies default if necessary, then continues with continuation. 
+% Continuation expects optional argument between [...]. I.e., 
+% \optarg{d}{c}[xxx] => c[xxx], and \optarg{d}{c}x => c[d]x if x != '['. 
+% Behavior is undefined if x is {[...}. \optargg is similar except it 
+% takes two continuations: first one for optional argument present, second 
+% for not present. It takes no default value.
+
+\def\optarg#1#2#3{\ifx[#3\def\c{#2#3}\else\def\c{#2[#1]{#3}}\fi\c}
+\def\optargg#1#2#3{\ifx[#3\def\c{#1#3}\else\def\c{#2{#3}}\fi\c}
+
+\def\nd*hyx[#1][#2]#3[#4]#5{\ifx\relax#4\relax\else\nd*guardb{1}{#4}\fi\nd*hyc{#3}{#5}\nd*set{#1}{#2}}
+\def\nd*hax[#1][#2]#3[#4]#5{\ifx\relax#4\relax\else\nd*guardb{1}{#4}\fi\nd*hac{#3}{#5}\nd*set{#1}{#2}}
+
+% \nd*five{\a}: read five, partly optional arguments of the shape [][]{}[]{}, 
+% then call \a with these arguments.
+\def\nd*five#1{\optargg{\nd*four{#1}}{\nd*two{#1}}}
+\def\nd*four#1[#2]{\optarg{0}{\nd*three{#1}[#2]}}
+\def\nd*three#1[#2][#3]#4{\optarg{}{#1[#2][#3]{#4}}}
+\def\nd*two#1{\nd*three{#1}[\relax][]}
+
+\def\nd*have{\nd*five{\nd*hax}}
+\def\nd*hypo{\nd*five{\nd*hyx}}
+\def\nd*base{undefined}
+
+\def\nd*open{\optargg{\nd*openopt}{\nd*opennoopt}}
+\def\nd*openopt[#1]{\nd*cmd\nd*clr\nd*openb\nd*guard{#1}}
+\def\nd*opennoopt#1{\nd*cmd\nd*clr\nd*openb#1}
+\def\nd*close{\nd*cmd\nd*clr\nd*closeb}
+\def\nd*guard{\optarg{1}{\nd*guardc}}
+\def\nd*guardc[#1]#2{\nd*guardb{#1}{#2}}
+
+\def\nd*by#1#2{\ifx\nd*x#2\nd*x\gdef\nd*byt{\mbox{#1}}\else\gdef\nd*byt{\mbox{#1\ \ndref{#2}}}\fi}
+
+% * * *
+% This block defines the natural deduction rules.
+% Rules designated by ordinary letters may be specified with \by{RULE}
+% * * *
+
+\def\nd*init{%
+  \let\open\nd*open%
+  \let\close\nd*close%
+  \let\hypo\nd*hypo%
+  \let\have\nd*have%
+  \let\by\nd*by%
+  \let\guard\nd*guard%
+  \def\bi{\by{{\eiff}I}}%
+  \def\be{\by{{\eiff}E}}%
+  \def\ci{\by{{\eif}I}}%
+  \def\ce{\by{{\eif}E}}%
+  \def\Ai{\by{$\forall$I}}%
+  \def\Ae{\by{$\forall$E}}%
+  \def\Ei{\by{$\exists$I}}%
+  \def\Ee{\by{$\exists$E}}%
+  \def\ae{\by{{\eand}E}}%
+  \def\ai{\by{{\eand}I}}%
+  \def\oi{\by{{\eor}I}}%
+  \def\oe{\by{{\eor}E}}%
+  \def\ni{\by{{\enot}I}}%
+  \def\ne{\by{{\enot}E}}%
+  \def\ii{\by{$=$I}}%
+  \def\ie{\by{$=$E}}%
+}
+\newenvironment{nd}{\begingroup\nd*init\nd*beginb\nd*clr}{\nd*cmd\nd*endb\endgroup}
+\newenvironment{ndresume}{\begingroup\nd*init\nd*resumeb\nd*clr}%
+  {\nd*cmd\nd*endb\endgroup}
+
+% Example of a derivation using layer C syntax. As before, the "line
+% numbers" are really labels, which will be replaced by consecutive
+% line numbers in the output.
+
+% \[
+% \begin{nd}
+%   \hypo{1}  {P\vee Q}   
+%   \hypo{2}  {\neg Q}                         
+%   \open                              
+%   \hypo{3a} {P}
+%   \have{3b} {P}        \r{3a}
+%   \close                   
+%   \open
+%   \hypo{4a} {Q}
+%   \have{4b} {\neg Q}   \r{2}
+%   \have{4c} {\bot}     \ne{4a,4b}
+%   \have{4d} {P}        \be{4c}
+%   \close                             
+%   \have{5}  {P}        \oe{1,3a-3b,4a-4d}                 
+% \end{nd}
+% \]
+
+% Another example of layer C syntax, using guards and relabelings:
+
+% \begin{nd}
+%   \hypo          {1} {P\vee Q}
+%   \open
+%   \hypo          {2}[u] {P}
+%   \have [\vdots] {3} {\vdots}
+%   \have [n][-1]  {4} {A\wedge B}
+%   \close
+%   \open
+%   \hypo          {5} {Q}
+%   \have [\vdots] {6} {\vdots}
+%   \have [m]      {7} {A\wedge B}
+%   \close
+%   \have          {8} {A\wedge B}  \oe{1,2-(4),5-7}
+%   \have [\vdots] {9} {\vdots}
+%   \have [][100] {10} {A}          \ae{8}
+% \end{nd}
+
+\catcode`\*=\nd*astcode
+
+\newenvironment{formalproof}{\par$\begin{nd}}{\end{nd}$\par}
+
+
+
+%% environment for two-column proofs and three-column proofs
+
+\newcommand{\whline}{\noalign{\global\savedwidth\arrayrulewidth \global\arrayrulewidth 2pt}%
+\hline
+ \noalign{\global\arrayrulewidth\savedwidth}}
+
+\newlength\subpfindent
+\newlength\pflabeloutdent
+\newlength\pfwidth
+\newlength\pfshorten 
+\newlength\savedwidth
+
+\setlength{\subpfindent}{1em}
+\setlength{\pflabeloutdent}{1.5em}
+\setlength{\pfwidth}{\textwidth}
+\addtolength{\pfwidth}{-1em}
+\setlength{\pfshorten}{2.5em}
+
+
+\newcommand{\leftnone}[1]{\hbox to 0pt{#1\hss}}
+\newcommand{\hypend}{\whline}
+\newcommand{\nohypotheses}{\multicolumn{2}{Ic}{ } \\}
+
+\newcolumntype{I}{!{\vrule width 3pt}} 
+\newcolumntype{T}{@{\,}c}  
+
+
+%% ???
+\newcommand{\twocolpf}[1]{\medbreak\begin{center} \renewcommand{\arraystretch}{1.5}
+%
+\newcommand{\pfline}[3]{\hbox to 0pt{\hskip -\pflabeloutdent \hbox to 0pt{\hss$##1$}\hss}\hfil $##2$ & \splitline{##3}\\}
+%
+%\newcommand{\proofunit}[1]{%
+%\addtolength{\pfwidth}{-\pfshorten}%
+%{\begin{tabularx}{\pfwidth}{Il|>{\raggedright\arraybackslash}X|}\hline##1\hline \end{tabularx}}}
+\newcommand{\proofunit}[1]{%
+\begin{tabular}{Il|l|}
+\hline##1\hline\end{tabular}}%
+%
+\newcommand{\subproof}[1]{%
+\hline
+\multicolumn{2}{Il|}{\addtolength{\pflabeloutdent}{1.73\subpfindent}%
+\vbox{\smallskip
+\hbox{\hskip \subpfindent
+\proofunit{##1}}
+\vskip-2pt}}\\  \hline
+}
+%
+\proofunit{#1}\end{center}\medbreak}
+
+\newcommand{\threecolpf}[1]{\medbreak\begin{center} \renewcommand{\arraystretch}{1.5}
+%
+\newcommand{\pfline}[4]{\hbox to 0pt{\hskip -\pflabeloutdent \hbox to 0pt{\hss$##1$}\hss}\hfil $\splitmathline{##2}$&\splitline{##3}&##4\crcr}
+%
+\newcommand{\proofunit}[1]{%
+\addtolength{\pfwidth}{-\pfshorten}%
+{\begin{tabularx}{\pfwidth}{Il|l||>{\raggedright\arraybackslash}X|}\hline##1\hline \end{tabularx}}}
+%
+\newcommand{\subproof}[1]{%
+\hline
+\multicolumn{3}{Il|}{\addtolength{\pflabeloutdent}{1.73\subpfindent}%
+\vbox{\smallskip
+\hbox{\hskip \subpfindent
+\proofunit{##1}}
+\vskip-2pt}}\\  \hline
+}
+%
+\proofunit{#1}\end{center}\medbreak}
+
+
+\newcommand{\splitline}[1]{\renewcommand{\arraystretch}{1}%
+\begin{tabular}[t]{l}#1\end{tabular}
+}
+\newcommand{\splitmathline}[1]{\renewcommand{\arraystretch}{1}%
+\begin{array}[t]{l}#1\end{array}
+}
+
+
+\newcommand{\AndIntro}[2]{$\eand$-intro (lines ${#1}$ and ${#2}$)}
+\newcommand{\AndIntroB}[2]{$\eand$-intro \\ (lines ${#1}$ and ${#2}$)}
+\newcommand{\AndElim}[1]{$\eand$-elim (line ${#1}$)}
+\newcommand{\OrIntro}[1]{$\eor$-intro (line ${#1}$)}
+\newcommand{\OrElim}[2]{$\eor$-elim (lines ${#1}$ and ${#2}$)}
+\newcommand{\IfIntro}[2]{$\eif$-intro (lines ${#1}$--${#2}$)}
+\newcommand{\IfElim}[2]{$\eif$-elim (lines ${#1}$ and ${#2}$)}
+\newcommand{\IffIntro}[2]{$\eiff$-intro (lines ${#1}$ and ${#2}$)}
+\newcommand{\IffElim}[1]{$\eiff$-elim (line ${#1}$)}
+\newcommand{\IffElimB}[2]{$\eiff$-elim \\ (lines ${#1}$ and ${#2}$)}
+\newcommand{\NotIntro}[2]{$\enot$-intro (lines ${#1}$--${#2}$)}
+\newcommand{\NotElim}[1]{$\enot$-elim (line ${#1}$)}
+\newcommand{\Repeat}[1]{repeat~(line ${#1}$)}
+\newcommand{\AllElim}[1]{$\forall$-elim (line ${#1}$)}
+\newcommand{\AllElimSet}[2]{$\forall$-elim (lines ${#1}$ and~${#2}$)}
+\newcommand{\AllIntro}[1]{$\forall$-intro (line ${#1}$)}
+\newcommand{\AllIntroSet}[2]{$\forall$-intro (lines ${#1}$--${#2}$)}
+\newcommand{\ExistElim}[3]{$\exists$-elim (lines ${#1}$ and ${#2}$--${#3}$)}
+\newcommand{\ExistElimSet}[3]{$\exists$-elim (lines ${#1}$ and ${#2}$--${#3}$)}
+\newcommand{\ExistIntro}[1]{$\exists$-intro (line ${#1}$)}
+\newcommand{\ExistIntroSet}[2]{$\exists$-intro (lines ${#1}$ and~${#2}$)}
+\newcommand{\EqualIntro}{$=$-intro}
+\newcommand{\EqualElim}[2]{$=$-elim (lines ${#1}$ and~${#2}$)}
+\newcommand{\NotSimplify}[1]{$\enot$-simplify (line $#1$)}
+\newcommand{\Cases}[3]{Proof by cases (lines $#1$, $#2$, and $#3$)}
+
+
+\newcommand{\by}[2]{#1 (#2)}
+
+%EXAMPLE:
+%\begin{twocolpf}
+%	\pfline{1}{\script{A}}{hypothesis} \\
+%	\pfline{2}{T}{hypothesis}\\
+%	\hypend
+%	\pfline{3}{T}{F}\\
+%	\pfline{4}{F}{T} \\
+%	\subproof{
+%		\pfline{5}{\script{A}}{hypothesis}\\
+%		\hypend
+%		\pfline{6}{T}{F}\\
+%		\subproof{
+%			 \nohypotheses
+%			\hypend
+%			\pfline{6.5}{A}{PB} \\
+%		}
+%		\pfline{7}{F}{T} \\
+%		\pfline{8}{\script{B}}{why} \\
+%	}
+%	\pfline{9}{T}{F}\\
+%	\pfline{10}{F}{T} \\
+%	\pfline{11}{\script{A} \eif \script{B}}{$\eif$ intro} \\
+%\end{twocolpf}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+%  Stuff grabbed from setbook.sty
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\var}[1]{\text{\sf #1}}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\integer}{\mathbb{Z}}
+\renewcommand{\natural}{\mathbb{N}}
+
+ % this makes set braces "{}" tall enough
+ % to fit what is in between
+\newcommand\bigset[2]{\left\{\, #1 
+ \mathrel{\left| \vphantom {\left\{ #1 \mid #2 \right\} }
+ \right.} #2 \,\right\} }
+
+\renewcommand{\see}[1]{{\rm(}see~\ref{#1}{\rm)}}
+\newcommand{\seeex}[1]{{\rm(}see Exer.~\ref{#1}{\rm)}}
+\newcommand{\fullseeex}[2]{{\rm(}see Exer.~\ref{#1}\pref{#1-#2}{\rm)}}
+%\newcommand{\pref}[1]{{\rm(}\ref{#1}{\rm)}}
+%\newcommand{\fullref}[2]{\ref{#1}\pref{#1-#2}}
+\newcommand{\fullcsee}[2]{(see~\fullcref{#1}{#2})}
+\newcommand{\fullcref}[2]{\cref{#1}\pref{#1-#2}}
+\newcommand{\fullcf}[2]{(cf.~\ref{#1}\pref{#1-#2})}
+\newcommand{\cfSect}[1]{(cf.~\S\ref{#1})}
+
+\crefformat{prop}{Proposition~#2#1#3}
+\crefformat{thm}{Theorem~#2#1#3}
+
+\crefformat{figure}{Figure~#2#1#3}
+
+\renewcommand{\notin}{\mathrel{\mathpalette\c@ncel\in}}
+\newcommand{\notsubset}{\mathrel{\mathpalette\c@ncel\subset}}
+
+\newcommand{\power}{\mathcal{P}}
+
+\newcommand{\compose}{\mathbin{\circ}}
+
+\newcommand{\Id}{I}
+
+ \newcounter{case}
+
+\newenvironment{case}[1][\unskip]{\refstepcounter{case}
+ \setcounter{subcase}{0}\em
+ \par\medskip \noindent Case \thecase\ #1.\ }{\unskip\upshape}
+ \renewcommand{\thecase}{\arabic{case}}
+
+ \newcounter{subcase}
+ \newenvironment{subcase}[1][\unskip]{\refstepcounter{subcase}
+  \setcounter{subsubcase}{0}\em
+ \par\medskip \noindent Subcase \thesubcase\ #1.\ }{\unskip\upshape}
+ \renewcommand{\thesubcase}{\arabic{case}.\arabic{subcase}}
+
+ \newcounter{subsubcase}
+ \newenvironment{subsubcase}[1][\unskip]{\refstepcounter{subsubcase}\em
+ \par\medskip \noindent Subsubcase \thesubsubcase\ #1.\ }{\unskip\upshape}
+ \renewcommand{\thesubsubcase}{\arabic{case}.\arabic{subcase}.\arabic{subsubcase}}
+ 
+ \crefformat{case}{Case~#2#1#3}
+ \crefformat{subcase}{Subcase~#2#1#3}
+ \crefformat{subsubcase}{Subsubcase~#2#1#3}
+
+
+\newcommand{\sm}{\smallsetminus}
+\newcommand{\comp}[1]{\overline{#1}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\newcommand{\rel}{\mathrel{R}}
+
+\newcommand{\divides}{\mathrel{|}}
+\newcommand{\notdivides}{\nmid}
+\renewcommand{\pmod}[1]{\ (\mathrm{mod}~#1)}
+
+\newcommand{\class}[1]{\vphantom{\overline{\overline{#1}}} \overline{#1}} % equivalence class
+
+%%%%%%%%%%%%%%%%%%%%
+%
+%  Stuff grabbed from graphbook.sty
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\edge}{\mathrel{\hbox{\vrule height 3 pt depth -2pt width 14pt}}}
+\newcommand{\edgeG}{\mathrel{\displaystyle\mathop{\edge}\limits^G}}
+\newcommand{\edgeH}{\mathrel{\displaystyle\mathop{\edge}\limits^H}}
+\newcommand{\edgeK}{\mathrel{\displaystyle\mathop{\edge}\limits^K}}
+\newcommand{\edgeGone}{\mathrel{\displaystyle\mathop{\edge}\limits^{G_1}}}
+\newcommand{\edgeGtwo}{\mathrel{\displaystyle\mathop{\edge}\limits^{G_2}}}
+\newcommand{\edgeGthree}{\mathrel{\displaystyle\mathop{\edge}\limits^{G_3}}}
+
+\newcommand{\arc}{\mathrel{\lower3pt\hbox{\LARGE$\rightarrow$}}}
+\newcommand{\arcG}{\mathrel{\displaystyle\mathop{\arc}\limits^G}}
+\newcommand{\arcH}{\mathrel{\displaystyle\mathop{\arc}\limits^H}}
+
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+
+\newcolumntype{s}{@{\kern3.5pt}c@{\kern3.5pt}}
+\newcolumntype{S}{@{\kern4.8pt}c@{\kern4.8pt}}
+
+\newcommand{\boxprod}{\mathbin{\square}}
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%
+%  Stuff grabbed from book.tex
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{relsize}
+
+\def\boxit#1{\setbox0=
+ \vbox{\kern3pt\hbox{\kern3pt
+ #1\kern3pt}\kern3pt}
+  \dimen0=\ht0
+ \divide \dimen0 by 2
+ \hbox{\lower\dimen0\vbox{\hrule\hbox to \wd0{\vrule\hss
+      \vbox{\copy0}\hss\vrule}\hrule}}}
+\definecolor{factoidframecolor}{rgb}{0.6,0.6,1}
+\def\factoidboxit#1{\setbox0=
+ \vbox{\kern3pt\hbox{\kern3pt
+ #1\kern3pt}\kern3pt}
+  \dimen0=\ht0
+ \divide \dimen0 by 2
+ \hbox{\lower\dimen0\vbox{{\color{factoidframecolor}\hrule height3pt}%
+ \hbox to \wd0{{\color{factoidframecolor}\vrule width3pt}\hss
+      \vbox{\copy0}\hss{\color{factoidframecolor}\vrule width3pt}}%
+      {\color{factoidframecolor}\hrule height3pt}}}}
+ 
+ %% define page headers & footers
+ \pagestyle{fancy}
+ \fancyhead{}
+ \renewcommand{\headrulewidth}{0pt}
+ \setlength\headheight{13pt}
+ \fancyhead[RO,LE]{\thepage}
+ \fancyhead[C]{\ifnum\c@chapter> 0 \rightmark\fi} % \thechapter gives error in Appendixes
+ \fancyfoot{}
+ \renewcommand{\sectionmark}[1]{}
+ 
+ \providecommand\top@space[1]{%
+  \par
+  \ifdim\pagegoal<\maxdimen \else\hbox{}\fi
+  \skip@#1\advance\skip@-\topskip
+  \advance\skip@-\headsep\advance\skip@-\headheight
+  \advance\skip@-\baselineskip\vskip\skip@
+}
+% previous version used cmssbx12, instead of cmssbx10, but I don't have pfb file???
+\font\chaptertitlefont=cmssbx10 at 48pt %% use large font for chapter titles
+%\font\chapternumberfont=cmssbx12 at 96pt %% use large font for chapter number
+\font\chapternumberfont=cmssbx10 at 20pt
+\def\@makechapterhead#1{%
+  \global\topskip\normaltopskip 
+  \begingroup
+%  \vbox{%to \topskip{%
+%     \ifnum\c@secnumdepth>\m@ne\vskip-\headsep\vskip5pt
+%    \vbox{\LARGE\normalfont\bfseries\sffamily
+% %     \hbox to\columnwidth{\hrulefill}%
+%%      \vskip-\baselineskip
+%%      \vskip 6pt
+%       \global\setbox0\hbox{%\raise52pt\hbox{\chaptername}\space
+%       \chapternumberfont\thechapter}
+%%       \hbox to\columnwidth{\hss\rule{\wd0}{6pt}}%
+%%       \vskip2pt
+%    \hbox to \columnwidth{\hss \copy0}%
+%      \fi
+%  }\vss}\penalty\@M
+\setbox0\hbox{\chapternumberfont \  \chaptername\space \thechapter \ }
+\hbox{ } \vskip-0.5in
+ \hbox{\lower8pt \hbox to 0pt{\rule{\wd0}{28pt}\hss}{\color{white}  \copy0}}
+ \vskip0.75in
+%  \hsize=\columnwidth  \advance\hsize-\wd0 \advance \hsize-20pt
+  \chaptertitlefont% \Huge\bfseries\sffamily
+  \baselineskip=48pt
+  \raggedright 
+ \top@space{7pc}% was 11pc
+ \setbox0\vbox{#1}
+  \copy0 \endgroup
+  \vskip 0.75in %2pc
+}
+
+\newif\if@noindent
+
+\def\@afterheading{%
+\@nobreaktrue
+\@noindenttrue
+  \everypar{%
+  \if@noindent   \hskip-\parindent \@noindentfalse \fi %% DM 3-09: don't indent 1st line of section
+    \if@nobreak
+      \@nobreakfalse
+      \clubpenalty \@M
+      \if@afterindent \else
+        {\setbox\z@\lastbox}%
+      \fi
+    \else
+      \clubpenalty \@clubpenalty
+      \everypar{}%
+    \fi}\ignorespaces}
+
+\def\chaptermark{\@secmark\markboth\chapterrunhead{}}
+
+\crefformat{chapter}{Chapter~#2#1#3}
+
+
+%% set up \part
+\font\partfont=cmssbx10 at 72pt %% use large font for title of the part
+\newdimen\partbase \partbase=80pt
+\def\@part[#1]#2{%
+  \ifnum \c@secnumdepth >-2\relax \refstepcounter{part}%
+    \addcontentsline{toc}{part}{\partname\ \thepart.
+        \texorpdfstring{\protect\enspace\protect\noindent#1}{ #1}}%
+  \else
+    \addcontentsline{toc}{part}{#1}\fi
+ \begingroup\centering
+  \ifnum \c@secnumdepth >-2\relax
+       {\setbox0\hbox{\partfont \  \partname\space \thepart \ }
+	\hbox{ } \vskip-0.5in
+	 \centerline{\hbox{\lower14pt \hbox to 0pt{\rule{\wd0}{80pt}\hss}{\color{white}  \copy0}}}
+	} \vskip 20\p@ \fi
+      \partfont \baselineskip=\partbase #2\vfil\vfil\endgroup \newpage\thispagestyle{empty}}
+
+%%% set up \part
+%\font\partfont=cmssbx10 at 72pt %% use large font for title of the part
+%\newdimen\partbase \partbase=80pt
+%\def\@part[#1]#2{%
+%  \ifnum \c@secnumdepth >-2\relax \refstepcounter{part}%
+%    \addcontentsline{toc}{part}{\partname\ \thepart.
+%        \protect\enspace\protect\noindent#1}%
+%  \else
+%    \addcontentsline{toc}{part}{#1}\fi
+%  \begingroup\centering
+%  \ifnum \c@secnumdepth >-2\relax
+%       {\partfont
+%         \partname\ \thepart} \vskip 20\p@ \fi
+%      \partfont \baselineskip=\partbase #2\vfil\vfil\endgroup \newpage\thispagestyle{empty}}
+
+
+  \newcommand{\optional}{{\upshape(optional)}}
+ 
+ \newcommand{\conclusion}{\renewcommand{\makelabel}[1]{\hss}
+ \item[] \hskip-2\normalparindent\emph{Conclusion:\ }\ignorespaces}
+ 
+ \newcommand{\blue}[1]{{\color{blue}#1}} 
+ \newcommand{\faint}[1]{{\scriptsize\sf\color{blue}#1}} 
+
+\newcommand{\SL}{Propositional Logic}
+\newcommand{\QL}{First-Order Logic}
+\newcommand{\univ}{\ensuremath{\script{U}}}
+\renewcommand{\implies}{\eif}
+\newcommand{\?}{\mathrel{\displaystyle\mathop{=}\limits^?}}
+
+\newcommand{\pref}[1]{(\ref{#1})}
+\newcommand{\fullref}[2]{\ref{#1}\pref{#1-#2}}
+\newcommand{\hint}[1]{{\small{[}{\it Hint:} #1{]}}}
+
+\usepackage{amssymb}
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\rational}{\mathbb{Q}}
+\newcommand{\real}{\mathbb{R}}
+
+\newcommand{\iso}{\cong} % graph isomorphism
+
+\numberwithin{equation}{chapter}
+\numberwithin{table}{chapter}
+\numberwithin{figure}{chapter}
+
+%\def\thmhead@plain#1#2#3{%
+%  \thmname{#1}\thmnumber{\@ifnotempty{#1}{ }\@upn{#2}}%
+%  \thmnote{ {\the\thm@notefont#3}}}  %% removed parentheses around #3 ???
+%\let\thmhead\thmhead@plain
+
+%\def\@thm#1#2#3{%
+%  \ifhmode\unskip\unskip\par\fi
+%  \normalfont
+%  \trivlist
+%  \let\thmheadnl\relax
+%  \let\thm@swap\@gobble
+%  \let\thm@indent\noindent % no indent ???
+%  \thm@headfont{\bf}% heading font bold ???
+%  \thm@notefont{\fontseries\mddefault\upshape}%
+%  \thm@headpunct{.}% add period after heading
+%  \thm@headsep 5\p@ plus\p@ minus\p@\relax
+%  \thm@space@setup
+%  #1% style overrides
+%  \@topsep \thm@preskip               % used by thm head
+%  \@topsepadd \thm@postskip           % used by \@endparenv
+%  \def\@tempa{#2}\ifx\@empty\@tempa
+%    \def\@tempa{\@oparg{\@begintheorem{#3}{}}[]}%
+%  \else
+%    \refstepcounter{#2}%
+%    \def\@tempa{\@oparg{\@begintheorem{#3}{\csname the#2\endcsname}}[]}%
+%  \fi
+%  \@tempa
+%}
+%% set up theorem style the way I like it
+%% (swap numbers, use \bf instead of \scshape)
+
+\newcommand{\mytheoremheaderfont}[1]{{\normalfont\bfseries\sffamily\MakeUppercase{#1}}}
+\newcommand{\optargfont}[1]{{\normalfont\bfseries\sffamily #1}}
+
+\renewtheoremstyle{plain}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 ##2\@addpunct{.}}]}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 ##2 }\optargfont{##3\@addpunct{.}}]}
+
+\renewtheoremstyle{nonumberplain}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1\@addpunct{.}}]}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 }\optargfont{##2\@addpunct{.}}]}
+
+\renewtheoremstyle{definition}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 ##2\@addpunct{.}}]\normalfont}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 ##2 }\optargfont{##3\@addpunct{.}}] \normalfont}
+
+\renewtheoremstyle{nonumberdefinition}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1\@addpunct{.}}]\normalfont}%
+{\medbreak\item[\hskip\labelsep \mytheoremheaderfont{##1 }\optargfont{##2\@addpunct{.}}]\normalfont}
+
+\renewtheoremstyle{remark}%
+{\medbreak\item[\hskip\labelsep  \normalfont\itshape ##1 ##2\@addpunct{.}]\normalfont}%
+{\medbreak\item[\hskip\labelsep \normalfont\itshape ##1 ##2 \normalfont ##3\@addpunct{.}] \normalfont}
+
+\renewtheoremstyle{nonumberremark}%
+{\medbreak\item[\hskip\labelsep  \normalfont\itshape ##1\@addpunct{.}]\normalfont}%
+{\medbreak\item[\hskip\labelsep \normalfont\itshape ##1 \normalfont ##2\@addpunct{.}] \normalfont}
+
+%\setlength{\theorempreskipamount}{0pt plus 2pt}
+\setlength{\theorempostskipamount}{5pt plus 2pt\goodbreak}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{conj}[equation]{Conjecture}
+\newtheorem{axiom}[equation]{Axiom}
+\newtheorem{suggestion}[equation]{Suggestion}
+
+\theoremstyle{nonumberplain}
+\renewtheorem{thm*}{Theorem}
+
+\newtheoremstyle{exerthm}%
+{\medbreak\item[\hskip\labelsep  ##2) \theorem@headerfont ##1\@addpunct{.}]}%
+{\medbreak\item[\hskip\labelsep ##2) \theorem@headerfont ##1 \normalfont ##3\@addpunct{.}]}
+
+\theoremstyle{exerthm}
+\newtheorem{exerthm}{Theorem}
+\numberwithin{exerthm}{equation}
+\renewcommand{\theexerthm}{\arabic{exerthm}}
+
+\theoremstyle{definition}
+
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{notation}[equation]{Notation}
+\newtheorem{terminology}[equation]{Terminology}
+\newtheorem{eg}[equation]{Example}
+\newtheorem{ack}[equation]{Acknowledgments}
+\newtheorem{assump}[equation]{Assumption}
+\newtheorem{exer}[equation]{Exercise}
+\newtheorem{exers}[equation]{Exercises}
+\newtheorem{remind}[equation]{Reminder}
+%\newtheorem*{exers*}{Exercises}
+\newtheorem*{warn}{Warning}
+
+\theoremstyle{remark}
+\newtheorem{rem}[equation]{Remark}
+%\newtheorem*{preparing}{Preparing for the proof}
+\newtheorem*{scratchwork}{Scratchwork}
+
+%% these don't work with ntheorem.sty
+%\newtheoremstyle{ital}{\topsep}{\topsep}{\normalfont}{0pt}{\it}{.}{ }{}
+%\theoremstyle{ital}
+
+\theoremstyle{definition}
+\newtheorem*{claim}{Claim}
+
+ \crefformat{exer}{Exercise~#2#1#3}
+\crefmultiformat{exer}{Exercises~#2#1#3}{, #2#1#3}{ and~#2#1#3}
+ \crefformat{rem}{Remark~#2#1#3}
+ \crefformat{axiom}{Axiom~#2#1#3}
+  \crefformat{lem}{Lemma~#2#1#3}
+ \crefformat{cor}{Corollary~#2#1#3}
+ \crefformat{defn}{Definition~#2#1#3}
+\crefformat{exers}{Exercise~#2#1#3}
+\crefmultiformat{exers}{Exercises~#2#1#3}{, #2#1#3}{ and~#2#1#3}
+ \crefformat{eg}{Example~#2#1#3}
+
+
+% we want "Proof" in bold (and less space before it?)
+\renewenvironment{proof}[1][\proofname]{
+  \th@nonumberplain
+  \def\theorem@headerfont{\bfseries}% (was \itshape
+  \normalfont
+  \theoremsymbol{\ensuremath{_\blacksquare}}
+   \kern-\theorempostskipamount  %% this cuts down on vertical space (assuming we are after a thm)???
+  \@thm{proof}{proof}{#1}}%
+  {\@endtheorem\medbreak}
+
+% keep track of the style that "Proof" appears in
+ \newcommand{\proofnamestyle}{\bfseries\sffamily}
+
+ 
+ \newcounter{step}
+\newcounter{substep}
+
+\newenvironment{step}[1][\unskip]{\refstepcounter{step}
+ \setcounter{substep}{0}
+ \em
+ \medskip \noindent Step \thestep\ #1.\ }{\unskip\upshape}
+ \renewcommand{\thestep}{\arabic{step}}
+
+\crefformat{step}{Step~#2#1#3}
+
+\renewcommand{\thepart}{\Roman{part}}
+
+
+%% CHANGES TO THE TABLE OF CONTENTS
+%
+\renewcommand{\contentsname}{\Huge\bfseries\sffamily Contents} % should be contentsfont???
+%
+ % %% do not allow page break within chapter during TOC
+\@secpenalty=10000
+%% TOC should ignore kern or newline in chapter title
+%% We need to allow a break at start of chapter
+ \def\l@chapter{\@tocline{0}{8pt plus8pt\ifnewpart\newpartfalse\else\allowbreak\fi}{0pt}{}%
+ {\large\bfseries\sffamily\def\newline{}\def\kern{\dimen0=}}}
+ \newif\ifnewpart \newpartfalse
+\def\l@part#1#2{\vskip 16pt plus16pt\allowbreak\centerline{\Large\bfseries\sffamily#1 }\newparttrue}
+	%was \@tocline{1}{0pt}{1em}{5pc}{\S}}
+% \S on sections
+\def\l@section{\@tocline{1}{0pt}{1em}{5pc}{\S}}
+% extra indentation for subsections (and add \S)
+\def\l@subsection{\@tocline{2}{0pt}{2em}{5pc}{\S}}
+% 
+\def\l@summary{\@tocline{2}{0pt}{1em}{5pc}{}}
+% want alternate lines to be dotted (vs dashed?)
+\newcount\tocdotline
+\def\@tocline#1#2#3#4#5#6#7{\relax
+  \ifnum #1>\c@tocdepth % then omit
+  \else
+    \advance\tocdotline 1 \ifnum #1=0 \tocdotline=0 \fi % DM 3-09 dotted lines
+    \par \addpenalty\@secpenalty\addvspace{#2}%
+    \begingroup \hyphenpenalty\@M
+    \@ifempty{#4}{%
+      \@tempdima\csname r@tocindent\number#1\endcsname\relax
+    }{%
+      \@tempdima#4\relax
+    }%
+    \parindent\z@ \leftskip#3\relax \advance\leftskip\@tempdima\relax
+    \rightskip\@pnumwidth plus4em \parfillskip-\@pnumwidth
+    %#5
+    \leavevmode\hskip-\@tempdima
+    #5#6\nobreak\relax % #5=\S on sections & subsections
+    \ifodd \the\tocdotline
+    \leaders\hbox{\normalfont\,\raise2pt\hbox{.}}% DM 3-09 dotted lines
+    \else \ifnum \the\tocdotline>0 \leaders\hbox{\normalfont\,\raise0pt\hbox{-}}\fi\fi
+    \hfil
+    \hbox % to\@pnumwidth % DM 3-09 dotted lines
+    {\normalfont \ifnum #1=0 \bfseries\sffamily \else \mdseries \fi #7% chapter line in bold sans
+    \ifnum #1>0 \hskip1.9em\fi}\par % DM 3-09 right-indent section page nums
+    \nobreak
+    \ifnum #1=0 \vskip 5pt \fi % DM 3-09
+    \endgroup
+  \fi}
+
+
+%% make a theorem's label refer to some other (such as Thm. 3.6')
+\newenvironment{thmref}{\thmrefer}{}
+\newcommand{\thmrefer}[1]{\renewcommand\theequation
+  {\protect\ref{#1}$'$}\addtocounter{equation}{-1}}
+
+\renewcommand{\solutions}{} %% We don't have solutions at the back of the book
+
+
+
+\newcommand{\noprelistbreak}{\@nobreaktrue\nopagebreak} %% this is from memoir.cls
+
+
+\AtBeginDocument{%
+\labelsep=3pt
+}
+
+
+% for homework solutions
+%\newcommand{\solution}[1]{\bigbreak \subsection*{\noindent\textbf{\protect\ref{#1}:}}}
+%\newcommand{\solution}[1]{\ \par\bigbreak \noindent\textbf{\protect\ref{#1}:} }
+
+\newcommand{\solutionsfor}[1]{\newpage
+\markright{\protect\ref{#1}}
+\centerline{\larger\textbf{\textsf{Solutions for \cref{#1}}}}
+\pagestyle{solutions}
+\thispagestyle{solutionsfor}
+}
+%\newcommand{\sectionstar}{\section*}
+%\newcommand{\solutionsection}[1]{\expandafter\sectionstar{Solutions for Chapter~\ref{#1}}}
+
+\newcommand{\ps@solutions}{%
+\def\@evenhead{\small\hbox to 0pt{\thepage\hss}\hfil {\sf Solutions for Section~\rightmark}\hfil}
+\def\@oddhead{\small\hfil {\sf Solutions for Section~\rightmark}\hfil\hbox to 0pt{\thepage\hss}}
+\def\@oddfoot{\smaller[2]\sf \copyright2010 Dave Witte Morris. All rights reserved.
+\hfil Do not distribute to anyone not enrolled in Math 2000 (Fall 2010).}
+\def\@evenfoot{\@oddfoot}
+}
+
+\newcommand{\ps@solutionsfor}{%
+\def\@evenhead{\hfil}
+\def\@oddhead{\@evenhead}
+\def\@oddfoot{\smaller[2]\sf \copyright2010 Dave Witte Morris. All rights reserved.
+\hfil Do not distribute to anyone not enrolled in Math 2000 (Fall 2010).}
+\def\@evenfoot{\@oddfoot}
+}
+

@@ -6,14 +6,14 @@
 
 \section{Set Basics}
  
-\subsection*{What's a set? (mathematically speaking, that is)}
-You've probably seen sets, set relations, and set operations in previous classes.  In fact, in the previous two chapters of this book you've already been working with sets.  So we'll review them quickly before moving on to further properties and proofs concerning sets and their accessories.
+\subsection{What's a set? (mathematically speaking, that is)}
+You've probably seen sets, set relations, and set operations in previous classes.  In fact, in the previous two chapters of this book you've already been working with sets.  So we'll review them quickly before moving on to further properties and proofs concerning sets and their accessories.\footnote{This chapter is an adapted and expanded version of a chapter by D. and J. Morris.}
 
 First of all, we provide a precise mathematical definition for ``set'':
 
 \begin{defn} A \bfii{ set\/}\index{Sets!definition of} is a well-defined collection of objects: that is, it is defined in such a manner that we can determine for any given object $x$ whether or not $x$ belongs to the set.  The objects that belong to a set are called its \index{Element!of a set}\bfii{ elements} or \bfii{ members}. We will denote sets by capital letters, such as $A$ or $X$; if $a$ is an element of the set $A$, we write $a \in A$\label{sets_membership}.
 \end{defn}
-\subsection*{How to specify sets}
+\subsection{How to specify sets}
 Two common ways of specifying sets are:
 \begin{itemize}
 \item
@@ -92,9 +92,9 @@ On the other hand, suppose that $S$ is not an element of itself. Then $S$ satisf
 \end{itemize}
 How do we get out of this mess? No matter what we assume, we end up with a contradiction! The problem, as is often the case, lies in  \emph{hidden assumptions} that we have made. Our definition of $S$ makes reference to the unknown $x$, where $x$ is an ``arbitrary'' set. Herein lies the rub:  the notion of ``arbitrary'' set is \emph{not well-defined}. Put another way: the set of ``all possible sets'' is NOT a set!
 
-In the following discussion we will avoid this problem by always starting out with a well-defined set that contains all the sets and elements of interest in a particular example or problem. Such an all-encompassing set is referred to as a \bfii{ universal set}\index{universal set}. Note each particular problem will have its own universal set. For instance, if we are talking about public opinion polls  in the United States, an appropriate universal set might be the set of American citizens. If we're talking about sets of prime and composite numbers, our universal set could be either the set of integers, or the set of natural numbers. If we are talking about roots of algebraic equations, depending on our particular interest we might choose the universal set to be the set of real numbers, or the set of complex numbers. When we talk about sets in a general way, we often denote sets by captial  letters $A, B, C,...$, and it's assumed that all these sets are subsets of some universal set $U$.
+In the following discussion we will avoid this problem by always starting out with a well-defined set that contains all the sets and elements of interest in a particular example or problem. Such an all-encompassing set is referred to as a \bfii{ universal set}\index{Universal set}. Note each particular problem will have its own universal set. For instance, if we are talking about public opinion polls  in the United States, an appropriate universal set might be the set of American citizens. If we're talking about sets of prime and composite numbers, our universal set could be either the set of integers, or the set of natural numbers. If we are talking about roots of algebraic equations, depending on our particular interest we might choose the universal set to be the set of real numbers, or the set of complex numbers. When we talk about sets in a general way, we often denote sets by captial  letters $A, B, C,...$, and it's assumed that all these sets are subsets of some universal set $U$.
 
-\subsection*{Important sets of numbers}
+\subsection{Important sets of numbers}
 We will refer often to the following sets of numbers. Although we are presuming that these sets are ``given'', the reader should be aware that it's not at all easy to formally define them in a mathematically precise way.  (Although we won't give any definitions here,  you may encounter them in other mathematics courses, such as logic or analysis.)
 \begin{itemize}
 \item
@@ -193,7 +193,7 @@ How many nonempty proper subsets does it have?
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{7}
 \begin{enumerate}[(a)]
 \item
 Can you give an example of a set with exactly three subsets? How about exactly three proper subsets?
@@ -202,7 +202,7 @@ What is the smallest number of elements a set must have in order to have eight p
 \end{enumerate}
 \end{exercise}
 
-\subsection*{Operations on sets}
+\subsection{Operations on sets}
 In our halcyon days of youth, we were introduced to \bfii{ operations} on integers, rational numbers, etc.. An operation on the integers takes two integers and always comes up with another integer. For instance, the '+' operation gives $2+3=5$ (of course, we know now that this means that + has the property of \emph{closure}).
 
 \begin{exercise}{}
@@ -238,7 +238,7 @@ Similarly, the intersection of the same three sets can be written as $A_{1} \cap
 There's actually a technical difficulty with our notations for  $A_{1} \cup A_2 \cup A_3$ and $A_{1} \cap A_2 \cap A_3$. The problem is that the notation is ambiguous: does $A_{1} \cup A_2 \cup A_3$ mean $(A_{1} \cup A_2) \cup A_3$ or $A_{1} \cup (A_2 \cup A_3)$? As it turns out, it doesn't make any difference (we'll show this in the next section). Since it doesn't matter which order we do the $\cup$, we just leave off the parentheses (and the same for $\cap$). This is really nothing new: you're used to writing $3 + 4 + 7 + 9$ instead of $((3+4)+7)+9$, because it doesn't matter what order you add the numbers.
 \end{rem}
 
-\begin{exercise}{}
+\begin{exercise}{12}
 \begin{enumerate}[(a)]
 \item
 Find three sets $A_1, A_2, A_3$ such that $A_{1} \cup A_2 \cup A_3 = {\mathbb Z}$ and $A_{1} \cap A_2 \cap A_3 = \emptyset$
@@ -300,7 +300,7 @@ $\bigcup_{i = 1}^{\infty}  \{1, \ldots, i\} = \textrm{[by part (b)]   } \{1, \ld
 \end{enumerate}
 \end{example} 
 
-\begin{exercise}{}
+\begin{exercise}{14}
 Specify the following sets, either by:
 \begin{itemize}
 \item
@@ -325,7 +325,7 @@ $\bigcap_{r = 0}^{n-1}  \{\mbox{Integers that have remainder }r \mbox{ when divi
 \end{exercise}
 
 
-\begin{exercise}{}
+\begin{exercise}{15}
 \begin{enumerate}[(a)]
 \item
 Find an infinite collection of sets $\{A_i\}, i = 1,2,3,\ldots$ such that (i) $A_i \subset {\mathbb R}, i = 1,2,3, \dots$; (ii)
@@ -344,7 +344,7 @@ Find an infinite collection of sets $\{A_n\}, n = 1,2,3,\ldots$ such that (i) $A
 
 When two sets have no elements in common, they are said to be \bfii{ disjoint}\index{Sets!disjoint}\index{Set operations!disjoint}\index{Disjoint!definition of}; for example, if $E$ is the set of even integers and $O$ is the set of odd integers, then $E$ and $O$ are disjoint.  Two sets $A$ and $B$ are disjoint exactly when $A \cap B = \emptyset$. 
 
-\begin{exercise}{}
+\begin{exercise}{16}
 \begin{enumerate}[(a)]
 \item
 Find four disjoint sets $A_1, A_2, A_3, A_4$ such that $\bigcup_{i = 1}^{4} A_i = {\mathbb Z}$.
@@ -356,7 +356,7 @@ Find four disjoint sets $A_1, A_2, A_3, A_4$ such that $\bigcup_{i = 1}^{4} A_i 
 \end{exercise} 
 
 
-If we are working within the universal set $U$ and $A \subset U$, we define the \bfii{ complement}\footnote{Please note the spelling: 'complement', not 'compliment', thank you!} of $A$ (denoted by $A'$)\index{complement!definition}\index{Set operations!complement}, to be the set
+If we are working within the universal set $U$ and $A \subset U$, we define the \bfii{ complement}\footnote{Please note the spelling: 'complement', not 'compliment', thank you!} of $A$ (denoted by $A'$)\index{Complement!definition}\index{Set operations!complement}, to be the set
 \[
 A' = \{ x : x \in U \text{ and } x \notin A \}.
 \]
@@ -369,7 +369,7 @@ A \setminus B = A \cap B'  = \{ x : x \in A \text{ and } x \notin B \}.
 \]
 \end{defn}
 
-\begin{exercise}{}
+\begin{exercise}{18}
 Suppose that $A \subset B$. What is the largest subset of $B$ that is disjoint from $A$?
 \end{exercise}
 
@@ -425,7 +425,7 @@ B' &= \{ x \in {\mathbb N} : x \text{ is divisible by 3}\}' \\
 \end{enumerate} 
 \end{example}
 
-\begin{exercise}{}
+\begin{exercise}{20}
 Let ${\mathbb N}$ be the universal set and suppose that
 \begin{align*}
 A = \{ x \in {\mathbb N} : x \text{ is divisible by 2}\} \\ 
@@ -449,7 +449,7 @@ $A \cup B \cup C \cup D$
 \end{multicols}
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{21}
 Let ${\mathbb N}$ be the universal set and suppose that
 \begin{align*}
 A & = \{ x : \mbox{$x \in {\mathbb N}$ and $x$ is even} \}, \\
@@ -504,7 +504,7 @@ A \cap B \subset A \text{~~~and~~~}A \subset A \cup B.
 \]
 \end{prop}
 \begin{proof}
-The style of proof we'll use here  is often described as \emph{element by element},\index{element by element proof} because the proofs make use of the definitions of $A\cap B$ and $A\cup B$ in terms of their elements. 
+The style of proof we'll use here  is often described as \emph{element by element},\index{Element by element proof} because the proofs make use of the definitions of $A\cap B$ and $A\cup B$ in terms of their elements. 
 
 First, suppose that $x$ is an element of $A \cap B$. we then have:
 \begin{align*}
@@ -514,7 +514,7 @@ First, suppose that $x$ is an element of $A \cap B$. we then have:
 \end{align*}
 Since every element of $A \cap B$ is an element of $A$, it follows by the definition of $\subset$ that $A \cap B \subset A$.
 
-\begin{exercise}{}
+\begin{exercise}{23}
 Give a similar proof of the second part of Proposition~\ref{proposition:sets:cupcapincl}.
 \end{exercise}
 \end{proof}
@@ -666,7 +666,7 @@ A \cap \emptyset & =  \{ x : \mbox{ $x \in \_\_\_\_\_\_\_$ and $x \in \_\_\_\_\_
 \end{align*}
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{26}
 Prove parts 4,6,8 of Proposition~\ref{proposition:sets:sets_theorem_set_ops} using element-by-element proofs.
 \end{exercise}
 
@@ -772,7 +772,7 @@ A \cap A' \cap B \cap B'    &\mbox{[by Proposition~\ref{proposition:sets:sets_th
 %\item
 %Prove  $(A \cup B) \times C = (A \times C ) \cup (B \times C)$.
  
-\begin{exercise}{}
+\begin{exercise}{30}
 Prove the following statements by mimicking the style of proof in Example~\ref{example:sets:other_relations}; that is use the definitions of $\cap, \cup, \setminus$, and $'$ as well as their properties listed in Proposition~\ref{proposition:sets:sets_theorem_set_ops} and  Proposition~\ref{sets_de_morgan}. This type of proof is called an ``algebraic'' proof.  Every time you use a property, remember to give a reference!
 \begin{enumerate}[(a)]
 \item
@@ -792,8 +792,8 @@ $(A \cap B \cap C) \cup D) = (A \cup D) \cap (B \cup D)\cap (C \cup D)$.
 \end{enumerate}
 \end{exercise}
 
-\subsection*{Do the subsets of a set form a group?} 
-Some of the properties in Proposition~\ref{proposition:sets:sets_theorem_set_ops} may ring a bell. Recall that in the Integers Mod $n$ section of the Modular Arithmetic chapter we defined a \bfii{ group} to be a set combined with an operation that has the following properties:
+\section{Do the subsets of a set form a group?}\label{SetGroup} 
+Some of the properties in Proposition~\ref{proposition:sets:sets_theorem_set_ops} may ring a bell. Recall that in the Section~\ref{DefOfGroup} of the Modular Arithmetic chapter  we defined a \bfii{ group}\index{Group!definition} to be a set combined with an operation that has the following properties:
 \begin{enumerate}
 \item
 The group operation has the property of \emph{closure}
@@ -814,7 +814,7 @@ What we're going to do now is a first taste of a magic recipe that you're going 
 
 What do we mean by this? Let's take an example. Take the 3-element set $S = \{a,b,c\}$. 
 
-\begin{exercise}{}
+\begin{exercise}{31}
 \begin{enumerate}[(a)]
 \item
 List the \emph{subsets} of $S =  \{a,b,c\}$. Include the empty set and non-proper subsets of $S$. How many subsets are in your list?
@@ -823,7 +823,8 @@ If you listed the subsets of $\{a,b\}$, how many subsets would be in your list?
 \item
 If you listed the subsets of $\{a,b,c,d\}$, how many subsets would be in your list?
 \item
-**If you listed the subsets of $\{a,b,c,\ldots,x,y,z\}$, how many subsets would be in your list?  \emph{(Hint: guess the pattern from the previous parts of this exercise.)}
+**If you listed the subsets of $\{a,b,c,\ldots,x,y,z\}$, how many subsets would be in your list?
+\hyperref[sec:set_chapter:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -883,11 +884,14 @@ Is the set $G$ a group under the $\cap$ operation?  \emph{Justify} your answer.
  
 
 No doubt you're bitterly disappointed that neither $\cap$ nor $\cup$ can be used to define a group. However, take heart! Mathematicians use the $\cap$ nor $\cup$ operations to define a different sort of algebraic structure called (appropriately enough) a \emph{Boolean algebra}. We won't deal further with Boolean algebras in this course: suffice it to say that mathematicians have defined a large variety of abstract algebraic structures for different purposes.
+
+Although $\cap$ and $\cup$ didn't work, there is a consolation prize:
  
 \begin{exercise}{}
- Besides $\cup$ and $\cap$, there is another set operation called \emph{symmetric difference},\index{sets!symmetric difference} which is sometimes denoted by the symbol $\Delta$ and is defined as:
+ Besides $\cup$ and $\cap$, there is another set operation called \emph{symmetric difference},\index{Sets!symmetric difference} which is sometimes denoted by the symbol $\Delta$ and is defined as:
 \begin{equation*}
 A \Delta B = (A \setminus B) \cup (B\setminus A).
 \end{equation*}
 Given a set $A$, let $G$ be the set of all subsets of $A$.  Repeat parts (a)--(f) of Exercise~\ref{exercise:sets:cap_group}, but this time for the set operation $\Delta$ instead of $\cap$.
 \end{exercise} 
+

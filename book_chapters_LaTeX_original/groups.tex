@@ -14,15 +14,17 @@ You may have noticed that we have been voyaging deeper and deeper into unfamilia
 
 Please rest assured that these elaborations have a practical purpose\footnote{(that is, besides tormenting math students)}. We live in a complicated world, and complicated mathematical structures are needed to describe it well. However, underlying this confusing tangle of complicated structures are some deep commonalities. The purpose of abstraction is to identify and characterize these commonalities. In this way we can make connections between very different fields of mathematics, and gain a much more wholistic view of how things work together.
  
-One of the commonalities that we have been (more or less) subtly emphasizing in the previous chapters is the ubiquity of \emph{groups}, together with related notions such as isomorphisms and subgroups. Now that you've studies several specific groups (such as ${\mathbb C}, {\mathbb Z}_n, D_n, S_n, A_n$ and so on) our hope is that from these examples you've begun to get a feel for how groups work, and how one should think about groups in general. In this chapter, we will study groups \emph{in the abstract}: that is, we will describe properties that are common to \emph{all} groups, whether finite or infinite, Abelian or non-Abelian, and so on.
+One of the commonalities that we have been (more or less) subtly emphasizing in the previous chapters is the ubiquity of \emph{groups}, together with related notions such as isomorphisms and subgroups. Now that you've studies several specific groups (such as ${\mathbb C}, {\mathbb Z}_n, D_n, S_n, A_n$ and so on) our hope is that from these examples you've begun to get a feel for how groups work, and how one should think about groups in general. In this chapter, we will study groups \emph{in the abstract}: that is, we will describe properties that are common to \emph{all} groups, whether finite or infinite, abelian or non-abelian, and so on.
+\footnote{Thanks to Tom Judson for material used in this chapter.}
 
 %What you've seen of groups is only the very beginning. There are groups (and applications of groups) that are almost unimaginably bizarre. To paraphrase Shakespeare:  ``There are more groups in heaven and earth, Horatio, than are dreamt of in your philosophy.''\footnote{Hamlet, Act 1 Scene V.} But no matter how bizarre, all of these groups must obey the fundamental properties of groups -- which is why we now turn to study groups in the abstract.  
 % In the last chapter we turned a corner in our study of abstract algebra.  In Chapters~\ref{complex} through \ref{symmetries} we did lots of "regular" algebra, that is, we represented various numbers with variables, and manipulated equations with these variables.  We then took those variables and organized them into sets, functions, groups, Cayley tables, etc.; into generalized structures.  Some of this was not what you had seen in Algebra before, but it wasn't a stretch to come up with or hard to understand based on the algebra you know.  It was simply representing the world with variables.   But in Permutations we started the real stretch that turns regular algebra into abstract algebra.  We took those variables and structures and started to generalize \emph{them}; we started to generalize our structures, our groups, into even more general representations.  In the process we also generalized concepts:  isomorphic groups are like equivalent elements; subgroups are like subsets; the order of a set has an analogous meaning to that of absolute value.
 % It is this process of generalizing generalizations that is the crux of studying and thinking Abstract Algebra.  Because if we can generalize a structure or concept to its highest point, and then discover some property about that generalization, then all examples that fit that generalization have to have that same property.  Therefore instead of deeply studying multitudes of different phenomena and contexts in our world and seeing how their parts interact, if we can show that those phenomena and parts fit a generalization, then we know immediately that all properties of that group will show up in that phenomena and the interaction of its parts.  We can deductively know things about the order and operation of this universe without having to inductively test and rigorously prove a theory.  
+
 %Abstract Algebra is logic and Algebra on steroids. 
 %So let's generalize our first generalization:  Groups.
 
-%\section{Formal Definitions}\label{groups_section_define}
+\section{Formal definition of a group}\label{groups_section_define}
 
 Historically, the theory of groups first arose from attempts to find the roots of polynomials in terms of their coefficients.  But groups have moved far beyond their original application, and now play a central role in such areas as coding theory, counting, and the study of  symmetries. Many areas of biology, chemistry, and physics have benefited from group theory. In the preceding chapters we've already worked with a number of different groups, including the integers mod $n$ and the symmetries of a rectangle or regular polygon. Recall that a group basically consists of a set and a ``compatible'' operation:
 
@@ -34,7 +36,7 @@ What operation is the set ${\mathbb Z}_n$ a group under?
 What operation is the set $S_3$ a group under?
 \end{enumerate}
 \end{exercise}
-the following definition formalizes the notion of ``operation''.
+The following definition formalizes the notion of ``operation''.
 
 \begin{defn} \label{group_op}
  A \bfii{ binary operation\/}\index{Binary!operation}\index{Operation!binary} or \bfii{ law of composition\/}\index{Composition!law of}\index{Operation!binary} on a set $G$ is a function $G \times G \rightarrow G$ that assigns to each pair $(a,b) \in G \times G$ a unique element $a \circ b$, or $ab$ in $G$, called the \bfii{ composition} of $a$ and $b$.
@@ -90,8 +92,8 @@ When the group operation is obvious or has been previously specified, we may den
 
 One very important class of groups is the commutative groups, which are given their own special designation:
 
-\begin{defn} \label{Abelian_group} 
-A group $(G,\circ)$ with the property that $a \circ b = b \circ a$ for all $a, b \in G$ is called \bfii{ Abelian\/}\index{Abelian group}\index{Group!Abelian}\footnote{In honor of Neils Henrik Abel (1802-1829), one of the great mathematicians of all time.} or \bfii{ commutative}\index{Group!commutative}.  Groups not satisfying this property are said to be  \bfii{ non-Abelian\/}\index{Group!non-Abelian} or \bfii{ noncommutative}\index{Group!noncommutative}. 
+\begin{defn} \label{abelian_group} 
+A group $(G,\circ)$ with the property that $a \circ b = b \circ a$ for all $a, b \in G$ is called \bfii{ abelian\/}\index{abelian group}\index{Group!abelian}\footnote{In honor of Neils Henrik Abel (1802-1829), an astounding mathematician who sadly died very young of tuberculosis. There is some discussion among mathematicians over whether `abelian' should be capitalized. The word has become so common in mathematics that it's usually treated as a regular word and not a proper name. This should be considered as a special honor to Abel, since his name has become part of the fundamental language of mathematics.}  or \bfii{ commutative}\index{Group!commutative}.  Groups not satisfying this property are said to be  \bfii{ non-abelian\/}\index{Group!non-abelian} or \bfii{ noncommutative}\index{Group!noncommutative}. 
 \end{defn}
 
 Finally, based on our discussion before about the order of sets, we have:
@@ -169,7 +171,7 @@ Prove ${\mathbb C}^{\ast}$ is a group under the operation of (complex) multiplic
 \item
 What is $| ({\mathbb C}^{\ast}, \cdot) |$?
 \item
-Is $({\mathbb C}^{\ast}, \cdot)$ an Abelian group?  Justify your answer.
+Is $({\mathbb C}^{\ast}, \cdot)$ an abelian group?  Justify your answer.
 \end{enumerate}  
 \end{exercise}
 
@@ -177,7 +179,7 @@ Is $({\mathbb C}^{\ast}, \cdot)$ an Abelian group?  Justify your answer.
 Groups based on sets of numbers that \emph{include} 0 (such as ${\mathbb R}, {\mathbb C}, {\mathbb Q}$)are assumed to have the group operation $+$ (unless otherwise stated). For groups based on sets of numbers that \emph{exclude} $0$ such as ${\mathbb R^\ast}, {\mathbb C^\ast}, {\mathbb Q^\ast}$, the group operation is assumed to be multiplication (unless otherwise stated).
 \end{rem}
  
-\begin{exercise}{}
+\begin{exercise}{15}
 \begin{enumerate}[(a)]
 \item
 Why is it impossible for a set of numbers $S$ that includes 0 to be a group under multiplication?  (There is one exception to this rule: what is it?)
@@ -190,7 +192,7 @@ Some groups use exotic operations that you may never have seen before:
 
 \begin{example}{S_group}
 Let $S = {\mathbb R} \setminus \{ -1 \}$ and define a binary operation on
-$S$ by $a \ast b = a + b +ab$. It turns out that $(S, \ast)$ is an Abelian group. We will prove closure and the commutative property; the rest of the proof will be left to you.
+$S$ by $a \ast b = a + b +ab$. It turns out that $(S, \ast)$ is an abelian group. We will prove closure and the commutative property; the rest of the proof will be left to you.
 \begin{enumerate}[(1)]
 \item
 Closure:  Suppose $a, b \in S$.  We need to show that $a \ast b \in S$; i.e. that (i) $a \ast b \in {\mathbb R}$ and (ii) $a \ast b \neq -1$.
@@ -227,7 +229,7 @@ This completes the proof that $(S, \ast)$ is commutative.
 \end{enumerate}
 
 \begin{exercise}{S_group}
-Finish the proof that $(S, \ast)$ is an Abelian group.
+Finish the proof that $(S, \ast)$ is an abelian group.
 \end{exercise}
 \end{example}
 
@@ -238,27 +240,27 @@ Other groups use operations that are not the usual addition or multiplication.
 Let $H = {\mathbb Z} \times {\mathbb Z}$ (all integer coordinate-pairs).
 \begin{enumerate}[(a)]
 \item
-Define a binary operation $\circ$ on $H$ by  $(a,b) \circ (c,d) = (a + c , b + d)$, for $(a,b), (c,d) \in H$.  This operation is in fact just coordinate-pair addition.  Is $(H , \circ)$ a group?  If so, is $(H , \circ)$ Abelian?  Justify your answers.
+Define a binary operation $\circ$ on $H$ by  $(a,b) \circ (c,d) = (a + c , b + d)$, for $(a,b), (c,d) \in H$.  This operation is in fact just coordinate-pair addition.  Is $(H , \circ)$ a group?  If so, is $(H , \circ)$ abelian?  Justify your answers.
 \item
-Define a binary operation $\circ$ on $H$ by $(a,b) \circ (c,d) = (ac , bd)$, for $(a,b), (c,d) \in H$.  This is just coordinate-pair multiplication.  Is $(H , \circ)$ a group?  If so, is $(H , \circ)$ Abelian? Justify your answers.
+Define a binary operation $\circ$ on $H$ by $(a,b) \circ (c,d) = (ac , bd)$, for $(a,b), (c,d) \in H$.  This is just coordinate-pair multiplication.  Is $(H , \circ)$ a group?  If so, is $(H , \circ)$ abelian? Justify your answers.
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{19}
 Let $G = {\mathbb R}^{\ast} \times {\mathbb Z}$ (all pairs such that the first element is a nonzero real number, and the second is an integer) 
 \begin{enumerate}[(a)]
 \item
-Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (a+b, m+n)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ Abelian?  Justify your answers.
+Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (a+b, m+n)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ abelian?  Justify your answers.
 \item
-Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (ab, mn)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ Abelian?  Justify your answers.
+Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (ab, mn)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ abelian?  Justify your answers.
 \item
-Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (ab, m+n)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ Abelian?  Justify your answers.
+Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (ab, m+n)$.  Is $(G , \circ)$ a group?  If so, is $(G , \circ)$ abelian?  Justify your answers.
 \end{enumerate}
 \end{exercise}
 The previous two exercises follow a pattern that we may generalize:
 
 \begin{defn}\label{def:ProductOfGroups}
-Given two groups $G$ and $H$, we define the \bfii{ product} of groups $G$ and $H$ (denoted by $G \times H$) as the set of pairs $\left\{(g,h), g \in G, h \in H \right\}$. If $(g_1, h_1)$ and $(g_2,h_2)$ are two elements of $G \times H$, then we define the group operation  $(g_1, h_1) \circ (g_2, h_2)$ as follows:\index{product!of groups} 
+Given two groups $G$ and $H$, we define the \bfii{ product} of groups $G$ and $H$ (denoted by $G \times H$) as the set of pairs $\left\{(g,h), g \in G, h \in H \right\}$. If $(g_1, h_1)$ and $(g_2,h_2)$ are two elements of $G \times H$, then we define the group operation  $(g_1, h_1) \circ (g_2, h_2)$ as follows:\index{Product!of groups} 
 \[ (g_1, h_1) \circ (g_2, h_2) := (g_1g_2, h_1h_2),\]
 where $g_1g_2$ uses the group operation in $G$ and $h_1h_2$ uses the group operation in $H$.
 \end{defn}
@@ -279,8 +281,22 @@ $(3,6) \circ (2,4)$.
 
 In previous chapters we've used Cayley tables\index{Cayley table} to describe group operations.  With Cayley tables we can prove a set and operation are a group even when we don't know what the elements in the set really are or what the binary operation is.
 
+
+The next two exercises are very useful in the  subsequent exercises.
+
+\begin{exercise}{ident}
+Given two elements $g,h$  of a group ($G,\circ$). Show that $g$ is the identity element of $G$ if and only if  $g \circ h = h$.
+\hyperref[sec:groups:hints]{(*Hint*)} 
+\end{exercise}
+
+\begin{exercise}{cayley}
+Show that if $G$ is a group, then for every row of the Cayley table for $G$ no two entries are the same. Show also that for every column of the Cayley table no two entries are the same.
+\hyperref[sec:groups:hints]{(*Hint*)}  
+\end{exercise}
+
+
 \begin{exercise}{Cayley_groups}
-For each of the following multiplication tables defined on the set $G = \{ a, b, c, d \}$ tell whether $(G, \circ)$ represents a group, and if so,  whether it is Abelian.  Support your answer in each case.  Assume that the associative property holds in each case. \emph{Note} the identity element is not necessarily in the first row!
+For each of the following multiplication tables defined on the set $G = \{ a, b, c, d \}$ tell whether $(G, \circ)$ represents a group, and if so,  whether it is abelian.  Support your answer in each case.  Assume that the associative property holds in each case. \emph{Note} the identity element is not necessarily in the first row!
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
 
@@ -339,11 +355,6 @@ $d$ & $a$ & $b$ & $c$ & $d$
 \end{multicols}
 \end{exercise}
 
-The next exercise is very useful in the two subsequent exercises.
-
-\begin{exercise}{}
-Given that $g$ is an element of a group $G$. Show that $g$ is the identity element of $G$ if and only if $g \circ g = g$. (\emph{Hint:} For the ``if'' part, we may assume that $g \circ g = g$. Suppose that $e$ is the identity element of $G$. Then what is $e \circ g$?  Put this together with the assumption, and remember that $g$ has an inverse. Don't forget that you have to prove ``only if'' as well.) 
-\end{exercise}
 
 \begin{exercise}{Cayley_groups2}
 For each of the following multiplication tables, fill in the blanks to make a Cayley table for a group.
@@ -468,7 +479,7 @@ $d$ & $\_$ & $\_$ & $\_$ & $\_$
 \end{exercise}
 
 
-\subsection*{The Group of Units of ${\mathbb Z}_n$ \label{subsec:GroupOfUnits}}
+\subsection{The group of units of ${\mathbb Z}_n$ \label{subsec:GroupOfUnits}}
 
 Back in the Modular Arithmetic chapter, we used the addition table for ${\mathbb Z}_8$ to show that ${\mathbb Z}_8$ with modular addition was a group.  We extended this and showed that ${\mathbb Z}_n$ under modular addition is a group for any $n$.  But we ran into problems with modular multiplication on ${\mathbb Z}_8$, as we can see from the Cayley table (reproduced below),
 
@@ -492,7 +503,7 @@ $\odot$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 }
 \end{table}
 
-From Table~\ref{CayleyZ8mult} we can see several problems. Notice that $0,2,4,6$ have no inverses.  In fact, from Table~\ref{CayleyZ8mult} we see that only numbers that are relatively prime to 8 have inverses in ${\mathbb Z}_8$.  The same is true for any ${\mathbb Z}_n$. It follows that in order to make ${\mathbb Z}_n$ into a group under modular multiplication, we'll have to kick the non-relatively prime numbers out of the set in order to guarantee that every element has an inverse.  For instance,Table~\ref{CayleyU8} is the result when Table~ $\ref{CayleyZ8mult}$  is restricted to the rows and columns labelled $(1, 3, 5, \mbox{ and } 7)$.
+From Table~\ref{CayleyZ8mult} we can see several problems. Notice that $0,2,4,6$ have no inverses.  In fact, from Table~\ref{CayleyZ8mult} we see that only numbers that are relatively prime to 8 have inverses in ${\mathbb Z}_8$.  The same is true for any ${\mathbb Z}_n$. It follows that in order to get a group under modular multiplication using the elements of ${\mathbb Z}_n$, we'll have to kick out  the non-relatively prime numbers in order to guarantee that every element has an inverse.  For instance,Table~\ref{CayleyU8} is the result when Table~ $\ref{CayleyZ8mult}$  is restricted to the rows and columns labelled $(1, 3, 5, \mbox{ and } 7)$.
 
 \begin{table}[htb] 
 \caption{Multiplication table for $U(8)$ \label{CayleyU8}}
@@ -510,15 +521,20 @@ $\odot$ & 1 & 3 & 5 & 7 \\
 }
 \end{table}
 
-\begin{exercise}{}
+\begin{exercise}{27}
 Prove that the Cayley table in Table~\ref{CayleyU8} represents a group. (Note that associativity holds because we already know that modular multiplication is associative.)
 \end{exercise}
 
-\begin{exercise}{}
-Is the group in Table ~\ref{CayleyU8} Abelian?  Justify your answer.
+\begin{exercise}{28}
+Is the group in Table ~\ref{CayleyU8} abelian?  Justify your answer.
 \end{exercise}
+For convenience, let's define some notation:
 
-The set of nonzero numbers in ${\mathbb Z}_n$ that are relatively prime to $n$ is called the \bfii{ set of units of ${\mathbb Z}_n$}, denoted by \bfii{ $U(n)$}\index{Units! group of ($U(n)$)}\index{Group!of units $U(n)$}.  We have just seen that  $U(8)$ is a group under modular multiplication.  One might suspect that  $U(n)$ is a group for any $n$.  For starters, it is clear that $1$ serves as an  identity element, because $1\cdot k \equiv k \cdot 1 \equiv  k$ mod $n$ for any $n$. In fact, $U(n)$ is an Abelian group, as you will show in the following exercises.
+\begin{defn}\label{DefnOfUnits}
+The set of nonzero numbers in ${\mathbb Z}_n$ that are relatively prime to $n$ is called the \bfii{ set of units of ${\mathbb Z}_n$}, denoted by \bfii{ $U(n)$}\index{Units! group of ($U(n)$)}\index{Group!of units $U(n)$}.
+\end{defn}
+
+  We have just seen that  $U(8)$ is a group under modular multiplication.  One might suspect that  $U(n)$ is a group for any $n$.  For starters, it is clear that $1$ serves as an  identity element, because $1\cdot k \equiv k \cdot 1 \equiv  k$ mod $n$ for any $n$. In fact, $U(n)$ is an abelian group, as you will show in the following exercises.
 
 \begin{exercise}{U(n)_abgroup}
 In this exercise, we prove that $U(n)$ is a group under multiplication mod $n$ for any $n$. We know that modular multiplication is associative, so it remains to show the closure and inverse properties.  
@@ -526,23 +542,23 @@ In this exercise, we prove that $U(n)$ is a group under multiplication mod $n$ f
 \item
 Fill in the blanks to show that $U(n)$ is closed under modular multiplication:
 
-Let $k,m$ be arbitrary elements of  $U(n)$. It follows that both $k$ and \_\_\_\_ are relatively prime to \_\_\_\_\_\_\_\_. So neither $k$ nor \_\_\_\_\_ has any prime factors in common with \_\_\_\_\_\_. It follows that the product \_\_\_\_\_\_ also has no prime factors in common with \_\_\_\_. Furthermore, the remainder of \_\_\_\_\_ under division by \_\_\_\_\_also has no prime factors in common with \_\_\_\_\_. Therefore the product of \_\_\_\_\_ and \_\_\_\_\_ under modular multiplication is also an element of \_\_\_\_\_\_, so \_\_\_\_\_\_ is closed under modular multiplication.
+Let $k,m$ be arbitrary elements of  $U(n)$. It follows that both $k$ and \underline{~$<1>$~} are relatively prime to \underline{~$<2>$~}. So neither $k$ nor \underline{~$<3>$~} has any prime factors in common with \underline{~$<4>$~}. It follows that the product \underline{~$<5>$~} also has no prime factors in common with \underline{~$<6>$~}. Furthermore, the remainder of \underline{~$<7>$~} under division by \underline{~$<8>$~} also has no prime factors in common with \underline{~$<9>$~}. Therefore the product of \underline{~$<10>$~} and \underline{~$<11>$~} under modular multiplication is also an element of \underline{~$<12>$~}, so \underline{~$<13>$~} is closed under modular multiplication.
 \item
-It remains to show that $U(n)$ is closed under inverse. Suppose that $m \in U(n)$ and $x$ is the inverse of $m$. What equation must $x$ satisfy? (Hint: refer to 
-Section~\ref{subsec:MultInve}.)
+It remains to show that $U(n)$ is closed under inverse. Suppose that $m \in U(n)$ and $x$ is the inverse of $m$. What equation must $x$ satisfy?
+\hyperref[sec:groups:hints]{(*Hint*)}
 \item Show that the equation in $x$ that you wrote in part (b) has a solution as long as $m$ is relatively prime to $n$.
 \end{enumerate}
 \end{exercise}  
 
-\begin{exercise}{}
-Show that $U(n)$ is Abelian.
+\begin{exercise}{UnAbel}
+Show that $U(n)$ is abelian.
 \end{exercise}
 
 \begin{rem}
 Whenever we talk about the group $U(n)$, we always assume the operation is multiplication. Similarly, whenever we talk about ${\mathbb Z}_n$, we always assume the operation is addition.
 \end{rem}
 
-\subsection*{Groups of Matrices}
+\subsection{Groups of matrices}
 Finally, matrices provide many examples of interesting groups.
 
 \begin{exercise}{M2x2_group}
@@ -556,9 +572,9 @@ c & d
 
 \begin{enumerate}[(a)]
 \item
-Is ${\mathbb M}_2 ( {\mathbb R})$ a group under matrix addition? Is it Abelian? Justify your answers.
+Is ${\mathbb M}_2 ( {\mathbb R})$ a group under matrix addition? Is it abelian? Justify your answers.
 \item
-Is ${\mathbb M}_2 ( {\mathbb R})$ a group under matrix multiplication? Is it Abelian? Justify your answers.
+Is ${\mathbb M}_2 ( {\mathbb R})$ a group under matrix multiplication? Is it abelian? Justify your answers.
 \item
 What is the order of the group from a) or b) above?
 \end{enumerate}
@@ -584,13 +600,13 @@ linear $(GL_n(\mathbb{R}))$ }\label{generallinear}.
 \item
 Prove that $GL_2({\mathbb R})$ is a group under matrix multiplication.
 \item
-Is the general linear group Abelian?  Justify your answer.
+Is the general linear group abelian?  Justify your answer.
 \item
 What is $| GL_2( {\mathbb R}) |$?
 \end{enumerate}
 \end{exercise}
  
-\section{Basic Properties of Groups}
+\section{Basic properties of groups}
  
 Now that we have a general definition of groups, we can use this definition to prove properties that are true of \emph{all} groups. We'll begin by proving some essential properties that we've shown for specific groups, but need to know in general:
 
@@ -625,23 +641,23 @@ Fill in the blanks to complete the following proof of Proposition~\ref{propositi
 \item
 By the definition of inverse, if $g'$ is an inverse of an element $g$ in a group $G$, then 
 \noindent
-$g \cdot \_\_\_\_\_\_\_ = g' \cdot \_\_\_\_\_\_\_ = e$.
+$g \cdot \underline{~<1>~} = g' \cdot \underline{~<2>~} = e$.
 
 \item
-Similarly, if $g''$ is an inverse of $g$ then  $g \cdot \_\_\_\_\_\_\_ = \_\_\_\_\_\_\_ \cdot g = e$. 
+Similarly, if $g''$ is an inverse of $g$ then  $g \cdot \underline{~<3>~} = \underline{~<4>~} \cdot g = e$. 
 \item
 We may show that $g' = g''$ as follows:
 \begin{align*}
-g' & = g' \cdot \_\_\_\_\_\_\_  &\text{ (definition of identity) } \\
-    & = g' \cdot (\_\_\_\_\_\_\_ \cdot g'') &\text{ (part b above, def. of inverse) } \\
-    & = (g' \cdot g) \cdot \_\_\_\_\_\_\_  &\text{ (associative property of group G) } \\
-    & = \_\_\_\_\_\_\_ \cdot g'' &\text{ (part a above, def. of inverse) } \\
+g' & = g' \cdot \underline{~<5>~}  &\text{ (definition of identity) } \\
+    & = g' \cdot (\underline{~<6>~} \cdot g'') &\text{ (part b above, def. of inverse) } \\
+    & = (g' \cdot g) \cdot \underline{~<7>~}  &\text{ (associative property of group G) } \\
+    & = \underline{~<8>~} \cdot g'' &\text{ (part a above, def. of inverse) } \\
     & = g'' &\text{ (def. of identity) }
 \end{align*} 
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{39}
 \begin{enumerate}[(a)]
 \item
 Consider the group ${\mathbb C}^{\ast}$, and let  $a = 5 + 3i  \in {\mathbb C}^{\ast}$.  What is $a^{-1}$? 
@@ -685,7 +701,7 @@ we only need to verify that $b^{-1}a^{-1}$ satisfies the definition of inverse (
 \noindent
 The remainder of the proof is left as an exercise:
 
-\begin{exercise}{}
+\begin{exercise}{42}
 Fill in the blanks to complete the proof of Proposition~\ref{proposition:groups:group_inv_reverse}
 \begin{align*}
 (b^{-1}a^{-1})(ab) & = b^{-1}(a^{-1}a)b  &(\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_) \\
@@ -708,9 +724,9 @@ If $a \in G$, then since $G$ is a group, then $a^{-1} \in G$ exists.  And again,
 
 Now, by the definition of inverse, $a^{-1} (a^{-1})^{-1} = e$. Consequently, multiplying both sides of this equation by $a$, we have  (the argument continues in the following exercise):
 
-\begin{exercise}{}
+\begin{exercise}{44}
 \begin{align*}
-a(a^{-1}(a^{-1})^{-1}) & = ae &\mbox{(definition of inverse)}\\
+a(a^{-1}(a^{-1})^{-1}) & = ae &\mbox{(multiplication by}~a)\\
 (aa^{-1})(a^{-1})^{-1} & = ae   &(\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_) \\
 e(a^{-1})^{-1} & = ae   &(\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_) \\
 (a^{-1})^{-1} &= a.  &(\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_)
@@ -745,7 +761,7 @@ What is $(ab)^{-1}$?  What is $(ba)^{-1}$?
 \end{exercise}{}
 
 \begin{exercise}{}
-Given a group $G$ and $a, b \in G$, prove that $G$ is Abelian if and only if $(ab)^{-1} =a^{-1}b^{-1}$.
+Given a group $G$ and $a, b \in G$, prove that $G$ is abelian if and only if $(ab)^{-1} =a^{-1}b^{-1}$.
 \end{exercise}
  
 In high school algebra we wrote equations like $6 + x = -\sqrt{2}$ or $5x = 6$, and we could always find a real number $x$ that was a solution.  Now we know that ${\mathbb R}$ is a group under addition and multiplication.  Similarly, we have seen that  equations like $ax = b \pmod{n}$ and $a + x = b \pmod{n}$ had solutions for $x \in U(n)$ and $x \in {\mathbb Z}_n$, respectively. 
@@ -762,9 +778,9 @@ the equations $ax = b$ and $xa = b$ have unique solutions in $G$.
 \end{prop}
 
 \noindent
-Note we need separate proofs to show that $x$ exists and is unique for both $ax =b$ and $xa = b$, since we don't know whether the group is Abelian.  The proof for $ax=b$ is a fill-in-the-blank exercise, while the proof for $xa=b$ you'll do on your own:
+Note we need separate proofs to show that $x$ exists and is unique for both $ax =b$ and $xa = b$, since we don't know whether the group is abelian.  The proof for $ax=b$ is a fill-in-the-blank exercise, while the proof for $xa=b$ you'll do on your own:
 
-\begin{exercise}{}
+\begin{exercise}{48}
 \begin{enumerate}[(a)]
 \item 
 Complete the proof that $ax=b$ has a unique solution by filling in the blanks:
@@ -791,7 +807,7 @@ For instance in high school algebra, to solve the equation $5x = 6$ above, we te
 
 As in our example then, composing both sides of the equation by $a^{-1}$ is not only useful for the proofs, but in actually solving for $x$.  Therefore, no matter what crazy elements and strange binary operation make up our group, we can still solve for $x$ using the same algebra we learned in high school.  In other words, given a group $G$ and $a,b \in G$,  if $ax =b$, then $x = a^{-1}b$; if $xa =b$, then $x = ba^{-1}$; and so on.  Use this methodology in the following exercises.    
  
-\begin{exercise}{}
+\begin{exercise}{49}
 Given $a, b \in {\mathbb C}^{\ast}$, where $a = 3 - 3i$ and $b = 2 + 12i$; solve for $x$ in each of the following equations.
 \[
 \textrm{(a)}~~ax = b \qquad \qquad
@@ -811,7 +827,7 @@ Suppose $G$ is the group defined by the set $S = {\mathbb R} \setminus \{ -1 \}$
 \]
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{51}
 Given $\rho, \mu \in S_8$, where $\rho = (532)(164)$ and $\mu = (18753)(26)$; solve for $x$ in each of the following equations.
 \[
 \textrm{(a)}~~\rho x = \mu \qquad \qquad
@@ -831,7 +847,7 @@ Given the group $U(9)$, solve for $x$ in each of the following equations.
 \]
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{53}
 Given $A, B \in GL_2({\mathbb R})$, where
 \[
 A = \begin{pmatrix}
@@ -855,12 +871,12 @@ Solve for $X$ in each of the following equations.
 \begin{exercise}{}
 \begin{enumerate}[(a)]
 \item
-Given a group $G$ and $a, b \in G$, prove that if $G$ is Abelian, then any solution of $ax = b$ is also a solution of $xa = b$ (and vice versa).
-Given a group $G$  that is \emph{not} Abelian, show that it is always possible to find an equation of the form $ax = b$ which has a solution that is \emph{not} a solution to $xa = b$.
+Given a group $G$ and $a, b \in G$, prove that if $G$ is abelian, then any solution of $ax = b$ is also a solution of $xa = b$ (and vice versa).
+Given a group $G$  that is \emph{not} abelian, show that it is always possible to find an equation of the form $ax = b$ which has a solution that is \emph{not} a solution to $xa = b$.
 \end{enumerate}
 \end{exercise}
 
-In our work so far, we've frequently used the \bfii{ substitution property}\index{substitution property}.  For instance if $x = y$, then we know also that $a\cdot x = a \cdot y$, regardless of the operation $\cdot$.   But suppose I gave you the equation $a \cdot x = a \cdot y$.  Is it necessarily true that $x = y$?  If $a, x,y \in {\mathbb R}$ and the operation is multiplication, then it's true \emph{as long as $a \neq 0$}.  To show this, we may use  the method we talked about in the previous proposition:  multiply each side of the equation by $a^{-1}$ (that is, divide by a), and the result is $x = y$.  In basic algebra courses this property is often called the \bfii{ law of cancellation}\index{law of cancellation}.  
+In our work so far, we've frequently used the \bfii{ substitution property}\index{Substitution property}.  For instance if $x = y$, then we know also that $a\cdot x = a \cdot y$, regardless of the operation $\cdot$.   But suppose I gave you the equation $a \cdot x = a \cdot y$.  Is it necessarily true that $x = y$?  If $a, x,y \in {\mathbb R}$ and the operation is multiplication, then it's true \emph{as long as $a \neq 0$}.  To show this, we may use  the method we talked about in the previous proposition:  multiply each side of the equation by $a^{-1}$ (that is, divide by a), and the result is $x = y$.  In basic algebra courses this property is often called the \bfii{ law of cancellation}\index{Law of cancellation}.  
 Now this works for real numbers: but suppose $a,x,y$ were elements of some other group.  Would the law of cancellation still hold?  In fact, using the method shown above, you can prove this property holds for any group $G$. 
 
 \begin{prop}{cancel}
@@ -872,7 +888,7 @@ This proposition tells us that the \bfii{ right and
 left cancellation laws\/}\index{Cancellation law!for
 groups} are true in groups.  We leave the proof as an exercise.
 
-\begin{exercise}{}
+\begin{exercise}{56}
 \begin{enumerate}[(a)]
 \item
 To prove  Proposition~\ref{proposition:groups:cancel}, we need prove both  $ba = ca$ implies $b = c$  and $ab = ac$ implies $b = c$. Why do these two statements require two different proofs?
@@ -882,7 +898,10 @@ Prove Proposition~\ref{proposition:groups:cancel}.
 \end{exercise} 
  
 We can use exponential notation for groups just as we do in ordinary
-algebra. If $G$ is a group and $g \in G$, then we define $g^0 = e$.
+algebra:
+
+\begin{defn}\label{DefGroupExponents}
+ If $G$ is a group and $g \in G$, then we define $g^0 = e$.
 For $n \in {\mathbb N}$, we define 
 \[
 g^n = \underbrace{g \cdot g \cdots g}_{n \; {\rm times}}
@@ -892,31 +911,66 @@ and
 g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n
 \; {\rm times}}.
 \]
- 
+ \end{defn}
  
 \begin{prop}{exponent_laws} \index{Exponent laws}
 In a group, the usual laws of exponents hold; that is, for all $g, h
 \in G$,
 \begin{enumerate}
  
-\rm \item \it
+\item
 $g^mg^n = g^{m+n}$ for all $m, n \in {\mathbb Z}$; 
  
-\rm \item \it
+\item
 $(g^m)^n = g^{mn}$ for all $m, n \in {\mathbb Z}$; 
  
-\rm \item \it
+\item
 $(gh)^n = (h^{-1}g^{-1})^{-n}$ for all $n \in {\mathbb Z}$. Furthermore,
-if $G$ is Abelian, then $(gh)^n = g^nh^n$. 
+if $G$ is abelian, then $(gh)^n = g^nh^n$. 
  
 \end{enumerate}
 \end{prop}
  
-\begin{exercise}{}
-Prove all parts of Proposition~\ref{proposition:groups:exponent_laws}.
+\begin{proof}
+We will prove part (1), and you will do the rest. We can break part (1) into four cases: (a) $m,n \ge 0$; (b) $m,n < 0$; 
+(c) $m \ge 0, n< 0$; (d) $m<0, n \ge 0$. 
+
+Consider first case (a). 
+Using Definition~\ref{DefGroupExponents}, we have
+\[
+g^m g^n = \underbrace{g \cdot g \cdots g}_{m \; {\rm times}}\underbrace{g \cdot g \cdots g}_{n \; {\rm times}},
+\]
+and
+\[
+g^{m+n} = \underbrace{g \cdot g \cdots g}_{m+n \; {\rm times}}.
+\]
+Since the right-hand sides of these expressions are equal, then so are the left-hand sides: so $g^mg^n = g^{m+n}$.
+
+The proof of case (b) is exactly the same, except on the right-hand sides we should replace all $g$'s with $g^{-1}$ and we should also replace `$m$ times', `$n$ times', and `$m+n$ times' with `$-m$ times', `$-n$ times', and `$-(m+n)$ times' respectively.
+
+In case (c), we have
+\[
+g^m g^n = \underbrace{g \cdot g \cdots g}_{m \; {\rm times}}\underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{-n \; {\rm times}}.
+\]
+We now have two subcases to consider. First, if $m \ge -n$, then all of the $g^{-1}$ factors cancel and we end up with
+\[
+g^m g^n = \underbrace{g \cdot g \cdots g}_{m+n \; {\rm times}}.
+\]
+Second, if $m < -n$, then all of the $g$ factors are cancelled and we end up with
+\[
+g^m g^n = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{-(m+n) \; {\rm times}}.
+\]
+In either of these subcases, the right-hand side agrees with the definition of $g^{m+n}$, so the equality is proved.
+
+Case (d) is just like (c), except we exchange the signs  on the$g$'s,  $m$'s and $n$'s on the right-hand sides. This completes the proof of part (1).
+
+
+\begin{exercise}{59}
+Prove parts (2) and (3) of Proposition~\ref{proposition:groups:exponent_laws}.
 \end{exercise}
- 
-Notice that $(gh)^n \neq g^nh^n$ in general, since the group may not be Abelian.
+\end{proof} 
+
+Notice that $(gh)^n \neq g^nh^n$ in general, since the group may not be abelian.
 
 If the group is ${\mathbb Z}$ or ${\mathbb Z}_n$, we write the group
 operation additively and the exponential operation multiplicatively;
@@ -935,7 +989,7 @@ $m(g + h) = mg + mh$ for all $m \in {\mathbb Z}$.
  
 \end{enumerate}
 It is important to realize that the last statement can be made only
-because ${\mathbb Z}$ and  ${\mathbb Z}_n$ are Abelian groups.
+because ${\mathbb Z}$ and  ${\mathbb Z}_n$ are abelian groups.
  
 \histhead
  
@@ -970,13 +1024,13 @@ group theory appeared in William Burnside's\index{Burnside, William}
 
 \section{Subgroups}\label{groups_section_subgroups}
 
- We first came across subgroups in the Permutations chapter.  We saw that $S_n$, the set of permutations on a set of n elements, is a group under function composition.  Yet we also saw that the set of symmetries of an $n$-sided figure, a subset of $S_n$, is itself a group under function composition.  So a subgroup is a subset of a larger group that is itself a group under the same operation as the larger group.  Formally then: 
+ We first came across subgroups in the Permutations chapter.  We saw that $S_n$, the set of permutations on a set of n elements, is a group under function composition.  Yet we also saw that the set of symmetries of an $n$-sided figure, which is a subset of $S_n$, is itself a group under function composition.  So a subgroup is a subset of a larger group that is itself a group under the same operation as the larger group.  Formally then: 
 
 \begin{defn} \label{subgroup_defn}
-A \bfii{ subgroup}\index{Subgroup!definition of} $H$ of a group $G$ is a subset $H$ of $G$ such that when the group operation of $G$ is restricted to $H$, $H$ is a group in its own right. 
+A \bfii{ subgroup}\index{Subgroup!definition of} $H$ of a group $(G,\circ)$ is a subset $H$ of $G$ such that when the group operation of $G$ is restricted to $H$, $H$ is a group in its own right. 
 \end{defn}
 
-By definition, all subgroups are subsets: but is the reverse true?\index{Subgroup!relation to subset} If not, what makes a sub\emph{set} a sub\emph{group}? What special elements/special properties must subsets possess in order to qualify as subgroups?
+By definition, all subgroups are subsets: but is the reverse true?\index{Subgroup!relation to subset} If not, what makes a sub\emph{set} a sub\emph{group}? What special  properties must subsets possess in order to qualify as subgroups?
 
 The key to answering this question is the observation that any subset $H \subset G$ that is a subgroup of $G$ must also be a group in its own right: and we're already experts at deciding whether a set with a binary operation is a group: 
 
@@ -1058,25 +1112,17 @@ Explain why $({\mathbb R}, \cdot)$ is \emph{not} a group.
 Explain why ${\mathbb C}$ is not a group under complex multiplication.
 \end{enumerate}
 \end{exercise}
+Notice that the operation used in the subgroup must be the \emph{same} operation that's used in the group it's contained in. For example,
+${\mathbb R}^{\ast}$ is not a subgroup of ${\mathbb R}$, because  $({\mathbb R}^{\ast}, +)$ is not a group.
 
-\begin{example}{subgroup_nonexamples}
-\begin{itemize}
-\item
-${\mathbb R}^{\ast}$ is not a subgroup of ${\mathbb R}$, because while ${\mathbb R}^{\ast} \subset {\mathbb R}$ (by definition), $({\mathbb R}^{\ast}, \cdot)$ is a group, while $({\mathbb R}, \cdot)$ is not a group.
-\item
-${\mathbb C}^{\ast}$ is not a subgroup of ${\mathbb C}$, because while ${\mathbb C}^{\ast} \subset {\mathbb C}$ (by definition), ${\mathbb C}^{\ast}$ is a group under complex multiplication, while ${\mathbb C}$ is not a group under complex multiplication.
-\end{itemize}
-\end{example}
 
-\begin{exercise}{}
-Prove the following:
+\begin{exercise}{64}
+Prove or disprove:
 \begin{enumerate}[(a)]
 \item
-$GL_2({\mathbb R})$ is not a subgroup of ${\mathbb M}_2 ( {\mathbb R})$.
+$GL_2({\mathbb R})$ is a subgroup of ${\mathbb M}_2 ( {\mathbb R})$.
 \item
-$U(n)$ is not a subgroup of ${\mathbb Z}_n$.
-\item
-The set $S = {\mathbb R} \setminus \{ -1 \}$ under the binary operation $a \ast b = a + b +ab$ is not a subgroup of ${\mathbb R}$ under $+$.
+$U(n)$ is  a subgroup of ${\mathbb Z}_n$.
 \end{enumerate}
 \end{exercise}
  
@@ -1152,13 +1198,13 @@ Prove or disprove that ${\mathbb T}$ is commutative.
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
-Let  $H = \{ 1, -1, i, -i \}$, (these are the  fourth roots of unity, which we studied in the Complex Numbers chapter).  
+\begin{exercise}{67}
+Let  $H_4 = \{ 1, -1, i, -i \}$, (these are the  fourth roots of unity, which we studied in the Complex Numbers chapter).  
 \begin{enumerate}[(a)]
 \item
 Using Proposition \ref{proposition:groups:subgroup_prove}, prove that $H$ is a subgroup of ${\mathbb T}$. (\emph{Note} you should first verify that $H$ is a subset of ${\mathbb T}$.)
 \item  
-What is $| H |$?
+What is $| H_4 |$?
 \item
 Prove or disprove that $H$ is commutative.
 \end{enumerate}
@@ -1167,17 +1213,17 @@ Prove or disprove that $H$ is commutative.
 \begin{exercise}{}
 Let's generalize the last exercise.  Suppose now that $H$ is the set of \emph{$n^{th}$} roots of unity.  That is 
 \[
-H = \{z \in {\mathbb C} : z^n = 1\} \]
+H_n = \{z \in {\mathbb C} : z^n = 1\} \]
 
 \begin{enumerate}[(a)]
 \item
-Prove that $H$ is a subset of ${\mathbb T}$.
+Prove that $H_n$ is a subset of ${\mathbb T}$.
 \item
 Using Proposition \ref{proposition:groups:subgroup_prove}, prove that $H$ is a subgroup of ${\mathbb T}$.
 \item  
-What is $| H |$?
+What is $| H_n |$?
 \item
-Prove or disprove that $H$ is commutative.
+Prove or disprove that $H_n$ is commutative.
 \end{enumerate}
 \end{exercise}
 
@@ -1186,7 +1232,7 @@ Prove or disprove that $H$ is commutative.
 %Draw a picture depicting ${\mathbb C}^{\ast}$, ${\mathbb T}$, and the $n^{th}$ roots of unity.
 %\end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{69}
 Let ${\mathbb Q}^*\label{noteQstar}$ be defined in the following way:
 \[
 {\mathbb Q}^* = \{ p/q : p, q \mbox{ are nonzero integers } \}
@@ -1301,7 +1347,7 @@ $\implies |xy^{-1}| \in {\mathbb T}$
 \end{proof}
 \end{example} 
 
-\begin{exercise}{}
+\begin{exercise}{73}
 Use Proposition \ref{proposition:groups:subgroup_prove_2} to reprove the following:
 \begin{enumerate}[(a)]
 \item
@@ -1311,11 +1357,11 @@ $SL_2( {\mathbb R})$ is a subgroup of $GL_2( {\mathbb R})$
 \end{enumerate}
 \end{exercise}
 
-\section{Cyclic Groups}
+\section{Cyclic groups}
  
 In this section we will explore an important property of some groups and subgroups.  
 
-\subsection*{Cyclic Groups}
+\subsection{Cyclic groups}
 
 \begin{example}{construct_Z}
 Consider the group ${\mathbb Z}$.  Let us try to find the smallest subgroup of ${\mathbb Z}$ that contains the number 1.
@@ -1323,9 +1369,9 @@ Consider the group ${\mathbb Z}$.  Let us try to find the smallest subgroup of $
 \item
 We start with the smallest subset possible, $P = \{ 1 \}$.
 \item
-The subset has to be a group under addition.  Notice thought that P does not contain an additive identity, namely $0$.  So we add $0$ to the set, giving us $P = \{ 0, 1 \}$. 
+The subset has to be a group under addition.  But so far $P$ does not contain an additive identity.  So we need to add $0$ to the set, giving us $P = \{ 0, 1 \}$. 
 \item
-Zero is it's own inverse under addition, but notice that our set does not include an inverse for $1$.  So we add $-1$ to $P$, giving us  $P = \{ -1, 0, 1 \}$.
+Zero is its own inverse under addition, but notice that our set does not include an inverse for $1$.  So we add $-1$ to $P$, giving us  $P = \{ -1, 0, 1 \}$.
 \item
 Is $P$ closed under addition?  Certainly when we add $0$ to $1$ and $-1$, we get $1$ and $-1$, respectively.  And $-1 + 1 = 0$.  But what about when we add $1$ and $1$, or $-1$ and $-1$?  So we need to add $2$ and $-2$ to the set, giving us $P = \{ -2, -1, 0, 1, 2 \}$.
 \item
@@ -1353,13 +1399,13 @@ In Example ~\ref{example:groups:construct_Z} we also saw that $P$ was in fact $\
 
 Let us extend this concept to groups in general:
 
-\begin{defn} Given a group $G$ and an element $a \in G$, then \bfii{ the set  generated by the element} $a$\index{set!generated by group element} is denoted by $\langle a \rangle$, and is defined as the set obtained by repeated 
+\begin{defn} Given a group $G$ and an element $a \in G$, then \bfii{ the set  generated by the element} $a$\index{Set!generated by group element} is denoted by $\langle a \rangle$, and is defined as the set obtained by repeated 
 operation on the identity $e$ by the group elements $a$ and $a^{-1}$.  Using the notation we introduced right before Proposition ~\ref{proposition:groups:exponent_laws}, we can write this as
 \[ \langle a \rangle = \{ \ldots, a^{-3}, a^{-2}, a^{-1}, e, a, a^2, a^3, \ldots \} \]
 \noindent
 or
 \[ \langle a \rangle = \{ a^{k} : k \in \mathbb Z \} \]
-$\langle a \rangle$ is sometimes called the \bfii{ orbit} of $a$.\index{orbit! of a group element}
+$\langle a \rangle$ is sometimes called the \bfii{ orbit} of $a$.\index{Orbit! of a group element}
 \end{defn}
 \begin{rem}
 If we are using the ``+'' operation, as in the case of the integers above, we write $\langle a \rangle  = \{ na : n \in {\mathbb Z} \}$.
@@ -1374,8 +1420,8 @@ We have special terminology for the case where all the elements of a group are g
 
 \begin{defn}
  If a group $G$ contains some element $a$ such that $G = \langle a \rangle $, then $G$ is a
-\bfii{ cyclic group}\index{Group!cyclic}\index{Cyclic group}. In this case $a$ is a \bfii{
-generator\/}\index{Generator! of a cyclic group}\index{Cyclic group!generator} of $G$.
+\bfii{ cyclic group}\index{Group!cyclic}\index{Cyclic!group}. In this case $a$ is a \bfii{
+generator\/}\index{Generator! of a cyclic group}\index{Cyclic!group!generator} of $G$.
 \end{defn}
 
 We have seen above that $1$ is a generator of $\mathbb Z$, and thus $\mathbb Z$ is a cyclic group.
@@ -1414,7 +1460,7 @@ Therefore ${\mathbb Z}_6$ is a cyclic group generated by $1$.
 Show that $\langle 5 \rangle = {\mathbb Z}_6$.
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{82}
 Given a group $G$, suppose that $G = \langle a \rangle$.  Prove that $G = \langle a^{-1} \rangle$.
 \end{exercise}
 
@@ -1436,8 +1482,8 @@ So $\langle 2 \rangle = \{ 2^n \pmod{9} : n \in \mathbb Z \} = U(9)$
 Find any other generators of $U(9)$ if they exist (say so if none others exist).
 \end{exercise}
 
-\subsection*{Cyclic Subgroups}
-In this section, we further explore properties of the set $\langle a \rangle$ for arbitrary group elements $a \in G$
+\subsection{Cyclic subgroups}\label{CyclicSubgrups}
+In this section we further explore properties of the set $\langle a \rangle$ for arbitrary group elements $a \in G$. We have seen that in some cases, $\langle a \rangle$ is actually  a group. We'll see in a minute that in fact $\langle a \rangle$ is \emph{always} a group. Let's look at some examples first.
 
 \begin{example}{Cyclic_Z3}
 Suppose that we consider $4 \in {\mathbb Z}$. 
@@ -1451,11 +1497,11 @@ which happens to be the set $4 {\mathbb Z}$.
 \begin{exercise}{subgroup_3Z}
 Prove that $4 {\mathbb Z}$ is a subgroup of $\mathbb Z$.
 \end{exercise}
-Following this exercise, we say that $4 {\mathbb Z}$ is the \emph{cyclic subgroup} of $\mathbb Z$ generated by $4$.
+It follows from this exercise that $4 {\mathbb Z}$ is the \emph{cyclic subgroup} of $\mathbb Z$ generated by $4$.
 \end{example}
 
 
-\begin{exercise}{}
+\begin{exercise}{87}
 Let $H = \{ 2^n : n \in {\mathbb Z} \} = \langle 2 \rangle$ under multiplication.
 \begin{enumerate}[(a)]
 \item
@@ -1470,9 +1516,11 @@ Show that $H$ is closed under inverse.
 Is $H$ a subgroup of $Q^*$? \emph{Explain} your answer.
 \end{enumerate}
 \end{exercise}
-Following the previous exercise, we say that  $H$ is the \emph{cyclic subgroup} of ${\mathbb Q}^*$ generated by 2.   
+It follows from this exercise that   $H$ is the \emph{cyclic subgroup} of ${\mathbb Q}^*$ generated by 2.   
 
-\begin{thm}
+By now we've seen enough examples so that we're ready to prove the general result.
+
+\begin{thm}\label{OrbitIsSubgroup}
 Let $G$ be a group and $a$ be any element in $G$.  Then the set
 \[
 \langle a \rangle  = \{ a^k : k \in {\mathbb Z} \}\label{generatedby}
@@ -1502,12 +1550,13 @@ subgroup\/}\index{Subgroup!cyclic} generated by $a$.
 Let us now consider in particular the case of finite groups. Let $G$ be a finite group, and let $a$ be an element of $G$. Consider the set $A :=\left\{a, a^2, a^3, \ldots \right\}$. Since $A \subset G$ and $G$ is finite, the set $A$ must also be finite. In particular, the list 
 $\left\{a, a^2, a^3, \ldots\right\}$ must contain duplicate elements, since otherwise $A$ would be infinite. We must therefore have $a^k = a^l$ for two different natural numbers $k,l$. This is the key fact in proving the following exercise:
 
-\begin{exercise}{}
-Let $G$ be a finite group, and let $a \in G$ where $a \neq e$. Show there exists a natural number $m>0$ such that $a^m = e$. (\emph{Hint}: use the fact that $a^k = a^l$ for $k \neq l$.  You may assume that $k < l$ in your proof.)
+\begin{exercise}{90}
+Let $G$ be a finite group, and let $a \in G$ where $a \neq e$. Show there exists a natural number $m>0$ such that $a^m = e$.
+\hyperref[sec:groups:hints]{(*Hint*)}
 \end{exercise}
 In view of the preceding exercise, we may make the following definition:
 
-\begin{defn}
+\begin{defn}\label{DefOrder}
 If $a$ is an element of a group $G$, we define the \bfii{ order}\index{Element!order
 of} of $a$ to be the smallest positive integer $n$ such that $a^n= e$,
 and we write $|a| = n$\label{noteelementorder}. If there is no such
@@ -1516,10 +1565,10 @@ integer $n$, we say that the order of $a$ is infinite and  write $|a|
 \end{defn} 
 
 \begin{example}{Z_1_order}
-Given the group $\mathbb Z$, 
+Let us consider the orders of different elements in the infinite group $\mathbb Z$.
 \begin{itemize}
 \item
-What is $| 0 |$?  How many zeros do you need to add to equal 0?  You only need one.   So $| 0 | =1$, and the cyclic subgroup generated by $0$ is $\langle 0 \rangle = \{ 0 \}$
+First, what is $| 0 |$?  According to Definition~\ref{DefOrder}, we need to find the smallest positive integer such that $n \cdot 0 = 0$  (remember, $\mathbb Z$ is an \emph{additive} group. We get $n=1$, so $| 0 | =1$, and the cyclic subgroup generated by $0$ is $\langle 0 \rangle = \{ 0 \}$
 \item
 What is $| 1 |$?  $1 + 1 = 2$; $1 + 1 + 1 = 3$; $\ldots$  In fact you'll never get to $0$ adding a positive number of ones.  So $| 1 | = \infty$, and as we've seen, $\langle 1 \rangle = \mathbb Z$.
 \item
@@ -1528,28 +1577,18 @@ Similarly, $| -1 | = \infty$.
 \end{example}
 
 \begin{exercise}{Z6_orders}
-Given the group ${\mathbb Z}_6$, 
 \begin{enumerate}[(a)]
 \item
-What is $| 1 |$?
+In the group ${\mathbb Z}_6$, What is $| 1 |$? What is $| 5 |$?
 \item
-What is $| 5 |$?
+ Given any group $G$, If $e$ is the identity element of $G$ then what is $|e|$?
 \end{enumerate}
-\end{exercise}
- 
- \begin{exercise}{}
- If $e$ is the identity element of the group $G$, then what is $|e|$?
  \end{exercise}
+
 \begin{example}{Cyclic_Z6}
 The order of $2 \in {\mathbb Z}_6$ is 3, because under repeated modular addition we have
-\begin{itemize}
-\item
-$2 \equiv 2$
-\item
-$2 + 2 \equiv 4$ 
-\item
-$2 + 2 + 2 \equiv 0$. 
-\end{itemize} 
+\[
+2 \oplus 2 = 4;\qquad  2 \oplus  2 \oplus  2 = 0.\]
 
 \noindent
 Therefore the cyclic subgroup generated by 2 is $\langle 2 \rangle  = \{ 0, 2, 4\}$.  
@@ -1559,10 +1598,10 @@ Therefore the cyclic subgroup generated by 2 is $\langle 2 \rangle  = \{ 0, 2, 4
 Find the orders and cyclic subgroups generated by each element of $U(9)$.
 \end{exercise}
 
-\begin{exercise}{}
+\begin{exercise}{OrderEltCyclic}
 We have defined the order of $a$ (denoted by $|a|$) as the smallest natural number such that $a^n = e$. On the other hand, we have $| \langle a \rangle |$ is equal to the order of the cyclic subgroup generated by $a$. Which is larger, $|a|$ or $| \langle a \rangle |$? \emph{Explain} your answer.
 \end{exercise}
-\begin{exercise}{}
+\begin{exercise}{97}
 Let $G$ be a finite group, and let $a \in G$ such that $|a| = n$ for $n>0$. Show that there exists a natural number $m$ such that $a^{-1} = a^m$, and express $m$ in terms of $n$.
 \end{exercise}
  
@@ -1606,7 +1645,7 @@ Figure~\ref{subgrpsS3}.  You may verify  that every subgroup is cyclic.
 However, we can prove that:
  
 \begin{thm}
-Every cyclic group is Abelian.
+Every cyclic group is abelian.
 \end{thm}
  
  
@@ -1617,12 +1656,12 @@ say $g = a^r$ and $h = a^s$. Since
 \[
 g  h = a^r a^s = a^{r+s} = a^{s+r} = a^s a^r = h g,
 \]
-$G$ is Abelian.
+$G$ is abelian.
 \end{proof}
  
  
  
-\subsection*{Subgroups of Cyclic Groups}
+\subsection{Subgroups of cyclic groups}
  
  
 We can ask some interesting questions about cyclic subgroups of a
@@ -1754,7 +1793,7 @@ example,
 
 
 \markright{EXERCISES}
-\section{Additional Group and Subgroup Exercises}
+\section{Additional group and subgroup exercises}
 \exrule
 
 {\small
@@ -1842,14 +1881,14 @@ quantum physics.
 %\]
  
  
-\item %10
+\item\label{ex:eoc:9}
 Prove that $\det(AB) = \det(A) \det(B)$ in $GL_2({\mathbb R})$. Use this
 result to show that the binary operation in the group $GL_2({\mathbb R})$
 is closed; that is, if $A$ and $B$ are in $GL_2({\mathbb R})$, then $AB
 \in GL_2({\mathbb R})$.
  
  
-\item %11
+\item\label{ex:eoc:10}
 Let ${\mathbb Z}_2^n = \{ (a_1, a_2, \ldots, a_n) : a_i \in {\mathbb Z}_2
 \}$. Define a binary operation on ${\mathbb Z}_2^n$ by
 \[
@@ -1862,7 +1901,7 @@ Let ${\mathbb Z}_2^n = \{ (a_1, a_2, \ldots, a_n) : a_i \in {\mathbb Z}_2
 Prove that ${\mathbb Z}_2^n$ is a group under this operation. This group
 is important in algebraic coding theory. 
  
-\item %12
+\item\label{ex:eoc:11}
 \begin{enumerate}[(a)]
 \item
 Recall the discussion of Section~\ref{sec:miracle}, which explains how two apparently different groups can in fact be essentially the ``same" group. Find two groups of order eight that we have studied are not the ``same'' in this sense, and explain why they can't be considered as examples of the ``same'' group.  
@@ -1872,7 +1911,7 @@ Using the previous exercise (which introduces ${\mathbb Z}_2^n$), give an exampl
 
  
 \item
-Prove or disprove that every group containing six elements is Abelian.
+Prove or disprove that every group containing six elements is abelian.
  
  
 \item
@@ -1892,7 +1931,7 @@ Let $U(n)$ be the group of units in ${\mathbb Z}_n$. If $n>2$, prove that
 there is an element $k \in U(n)$ such that $k^2 = 1$ and $k \neq 1$.
  
  
-\item
+\item\label{ex:eoc:15}
 Prove that the inverse of $g _1 g_2 \cdots g_n$ is $g_n^{-1}
 g_{n-1}^{-1} \cdots g_1^{-1}$. 
  
@@ -1902,8 +1941,8 @@ Prove the right and left cancellation laws for a group $G$; that is,
 show that in the group $G$, $ba = ca$ implies $b = c$ and $ab = ac$
 implies $b = c$ for elements $a, b, c \in G$.  
  
-\item \label{Abelian2}
-Show that if $a^2 = e$ for all $a \in G$, then $G$ must be an Abelian
+\item \label{abelian2}
+Show that if $a^2 = e$ for all $a \in G$, then $G$ must be an abelian
 group. 
  
  
@@ -1914,7 +1953,7 @@ Show that if $G$ is a finite group of even order, then there is an $a
  
 \item
 Let $G$ be a group and suppose that $(ab)^2 = a^2b^2$ for all $a$ and
-$b$ in $G$.  Prove that $G$ is an Abelian group. 
+$b$ in $G$.  Prove that $G$ is an abelian group. 
  
  
 \item
@@ -1994,16 +2033,17 @@ matrices with integer entries and determinant one, is a subgroup of
 $SL_2( {\mathbb R} )$. 
  
  
-\item
-The \emph{quaternion group}\index{quaternion group ($Q_8$)} (denoted by $Q_8$) consists of 8 elements: $1$, $i$, $j$, $k$, $-1$, $-i$, $-j$, $-k$. You may find the Cayley table for $Q_8$ on \url{wolframalpha.com} or Wikipedia. 
+\item \label{quaternion_ex}
+The \emph{quaternion group}\index{Quaternion group ($Q_8$)} (denoted by $Q_8$) consists of 8 elements: $1$, $i$, $j$, $k$, $-1$, $-i$, $-j$, $-k$. You may find the Cayley table for $Q_8$ on \url{wolframalpha.com} or Wikipedia. 
 \begin{enumerate}[(a)]
 \item
 Find the orders of all 8 elements of $Q_8$.
-\item
-Find all the subgroups of $Q_8$. (\emph{Hint}:  From part (a), you may obtain 4 different subgroups (why?)  To look for more subgroups, suppose for instance there is a subgroup that contains both $i$ and $j$.  What other elements must it contain?  Do the same for $i$ and $k$, $j$ and $k$, etc.)
+\item \label{ex:groups:quat}
+Find all the subgroups of $Q_8$.
+\hyperref[sec:groups:hints]{(*Hint*)} 
 \end{enumerate}
  
-\item
+\item\label{ex:eoc:31}
 Prove that the intersection of two subgroups of a group $G$ is also a
 subgroup of $G$. 
  
@@ -2016,7 +2056,7 @@ $H \cup K$ is a subgroup of $G$.
 \item
 Prove or disprove: If $H$ and $K$ are subgroups of a group $G$, then
 $H K = \{hk : h \in H \text{ and } k \in K \}$ is a subgroup of $G$.
-What if $G$ is Abelian? 
+What if $G$ is abelian? 
  
  
 \item
@@ -2044,19 +2084,21 @@ Give an example of an infinite group in which every proper subgroup is
 finite. 
  
  
-\item
+\item \label{ex:groups:abelian_proof}
 If $xy = x^{-1} y^{-1}$ for all $x$ and $y$ in $G \setminus {e}$, prove that $G$
-must be Abelian. (\emph{Hint: consider Exercise~\ref{Abelian2} above.})
+must be abelian.
+\hyperref[sec:groups:hints]{(*Hint*)}
  
  
-\item
+\item \label{ex:groups:abelian_proof2}
 If $(xy)^2 = xy$ for all $x$ and $y$ in $G \setminus {e}$, prove that $G$ must be
-Abelian. (\emph{Hint: in fact, such a group can have at most two elements.  Why?})
+abelian.
+\hyperref[sec:groups:hints]{(*Hint*)}
  
  
 \item
-Prove or disprove: Every nontrivial subgroup of an non-Abelian group is
-non-Abelian.
+Prove or disprove: Every nontrivial subgroup of an non-abelian group is
+non-abelian.
  
  
 \item

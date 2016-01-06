@@ -17,7 +17,7 @@ We are about to start looking at polynomials, which means we will be working wit
 
 \section{Lots of examples}
 
-It's unavoidable that in mathematics, one often encounters sums.  Sometimes these sums have very few terms, but occasionally the sums can reach hundreds, thousands or even an infinite number of terms.  In these cases, rather than listing each and every term or listing the first several terms and assuming the pattern is obvious, one can represent a sum using \emph{summation notation}\index{summation notation}, often referred to as \emph{Sigma notation}\index{Sigma notation}. 
+It's unavoidable that in mathematics, one often encounters sums.  Sometimes these sums have very few terms, but occasionally the sums can reach hundreds, thousands or even an infinite number of terms.  In these cases, rather than listing each and every term or listing the first several terms and assuming the pattern is obvious, one can represent a sum using \emph{summation notation}\index{Summation notation}, often referred to as \emph{Sigma notation}\index{Sigma notation}. 
 
  Sigma notation has four main parts:  the \emph{index variable}, the \emph{starting value}, the \emph{final value} and the \emph{formula}.
 These parts are illustrated in the following example.
@@ -248,12 +248,12 @@ Other sums with known values include:
 \[\sum_{i=0}^{\infty}\dfrac{x^i}{i!} =1+\dfrac{x^1}{1!}+\dfrac{x^2}{2!}+\dfrac{x^3}{3!} \cdots=e^x\]
 \[\sum_{i=0}^{\infty}\dfrac{(-1)^i x^{2i+1}}{(2i+1)!} = \dfrac{x^1}{1!}-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}\cdots= \sin(x)\]
 
-There are also sums which \emph{diverge}\index{sum!divergent}, that is, they can be shown to approach positive or negative infinity. Examples include:
+There are also sums which \emph{diverge}\index{Sum!divergent}, that is, they can be shown to approach positive or negative infinity. Examples include:
 
 \[\text{The harmonic series:~~}\sum_{i=0}^{\infty}\left(\dfrac{1}{i} \right) \]
 \[\text{The geometric series when~} |x| \ge 1: ~~\sum_{i=0}^{\infty} x^i. \]
 
-\section{Application of summations to linear algebra}
+\section{Sigma notation in linear algebra}
 
 \subsection{Applications to matrices}
 
@@ -305,7 +305,7 @@ Show that matrix multiplication is \emph{associative}.
 \end{enumerate}
 \end{exercise}
 
-The {\bfi identity matrix}\index{matrix!identity ($I$)} $I$ often comes up when working with matrices. You may remember that an identity matrix looks like:
+The {\bfi identity matrix}\index{Matrix!identity ($I$)} $I$ often comes up when working with matrices. You may remember that an identity matrix looks like:
 
 \[I = \left[ \begin{array}{ccccc}
 1 & 0  & \cdots & 0 & 0 \\
@@ -315,7 +315,7 @@ The {\bfi identity matrix}\index{matrix!identity ($I$)} $I$ often comes up when 
 0 & 0  & \cdots & 0 & 1  \\
  \end{array} \right]. \]
 
-There is a summation notation counterpart, called the {\bfi Kronecker delta}\index{Kr onecker delta}.\footnote{after Leopold Kronecker (1823-1891), a prominent German mathematician who made many contributions to abstract algebra and number theory. But outside of those areas, he is most famous for his strong opposition to the theory of infinite sets first proposed by Georg Cantor (1845-1918).  Most mathematicians today would say that Cantor was right, and Kronecker was wrong. This is an interesting topic that you can read about.} The Kronecker delta is written as $\delta_{i,j}$, and it takes the following values:
+There is a summation notation counterpart, called the {\bfi Kronecker delta}\index{Kronecker delta}.\footnote{after Leopold Kronecker (1823-1891), a prominent German mathematician who made many contributions to abstract algebra and number theory. But outside of those areas, he is most famous for his strong opposition to the theory of infinite sets first proposed by Georg Cantor (1845-1918).  Most mathematicians today would say that Cantor was right, and Kronecker was wrong. This is an interesting topic that you can read about.} The Kronecker delta is written as $\delta_{i,j}$, and it takes the following values:
 
 \[ \delta_{ij}=
 \begin{cases}
@@ -337,8 +337,9 @@ Show that:
 \[ \sum_k  \delta_{ik}\delta_{kj}=\delta_{ij}\]
 \end{exercise}
 
-\begin{exercise}{}
-The Kronecker delta can also be use to write a compact, summation notation version of the definition for dot product.  Guess what this formula is (Hint: you will have two summation symbols), and use it to find the dot product of the vectors $\textbf{a}=[5~1~-2]$ and $\textbf{b}=[3~2~-6]$.
+\begin{exercise}{kronecker}
+The Kronecker delta can also be use to write a compact, summation notation version of the definition for dot product.  Guess what this formula is, and use it to find the dot product of the vectors $\textbf{a}=[5~1~-2]$ and $\textbf{b}=[3~2~-6]$.
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
 
 \subsubsection*{Matrix transpose}
@@ -382,12 +383,12 @@ Transpose defines an isomorphism from $GL_n(\mathbb{R})$ to $GL_n(\mathbb{R})$.
 \end{exercise}
 
 \subsubsection*{Matrix traces}
-Another cool application of summation notation with matrices is to prove things about the {\bfi trace}\index{trace!of a matrix} of a matrix.  The trace only applies to square matrices (equal number of rows and columns) and is the sum of all the entries on the diagonal -- that is,  the sum of all entries with the same column and row number.  In summation notation, the trace of an $n \times n$ matrix as:
+Another cool application of summation notation with matrices is to prove things about the {\bfi trace}\index{Trace!of a matrix} of a matrix.  The trace only applies to square matrices (equal number of rows and columns) and is the sum of all the entries on the diagonal -- that is,  the sum of all entries with the same column and row number.  In summation notation, the trace of an $n \times n$ matrix as:
 
 \[ \text{Tr} \left( A \right)= a_{1,1} + a_{2,2} + \ldots + a_{n,n} = \sum_{i=1}^n a_{i,i} \] 
 This time we are using the index $i$ for both the row position and the column position, so its the position of the index that denotes row and column.  The formula for the product used two different letters for the indices because they were not always equal, but for trace the row and column number will always be equal, so we only need one letter.
 
-The next exercise coveers some basic properties of traces:
+The next exercise covers some basic properties of traces:
 
 \begin{exercise}{}
 \begin{enumerate}[(a)]
@@ -429,7 +430,7 @@ In the above proof that $\text{Tr} ({AB}) = \text{Tr}({BA})$, we assumed that bo
 
 \begin {exercise}{trace3}
 Show that $\text{Tr} ({ABC}) = \text{Tr}({CAB})$, as long as the dimensions of $A, B, C$ are such that the products are well-defined.
-(Hint: Notice that the product ${AB}$ is in both terms.)
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
 
 
@@ -439,13 +440,14 @@ Show that
 as long as the matrices have dimensions so that all of these products are defined.  Notice that all of these arrangements of the matrices $A, B, C, D$ are \emph{cyclic permutations} of each other.
 \end{exercise}
 
-\begin {exercise}{}
+\begin {exercise}{linalg}
 In linear algebra, given two $n \times n$ matrices $A$ and $B$ we say that $A$ is {\bfi similar}\index{Matrices!similar} to $B$ if there exists an invertible matrix $S$ such that $B = S^{-1}AS$. 
 \begin{enumerate}[(a)]
 \item
 Prove that if $A$ is similar to $B$, then $B$ is similar to $A$.
 \item
-Prove that if $A$ is similar to $B$, then $\text{Tr} ({A}) = \text{Tr} ({B})$. (\emph{Hint}:  use one of the previous exercises.)
+Prove that if $A$ is similar to $B$, then $\text{Tr} ({A}) = \text{Tr} ({B})$. 
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{enumerate}
 \end{exercise}
 
@@ -496,24 +498,32 @@ This observation motivates the following general definition  of the {\bfi Levi-C
 
 The symbol with $n$ indices is sometimes called an $n$-dimensional Levi-Civita symbol: for instance, $\epsilon_{ijk}$ is a 3-dimensional Levi-Civita symbol.  The reason for this is that most often they are used with vector spaces that have the same dimension as the number of indices in the symbol.  So   the Levi-Civita symbol with three indices, $\epsilon_{ijk}$ is most useful in three dimensions, as we'll see shortly.
 
-\begin{exercise}{}
-Using what you now know about the Kronecker Delta and the Levi-Civita symbol, show that:
+\begin{exercise}{KLC}
+Using what you now know about the Kronecker delta and the Levi-Civita symbol, show that:
 \[
 \sum_{i,j} \epsilon_{ij} \delta_{ij}=0
 \]
-Hint: There are two possibilities to consider, $i=j$ and $i \neq j$.
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
 
-Recall that if you want to combine two sets A and B, adding both sets together means you take everything in set A, plus everything in set B, and then subtract their intersection.  The reason you subtract the intersection is that you end up counting each element in the intersection twice because of the overlap between A and B.  In other words, think of two paper circles that overlap- we want one layer of paper, that is we only want to count each element once, so we need to subtract that extra layer of paper in the intersection, that way we have just one layer of paper for the whole union.  Like sets, there is an anolog when we split and combine summations.  
-\begin{exercise}{}
+In the Set Theory chapter you saw the formula:
+\[ |A \cup B| = |A| + |B| - |A \cap B|.\]
+This means that you may count all the elements contained in set $A$ or set $B$ by counting the elements in $A$ and $B$ separately, then subtracting their intersection.  You have to  subtract the intersection because  the overlap between $A$ and $B$ gets counted twice in the separate counts of $A$ and $B$.  (Think of a set diagram, where $A$ and $B$ are represented by intersecting circles.)  When we split up summations depending on whether indices are equal or unequal, we have to add and subtract in a similar way. We can prove this using Levi-Civita symbols.
+  
+\begin{exercise}{split}
 \begin{enumerate}[(a)]
 \item
-Show that $1=|\epsilon_{ijk}|+\delta_{ij}+\delta_{jk}+\delta_{ik}-2\delta_{ij}\delta_{ik}$ Hint: Make a table for all possible values of $i,j,k$
+Show that $1=|\epsilon_{ijk}|+\delta_{ij}+\delta_{jk}+\delta_{ik}-2\delta_{ij}\delta_{ik}$ 
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \item
-Show that $\sum_{i,j,k} a_{i.j.k}=\sum_{i,j,k~\text{all unequal}}a_{i,j,k}+\sum_{i=j}+\sum_{j=k}+\sum_{i=k}-2\sum_{i=j=k}a_{ijk}$
+Show that 
+\[
+\sum_{i,j,k} a_{ijk}=\sum_{i,j,k~\text{all unequal}}a_{ijk}+\sum_{i,k}a_{iik}+\sum_{i,j}a_{ijj}+\sum_{j,k}a_{kjk}-2\sum_{i}a_{iii}.
+\]
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{enumerate}
 \end{exercise}
-%%%%This exerciese needs some work JW
+
 
 \subsubsection*{Levi-Civita symbols and determinants} 
 Now that we have defined what the Levi-Civita symbol is, we can actually use if for something!  The first application we'll look at is determinants.  Suppose you have a $2 \times 2 $ matrix $A$:
@@ -567,6 +577,8 @@ Write down the matrix $P_{\sigma}$ when: (i) $\sigma = (13)$; (ii) $\sigma = (13
 Show that when you multiply the $4 \times 1$ row vector $[1~2~3~4]$ times the matrix $P_{\sigma}$, you obtain the second row of the tableau for $\sigma$.  In other words, the matrix $P_{\sigma}$ ``performs'' the permutation $\sigma$ on row vector entries.
 \item
 Using the formula that you guessed in the previous problem, evaluate $\det P_{\sigma}$ when: (i) $\sigma = (24)$; (ii) $\sigma = (143)$; (iii) $\sigma = (14)(23)$; (iv)  $\sigma = (1423)$.
+\item
+In the Permutations chapter we talked about |emph{even} and \emph{odd} permutations\index{Permutation!even and odd}.  How is the value of $\det P_{\sigma}$  related to the evenness or oddness of $\sigma$?
 \end{enumerate}
 \end{exercise}
 
@@ -578,17 +590,17 @@ An important concept to keep in mind when dealing with these Levi-Civita symbols
 \[
 \text{det} A = \sum_{i,j,k} \epsilon_{ijk} a_{1i} a_{2j} a_{3k}
 \]
-We want to show what happens when any two rows are equal, so lets do one case where row one equals row 2.  In that case $a_{2j}=a_{1j}$.  That means we can re-write our determinant as:
+We want to show what happens when any two rows are equal, so lets do one case where row one equals row 2.  In that case $a_{2j}=a_{1j}$.  That means we can rewrite our determinant as:
 \[
-\text{det} A =  \sum_{i,j,k} \epsilon{ijk} a_{1i} a_{1j} a_{3k}
+\text{det} A =  \sum_{i,j,k} \epsilon_{ijk} a_{1i} a_{1j} a_{3k}
 \]
 Notice what happens when we switch $a_{1i}$ and $a_{1j}$; it also means that we must change $\epsilon_{ijk}$ to $\epsilon_{jik}$ because it is the position of the indicies that count (i.e. if we change the order of two indicies we must change the order for the rest).  Switching $a_{1i}$ and $a_{1j}$ doesn't change our final product since they are communatative, so we end up with the expression:
 \[
-\text{det} A =   \sum_{j,i,k} \epsilon{jik} a_{1j} a_{1i} a_{3k} 
+\text{det} A =   \sum_{j,i,k} \epsilon_{jik} a_{1j} a_{1i} a_{3k} 
 \]
 Now remember what we discused earlier, if you interchange two indices (that is, an odd permutation) of $\epsilon_{ijk}$, you get its negative, so $\epsilon_{jik}=-\epsilon_{ijk}$.  This gives us the equality:
 \[
-\sum_{j,i,k} \epsilon{jik} a_{1j} a_{1i} a_{3k}=\sum_{j,i,k} - \epsilon{ijk} a_{1i} a_{1j} a_{3k}
+\sum_{j,i,k} \epsilon_{jik} a_{1j} a_{1i} a_{3k}=\sum_{j,i,k} - \epsilon_{ijk} a_{1i} a_{1j} a_{3k}
 \]
 First of all, lets not lose sight that both the left hand side and the right hand side represent the same determinant.  So what we see is that the determinant (a real number value) is equal to its negative.  There is only one real number that is equal to its negative and that is zero!  So to recap, if the first row is the same as the second row in a 3x3 matrix, the determinant is always zero.
 
@@ -596,60 +608,74 @@ First of all, lets not lose sight that both the left hand side and the right han
 We showed that if the first and second row of a 3x3 matrix is the same, the determinant is zero.  Now finish the proof that the determinant of a 3x3 is always zero if \emph{any} two rows are the same; that is, prove it for the remaining cases.
 \end{exercise}{} 
 
-We can take the notion of equal and unequal indices as step farther by proving that the determinant of a product of two matricies is equal to the product of their determinants.  Lets start with a simple 2x2 matrix.  If matrices $A$ and $B$ are both 2x2, we want to prove that $\text{det}(AB)=\text{det}A\text{det}B$.  We can write $\text{det}(AB)$ as:
+We can take the notion of equal and unequal indices as step farther by proving that the determinant of a product of two matricies is equal to the product of their determinants.  Lets start with a simple 2x2 matrix.  If matrices $A$ and $B$ are both 2x2, we want to prove that $\text{det}(AB)=\text{det}A\\,text{det}B$.  We can write $\text{det}(AB)$ as:
 \[
 \text{det}(AB)= \sum_{x,y} \epsilon_{xy} [AB]_{1x} [AB]_{2y}
 \]
 Based on what we learned on how to represent products in terms of summation symbols, we can expand this as:
 \begin{align*}
-\text{det}(AB)=& \sum_{x,y} \epsilon_{xy} \left[ \sum_i a_{1i}b{ix} \sum_j a_{2j}b_{jy}\right]\\
+\text{det}(AB)=& \sum_{x,y} \epsilon_{xy} \left[ \sum_i a_{1i}b_{ix} \sum_j a_{2j}b_{jy}\right]\\
 =&  \sum_{x,y} \epsilon_{xy} \left[ \sum_{i,j}  a_{1i}a_{2j} b_{ix}b_{jy}\right]
 \end{align*}
-At this point we can now consider the product of two posibbilities for our indices, one where $i=j$ and another where $i \neq j$:
+At this point we can now consider the product of two possibilities for our indices, one where $i=j$ and another where $i \neq j$:
 \[
- \sum_{x,y} \epsilon_{xy} \left[ \sum_{i=j}(\ldots)+\sum_{i \neq j} (\ldots) \right]
+ \sum_{x,y} \epsilon_{xy} \left[ \sum_{i=j}(\ldots)+\sum_{i \neq j} (\ldots) \right].
 \]
+Of the two sums in the square brackets, the first makes zero contribution:
+
 \begin{exercise}{}
-Show that the sum over $i$ and $j$ for $ a_{1i}a_{2j} b_{ix}b_{jy}$ equal zero when $i=j$.
+Given that $i=j$ show that $\sum_{x,y} \epsilon_{xy}  b_{ix}b_{jy}$  is equal to 0. Use this to show that the first summation in the square brackets makes zero contribution.
 \end{exercise}
-Since we can ignore the case where $i=j$, let us look at the case where $i \neq j$.  Here we are going to employ a little trick on the $b$ terms to extract two epsilons:
-\[
-\sum_{x,y} \epsilon_{xy} \left[ \sum_{i,j}  a_{1i}a_{2j} b_{ix}b_{jy}\right]= \sum_{x',y'}  \sum_{i,j} \epsilon_{x'y'}\epsilon_{ij}   a_{1i}a_{2j} b_{1x'}b_{2y'}
-\]
-You are probably thinking this is just pulled this out of thin air, but if we look at how permutations work you can see this is valid.  Let us consider two permutations:
-\[ \sigma=\left( \begin{array}{cc}
-i & j   \\
-x &y
-\end{array} \right)
-~~~\rho=\left( \begin{array}{cc}
-1 & 2   \\
-i &j 
-\end{array}\right)
-\]
-Then $\sigma \rho$ is:
-\[\sigma\rho=\left( \begin{array}{cc}
-1 & 2   \\
-x &y
-\end{array} \right)
-\]
-Next, we want to relate $x$ and $y$ to 1 and 2, but since we can't say $x$ always goes to one and $y$ always goes to two (both could go to either) we define new indices called $x'$ and $y'$.  This gives us the permutation:
-\[ \left( \begin{array}{cc}
-1 & 2   \\
-x' &y'
-\end{array} \right)
-\]
-allowing us to rewrite $b_{ix}b_{jy}$ as $ b_{1x'}b_{2y'}$.  At this point we are actually done:
-\[
-\text{det}A=\sum_{i,j} \epsilon_{ij} a_{1i}a_{2j}
-\]
-\[
-\text{det}B=\sum_{x',y'} \epsilon_{x'y'} b_{1x'}b_{2y'}
-\]
-Therefore:
+Since we can ignore the case where $i=j$, let us look at the case where $i \neq j$.  There are actually two cases: $i=1, j=2$ and $i=2, j=1$.  Notice that:
 \begin{align*}
-\text{det}(AB)=& \sum_{x,y} \epsilon_{xy} \left[ \sum_i a_{1i}b{ix} \sum_j a_{2j}b_{jy}\right]\\
-=&\sum_{x',y'}  \sum_{i,j} \epsilon_{x'y'}\epsilon_{ij}   a_{1i}a_{2j} b_{1x'}b_{2y'}\\
-=& \text{det}A ~\text{det}B
+ \epsilon_{xy} b_{ix}b_{jy}&=\epsilon_{xy} b_{1x}b_{2y}~\text{when}~i=1,j=2;\\
+ \epsilon_{xy} b_{ix}b_{jy}&= -\epsilon_{xy} b_{1x}b_{2y}~\text{when}~i=2,j=1.
+\end{align*}
+These two cases can be summarized as:
+\begin{align*}
+ \epsilon_{xy} b_{ix}b_{jy}&=\epsilon_{xy}\epsilon_{ij} b_{1x}b_{2y}.\\
+\end{align*}
+This gives us:
+\begin{align*}
+\sum_{x,y} \epsilon_{xy} \left[ \sum_{i,j}  a_{1i}a_{2j} b_{ix}b_{jy}\right]&= \sum_{x,y}  \sum_{i,j} \epsilon_{xy}\epsilon_{ij}   a_{1i}a_{2j} b_{1x}b_{2y}\\
+&=  \left(\sum_{i,j}\epsilon_{ij}   a_{1i}a_{2j}\right)\left(\sum_{x,y}  \epsilon_{xy} b_{1x}b_{2y}\right),
+\end{align*}
+%You are probably thinking this is just pulled this out of thin air, but if we look at how permutations work you can see this is valid.  Let us consider two permutations in tableau notation:
+%\[ \sigma=\left( \begin{array}{cc}
+%i & j   \\
+%x &y
+%\end{array} \right)
+%~~~\rho=\left( \begin{array}{cc}
+%1 & 2   \\
+%i &j 
+%\end{array}\right)
+%\]
+%Then $\sigma \rho$ is:
+%\[\sigma\rho=\left( \begin{array}{cc}
+%1 & 2   \\
+%x &y
+%\end{array} \right)
+%\]
+%Next, we want to relate $x$ and $y$ to 1 and 2, but since we can't say $x$ always goes to one and $y$ always goes to two (both could go to either) we define new indices called $x'$ and $y'$.  This gives us the permutation:
+%\[ \left( \begin{array}{cc}
+%1 & 2   \\
+%x' &y'
+%\end{array} \right)
+%\]
+%allowing us to rewrite $b_{ix}b_{jy}$ as $ b_{1x'}b_{2y'}$.  
+where in the second line we have noticed that the terms with $x,y$ in the RHS of the first line can be separated from the terms with $i,j$.
+At this point we are just about done, since:
+\[
+\text{det}A=\sum_{i,j} \epsilon_{ij} a_{1i}a_{2j},
+\]
+\[
+\text{det}B=\sum_{x,y} \epsilon_{xy} b_{1x}b_{2y},
+\]
+and therefore:
+\begin{align*}
+\text{det}(AB)=& \sum_{x,y} \epsilon_{xy} \left[ \sum_i a_{1i}b_{ix} \sum_j a_{2j}b_{jy}\right]\\
+=&  \left(\sum_{i,j}\epsilon_{ij}   a_{1i}a_{2j}\right)\left(\sum_{x,y}  \epsilon_{xy} b_{1x}b_{2y}\right)\\
+=& \text{det}A \,\text{det}B.
 \end{align*}
 
 
@@ -798,9 +824,11 @@ In case (B) we have:
 
 \[ S_{ijji} =  \left[ \sum_k \epsilon_{ijk} \epsilon_{kji} \right] = \left[ \sum_k -\left[\epsilon_{ijk}^2 \right] \right] = -1. \]
 In summary we have:
-
-\[ S_{ijmn} = 1 ~ \text{if}~ m=i,~ n=j, ~ \text{and}~ i\neq j \]
-\[ S_{ijmn} = -1 ~ \text{if}~ n=i,~ m=j, ~ \text{and}~ i\neq j \]
+\begin{align*}
+S_{ijmn} &= 1 ~ \text{if}~ m=i,~ n=j, ~ \text{and}~ i\neq j ;\\
+S_{ijmn}& = -1 ~ \text{if}~ n=i,~ m=j, ~ \text{and}~ i\neq j; \\
+S_{ijmn}& = 0~\text{otherwise}.
+\end{align*}
 
 Let's plug this back into our expression for $ \left( A \times (B \times C) \right)_i$. We can then separate the terms where $m=i$, $n=j$ from the terms where $n=i$, $m=j$. Notice that there is no longer a sum over 3 indices but 
 only one index, since $m$ and $n$ are determined by $i$ and $j$:
@@ -816,7 +844,7 @@ expressions simplify:
 
 This is the same as:
 
-\[ B_i  (A \cdot C) - C_i (A \cdot B) \]
+\[ B_i  (A \cdot C) - C_i (A \cdot B), \]
 
 which is the $BAC-CAB$ rule.  In this example the brute force method wasn't much harder than the symmetry method, but for more complicated expressions it is far easier to use the symmetries of $\epsilon$ to prove a statement rather than do it term by term.
 
@@ -869,11 +897,7 @@ Prove the following equation using summation by parts:
 \[ \sum_{k=1}^n k^3 = \frac{n^4}{4} + \frac{n^3}{2} + \frac{n^2}{4} \]
 \end{exercise}
 
-\begin{exercise}{} Evaluate the sum: 
+\begin{exercise}{last} Evaluate the sum: 
 \[\sum_{k=1}^n k \cdot 2^k.\]
-\emph{Hint:} first show that:  $\sum_{k=1}^n 2^k = 2^{n+1} - 2$.
-
+\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
-
-
-

@@ -21,6 +21,7 @@
 \usepackage{makeidx}
 \usepackage{placeins}%  CPT
 \usepackage{url}
+\usepackage{dialogue}
 
 \usepackage{tikz}
 \newcommand{\tikzpreface}[1]{\relax}
@@ -151,10 +152,46 @@
 \newcommand{\Id}{\sf{Id}}
 \newcommand{\rel}{\sim}
 
-
-
-
 \renewcommand{\ref}{\href}
+
+
+% Commands from Hildenbrand, "Induction"
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\CC}{\mathbb{C}}
+
+\newcommand{\Quote}[2]{\begin{quote}
+\slshape #1 \hfill{\hbox{\slshape ---#2}}\end{quote}}
+
+\newcommand{\seq}[1]{\langle #1\rangle} 
+\newcommand{\aaa}{\langle a\rangle}
+\newcommand{\bbb}{\langle b\rangle}
+\newcommand{\cc}{\langle c\rangle}
+\newcommand{\liminfty}{\lim\limits_{n\to\infty}}
+
+\providecommand{\ul}[1]{\underline{#1}}
+
+% define dummy command if \pts is not used
+\providecommand{\pts}[1]{}
+
+% example macro
+%\newcommand{\example}[1]{\begin{quote}\small
+%\textbf{Example: }#1\end{quote}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% redefine \implies
+
+\renewcommand{\implies}{\Rightarrow}
+
+\providecommand{\equivalent}{\Leftrightarrow}
+
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dprod}{\displaystyle\prod}
+
+%% End of Hildenbrand
 
 
 %
@@ -187,18 +224,20 @@
 %
 \begin{titlepage}
 \title{Elementary Abstract Algebra: Examples and Applications}
-\author{Justin Hill, Chris Thron}
+\author{Justin Hill, Chris Thron (eds), Thomas Judson, Dave Witte Morris, Joy Morris, A. J. Hildebrand, Holly Webb, Johnny Watts, David Weathers}
 \begin{center}
 \vspace{3.5cm}
 {\huge \textbf{ Elementary Abstract Algebra: Examples and Applications}}\\[1cm]
-Conceived by \\ [0.5 cm]
-{ \textbf{Justin Hill, Chris Thron (\emph{editor})} } \\
-Texas A\&M University -- Central Texas \\[0.4cm]
+Contributing editors: \\ [0.5 cm]
+{ \textbf{Justin Hill, Chris Thron } } \\
+Temple College~/~Texas A\&M University-Central Texas \\[0.4cm]
 Incorporating source materials by\\[0.4cm]
 \textbf{Thomas Judson} (Stephen F. Austin State University) \\
-\textbf{Dave Witte  Morris and Joy Morris} (University of Lethbridge) \\[0.4cm]
+\textbf{Dave Witte  Morris and Joy Morris} (University of Lethbridge) \\
+\textbf{A. J. Hildebrand} (University of Illinois Urbana-Champaign) \\
+[0.4cm]
 Additional contributions by\\[0.4cm]
-\textbf {Johnny Watts, David Weathers} (A\&M -- Central Texas)\\[0.4cm]
+\textbf {Holly Webb, David Weathers, Johnny Watts, and Semi Harrison} (TAMU-CT)\\[0.4cm]
 
 \vfill
 
@@ -212,15 +251,20 @@ This book is offered under the Creative Commons license (Attribution-NonCommerci
 
 \noindent
 Material from "Abstract Algebra, Theory and Applications" by Thomas Judson may be found throughout much of the  book. 
-A current version of "Abstract Algebra, Theory and Applications" may be found at \url{abstract.ups.edu}.\\[0.5cm]
-Chapters 4 and 5 are largely based on "Proofs and Concepts"(version 0.78, May 2009) by Dave Witte Morris and Joy Morris, which may be found online at:
+A current version of "Abstract Algebra, Theory and Applications" may be found at: 
+\begin{center}
+ \url{abstract.ups.edu}.
+\end{center}
+The Set Theory and Functions chapters are largely based on material from  "Proofs and Concepts"(version 0.78, May 2009) by Dave Witte Morris and Joy Morris, which may be found online at:
 \begin{center}
 \url{https://archive.org/details/flooved3499}, or \\
 \url{http://people.uleth.ca/~dave.morris/books/proofs+concepts.html}\\[0.5cm]
+The material on induction was modified from \LaTeX code originally obtained from A. J. Hildebrand, whose course web page is at:\\
+\url{http://www.math.uiuc.edu/~hildebr/}\\[0.5cm]
 \end{center}
 \noindent
-Justin and  Chris would like to express their sincerest gratitude to Tom, Dave and Joy for generously sharing their original material. They were not involved in the preparation of this manuscript, and are not responsible for any errors or other shortcomings.\\[0.6cm]
-Please send comments and corrections to: thron@tamuct.edu. You may also request the LaTeX source code from this same email address. \\[0.5cm]
+Justin and  Chris would like to express their deepest gratitude to Tom, Dave and Joy, and  A. J.  for generously sharing their original material. They were not involved in the preparation of this manuscript, and are not responsible for any errors or other shortcomings.\\[0.6cm]
+Please send comments and corrections to: thron@tamuct.edu. You may also request the \LaTeX source code from this same email address. \\[0.5cm]
 YouTube videos are available: search on YouTube for the title of this book.\\
 
 \vfill
@@ -244,22 +288,40 @@ ISBN:  978-1-312-85635-6
 \include{whatyouknow}
 \include{complex}
 \include{modular_arithmetic}
-\include{integers_mod_n}
+\include{crypt}
 \include{set_chapter}
 \include{functions}
-\include{crypt}
 \include{equivalencerelations}
 \include{symmetries}
 \include{permute}
 \include{groups}
 \include{cosets}
+\include{actions}
 \include{algcodes} 
 \include{isomorph}
 \include{homomorph}
-\include{actions}
 \include{summation_notation}
 \include{polyrings}
-\include{poly_codes}
+%\include{poly_codes}
+\include{induction_appendix}
+\chap{Hints}{Hints}
+\input{complex_hints}
+\input{modular_arithmetic_hints}
+\input{crypt_hints}
+\input{set_chapter_hints}
+\input{functions_hints}
+\input{equivalencerelations_hints}
+\input{symmetries_hints}
+\input{permute_hints}
+\input{groups_hints}
+\input{algcodes_hints}
+\input{cosets_hints}
+\input{actions_hints}
+\input{isomorph_hints}
+\input{homomorph_hints}
+\input{summation_notation_hints}
+\input{polyrings_hints}
+
 \clearpage
 \addcontentsline{toc}{chapter}{Index}
 \printindex

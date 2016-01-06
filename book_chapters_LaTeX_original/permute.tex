@@ -35,9 +35,19 @@
 
 \chap{Permutations}{permute}
 
-\section{Introduction to Permutations}
+\begin{quote}
+"For the real environment is altogether too big, too complex, and too fleeting for direct acquaintance. We are not equipped to deal with so much subtlety, so much variety, so many permutations and combinations. And although we have to act in that environment, we have to reconstruct it on a simpler model before we can manage it." 
+\medskip
 
-In the Symmetries chapter we dealt with functions of a particular type:  bijections whose domain and codomain were the same.  These type of functions are given a general name -- permutations.
+\noindent (Source: Walter Lippmann, Pulitzer prize-winning journalist)
+\end{quote}
+
+We mentioned at the beginning of  the ``Functions'' chapter that we would be interested in functions on finite sets. In this chapter we will investigate the gory details of one-to-one onto functions whose domain and range are the same finite set. Until now we have looked at functions as  mappings that take set elements to other set elements. In this chapter, we will begin to consider functions as elements in their own right. This new point of view will culminate in the realization that \emph{all} finite groups are in some sense groups of functions (if you don't understand this yet, don't worry--you will by the end of the chapter).
+\footnote{Thanks to Tom Judson for material used in this chapter.}
+
+\section{Introduction to permutations}
+
+In Chapter~\ref{symmetries} we saw that all symmetries are  bijections whose domain and codomain were the same.  Thus symmetries are special cases of \emph{permutations}, which are defined mathematically as follows.
 
 \begin{defn}
 A bijection whose domain and codomain are equal is called a \bfii{ permutation}\index{Permutation!definition of}\index{Bijection!as a permutation}. The set of all bijections from a finite set $X$ to itself is called the \bfii{ set of permutations on $X$} and is denoted as $S_X$.
@@ -124,7 +134,7 @@ What additional elements in $S_X$ are not symmetries of the rectangle?
 In fact, it's obvious to see that \emph{any} symmetry is a permutation, since a symmetry is by definition a bijection from a finite set of points to itself.  But as we've seen in Exercises~\ref{exercise:permute:isos_tri_sym}, ~\ref{exercise:permute:tri_sym}, ~\ref{exercise:permute:S_4} (as well as Exercise~\ref{exercise:symmetries:bijectnotsym} from the Symmetries chapter), \emph{not} all permutations (bijections) correspond to a symmetry.  Given a set $X$ then that represents a figure, the set of symmetries from $X \to X$ is a subset of $S_X$.
 
 
-\section{Permutation Groups and Other Generalizations}
+\section{Permutation groups and other generalizations}
 
 %Suppose in the exercise above that $X = \{1, 2, 3, 4\}$ instead of $\{A, B, C, D\}$.  Could we still represent a four-sided figure with $X$.  Of course; we can label the vertices of the figure whatever we want.  More importantly, 
 
@@ -150,7 +160,7 @@ Finally, composition of functions is associative, which makes the group operatio
 Hence $S_X$ is a group under function composition.
 \end{proof}
 
-\subsection*{The Symmetric Group of $n$ Letters}
+\subsection{The symmetric group of $n$ letters}
 
 We can label the vertices of a triangle as $A, B, C$ or $1, 2, 3$ or $\var{apple, pear, cherry}$ or whatever, without changing the triangle. No matter how we label the triangle, the symmetries of the triangle will be the "same" in some sense (although we write them down differently). 
 
@@ -172,7 +182,7 @@ Is $\mu = \tau$?  Technically no,  because they their domain/codomains are diffe
 
 Suppose we start with the tableau for $\mu$. We cross out every `A' in the tableau and replace with `1'. Similarly, we replace $B, C, D$ with $2, 3,4$ respectively. Then what we end up with is exactly $\tau$.  In other words, performing a ``face-lift''  on $\mu$ gives $\tau$.  Therefore $\mu$ and $\tau$ are equivalent, as are $\sigma$ and $\rho$.  
 
-\begin{exercise}{}
+\begin{exercise}{7}
 \begin{enumerate}[(a)]
 \item
 Write $\mu \compose \sigma$ in tableau form.
@@ -208,7 +218,7 @@ Now let $X = \{1,2,\ldots, n\}$, and  consider any set $Y$ with $|Y| = n$. We co
 Let $X=\{ 1, 2, \ldots, n\}$. Instead of writing $S_X$, we write $S_n$\label{symmetricgroup}.  $S_n$ is called the \bfii{ symmetric group\index{Group!symmetric} on $n$ letters}.
 \end{notation}
 
-\subsection*{Isomorphic Groups}
+\subsection{Isomorphic groups}
 
 At the end of the Symmetries chapter, we compared the groups $\mathbb{Z}_n$, the $n$ rotations of a regular n-gon, and the $n^{th}$ roots of unity.  We saw that, as long as you made a suitable pairing (bijection) between the elements of any two of these sets, then their Cayley tables were exactly the same. 
 
@@ -229,7 +239,7 @@ Give a bijection from $W$ to $Z$, and the corresponding bijection from $S_W$ to 
 \end{exercise}
 
 
-\begin{exercise}{}
+\begin{exercise}{11}
 Let $X =\{A, B, C\}$ and $Y = \{M, N, P\}$.
 \begin{enumerate}[(a)]
 \item
@@ -244,7 +254,7 @@ Give a bijection from $X$ to $Y$, and the corresponding bijection from $S_X$ to 
 \end{enumerate}
 \end{exercise}
 
-\subsection*{Subgroups and Permutation Groups}
+\subsection{Subgroups and permutation groups}
 
 Let's summarize this section so far.  The permutations on a set $X$ of $n$ elements is a group under function composition (denoted by  $S_n$).  Further, for any figure with $n$ sides, the symmetries of that figure is a subset of $S_n$ containing at least the identity permutation, and that subset is itself a group under function composition.  This example motivates the following definition.
 
@@ -349,8 +359,8 @@ As the example shows, a permutation group need not comprise all symmetries of a 
 %In this section we started to turn a page in our study of Abstract Algebra.  In the chapters before this we did much of what we do in "regular" algebra:  we took numbers or situations and represented them and their parts with variables.  We then took those variables and organized them into sets, functions, groups, Cayley tables, etc.; into generalized structures.  Some of this was not what you had seen in Algebra before, but it wasn't a stretch to come up with or hard to understand based on the algebra you know.  It was simply representing the world with variables.   But in this chapter we started the real stretch that turns regular Algebra into Abstract Algebra.  We took those variable and structures and started to generalize them; we started to generalize our structures, our groups, into even more general representations.  In the process we also generalized concepts:  isometric groups are like equivalent elements; subgroups are like subsets.  It is this process of generalizing generalizations that is the crux of studying and thinking Abstract Algebra.  Because if we can generalize a structure or concept to its highest point, and then discover some property about that generalization, then all examples that fit that generalization have to have that same property.  Therefore instead of deeply studying multitudes of different phenomena and contexts in our world and seeing how their parts interact, if we can show that those phenomena and parts fit a generalization, then we know immediately that all properties of that group will show up in that phenomena and the interaction of its parts.  We can deductively know things about the order and operation of this universe without having to inductively test and rigorously prove a theory.  Abstract Algebra is logic and Algebra on steroids, and in the next chapter we will really start the work of Abstract Algebra:  generalize something to its highest point, figure out its properties, and apply those properties to examples that fit the generalization. 
 %\end{rem}
 
-\section{Cycle Notation}
-\subsection*{Tableaus and cycles}
+\section{Cycle notation}
+\subsection{Tableaus and cycles}
 In the Symmetries chapter, we introduced tableau notation to deal with bijections because of its brevity and ease of use for function composition.  But as you may have noticed in the last section, even tableaus can become cumbersome to work with.  To work effectively with permutation groups, we need a more streamlined method of writing down and manipulating permutations.  This method is known as cycle notation.
 
 % Cycle notation is made up of cycles, which are one-rowed parentheses (as opposed to two rowed parentheses for tableaus) that keep track of a trail of inputs and outputs caused by a permutation.  For instance, 
@@ -482,7 +492,7 @@ $\sigma = (1342)$
 \noindent
 A final question that may come to mind is,  Do all permutation correspond to some cycle?  Certainly, as we've seen, all cycles correspond to some permutation in $S_n$.  However, can all permutations in $S_n$ be represented as a cycle?  We will take the next several parts of this section to explore this question. 
 
-\subsection*{Composition (a.k.a. product) of cycles}
+\subsection{Composition (a.k.a. product) of cycles}
 
 Since cycles represent permutations, they can be composed together.  If we change the cycles to tableaus, we know how to compose them.  Now let's figure out how to compose them using the cycles themselves.\index{Composition!of cycles}\index{Cycle!composition}
 
@@ -584,7 +594,7 @@ $\rho \sigma$
 \end{multicols}
 \end{exercise}
 
-\subsection*{Product of Disjoint Cycles}
+\subsection{Product of disjoint cycles}
 
 %Though in general the product of cycles is not commutative, their are particular types of cycles that are commutative under function composition.
 
@@ -723,7 +733,7 @@ Write the following permutations in cycle notation.
 \end{exercise}
 
 \begin{exercise}{cycle_to_tab}
-Write each of the following permutations of $S_9$ in tableau form.
+Write each of the following permutations in $S_9$ in tableau form.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item
@@ -749,7 +759,7 @@ Write the symmetries of a square in cycle notation.
 There is one more issue we need to explore with the product of disjoint cycles, which we will do in the following exercise.
 
 \begin{exercise}{dis_cycles_comm}
-Write each of the following permutations on the set \{1,2,3,4,5,6\} in tableau form.
+In parts (a)--(d) below, write both permutations on the set \{1,2,3,4,5,6\} in tableau form.
 \begin{enumerate}[(a)]
 \begin{multicols}{2}
  \item
@@ -775,24 +785,24 @@ Disjoint cycles commute: that is, given two disjoint cycles $\sigma = (a_1, a_2,
 
 \begin{proof} We present this proof as a fill-in-the-blanks exercise:
 
-\begin{exercise}{disjoint_commutative} Fill in the blanks to complete the proof:
+\begin{exercise}{disjoint_commutative} Fill in the $\underline{<\#>}$  to complete the proof:
 
 Recall that permutations are defined as bijections on a set $X$. In order to show that the two permutations 
-$\sigma \tau$ and $\tau \sigma$ are equal, it's enough to show that they are the same function. In other words, we just need to show that $\sigma \tau (x)$ = $\_\_\_\_\_\_\_\_\_\_\_$ for all $x \in X$.
+$\sigma \tau$ and $\tau \sigma$ are equal, it's enough to show that they are the same function. In other words, we just need to show that $\sigma \tau (x)$ =\underline{ $~<1>~$} for all $x \in X$.
 
-We'll define $A = \{a_1, a_2, \ldots, a_j\}$ and $B = \{b_1, b_2, \ldots, b_k\}$. By hypothesis $A$ and $B$ are disjoint, so $A \_\_\_\_ B = \_\_\_\_\_\_$. Given an arbitrary $x \in X$, there are three possibilities: (i) $x \in A$ and $x \notin B$; (ii) $x \in \_\_\_\_$ and $x \notin \_\_\_\_$; (iii) $x \notin \_\_\_\_\_$ and $x \notin \_\_\_\_\_$. 
+We'll define $A = \{a_1, a_2, \ldots, a_j\}$ and $B = \{b_1, b_2, \ldots, b_k\}$. By hypothesis $A$ and $B$ are disjoint, so $A \underline{ ~<2>~} B = \underline{ ~<3>~}$. Given an arbitrary $x \in X$, there are three possibilities: (i) $x \in A$ and $x \notin B$; (ii) $x \in \underline{ ~<4>~}$ and $x \notin \underline{ ~<6>~}$; (iii) $x \notin \underline{ ~<7>~}$ and $x \notin \underline{ ~<8>~}$. 
 
 \begin{enumerate}[(i)]
 \item
 In this case, since $x \notin B$ it follows that $\tau(x) = x$. We then have $\sigma \tau (x) = \sigma(\tau(x)) = \sigma(x)$. Furthermore, since $x \in A$ it follows that $\sigma(x) \in A$, so $\sigma(x) \notin B$. We then have $\tau \sigma (x) = \tau(\sigma(x)) = \sigma(x)$. It follows that $\sigma \tau (x) = \tau \sigma (x)$.
 \item
-In this case, since $x \notin \_\_\_$ it follows that $\_\_\_\_(x) = x$. We then have $\tau \sigma (x) = \_\_\_\_\_\_ = \_\_\_\_\_(x)$. Furthermore, since $x \in \_\_\_\_$ it follows that $\_\_\_\_\_(x) \in \_\_\_\_$, so $\_\_\_\_\_\_\_(x) \notin \_\_\_\_$. We then have $\sigma \tau (x) = \_\_\_\_\_\_\_\_\_ = \_\_\_\_\_(x)$. It follows that $\sigma \tau (x) = \tau \sigma (x)$.
+In this case, since $x \notin \underline{ ~<9>~}$ it follows that $\underline{ ~<10>~}(x) = x$. We then have $\tau \sigma (x) = \underline{ ~<11>~} = \underline{ ~<12>~}(x)$. Furthermore, since $x \in \underline{ ~<13>~}$ it follows that $\underline{ ~<14>~}(x) \in \underline{ ~<15>~}$, so $\underline{ ~<16>~}(x) \notin \underline{ ~<17>~}$. We then have $\sigma \tau (x) = \underline{ ~<18>~} = \underline{ ~<19>~}(x)$. It follows that $\sigma \tau (x) = \tau \sigma (x)$.
 \item
-In this case, since $x \notin A$ it follows that $\_\_\_\_(x) = x$. Similarly since $x \notin \_\_\_$ it follows that $\_\_\_\_(x) = x$.We then have $\tau \sigma (x) = \_\_\_\_$ and $\sigma \tau (x) = \_\_\_\_$. It follows that $\sigma \tau (x) = \tau \sigma (x)$.
+In this case, since $x \notin A$ it follows that $\underline{ ~<20>~}(x) = x$. Similarly since $x \notin \underline{ ~<21>~}$ it follows that $\underline{ ~<22>~}(x) = x$.We then have $\tau \sigma (x) = \underline{ ~<23>~}$ and $\sigma \tau (x) = \underline{ ~<24>~}$. It follows that $\sigma \tau (x) = \tau \sigma (x)$.
 \end{enumerate}
 
 \noindent
-In all three cases we have $\sigma \tau (x)$ = $\_\_\_\_\_\_\_\_\_\_\_$, so therefore $\sigma \tau = \tau \sigma$.
+In all three cases we have $\sigma \tau (x)$ = $\underline{ ~<25>~}$, so therefore $\sigma \tau = \tau \sigma$.
 \end{exercise}
 \end{proof}
 
@@ -830,7 +840,7 @@ $(14359)(28)(67)$
 \end{exercise}
 
 
-\subsection*{Products of Permutations using Cycle Notation}
+\subsection{Products of permutations using cycle notation}
 Finally, now that we know how to deal with permutation compositions that simplify to disjoint cycles, we can now compose any set of permutations we want.  Let us begin with a relatively small example.
 
 \begin{example}{cycle_comp_3}
@@ -985,7 +995,7 @@ $(1254)^2 (123)(45)$
 % CPT it would be good to provide a proof.
 %We state these facts about disjoint cycles in the following proposition, without general proof. 
 
-\subsection*{Cycle Structure of Permutations}
+\subsection{Cycle structure of permutations}
 
 Over the last several subsections, we've seen permutations represented as no cycles (${\var id}$), one cycle, or the product of any number of disjoint cycles.  This worked because both a single cycle and a product of disjoint cycles can't be reduced to a simpler form in cycle notation.  Are there any other possibilities?   Are there permutations that can't be represented as either a single cycle or a product of disjoint cycles?  The answer to this compelling question is given in the following proposition. 
 
@@ -1106,8 +1116,8 @@ $S_8$
 \end{multicols}
 \end{exercise}
 
-\section{Algebraic Properties of Cycles}
-\subsection*{Powers of Cycles: Definition of Order}
+\section{Algebraic properties of cycles}
+\subsection{Powers of cycles: definition of order}
 
 Let's revisit the product of cycles.  We will look at what happens when you compose a cycle with itself multiple times.\index{Cycle!powers of}
 
@@ -1189,12 +1199,12 @@ What is $\sigma(2)$? What is $\sigma^2(2)$? What is $\sigma^3(2)$? What is $\sig
 \item
 What is $\sigma(5)$? What is $\sigma^2(5)$? What is $\sigma^3(5)$? What is $\sigma^4(5)$ What is $\sigma^{3,482,991}(5)?$  
 \item
-What general statement can you make about $\sigma^k(x)$ for $x \in A$?
+Fill in the blank: If $x \in A$ then $\sigma^k(x) = \sigma^{\bmod(k,\underline{~~}})$.
 \item
 What is $\sigma(1)$? What is $\sigma(3)$? 
 \item
 What general statement can you make about $\sigma^k(x)$ for $x \in X \backslash A$?
-\item ** Let $K = \{k: \sigma^k(x) = x ~~\forall x \in X\}$. Is $2 \in K$?   Is $3 \in K$? Is $4 \in K$? Given any integer $k$, what's a simple way of telling whether or not $k \in K$?
+\item ** Let $K = \{k: \sigma^k(x) = x ~~\forall x \in X\}$. Is $2 \in K$?   Is $3 \in K$? Is $4 \in K$? Given any positive integer $k$, what's a simple way of telling whether or not $k \in K$?
 \end{enumerate}
 \end{exercise}
 
@@ -1236,33 +1246,33 @@ If $\sigma$ is a cycle of length $k$, then $\sigma^j \neq {\var id} $~~$\forall 
 \end{enumerate}
 
 \noindent
-The proof for (A) is structured as a fill-in-the-blanks exercise:
+The proof for (A) follows the same lines as our investigations in Exercise~\ref{exercise:permute:power of n-cycle1}. In that exercise, we considered separately the elements of $X$ that are moved by the cycle, and those elements that are not moved by the cycle. 
 
 \begin{exercise}{length_equals_order} Prove part (A) by filling in the blanks.
 
 \noindent
-Let $\sigma \in S_X$ be an arbitrary cycle of length $k$.  Then $\sigma$ can be represented as: $\sigma = (a_1, a_2, \ldots a_k)$.  In order to show that $\sigma^k = {\var id} $, it is sufficient to show that 
-$\sigma^k(x) = \_\_\_\_\_\_\_  \forall x \in X$. 
-Now for any $x \in X$, there are two possibilities:  
+Let $\sigma \in S_X$ be an arbitrary cycle of length $k$.  Then $\sigma$ can be written as $ (a_1, a_2, \ldots a_k)$, for some set of elements $a_1, a_2, \ldots a_k$ in $X$.  In order to show that $\sigma^k = {\var id} $, it is sufficient to show that 
+$\sigma^k(x) = \underline{~<1>~}  \forall x \in X$. 
+Let $A$ be the set  $\{a_1, a_2, \ldots a_k\}$.  Now for any $x \in X$, there are two possibilities:  
 \begin{enumerate}[(i)]
 \item
-$x \in  X \backslash \{a_1, a_2, \ldots a_k \}$;
+$x \in  X \backslash A$;
 \item
-$x \in \{a_1, a_2, \ldots a_k \}$. 
+$x \in A$. 
 \end{enumerate}
 
 \noindent
-We'll deal with these two cases separately.
+We'll deal with these two cases separately (as we did  in Exercise~\ref{exercise:permute:power of n-cycle1}).
 
 \begin{enumerate}[(i)]
 \item
-In this case, $\sigma(x) = \_\_\_\_$  It follows that $\sigma^2(x) = \sigma( \sigma(x)) = \sigma( \_\_\_\_\_) = \_\_\_\_$. We can use the same argument to show that $\sigma^3(x) = \_\_\_\_$, and that $\sigma^k(x) = \_\_\_\_$ for any natural number \_\_\_\_\_.
+In this case, $\sigma(x) = \underline{~<2>~} $  It follows that $\sigma^2(x) = \sigma( \sigma(x)) = \sigma( \underline{~<3>~}) = \underline{~<4>~}$. We can use the same argument to show that $\sigma^3(x) = \underline{~<5>~}$, and that $\sigma^k(x) = \underline{~<6>~}$ for any natural number $\underline{~<7>~}$.
 \item
-In this case, then $x = a_j$ for some integer $j, 1 \le j \le \_\_\_\_$.  It follows from the definition of cycle that $\sigma(x) = \sigma(a_j) = a_{j+1 \pmod{k}}$. Furthermore, $\sigma^2(x) = \sigma(a_{j+1}) = \_\_\_\_\_\_$. Similarly it follows that $\sigma^{k}(x) = a_{j+ \_\_\_\_\_ \pmod{k}} = a_{\_\_\_\_} = x$.
+In this case, then $x = a_j$ for some integer $j, 1 \le j \le \underline{~<8>~}$.  It follows from the definition of cycle that $\sigma(x) = \sigma(a_j) = \bmod(a_{j+1},k)$. Furthermore, $\sigma^2(x) = \sigma(a_{j+1}) = \underline{~<9>~}$. Similarly it follows that $\sigma^{k}(x) = a_{\bmod(j+ \underline{~<10>~},k)} = a_{\underline{~<11>~}} = x$.
 \end{enumerate}
 
 \noindent
-Cases (i) and (ii) establish that  $\forall x \in X, \_\_\_\_\_\_\_\_ = x$.  It follows that $\sigma^k = \_\_\_\_\_$.
+Cases (i) and (ii) establish that  $\forall x \in X, \underline{~<12>~} = x$.  It follows that $\sigma^k = \underline{~<13>~}$.
 
 \end{exercise}
 
@@ -1301,7 +1311,7 @@ $(3 4 8) (4 5 6)^5 (1 3 2 5)^{10}$
 \end{multicols}
 \end{exercise}
 
-\subsection*{Powers and Orders of Permutations in General}
+\subsection{Powers and orders of permutations in general}
 
 Now that we know the order of cycles, let's see if we can tackle other permutations as well:
 
@@ -1315,14 +1325,15 @@ The \bfii{ order} of a permutation $\tau$ is the smallest positive integer $k$ s
 {\bf Proposition}: Let $\tau$ be a permutation, and let $k = |\tau|$. Then $\tau^{\ell} = {\var id}$ if and only if $\ell \equiv 0 \bmod{k}$.
 \medskip
 
-\begin{exercise}{}
-Fill in the $\#$ with the appropriate variables in the following proof of the proposition. (\emph{Hint:} the first $\#$ should be replaced by $\ell$).
+\begin{exercise}{64}
+Fill in the $\underline{~<\#>~}$ with the appropriate variables in the following proof of the proposition.
+\hyperref[sec:permute:hints]{(*Hint*)}
 \medskip
 
 \noindent
-{\bf Proof:} For any integer $\ell$ we may write $\ell = ka + b$, where $b \in \mathbb{Z}_{\#} $. It follows that
-\[ \tau^{\ell} = \tau^{\# \cdot k + \#} = (\tau^{\# \cdot k})\tau^{\#} =   (\tau^k)^{\#}\tau^{\#} = ({\var id})^{\#}\tau^{\#} = \tau^{\#} . \]
-Therefore $\tau^{\ell} = {\var id}$ if and only if $\tau^{\#} = {\var id}$. However, we know that $\# < k$, and we also know that $\#$ is the smallest positive integer such that  $\tau^{\#} = {\var id}$. Hence it must be the case that $b \equiv \# \bmod{k}$, which is the same thing as saying that  $\ell \equiv \# \bmod{\#}$.
+{\bf Proof:} For any integer $\ell$ we may write $\ell = ak + b$, where $b \in \mathbb{Z}_{\underline{~<1>~}} $. It follows that
+\[ \tau^{\ell} = \tau^{<\underline{2}> \cdot k + <\underline{3}>} = (\tau^{<\underline{4}> \cdot k})\tau^{<\underline{5}>} =   (\tau^k)^{<\underline{6}>}\tau^{<\underline{7}>} = ({\var id})^{<\underline{8}>}\tau^{<\underline{9}>} = \tau^{<\underline{10}>} . \]
+Therefore $\tau^{\ell} = {\var id}$ if and only if $\tau^{<\underline{11}>} = {\var id}$. However, we know that $\underline{~<12>~} < k$, and we also know that $\underline{~<13>~}$ is the smallest positive integer such that  $\tau^{<\underline{14}>} = {\var id}$. Hence it must be the case that $b \equiv \underline{~<15>~} \bmod{k}$, which is the same thing as saying that  $\ell \equiv \underline{~<16>~} \bmod{\underline{~<17>~}}$.
 \end{exercise}
 
 
@@ -1401,7 +1412,7 @@ $\tau^7$
 \end{exercise}
 
 \noindent
-Notice what happened to the disjoint cycles in the previous exercise.  For instance $|(1 2 3)| = 3$, and in parts (a)-(e) of the exercise you had the repeating pattern $\{(1 3 2), {\var id}, (1 2 3), (1 3 2), {\var id}, \ldots\}$.  Similarly, the 2-cycle $(4 5)$ yielded the repeating pattern  $\{{\var id}, (4 5), id, (4 5) \ldots \}$.  
+Notice what happened to the disjoint cycles in the previous exercise.  For instance $|(1 2 3)| = 3$, and in parts (a)-(e) of the exercise you had the repeating pattern $\{(1 3 2), {\var id}, (1 2 3), (1 3 2), {\var id}, \ldots\}$.  Similarly, the 2-cycle $(4 5)$ yielded the repeating pattern  $\{{\var id}, (4 5), {\var id}, (4 5) \ldots \}$.  
 
 In $\tau^3, \tau^6, \tau^9, \ldots$  the $(1 2 3)^k$ part of $\tau^k$ becomes ${\var id} $,while in  $\tau^2, \tau^4, \tau^6, \ldots$ the $(4 5)^k$ part  becomes ${\var id} $.  In order for $\tau^k = {\var id} $, we must have both $(1 2 3)^k = {\var id} $ and $(4 5)^k = {\var id} $, which first happens when $k = 6$. It is no accident that $|(1 2 3)|$ and $|(4 5)|$ both divide 6. In fact,  we can prove  the following proposition.
 
@@ -1503,7 +1514,7 @@ $| (1 2  3 4 5 6 7 8 9)^{300} |$
 \end{multicols}
 \end{exercise}
 
-\subsection*{Transpositions and Inverses}
+\subsection{Transpositions and inverses}
 
 %%\#\#\#\#\#\#\#\# Inverses should go earlier, after composition of cycles. There is no need to introduce inverses via transpositions, it is easiest to find the inverse of a cycle by example.
 
@@ -1532,7 +1543,7 @@ $(1 2)(1 3)(1 4)(1 5) (1 6)(1 7)(1 8)$
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{example_transpositions}
+\begin{exercise}{example_transpositions2}
 In light of what you discovered in the previous exercise, write each cycle as a product of transpositions:
 \begin{enumerate}[(a)]
 \begin{multicols}{3}
@@ -1705,17 +1716,23 @@ $( 7 4 2 )^{-7} ( 2 8 6)^{-13}$
 %\]
 
 \section{``Switchyard" and generators of the permutation group}
-The following example could be considered as ``just a puzzle'', but we will use it to obtain some results that are quite fundamental in the theory of permutations.
+Switchyards are used by railroads to rearrange the order of train cars in a train (see Figure~\ref{fig:grandview}. In this section we will study a ``switchyard'' of sorts. The design of our mathematical ``switchyard'' is not realistic, but the example will help us understand some important fundamental properties of permutations.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=4in]{images/GrandviewYard.jpg}
+\caption{Grandview Yard (Pennsylvania Railorad) in Grandview Heights, OH around 1900 (source: \url{http://www.ghmchs.org/thisweek/photo-listing10.htm}. }\label{fig:grandview}
+\end{center}
+\end{figure}
 
 Figure~\ref{fig:switchyard} shows how the switchyard works. The figure shows the particular case of a switchyard with 12 positions. A railroad train with 12 cars pulls in from the right, and circles around until it fills the circular track. 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.4]{images/switchyard.png}
-\caption{Switchyard diagram}\label{fig:switchyard}
+\includegraphics[width=4.5in]{images/switchyard.png}
+\caption{``Switchyard'' diagram}\label{fig:switchyard}
 \end{center}
 \end{figure}
 
-The positions (we'll call them \emph{slots} for short)  are numbered 1 through 12 as are the railroad cars. At the \emph{starting position}, each railroad car is at the corresponding numbered slots: car 1 is in slot 1, $\ldots$ car 12 is in slot 12.
+The positions (we'll call them \emph{slots} for short)  are numbered 1 through 12 as are the railroad cars. At the \emph{starting position}, each railroad car is at the corresponding numbered slot: car 1 is in slot 1, $\ldots$ car 12 is in slot 12.
 
 From the starting position, the train can move in one of two ways:
 \begin{itemize}
@@ -1731,9 +1748,42 @@ These two types of motions can be represented as permutations. In tableau notati
  \end{array} \right)\] 
 In cycle notation,  the same permutation would be $(1, 2, 3, 4, \ldots, 12)$, where we have put commas between cycle entries to distinguish the number 12 from consecutive 1 and 2.  We will denote this permutation by $r$. On the other hand, if cars 1 and 2 are switched, then this corresponds to the permutation $(1 2)$. We will denote this permutation by $t$.  In summary:
 \[ r = (1,2,\ldots,12);\qquad  t = (1, 2).\]
-What happens when we compose the permutations $r$ and $t$? Let's look at some simple examples. Suppose we perform the permutation $r$ twice, so that we obtain $r \compose r$ or $r^2$. It's not hard to see that this corresponds to shifting the train counterclockwise by two positions. If we think about the process of composition, what's going on is the first $r$ moves car \#1 (which occupies slot \#1) to position \#2; while the second $r$ moves whatever's in slot 2 (which happens to be car \#1) to slot 3. The resulting composition can be interpreted as showing where each of the cars end up after both moves.  The same thing will be true  if we compose any number of permutations. 
+Let's look at some other motions of the train. Suppose for example we shift the train counterclockwise by two positions. This corresponds to performing the permutation $r$ twice in succession, which is $r \compose r$ or $r^2$.   If we think about the process of composition, what's going on is the first $r$ moves car \#1 (which occupies slot \#1) to position \#2; while the second $r$ moves whatever's in slot 2 (which happens to be car \#1) to slot 3. The resulting composition can be interpreted as showing where each of the cars end up after both moves.  The same thing will be true  if we compose any number of permutations. 
 
-It follows that all rearrangements of the cars that can be accomplished by the switchyard may be obtained as compositions of the permutations $r$ and $t$. So what rearrangements are possible? I'm glad you asked that question!  See if you can figure it out. Here are some guiding questions to help you.
+It follows that all rearrangements of the cars that can be accomplished by the switchyard may be obtained as compositions of the permutations $r$ and $t$. So what rearrangements are possible? I'm glad you asked that question! The following exercises are designed to help you figure this out. But first, let's consider at one type of rearrangement that's particularly important. Suppose we want to switch two consecutive cars that are not 1 and 2: say for example we want to switch cars 5 and 6, and leave the rest of the cars unchanged.  Can we do this? 
+
+At this point, in order to follow along the reader may find it helpful to make his/her own model of a switchyard.\footnote{The models in this section (and photos) were made by Holly Webb.} Figure~\ref{fig:switchyardHome} shows a simple model made out of a jar lid with numbers stuck on with putty.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=2.5in]{images/switchyardHomeposition.jpg}
+\caption{``Switchyard'' model in home position}\label{fig:switchyardHome}
+\end{center}
+\end{figure} 
+We'll illustrate the motions necessary to switch cars  5 and 6  using the model.  First, we rotate cars 5 and 6 to slots 1 and 2 by rotating 4 slots clockwise. This permutation is shown in Figure~\ref{fig:switchyardCl4}, and is written mathematically as $r^{-4}$.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=2.5in]{images/switchyardCl4.jpg}
+\caption{First stage in switching cars 5 and 6: clockwise rotation ($r^{-4}$.}\label{fig:switchyardCl4}
+\end{center}
+\end{figure} 
+
+Next, we exchange the two cars (which we can do since they're in the first two positions). Figure~\ref{fig:switchyard_t} shows the switch, which is denoted by $t$.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=2.5in]{images/switchyard_t.jpg}
+\caption{Second stage in switching cars 5 and 6: switch ($t$).}\label{fig:switchyard_t}
+\end{center}
+\end{figure} 
+
+Finally, all we need to do is rotate counterclockwise 4 slots ($r^4$), as shown in Figure~\ref{fig:switchyardCCL4}.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=2.5in]{images/switchyardCCL4.jpg}
+\caption{Third stage in switching cars 5 and 6: counterclockwise rotation ($r^{4}$).}\label{fig:switchyardCCL4}
+\end{center}
+\end{figure} 
+
+Altogether, these three steps give the composition $r^4 \compose t \compose r^{-4}$ (remember that permutations are applied right to left, just like functions).  Note also that in the case of a 12-slot switchyard, $r^{-4}$ could also be written $r^8$, since a clockwise rotation of 4 slots is the same as a counterclockwise rotation of 8 slots.  (If the switchyard has $n$ positions, the general rule is that $r^{-m} = r^{n-m}$, as we saw in the Symmetries chapter.)
 
 \begin{exercise}{switchyard1}
 First we'll look at a switchyard with 4 positions.  As above, $r$ = counterclockwise rotation by 1 position = $(1, 2, 3, 4)$; while $t$  exchanges two cars: $t = (1,2)$. 
@@ -1743,7 +1793,8 @@ Write $(2,3)$, $(3,4)$, and $(4,1)$ as products of powers of $r$ and $t$. (Toget
 \item
 Write $(1,2,3)$, $(2,3,4)$, $(3,4,1)$, $(4,1,2)$ as products of powers of $r$ and $t$. (These are all the counterclockwise consecutive  3-cycles.)
 \item
-Write $(1,3,2)$, $(2,4,3)$, $(3,1,4)$, $(4,2,1)$ as products of powers of $r$ and $t$. (These are all the clockwise consecutive 3-cycles.)  (\emph{Hint}: take advantage of the previous part.)
+Write $(1,3,2)$, $(2,4,3)$, $(3,1,4)$, $(4,2,1)$ as products of powers of $r$ and $t$. (These are all the clockwise consecutive 3-cycles.)
+\hyperref[sec:permute:hints]{(*Hint*)}
 \item
 Write $(1,3)$ as products of powers of $r$ and $t$.
 \item
@@ -1783,8 +1834,8 @@ Prove that any permutation in $S_n$ can be obtained as a product of powers of $r
 What we have shown in the previous exercise is that the two permutations $r$ and $t$ \emph{generate} the group $S_n$. In other words, all of the information contained in the huge and complicated group $S_n$ is characterized in just two permutations! The study of group generators is an important part of group theory, but unfortunately it is beyond the level of this course.  
 
 
-\section{Other Groups of Permutations}
-\subsection*{Even and Odd Permutations}
+\section{Other groups of permutations}
+\subsection{Even and odd permutations}
 
 We saw in the previous section that any permutation can be represented as a product of transpositions. However, this representation is not unique. Consider for instance:
 \begin{itemize}
@@ -2088,7 +2139,7 @@ Suppose $P$ is an $n$-cycle.  How can you tell  whether $P$ is an even or odd pe
 
 In the following exercises you will explore a bit further the parity properties of permutations. 
 
-\begin{exercise}{}
+\begin{exercise}{Ex95}\label{ex:evenoddprod} %%% Note for some reason the conventional label doesn't work
 \begin{enumerate}[(a)]
 \item
 Prove that the product of two even permutations is even.
@@ -2195,7 +2246,8 @@ What is the parity of  the product of an even permutation and an odd permutation
 % %\end{exercise}
 
 \begin{exercise}{Sn_even_odd}
-For each of the following sets, describe which permutations are even and which are odd, according to their cycle structure. \hint{(Use the cycle structures you found in Exercise~\ref{exercise:permute:cycle_types}.)}
+For each of the following sets, describe which permutations are even and which are odd, according to their cycle structure.
+\hyperref[sec:permute:hints]{(*Hint*)}
 \begin{multicols}{3}
 \begin{enumerate}[(a)]
 \item
@@ -2208,12 +2260,13 @@ $S_8$
 \end{multicols}
 \end{exercise}
 
-\subsection*{The Alternating Group}
+\subsection{The alternating group}\label{sec:AlternatingGroup}
 
 We have shown that all permutations are either even or odd. In other words, for any $n \in \mathbb{Z}$ we have that $S_n$ is the union of two disjoint sets: $S_n = A_n \cup B_n$, where $A_n$ and $B_n$ are the even and odd permutations respectively.
 
-\begin{exercise}{}
-Use the sets $A_n$ and $B_n$ to define an equivalence relation on $S_n$, and verify that it is an equivalence relation. \hint{(Hint: Think equivalence classes.)}
+\begin{exercise}{S_nequiv}
+Use the sets $A_n$ and $B_n$ to define an equivalence relation on $S_n$, and verify that it is an equivalence relation.
+\hyperref[sec:permute:hints]{(*Hint*)}
 \end{exercise}
 
 We are particularly interested in the set $A_n$, because it has nice properties with respect to permutation product:
@@ -2223,9 +2276,11 @@ We are particularly interested in the set $A_n$, because it has nice properties 
 \item
 Show that ${\var id}  \in A_n$.
 \item
-Show that if $\sigma \in A_n$, then $\sigma^{-1} \in A_n$. \hint{(Hint: if you write $\sigma$ as the product of transpositions $\tau_1 \cdots \tau_{n}$, then what is $\sigma^{-1}$?)}
+Show that if $\sigma \in A_n$, then $\sigma^{-1} \in A_n$.
+\hyperref[sec:permute:hints]{(*Hint*)}
 \item
-Show that if $\sigma, \mu \in A_n$, then $\sigma \mu \in A_n$. \hint{(Hint: if $\sigma = \tau_1 \cdots \tau_{n}$ and $\mu = \lambda_1 \cdots \lambda_{m}$, then what about $\sigma \mu$?)}
+Show that if $\sigma, \mu \in A_n$, then $\sigma \mu \in A_n$. 
+\hyperref[sec:permute:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -2284,7 +2339,7 @@ Prove or disprove: the set of odd permutations $B_n$ is also a group.
 We know that $A_n$ is a group -- but how big is it? Of course, it depends on the number of odd permutations $B_n$, since $A_n$ and $B_n$ together make up $S_n$.
 So which is bigger: $A_n$ or $B_n$? The answer is \ldots neither!
 
-\begin{prop}{}
+\begin{prop}{Alternating1}
 The number of even permutations in $S_n$, $n \geq 2$, is equal to the
 number of odd permutations; hence, $| A_n | = n!/2$.
 \end{prop}
@@ -2306,14 +2361,17 @@ $f$ is one-to-one: that is, $f(\sigma_1) = f(\sigma_2)$ implies $\sigma_1 = \sig
 
 Parts (a) -- (c) will be proven by (none other than) you, in the following exercise:
 
-\begin{exercise}{}
+\begin{exercise}{prove}
 \begin{enumerate}[(a)]
 \item
-Show part (a).  \hint{(Hint:  if $\sigma$ is even, then what about $(1 2) \compose \sigma$?)}.  
+Show part (a).  
+\hyperref[sec:permute:hints]{(*Hint*)}
 \item
-Show part (b).  \hint{(Hint:  if $\mu$ is odd, then what about $(1 2) \compose \mu$? Also, $f( (1 2) \compose \mu ) =$ ??)}.  
+Show part (b). 
+\hyperref[sec:permute:hints]{(*Hint*)}
 \item
-Show part (c).  \hint{(Hint:  if $(1 2) \sigma_1 = (1 2) \sigma_2$, then what can you conclude about $\sigma_1$ and $\sigma_2$? Why are you able to conclude this?)}.  
+Show part (c). 
+\hyperref[sec:permute:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
 
@@ -2362,7 +2420,7 @@ $A_8$
 
 
 \markright{EXERCISES}
-\section{Additional Exercises}
+\section{Additional exercises}
 \exrule
  
  
@@ -2371,8 +2429,9 @@ $A_8$
 \begin{enumerate}
  
   
-\item
-Show that $A_{10}$ contains an element of order 15. (\emph{Hint:} Consider the cycle structure.)
+\item \label{ex:permute:Ad1}
+Show that $A_{10}$ contains an element of order 15.
+\hyperref[sec:permute:hints]{(*Hint*)}
  
  
 \item
@@ -2384,28 +2443,46 @@ Find an element of largest order in $S_n$ for $n = 3, \ldots, 10$.
  
   
  \item
-In Chapter`\ref{complex} we used the term `non-Abelian' to describe groups in which not all elements commute. To show that a group is non-Abelian, it's enough to find a single pair of elements $a, b \in S_n$ which do not commute (that is, $ab \neq ba$).
+In Chapter \ref{complex} we used the term `non-abelian' to describe groups in which not all elements commute. To show that a group is non-abelian, it's enough to find a single pair of elements $a, b \in S_n$ which do not commute (that is, $ab \neq ba$).
 \begin{enumerate}[(a)]
 \item
-Prove that $S_n$ is non-Abelian for $n \geq 3$. 
+Prove that $S_n$ is non-abelian for $n \geq 3$. 
 \item
-Show that $A_n$ is non-Abelian for $n \geq 4$.
+Show that $A_n$ is non-abelian for $n \geq 4$.
 \item
-Prove that $D_n$ is non-Abelian for $n \geq 3$.
+Prove that $D_n$ is non-abelian for $n \geq 3$.
  \end{enumerate} 
 
 \item
-Let $\sigma \in S_n$. Prove that $\sigma$ can be written as the
-product of at most $n-1$ transpositions.  (\emph{Hint}: We know that $\sigma$ can be written as the product of disjoint cycles. So let $\sigma_1, \sigma_2, \ldots \sigma_m$ be disjoint cycles such that  $\sigma = \sigma_1 \sigma_2 \ldots \sigma_m$, and let $\ell_j$ be the length of $\sigma_j$. How many transpositions does it take to construct each of these disjoint cycles?)
-  
+Let $\sigma$ be a permutation in $S_n$.  
+\begin{enumerate}[(a)]
 \item
+Show that there exists an integer $k>1$ such that $sigma^k = \sigma$.
+\item
+Show that there exists an integer $\ell>1$ such that $sigma^{\ell} = \sigma^{-1}$.
+\item
+Let $K$ be the set of \emph{all} integers $k>1$ such that $sigma^k = \sigma$. Show that $K$ is an infinite set (that is, $K$ has an infinite number of elements).
+\item
+Let $L$ be the set of \emph{all} integers $\ell>1$ such that $sigma^{\ell} = \sigma^{-1}$. Show that $L$ is an infinite set.
+\item
+What is the relationship between the sets $K$ and $L$?
+\end{enumerate}
+
+
+\item \label{ex:permute:Ad2}
+Let $\sigma \in S_n$. Prove that $\sigma$ can be written as the
+product of at most $n-1$ transpositions.
+\hyperref[sec:permute:hints]{(*Hint*)}
+
+\item \label{ex:permute:Ad3}
 Let $\sigma \in S_n$. If $\sigma$ is not a cycle, prove that $\sigma$
 can be written as the product of at most $n-2$ transpositions.
- (\emph{Hint}:  Use the notation of the previous problem, and write a formula (in terms of $\ell_1 \ldots \ell_m$ and $m$) for the number of transpositions it takes to construct $\sigma$).  
+\hyperref[sec:permute:hints]{(*Hint*)}
 
-\item
+\item \label{ex:permute:Ad4}
 If $\sigma$ is a cycle of odd length, prove that $\sigma^2$ is also a
-cycle.  (\emph{Hint:} Let $\ell$ be the length of $\sigma$: then what is the order of $\sigma$? On the other hand, let $k$ be the order of $\sigma^2$: then what do you know about $\sigma^{2k}$?)
+cycle.
+\hyperref[sec:permute:hints]{(*Hint*)}  
   
 \item
 Prove that in $A_n$ with $n \geq 3$, any permutation is a product of
