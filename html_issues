@@ -1,30 +1,15 @@
-1) \begin{dialogue} \speak{Horatio} and at the start of Chapter 3
 
 
 3) \rule[-1.2ex]{0pt}{0pt}  in Exercise 3.2.13 (and elsewhere)
 
-4) Set brackets not correct above Remark 6.15 (but they are correct higher up the page).  Same in Example7.5.2
-
-
 
 6) Example 3.2.3 (commutitivityofrealnumbers) this looks odd, just a typesetting issue I think.
 
-7) 3.3.6 {cis}\ensuremath{\theta} this is probably missing initialization?
 
-8) 3.4.19 and 3.4.20 missing the redone hints
-
-9)\begin{equation} in modular division chapter
-
-
-11)I noticed a bunch of ~ symbols showing up instead of spaces see Example 10.4.13
-
-12}Fig10.6.2 and 10.6.3 not displayed
+12}Fig10.6.2 and 10.6.3 not displayed and 14.1.1
 
 13)In all Additional exercise sections \rule{5.00 in}{.5pt} showing
 
 
-15)many exercise tags visible in 13 see 13.3.8 {Tetra7} for example
 
 16)Table 14.1.2 \multicols{8}
-
-17)prop 18.5.1 
