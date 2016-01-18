@@ -402,7 +402,7 @@ A bevy of nice properties follow from this definition:
 Complex multiplication is commutative.  This may be proved as follows. (Note that here we are combining statement$-$reason and paragraph proof formats.  It's OK to mix and match formats, as long as you get the job done!) 
 \begin{align*}
 (a + bi)(c + di) &= (ac - bd) + (bc + ad)i \qquad \mathrm{(FLOI)}\\
-& = (ca - db) + (cb + da)i \qquad \text{(commutativity of real multiplication)}\\
+& = (ca - db) + (cb + da)i \qquad \text{(commutativityofrealmultiplication)}\\
 \text{On the other }&\text{hand:}\\
 (c + di)(a + bi) &= (ca - db) + (cb + da)i \qquad \mathrm{(FLOI)}
 \end{align*}

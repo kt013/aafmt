@@ -1435,31 +1435,31 @@ $(\sigma \tau)^n \neq {\var id} $ if $n \in \mathbb{N}$ and $n < m$.
 To prove (i), first note that $k$ divides $m$, so that $m = j \cdot p$ for some natural number $p$. Similarly, $m = k \cdot q$ for some $q \in \mathbb{N}$. It follows:
 
 \noindent
-$(\sigma \tau )^m = \sigma^m \tau^m$\ \ \ \ \ (by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
+$(\sigma \tau )^m = \sigma^m \tau^m$~~~~~(by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
 
-\ \ \ $=  \sigma^{j \cdot p} \tau^{ k \cdot q}$\ \ \ \ \ (by definition of lcm)
+~~~$=  \sigma^{j \cdot p} \tau^{ k \cdot q}$~~~~~(by definition of lcm)
 
-\ \ \ $=  (\sigma^j)^p (\tau^ k)^q$\ \ \ \ \ (by exponentiation rules)
+~~~ $=  (\sigma^j)^p (\tau^ k)^q$~~~~~(by exponentiation rules)
 \footnote{These are the same exponentiation rules you saw in high school algebra:  $x^{ab} = (x^a)^b$}
 
-\ \ \ $=   {\var id} ^p {\var id} ^q$\ \ \ \ \ (by definition of order)
+~~~$=   {\var id} ^p {\var id} ^q$~~~~~(by definition of order)
 
-\ \ \ $ = {\var id} $\ \ \ \ \ (by definition of ${\var id} $).
+~~~$ = {\var id} $~~~~~(by definition of ${\var id} $).
 \medskip
 
 \noindent
 To prove (ii), let $n < m$. It follows either $k$ or $j$ does \emph{not} divide $n$. Let's suppose it's $k$ (the case where it's $j$ is virtually identical). In this case we must have $n = p \cdot k + r$ where $p, $r$ \in \mathbb{N}$ and $r < k$. It follows:
 
 \noindent
-$(\sigma \tau )^n = \sigma^n \tau^n$\ \ \ \ \ (by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
+$(\sigma \tau )^n = \sigma^n \tau^n$~~~~~(by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
 
-\ \ \ $=  \sigma^{j \cdot p + r} \tau^n$\ \ \ \ \ (substitution)
+~~~$=  \sigma^{j \cdot p + r} \tau^n$~~~~~(substitution)
 
-\ \ \ $=  (\sigma^j)^p \sigma^r \tau^n $\ \ \ \ \ (by exponentiation rules)
+~~~ $=  (\sigma^j)^p \sigma^r \tau^n $~~~~~(by exponentiation rules)
 
-\ \ \ $=   {\var id} ^p \sigma^r \tau^n $\ \ \ \ \ (by definition of order)
+~~~$=   {\var id} ^p \sigma^r \tau^n $~~~~~(by definition of order)
 
-\ \ \ $=   \sigma^r \tau^n $\ \ \ \ \ \ \ \ (by definition of identity)
+~~~$=   \sigma^r \tau^n $~~~~~~~~(by definition of identity)
 \medskip
 
 Now since $r < k$, and $|\sigma| = k$,  it follows that $\sigma^r \neq {\var id} $. Thus there is some $x$ such that $\sigma^r(x) \neq x$. But since $\sigma$ and $\tau$ are disjoint, it must be the case that $\tau(x) = x$. It follows that:

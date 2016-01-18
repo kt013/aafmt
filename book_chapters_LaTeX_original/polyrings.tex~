@@ -1004,7 +1004,7 @@ x^n - c = (x - a_1)(x - a_2)...(x - a_n)g_0,\]
 
 \section{Proof that $U(p)$ is cyclic}
 
-Mathematics has many mysterious and wonderful connections. Surprisingly, we can use Proposition~\ref{proposition:polyrings:FTOA} to prove something about group theory.  
+Mathematics has many mysterious and wonderful connections. Surprisingly, we can use Proposition~\ref{proposition:poly:FTOA} to prove something about group theory.  
 Recall that $U(n)$ is the group of units in $\ZZ_n$, where a ``unit'' is an element with a multiplicative inverse. If $p$ is a prime, then $U(p)$ is the set of all nonzero elements of $\ZZ_p$. 
 
 \begin {prop}{}

@@ -1378,8 +1378,8 @@ And all possible outputs of the codomain are paired (onto)
  and
  \item every marriage is between a man and a woman (there are no same-sex marriages). 
  \end{itemize}
-Let $\var{Men}$ = ${$men in the country$}$, and 
-$\var{Women}$ = ${$women in the country$}$.
+Let $\var{Men}$ = $\{$men in the country$\}$, and 
+$\var{Women}$ = $\{$women in the country$\}$.
 Then $\var{wife} \colon \var{Men} \to \var{Women}$ is a bijection, since:
 \begin{itemize}
  \item Two different men cannot have the same wife, so we know that $\var{wife}$ is one-to-one. 

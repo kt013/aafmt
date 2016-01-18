@@ -74,11 +74,6 @@ Multiply out the inequality that you proved in (a).
 \noindent Exercise \ref{exercise:complex:51}(a)
 It's easier to multiply the numbers in polar form, you don't have to convert to Cartesian.  Note that $\cis\left(\frac{4\pi}{3}\right)$ is the complex conjugate of $\cis\left(\frac{2\pi}{3}\right)$.
 
-\noindent Exercise \ref{exercise:complex:53}
-Besides showing that all sides are equal, you also have to show that they are perpendicular.
-
-\noindent Exercise \ref{exercise:complex:54}
-Draw lines from each point to the origin, forming 6 triangles. What can you say about these triangles?
 
 \noindent Exercise \ref{exercise:complex:57}(c)
 Note that $OA = |z|, OC = |w|.$ and $AC = |z-w|$.
