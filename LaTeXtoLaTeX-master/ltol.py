@@ -66,7 +66,7 @@ for inputfile, outputfile in component.iofilepairs:
     with open(inputfile) as infile:
         component.onefile = infile.read()
 
-    print component.onefile[:100]
+#    print component.onefile[:100]
 
     myoperations.setvariables(component.onefile)
 
