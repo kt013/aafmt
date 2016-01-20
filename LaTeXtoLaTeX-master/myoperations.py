@@ -15,6 +15,10 @@ def mytransform(text):
 
     thetext = text
 
+    # get rid of extraneous spaces after \begin and \end
+    thetext = re.sub(r"\\begin\s+{",r"\\begin{",thetext)
+    thetext = re.sub(r"\\end\s+{",r"\end{",thetext)
+
     # replace \begin{prop}{the_label} by
     # \begin{prop}\label{proposition:chaptername:the_label}
     thetext = utilities.replacemacro(thetext,r"\begin{prop}",1,
@@ -25,6 +29,8 @@ def mytransform(text):
                          r"\begin{example}\label{example:"+component.chapter_abbrev+":#1}")
     thetext = utilities.replacemacro(thetext,r"\begin{exercise}",1,
                          r"\begin{exercise}\label{exercise:"+component.chapter_abbrev+":#1}")
+
+    thetext = re.sub(r"\\chap\s*{([^{}]*)}{([^{}]*)}",r"\\chapter{\1}\\label{\2}",thetext)
 
     # in actions.tex and crypt.tex many examples start with something like
     # \noindent {\bf Example 2.}
