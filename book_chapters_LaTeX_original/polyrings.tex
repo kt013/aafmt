@@ -969,10 +969,10 @@ First we prove the ``if'' part.  It is clear from the formula for multiplication
 
 The ``only if'' part is harder. We will prove the contrapositive, namely that  $p(x)\neq\ 0$ and  $ q(x)\neq\ 0$ implies that  $p(x)q(x) \neq 0$.
 Let 
-\[p(x) =  \sum_{i=0}^{m} a_i x^i \text{~~and~~} q(x) =  \sum_{j=0}^{n} b_j x^j,\] 
+\[p(x) =  \sum_{i=0}^{m} a_i x^i \mathrm{~~and~~} q(x) =  \sum_{j=0}^{n} b_j x^j,\] 
 where $a_m \neq\ 0$ and $b_n\neq\ 0$.
 We can then write
- \[p(x) q(x) = \sum_{k=0}^{m+n} c_k, \text{~~where~~} c_{k} =  \sum_{i=0}^{k}a_i b_{k-i}.\]
+ \[p(x) q(x) = \sum_{k=0}^{m+n} c_k, \mathrm{~~where~~} c_{k} =  \sum_{i=0}^{k}a_i b_{k-i}.\]
 Consider the coefficient $c_{m+n}$, which may be expanded out as
 \[
 c_{m+n} =  a_0 b_{m+n} + a_1 b_{m+n-1} + \ldots  + a_{m}b_{n} + \dots +  a_{n+m-1}b_{1} + a_{n+m}b_{0}.
@@ -1020,10 +1020,10 @@ where $p_1, p_2, \ldots, p_k$ are all primes.  It's not necessarily true a prior
 So it LL comes down to proving that all of the $p_j$'s are distinct. We will prove this by contradiction. Thus, we may suppose that $p_i = p_j$ for some $i \neq j$. 
 Now consider the following two elements of the direct product:
 \[
-g_i = ( 0, \ldots ,\underbrace{p_i^{e_i-1}}_{i'\text{th place}},\ldots,0) \text{~~and~~} g_j = ( 0, \ldots ,\underbrace{p_j^{e_j-1}}_{j'\text{th place}},\ldots,0).
+g_i = ( 0, \ldots ,\underbrace{p_i^{e_i-1}}_{i'\text{th place}},\ldots,0) \mathrm{~~and~~} g_j = ( 0, \ldots ,\underbrace{p_j^{e_j-1}}_{j'\text{th place}},\ldots,0).
 \]
 It is then possible to prove that (recall that ``$|g|$ '' is the order of the group element $g$ )
-\[ |g_i| = p_i \text{~~and~~}  |g_j| = p_j. \]
+\[ |g_i| = p_i \mathrm{~~and~~}  |g_j| = p_j. \]
 
 \begin{exercise}{orders}
 Given the above definitions of $g_i$ and $g_j$, show that   $|g_i| = p_i$ and  $|g_j| = p_j$.
@@ -1031,15 +1031,15 @@ Given the above definitions of $g_i$ and $g_j$, show that   $|g_i| = p_i$ and  $
 \end{exercise}
 As a result of the above exercise, Proposition~\ref{cosets_theorem_7} of the Cosets chapter  enables us to conclude that 
 \[
-|g_i^n| = p_i \text{~~and~~} |g_j^n| = p_j \text{~ for~~} (n = 1,...,p_j-1).
+|g_i^n| = p_i \mathrm{~~and~~} |g_j^n| = p_j \mathrm{~ for~~} (n = 1,...,p_j-1).
 \]
 Since $p_i = p_j$, we have at least $2(p_i-1)$ elements in ${\mathbb{Z}_{{p_1}^{e_1}}}  \times   {\mathbb{Z}_{{p_2}^{e_2}}}  \times  ... \times   {\mathbb{Z}_{{p_k}^{e_k}}}$ of order $p_i$. By 
 Proposition~\ref{isomorph_theorem_1} of the Isomorphisms chapter, this means there are  $2(p_i-1)$ elements of $U(p)$ which have order $p_i$, and all of these elements are solutions of the equation $x^{p_i}-1=0$ (Why?). 
 But at the beginning of this proof, we demonstrated that there can only be at most $p_i$ solutions. This contradiction shows us our supposition is false, so all of the $p_i$'s in the direct product must be unequal.
 \end{proof}
-
+%
 %\begin{defn}
-%A vector space over $\mathbb{R}$ consists of a set \emph{V} along with two operations '+' and  ' $\cdot$ ' subject to the conditions that for all vectors $ \vec {v},\vec{w},\vec{u} \in$ \emph{V} and all scalars r, s $\in \mathbb{R}$:
+%A vector spaae over $\mathbb{R}$ consists of a set \emph{V} along with two operations '+' and  ' $\cdot$ ' subject to the conditions that for all vectors $ \vec {v},\vec{w},\vec{u} \in$ \emph{V} and all scalars r, s $\in \mathbb{R}$:
 %\begin {enumerate} [(1)]
 %\item
 %the set \emph{V} is closed under vector addition, that is, $ \vec{v} + \vec{w} \in \emph{V}$
@@ -1333,11 +1333,11 @@ But at the beginning of this proof, we demonstrated that there can only be at mo
 %\[=\varphi (\sum^ {N}_{m=0}(~~~~~~~))\varphi( \sum^{N'}_{m'=0}(~~~~~~~))\] 
 %\[= \varphi(~~) \varphi(~~)\]
 %\end{exercise}
-
-
-
-
-
+%
+%
+%
+%
+%
 %\section{Irreducible Polynomials}
 % 
 % 

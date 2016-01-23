@@ -23,7 +23,7 @@ This can be thought of as a ``pivotal'' chapter. It generalizes the notion of ``
 
 \begin{eg} 
 The function $\var{mother} \colon \var{PEOPLE} \to \var{PEOPLE}$ is represented by the set
-	$$ \{\, (p,m) \in  \var{PEOPLE} \times \var{PEOPLE} \mid \text{$m$ is the mother of~$p$} \,\} .$$
+\[ \{\, (p,m)  \in  {\var PEOPLE} \times {\var PEOPLE}  \mid  m  \text{  is the mother of } p \,\} .\]
 \end{eg}
 
 \begin{exercise}{student_mother}
@@ -40,7 +40,7 @@ Now for each individual in $\var{MY\_GENERATION}$, write an ordered pair that be
 
 
 Many other relationships can also be represented by subsets of $\var{PEOPLE} \times \var{PEOPLE}$, even though they are not functions. For example, $\var{son}$ is not a function, because some people have more than one son (or because some people have no sons at all). However, we can represent this relation by the set
-	$$ \{\, (p,s) \in  \var{PEOPLE} \times \var{PEOPLE} \mid \text{$s$ is a son of~$p$} \,\} .$$
+\[  \{\, (p,s) \in  {\var PEOPLE} \times {\var PEOPLE} \mid s \text{ is a son of } p \,\} .\]
 	
 \begin{exercise}{student_son}
 \begin{enumerate}[(a)]
@@ -392,7 +392,7 @@ People often need to sort through a collection of objects, putting similar objec
 
 \begin{eg} \label{EquivRelZooEg}
 When making an inventory of the animals in a zoo, we may wish to count the number of antelopes, the number of baboons, the number of cheetahs, and so forth. In this case, all of the animals of the same species might be grouped together. Mathematically speaking, we would define a binary relation $S$ on the set of animals in the zoo by 
-	$$ \text{$x \rel_S y$ \quad iff \quad $x$ and $y$ are in the same species} .$$
+\[x \rel_S y \quad \text{iff} \quad x \text{ and } y \text{ are in the same species} .\]
 \end{eg}
 
 %When $x$ and~$y$ are placed in the same group (that is, when $x \rel_S y$ in the above example), we may say that $x$ is ``equivalent" to~$y$. This means that $x$ and~$y$ are exactly the same in all respects that are of interest to us. (In the above example, we are interested only in the species of an animal, not its weight, or its age, or anything else.) We call the corresponding binary relation an ``equivalence relation.'' Thus, the binary relation~$\rel_S$ in the above example is an equivalence relation.
@@ -408,9 +408,9 @@ Now if we consider the relation $\rel_S$ in light of the properties defined in D
 \begin{enumerate}[(a)]
 \item
 If we are concerned only with people's first names, we could define a relation~$\rel_N$ on the set of all people by 
-	$$ \text{$x \rel_N y$ iff $x$~has the same first name as~$y$. } $$
+\[  x \rel_N y  \text{~iff~} x \text{ has the same first name as }y.  \]
 \item In geometry, sometimes we are interested only in the shape of a triangle and not its location or orientation. In this case, we talk about \emph{congruent} triangles. We may define a relation $\cong$ on the set of all triangles by 
-	$$ \text{$T_1 \cong T_2$ iff $T_1$ is {congruent} to~$T_2$.} $$
+\[T_1 \cong T_2  \text{ iff } T_1  \text{ is congruent  to } T_2. \]
 Here ``congruent" means that corresponding sides of the two triangles are equal, and corresponding angles are also equal.
 \end{enumerate}
 \end{eg}
@@ -488,13 +488,13 @@ We wish to show that $\sim$ is reflexive, symmetric, and transitive.
 \noindent
 (transitive) Given $(a_1,b_1) , (a_2,b_2) , (a_3,b_3) \in \mathbb{N} \times \mathbb{N}$, such that $(a_1,b_1) \sim (a_2,b_2)$ and $(a_2,b_2) \sim (a_3,b_3)$, we have 
 \begin{equation} \label{NxNEquivRelEgEqn}
-	\text{$a_1 + b_2 = a_2 + b_1$ and $a_2 + b_3 = a_3 + b_2$.}
+a_1 + b_2 = a_2 + b_1 \text{  and } a_2 + b_3 = a_3 + b_2.
 \end{equation}
 Therefore 
 	\begin{align*}
 	(a_1 + b_3) + (a_2 + b_2)
 		&= (a_1 + b_2) + (a_2 + b_3) && \text{(rearrange terms)}
-		\\&= (a_2 + b_1) + (a_3 + b_2) && \text{Equation (\ref{NxNEquivRelEgEqn}) above}
+		\\&= (a_2 + b_1) + (a_3 + b_2) && \text{(Equation (\ref{NxNEquivRelEgEqn}) above)}
 		\\&= (a_3 + b_1) + (a_2 + b_2) && \text{(rearrange terms)} .
 	\end{align*}
 Subtracting $a_2 + b_2$ from both sides of the equation, we conclude that $a_1 + b_3 = a_3 + b_1$,
@@ -520,7 +520,7 @@ The binary relation $\sim$ on $\mathbb{C}$ defined by $z_1 \sim z_2$ iff $|z_1|=
 The binary relation $\sim$ on $\mathbb{C}$  defined by $z_1 \sim z_2$ iff Re[$z_1$] = Re[$z_2$].  (Recall that Re[$z$] is the real part of $z$)
 \item
 The binary relation $\sim$ on the collection of all finite sets defined by
-	$$ \text{$A \sim B$ \quad iff \quad $|A|=|B|$ (that is, $A$ and $B$ have the same number of elements)} $$
+\[  A \sim B  \text{ iff } |A|=|B|  \text{  (that is, }A \text{ and } B \text{ have the same number of elements)} \]
 \end{enumerate}
 \end{exercise}
 
@@ -530,9 +530,9 @@ Any time we have a function, we also get an equivalence relation on its domain:
 \begin{eg} \ 
 \begin{enumerate}[(a)]
 \item Every animal has only one species, so $\var{Species}$ is a function that is defined on the set of all animals. The equivalence relation~$\rel_S$ of Example~\ref{EquivRelZooEg} can be characterized by
-	$$ \text{$x \rel_S y$ \quad iff \quad $\var{Species}(x) = \var{Species}(y)$} .$$
+\[ x \rel_S y \quad \iff \quad {\var Species}(x) = {\var Species}(y) .\]
 \item If we assume that every person has a first name, then $\var{FirstName}$ is a function on the set of all people. The equivalence relation~$\rel_N$ of Example~\ref{MoreEquivRelEgs} can be characterized by
-	$$ \text{$x \rel_N y$ \quad iff \quad $\var{FirstName}(x) = \var{FirstName}(y)$} .$$
+\[  x \rel_N y \quad \iff \quad {\var FirstName}(x) = {\var FirstName}(y) .\]
 \end{enumerate}
 \end{eg}
 
@@ -541,7 +541,7 @@ The following result generalizes this idea to all functions.
 
 \begin{prop}{EquivRelFromFunc}
 Suppose $f \colon A \to B$. If we define a binary relation~$\sim$ on~$A$ by
-	$$ \text{$a_1 \sim a_2$ \quad iff \quad $f(a_1) = f(a_2)$} ,$$
+\[ a_1 \sim a_2 \quad \iff \quad f(a_1) = f(a_2) ,\]
 then $\sim$ is an equivalence relation.
 \end{prop}
 
@@ -603,7 +603,7 @@ Assume (without proof) that $S$ is an equivalence relation on~$B$. Find the equi
 
 \item \label{EquivClassEasyEx-x+y}
 Let $C = \{1,2,3,4,5\}$ and define $\rel_C$ by 
-	$$ \text{$x \rel_C y$ iff $x + y$ is even.} $$
+\[ x \rel_C y \iff x + y \text{ is even.} \]
 Assume (without proof) that $\rel_C$ is an equivalence relation on~$C$. Find the equivalence class of each element of~$C$.
 \item
 Draw the arrow diagrams for $\rel_A, \rel_B,$ and $\rel_C$.
@@ -892,18 +892,18 @@ Fill in the blanks in the following proof of statement (a) above that $\mathbin{
 Suppose $\class{a_1} = \class{a_2}$ and $\class{b_1} = \class{b_2}$. 
 \begin{enumerate}[(i)]
 \item
-From the definition of equivalence class, it follows that  $a_1 \equiv \_\_\_\_\_\_\_\_ \pmod{n}$ and $b_1 \equiv \_\_\_\_\_\_\_\_ \pmod{n}$. 
+From the definition of equivalence class, it follows that  $a_1 \equiv \underline{~<1>~} \pmod{n}$ and $b_1 \equiv \underline{~<2>~} \pmod{n}$. 
 \item  
 By Definition~\ref{mod_eqiv_def_2}, it follows that 
-$a_1 - a_2 = k_1 \cdot \_\_\_\_\_\_\_\_$ and $b_1 - b_2 = k_2 \cdot \_\_\_\_\_\_\_\_$, where $k_1$ and $k_2$ are $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$. 
+$a_1 - a_2 = k_1 \cdot \underline{~<3>~}$ and $b_1 - b_2 = k_2 \cdot \underline{~<4>~}$, where $k_1$ and $k_2$ are $\underline{~<5>~}$. 
 \item
-By integer arithmetic it follows that $(a_1 + b_1) - (a_2 + b_2) =  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$
+By integer arithmetic it follows that $(a_1 + b_1) - (a_2 + b_2) =  \underline{~<6>~}$
 \item
-Since $k_1 + k_2$ is an integer it follows from Definition~\ref{mod_eqiv_def_2} that $(a_1 + b_1) \equiv \_\_\_\_\_\_\_\_\_\ \pmod{\_\_\_\_}$.
+Since $k_1 + k_2$ is an integer it follows from Definition~\ref{mod_eqiv_def_2} that $(a_1 + b_1) \equiv \underline{~<7>~} \pmod{\underline{~<8>~}}$.
 \item 
-It follows from Proposition~\ref{EquivRelProps} part (d) that $\_\_\_\_\_\_\_\_\_$.
+It follows from Proposition~\ref{EquivRelProps} part (d) that $\underline{~<9>~}$.
 \item
-By Definition~\ref{integ_mod_n} (c) then $\class{a_1} \mathbin{+} \class{b_1} =  \_\_\_\_\_\_\_\_\_\_$; so $\mathbin{+}$ is well-defined.
+By Definition~\ref{integ_mod_n} (c) then $\class{a_1} \mathbin{+} \class{b_1} =  \underline{~<10>~}$; so $\mathbin{+}$ is well-defined.
 \end{enumerate}
 \item By following the proof in part (a), prove that subtraction mod $n$ is well-defined.
 \item By following the proof in part (a), prove that multiplication mod $n$ is well-defined.
@@ -922,7 +922,8 @@ Show that $\;^{\wedge}$ is not well-defined: that is, find $a, b, c, d \in \inte
 \begin{exercise}{WellDefEx}
 \begin{enumerate}[(a)]
 \item  \label{WellDefEx-AbsVal0}
- Show that absolute value does \emph{not} provide a well-defined function from~$\integer_7$ to~$\integer_7$. That is, show there exist $a,b \in \integer$, such that $$[a]_7 = [b]_7, \text{ but } \bigl[ |a| \bigr]_7 \neq \bigl[ |b| \bigr]_7.$$
+ Show that absolute value does \emph{not} provide a well-defined function from~$\integer_7$ to~$\integer_7$. That is, show there exist $a,b \in \integer$, such that 
+\[ [a]_7 = [b]_7, \text{ but } \bigl[ |a| \bigr]_7 \neq \bigl[ |b| \bigr]_7.\]
 \item  \label{WellDefEx-AbsVal}
  Show that part (a) is true for \emph{every} $n > 2$. That is, show that  absolute value does \emph{not} provide a well-defined function from~$\integer_n$ to~$\integer_n$. 
 \end{enumerate}
@@ -932,7 +933,8 @@ Show that $\;^{\wedge}$ is not well-defined: that is, find $a, b, c, d \in \inte
 \begin{enumerate}[(a)]
 \item
 Show that there is a well-defined function 
-	$$ \text{$f \colon \integer_4 \to \integer_{12}$, given by $f \bigl( [a]_4 \bigr) = [a]_{12}$.} $$
+$f \colon \integer_4 \to \integer_{12}$, given by \\
+$ f \bigl( [a]_4 \bigr) = [a]_{12}$. 
 That is, show that if $[a]_{12} = [b]_{12}$, then $f \bigl( [a]_4 \bigr) = f \bigl( [b]_4 \bigr)$.
 \item  \label{WellDefEx-divide}
 Generalize part (a) by showing that if $m$ divides $n$, then there is a well-defined function 
@@ -1019,7 +1021,7 @@ Proposition~\ref{EquivRel->Part} tells us that every equivalence relation gives 
 
 \begin{prop}{}\label{Part->EquivRel}
 Suppose $\mathcal{P}$ is a partition of a set~$A$. Define a binary relation $\sim$ on~$A$ by
-	$$ \text{$a \sim b$ \quad iff \quad $\exists C \in \mathcal{P}, ( \text{$a \in C$ and $b \in C$} )$} .$$
+\[ a \sim b \quad \iff \quad \exists C \in \mathcal{P}, ( a \in C \text{ and } b \in C ) .\]
 Then:
 \begin{enumerate}[(a)]
 \item \label{Part->EquivRel-equiv}

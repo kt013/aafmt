@@ -423,15 +423,15 @@ In order to characterize error detection and correction properties of codes, we 
 Let ${\bold x} = (x_1, \ldots, x_n)$ and ${\bold y} = (y_1, \ldots,
 y_n)$ be binary $n$-tuples. The \bfii{ Hamming distance\/}\index{Hamming
 distance} or \bfii{ distance}, $d({\bold x}, {\bold
-y})$\label{noteHammingdist}, between ${\bold x}$ and ${\bold y}$ is
+y})$ between ${\bold x}$ and ${\bold y}$ is
 the number of bit positions where ${\bold x}$ and ${\bold y}$ differ. The
 distance between two codewords is the minimum number of transmission
 errors required to change one codeword into the other. The
 \bfii{ minimum distance\/}\index{Code!minimum distance of} for a code,
-$d_{\min}$\label{notemindist}, is the minimum of all distances
+$d_{\min}$ is the minimum of all distances
 $d({\bold x}, {\bold y})$, where ${\bold x}$ and ${\bold y}$ are
 distinct codewords. The \bfii{ weight}\index{Weight of a codeword}\index{Codeword!weight of},
-$w({\bold x})$\label{noteweight}, of a binary codeword ${\bold x}$ is
+$w({\bold x})$ of a binary codeword ${\bold x}$ is
 the number of 1's in ${\bold x}$. It follows that $w({\bold x}) = d({\bold
 x}, {\bold 0})$, where ${\bold 0} = (00 \cdots 0)$, since ${\bold x}$ differs from ${\bold 0}$ in exactly its `1' bits.
 \end{defn} 
@@ -957,14 +957,14 @@ x_4
 Example~\ref{example:algcodes:ParityCheck} shows that an even-parity codeword can be verified by an inner product, which is a special case of a matrix multiplication. We will now show that codewords in other types of group codes can also be verified by matrix multiplication. But first, as usual, a definition:
 
 \begin{defn} 
-Let ${\Bbb M}_{k \times n}({\Bbb Z}_2)$\label{notembyn} denote the set
+Let ${\Bbb M}_{k \times n}({\Bbb Z}_2)$ denote the set
 of all $k \times n$ matrices with entries in ${\Bbb Z}_2$. We do
 matrix operations as usual except that all our addition and multiplication
 operations occur in ${\Bbb Z}_2$. Define the \bfii{ null
 space\/}\index{Matrix!null space of}\index{Null space!of a matrix} of 
 a matrix $H \in {\Bbb M}_{k \times n}({\Bbb Z}_2)$ to be the set of
 all binary $n$-tuples ${\bold x}$ such that $H{\bold x} = {\bold 0}$.
-We denote the null space of a matrix $H$ by ${\rm Null}(H)$\label{notenull}.  
+We denote the null space of a matrix $H$ by ${\rm Null}(H)$.  
 \end{defn} 
  
 \begin{example}{FirstGroupCode}
@@ -1277,8 +1277,8 @@ on each other. Hence, $x_1$, $x_2$, and $x_3$ can be arbitrary but
 $x_4$, $x_5$, and $x_6$ must be chosen to ensure parity. By following this method, we find that the vectors in Null($H$) are
 \[
 \begin{array}{cccc}
- (000000)^{\text{T}} & (001101)^{\text{T}} & (010110)^{\text{T}} & (011011)^{\text{T}} \\
- (100011)^{\text{T}} & (101110)^{\text{T}} & (110101)^{\text{T}} & (111000)^{\text{T}}.
+ (000000)^{\mathrm{T}} & (001101)^{\mathrm{T}} & (010110)^{\mathrm{T}} & (011011)^{\mathrm{T}} \\
+ (100011)^{\mathrm{T}} & (101110)^{\mathrm{T}} & (110101)^{\mathrm{T}} & (111000)^{\mathrm{T}}.
 \end{array}
 \]
 \end{example}
@@ -1583,7 +1583,7 @@ in the null space of $H$. We can split ${\bold y}$ into two parts as follows:
  {\bold y}_a \\
 {\bold y}_b
  \end{array} \right) \quad
-\text{where~} {\bold y}_a := (y_1, \ldots, y_{n-k})^{\text{T}} \text{~and~} {\bold y}_b := (y_{n-k+1}, \ldots, y_n)^{\text{T}}. \]
+\mathrm{where~} {\bold y}_a := (y_1, \ldots, y_{n-k})^{\mathrm{T}} \mathrm{~and~} {\bold y}_b := (y_{n-k+1}, \ldots, y_n)^{\mathrm{T}}. \]
 Since  ${\bold y}$ is in the null space of $H$ we have 
  $H
 {\bold y} = {\bold 0}$, which we can also write as (using partitioned matrix multiplication)
@@ -1714,8 +1714,8 @@ H =
 \right)
 \]
 The corresponding code is single error-correcting if all nonzero codewords have weight greater than two. Since there are no zero columns, Proposition~\ref{proposition:algcodes:SingleErrorDetect} tells us that no codewords have weight 1. So we only need to check that  ${\rm Null}(H)$ does not contain any 4-tuples of weight
-2, so that $(1100)^{\text{T}}$, $(1010)^{\text{T}}$, $(1001)^{\text{T}}$, $(0110)^{\text{T}}$, $(0101)^{\text{T}}$, and
-$(0011)^{\text{T}}$ must not be in ${\rm Null}(H)$.
+2, so that $(1100)^{\mathrm{T}}$, $(1010)^{\mathrm{T}}$, $(1001)^{\mathrm{T}}$, $(0110)^{\mathrm{T}}$, $(0101)^{\mathrm{T}}$, and
+$(0011)^{\mathrm{T}}$ must not be in ${\rm Null}(H)$.
 \end{example}
 
 \begin{exercise}{}

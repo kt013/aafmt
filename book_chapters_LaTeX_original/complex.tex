@@ -213,7 +213,7 @@ shock when someone proved that some real numbers are \emph{not} rational. We wil
 \begin{exercise}{m2even}
 \begin{enumerate}[(a)]
 \item
-Fill in the blanks:  The product of two odd integers is \underline{        }, and the product of two even integers is \underline{        }.
+Fill in the blanks:  The product of two odd integers is \underline{~~~~~~~}, and the product of two even integers is \underline{~~~~~~~~}.
 \item
 Use proof by contradiction to prove the following statement: If $m$ is an integer and $m^2$ is even, then $m$ is also even.
 %(\emph{Hint}: see \ref{sec:complex:hints})
@@ -377,10 +377,10 @@ We just need to show that for any two complex numbers $z$ and $w$, it's always t
 Statement& Reason\\
 \hline
 $z + w = (a + bi) + (c + di)$ &substitution\\
-\ \ \ \ \ \ $= (a + c) + (b + d)i$ & definition of complex addition\\
-\ \ \ \ \ \ $= (c + a) + (d + b)i$ & real addition is commutative\\
-\ \ \ \ \ \ $= (c + di) + (a + bi)$ & def. of complex addition\\
-\ \ \ \ \ \ $= w + z$. & substitution\\
+~~~~~~ $= (a + c) + (b + d)i$ & definition of complex addition\\
+~~~~~~ $= (c + a) + (d + b)i$ & real addition is commutative\\
+~~~~~~ $= (c + di) + (a + bi)$ & def. of complex addition\\
+~~~~~~ $= w + z$. & substitution\\
 \end{tabular}
 \end{proof}
 
@@ -401,10 +401,10 @@ A bevy of nice properties follow from this definition:
 \begin{example}{complex_commute}
 Complex multiplication is commutative.  This may be proved as follows. (Note that here we are combining statement$-$reason and paragraph proof formats.  It's OK to mix and match formats, as long as you get the job done!) 
 \begin{align*}
-(a + bi)(c + di) &= (ac - bd) + (bc + ad)i \qquad \mathrm{(FLOI)}\\
-& = (ca - db) + (cb + da)i \qquad \text{(commutativity of real multiplication)}\\
+(a + bi)(c + di) &= (ac - bd) + (bc + ad)i \qquad \text{(FLOI)}\\
+& = (ca - db) + (cb + da)i \qquad \text{(commutativity~of~real~multiplication)}\\
 \text{On the other }&\text{hand:}\\
-(c + di)(a + bi) &= (ca - db) + (cb + da)i \qquad \mathrm{(FLOI)}
+(c + di)(a + bi) &= (ca - db) + (cb + da)i \qquad \text{(FLOI)}
 \end{align*}
 Since we obtain the same expression for $(a + bi)(c + di)$ and $(c + di)(a + bi)$, it follows that 
 $(a + bi)(c + di) = (c + di)(a + bi)$.
@@ -714,10 +714,10 @@ Here is an example of a proposition involving complex conjugates.
 We may write $z$ as $a + bi$ and $w$ as $c + di$. Then
 \begin{align*}
 \overline{z} + \overline{w} &= \overline{a + bi} + \overline{c + di} \\
-& = (a - bi) + (c - di) & \textrm{by definition of conjugate}\\
-& = (a + c) - (b + d)i & \textrm{by basic algebra}\\
-& = \overline{(a + c) + (b + d)i} & \textrm{by definition of conjugate}\\
-& = \overline{z + w} & \textrm{by definition of complex addition}
+& = (a - bi) + (c - di) & \textrm{by~definition~of~conjugate}\\
+& = (a + c) - (b + d)i & \textrm{by~basic algebra}\\
+& = \overline{(a + c) + (b + d)i} & \textrm{by~definition~of~conjugate}\\
+& = \overline{z + w} & \textrm{by~definition~of~complex~addition}
 \end{align*}
 \end{proof}
 
@@ -1344,7 +1344,7 @@ of the point in the plane;
 \item As a pair of numbers $(r,\theta)$ where $r\geq0$ and $0\le\theta<2\pi$,
 that give the polar coordinates of the point in the plane; 
 \item As $r\cdot(\cos\theta+i\cdot\sin\theta)$, or the equivalent form
-$r\cdot\cis\theta$.
+$r\cdot\mbox{{cis}\ensuremath{\theta}}$.
 \end{itemize}
 In abstract mathematics, it is very common to represent the ``same''
 entity in a number of different ways. One of the main goals of abstract
@@ -1513,9 +1513,9 @@ Now it's possible to add two waves together; we've all seen at the beach or pool
 \item
 Using $\cis \theta = \cos \theta + i\sin \theta$, complete the following argument by filling in the blanks:
 \begin{align*} 
-2 \cos(t + \pi/2) + 2 \cos(t - 5\pi/6) &= \mathrm{Re}[2 \cis (t + \pi/2)] + \mathrm{Re}[\_\_\_\_\_\_\_\_]\\
-&= \mathrm{Re}[2 \cis (t) \cdot \cis(\pi/2)] + \textrm{Re}[\_\_\_\_\_\_\_\_]\\
-&= \mathrm{ Re} \left[\left(\, 2 \cis(\pi/2) + 2 \cis(-5\pi/6) \, \right) \cdot \_\_\_\_\_\_\_\_ \right] 
+2 \cos(t + \pi/2) + 2 \cos(t - 5\pi/6) &= \text{Re}[2 \cis (t + \pi/2)] + \text{Re}[\_\_\_\_\_\_\_\_]\\
+&= \text{Re}[2 \cis (t) \cdot \cis(\pi/2)] + \textrm{Re}[\_\_\_\_\_\_\_\_]\\
+&= \text{ Re} \left[\left(\, 2 \cis(\pi/2) + 2 \cis(-5\pi/6) \, \right) \cdot \_\_\_\_\_\_\_\_ \right] 
 \end{align*}
 \item
 Convert $2 \cis(\pi/2)$ and $2 \cis(-5\pi/6)$ to cartesian form, and find the sum. Then convert back to polar form.
@@ -1689,11 +1689,11 @@ Sketch the cube roots of unity in the complex plane. Use the distance formula (f
 \end{exercise}
 
 \begin{exercise}{53}
-Prove (using geometry) that the 4th roots of unity form a square. \hyperref[sec:complex:hints]{(*Hint*)}
+Prove (using geometry) that the 4th roots of unity form a square. (\emph{Hint}: Besides showing that all sides are equal, you also have to show that they are perpendicular.)
 \end{exercise}
 
 \begin{exercise}{54}
-*Prove (using geometry) that the 6th roots of unity form a regular hexagon. \hyperref[sec:complex:hints]{(*Hint*)}
+*Prove (using geometry) that the 6th roots of unity form a regular hexagon. (\emph{Hint}: Draw lines from each point to the origin, forming 6 triangles. What can you say about these triangles?)
 \end{exercise}
 
 Incredibly as it seems, apparently complex numbers are closely related to geometry! Let us explore this relationship a little further.

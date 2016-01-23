@@ -67,11 +67,11 @@ A more mathematical (but less interesting) example would be
 Then elements of $S$ would include the sets $\{1,2,3,4\}$, \{the set of odd integers\}, $\{ 0 \}$, and so on. 
 
 We can even go farther, and define sets of sets of sets. For instance, the set $L$ of major baseball leagues in the U.S. has two elements: 
-\[L = \{ \mathrm{American~League,~National~League} \}. \]
+\[L = \{ \text{American League, National League} \}. \]
 However, the American League $A$ consists of a set of teams:
-\[A = \{ \mathrm{Yankees,~Red~Sox,} \ldots \}, \]
+\[A = \{ \text{Yankees, Red Sox,} \ldots \}, \]
 whle the National League $N$ also consists of a set of teams:
-\[N = \{ \mathrm{Cubs,~Phillies,} \ldots \}. \]
+\[N = \{ \text{Cubs, Phillies,} \ldots \}. \]
 Each of these teams consists of a set of players: so altogether the set $L$ is a set of sets of sets!
 
 \begin{exercise}{}
@@ -288,13 +288,13 @@ $\bigcup_{i = 1}^{n}  \{i\} = \{1\} \bigcup \{2\} \bigcup \{ 3 \} \bigcup \ldots
 
 $\qquad \quad = \{1, \ldots , n\} \qquad \qquad [list~of~elements] $
 
-$ \qquad \quad = \mathrm{all~integers~from~1~to~}n. \quad [property]$
+$ \qquad \quad = \text{all integers from 1 to }n. \quad [property]$
 \item
 $\bigcup_{i = 1}^{n}  \{1, \ldots, i\} = \{1\} \bigcup \{1, 2\} \bigcup \{1, 2, 3 \} \bigcup \ldots \bigcup \{1, \ldots , n\} $
 
 $\qquad \quad = \{1, \ldots , n\} \qquad \qquad [list~of~elements]$
 
-$\qquad \quad = \mathrm{all~integers~from~1~to~}n. \quad [property]$
+$\qquad \quad = \text{all integers from 1 to }n. \quad [property]$
 \item
 $\bigcup_{i = 1}^{\infty}  \{1, \ldots, i\} = \textrm{[by part (b)]   } \{1, \ldots , \infty\} = {\mathbb N}$
 \end{enumerate}
@@ -500,7 +500,7 @@ The individual steps of the following proofs depend on \emph{logic}; and a rigor
 \begin{prop}{cupcapincl}
 Given any sets $A,B$, It is always true that
 \[
-A \cap B \subset A \text{~~~and~~~}A \subset A \cup B.
+A \cap B \subset A \mathrm{~~~and~~~}A \subset A \cup B.
 \]
 \end{prop}
 \begin{proof}
@@ -567,16 +567,16 @@ We'll prove parts (1), (2), (5), and (7), and leave the rest to you!
 (1)
 From our definitions we have:
 \begin{align*}
-A \cup A' & =  \{ x : x \in A \mathrm{~or~} x \in A' \}  & [\mathrm{def.~of~} \cup ]\\
-& =  \{ x : x \in A \mathrm{~or~} x \notin A \}  & [\mathrm{def.~of~complement} ]  \\
+A \cup A' & =  \{ x : x \in A \mathrm{~or~} x \in A' \}  & [\text{def. of } \cup ]\\
+& =  \{ x : x \in A \mathrm{~or~} x \notin A \}  & [\text{def. of complement} ]  \\
 \end{align*}
 But every $x \in U$ must satisfy either $x \in A$ or $x \notin A$. It follows that $A \cup A'$ includes all elements of $U$; so $A \cup A' = U$.
 
 \noindent
 We also have 
 \begin{align*}
-A \cap A' & =  \{ x : x \in A \mathrm{~and~} x \in A' \}  & [\mathrm{def.~of~} \cap ]\\
-& =  \{ x : x \in A \mathrm{~and~} x \notin A \}  & [\mathrm{def.~of~complement} ]  \\
+A \cap A' & =  \{ x : x \in A \mathrm{~and~} x \in A' \}  & [\text{def. of } \cap ]\\
+& =  \{ x : x \in A \mathrm{~and~} x \notin A \}  & [\text{def. of complement} ]  \\
 \end{align*}
 But there is no element $x$ that is both in $A$ and not in $A$, it follows that there are no elements in $A \cap A'$; so $A \cap A' = \emptyset$.
 
@@ -584,7 +584,7 @@ But there is no element $x$ that is both in $A$ and not in $A$, it follows that 
 (2)
 Observe that
 \begin{align*}
-A \cup A & =  \{ x : \mbox{ $x \in A$ or $x \in A$} \}    & [\mathrm{def.~of~} \cup]  \\
+A \cup A & =  \{ x : \mbox{ $x \in A$ or $x \in A$} \}    & [\text{def. of } \cup]  \\
 & =  \{ x : \mbox{ $x \in A$} \} \\
 & =  A
 \end{align*}
@@ -655,9 +655,9 @@ Fill in the blanks in the following proof of Proposition~\ref{proposition:sets:s
 \noindent
 Observe that
 \begin{align*}
-A \cup \emptyset & =  \{ x : x \in A \mathrm{~or~}x \in \emptyset \}    & [\mathrm{Def.~of~}\cup] \\
+A \cup \emptyset & =  \{ x : x \in A \mathrm{~or~}x \in \emptyset \}    & [\text{Def. of }\cup] \\
 & = \{ x : x \in \_\_\_\_\_\_\_ \}     & [\emptyset \mathrm{~has~no~elements}] \\
-& =  A & \mathrm{Def.~of~set~A} 
+& =  A & \text{Def. of set }A 
 \end{align*}
 and
 \begin{align*}
