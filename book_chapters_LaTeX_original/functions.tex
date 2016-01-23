@@ -864,7 +864,7 @@ If $m-2 = -(n-2) = -n+2$, then adding 1 to each side, we get $m=-n+4$.
 \end{itemize}
 Since $m,n \in \mathbb{N},$ it's not hard to see that if $n \ge 4$, then $-n+4$ is not a natural number.  But if $n$ is 1,2,3 then $-n+4 \in \mathbb{N}$. For example $n=1$ gives $m = 3$, which suggests that $f(1) = f(3)$. We may indeed check that  $f(1) = f(3)$. 
 
-Now the great thing about cases where $f$ is not one-to-one is, the writeup of the solution is very simple. All you have to do is give one example of two different values that return the same function value. In the current example we have: 
+Now the great thing about cases where $f$ is not one-to-one is that  the writeup of the solution is very simple. All you have to do is give one example of two different values that return the same function value. In the current example we have: 
 % So we look at these three cases:
 % \begin{itemize}
 % \item
@@ -873,16 +873,15 @@ Now the great thing about cases where $f$ is not one-to-one is, the writeup of t
 % But if $m=2$ and $n=0$, then $(m-1)^2=1^2=(-1)^2=(n-1)^2$, so $f(m)=f(n)$ even though $m \neq n$.  (We could also choose $m=0$ and $n=2$.)  This is the example that shows that $f$ is not one-to-one.
 % \end{itemize}
 % \end{scratchwork}
+\medskip
 
-\noindent
-\begin{solution}
-$f$ is \emph{not} one-to-one because $f(1) = 2$ and $f(3) = 2$. 
+{\bf Solution:} $f$ is \emph{not} one-to-one because $f(1) = 2$ and $f(3) = 2$. 
 % To prove this, let $m = 0$ and $n = 2$. Then 
 	% $$ f(m) = f(0) = (0-1)^2 = 1$$
 % and
 	% $$ f(n) = f(2) = (2-1)^2 = 1 ,$$
 % so $f(m) = f(n)$. On the other hand, we also have $m = 0 \neq 2 = n$, so $m \neq n$. Since $f(m) = f(n)$ and $m \neq n$, we know that $f$ is not one-to-one.
-\end{solution}
+\medskip
 
 \noindent  
 So the writeup is easy: two values is all it takes. The hard thing is finding the two values!
@@ -1378,9 +1377,9 @@ And all possible outputs of the codomain are paired (onto)
  and
  \item every marriage is between a man and a woman (there are no same-sex marriages). 
  \end{itemize}
-Let $\var{Men}$ = \{men in the country\}, and 
-$\var{Women}$ = \{women in the country\}.
-Then $\var{wife} \colon \var{Men} \to \var{Women}$ is a bijection, since:
+Let ${\var Men} = \{\text{men in the country}\}$, and 
+${\var Women} = \{\text{women in the country}\}$.
+Then the function $\var{wife} \colon \var{Men} \to \var{Women}$ is a bijection, since:
 \begin{itemize}
  \item Two different men cannot have the same wife, so we know that $\var{wife}$ is one-to-one. 
  \item Every woman is the wife of some man (because everyone is married), so $\var{wife}$ is also onto.
@@ -1703,7 +1702,7 @@ Then
 (h \compose (g \compose f))(x) = h \compose (g(\_\_\_\_\_\_)) = h(g(\_\_\_\_\_\_)) = h(g(\_\_\_\_)) = h(\_\_\_\_) = \_\_\_\_ \]
 
 \noindent
-and
+andr
 \[
 ((h \compose g) \compose f)(x) = (h \compose g)(\_\_\_\_\_\_) = h(g(\_\_\_\_\_\_)) = h(g(\_\_\_\_)) = h(\_\_\_\_) = \_\_\_\_ \]
 
@@ -2023,11 +2022,8 @@ From the previous exercise, you may have guessed the following rule:
  Suppose $f\colon X \to Y$. Then $f$ has an inverse $g \colon Y \to X$ if and only if $f$ is a bijection.\index{Function!as a bijection}\index{Bijection!relation to inverse functions}\index{Inverse function!relation to bijection}
  \end{thm}
  
- This is another ``if and only if" proof, so it must be proved in both directions. We will prove the forward direction of this proposition.  You will prove the reverse direction.
- 
- \begin{scratchwork}
- The forward direction of Proposition~\ref{InverseBijection} says that if $f \colon X \to Y$ has an inverse $g \colon Y \to X$, then $f$ is a bijection.  In other words we must assume the first statement, and from that prove that $f$ is one-to-one and onto.
- \end{scratchwork}
+ This is another ``if and only if" proof, so it must be proved in both directions. We will prove the forward direction of this proposition.  You will prove the reverse direction.  The forward direction says that if $f \colon X \to Y$ has an inverse $g \colon Y \to X$, then $f$ is a bijection.  In other words we must assume the first statement, and from that prove that $f$ is one-to-one and onto.
+
  
  \begin{proof} \emph{(forward direction)}
  Assume there is a function $g \colon Y \to X$ that is an inverse of~$f$. Then by the definition of an inverse function,
@@ -2055,7 +2051,8 @@ Prove the reverse direction of Proposition~\ref{InverseBijection}.
  \item \label{InverseUniqueExers-bij}
  Prove that any inverse of a bijection is a bijection.
  \item \label{InverseUniqueExers-unique}
- Show that the inverse of a function is \emph{unique}: if $g_1$ and~$g_2$ are inverses of~$f$, then $g_1 = g_2$. 
+ Show that the inverse of a function is \emph{unique}: if $g_1$ and~$g_2$ are inverses of~$f$, then $g_1 = g_2$.
+\hyperref[sec:functions:hints]{(*Hint*)} 
  \end{enumerate}
  \end{exercise}
 
@@ -2067,7 +2064,7 @@ Exercise~\ref{exercise:functions:InverseUniqueExers} is key because it enables u
 If $f$ is a function that has an inverse, then it is easy to find~$f^{-1}$ as a set of ordered pairs. Namely, 
 $$ f^{-1} = \{\, (y,x) \mid (x,y) \in f \,\} .$$
 This is simply a restatement of the fact that
- $$y = f(x) \eiff x = f^{-1}(y) .$$
+ $$y = f(x) \text{ iff } x = f^{-1}(y) .$$
 \end{enumerate}
 \end{rem}
 
@@ -2090,7 +2087,7 @@ Find the inverse of $\Id_A$
 Suppose $f \colon A \to B$ and $g \colon B \to C$ are bijections. Show that $(g \compose f)^{-1} = f^{-1} \compose g^{-1}$.
 \item \label{InverseIdentityExers-Comp=Id}
 Suppose $f \colon X \to Y$ and $g \colon Y \to X$. Show that $g$ is the inverse of~$f$ if and only if
-$$ \mbox{$f \compose g = \Id_Y$ \quad and \quad $g \compose f = \Id_X$} .$$
+\[ f \compose g = \Id_Y \text{  and  }g \compose f = \Id_X .\]
 \item \label{InverseIdentityExers-InvOfInv}
 Suppose $f \colon X \to Y$ is a bijection. Show that the inverse of~$f^{-1}$ is~$f$. That is, $(f^{-1})^{-1} = f$.
 \end{enumerate}
