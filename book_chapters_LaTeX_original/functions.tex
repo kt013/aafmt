@@ -12,7 +12,7 @@ The idea of a function should be familiar to you from previous math classes. You
 In the previous chapter, we introduced set operations such as $\cup$ and $\cap$.  In this chapter we are going to need yet another set operation. This operation is called the "Cartesian product", and is denoted by the symbol $\times$. In order to define the Cartesian product, we will first need a preliminary definition:
 
 \begin{defn}
-For any objects x and y, mathematicians use (x, y) to denote the \textbf{ordered pair}\index{Ordered pair!definition of} whose first coordinate is $x$ and whose second coordinate is $y$. Two ordered pairs are equal if and only if both coordinates are equal:  
+For any objects x and y, mathematicians use (x, y) to denote the \term{ordered pair}\index{Ordered pair!definition of} whose first coordinate is $x$ and whose second coordinate is $y$. Two ordered pairs are equal if and only if both coordinates are equal:  
 \[
 (x_1,y_1) = (x_2,y_2)~ \mbox{ iff }  x_1 = x_2 \mbox{ and } y_1 = y_2. \] 
 \end{defn}
@@ -34,7 +34,7 @@ $x \in {\mathbb R}$ and $y \in  {\mathbb R}$, but $(x, y) \notin {\mathbb R}$.
 We arrive at our general definition of Cartesian product by replacing ${\mathbb R}$ and ${\mathbb R}$ in our previous example with arbitrary sets $A$ and $B$:
 
 \begin{defn}
-For any sets $A$ and $B$, we define the \bfii{ Cartesian product} of $A$ and $B$ (denoted $A \times B$ as:\index{Cartesian product!formal definition}
+For any sets $A$ and $B$, we define the \term{Cartesian product} of $A$ and $B$ (denoted $A \times B$ as:\index{Cartesian product!formal definition}
 \[
 A \times B = \{ (a, b) | a \in A, b \in B \}\]
 
@@ -163,9 +163,9 @@ The following properties are true of \underline{any} function $f$:
 %\end{enumerate}
 %\end{defn}
 \begin{enumerate}
-\item Any function has a  set of allowable inputs, which we call the \bfii{ domain} of the function.\index{Domain}
+\item Any function has a  set of allowable inputs, which we call the \term{domain} of the function.\index{Domain}
 \item Any function also has a a set that contains all of the
-possible outputs, which we call the \bfii{ codomain} of the function.\index{Codomain}
+possible outputs, which we call the \term{codomain} of the function.\index{Codomain}
 \end{enumerate}
 
 In Example \ref{example:functions:xcubed}, any real number can be used as the input~$x$, so the domain is~$\mathbb{R}$,
@@ -408,7 +408,7 @@ The preceding section provided some intuition about how and why functions are re
  Suppose $A$ and~$B$ are sets.
 
 A set~$f$ is a 
-\bfii{ function from~$A$ to~$B$} if
+\term{function from~$A$ to~$B$} if
 \begin{enumerate}[(a)]
 \item \label{FunctionDefn-func-pair}
 $f \subset A \times B$
@@ -677,10 +677,10 @@ If you have an arrow diagram of a function, then it is easy to tell whether or n
 Is function~$h$ of Figure \ref{arrow11} one-to-one?  Explain why or why not.
 \end{exercise}
 
-This concept of one-to-one is very useful.  If we know $A$ is a function, we know that every input of $A$ has exactly one output.  But if we know that $A$ is a one-to-one function, then we also know that every output in the range of $A$ is caused by \textbf{exactly} one input.  This notion is formalized in the following definition:
+This concept of one-to-one is very useful.  If we know $A$ is a function, we know that every input of $A$ has exactly one output.  But if we know that $A$ is a one-to-one function, then we also know that every output in the range of $A$ is caused by \emph{exactly} one input.  This notion is formalized in the following definition:
 
 \begin{defn} \label{121defn}
-Suppose $f \colon A \to B$. We say $f$ is a \bfii{ one-to-one function} iff for all $a_1,a_2 \in A$, such that
+Suppose $f \colon A \to B$. We say $f$ is a \term{one-to-one function} iff for all $a_1,a_2 \in A$, such that
 $f(a_1) = f(a_2)$, we have $a_1 = a_2$. \index{One-to-one!formal definition}
 \end{defn}
 
@@ -742,7 +742,7 @@ making $x=y$.  Hence $h$ is one-to-one.
 \end{example}
 
 \begin{rem}\label{rem:onetoone}
-In your college algebra and calculus classes you may have used the \textbf{\emph{horizontal line test}} to get an idea of whether a function was one-to-one.  For instance, consider the function $f(x)=x +1$ from Part 1 of Example~\ref{example:functions:1_to_1_or_not} above.  Figure~\ref{fig:xplus1} is the graph of $f$ with a horizontal line passing through the function at a particular point.\index{Horizontal line test}\index{One-to-one!horizontal line test}
+In your college algebra and calculus classes you may have used the \term{horizontal line test}\index{Horizontal line test} to get an idea of whether a function was one-to-one.  For instance, consider the function $f(x)=x +1$ from Part 1 of Example~\ref{example:functions:1_to_1_or_not} above.  Figure~\ref{fig:xplus1} is the graph of $f$ with a horizontal line passing through the function at a particular point.\index{Horizontal line test}\index{One-to-one!horizontal line test}
 \begin{figure}[h]
 \includegraphics[width=3.5in]{images/xplus1.png}
 \caption{Graph of function $f(x)=x +1$.}
@@ -789,7 +789,7 @@ $j(x) = 1/ \bigl( |x| + 1 \bigr)$.
 
 
 
-There is an equivalent way to show functions are one-to-one that is also useful.  To see it, recall the $\var{wife}$ function from the beginning of the section.  The $\var{wife}$ function is one-to-one because one woman can't be (legally) married to two different husbands. We can express the same thing in a different way by saying that two different husbands must be married to two different wives. These two statements are \bfii{ contrapositives}\index{Contrapositive} of each other, and are in fact equivalent.  (``contrapositive'' is a logical term--you may have run across it before in a Discrete Math class.)
+There is an equivalent way to show functions are one-to-one that is also useful.  To see it, recall the $\var{wife}$ function from the beginning of the section.  The $\var{wife}$ function is one-to-one because one woman can't be (legally) married to two different husbands. We can express the same thing in a different way by saying that two different husbands must be married to two different wives. These two statements are \term{contrapositives}\index{Contrapositive} of each other, and are in fact equivalent.  (``contrapositive'' is a logical term--you may have run across it before in a Discrete Math class.)
  
 If we generalize this reasoning to arbitrary one-to-one functions, we have the following two equivalent statements:
 \begin{itemize}
@@ -802,7 +802,7 @@ A function is one-to-one iff two different elements of the domain always map to 
 We formalize this equivalence in the following alternative definition of one-to-one:
 
 \begin{defn} \label{121defn2}\emph{(Alternate)}
-Suppose $f \colon A \to B$. We say $f$ is a \bfii{ one-to-one function}\index{One-to-one!alternate definition} iff for all $a_1,a_2 \in A$, such that $a_1 \neq a_2$, we have $f(a_1) \neq f(a_2)$. 
+Suppose $f \colon A \to B$. We say $f$ is a \term{one-to-one function}\index{One-to-one!alternate definition} iff for all $a_1,a_2 \in A$, such that $a_1 \neq a_2$, we have $f(a_1) \neq f(a_2)$. 
 \end{defn}
 
 % \begin{prop}{alternate121defn} \emph{(Alternate characterization of one-to-one functions)} 
@@ -979,7 +979,7 @@ Is the function $\var{Atomic Number} \colon \{ \mbox{ Chemical Elements } \} \to
 The following is the "official" definition  of onto.
 
 \begin{defn}
-Suppose $f \colon A \to B$. We say $f$ is \bfii{ onto} if for all $b \in B$, \index{Onto!formal definition}
+Suppose $f \colon A \to B$. We say $f$ is \term{onto} if for all $b \in B$, \index{Onto!formal definition}
 there is some $a \in A$, such that $f(a) = b$. 
 \end{defn}
 
@@ -1168,7 +1168,7 @@ To show that $f(x)$ is one-to-one, we will need two additional statements:
 \item
 If $y > 1$, there exists no $x\le0$ such that $1 - x^2 = y$.
 \item
-If $y \le 1$, there exists a unique $x \le 0$ such that $1-x^2 = y$.
+If $y \le 1$, there exists no $x > 0$ such that $e^x = y$
 \end{enumerate}
 From these two facts (together with (a) and (b)) we find that for any $y$ (whether $>1$ or $\le 1$) there is \emph{exactly} one $x$ such that $f(x)=y$.
 \end{example}
@@ -1238,11 +1238,11 @@ Prove or disprove:
 %\begin{exers} \label{OntoTheoreticalExers} \ 
 %\begin{enumerate}
 %% \item Give an example of a function $f \colon \real \to \real$ that is both one-to-one and onto.
-%% ({\em Justify your answer!\/})
+%% ({\em Justify your answer!})
 %% \item Give an example of a function $f \colon \real \to \real$ that is one-to-one, but not onto.
-%% ({\em Justify your answer!\/})
+%% ({\em Justify your answer!})
 %% \item Give an example of a function $f \colon \real \to \real$ that is onto, but not one-to-one.
-%% ({\em Justify your answer!\/})
+%% ({\em Justify your answer!})
 %% \item \label{m>nIFFonto}
 %% Suppose $m,n \in \mathbb{N}$. Show $m \ge n$ if and only if there exists an onto function $f \colon \{1,2,3,\ldots,m\} \to \{1,2,3,\ldots,n\}$.
 %% \hint{SHOULD GIVE A HINT!!!}
@@ -1667,7 +1667,7 @@ $\var{child} \compose \var{brother} \compose \var{parent}$
 \end{exercise}
 
 \begin{defn}\label{defn:composition}
-Suppose $f \colon A \to B$ and $g \colon B \to C$. The \bfii{ composition} of $g$ and $f$ (denoted $g \compose f$) is the function from~$A$ to~$C$ defined by
+Suppose $f \colon A \to B$ and $g \colon B \to C$. The \term{composition} of $g$ and $f$ (denoted $g \compose f$) is the function from~$A$ to~$C$ defined by
 $$ \mbox{$(g \compose f)(a) = g \bigl( f(a) \bigr)$ for all $a \in A$.} $$\index{Composition!definition of}
 \end{defn}
  
@@ -1975,7 +1975,7 @@ Finally, we can give the definition of an inverse function:\index{Function!inver
  and
  \item $g \colon Y \to X$,
 \end{itemize}
-We say that $g$ is an \bfii{ inverse} of~$f$ if and only if:
+We say that $g$ is an \term{inverse} of~$f$ if and only if:
  \begin{enumerate} \renewcommand{\theenumi}{\alph{enumi}}
  \item $f \bigl( g(y) \bigr) = y$ for all $y \in Y$,
  and
