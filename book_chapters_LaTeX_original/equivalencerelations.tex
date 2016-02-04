@@ -69,8 +69,8 @@ In recognition of this, mathematicians simply \emph{define} a relation to be a s
 
 \begin{defn} \label{relation} \index{Relation!definition of} Suppose $A$ and $B$ are sets. 
 \begin{enumerate}[(a)]
-\item Any subset of $A \times B$ is called a \bfii{ relation from~$A$ to~$B$}.
-\item For the special case where $A = B$, any subset of $A \times A$ is called a \bfii{ binary relation} \index{Binary Relation}\index{Relation!binary} on~$A$.
+\item Any subset of $A \times B$ is called a \term{relation from~$A$ to~$B$}.
+\item For the special case where $A = B$, any subset of $A \times A$ is called a \term{binary relation} \index{Binary Relation}\index{Relation!binary} on~$A$.
 \end{enumerate}
 \end{defn}
 
@@ -127,7 +127,7 @@ We can draw a picture to represent any given binary relation on any given set~$A
 	\item Draw a dot for each element of~$A$.
 	\item For $a,b \in A$, draw an arrow from $a$ to~$b$ if and only if $(a,b)$ is an element of the relation.
 	\end{itemize} 
-The resulting picture is called a \bfii{ digraph}. (The word is pronounced ``DIE-graff'' --- it is short for ``directed graph.''
+The resulting picture is called a \term{digraph}. (The word is pronounced ``DIE-graff'' --- it is short for ``directed graph.''
 \end{defn}
  
  \begin{eg}
@@ -175,7 +175,7 @@ It is also possible to draw digraphs for relations that are not binary relations
  \item \label{DrawBinRelExer-son}
 Draw digraph representations of the relations given in Example \ref{ex_rel}.
  \item \label{DrawBinRelExer-sister}
-The graphs you drew in (a) are all examples of \bfii{ bipartite} graphs.  Complete the following definition:  A bipartite graph is a graph in which the vertices (dots) can be divided into two  sets, such that $\ldots \ldots \ldots$.
+The graphs you drew in (a) are all examples of \term{bipartite} graphs.  Complete the following definition:  A bipartite graph is a graph in which the vertices (dots) can be divided into two  sets, such that $\ldots \ldots \ldots$.
  \end{enumerate}
  \end{exer}
 
@@ -194,7 +194,7 @@ For example, using the symbol $<$ we can define the following binary relation on
  \item  
  Define the set $R_=$ associated with the symbol ``$=$'' applied to the complex numbers. In your definition assume that equality of real numbers has been defined, and write complex numbers in rectangular form (for example, $a + bi$ or $c + di$).
  \item  
- List all the elements of the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2\}$. (The set of subsets of $A$ is denoted as $P(A)$, the \bfii{ power set}\index{Power set} of $A$.)
+ List all the elements of the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2\}$. (The set of subsets of $A$ is denoted as $P(A)$, the \term{power set}\index{Power set} of $A$.)
  \hyperref[secEqRelChapHints]{(*Hint*)}
  \item  
 Consider the set $R_\subset$ associated with the symbol ``$\subset$'' applied to the subsets of $A := \{1,2,3\}$. How many elements does $R_\subset$ have?
@@ -213,13 +213,13 @@ There are three basic properties that any given binary relation may or may not h
 \begin{defn} \label{RefSymmTransDefn}
 Suppose $\rel$ is a binary relation on a set~$A$. 
 \begin{itemize}
-\item We say that $\rel$ is \bfii{ reflexive} iff 
+\item We say that $\rel$ is \term{reflexive} iff 
 	$$ \forall a \in A, a \rel a .$$\index{Relation!reflexive}\index{Reflexive}
 In other words, a binary relation on $A$ is reflexive if  every element of A is related to itself.
-\item We say that $\rel$ is \bfii{ symmetric} iff 
+\item We say that $\rel$ is \term{symmetric} iff 
 	$$ \forall a,b \in A,  (a \rel b) \eif (b \rel a)  .$$\index{Relation!symmetric}\index{Symmetric}
 In other words, a binary relation on $A$ is symmetric if  whenever $a$ is related to $b$, then $b$ is also related to $a$.  (Here $a$ and $b$ represent elements of the set $A$.)
-\item We say that $\rel$ is \bfii{ transitive} iff 
+\item We say that $\rel$ is \term{transitive} iff 
 	$$ \forall a,b,c \in A,  \bigl( (a \rel b) \mbox{ and } (b \rel c) \bigr) \eif (a \rel c)  .$$\index{Relation!transitive}\index{Transitive}
 In other words, a binary relation on $A$ is transitive if  whenever $a$ is related to $b$ and $b$ is related to $c$, then $a$ is related to $c$.  (Here $a$, $b$ and $c$ represent elements of the set $A$.)
 \end{itemize}
@@ -436,7 +436,7 @@ For the relation $\cong$ in part (b) of Example~\ref{MoreEquivRelEgs}, explain w
 The above examples motivate the following definition:
 
 \begin{defn}
-An \bfii{ equivalence relation}\index{Equivalence relation} on a set~$A$ is a binary relation on~$A$ that is reflexive, symmetric, and transitive.
+An \term{equivalence relation}\index{Equivalence relation} on a set~$A$ is a binary relation on~$A$ that is reflexive, symmetric, and transitive.
 \end{defn}
 
 \begin{exer}
@@ -556,7 +556,7 @@ Prove Proposition~\ref{proposition:EquivalenceRelationsChap:EquivRelFromFunc}. (
 If we are interested in first names (as in Example~\ref{MoreEquivRelEgs}), then we may also be interested in the set of all people who have the same first name as you. This is called your ``equivalence class."
  
  \begin{defn}\label{DefEquivRel}
- Suppose $\sim$ is an equivalence relation on a set~$A$. For each $a \in A$, the \bfii{ equivalence class}\index{Equivalence class} of~$a$ is the following subset of~$A$:
+ Suppose $\sim$ is an equivalence relation on a set~$A$. For each $a \in A$, the \term{equivalence class}\index{Equivalence class} of~$a$ is the following subset of~$A$:
  	$$ [a] = \{\, s \in A \mid s \sim a \,\} .$$
 That is, the equivalence class of the element $a \in A$ is the set of all elements of $A$ that are equivalent to $a$.
 \end{defn}
@@ -738,7 +738,7 @@ are three equivalence classes that partition the set of all  integers.
 In the Modular Arithmetic chapter we defined the integers mod 3\index{Integers mod $n$! as equivalence classes} as the set of remainders under division mod 3. Here we will give an alternative definition that amounts to the same thing:
 
 \begin{defn}\label{mod_eqiv_def_3} \emph{(Integers mod 3, equivalence class definition)}
-The set of equivalence classes $\{ [0]_3, [1]_3, [2]_3 \}$ is identified as the set of \bfii{ integers mod 3}, and is represented by the symbol~$\integer_3$.
+The set of equivalence classes $\{ [0]_3, [1]_3, [2]_3 \}$ is identified as the set of \term{integers mod 3}, and is represented by the symbol~$\integer_3$.
 
 We may also use the simpler notation $\class{k}$ to represent the equivalence class  $[k]_3$. So we may write either  
 $\integer_3 = \{ [0]_3, [1]_3, [2]_3 \}$ or $\integer_3 = \{ \class{0}, \class{1}, \class{2} \} .$
@@ -749,7 +749,7 @@ Notice the subtle (but critically important) difference between this description
 We now define arithmetic operations on $\integer_3$, using our new definition of $\integer_3$ as a set of equivalence classes. Note the additional level of abstraction here: these arithmetic operations are defined on equivalence classes, which are \emph{sets} rather than numbers. But we've seen this before: recall that in the Sets chapter we defined operations on sets. So you're old hands at this!
 
 \begin{defn}\label{RulesOfModArith} (Rules of modular arithmetic)
-The \bfii{ arithmetic operations modulo~$3$} are defined as follows:\index{Modular arithmetic!on equivalence classes}
+The \term{arithmetic operations modulo~$3$} are defined as follows:\index{Modular arithmetic!on equivalence classes}
 \begin{itemize}
 \item $[a]_3 + [b]_3 = [a+b]_3$ \qquad (or $\class{a} + \class{b} = \class{a + b}$),
 \item $[a]_3 - [b]_3 = [a-b]_3$ \qquad (or $\class{a} - \class{b} = \class{a - b}$),
@@ -766,7 +766,7 @@ We have $[1]_3 + [2]_3 = [1 + 2]_3 = [3]_3$. However, since 3 and 0 are in the s
 
 Example~\ref{ModPlusExample} illustrates the following general rule:
 $$ \text{%the result of any arithmetic operation (modulo~$3$) will be either $[0]_3$, $[1]_3$, or~$[2]_3$:
-\it If $r$ is the remainder when $a + b$ is divided by\/~$3$, then $\class{a} + \class{b} = \class{r}$.} $$
+ If $r$ is the remainder when $a + b$ is divided by $3$, then $\class{a} + \class{b} = \class{r}$.} $$
 You may recognize that this is essentially the same rule that we used in our previous discussion of modular arithmetic.
 
 \begin{exercise}{47}
@@ -775,12 +775,10 @@ Write down similar rules for (a) subtraction mod 3; (b) multiplication mod 3.
 
 \begin{eg}
 Here is a table that shows the results of addition modulo~$3$:
-\begin{center} \begin{tabular}{c||c|c|c}
-$+$&$\class{0}$&$\class{1}$&$\class{2}$\\ \hhline{=||=|=|=}
+\begin{center} \begin{tabular}{c|c c c}
+$+$&$\class{0}$&$\class{1}$&$\class{2}$\\ \hline
 $\class{0}$&$\class{0}$&$\class{1}$&$\class{2}$ \\
-\hline
 $\class{1}$&$\class{1}$&$\class{2}$&$\class{0}$ \\
-\hline
 $\class{2}$&$\class{2}$&$\class{0}$&$\class{1}$ \\
 \end{tabular}
 \end{center}
@@ -808,19 +806,19 @@ multiplication modulo~$3$.
 \item \label{Mod3TablesEx-subtraction}
 subtraction modulo~$3$ (For $\class{a} - \class{b}$,  put the result in row $\class{a}$ and column; $\class{b}$.)
 \end{enumerate}
-For both (a) and (b), all table entries should be  either\/ $\class{0}$, $\class{1}$, or\/ $\class{2}$.
+For both (a) and (b), all table entries should be  either $\class{0}$, $\class{1}$, or $\class{2}$.
 \end{exercise}
 
 
 
 \subsection{The integers modulo $n$}
-The preceding discussion can be generalized to apply with any integer~$n$ in place of~$3$. This results in \bfii{ modular arithmetic}.
+The preceding discussion can be generalized to apply with any integer~$n$ in place of~$3$. This results in \term{modular arithmetic}.
 
 \begin{defn} \label{integ_mod_n}
 Fix some natural number $n$.
 \begin{enumerate}[(a)]
 \item For any integer~$k$, we use $[k]_n$ to denote the equivalence class of~$k$ under congruence modulo~$n$. When $n$ is clear from the context, we may write~$\class{k}$, instead of $[k]_n$.
-\item The set of these equivalence classes is called the \bfii{ integers modulo~$n$}\index{Integers modulo}. It is denoted~$\integer_n$.
+\item The set of these equivalence classes is called the \term{integers modulo~$n$}\index{Integers modulo}. It is denoted~$\integer_n$.
 
  \item Addition, subtraction, and multiplication modulo~$n$ are defined by:
 \begin{itemize}
@@ -839,7 +837,7 @@ Note that $\left|\integer_n \right| = n$.\footnote{Recall that for a set $S$, $|
 \begin{prop}{}
 For any $n \in \mathbb{N}^+$, we have 
 	$$\integer_n = \{ \class{0}, \class{1}, \class{2}, \ldots, \class{n-1} \}$$
-and\/ $\class{0}, \class{1}, \class{2}, \ldots, \class{n-1}$ are all distinct.
+and $\class{0}, \class{1}, \class{2}, \ldots, \class{n-1}$ are all distinct.
 \end{prop}
 
 
@@ -873,7 +871,7 @@ Find the equivalence class of the result.
 
 But suppose we had chosen \emph{different} elements to represent $\class{a}$ and $\class{b}$: how do we know that we would come up with the same answer? In other words: how do we know that $\class{a} \mathbin{+} \class{b}$ is independent of the choice of representatives from $\class{a}$ and $\class{b}$?
 
-So there's a little more work we have to do here to make sure that we don't get into trouble. We need to show that  the operations of addition, subtraction, and multiplication are \bfii{ well-defined}\index{Well defined}: that is, if $a_1, a_2, b_1,$ and $b_2$ are integers such that  $\class{a_1} = \class{a_2}$ and $\class{b_1} = \class{b_2}$, then we need to show that
+So there's a little more work we have to do here to make sure that we don't get into trouble. We need to show that  the operations of addition, subtraction, and multiplication are \term{well-defined}\index{Well defined}: that is, if $a_1, a_2, b_1,$ and $b_2$ are integers such that  $\class{a_1} = \class{a_2}$ and $\class{b_1} = \class{b_2}$, then we need to show that
 \begin{enumerate}[(a)]
 \item $\class{a_1} \mathbin{+} \class{b_1} = \class{a_2} \mathbin{+} \class{b_2}$,
 \item $\class{a_1} \mathbin{-} \class{b_1} = \class{a_2} \mathbin{-} \class{b_2}$, 
@@ -956,7 +954,7 @@ That is, show that there exists integers $a$, $b$ such that $[a]_n = [b]_n$ and 
 
 \section{Partitions}  \label{EquivalenceRelationsPartitionsSect}
 
-Whenever we classify the elements of a particular set, essentially what we are doing is dividing the set up into several disjoint subsets. This is called a  \bfii{ partition}\index{Partition!of a set} of the set. Figure~\ref{partitionfig} below shows a schematic representation of a partition.
+Whenever we classify the elements of a particular set, essentially what we are doing is dividing the set up into several disjoint subsets. This is called a  \term{partition}\index{Partition!of a set} of the set. Figure~\ref{partitionfig} below shows a schematic representation of a partition.
 
 \begin{center}
 \begin{figure}[ht]
@@ -986,7 +984,7 @@ Here $\{A, B, C\}$ is a  partition pf~$T$ into three disjoint subsets (as long a
 We generalize this example in the following definition:
 
 \begin{defn}
-A \bfii{ partition} of a set~$A$ is a collection of nonempty subsets of~$A$, such that each element of~$A$ is in exactly one of the subsets. In other words:
+A \term{partition} of a set~$A$ is a collection of nonempty subsets of~$A$, such that each element of~$A$ is in exactly one of the subsets. In other words:
 \begin{enumerate}[(a)]
 \item the union of the subsets in the collection is all of~$A$,
 and
@@ -1034,7 +1032,7 @@ and
 Recall that $\integer_n$ replaces integers $a$ and~$b$ that are congruent modulo~$n$ with objects~$\class{a}$ and~$\class{b}$ that are exactly equal to each other. This was achieved by letting $\integer_n$ be the set of all equivalence classes. The set $\integer_n$ applies only to congruence modulo~$n$, but the same thing can be done for any equivalence relation:
 
 \begin{defn}
-Suppose $\sim$ is an equivalence relation on a set~$A$. The set of all equivalence classes is called \bfii{ $A$ modulo~$\sim$}. It is denoted $A/\mathord{\sim}$.
+Suppose $\sim$ is an equivalence relation on a set~$A$. The set of all equivalence classes is called \term{$A$ modulo~$\sim$}. It is denoted $A/\mathord{\sim}$.
 \end{defn}
 
 \begin{eg}

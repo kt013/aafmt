@@ -228,11 +228,11 @@ h(-1) = r_{180},~~
 So let's buckle down and get mathematical. We start with a rigorous definition of isomorphism:
 
 \begin{defn}\label{isomorph_defn}
-Two groups $(G, \cdot)$ and $(H, \circ)$ are \bfii{ isomorphic\/}\index{Group!isomorphic} if there exists a bijection $\phi : G \rightarrow H$ such that the group operation is preserved;  that~is, 
+Two groups $(G, \cdot)$ and $(H, \circ)$ are \term{isomorphic}\index{Group!isomorphic} if there exists a bijection $\phi : G \rightarrow H$ such that the group operation is preserved;  that~is, 
 \[
 \phi( a \cdot b) = \phi( a) \circ \phi( b)
 \]
-for all $a$ and $b$ in $G$. If $G$ is isomorphic to $H$, we write $G \cong H$. The function $\phi$ is called an \bfii{ isomorphism}\index{Group!isomorphism of}\index{Isomorphism!of groups}. 
+for all $a$ and $b$ in $G$. If $G$ is isomorphic to $H$, we write $G \cong H$. The function $\phi$ is called an \term{isomorphism}\index{Group!isomorphism of}\index{Isomorphism!of groups}. 
 \end{defn}
 
 \begin{rem}
@@ -1054,10 +1054,10 @@ Complete the proof of Proposition~\ref{isomorph_theorem_6} by showing that $\Phi
 \end{enumerate}
 \end{exercise}
 
-The isomorphism $\Phi: G \rightarrow S_{|G|}$ defined in the proof is known as the \bfii{ left regular representation\/}\index{Left regular representation}\index{Regular representation!left} of~$G$. This is not the only possible isomorphism. Another isomorphism is presented in the following exercise.
+The isomorphism $\Phi: G \rightarrow S_{|G|}$ defined in the proof is known as the \term{left regular representation}\index{Left regular representation}\index{Regular representation!left} of~$G$. This is not the only possible isomorphism. Another isomorphism is presented in the following exercise.
 
 \begin{exercise}{r_reg}
-The \bfii{ right regular representation\/}\index{Right regular representation}\index{Regular representation!right}  $\tilde{\Phi}: G \rightarrow S_{|G|}$  is defined as follows. For any $g \in G$ define the  function $\tilde{\phi}_g : G \rightarrow G$ by 
+The \term{right regular representation}\index{Right regular representation}\index{Regular representation!right}  $\tilde{\Phi}: G \rightarrow S_{|G|}$  is defined as follows. For any $g \in G$ define the  function $\tilde{\phi}_g : G \rightarrow G$ by 
 \[
 \tilde{\sigma}_g(a) := ag^{-1}.
 \]
@@ -1129,7 +1129,7 @@ Consider
 Although ${\mathbb Z}_2 \times {\mathbb Z}_2$ and ${\mathbb Z}_4$ both contain four elements,  they are not isomorphic. We can prove this by noting that ${\mathbb Z}_4$ is cyclic, while  every element $(a,b)$ in ${\mathbb Z}_2 \times {\mathbb Z}$ has order 2 (verify this).	
 \end{example}
 
-The group $G \times H$ is called the \bfii{ external direct product\/}\index{Direct product of groups!external}\index{External direct product} of  $G$ and $H$. Notice the difference between `Cartesian product' and 'external direct product': the external direct product is a group whose underlying set is a Cartesian product; but in addition, the external direct product has a group operation, which generic off-the-shelf Cartesian products don't ordinarily have. 
+The group $G \times H$ is called the \term{external direct product}\index{Direct product of groups!external}\index{External direct product} of  $G$ and $H$. Notice the difference between `Cartesian product' and 'external direct product': the external direct product is a group whose underlying set is a Cartesian product; but in addition, the external direct product has a group operation, which generic off-the-shelf Cartesian products don't ordinarily have. 
 
 In the previous example, we used two groups to build a new group. But there's no reason to stop with two! The direct product
 \[
@@ -1205,7 +1205,7 @@ $n = |(g,h)|$. Then
 \end{gather*}
 Hence, $n$ must divide $m$, and $n \leq m$.  However, by the second
 equation, both $r$ and $s$ must divide $n$; therefore, $n$ is a common
-multiple of $r$ and $s$. Since $m$ is the {\em least common multiple\/}
+multiple of $r$ and $s$. Since $m$ is the {\em least common multiple}
 of $r$ and $s$, $m \leq n$.  Consequently, $m$ must be equal to~$n$.
 \end{proof}
 
@@ -1347,7 +1347,7 @@ Find three non-isomorphic abelian groups of order 8, and show that they are not 
 
 Remember that in the Permutations chapter we showed that every permutation can be ``factored''  as the product of disjoint cycles. (At that time, we compared this to the factorization of integers into prime factors).  It turns out that abelian groups can also be ``factored''.  This beautiful and general result is summarized in the following proposition. We will not give a complete proof of the proposition (which uses induction), but we hope that it makes sense to you in light of the foregoing discussion.\footnote{Many proofs can be found on the web: search for ``structure of finite abelian groups''.}
 
-\begin{thm}\label{FactorabelianGroup} \bfii{ (Factorization of abelian groups)}~~
+\begin{thm}\label{FactorabelianGroup} \term{(Factorization of abelian groups)}~~
 If $G$ is an abelian group, then there exist prime numbers $p_1 \ldots p_k$ and exponents $e_1 \ldots e_k$ such that
 \[
 G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb
@@ -1410,7 +1410,7 @@ $H \cap K = \{ e \}$;
 $hk = kh$ for all $k \in K$ and $h \in H$.
  
 \end{itemize}
-Then $G$ is the \bfii{ internal direct product\/}\index{Direct product of
+Then $G$ is the \term{internal direct product}\index{Direct product of
 groups!internal}\index{Internal direct product} of $H$ and $K$.
 \end{defn}
  
@@ -1635,7 +1635,7 @@ make a conjecture about $D_{2n}$? Prove your conjecture.
 %% Notation corrected in the quaternion group.  Suggested by S. Hansen.
 
 \item
-The \bfii{ quaternion group} is a well-known group of order 8.  (You may find the Cayley table of the quaternion group by doing a web search.)  Prove or disprove:  The quaternion group is isomorphic to $D4$. 
+The \term{quaternion group} is a well-known group of order 8.  (You may find the Cayley table of the quaternion group by doing a web search.)  Prove or disprove:  The quaternion group is isomorphic to $D4$. 
 
 
 \item
@@ -1686,7 +1686,7 @@ Let $m, n \in {\mathbb Z}$. Prove that $\langle m \rangle \cap \langle n \rangle
 The following exercises  will require this definition:
 
 \begin{defn}
- An \bfii{ automorphism\/}\index{Automorphism!of a
+ An \term{automorphism}\index{Automorphism!of a
 group}\index{Group!automorphism of} of a group $G$ is an isomorphism
 with itself. 
 \end{defn}
@@ -1726,7 +1726,7 @@ H)$.
 Let $G$ be a group and $g \in G$. Define a map $i_g : G \rightarrow
 G$ 
 by $i_g(x) = g x g^{-1}$.  Prove that $i_g$ defines an automorphism of
-$G$.  Such an automorphism is called an \bfii{ inner
+$G$.  Such an automorphism is called an \term{inner
 automorphism}\index{Automorphism!inner}.  
 \item
 The set of all inner

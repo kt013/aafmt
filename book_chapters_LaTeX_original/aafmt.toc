@@ -82,13 +82,13 @@
 \contentsline {subsection}{\numberline {7.3.2}Proving that a function is one-to-one}{189}{subsection.7.3.2}
 \contentsline {section}{\numberline {7.4}Onto functions}{194}{section.7.4}
 \contentsline {subsection}{\numberline {7.4.1}Concept and definition}{194}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Proving that a function is onto}{195}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}Bijections}{200}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Concept and definition}{200}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.4.2}Proving that a function is onto}{196}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}Bijections}{201}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Concept and definition}{201}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Proving that a function is a bijection}{202}{subsection.7.5.2}
 \contentsline {section}{\numberline {7.6}Composition of functions}{205}{section.7.6}
 \contentsline {subsection}{\numberline {7.6.1}Concept and definition}{205}{subsection.7.6.1}
-\contentsline {subsection}{\numberline {7.6.2}Proofs involving function composition}{209}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {7.6.2}Proofs involving function composition}{210}{subsection.7.6.2}
 \contentsline {section}{\numberline {7.7}Inverse functions}{212}{section.7.7}
 \contentsline {subsection}{\numberline {7.7.1}Concept and definition}{212}{subsection.7.7.1}
 \contentsline {subsection}{\numberline {7.7.2}Which functions have inverses?}{215}{subsection.7.7.2}
@@ -235,11 +235,12 @@
 \contentsline {section}{\numberline {20.7}Hints for ``Symmetries of Plane Figures'' exercises}{586}{section.20.7}
 \contentsline {section}{\numberline {20.8}Hints for ``Permutations'' exercises}{586}{section.20.8}
 \contentsline {section}{\numberline {20.9}Hints for ``Abstract Groups: Definitions and Basic Properties'' exercises}{587}{section.20.9}
-\contentsline {section}{\numberline {20.10}Hints for ``Algebraic Coding'' exercises}{587}{section.20.10}
-\contentsline {section}{\numberline {20.11}Hints for ``Cosets'' exercises}{588}{section.20.11}
-\contentsline {section}{\numberline {20.12}Hints for ``Group Actions'' exercises}{588}{section.20.12}
+\contentsline {section}{\numberline {20.10}Hints for ``Cosets'' exercises}{588}{section.20.10}
+\contentsline {section}{\numberline {20.11}Hints for ``Group Actions'' exercises}{588}{section.20.11}
+\contentsline {section}{\numberline {20.12}Hints for ``Algebraic Coding'' exercises}{589}{section.20.12}
 \contentsline {section}{\numberline {20.13}Hints for ``Isomorphisms'' exercises}{589}{section.20.13}
-\contentsline {section}{\numberline {20.14}Hints for ``Homomorphism'' exercises}{589}{section.20.14}
+\contentsline {section}{\numberline {20.14}Hints for ``Homomorphism'' exercises}{590}{section.20.14}
 \contentsline {section}{\numberline {20.15}Hints for ``Sigma Notation'' exercises}{590}{section.20.15}
-\contentsline {section}{\numberline {20.16}Hints for ``Polynomial Rings'' exercises}{590}{section.20.16}
-\contentsline {chapter}{Index}{591}{section.20.16}
+\contentsline {section}{\numberline {20.16}Hints for ``Polynomial Rings'' exercises}{591}{section.20.16}
+\contentsline {chapter}{GNU Free Documentation License}{593}{chapter*.47}
+\contentsline {chapter}{Index}{602}{section*.58}

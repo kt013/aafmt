@@ -637,8 +637,7 @@ Then the Inspector does not know enough to be sure who the forger is,
 because it could be some other child of Alice.
 \end{itemize}
 This example illustrates a fundamental difference between the $\var{wife}$ function and the $\var{mother}$ function: two different people can have the same mother, but only one person can have any particular person as their wife. 
-In mathematical terms, this important property of the $\var{wife}$ function is expressed by saying that the $\var{wife}$ function is ``one-to-one."
-\footnote{Some math terms use the word ``injective" instead of ``one-to-one": the two are synonymous.}\index{Function!One-to-One}\index{One-to-one!informal definition}\index{Injective!also see one-to-one}
+In mathematical terms, this important property of the $\var{wife}$ function is expressed by saying that the $\var{wife}$ function is  \emph{one-to-one}.\index{One-to-one!informal definition}
 \end{example}
 
 \begin{example}{}
@@ -677,12 +676,15 @@ If you have an arrow diagram of a function, then it is easy to tell whether or n
 Is function~$h$ of Figure \ref{arrow11} one-to-one?  Explain why or why not.
 \end{exercise}
 
-This concept of one-to-one is very useful.  If we know $A$ is a function, we know that every input of $A$ has exactly one output.  But if we know that $A$ is a one-to-one function, then we also know that every output in the range of $A$ is caused by \emph{exactly} one input.  This notion is formalized in the following definition:
+This concept of one-to-one is very useful.  If we know $A$ is a function, we know that every input of $A$ has exactly one output.  But if we know that $A$ is a one-to-one function, then we also know that every output in the range of $A$ is caused by \emph{exactly} one input.  
+
+We have given an informal idea of the meaning of one-to-one--now it's time for a formal definition.
 
 \begin{defn} \label{121defn}
 Suppose $f \colon A \to B$. We say $f$ is a \term{one-to-one function} iff for all $a_1,a_2 \in A$, such that
-$f(a_1) = f(a_2)$, we have $a_1 = a_2$. \index{One-to-one!formal definition}
+$f(a_1) = f(a_2)$, we have $a_1 = a_2$. \index{One-to-one!definition}
 \end{defn}
+Some mathematics books use the term \term{injective}\index{Injective (one-to-one)}, which means exactly the same as one-to-one.
 
 \begin{exercise}{11Exers-pairs}
  

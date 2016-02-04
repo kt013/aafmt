@@ -39,7 +39,7 @@ What operation is the set $S_3$ a group under?
 The following definition formalizes the notion of ``operation''.
 
 \begin{defn} \label{group_op}
- A \bfii{ binary operation\/}\index{Binary!operation}\index{Operation!binary} or \bfii{ law of composition\/}\index{Composition!law of}\index{Operation!binary} on a set $G$ is a function $G \times G \rightarrow G$ that assigns to each pair $(a,b) \in G \times G$ a unique element $a \circ b$, or $ab$ in $G$, called the \bfii{ composition} of $a$ and $b$.
+ A \term{binary operation}\index{Binary!operation}\index{Operation!binary} or \term{law of composition}\index{Composition!law of}\index{Operation!binary} on a set $G$ is a function $G \times G \rightarrow G$ that assigns to each pair $(a,b) \in G \times G$ a unique element $a \circ b$, or $ab$ in $G$, called the \term{composition} of $a$ and $b$.
 \end{defn}
 
 \begin{rem}
@@ -59,25 +59,25 @@ What are the four properties a set $G$ and a binary operation must exhibit in or
 Building on our previous discussion, we now  proudly present the following formal definition.
 
 \begin{defn}\label{group_definition}
- A \bfii{ group}\index{Group!definition of} $(G, \circ )$ is a set $G$ together with a law of composition $(a,b) \mapsto a \circ b$ that satisfies the following axioms. 
+ A \term{group}\index{Group!definition of} $(G, \circ )$ is a set $G$ together with a law of composition $(a,b) \mapsto a \circ b$ that satisfies the following axioms. 
 \begin{enumerate}
 \item
-The set $G$ is \bfii{ closed} under the law of composition.  That is, 
+The set $G$ is \term{closed} under the law of composition.  That is, 
 \[
 \forall a,b \in G, a \circ b = c \mbox{ for some } c \in G .
 \]
 \item
-There exists an element $e \in G$, called the \bfii{ identity element}\index{Element!identity}\index{Identity!element}, such that for any element $a \in G$ 
+There exists an element $e \in G$, called the \term{identity element}\index{Element!identity}\index{Identity!element}, such that for any element $a \in G$ 
 \[
 e \circ a = a \circ e = a.
 \]
 \item
-For each element $a \in G$, there exists an \bfii{ inverse element\/}\index{Element!inverse}\index{Inverse!element} in G, denoted by $a^{-1}$, such that 
+For each element $a \in G$, there exists an \term{inverse element}\index{Element!inverse}\index{Inverse!element} in G, denoted by $a^{-1}$, such that 
 \[
 a \circ a^{-1} = a^{-1} \circ a = e.
 \]
 \item
-The law of composition is \bfii{ associative}. That is,
+The law of composition is \term{associative}. That is,
 \[
 (a \circ b) \circ c = a \circ (b \circ c)
 \]
@@ -93,17 +93,17 @@ When the group operation is obvious or has been previously specified, we may den
 One very important class of groups is the commutative groups, which are given their own special designation:
 
 \begin{defn} \label{abelian_group} 
-A group $(G,\circ)$ with the property that $a \circ b = b \circ a$ for all $a, b \in G$ is called \bfii{ abelian\/}\index{abelian group}\index{Group!abelian}\footnote{In honor of Neils Henrik Abel (1802-1829), an astounding mathematician who sadly died very young of tuberculosis. There is some discussion among mathematicians over whether `abelian' should be capitalized. The word has become so common in mathematics that it's usually treated as a regular word and not a proper name. This should be considered as a special honor to Abel, since his name has become part of the fundamental language of mathematics.}  or \bfii{ commutative}\index{Group!commutative}.  Groups not satisfying this property are said to be  \bfii{ non-abelian\/}\index{Group!non-abelian} or \bfii{ noncommutative}\index{Group!noncommutative}. 
+A group $(G,\circ)$ with the property that $a \circ b = b \circ a$ for all $a, b \in G$ is called \term{abelian}\index{abelian group}\index{Group!abelian}\footnote{In honor of Neils Henrik Abel (1802-1829), an astounding mathematician who sadly died very young of tuberculosis. There is some discussion among mathematicians over whether `abelian' should be capitalized. The word has become so common in mathematics that it's usually treated as a regular word and not a proper name. This should be considered as a special honor to Abel, since his name has become part of the fundamental language of mathematics.}  or \term{commutative}\index{Group!commutative}.  Groups not satisfying this property are said to be  \term{non-abelian}\index{Group!non-abelian} or \term{noncommutative}\index{Group!noncommutative}. 
 \end{defn}
 
 Finally, based on our discussion before about the order of sets, we have:
 
 \begin{defn} \label{group_order}
-A group is \bfii{ finite}\index{Group!finite}, or has \bfii{ finite
-order}, if it contains a finite number of elements The \bfii{ order\/}\index{Group!order of}
+A group is \term{finite}\index{Group!finite}, or has \term{finite
+order}, if it contains a finite number of elements The \term{order}\index{Group!order of}
 of a finite group is the number of elements that it contains. If $G$
 is a group containing $n$ elements, we write $|G| =
-n$. A group that is not finite is called \bfii{ infinite\/}, and such a group is said to be of \bfii{ infinite
+n$. A group that is not finite is called \term{infinite}, and such a group is said to be of \term{infinite
 order}\index{Group!infinite}.
 \end{defn} 
 
@@ -112,7 +112,7 @@ The group ${\mathbb Z}_5$ is a finite group of order
 we sometimes write $|{\mathbb Z}| = \infty$.
 
 \begin{defn} \label{trivial_group}
-The \bfii{ trivial group}\index{Group!trivial}, consists of the single element $e$  (or ${\var id}$, in our previous notation).
+The \term{trivial group}\index{Group!trivial}, consists of the single element $e$  (or ${\var id}$, in our previous notation).
 \end{defn} 
 
 \begin{exercise}{}
@@ -260,7 +260,7 @@ Define a binary operation $\circ$ on $G$ by $(a,m) \circ (b,n) = (ab, m+n)$.  Is
 The previous two exercises follow a pattern that we may generalize:
 
 \begin{defn}\label{def:ProductOfGroups}
-Given two groups $G$ and $H$, we define the \bfii{ product} of groups $G$ and $H$ (denoted by $G \times H$) as the set of pairs $\left\{(g,h), g \in G, h \in H \right\}$. If $(g_1, h_1)$ and $(g_2,h_2)$ are two elements of $G \times H$, then we define the group operation  $(g_1, h_1) \circ (g_2, h_2)$ as follows:\index{Product!of groups} 
+Given two groups $G$ and $H$, we define the \term{product} of groups $G$ and $H$ (denoted by $G \times H$) as the set of pairs $\left\{(g,h), g \in G, h \in H \right\}$. If $(g_1, h_1)$ and $(g_2,h_2)$ are two elements of $G \times H$, then we define the group operation  $(g_1, h_1) \circ (g_2, h_2)$ as follows:\index{Product!of groups} 
 \[ (g_1, h_1) \circ (g_2, h_2) := (g_1g_2, h_1h_2),\]
 where $g_1g_2$ uses the group operation in $G$ and $h_1h_2$ uses the group operation in $H$.
 \end{defn}
@@ -311,7 +311,7 @@ $c$ & $c$ & $d$ & $a$ & $b$ \\
 $d$ & $d$ & $a$ & $b$ & $c$
 \end{tabular}
 \end{center}
-
+\smallskip
 
 
 \item
@@ -325,7 +325,7 @@ $c$ & $d$ & $c$ & $b$ & $a$ \\
 $d$ & $c$ & $d$ & $a$ & $b$
 \end{tabular}
 \end{center}
-
+\smallskip
  
  
 \item
@@ -339,6 +339,7 @@ $c$ & $b$ & $c$ & $d$ & $a$ \\
 $d$ & $a$ & $b$ & $c$ & $d$
 \end{tabular}
 \end{center}
+\smallskip
 
 \item
 \begin{center}
@@ -372,7 +373,7 @@ $c$ & $c$ & $\_$ & $a$ & $\_$ \\
 $d$ & $d$ & $\_$ & $\_$ & $\_$
 \end{tabular}
 \end{center}
-
+\smallskip
 
 
 \item
@@ -386,7 +387,7 @@ $c$ & $\_$ & $\_$ & $\_$ & $\_$ \\
 $d$ & $\_$ & $\_$ & $\_$ & $\_$
 \end{tabular}
 \end{center}
-\bigskip
+\smallskip
 
 
 \item
@@ -400,7 +401,7 @@ $c$ & $\_$ & $\_$ & $d$ & $\_$ \\
 $d$ & $\_$ & $\_$ & $\_$ & $d$
 \end{tabular}
 \end{center}
-
+\smallskip
  
 \item
 \begin{center}
@@ -531,7 +532,7 @@ Is the group in Table ~\ref{CayleyU8} abelian?  Justify your answer.
 For convenience, let's define some notation:
 
 \begin{defn}\label{DefnOfUnits}
-The set of nonzero numbers in ${\mathbb Z}_n$ that are relatively prime to $n$ is called the \bfii{ set of units of ${\mathbb Z}_n$}, denoted by \bfii{ $U(n)$}\index{Units! group of ($U(n)$)}\index{Group!of units $U(n)$}.
+The set of nonzero numbers in ${\mathbb Z}_n$ that are relatively prime to $n$ is called the \term{set of units of ${\mathbb Z}_n$}, denoted by \term{$U(n)$}\index{Units! group of ($U(n)$)}\index{Group!of units $U(n)$}.
 \end{defn}
 
   We have just seen that  $U(8)$ is a group under modular multiplication.  One might suspect that  $U(n)$ is a group for any $n$.  For starters, it is clear that $1$ serves as an  identity element, because $1\cdot k \equiv k \cdot 1 \equiv  k$ mod $n$ for any $n$. In fact, $U(n)$ is an abelian group, as you will show in the following exercises.
@@ -542,7 +543,7 @@ In this exercise, we prove that $U(n)$ is a group under multiplication mod $n$ f
 \item
 Fill in the blanks to show that $U(n)$ is closed under modular multiplication:
 
-Let $k,m$ be arbitrary elements of  $U(n)$. It follows that both $k$ and \underline{~$<1>$~} are relatively prime to \underline{~$<2>$~}. So neither $k$ nor \underline{~$<3>$~} has any prime factors in common with \underline{~$<4>$~}. It follows that the product \underline{~$<5>$~} also has no prime factors in common with \underline{~$<6>$~}. Furthermore, the remainder of \underline{~$<7>$~} under division by \underline{~$<8>$~} also has no prime factors in common with \underline{~$<9>$~}. Therefore the product of \underline{~$<10>$~} and \underline{~$<11>$~} under modular multiplication is also an element of \underline{~$<12>$~}, so \underline{~$<13>$~} is closed under modular multiplication.
+Let $k,m$ be arbitrary elements of  $U(n)$. It follows that both $k$ and \underline{~<1>~} are relatively prime to \underline{~<2>~}. So neither $k$ nor \underline{~<3>~} has any prime factors in common with \underline{~<4>~}. It follows that the product \underline{~<5>~} also has no prime factors in common with \underline{~<6>~}. Furthermore, the remainder of \underline{~<7>~} under division by \underline{~<8>~} also has no prime factors in common with \underline{~<9>~}. Therefore the product of \underline{~<10>~} and \underline{~<11>~} under modular multiplication is also an element of \underline{~<12>~}, so \underline{~<13>~} is closed under modular multiplication.
 \item
 It remains to show that $U(n)$ is closed under inverse. Suppose that $m \in U(n)$ and $x$ is the inverse of $m$. What equation must $x$ satisfy?
 \hyperref[sec:groups:hints]{(*Hint*)}
@@ -594,7 +595,7 @@ $A A^{-1} = A^{-1} A = I$, where $I$ is the $2 \times 2$ identity
 matrix. For $A$ to have an inverse is equivalent to requiring that the
 determinant of $A$ be nonzero; that is, $\det A = ad - bc \neq
 0$\label{determinant}. The set of invertible matrices forms a group
-called the \bfii{ general linear group}\index{Group!general
+called the \term{general linear group}\index{Group!general
 linear $(GL_n(\mathbb{R}))$ }\label{generallinear}.
 \begin{enumerate}[(a)]
 \item
@@ -876,7 +877,7 @@ Given a group $G$  that is \emph{not} abelian, show that it is always possible t
 \end{enumerate}
 \end{exercise}
 
-In our work so far, we've frequently used the \bfii{ substitution property}\index{Substitution property}.  For instance if $x = y$, then we know also that $a\cdot x = a \cdot y$, regardless of the operation $\cdot$.   But suppose I gave you the equation $a \cdot x = a \cdot y$.  Is it necessarily true that $x = y$?  If $a, x,y \in {\mathbb R}$ and the operation is multiplication, then it's true \emph{as long as $a \neq 0$}.  To show this, we may use  the method we talked about in the previous proposition:  multiply each side of the equation by $a^{-1}$ (that is, divide by a), and the result is $x = y$.  In basic algebra courses this property is often called the \bfii{ law of cancellation}\index{Law of cancellation}.  
+In our work so far, we've frequently used the \term{substitution property}\index{Substitution property}.  For instance if $x = y$, then we know also that $a\cdot x = a \cdot y$, regardless of the operation $\cdot$.   But suppose I gave you the equation $a \cdot x = a \cdot y$.  Is it necessarily true that $x = y$?  If $a, x,y \in {\mathbb R}$ and the operation is multiplication, then it's true \emph{as long as $a \neq 0$}.  To show this, we may use  the method we talked about in the previous proposition:  multiply each side of the equation by $a^{-1}$ (that is, divide by a), and the result is $x = y$.  In basic algebra courses this property is often called the \term{law of cancellation}\index{Law of cancellation}.  
 Now this works for real numbers: but suppose $a,x,y$ were elements of some other group.  Would the law of cancellation still hold?  In fact, using the method shown above, you can prove this property holds for any group $G$. 
 
 \begin{prop}{cancel}
@@ -884,8 +885,8 @@ If $G$ is a group and $a, b, c \in G$, then $ba = ca$ implies $b = c$
 and $ab = ac$ implies $b = c$. 
 \end{prop} 
  
-This proposition tells us that the \bfii{ right and 
-left cancellation laws\/}\index{Cancellation law!for
+This proposition tells us that the \term{right and 
+left cancellation laws}\index{Cancellation law!for
 groups} are true in groups.  We leave the proof as an exercise.
 
 \begin{exercise}{56}
@@ -1017,7 +1018,7 @@ transformation of the space. Sophus Lie\index{Lie, Sophus}, a
 contemporary of Klein, used group theory to study solutions of
 partial differential equations.  One of the first modern treatments of
 group theory appeared in William Burnside's\index{Burnside, William}
-{\it The Theory of Groups of Finite Order\/} [1], first published in
+{\it The Theory of Groups of Finite Order} [1], first published in
 1897.  
 \histbox
 }
@@ -1027,7 +1028,7 @@ group theory appeared in William Burnside's\index{Burnside, William}
  We first came across subgroups in the Permutations chapter.  We saw that $S_n$, the set of permutations on a set of n elements, is a group under function composition.  Yet we also saw that the set of symmetries of an $n$-sided figure, which is a subset of $S_n$, is itself a group under function composition.  So a subgroup is a subset of a larger group that is itself a group under the same operation as the larger group.  Formally then: 
 
 \begin{defn} \label{subgroup_defn}
-A \bfii{ subgroup}\index{Subgroup!definition of} $H$ of a group $(G,\circ)$ is a subset $H$ of $G$ such that when the group operation of $G$ is restricted to $H$, $H$ is a group in its own right. 
+A \term{subgroup}\index{Subgroup!definition of} $H$ of a group $(G,\circ)$ is a subset $H$ of $G$ such that when the group operation of $G$ is restricted to $H$, $H$ is a group in its own right. 
 \end{defn}
 
 By definition, all subgroups are subsets: but is the reverse true?\index{Subgroup!relation to subset} If not, what makes a sub\emph{set} a sub\emph{group}? What special  properties must subsets possess in order to qualify as subgroups?
@@ -1257,7 +1258,7 @@ a & b \\
 c & d
 \end{pmatrix}
 \]
-is in $SL_2( {\mathbb R})$ exactly when $ad - bc = 1$.  We call this the \bfii{ Special Linear Group} \index{Group!special
+is in $SL_2( {\mathbb R})$ exactly when $ad - bc = 1$.  We call this the \term{Special Linear Group} \index{Group!special
 linear $(SL_n(\mathbb{R}))$}\label{speciallinear}.
 
 \begin{enumerate}[(a)]
@@ -1399,13 +1400,13 @@ In Example ~\ref{example:groups:construct_Z} we also saw that $P$ was in fact $\
 
 Let us extend this concept to groups in general:
 
-\begin{defn} Given a group $G$ and an element $a \in G$, then \bfii{ the set  generated by the element} $a$\index{Set!generated by group element} is denoted by $\langle a \rangle$, and is defined as the set obtained by repeated 
+\begin{defn} Given a group $G$ and an element $a \in G$, then \term{the set  generated by the element} $a$\index{Set!generated by group element} is denoted by $\langle a \rangle$, and is defined as the set obtained by repeated 
 operation on the identity $e$ by the group elements $a$ and $a^{-1}$.  Using the notation we introduced right before Proposition ~\ref{proposition:groups:exponent_laws}, we can write this as
 \[ \langle a \rangle = \{ \ldots, a^{-3}, a^{-2}, a^{-1}, e, a, a^2, a^3, \ldots \} \]
 \noindent
 or
 \[ \langle a \rangle = \{ a^{k} : k \in \mathbb Z \} \]
-$\langle a \rangle$ is sometimes called the \bfii{ orbit} of $a$.\index{Orbit! of a group element}
+$\langle a \rangle$ is sometimes called the \term{orbit} of $a$.\index{Orbit! of a group element}
 \end{defn}
 \begin{rem}
 If we are using the ``+'' operation, as in the case of the integers above, we write $\langle a \rangle  = \{ na : n \in {\mathbb Z} \}$.
@@ -1420,8 +1421,8 @@ We have special terminology for the case where all the elements of a group are g
 
 \begin{defn}
  If a group $G$ contains some element $a$ such that $G = \langle a \rangle $, then $G$ is a
-\bfii{ cyclic group}\index{Group!cyclic}\index{Cyclic!group}. In this case $a$ is a \bfii{
-generator\/}\index{Generator! of a cyclic group}\index{Cyclic!group!generator} of $G$.
+\term{cyclic group}\index{Group!cyclic}\index{Cyclic group}. In this case $a$ is a \term{
+generator}\index{Generator! of a cyclic group}\index{Cyclic group!generator} of $G$.
 \end{defn}
 
 We have seen above that $1$ is a generator of $\mathbb Z$, and thus $\mathbb Z$ is a cyclic group.
@@ -1543,8 +1544,8 @@ containing $a$.
  
 \medskip
 \begin{defn}
-Given a group $G$, for each $a \in G$, we call $\langle a \rangle $ the \bfii{ cyclic
-subgroup\/}\index{Subgroup!cyclic} generated by $a$. 
+Given a group $G$, for each $a \in G$, we call $\langle a \rangle $ the \term{cyclic
+subgroup}\index{Subgroup!cyclic} generated by $a$. 
 \end{defn}
  
 Let us now consider in particular the case of finite groups. Let $G$ be a finite group, and let $a$ be an element of $G$. Consider the set $A :=\left\{a, a^2, a^3, \ldots \right\}$. Since $A \subset G$ and $G$ is finite, the set $A$ must also be finite. In particular, the list 
@@ -1557,7 +1558,7 @@ Let $G$ be a finite group, and let $a \in G$ where $a \neq e$. Show there exists
 In view of the preceding exercise, we may make the following definition:
 
 \begin{defn}\label{DefOrder}
-If $a$ is an element of a group $G$, we define the \bfii{ order}\index{Element!order
+If $a$ is an element of a group $G$, we define the \term{order}\index{Element!order
 of} of $a$ to be the smallest positive integer $n$ such that $a^n= e$,
 and we write $|a| = n$\label{noteelementorder}. If there is no such
 integer $n$, we say that the order of $a$ is infinite and  write $|a|
@@ -1857,7 +1858,7 @@ Prove that the set of matrices of the form
 \end{pmatrix}
 \]
 is a group under matrix multiplication.  This group, known as the
-\bfii{ Heisenberg group},\index{Group!Heisenberg} is important in
+\term{Heisenberg group},\index{Group!Heisenberg} is important in
 quantum physics.  
 %Matrix multiplication in the Heisenberg group is
 %defined by  
@@ -2065,8 +2066,8 @@ Let $G$ be a group. Show that
 Z(G) = \{ x \in G : gx = xg \mbox{ for all $g \in G$}
 \}\label{centerofagroup} 
 \]
-is a subgroup of $G$. This subgroup is called the \bfii{
-center\/}\index{Center!of a group} of $G$. 
+is a subgroup of $G$. This subgroup is called the \term{
+center}\index{Center!of a group} of $G$. 
  
  
 \item
@@ -2106,8 +2107,8 @@ Let $H$ be a subgroup of $G$ and
 \[
 N(H) = \{ g \in G : gh = hg \mbox{ for all $h \in H$}  \}.
 \]
-Prove $N(H)$ is a subgroup of $G$.  This subgroup is called the \bfii{
-normalizer\/}\index{Normalizer} of $H$ in $G$. 
+Prove $N(H)$ is a subgroup of $G$.  This subgroup is called the \term{
+normalizer}\index{Normalizer} of $H$ in $G$. 
  
 \end{enumerate}
 }

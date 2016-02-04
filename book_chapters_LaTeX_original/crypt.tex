@@ -19,16 +19,16 @@ someone who is trying to deceive the recipient. Modern cryptography is
 heavily dependent on abstract algebra and number theory. 
  
  
-The message to be sent is called the \bfii{
-plaintext\/}\index{Plaintext} message. The disguised message is called
-the \bfii{ ciphertext}\index{Ciphertext}. The plaintext and the
-ciphertext are both written in an \bfii{ alphabet}, consisting of \bfii{
-letters\/} or \bfii{ characters}. Characters can include not only the
+The message to be sent is called the \term{
+plaintext}\index{Plaintext} message. The disguised message is called
+the \term{ciphertext}\index{Ciphertext}. The plaintext and the
+ciphertext are both written in an \term{alphabet}, consisting of \term{
+letters} or \term{characters}. Characters can include not only the
 familiar alphabetic characters A, $\ldots$, Z and a, $\ldots$, z but
-also digits, punctuation marks, and blanks. A \bfii{
-cryptosystem},\index{Cryptosystem!definition of} or \bfii{
-cipher},\index{Cipher}  has two parts: \bfii{ encryption}, the process
-of transforming a plaintext message to a ciphertext message, and \bfii{
+also digits, punctuation marks, and blanks. A \term{
+cryptosystem},\index{Cryptosystem!definition of} or \term{
+cipher},\index{Cipher}  has two parts: \term{encryption}, the process
+of transforming a plaintext message to a ciphertext message, and \term{
 decryption}, the reverse transformation of changing a ciphertext
 message into a plaintext message.
  
@@ -36,7 +36,7 @@ message into a plaintext message.
 There are many different families of cryptosystems, each distinguished
 by a particular encryption algorithm. Cryptosystems in a specified
 cryptographic family are distinguished from one another by a parameter
-to the encryption function called a \bfii{ key}\index{Key!definition
+to the encryption function called a \term{key}\index{Key!definition
 of}. A classical cryptosystem has a single key, which must be kept
 secret,  known only to the sender and the receiver of the message. If
 person $A$ wishes to send secret messages to two different people $B$
@@ -47,7 +47,7 @@ exchanging messages with $C$.
  
  
 Systems that use two separate keys, one for encoding and another for
-decoding, are called \bfii{ public key
+decoding, are called \term{public key
 cryptosystems}\index{Key!public}\index{Cryptosystem!public key}. Since
 knowledge of the encoding key does not allow anyone to guess at the
 decoding key, the encoding key can be made public. A public key
@@ -60,9 +60,9 @@ $C$, but only $C$ knows how to decode such a message.
 \section{Private key cryptography}
  
  
-In \bfii{ single\/}\index{Key!single}\index{Cryptosystem!single key} or
-\bfii{ private key
-cryptosystems\/}\index{Key!private}\index{Cryptosystem!private key}
+In \term{single}\index{Key!single}\index{Cryptosystem!single key} or
+\term{private key
+cryptosystems}\index{Key!private}\index{Cryptosystem!private key}
 the same key is used for both encrypting and decrypting messages. To
 encrypt a  plaintext message, we apply to the message some function
 which is kept secret, say $f$. This function will yield an encrypted
@@ -152,7 +152,7 @@ Find the plaintext.
 \end{enumerate}
 \end{exercise}
 
-\bfii{ Cryptanalysis\/}\index{Cryptanalysis} is concerned with
+\term{Cryptanalysis}\index{Cryptanalysis} is concerned with
 deciphering a received or intercepted message. Methods from
 probability and statistics are great aids in deciphering an
 intercepted message; for example, the frequency analysis of the
@@ -164,7 +164,7 @@ Suppose we receive a message that we know was encrypted by using a
 shift transformation on single letters of the 26-letter alphabet. To
 find out exactly what the shift transformation was, we must compute
 $b$ in the equation $f(p) = p + b \bmod 26$. We can do this using
-\bfii{frequency analysis}\index{Frequency analysis}.  
+\term{frequency analysis}\index{Frequency analysis}.  
 The letter $\mbox{E} = 04$ is the most commonly
 occurring letter in the English language. Suppose that $\mbox{S} = 18$
 is the most commonly occurring letter in the ciphertext.  Then we have
@@ -226,7 +226,7 @@ c \equiv ap + b \pmod{26}\qquad \textrm{or}\qquad a \odot p = c \ominus  b
 $$
 for $p$ in $\mathbb{Z}_{26}$. By Proposition~\ref{proposition:modular:mod_eq_solution} in Chapter~\ref{modular}, this is possible exactly when $a$ has an
 inverse in $\mathbb{Z}_{26}$, which means that $\gcd( a, 26) =1$. 
-Such a cryptosystem is called an \bfii{ affine
+Such a cryptosystem is called an \term{affine
 cryptosystem}\index{Cryptosystem!affine}. 
  
 \begin{exercise}{}
@@ -352,7 +352,7 @@ Find the plaintext.
 
 \subsection{Monoalphabetic codes}
 
-In both shift codes and affine codes, one character in the encoded message represents exactly one character in the original message. Cryptosystems that employ such a one-to-one substitution are called \bfii{monoalphabetic cryptosystems}\index{Cryptosystem!monoalphabetic}.
+In both shift codes and affine codes, one character in the encoded message represents exactly one character in the original message. Cryptosystems that employ such a one-to-one substitution are called \term{monoalphabetic cryptosystems}\index{Cryptosystem!monoalphabetic}.
 The ``cryptoquips''\index{Cryptoquip}  that appear regularly in many newspapers make use of this type of cryptosystem (see Figure~\ref{fig:cryptoquip}).
 
 \begin{figure}[h]
@@ -371,7 +371,7 @@ Although there are many different possible monoalphabetic cryptosystems, they ar
 
 A cryptosystem would be more secure if a ciphertext letter could
 represent more than one plaintext letter.  To give an example of this
-type of cryptosystem, called a \bfii{ polyalphabetic
+type of cryptosystem, called a \term{polyalphabetic
 cryptosystem},\index{Cryptosystem!polyalphabetic} we will generalize
 affine codes by using matrices. The idea works roughly the same as
 before; however, instead of encrypting one letter at a time we will
@@ -513,7 +513,7 @@ B=
 are inverses of each other  in ${\Bbb Z}_{26}$.  That is, show that $AB = BA = I$ under matrix multiplication mod 26.
 
 \end{exercise} 
-The previous exercise leaves open the question of whether $\left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$ has an inverse when $(a \odot d)  \ominus (b \odot c)$ has no inverse in ${\Bbb Z}_{26}$. Once again, we can reach back to our previous matrix knowledge to resolve this issue. Recall that the quantity $ad - bc$ is called the \bfii{determinant}\index{Matrix!determinant} of the matrix  $\left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$.  There is also a famous formula for the determinant of the product of matrices:
+The previous exercise leaves open the question of whether $\left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$ has an inverse when $(a \odot d)  \ominus (b \odot c)$ has no inverse in ${\Bbb Z}_{26}$. Once again, we can reach back to our previous matrix knowledge to resolve this issue. Recall that the quantity $ad - bc$ is called the \term{determinant}\index{Matrix!determinant} of the matrix  $\left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$.  There is also a famous formula for the determinant of the product of matrices:
 $$\text{det}(A) \text{det}(B) = \text{det}(AB).$$
 This same formula carries over to matrix multiplication mod 26, because (as we've seen) in any equation using only the operations of multiplication, addition, and subtraction, we can replace these operations with their modular versions and still have a true equation. We can use this to show that $(a \odot d)  \ominus (b \odot c)$ \emph{must} have an inverse in ${\Bbb Z}_{26}$ in order for $\left( \begin{array}{cc} a & b \\ c & d \end{array} \right)$ to have an inverse:
 
@@ -1045,12 +1045,12 @@ Using the same reasoning as above, show that after dividing by $2,3,5$ the numbe
 $$a\left(1 - \frac{1}{2}\right) \left(1 - \frac{1}{3}\right)\left( 1 - \frac{1}{5} \right).$$
 \end{exercise}
 
-It turns out that the formula in Exercise~\ref{exercise:crypt:EulerTotient} can be generalized. The resulting function of $a$ when \emph{all} primes less than $a$ are taken into account is called the \bfii{Euler totient function}. \index{Euler! totient function}
-The technique of eliminating numbers to check based on previous divisibility is called the \bfii{sieve of Eratosthenes}\index{Sieve of Eratosthenes}.
+It turns out that the formula in Exercise~\ref{exercise:crypt:EulerTotient} can be generalized. The resulting function of $a$ when \emph{all} primes less than $a$ are taken into account is called the \term{Euler totient function}. \index{Euler! totient function}
+The technique of eliminating numbers to check based on previous divisibility is called the \term{sieve of Eratosthenes}\index{Sieve of Eratosthenes}.
 
 
 \subsubsection*{\emph{Fermat's test for primality}}
-Even using various tricks to reduce the number of computations, the brute force method requires far too many calculations to be useful for RSA encoding. A different algorithm for testing primality is \bfii{
+Even using various tricks to reduce the number of computations, the brute force method requires far too many calculations to be useful for RSA encoding. A different algorithm for testing primality is \term{
 Fermat's factorization algorithm}\index{Fermat!factorization
 algorithm}, which depends on the following fact:
 
@@ -1170,7 +1170,7 @@ Use this spreadsheet to factor $n=16394854313$. Then, use your result to find th
 
 \subsubsection*{\emph{Probabilistic methods using the ``little Fermat theorem''}}
 In practice, neither the brute force nor the Fermat method is used to verify large prime numbers. Instead, 
-\emph{probabilistic methods} are used: these methods can show that it's very, very likely that $n$ is a prime, but they don't prove for certain. The principal test of this type is the  \bfii{Miller-Rabin test} for primality. \index{Prime!Miller-Rabin test for} This test uses some of the principles described  below.	 
+\emph{probabilistic methods} are used: these methods can show that it's very, very likely that $n$ is a prime, but they don't prove for certain. The principal test of this type is the  \term{Miller-Rabin test} for primality. \index{Prime!Miller-Rabin test for} This test uses some of the principles described  below.	 
  
 In Exercise~\ref{exercise:cosets:FermatLittle} in Section~\ref{sec:Fermat}, we will prove the following fact (which is widely known as \emph{Fermat's little theorem}\index{Fermat!little theorem}): 
 \medskip
@@ -1186,8 +1186,8 @@ However, 17 is a potential prime since
 $$
 2^{17-1} \equiv 2^{16} \equiv 1 \pmod{17}.
 $$
-We say that an odd composite number $n$ is a \bfii{
-pseudoprime\/}\index{Pseudoprime} if 
+We say that an odd composite number $n$ is a \term{
+pseudoprime}\index{Pseudoprime} if 
 $$
 2^{n-1} \equiv 1 \pmod{n}.
 $$
@@ -1235,7 +1235,7 @@ Which of the following numbers are primes  and which are pseudoprimes?
  
 Let $n$ be an odd composite number and $b$ be a positive integer such
 that $\gcd(b, n) = 1$. If $b^{n-1} \equiv 1 \pmod{n}$, then $n$ is a
-\bfii{ pseudoprime base} $b$. We can get a more accurate test for the  primality of $n$  if we 
+\term{pseudoprime base} $b$. We can get a more accurate test for the  primality of $n$  if we 
 test $n$ versus a number of prime bases. If $n$ is a pseudoprime for several prime bases, then we can say with high confidence that $n$ is most probably a prime.
 
 
@@ -1245,7 +1245,7 @@ not a pseudoprime base 3.
 \end{exercise}  
 
 There exist composite numbers that are pseudoprimes for all bases to
-which they are relatively prime.  These numbers are called \bfii{
+which they are relatively prime.  These numbers are called \term{
 Carmichael numbers}\index{Carmichael numbers}. The first Carmichael
 number is $561 = 3 \cdot 11 \cdot 17$.  In 1992, Alford, Granville, and
 Pomerance proved that there are an infinite number of Carmichael

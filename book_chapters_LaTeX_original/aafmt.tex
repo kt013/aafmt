@@ -18,10 +18,11 @@
 \usepackage{amscd}   %% redundant after tikz conversions?
 \usepackage{multicol}
 \usepackage{longtable}
-\usepackage{makeidx}
+\usepackage{imakeidx}
 \usepackage{placeins}%  CPT
 \usepackage{url}
 \usepackage{dialogue}
+\usepackage{hhline}
 
 \usepackage{tikz}
 \newcommand{\tikzpreface}[1]{\relax}
@@ -133,11 +134,11 @@
 
 % New commands defined by CPT (legacy from P & C)
 \newcommand{\var}[1]{\sf{#1}} 
-\newcommand{\bfii}[1]{\textbf{\textit{{#1}}}}
-\newcommand{\terminology}[1]{\bfii{ #1}} 
+\newcommand{\terminology}[1]{\textbf{\textit{{#1}}}}
+\newcommand{\term}[1]{\terminology{#1}} 
 \newcommand{\hint}[1]{\emph{#1}} 
-\newcommand{\cref}[1]{\sf{\bfii{ #1}}} %%%% Cross-reference, legacy from P & C
-\newcommand{\Cref}[1]{\sf{\bfii{ #1}}} %%%% Cross-reference, legacy from P & C
+\newcommand{\cref}[1]{\sf{\term{ #1}}} %%%% Cross-reference, legacy from P & C
+\newcommand{\Cref}[1]{\sf{\term{ #1}}} %%%% Cross-reference, legacy from P & C
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\rational}{\mathbb{Q}}
 \newcommand{\integer}{\mathbb{Z}}
@@ -314,17 +315,14 @@ ISBN:  978-1-312-85635-6
 \input{symmetries_hints}
 \input{permute_hints}
 \input{groups_hints}
-\input{algcodes_hints}
 \input{cosets_hints}
 \input{actions_hints}
+\input{algcodes_hints}
 \input{isomorph_hints}
 \input{homomorph_hints}
 \input{summation_notation_hints}
 \input{polyrings_hints}
 
-\clearpage
-\addcontentsline{toc}{chapter}{Index}
-\printindex
 
 %% RAB, 2009/01/28
 %% Include GFDL as an appendix
@@ -337,7 +335,11 @@ ISBN:  978-1-312-85635-6
 \backmatter
 %
 %\include{solution}
-%{\small\include{gfdl}}
+%\addcontentsline{toc}{chapter}{GNU Free Documentation License}
+{\small\include{gfdl}}
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
 %\include{notation}
 %{\small\printindex}
 %

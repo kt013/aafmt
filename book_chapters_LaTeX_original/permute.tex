@@ -50,7 +50,7 @@ We mentioned at the beginning of  the ``Functions'' chapter that we would be int
 In Chapter~\ref{symmetries} we saw that all symmetries are  bijections whose domain and codomain were the same.  Thus symmetries are special cases of \emph{permutations}, which are defined mathematically as follows.
 
 \begin{defn}
-A bijection whose domain and codomain are equal is called a \bfii{ permutation}\index{Permutation!definition of}\index{Bijection!as a permutation}. The set of all bijections from a finite set $X$ to itself is called the \bfii{ set of permutations on $X$} and is denoted as $S_X$.
+A bijection whose domain and codomain are equal is called a \term{permutation}\index{Permutation!definition of}\index{Bijection!as a permutation}. The set of all bijections from a finite set $X$ to itself is called the \term{set of permutations on $X$} and is denoted as $S_X$.
 \end{defn}
 
 \begin{example}{}
@@ -208,14 +208,14 @@ Further, as we saw in the exercises,  the composition of two elements in $S_X$ i
 So far we have only looked at sets with four elements. Now it's time to generalize these results to sets of any size. First, some notation:
 
 \begin{notation}{}
-The \bfii{ order of a set} $Y$ is the number of elements of $Y$, and is written as $|Y|$.\index{Order! of a set}
+The \term{order of a set} $Y$ is the number of elements of $Y$, and is written as $|Y|$.\index{Order! of a set}
 \footnote{ You're probably used to seeing $|\ldots|$ as representing absolute value. Of course a set is not a number, so it has no absolute value. We use $|Y|$ to denote order because it's a measure of the \emph{size} of set $Y$, just as the absolute value of a number is the ``size'' of the number.}
 \end{notation}
 
 Now let $X = \{1,2,\ldots, n\}$, and  consider any set $Y$ with $|Y| = n$. We could do a similar ``face-lifting'' as above to show that  $S_X \equiv S_Y$.  So the group $S_X$ is equivalent to the permutations of \emph{any} set of $n$ elements.
 
 \begin{notation}{sym_group_n_letters}
-Let $X=\{ 1, 2, \ldots, n\}$. Instead of writing $S_X$, we write $S_n$\label{symmetricgroup}.  $S_n$ is called the \bfii{ symmetric group\index{Group!symmetric} on $n$ letters}.
+Let $X=\{ 1, 2, \ldots, n\}$. Instead of writing $S_X$, we write $S_n$\label{symmetricgroup}.  $S_n$ is called the \term{symmetric group\index{Group!symmetric} on $n$ letters}.
 \end{notation}
 
 \subsection{Isomorphic groups}
@@ -224,7 +224,7 @@ At the end of the Symmetries chapter, we compared the groups $\mathbb{Z}_n$, the
 
 We've just seen the very same thing for $S_n$. The above statement that ``the composition of two elements in $S_X$ is equivalent to the composition of the two equivalent elements in $S_Y$''  is the same thing as saying that  the Cayley table entries are equivalent between the two groups.
 
-This "equivalence of groups" is one of the premier concepts in abstract algebra, almost as important as the concept of a group  itself.  When two groups are equivalent like this, we say that they are \bfii{ isomorphic groups}; we also say that the bijection that causes the groups to be equivalent is an \bfii{ isomorphism}\index{Isomorphic groups}\index{Group!isomorphic}\index{Isomorphism!definition of}.  We will see in a later chapter how to show in general that two groups are isomorphic; but for now, forming the groups' Cayley Tables and seeing if you can match elements to make the tables the same is a very good strategy.
+This "equivalence of groups" is one of the premier concepts in abstract algebra, almost as important as the concept of a group  itself.  When two groups are equivalent like this, we say that they are \term{isomorphic groups}; we also say that the bijection that causes the groups to be equivalent is an \term{isomorphism}\index{Isomorphic groups}\index{Group!isomorphic}\index{Isomorphism!definition of}.  We will see in a later chapter how to show in general that two groups are isomorphic; but for now, forming the groups' Cayley Tables and seeing if you can match elements to make the tables the same is a very good strategy.
 
 \begin{exercise}{}
 Let $W =\{G, H \}$ and $Z = \{J, K \}$.
@@ -259,7 +259,7 @@ Give a bijection from $X$ to $Y$, and the corresponding bijection from $S_X$ to 
 Let's summarize this section so far.  The permutations on a set $X$ of $n$ elements is a group under function composition (denoted by  $S_n$).  Further, for any figure with $n$ sides, the symmetries of that figure is a subset of $S_n$ containing at least the identity permutation, and that subset is itself a group under function composition.  This example motivates the following definition.
 
 \begin{defn}
-A subset of a group $G$ that is itself a group under the same operation as $G$ is called a \bfii{ subgroup}\index{Subgroup} of $G$.  
+A subset of a group $G$ that is itself a group under the same operation as $G$ is called a \term{subgroup}\index{Subgroup} of $G$.  
 \end{defn}
 
 The notion of subgroup is a key concept in abstract algebra, which will be used throughout the rest of the book.  
@@ -281,7 +281,7 @@ The permutations of $\{1,2,3\}$ are a subgroup of the permutations of $\{1,2,3,4
 %Now, let us generalize again.  Suppose we were looking at the set of symmetries for a rectangle.  We've proved it's a group by the properties of symmetries and bijections.  If we took that set of permutations and "erased" the rectangle, would the permutations still be a group?  If the set didn't correspond to the symmetries of a figure, would the permutations sill act as a group?  They should, because whether the permutation are connected to a figure or not, they should still act the same when you compose them.  In fact it makes sense that they would, because the Cayley Table for that set of permutations would remain exactly the same.  Therefore you would still have closure under function composition, and the operation of the identity permutation and existence of inverses would remain exactly the same.  The associativity of the set wouldn't change, because function composition is still associative.  Nothing would actually change.  So the permutations that correspond to the symmetries of a rectangle are a subgroup in their own right.  This leads to the following generalization and definition:
 
 \begin{defn}
-A subgroup of $S_n$ is called a \bfii{ permutation group}\index{Group!permutation}\index{Permutation group}.
+A subgroup of $S_n$ is called a \term{permutation group}\index{Group!permutation}\index{Permutation group}.
 \end{defn}
 
 \begin{exercise}{permute_S5}
@@ -385,7 +385,7 @@ We can visualize this as a ``wheel'', as shown in Figure~\ref{fig:cycle}
 \end{center}
 \end{figure}
 
-We shall write this trail of inputs and outputs as $(123456)$;\index{Cycle notation} and rather than ``wheel'', we call this a \bfii{ cycle}\index{Permutation!cycle}  Reading the cycle from left to right indicates that 1 goes to 2, 2 goes to 3, $\ldots$, and the 6 at the end goes back to 1.  %Note that according to this interpretation $(234561)$, or $(345612)$ are alternative ways of writing the same permutation..
+We shall write this trail of inputs and outputs as $(123456)$;\index{Cycle notation} and rather than ``wheel'', we call this a \term{cycle}\index{Permutation!cycle}  Reading the cycle from left to right indicates that 1 goes to 2, 2 goes to 3, $\ldots$, and the 6 at the end goes back to 1.  %Note that according to this interpretation $(234561)$, or $(345612)$ are alternative ways of writing the same permutation..
 
 \begin{exercise}{equal_cycles2}
 Show that $(123456) = (345612)$ by drawing a figure similar to Figure~\ref{fig:cycle}  for each cycle.
@@ -430,7 +430,7 @@ Compare your answer to (b) with Figure~\ref{fig:cycle} of $\rho = (123456)$.  Ex
 \end{exercise}
 
 \begin{defn} \label{cycle_length}
-The \bfii{ length} of a cycle is how many elements the cycle contains; i.e. how many elements are in the parentheses\index{Cycle!length of}.  Formally, 
+The \term{length} of a cycle is how many elements the cycle contains; i.e. how many elements are in the parentheses\index{Cycle!length of}.  Formally, 
 \begin{center}
 if $(a_1, a_2, \ldots, a_n)$ is a cycle, then the length of $(a_1, a_2, \ldots, a_n) = n$.
 \end{center}
@@ -497,7 +497,7 @@ A final question that may come to mind is,  Do all permutation correspond to som
 Since cycles represent permutations, they can be composed together.  If we change the cycles to tableaus, we know how to compose them.  Now let's figure out how to compose them using the cycles themselves.\index{Composition!of cycles}\index{Cycle!composition}
 
 \begin{notation}{}
-Given permutations $\sigma$ and $\tau$, instead of writing $\sigma \compose \tau$ we write the shorthand notation: $\sigma \tau$. Furthermore, instead of calling this the composition of $\sigma$ and $\tau$, we refer to it as the \bfii{ product} of $\sigma$ and $\tau$.
+Given permutations $\sigma$ and $\tau$, instead of writing $\sigma \compose \tau$ we write the shorthand notation: $\sigma \tau$. Furthermore, instead of calling this the composition of $\sigma$ and $\tau$, we refer to it as the \term{product} of $\sigma$ and $\tau$.
 \footnote{Once again we see mathematicians'  annoying habit of  reusing familiar terms to mean something new  in a different contexts. In this case,  the ``product'' of permutations has nothing at all to do with multiplication.}
 \end{notation}
 
@@ -599,8 +599,8 @@ $\rho \sigma$
 %Though in general the product of cycles is not commutative, their are particular types of cycles that are commutative under function composition.
 
 \begin{defn} \label{disjoint_cycles} 
-Two cycles are \bfii{ disjoint} if their parentheses contain no elements in common.  Formally,
-two cycles $(a_1, a_2, \ldots, a_k )$ and $(b_1, b_2, \ldots, b_l )$, are \bfii{ disjoint}\index{Cycle!disjoint}
+Two cycles are \term{disjoint} if their parentheses contain no elements in common.  Formally,
+two cycles $(a_1, a_2, \ldots, a_k )$ and $(b_1, b_2, \ldots, b_l )$, are \term{disjoint}\index{Cycle!disjoint}
 if $a_i \neq b_j, \forall i, j $ such that $1 \le i \le k$ and $1 \le j \le l$. 
 \end{defn}
 
@@ -1212,7 +1212,7 @@ What general statement can you make about $\sigma^k(x)$ for $x \in X \backslash 
 Hopefully you're beginning to see the picture! To generalize these results, we need some additional terminology:
 
 \begin{defn}
-The \bfii{ order} of a cycle $\sigma$ is the smallest natural number $k$ such that $\sigma^k = {\var id}$.\index{Cycle!order of}\index{Order!of a cycle}   The order of $\sigma$ is denoted by the notation $|\sigma|$.
+The \term{order} of a cycle $\sigma$ is the smallest natural number $k$ such that $\sigma^k = {\var id}$.\index{Cycle!order of}\index{Order!of a cycle}   The order of $\sigma$ is denoted by the notation $|\sigma|$.
 \footnote{This is in keeping with our practice of using $|\ldots|$ to denote the ``size'' of things.}
 \end{defn}
 After that long build-up, we now have (Ta-da!):
@@ -1316,7 +1316,7 @@ $(3 4 8) (4 5 6)^5 (1 3 2 5)^{10}$
 Now that we know the order of cycles, let's see if we can tackle other permutations as well:
 
 \begin{defn}
-The \bfii{ order} of a permutation $\tau$ is the smallest positive integer $k$ such that $\tau^k = {\var id}$.\index{Order!of a permutation}   As before, the order of $\tau$ is denoted by the notation $|\tau|$. 
+The \term{order} of a permutation $\tau$ is the smallest positive integer $k$ such that $\tau^k = {\var id}$.\index{Order!of a permutation}   As before, the order of $\tau$ is denoted by the notation $|\tau|$. 
 \end{defn}
 
 
@@ -1345,15 +1345,15 @@ Let $\tau = (2 4)(1 6).$ Notice that $(2 4)$ and $(1 6)$ are disjoint, so they c
 \noindent
 $\tau^2 = {\large(} (2 4 )(1 6 ) {\large )} {\large(} (2 4 )(1 6 ) {\large )}$
  
-\ \ \ \ =  $(2 4) {\large(} (1 6) (2 4 ) {\large )} (1 6 )$\ \ \ \ \ \ \ \ \ \ \ (associative) 
+~~~~=  $(2 4) {\large(} (1 6) (2 4 ) {\large )} (1 6 )$~~~~~~~~~~~(associative) 
 
-\ \ \ \ =  $(2 4 ) {\large(} (2 4 ) (1 6)  {\large )} (1 6 )$\ \ \ \ \ \ \ \ \ \ \ (commutative) 
+~~~~=  $(2 4 ) {\large(} (2 4 ) (1 6)  {\large )} (1 6 )$~~~~~~~~~~~(commutative) 
 
-\ \ \ \ =  ${\large(}  (2 4 ) (2 4 ) {\large )} {\large(}  (1 6) (1 6 ) {\large )}$\ \ \ \ \ \ \ \ \ (associative) 
+~~~~=  ${\large(}  (2 4 ) (2 4 ) {\large )} {\large(}  (1 6) (1 6 ) {\large )}$~~~~~~~~~(associative) 
 
-\ \ \ \ =  ${\var id}\ {\var id}$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2-cycles have order 2) 
+~~~~=  ${\var id}~{\var id}$ ~~~~~~~~~~~~~~~~~~~~~(2-cycles have order 2) 
 
-\ \ \ \ =  ${\var id}$   
+~~~~=  ${\var id}$   
 
 \end{example}
 
@@ -1435,31 +1435,31 @@ $(\sigma \tau)^n \neq {\var id} $ if $n \in \mathbb{N}$ and $n < m$.
 To prove (i), first note that $k$ divides $m$, so that $m = j \cdot p$ for some natural number $p$. Similarly, $m = k \cdot q$ for some $q \in \mathbb{N}$. It follows:
 
 \noindent
-$(\sigma \tau )^m = \sigma^m \tau^m$\ \ \ \ \ (by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
+$(\sigma \tau )^m = \sigma^m \tau^m$~~~~~(by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
 
-\ \ \ $=  \sigma^{j \cdot p} \tau^{ k \cdot q}$\ \ \ \ \ (by definition of lcm)
+~~~$=  \sigma^{j \cdot p} \tau^{ k \cdot q}$~~~~~(by definition of lcm)
 
-\ \ \ $=  (\sigma^j)^p (\tau^ k)^q$\ \ \ \ \ (by exponentiation rules)
+~~~ $=  (\sigma^j)^p (\tau^ k)^q$~~~~~(by exponentiation rules)
 \footnote{These are the same exponentiation rules you saw in high school algebra:  $x^{ab} = (x^a)^b$}
 
-\ \ \ $=   {\var id} ^p {\var id} ^q$\ \ \ \ \ (by definition of order)
+~~~$=   {\var id} ^p {\var id} ^q$~~~~~(by definition of order)
 
-\ \ \ $ = {\var id} $\ \ \ \ \ (by definition of ${\var id} $).
+~~~$ = {\var id} $~~~~~(by definition of ${\var id} $).
 \medskip
 
 \noindent
 To prove (ii), let $n < m$. It follows either $k$ or $j$ does \emph{not} divide $n$. Let's suppose it's $k$ (the case where it's $j$ is virtually identical). In this case we must have $n = p \cdot k + r$ where $p, $r$ \in \mathbb{N}$ and $r < k$. It follows:
 
 \noindent
-$(\sigma \tau )^n = \sigma^n \tau^n$\ \ \ \ \ (by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
+$(\sigma \tau )^n = \sigma^n \tau^n$~~~~~(by Exercise~\ref{exercise:permute:k_power_disjoint_cycles})
 
-\ \ \ $=  \sigma^{j \cdot p + r} \tau^n$\ \ \ \ \ (substitution)
+~~~$=  \sigma^{j \cdot p + r} \tau^n$~~~~~(substitution)
 
-\ \ \ $=  (\sigma^j)^p \sigma^r \tau^n $\ \ \ \ \ (by exponentiation rules)
+~~~ $=  (\sigma^j)^p \sigma^r \tau^n $~~~~~(by exponentiation rules)
 
-\ \ \ $=   {\var id} ^p \sigma^r \tau^n $\ \ \ \ \ (by definition of order)
+~~~$=   {\var id} ^p \sigma^r \tau^n $~~~~~(by definition of order)
 
-\ \ \ $=   \sigma^r \tau^n $\ \ \ \ \ \ \ \ (by definition of identity)
+~~~$=   \sigma^r \tau^n $~~~~~~~~(by definition of identity)
 \medskip
 
 Now since $r < k$, and $|\sigma| = k$,  it follows that $\sigma^r \neq {\var id} $. Thus there is some $x$ such that $\sigma^r(x) \neq x$. But since $\sigma$ and $\tau$ are disjoint, it must be the case that $\tau(x) = x$. It follows that:
@@ -1521,7 +1521,7 @@ $| (1 2  3 4 5 6 7 8 9)^{300} |$
 The simplest  nontrivial cycles are those of length 2. We will show that these 2-cycles are convenient ``building blocks'' which can be used to construct all other cycles. 
 
 \begin{defn} \label{Transposition}
-Cycles of length 2 are called  \bfii{ transpositions}\index{Transposition!definition of}.\index{Cycle!transposition}   We will often denote transpositions by the symbol $\tau$ (the greek letter ``tau'').
+Cycles of length 2 are called  \term{transpositions}\index{Transposition!definition of}.\index{Cycle!transposition}   We will often denote transpositions by the symbol $\tau$ (the greek letter ``tau'').
 \end{defn}
 
 \begin{exercise}{example_transpositions}
@@ -1937,7 +1937,7 @@ Using your results from the previous exercise, complete Table~\ref{transposition
 
 If you did the previous exercise correctly, you will find that no matter where the transposition falls,  the column entry under ``$(\Delta_{\text{cyc}}-\Delta_{\text{sum}}) \bmod{2}$"  is always 1. This motivates the following definition:
 
-\begin{defn} for any permutation $P$, the number (sum of cycle lengths -- number of cycles) mod 2 is called the \bfii{ parity} of $P$.\index{Permutation!parity} A permutation with parity 0 is called an \bfii{ even permutation}, while a  permutation with parity 1 is called an \bfii{ odd permutation}. \index{Permutation!odd and even}.  Often books will use the terms ``even parity'' and ``odd parity''  instead of parity 0 and 1, respectively.
+\begin{defn} for any permutation $P$, the number (sum of cycle lengths -- number of cycles) mod 2 is called the \term{parity} of $P$.\index{Permutation!parity} A permutation with parity 0 is called an \term{even permutation}, while a  permutation with parity 1 is called an \term{odd permutation}. \index{Permutation!odd and even}.  Often books will use the terms ``even parity'' and ``odd parity''  instead of parity 0 and 1, respectively.
 \end{defn}
 \noindent
 Note that the disjoint sets of even and odd permutations of $n$ objects form a \emph{partition} of the set $S_n$. As we saw in the equivalence relations chapter, this means that we can define an equivalence relation such that all permutations with the same parity are equivalent.
@@ -1967,9 +1967,9 @@ Prove that it is impossible to write the identity permutation as the product of 
 %%So how you represent a permutation as a product of transpositions \emph{is not} unique; but the whether those representations of the permutation always have an even or odd number of transpositions \emph{is} unique.  This fact leads to the following proposition and defintions.
 %
 %\begin{defn} If a permutation $\sigma$ can be expressed as the product of an even
-%number of transpositions, then  we call $\sigma$ an \bfii{ even permutation}. \index{Permutation!even}\index{Even permutation}
+%number of transpositions, then  we call $\sigma$ an \term{even permutation}. \index{Permutation!even}\index{Even permutation}
 %Similarly, if $\sigma$ can be expressed as the product of an odd
-%number of transpositions, then  we call $\sigma$ an \bfii{ odd permutation}. \index{Permutation!odd}\index{Odd permutation}
+%number of transpositions, then  we call $\sigma$ an \term{odd permutation}. \index{Permutation!odd}\index{Odd permutation}
 %\end{defn}
 %
 %At this point we don't know anything about even or odd permutations. It's conceivable  for instance, that there might be permutations that are both even and odd. Is this actually possible? Let's find out! We begin by investigating the products of transpositions and cycles.
@@ -2127,9 +2127,9 @@ Prove that it is impossible to write the identity permutation as the product of 
 %From Proposition~\ref{proposition:permute:even_and_odd} we may deduce that there are two types of permutations, depending on whether it takes an even or odd number of transpositions to express the permutation. We formalize this distinction in the following definition.
 % 
 %\begin{defn} If a permutation $\sigma$ can be expressed as the product of an even
-%number of transpositions, then  we call $\sigma$ an \bfii{ even permutation}. \index{Permutation!even}\index{Even permutation}
+%number of transpositions, then  we call $\sigma$ an \term{even permutation}. \index{Permutation!even}\index{Even permutation}
 %Similarly, if $\sigma$ can be expressed as the product of an odd
-%number of transpositions, then  we call $\sigma$ an \bfii{ odd permutation}. \index{Permutation!odd}\index{Odd permutation}. The property of ``evenness'' or ``oddness'' is called \bfii{ parity}\index{Permutation!parity} (so we will say that an even permutation has even parity, and similarly for odd).
+%number of transpositions, then  we call $\sigma$ an \term{odd permutation}. \index{Permutation!odd}\index{Odd permutation}. The property of ``evenness'' or ``oddness'' is called \term{parity}\index{Permutation!parity} (so we will say that an even permutation has even parity, and similarly for odd).
 %\end{defn}
 
 \begin{exercise}{}
@@ -2201,12 +2201,12 @@ What is the parity of  the product of an even permutation and an odd permutation
 % \end{proof}
 
 % %, then any other product of transpositions
-% %equaling $\sigma$ must also contain an even number of transpositions.  In this case we call $\sigma$ an \bfii{ even permutation}.
+% %equaling $\sigma$ must also contain an even number of transpositions.  In this case we call $\sigma$ an \term{even permutation}.
 
 % %\bigskip{}
 % %Similarly, if $\sigma$ can be expressed as the product of an odd
 % %number of transpositions, then any other product of transpositions
-% %equaling $\sigma$ must also contain an odd number of transpositions.  In this case we call $\sigma$ an \bfii{ odd permutation}. 
+% %equaling $\sigma$ must also contain an odd number of transpositions.  In this case we call $\sigma$ an \term{odd permutation}. 
 % %\end{prop}
 % %
 % %To prove this, we first need a fact that we will assume without proof, because of the complexity of the proof.
@@ -2301,7 +2301,7 @@ The set $A_n$ is a group.
 
 
 \begin{defn} \label{Alternating_Group}
-The group $A_n$\label{alternatinggroup} of even permutations is called the \bfii{
+The group $A_n$\label{alternatinggroup} of even permutations is called the \term{
 alternating group on $n$ letters}\index{Group!alternating}. 
 \end{defn}
 
@@ -2547,7 +2547,7 @@ If $\sigma \in A_n$ and $\tau \in S_n$, show that $\tau^{-1} \sigma
 \tau \in A_n$. 
  
 \item
-Define the \bfii{ orbit}\index{Orbit} of $x \in X$ under the permutation $\sigma \in
+Define the \term{orbit}\index{Orbit} of $x \in X$ under the permutation $\sigma \in
 S_X$ to be the set 
 \[
 {\cal O}_{x, \sigma} = \{ y : x \sim y  \}.
@@ -2567,7 +2567,7 @@ to the equivalence relation $\sim$.
  
  
 \item
-A subgroup $H$ of $S_X$ is \bfii{
+A subgroup $H$ of $S_X$ is \term{
 transitive}\index{Subgroup!transitive} if for every $x, y \in X$, 
 there exists a $\sigma \in H$ such that $\sigma(x) =y$. Prove that
 $\langle \sigma \rangle$ is transitive if and only if ${\cal O}_{x,

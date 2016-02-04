@@ -19,13 +19,13 @@ Consider the $60^{\circ}$ counterclockwise rotation of regular hexagon, an eleme
 Now we're ready to give a general definition of group action. 
 
 \begin{defn}
-Let $X$ be a set and $G$ be a group. A \bfii{(left) action}\index{Actions!group} of $G$ on $X$ is a map $G\times X\rightarrow X$
+Let $X$ be a set and $G$ be a group. A \term{(left) action}\index{Actions!group} of $G$ on $X$ is a map $G\times X\rightarrow X$
 given by $(g, x)\rightarrow gx$, where
 \begin{enumerate}[(1)]
 \item $ex = x$ for all $x\in X$;
 \item $(g_1g_2)x = g_1(g_2x)$ for all $x\in X$ and all $g_1, g_2 \in G$.
 \end{enumerate}
-The set $X$  on which $G$ acts is called a  \bfii{$G$-set}.\index{G-set@$G$-set}
+The set $X$  on which $G$ acts is called a  \term{$G$-set}.\index{$G$-set}
 \end{defn}
 It is also possible to define right group actions, but in this chapter we'll focus just on left group actions.\index{Actions!left and right}  Following are some more examples of group actions.
 
@@ -56,7 +56,7 @@ Let $G = 2\mathbb{Z}$ and let $X =\mathbb{Z}$. Show that $X$ is a $G$-set.
 \end{enumerate}
 \end{exercise}
 \section{Group actions on regular polyhedra}\label{ActionsOnPolyhedra}
-We want to apply our new ideas to gain insight about the groups of rotational symmetries of \bfii{regular polyhedra}\index{Polyhedron!regular}  In general, a \emph{polyhedron} can be thought of as a collection of faces, edges and vertices: for example, a cube has 6 faces, 12 edges and 8 vertices. A\emph{regular polyhedron} is a polyhedron in which all faces are congruent regular polygons, and the same number of edges meet at every vertex. The group of rotational symmetries of a polyhedron act on the faces, edges and vertices.  A rotation will always take faces to faces, edges to edges and vertices to vertices. 
+We want to apply our new ideas to gain insight about the groups of rotational symmetries of \term{regular polyhedra}\index{Polyhedron!regular}  In general, a \emph{polyhedron} can be thought of as a collection of faces, edges and vertices: for example, a cube has 6 faces, 12 edges and 8 vertices. A\emph{regular polyhedron} is a polyhedron in which all faces are congruent regular polygons, and the same number of edges meet at every vertex. The group of rotational symmetries of a polyhedron act on the faces, edges and vertices.  A rotation will always take faces to faces, edges to edges and vertices to vertices. 
 
 In the following discussion we'll be introducing a bunch of new ideas. As usual, we'll illustrate these ideas first on a particular example. So let's begin with the cube, which is perhaps the regular polyhedron which is easiest to understand.
 
@@ -98,7 +98,7 @@ From the previous exercise it's pretty clear that for any two faces of a cube th
 
 \begin{defn}\label{GEquivalent}
 If a group $G$ acts on a set $X$ and $x, y \in X$, then $x$ is said to be
-\bfii{ $G$-equivalent\/}\index{G-equiv@$G$-equivalent} to $y$ if there exists a
+\term{$G$-equivalent}\index{G-equiv@$G$-equivalent} to $y$ if there exists a
 $g \in G$ such that $gx =y$. We write $x \sim_Gy$ or $x \sim y$ if
 two elements are $G$-equivalent.
 \end{defn}
@@ -118,7 +118,7 @@ exist group elements $g$ and $h$ such that $gx = y$ and $hy= z$. So $z
 = hy = (hg)x$, and $x$ is equivalent to $z$.
 \end{proof}
 
-Recall from Chapter~\ref{EquivalenceRelationsChap} that every equivalence relation on a set $X$ is associated with a partition of $X$, where a partition is a collection of disjoint subsets whose union is $X$. Each set in this partition is called an \bfii{equivalence class}.\index{Equivalence class}
+Recall from Chapter~\ref{EquivalenceRelationsChap} that every equivalence relation on a set $X$ is associated with a partition of $X$, where a partition is a collection of disjoint subsets whose union is $X$. Each set in this partition is called an \term{equivalence class}.\index{Equivalence class}
 
 \begin {exercise}{Cube2}
 Consider the edge $\overline{y_+z_+}$ of a cube.  What is the equivalence class of this edge under $G$-equivalence, where $G$ is the groups of rotational symmetries of a cube?
@@ -128,7 +128,7 @@ In the case of a cube where $X=\{\text{faces}\}\cup\{\text{edges}\}\cup\{\text{v
 
 \begin{defn} \label{noteorbit}
 If $X$ is a $G$-set, then each set in the partition of $X$ associated with
-$G$-equivalence is called an\bfii{ orbit\/}\index{Orbit!Of a $G$-set} of $X$ under $G$. We will denote the orbit that contains an element $x$ of $X$ by
+$G$-equivalence is called an\term{orbit}\index{Orbit!Of a $G$-set} of $X$ under $G$. We will denote the orbit that contains an element $x$ of $X$ by
 ${\cal O}_x$. 
 \end {defn}
 The next example shows how these concepts apply to permutation groups as well.
@@ -161,7 +161,7 @@ and $X = \{ 1, 2, 3, 4, 5,6,7,8\}$. Then $X$ is a $G$-set.  List the orbits of $
 For every pair of opposite faces, all rotational symmetries whose axis passes through those faces leaves them fixed.   Note that these rotations form a subgroup.  Similar subgroups are obtained when we take the axes through opposite edges, or opposite vertices. These are all examples of \emph{stabilizer subgroups}. The general definition is as follows.
 
 \begin {defn}\label {StabilizerSubgroups} 
-Given that $X$ is a $G$-set and  $x \in X$, let $G_x$ be the set of  group elements $g$ that fix $x$:  in other words, $gx=x$.  Then $G_x$ is called the \bfii{ stabilizer subgroup}\index{Subgroup!stabilizer} or \bfii{ isotropy 
+Given that $X$ is a $G$-set and  $x \in X$, let $G_x$ be the set of  group elements $g$ that fix $x$:  in other words, $gx=x$.  Then $G_x$ is called the \term{stabilizer subgroup}\index{Subgroup!stabilizer} or \term{isotropy 
 subgroup}\index{Subgroup!isotropy} of $x$.
 \end{defn}
 
@@ -175,7 +175,7 @@ This leads to another definition:
 
 \begin{defn} \label {FixedPoint}
 Let $G$ be a group acting on a set $X$, and let $g$ be
-an element of $G$. The \bfii{ fixed point set}\index{Fixed point
+an element of $G$. The \term{fixed point set}\index{Fixed point
 set!of a group element} of $g$ in $X$, denoted by $X_g$, is the set of 
 all $x \in X$ such that $gx = x$.
 \end{defn}
@@ -720,12 +720,12 @@ Complete the following table to characterize the group elements of the rotationa
 %20 & 3  & vertices\\
 
 \subsection{Soccer ball}
-All the polyhedra we've studied so far have congruent regular faces.  These are also known as \bfii{Platonic solids}\index{Platonic solids}.  Let's explore the rotation group of a polyhedron whose faces are not all congruent.  A familiar example is the football (``soccer ball' in the U.S.), as shown in  Figure~\ref{fig:Soccer}\index{Soccer ball}.  The soccer ball has 32 faces, 12 regular pentagons and 20 hexagons.  
+All the polyhedra we've studied so far have congruent regular faces.  These are also known as \term{Platonic solids}\index{Platonic solids}.  Let's explore the rotation group of a polyhedron whose faces are not all congruent.  A familiar example is the football (``soccer ball' in the U.S.), as shown in  Figure~\ref{fig:Soccer}\index{Soccer ball}.  The soccer ball has 32 faces, 12 regular pentagons and 20 hexagons.  
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=2in]{images/Soccerball.png}
-\caption{A faces of a soccer ball are 12 pentagons and 20 hexagons.  Source: \url{http://mathworld.wolfram.com/TruncatedIcosahedron.html}.
+\caption{The faces of a soccer ball are 12 pentagons and 20 hexagons.  Source: \url{http://mathworld.wolfram.com/TruncatedIcosahedron.html}.
 }
 \label{fig:Soccer}
 \end{center}
@@ -782,7 +782,7 @@ dodecahedron &  --&--\\ \hline
  Now in Exercise~\ref{exercise:actions:Stabilizers2} we showed another way of counting the elements of $G$. Essentially, we showed that we could express $|G|$ as:
 \[ |G| = 1 + |\text{stabilizers of faces}| + |\text{stabilizers of vertices}| + |\text{stabilizers of edges}|, \]
 where the `1' comes because we need to count the identity.
-We'll call this the \bfii {stabilizer counting formula}\index{Stabilizer!counting formula}.
+We'll call this the \term{stabilizer counting formula}\index{Stabilizer!counting formula}.
 
 Let's apply this formula to a polyhedron with $|{\cal O}_f|$ faces, $|{\cal O}_v|$ vertices and $|{\cal O}_e|$ edges.  
 We'll start with the faces.   For any face $f$ we already have a formula for $|G_f|$  using the counting formula in Proposition~\ref{prop:CountingFormula}. Dividing this formula by $|{\cal O}_f|$ gives:  $|G_f|=|G|/|{\cal O}_f|$.  By substitution we see that $|G_f|=(2\cdot|{\cal O}_e|)/|{\cal O}_f|$. But we know that one of the elements of $|G_f|$ is the identity, which has already been counted.    Since there are $|{\cal O}_f|$ different faces, this\emph{ seems to} imply that there are  $|{\cal O}_f|\cdot (2|{\cal O}_e|/|{\cal O}_f|-1)= 2|{\cal O}_e|-|{\cal O}_f|$ different stabilizers of faces (besides the identity). 
@@ -815,7 +815,7 @@ Let's put this equation together with our expression $|G|=2\cdot |{\cal O}_e|$ t
 & 2|{\cal O}_e|=1+5|{\cal O}_e|/2-|{\cal O}_f|/2-|{\cal O}_v|/2 \qquad \text{(by substitution)}\\
 & |{\cal O}_f|+|{\cal O}_v|-|{\cal O}_e|=2 \qquad \text{(by basic algebra)}\\
 \end {align*}
-This powerful tool is known as\bfii{ Euler's formula}\index{Euler's formula}.  Let's see how it can be used.
+This powerful tool is known as\term{Euler's formula}\index{Euler's formula}.  Let's see how it can be used.
 
 \begin {exercise}{Euler5}
 A regular icosahedron has 12 triangular faces and 30 edges.  By Euler's formula, how many vertices does an icosahedron have?
@@ -876,7 +876,7 @@ As we can see, the action of the additive group $(R,+)$ on the cosets ${\theta +
 Let's consider another example of group action on a set of cosets.  This example can be thought of as a two-dimensional version of the previous example, and can be envisioned using computer graphics.
 
 \begin {example}{IntLat1}
-Let $G$ be the $xy$ plane under addition (that is, $G=(\mathbb {R}^2,+)$).  Let $H=\mathbb{Z}\times \mathbb{Z}$, which is a subgroup of $G$ ($H$ is called the \bfii{integer lattice}\index{Integer!lattice}).  
+Let $G$ be the $xy$ plane under addition (that is, $G=(\mathbb {R}^2,+)$).  Let $H=\mathbb{Z}\times \mathbb{Z}$, which is a subgroup of $G$ ($H$ is called the \term{integer lattice}\index{Integer!lattice}).  
 A coset of $H$ in $G$ is defined as $x+H=\{(x+m, y+n):m,n \in\mathbb{ Z}\}$
 Each coset of the form $x+H$ has a single point inside the unit square.
 Consider, $g=(0.2,0), x=(0.9,0.5)$ and  $h=(m,n)$, for $g,x\in G$ and $h\in H$.
@@ -973,7 +973,7 @@ The previous exercise shows that we can't always do the same thing with right co
 \end {exercise}
 \section{Conjugation}\label {Conjugation}
 \subsection*{Commutative diagrams and the definition of conjugation}
-When we talked about permutations, we saw that the objects we were permuting didn't really change the situation.  For example, we saw that permuting $\{1,2,3,4\}$ was the ``same thing'' as permuting $\{A,B,C,D\}$. Now what do we really mean by the ``same thing''? Well for example, if we take any permutation of $\{1,2,3,4\}$ and replace $1$ with $A$, $2$ with $B$ and so on, then we'll get a permutation of $\{A,B,C,D\}$. To be specific let's take $\sigma=(123)$ and $f=\begin {pmatrix} 1&2&3&4\\A&B&C&D\end {pmatrix}$.  It's possible to represent this situation with diagram in Figure~\ref{fig:Commutative1}. This type of diagram is called a \bfii{commutative diagram}.\index{Commutative!diagram}
+When we talked about permutations, we saw that the objects we were permuting didn't really change the situation.  For example, we saw that permuting $\{1,2,3,4\}$ was the ``same thing'' as permuting $\{A,B,C,D\}$. Now what do we really mean by the ``same thing''? Well for example, if we take any permutation of $\{1,2,3,4\}$ and replace $1$ with $A$, $2$ with $B$ and so on, then we'll get a permutation of $\{A,B,C,D\}$. To be specific let's take $\sigma=(123)$ and $f=\begin {pmatrix} 1&2&3&4\\A&B&C&D\end {pmatrix}$.  It's possible to represent this situation with diagram in Figure~\ref{fig:Commutative1}. This type of diagram is called a \term{commutative diagram}.\index{Commutative!diagram}
 
 
 The commutative diagram illustrates the construction of a conjugation. We can begin in the upper right corner and travel to the upper left, in the opposite direction of the $f$ arrow. That is $f^{-1}$.  Then, from upper left to lower left represents the permutation $\sigma=(123)$.  Then, proceed in the direction of the arrow, that is $f$ from lower left to lower right.  At the lower right corner, we arrive at the mapping of $\mu$.  So the diagram shows $\mu=f\sigma f^{-1}$.  (Recall functions are composed from right to left.).  
@@ -997,7 +997,7 @@ For each $\sigma$ and and $f$, complete a commutative diagram like the one in Fi
 \item $\sigma=(147)(2563)$ and $f=\begin{pmatrix} 1&2&3&4&5&6&7\\ A&B&C&D&E&F&G \end{pmatrix}$
 \end{enumerate}
 \end {exercise}
-Now instead of $f$ going between different sets, we can choose $f$ to map $\{1,2,3,4\}$ to itself. In this case, $f$ itself is a permutation.  To be more consistent with our earlier notation for permutations, we'll use the symbol $\tau$ instead of $f$ in the following discussion.  What $\tau$ corresponds to is just relabeling the objects that we're permuting. Figure~\ref{fig:Commutative2} shows an example where both $\tau$ and $\sigma$ are permutations on the set $\{1,2,3,4\}$. The diagram shows that if we do a permutation $\sigma$ on the originally-labeled objects, and compare to the same permutation of the relabeled objects, we find that the relabeled permutation is exactly given by $\tau\sigma \tau^{-1}$. The permutations $\sigma$ and $\tau\sigma \tau^{-1}$ are called \bfii{conjugate permutations}\index{Permutation!conjugate}, and the operation which takes $\sigma$ to $\tau \sigma \tau^{-1}$ is called \bfii{conjugation}.\index{Conjugation!of permutations}\footnote{Note this is quite different from conjugation of complex numbers. Unfortunately, ``conjugation'' is a very popular word in mathematics, and is used in many different senses.}
+Now instead of $f$ going between different sets, we can choose $f$ to map $\{1,2,3,4\}$ to itself. In this case, $f$ itself is a permutation.  To be more consistent with our earlier notation for permutations, we'll use the symbol $\tau$ instead of $f$ in the following discussion.  What $\tau$ corresponds to is just relabeling the objects that we're permuting. Figure~\ref{fig:Commutative2} shows an example where both $\tau$ and $\sigma$ are permutations on the set $\{1,2,3,4\}$. The diagram shows that if we do a permutation $\sigma$ on the originally-labeled objects, and compare to the same permutation of the relabeled objects, we find that the relabeled permutation is exactly given by $\tau\sigma \tau^{-1}$. The permutations $\sigma$ and $\tau\sigma \tau^{-1}$ are called \term{conjugate permutations}\index{Permutation!conjugate}, and the operation which takes $\sigma$ to $\tau \sigma \tau^{-1}$ is called \term{conjugation}.\index{Conjugation!of permutations}\footnote{Note this is quite different from conjugation of complex numbers. Unfortunately, ``conjugation'' is a very popular word in mathematics, and is used in many different senses.}
 
 \begin{figure}[ht]
 \begin{center}
@@ -1076,7 +1076,7 @@ Note something very interesting in the previous exercise.  When $h=e$ the all el
  We can generalize Example \ref{example:actions:Conj6} using the following definition.
 
 \begin{defn}
-Given two group elements $g,h$ in $G$, then $hgh^{-1}$ is said to a \bfii{conjugate element}\index{Conjugate!element} to $g$. In this case, we would say that $h$ acts on $g$ by conjugation.\index{Conjugation!operation on groups}
+Given two group elements $g,h$ in $G$, then $hgh^{-1}$ is said to a \term{conjugate element}\index{Conjugate!element} to $g$. In this case, we would say that $h$ acts on $g$ by conjugation.\index{Conjugation!operation on groups}
 \end{defn}
 %try to come up with another example of conjugation
 The definition of conjugation gives us a new group action for any subgroup $H$ acting on a group $G$ which contains $H$:
@@ -1213,7 +1213,7 @@ We've shown that if elements are conjugate they must have the same order.
 
 \subsection*{Conjugacy classes and the class equation}
 
-We have seen before that $g$-equivalent elements form an equivalence class. This means that the operation of conjugacy defines an equivalence relation, and every set of conjugate elements is an equivalence classes. These equivalence classes are known as \bfii{conjugacy classes}.\index{Conjugacy!class}
+We have seen before that $g$-equivalent elements form an equivalence class. This means that the operation of conjugacy defines an equivalence relation, and every set of conjugate elements is an equivalence classes. These equivalence classes are known as \term{conjugacy classes}.\index{Conjugacy!class}
 The upshot is that we have the group $G$ partitioned into 5 conjugacy classes, consisting of: 
 \begin{itemize}
 \item
@@ -1231,7 +1231,7 @@ stabilizers of edges.
 This is exactly the method we used before to count up the number of elements in $G$.  
 What we've just done for the rotational symmetries of a cube can be done for any group.  We have the general formula:
 $$|G| = \sum (\text{orders of conjugacy classes}).$$
-This is known as the \bfii{class equation}.\index{Class equation}
+This is known as the \term{class equation}.\index{Class equation}
 
 \begin{example}{Conj15}
   We can verify that the class equation correctly calculates the order of the group of rotational symmetries of a cube. 

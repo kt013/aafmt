@@ -56,7 +56,7 @@ Give the number of possible answers for Examples~\ref{example:modular:crockpot} 
 \end{exercise}
 
 Each example above requires arithmetic to solve, but it's arithmetic with a twist. For example, in
-Example~\ref{example:modular:racetrack} if the car is at the 3-mile mark and travels another 3 miles, then it arrives at the 1-mile marker. This is a strange equation: $3 + 3 = 1$. The reason of course is that the location ``cycles'' back to 0 instead of increasing to $5,6,7, \ldots$ This  ``arithmetic with cycles''  is actually called \textbf{\emph{modular arithmetic}}\index{Modular arithmetic}.  The size of one cycle (which is equal to the number of possible answers described in Exercise~\ref{exercise:modular:modulus0} is called the \textbf{\emph{modulus}}\index{Modulus}\index{Modulus}.  
+Example~\ref{example:modular:racetrack} if the car is at the 3-mile mark and travels another 3 miles, then it arrives at the 1-mile marker. This is a strange equation: $3 + 3 = 1$. The reason of course is that the location ``cycles'' back to 0 instead of increasing to $5,6,7, \ldots$ This  ``arithmetic with cycles''  is actually called \term{modular arithmetic}\index{Modular arithmetic}.  The size of one cycle (which is equal to the number of possible answers described in Exercise~\ref{exercise:modular:modulus0} is called the \term{modulus}\index{Modulus}\index{Modulus}.  
 
 \begin{exercise}{modulus1}
 Give the modulus for the seven examples at the beginning of this chapter.
@@ -125,7 +125,7 @@ In general, if we're dealing with a situation that uses modulus $m$, then we def
 as follows:
 
 \begin{defn}\label{definition:modular:equivalence}
- Two integers $a$ and $b$ are \bfii{ equivalent} mod $m$\index{Modular equivalence}  if both $a$ and $b$ have the same remainder when divided by $m$. To denote that $a$ and $b$ are \bfii{ equivalent} mod $m$, we write: $a \equiv b \pmod{m}$.
+ Two integers $a$ and $b$ are \term{equivalent} mod $m$\index{Modular equivalence}  if both $a$ and $b$ have the same remainder when divided by $m$. To denote that $a$ and $b$ are \term{equivalent} mod $m$, we write: $a \equiv b \pmod{m}$.
  \end{defn}
 
 \begin{rem}
@@ -321,7 +321,7 @@ Supermarkets and retail stores have a dirty little secret. Every time you scan y
 
 
 \begin{exercise}{UPCSymbols} \emph{Universal Product Code}
-\index{Code!UPC} (UPC) symbols are now found on most \index{UPC!code}
+\index{Code!UPC} (UPC) symbols are now found on most \index{UPC code}
 products in grocery and retail stores. The UPC symbol (see Figure~\ref{groups_figure_3}) is a 12-digit
 code which identifies the manufacturer of a product and the product itself. The first 11 digits contain the information, while the twelfth digit is used to check for errors that may occur while scanning. If $d_1 d_2
 \cdots d_{12}$ is a valid UPC code, then  
@@ -343,7 +343,7 @@ Show that the number 0-50000-30043-6 is not a valid UPC number.
 \item (\emph{for geeks}) Write a program or Excel spreadsheet that will determine whether or not a UPC number is valid. 
 
 \item
-One common scanning error occurs when two consecutive digits are accidentally interchanged. This is called a \bfii{ transposition error}.\index{Transposition!error} 
+One common scanning error occurs when two consecutive digits are accidentally interchanged. This is called a \term{transposition error}.\index{Transposition!error} 
 The  UPC error detection scheme can catch most transposition errors.  Using the UPC in (a) as the correct UPC, show that the transposition error 0-50003-00042-6 is detected.  Find a transposition error that is not detected. 
 
 \item
@@ -355,7 +355,7 @@ The  UPC error detection scheme can catch most transposition errors.  Using the 
 \end{exercise} 
  
 
-It is often useful to use an \textbf{\emph{inner product}} notation\index{Inner product!notation} for these types of error detection schemes.\footnote{You may have seen inner products (a.k.a. ``dot products'') in one of your math classes talking about vectors.} In the following text, the notation
+It is often useful to use an \term{inner product} notation\index{Inner product!notation} for these types of error detection schemes.\footnote{You may have seen inner products (a.k.a. ``dot products'') in one of your math classes talking about vectors.} In the following text, the notation
 \[
 (d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots, w_k ) \equiv 0 \pmod{ n }
 \]
@@ -854,7 +854,7 @@ From parts (h) and (i) of Exercise \ref{exercise:modular:modeq3} we see that eve
 
 % \subsection{Modular addition}
 
-% This ''modified'' addition we've been speaking of is actually called \textbf{\emph{modular addition}}.  The size of one cycle (which we've denoted as $m$) is called the \textbf{\emph{modulus}}\index{Modulus}.  So modular addition refers to  addition done according to a modulus: that is, addition in which the numbers reset (or cycle around) every time you reach the modulus.
+% This ''modified'' addition we've been speaking of is actually called \term{modular addition}\index{Modular addition}.  The size of one cycle (which we've denoted as $m$) is called the \term{modulus}\index{Modulus!in modular addition}.  So modular addition refers to  addition done according to a modulus: that is, addition in which the numbers reset (or cycle around) every time you reach the modulus.
 
 % \begin{exercise}{}
 % Give the modulus used in  Exercises~\ref{exercise:modular:modex1} through~\ref{exercise:modular:modex_last}.
@@ -943,7 +943,7 @@ From parts (h) and (i) of Exercise \ref{exercise:modular:modeq3} we see that eve
 % \end{enumerate}
 % \end{exercise}
 
-% Continuing with our racetrack example, we can say that $3,8,13,\ldots$ are all \emph{equivalent} mod 5; they're all the same, as judged by a modulus of 5.  This leads to our first definition of \textbf{\emph{modular equivalence}} \index{Equivalence!modular!first definition}\index{Modular equivalence}.
+% Continuing with our racetrack example, we can say that $3,8,13,\ldots$ are all \emph{equivalent} mod 5; they're all the same, as judged by a modulus of 5.  This leads to our first definition of \term{modular equivalence} \index{Equivalence!modular!first definition}\index{Modular equivalence}.
 
 % \begin{defn}\label{mod_equiv_def_1} \emph{(modular equivalence, first definition)}
 % $a \equiv b \pmod{m}$ iff $a \pmod{m} = b \pmod{m}$
@@ -1036,7 +1036,7 @@ From parts (h) and (i) of Exercise \ref{exercise:modular:modeq3} we see that eve
 % Try to solve this, and think about the method you used.  Was it similar to the method you used for modular addition?  What was the difference?  
 % \medskip
 % \newline
-% Of course you could use modular addition as before: add $24 + 24 + 24 + \ldots + 24$ (seventeen 24's in all), and then find the remainder mod 5. But hopefully you found an easier method: \emph{multiply} instead of add. This leads us to a new kind of modular arithmetic: \bfii{ modular multiplication}.
+% Of course you could use modular addition as before: add $24 + 24 + 24 + \ldots + 24$ (seventeen 24's in all), and then find the remainder mod 5. But hopefully you found an easier method: \emph{multiply} instead of add. This leads us to a new kind of modular arithmetic: \term{modular multiplication}.
 
 % Since you're already an expert on modular addition, you might guess that modular multiplication is the same process as modular addition, except that you multiply instead of add -- and you would be right!  To find the modular product of two numbers a and b, multiply them together, divide by the modulus $m$, and your remainder r is the answer.  Mathematically, the general definition of modular multiplication \index{Modular multiplication! definition} is as follows:
 
@@ -1109,12 +1109,12 @@ From parts (h) and (i) of Exercise \ref{exercise:modular:modeq3} we see that eve
   %$... \equiv -7 \equiv -2 \equiv 3 \equiv 8 \equiv 13 \equiv ... \pmod{5}$; \\ 
  %etc. \\  
 %\end{center}
-%So all the numbers equal to 0 mod 5 are labeled 0; all the numbers equal to 1 mod 5 are labeled 1; and so on.  (In a later chapter you will see that sets of equivalent objects like this are called ``equivalence classes''). We will call this set of 5 labels $\{0,1,2,3,4\}$ the \bfii{ set of integers mod 5}, and denote it by the symbol ${\mathbb Z}_{5}$. 
+%So all the numbers equal to 0 mod 5 are labeled 0; all the numbers equal to 1 mod 5 are labeled 1; and so on.  (In a later chapter you will see that sets of equivalent objects like this are called ``equivalence classes''). We will call this set of 5 labels $\{0,1,2,3,4\}$ the \term{set of integers mod 5}, and denote it by the symbol ${\mathbb Z}_{5}$. 
 
 %In view of this definition, can you see what the set ${\mathbb Z}_{10}$ should be?  How about ${\mathbb Z}_{20}$?  A little thought should convince you that it is natural to choose ${\mathbb Z}_{n} = \{0,1,2,...,n-1\}$.  From our earlier sections we know that you can add and multiply these numbers mod $n$, and obtain a result that is also in ${\mathbb Z}_{n}$.  This motivates the following general definition integers mod $n$: 
 
 %\begin{defn}{}
-%Given any positive integer $n$, the set of integers $\{0,1,...,n-1\}$, together with the operations of addition and multiplication mod $n$, are called the \bfii{ integers mod n}.\index{Integers!mod $n$} The symbol ${\mathbb Z}_n$ is used to represent the integers mod $n$.
+%Given any positive integer $n$, the set of integers $\{0,1,...,n-1\}$, together with the operations of addition and multiplication mod $n$, are called the \term{integers mod n}.\index{Integers!mod $n$} The symbol ${\mathbb Z}_n$ is used to represent the integers mod $n$.
 %\end{defn}
 %Later on (in the Equivalence Relations chapter) we'll give the ``correct'' mathematical definition of the integers mod $n$. 
 
@@ -1139,7 +1139,7 @@ Before we do this, we need to address an important issue. Consider the case of $
 % With these in mind, we formally define modular addition and multiplication as follows:
 
 \begin{defn}\label{definition:modular:mod_add}
-\bfii{ Modular Addition}\index{Modular addition}
+\term{Modular Addition}\index{Modular addition}
 
 \noindent
 The sum mod $n$ of two integers mod $n$ is the remainder left after dividing their regular sum by $n$; that is, if $x,y \in {\mathbb Z}_n$ then
@@ -1152,7 +1152,7 @@ $r \in {\mathbb Z}_n.$
 Note that in Definition~\ref{definition:modular:mod_add} we write $x \oplus y = r$ rather than $x \oplus y \equiv r \pmod{n}$, since $x \oplus y$ is defined to be \emph{equal} to the remainder. The same holds for the following definition:
 
 \begin{defn}\label{definition:modular:mod_mult}
-\bfii{ Modular Multiplication}
+\term{Modular Multiplication}
 
 \noindent
 The product mod $n$ of two integers mod $n$ is the remainder left after dividing their regular product by $n$; that is, if $x,y \in {\mathbb Z}_n$ then
@@ -1336,7 +1336,7 @@ $\odot$ & 0 & 1 & 2 & 3 & 4 \\
 Again, looking at the entry in the ''2'' row and the ''3'' column we see 1, which tells us that $2 \odot 3 = 1$.
 
 Similarly, for each set of numbers ${\mathbb Z}_n$ we can construct a table to determine the result of any possible calculation mod $n$.
-These type of tables are known as \bfii{ Cayley tables}\index{Cayley table}.  We will see them often throughout the course.
+These type of tables are known as \term{Cayley tables}\index{Cayley table}.  We will see them often throughout the course.
 
 \begin{exercise}{49}
 Use the Cayley table to calculate each of the following using $\oplus$ and $\odot$ in ${\mathbb Z}_5$ (remember, compute the remainders \emph{before} doing the arithmetic).
@@ -1357,7 +1357,7 @@ $ \mod(523 + \left( (4568 \cdot 43) + (4568 \cdot 20525) \right) ,5)$
 % Now imagine relabeling the number line with each integer's remainder mod $10$.  What numbers would be in the set  ${\mathbb Z}_{10}$ then?   What about the set ${\mathbb Z}_{20}$?  What about for ${\mathbb Z}_{n}$? A little thought should convince you that ${\mathbb Z}_{n} = \{0,1,2,...,n-1\}$, since these are all the possible remainders mod $n$.  This motivates the following general definition of the integers mod $n$: 
 
 % \begin{defn}{}
-% Given any positive integer $n$, the set of integers $\{0,1,...,n-1\}$ are called the \bfii{ integers mod n}.\index{Integers!mod $n$} The symbol ${\mathbb Z}_n$ is used to represent the integers mod $n$.
+% Given any positive integer $n$, the set of integers $\{0,1,...,n-1\}$ are called the \term{integers mod n}.\index{Integers!mod $n$} The symbol ${\mathbb Z}_n$ is used to represent the integers mod $n$.
 % \end{defn}
 
 \noindent
@@ -1418,9 +1418,9 @@ $\odot$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 
 %\medskip{}
 There is an important feature exhibited in both Table~\ref{groups_Z8_add_table} and Table ~\ref{groups_Z8_mult_table} that is easy to overlook.
-Notice that every entry in the table is also an element of ${\mathbb Z}_8$. You can think of the set $\{0,...,7\}$ as a closed box, and when you add or multiply any two numbers in that box mod $8$, you always get another number in that box, never outside of it (indeed because addition and multiplication mod $8$ return a remainder that is some number $0-7$). We express this mathematically by saying that ${\mathbb Z}_8$ is \bfii{ closed} \index{Closure!integers mod n} under addition and multiplication mod $8$. It seems reasonable that the same should be true for any ${\mathbb Z}_n$, and we state this formally as a proposition (as mathematicians are wont to do):
+Notice that every entry in the table is also an element of ${\mathbb Z}_8$. You can think of the set $\{0,...,7\}$ as a closed box, and when you add or multiply any two numbers in that box mod $8$, you always get another number in that box, never outside of it (indeed because addition and multiplication mod $8$ return a remainder that is some number $0-7$). We express this mathematically by saying that ${\mathbb Z}_8$ is \term{closed} \index{Closure!integers mod n} under addition and multiplication mod $8$. It seems reasonable that the same should be true for any ${\mathbb Z}_n$, and we state this formally as a proposition (as mathematicians are wont to do):
 
-%While we understand why the entries in the tables below are all integers in ${\mathbb Z}_8$, doesn't it seem a bit fortuitous, even a miracle, that this is true?  How many groups of objects in life can you pick any two out of, combine them in some way, and from that process generate another object in that group, never generating any object outside of it?  You can think of the set $\{0,...,7\}$ as a closed box, and when you add or multiply any two numbers in that box mod $8$, you always get another number in that box, never outside of it.  This fact, this happenstance is a \emph{property} we call \textbf{closure} \index{.  We would say that ${\mathbb Z}_8$ is closed under addition and multiplication mod $8$.
+%While we understand why the entries in the tables below are all integers in ${\mathbb Z}_8$, doesn't it seem a bit fortuitous, even a miracle, that this is true?  How many groups of objects in life can you pick any two out of, combine them in some way, and from that process generate another object in that group, never generating any object outside of it?  You can think of the set $\{0,...,7\}$ as a closed box, and when you add or multiply any two numbers in that box mod $8$, you always get another number in that box, never outside of it.  This fact, this happenstance is a property we call \term{closure} \index{Closure!definition}.  We would say that ${\mathbb Z}_8$ is closed under addition and multiplication mod $8$.
 
 %Now as mentioned above, by the \emph{definitions} of modular addition and multiplication, this closure property should hold not only for ${\mathbb Z}_8$, but for any ${\mathbb Z}_n$.  This motivates our first proposition:
 
@@ -1546,7 +1546,7 @@ Let's see if this is true in ${\mathbb Z}_8$. Consider the multiplication table 
 
 Looking at the table, we find that  rows 0, 2, 4, and 6 do not contain a $1$. We would state this formally in the following way:  for $n = 0$, 2,  4, or 6, there is no integer $k \in {\mathbb Z}_8$ such that $k \odot n \equiv 1 \pmod{ 8}$.  Hence not every integer mod 8 has a multiplicative inverse. 
 
-A little thought should convince you that 0 \emph{never} has a multiplicative inverse for any ${\mathbb Z}_n$. This means that it's not possible to prove a multiplicative version of Proposition \ref{proposition:modular:addinv_property_Zn}, since we have a \bfii{ counterexample} that shows that not every element of ${\mathbb Z}_n$ has an inverse, no matter what $n$ is.
+A little thought should convince you that 0 \emph{never} has a multiplicative inverse for any ${\mathbb Z}_n$. This means that it's not possible to prove a multiplicative version of Proposition \ref{proposition:modular:addinv_property_Zn}, since we have a \term{counterexample} that shows that not every element of ${\mathbb Z}_n$ has an inverse, no matter what $n$ is.
 
 \begin{rem}
 This example shows that it's often easier to \emph{disprove} something than to prove it!  To disprove a general statement, you only need to find \emph{just one} counterexample, whereas an unlimited number of examples can never prove a general statement.
@@ -1599,7 +1599,7 @@ a \odot (b \oplus c)  = (a \odot b)\oplus (a \odot c).
 We'll do the proof that modular addition is associative, and  you will prove the other statements as exercises (the proofs are pretty similar). The proof strategy is a familiar one: prove modular arithmetic properties by making use of the corresponding properties of ordinary arithmetic.
 
 
-\bfii{ Modular addition is associative:}
+\term{Modular addition is associative:}
 Given $a,b,c$ are elements of $\mathbb{Z}_n$, it's also true that $a,b,c$ are integers. By Proposition~\ref{proposition:modular:number_remainder}, it follows that:
 \[ a \oplus b \equiv a + b \pmod{n}. \]
 We may use Proposition~\ref{proposition:modular:number_remainder} a second time to obtain:
@@ -1632,9 +1632,9 @@ Prove  part (\ref{distrib}) of Proposition \ref{proposition:modular:Zn_comm_asso
 \subsection{Definition of a group}\label{DefOfGroup}
 It's time for us to make a confession. All this time we've been talking about modular arithmetic, we've had an ulterior motive. We're not so interested in modular arithmetic for its own sake:\footnote{Although you have to admit it \emph{is} interesting.} rather, we've spent all this time and effort discussing modular arithmetic because it provides good examples of the central concept in abstract algebra, namely, the concept of a \emph{group}.
 
-Notice that the set ${\mathbb Z}_n$ with the operation of $\oplus$ has an identity, and inverses, and the property of closure. Furthermore, ${\mathbb Z}_n$ is associative under $\oplus$, as we just showed.  Any combination of a set and an operation that has those three properties, as well as the associative property, is called a \textbf{group} \index{Group!definition}
+Notice that the set ${\mathbb Z}_n$ with the operation of $\oplus$ has an identity, and inverses, and the property of closure. Furthermore, ${\mathbb Z}_n$ is associative under $\oplus$, as we just showed.  Any combination of a set and an operation that has those three properties, as well as the associative property, is called a \term{group} \index{Group!definition}
 
-\begin{defn}  A \bfii{ group}\index{Group!definition} is a set combined with an operation that has the following properties:
+\begin{defn}  A \term{group}\index{Group!definition} is a set combined with an operation that has the following properties:
 \begin{itemize}
 \item \emph{Closure}: the set is closed under the operation;
 \item \emph{Identity}: the set has an identity element for the operation;
@@ -1793,7 +1793,7 @@ This yields $x=2, b=0$.
 
 Now notice that 8 is divisible by 4.  In the equation before that, we have $12 = 4\cdot2 + 4$.  Since the right hand side is a sum of multiples of 4, the left hand side must also be a multiple of 4.  In the next equation up $20=12\cdot x + 8$ again, the right hand side is a sum of multiples of 4, so the left hand side must also be a multiple of 4.  Continuing this logic upward shows that all intervals created along the way are divisible by 4.  Hence the algorithm has generated a divisor of the original lengths 52 and 20.  
 
-The procedure we have just described is called the \bfii{ Euclidean algorithm}.\index{Euclidean algorithm}(An \emph{algorithm} is a mathematical procedure designed to compute a specific result). The Euclidean algorithm is very powerful, and in fact can be used to calculate gcd's of large numbers as we'll see below.
+The procedure we have just described is called the \term{Euclidean algorithm}.\index{Euclidean algorithm}(An \emph{algorithm} is a mathematical procedure designed to compute a specific result). The Euclidean algorithm is very powerful, and in fact can be used to calculate gcd's of large numbers as we'll see below.
 
  In the above example,  by factoring 52 and 20 into primes: $20=2\cdot2\cdot5$ and $52=2\cdot2\cdot13$, it is plain to see that the only common factors are 2 and 4.  Thus the divisor produced by the Euclidean algorithm happened to be the greatest common divisor. This turns out to be true in general, as we will now prove.
 
@@ -2169,7 +2169,7 @@ Let  $p$ be a prime, and let  $a$ be an integer.  Show that $a$ is relatively pr
 Suppose $p$ is prime, and suppose $a$ is relatively prime to $p$.  Suppose also that $p$ divides $ab$. By multiplying the equation in part (a) by $b$, show that $p$ must divide $b$.
 \hyperref[sec:modular_arithmetic:hints]{(*Hint*)}
 \item
-Prove \bfii{Euclid's Lemma}:  Let $p$ be a prime number, and let $a$ and $b$ be integers. If $p$ divides $ab$, then either $p$ divides $a$ or $p$ divides $b$.
+Prove \term{Euclid's Lemma}:  Let $p$ be a prime number, and let $a$ and $b$ be integers. If $p$ divides $ab$, then either $p$ divides $a$ or $p$ divides $b$.
 \hyperref[sec:modular_arithmetic:hints]{(*Hint*)}
 \end{enumerate}
 \end{exercise}
@@ -2307,7 +2307,7 @@ We now are experts at finding solutions to congruences  of the form $ax \equiv c
 
 Can we find  an $x$ that solves both at the same time? 
 
-The first-century Chinese mathematician Sun Zi considered problems like this, and was able to come up with a general method of solution. His result is now known as the \bfii{ Chinese Remainder Theorem}.\index{Chinese Remainder Theorem}  
+The first-century Chinese mathematician Sun Zi considered problems like this, and was able to come up with a general method of solution. His result is now known as the \term{Chinese Remainder Theorem}.\index{Chinese Remainder Theorem}  
 
 We may apply Sun Zi's solution (expressed in modern algebraic language) to our particular case as follows. For the first congruence we have the general solution $x=4+7k$, where $k$ is any integer in $\mathbb{Z}$.  If we  substitute $4+7k$ for $x$ in the second congruence, we get:
 \[4+7k \equiv 5 \pmod 9 \implies 7k \equiv 1 \pmod 9.\]

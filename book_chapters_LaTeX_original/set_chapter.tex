@@ -11,7 +11,7 @@ You've probably seen sets, set relations, and set operations in previous classes
 
 First of all, we provide a precise mathematical definition for ``set'':
 
-\begin{defn} A \bfii{ set\/}\index{Sets!definition of} is a well-defined collection of objects: that is, it is defined in such a manner that we can determine for any given object $x$ whether or not $x$ belongs to the set.  The objects that belong to a set are called its \index{Element!of a set}\bfii{ elements} or \bfii{ members}. We will denote sets by capital letters, such as $A$ or $X$; if $a$ is an element of the set $A$, we write $a \in A$\label{sets_membership}.
+\begin{defn} A \term{set}\index{Set!definition of} is a well-defined collection of objects: that is, it is defined in such a manner that we can determine for any given object $x$ whether or not $x$ belongs to the set.  The objects that belong to a set are called its \term{elements}\index{Element!of a set}\index{Set!elements} or \term{members}. We will denote sets by capital letters, such as $A$ or $X$; if $a$ is an element of the set $A$, we write $a \in A$\label{sets_membership}.
 \end{defn}
 \subsection{How to specify sets}
 Two common ways of specifying sets are:
@@ -92,7 +92,7 @@ On the other hand, suppose that $S$ is not an element of itself. Then $S$ satisf
 \end{itemize}
 How do we get out of this mess? No matter what we assume, we end up with a contradiction! The problem, as is often the case, lies in  \emph{hidden assumptions} that we have made. Our definition of $S$ makes reference to the unknown $x$, where $x$ is an ``arbitrary'' set. Herein lies the rub:  the notion of ``arbitrary'' set is \emph{not well-defined}. Put another way: the set of ``all possible sets'' is NOT a set!
 
-In the following discussion we will avoid this problem by always starting out with a well-defined set that contains all the sets and elements of interest in a particular example or problem. Such an all-encompassing set is referred to as a \bfii{ universal set}\index{Universal set}. Note each particular problem will have its own universal set. For instance, if we are talking about public opinion polls  in the United States, an appropriate universal set might be the set of American citizens. If we're talking about sets of prime and composite numbers, our universal set could be either the set of integers, or the set of natural numbers. If we are talking about roots of algebraic equations, depending on our particular interest we might choose the universal set to be the set of real numbers, or the set of complex numbers. When we talk about sets in a general way, we often denote sets by captial  letters $A, B, C,...$, and it's assumed that all these sets are subsets of some universal set $U$.
+In the following discussion we will avoid this problem by always starting out with a well-defined set that contains all the sets and elements of interest in a particular example or problem. Such an all-encompassing set is referred to as a \term{universal set}\index{Universal set}. Note each particular problem will have its own universal set. For instance, if we are talking about public opinion polls  in the United States, an appropriate universal set might be the set of American citizens. If we're talking about sets of prime and composite numbers, our universal set could be either the set of integers, or the set of natural numbers. If we are talking about roots of algebraic equations, depending on our particular interest we might choose the universal set to be the set of real numbers, or the set of complex numbers. When we talk about sets in a general way, we often denote sets by captial  letters $A, B, C,...$, and it's assumed that all these sets are subsets of some universal set $U$.
 
 \subsection{Important sets of numbers}
 We will refer often to the following sets of numbers. Although we are presuming that these sets are ``given'', the reader should be aware that it's not at all easy to formally define them in a mathematically precise way.  (Although we won't give any definitions here,  you may encounter them in other mathematics courses, such as logic or analysis.)
@@ -113,7 +113,7 @@ This is just one example of a favorite gambit of mathematicians, namely creating
 
 
 \subsection *{Subsets and proper subsets}
-% Back in grade school, you were introduced to \bfii{ relations} between integers, such as 'less than' ($<$).\index{Relation}
+% Back in grade school, you were introduced to \term{relations} between integers, such as 'less than' ($<$).\index{Relation}
 
 % \begin{exercise}{}
 % Name five different relations between integers that you saw in grade school.
@@ -137,10 +137,10 @@ This is just one example of a favorite gambit of mathematicians, namely creating
 % Can you define a relation '$<$'  on the complex numbers ${\mathbb C}$? If so, give the definition; if not, explain why not.
 % \end{exercise}
 
-% It turns out that 'relation' is an important concept in higher mathematics that extends far beyond numbers. In fact, we can define a relation between sets\index{Sets!set relation}. You've seen it before: here we give the mathematical definition:
+% It turns out that 'relation' is an important concept in higher mathematics that extends far beyond numbers. In fact, we can define a relation between sets. You've seen it before: here we give the mathematical definition:
 
 \begin{defn}\label{definition:sets:subset}
-A set $A$ is a \bfii{ subset\/}\index{Subset!definition of} of $B$, written $A \subset B$\label{setcontain} or $B \supset A$, if every element of $A$ is also an element of $B$.  
+A set $A$ is a \term{subset}\index{Subset!definition of} of $B$, written $A \subset B$\label{setcontain} or $B \supset A$, if every element of $A$ is also an element of $B$.  
 \end{defn}
 
 For example, using this notation we may write:
@@ -155,11 +155,11 @@ and
 \[
 {\mathbb N} \subset {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}.
 \]
-According to Definition~\ref{definition:sets:subset}, every set is a subset of itself.  That is, for any set $A$, $A \subset A$, since every element in $A$ is, of course, in $A$.  This is true, but like we said, it's trivial, a nuisance, because the prefix of the word subset causes us to think of a set that is smaller than, or ''less than'' the other set.  To distinguish then between this trivial case and what we would expect subset to mean, we introduce the term \bfii{ proper subset\/}\index{Subset!proper}:  a set $B$ is a \bfii{ proper subset\/} of a set $A$ if $B \subset A$ but $B \neq A$. For instance, if John and Jane Doe had only sons, then
+According to Definition~\ref{definition:sets:subset}, every set is a subset of itself.  That is, for any set $A$, $A \subset A$, since every element in $A$ is, of course, in $A$.  This is true, but like we said, it's trivial, a nuisance, because the prefix of the word subset causes us to think of a set that is smaller than, or ''less than'' the other set.  To distinguish then between this trivial case and what we would expect subset to mean, we introduce the term \term{proper subset}\index{Subset!proper}:  a set $B$ is a \term{proper subset} of a set $A$ if $B \subset A$ but $B \neq A$. For instance, if John and Jane Doe had only sons, then
 \begin{center}
 \{sons of John and Jane Doe\} $\subset$ \{children of John and Jane Doe\}, but \\
 \bigskip
-\{sons of John and Jane Doe\} is not a \bfii{ proper} subset of  \\ 
+\{sons of John and Jane Doe\} is not a \term{proper} subset of  \\ 
 \medskip{}
 \{children of John and Jane Doe\} \\
 \end{center}
@@ -170,9 +170,9 @@ Some authors use  `$\subseteq$' to denote  subset, and  `$\subset$' to denote pr
 But we rarely have to distinguish the case of proper subsets, so it's not worth defining a special symbol for them.
 \end{rem}
 
-If $A$ is not a subset of $B$, we write $A \not \subset B$; for example, $\{4, 7, 9\} \not \subset \{2, 4, 5,  8, 9 \}$.  Two sets are \bfii{ equal}, written $A = B$, if we can show that $A \subset B$ and $B \subset A$.  
+If $A$ is not a subset of $B$, we write $A \not \subset B$; for example, $\{4, 7, 9\} \not \subset \{2, 4, 5,  8, 9 \}$.  Two sets are \term{equal}, written $A = B$, if we can show that $A \subset B$ and $B \subset A$.  
 
-It is convenient to have a set with no elements in it.  This set is called the \bfii{ empty set\/}\index{Empty set}\index{Sets!empty set} and is denoted by $\emptyset$\label{theemptyset}.  For instance, if John and Jane Doe had only daughters, then
+It is convenient to have a set with no elements in it.  This set is called the \term{empty set}\index{Empty set}\index{Set!empty set} and is denoted by $\emptyset$\label{theemptyset}.  For instance, if John and Jane Doe had only daughters, then
 \[
 \mbox{\{sons of John and Jane Doe\}} = \emptyset
 \]
@@ -203,7 +203,7 @@ What is the smallest number of elements a set must have in order to have eight p
 \end{exercise}
 
 \subsection{Operations on sets}
-In our halcyon days of youth, we were introduced to \bfii{ operations} on integers, rational numbers, etc.. An operation on the integers takes two integers and always comes up with another integer. For instance, the '+' operation gives $2+3=5$ (of course, we know now that this means that + has the property of \emph{closure}).
+In our halcyon days of youth, we were introduced to \term{operations} on integers, rational numbers, etc.. An operation on the integers takes two integers and always comes up with another integer. For instance, the '+' operation gives $2+3=5$ (of course, we know now that this means that + has the property of \emph{closure}).
 
 \begin{exercise}{}
 What's wrong with the following statement: ``Subtraction is an operation on the natural numbers.''
@@ -212,13 +212,13 @@ What's wrong with the following statement: ``Subtraction is an operation on the 
 In a similar way, we can construct new sets out of old sets using \emph{set operations}.\index{Set operations} The mathematical definitions of the basic set operations are as follows:
 
 \begin{defn}
-The \bfii{ union\/} $A \cup B$ of two sets $A$ and $B$ is defined as\index{Set operations!union}\index{Union}  
+The \term{union} $A \cup B$ of two sets $A$ and $B$ is defined as\index{Set operations!union}\index{Union}  
 \[
 A \cup B\label{union} = \{x : x \in A \text{ or } x \in B \};
 \]
 \end{defn}
 \begin{defn}
-the \bfii{ intersection\/} of $A$ and $B$  is defined by \index{Set operations!intersection}\index{Intersection}
+the \term{intersection} of $A$ and $B$  is defined by \index{Set operations!intersection}\index{Intersection}
 \[
 A \cap B\label{intersection} = \{x :  x \in A \text{ and } x \in B \}.
 \]
@@ -342,7 +342,7 @@ Find an infinite collection of sets $\{A_n\}, n = 1,2,3,\ldots$ such that (i) $A
 \end{enumerate}
 \end{exercise}
 
-When two sets have no elements in common, they are said to be \bfii{ disjoint}\index{Sets!disjoint}\index{Set operations!disjoint}\index{Disjoint!definition of}; for example, if $E$ is the set of even integers and $O$ is the set of odd integers, then $E$ and $O$ are disjoint.  Two sets $A$ and $B$ are disjoint exactly when $A \cap B = \emptyset$. 
+When two sets have no elements in common, they are said to be \term{disjoint}\index{Sets!disjoint}\index{Set operations!disjoint}\index{Disjoint!definition of}; for example, if $E$ is the set of even integers and $O$ is the set of odd integers, then $E$ and $O$ are disjoint.  Two sets $A$ and $B$ are disjoint exactly when $A \cap B = \emptyset$. 
 
 \begin{exercise}{16}
 \begin{enumerate}[(a)]
@@ -356,14 +356,14 @@ Find four disjoint sets $A_1, A_2, A_3, A_4$ such that $\bigcup_{i = 1}^{4} A_i 
 \end{exercise} 
 
 
-If we are working within the universal set $U$ and $A \subset U$, we define the \bfii{ complement}\footnote{Please note the spelling: 'complement', not 'compliment', thank you!} of $A$ (denoted by $A'$)\index{Complement!definition}\index{Set operations!complement}, to be the set
+If we are working within the universal set $U$ and $A \subset U$, we define the \term{complement}\footnote{Please note the spelling: 'complement', not 'compliment', thank you!} of $A$ (denoted by $A'$)\index{Complement!definition}\index{Set operations!complement}, to be the set
 \[
 A' = \{ x : x \in U \text{ and } x \notin A \}.
 \]
 
 
 \begin{defn}\label{setdifference}\index{Set operations!set difference}
-The \bfii{ difference\/} of two sets $A$ and $B$ is defined as\index{Set difference}
+The \term{difference} of two sets $A$ and $B$ is defined as\index{Set difference}
 \[
 A \setminus B = A \cap B'  = \{ x : x \in A \text{ and } x \notin B \}.
 \]
@@ -794,7 +794,7 @@ $(A \cap B \cap C) \cup D) = (A \cup D) \cap (B \cup D)\cap (C \cup D)$.
 \end{exercise}
 
 \section{Do the subsets of a set form a group?}\label{SetGroup} 
-Some of the properties in Proposition~\ref{proposition:sets:sets_theorem_set_ops} may ring a bell. Recall that in the Section~\ref{DefOfGroup} of the Modular Arithmetic chapter  we defined a \bfii{ group}\index{Group!definition} to be a set combined with an operation that has the following properties:
+Some of the properties in Proposition~\ref{proposition:sets:sets_theorem_set_ops} may ring a bell. Recall that in the Section~\ref{DefOfGroup} of the Modular Arithmetic chapter  we defined a \term{group}\index{Group!definition} to be a set combined with an operation that has the following properties:
 \begin{enumerate}
 \item
 The set is \emph{closed} under the operation (in other words, the operation has the property of \emph{closure});
@@ -889,7 +889,7 @@ No doubt you're bitterly disappointed that neither $\cap$ nor $\cup$ can be used
 Although $\cap$ and $\cup$ didn't work, there is a consolation prize:
  
 \begin{exercise}{}
- Besides $\cup$ and $\cap$, there is another set operation called \emph{symmetric difference},\index{Sets!symmetric difference} which is sometimes denoted by the symbol $\Delta$ and is defined as:
+ Besides $\cup$ and $\cap$, there is another set operation called \emph{symmetric difference},\index{Set operations!symmetric difference} which is sometimes denoted by the symbol $\Delta$ and is defined as:
 \begin{equation*}
 A \Delta B = (A \setminus B) \cup (B\setminus A).
 \end{equation*}

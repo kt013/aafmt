@@ -107,11 +107,11 @@ Write all elements of ${\mathbb Z}_7$ using our new notation.
 The same pattern that we saw in the preceding example can actually be generalized to any group possessing a subgroup:
 
 \begin{defn}\label{def_coset}
-Let $G$ be a group and $H$ a subgroup of $G$.  The \bfii{ left  coset\/}\index{Coset!left} of $H$ with \bfii{  representative}\index{Coset!representative} $g \in G$ is defined as the following set: 
+Let $G$ be a group and $H$ a subgroup of $G$.  The \term{left  coset}\index{Coset!left} of $H$ with \term{ representative}\index{Coset!representative} $g \in G$ is defined as the following set: 
 \[
 gH = \{ gh : h \in H \}.
 \]
-\bfii{ Right cosets\/}\index{Coset!right} are defined similarly by
+\term{Right cosets}\index{Coset!right} are defined similarly by
 \[
 Hg = \{ hg : h \in H \}.
 \]
@@ -213,7 +213,7 @@ ${\mathbb T}$ in ${\mathbb C}^\ast$
 \end{exercise} 
 
 \begin{rem}
-From now on, if the left and right cosets coincide, or if it is clear from the context to which type of coset that we are referring, we will use the word {\em coset\/} without specifying left or right.
+From now on, if the left and right cosets coincide, or if it is clear from the context to which type of coset that we are referring, we will use the word {\em coset} without specifying left or right.
 \end{rem}
 
 From the exercises and examples we have seen so far, you might have seen a pattern; you might have started thinking, ``hmmmm, I wonder if the group being abelian causes the left and right cosets to be equal?"  This makes sense, because
@@ -319,7 +319,7 @@ The proof of this fact is exactly the same as the proof for left cosets except t
 Let's consider now the question of how many cosets there are for a particular subgroup within a given group. First, we define some convenient notation:
 
 \begin{defn}\label{cosets_index}
-Let $G$ be a group and $H$ be a subgroup of $G$.  Define the \bfii{ index\/}\index{Index of a subgroup}\index{Subgroup!index of} of $H$ in $G$ to be the number of left cosets of $H$ in $G$.  We will denote the index by~$[G:H]$\label{indexofasubgroup}.
+Let $G$ be a group and $H$ be a subgroup of $G$.  Define the \term{index}\index{Index of a subgroup}\index{Subgroup!index of} of $H$ in $G$ to be the number of left cosets of $H$ in $G$.  We will denote the index by~$[G:H]$\label{indexofasubgroup}.
 \end{defn}  
 
 \begin{example}{Z6_index}
@@ -502,7 +502,7 @@ But before we do this, let's do some exploration. Recall that the elements of $U
 
 \begin{defn}
 For $n>1$, define $\phi(n)$ as the number of natural numbers that are less than $n$ and relatively prime to $n$. Alternatively, we can say that  $\phi(n)$ is the number of natural numbers $m$ where  $m < n$ and $\gcd(m,n) = 1$. In order to make $\phi$ a function on the natural numbers, we also define $\phi(1)=1$. 
-The function $\phi$ is called the \bfii{ Euler} $\phi$-\bfii{ function\/}\index{Euler $\phi$-function}.
+The function $\phi$ is called the \term{Euler} $\phi$-\term{function}\index{Euler $\phi$-function}.
 \end{defn}
 
 
@@ -628,7 +628,7 @@ Exercise~\ref{exercise:cosets:prime_simple} shows that groups of prime order (su
 %In order to show this, we need to introduce the concept of \emph{conjugate elements}, which will be useful later:
 %
 %\begin{defn}
-%Let $G$ be a group, and let $a,b \in G$.  Then $a$ and $b$ are said to be \bfii{conjugate elements} if and only if there exists a $c \in G$ such that $b = c \circ a \circ c^{-1}$.
+%Let $G$ be a group, and let $a,b \in G$.  Then $a$ and $b$ are said to be \term{conjugate elements} if and only if there exists a $c \in G$ such that $b = c \circ a \circ c^{-1}$.
 %\index{Conjugate!group elements}\index{Permutation!conjugate}
 %\end{defn}
 %
@@ -821,7 +821,7 @@ $gn = n' g$ or $gN \subset Ng$. Similarly, $Ng \subset gN$.
 
 \begin{defn}\label{normal_alt}
  Given a group $G$, a subgroup $H \subset G$ is called a 
-\bfii{ normal subgroup}\index{Subgroup!normal} if for every $g \in G$ and for every $h \in H$, we have that $ghg^{-1} \in H$.  (Alternatively, we can write this condition as: $gHg^{-1} = H$.)
+\term{normal subgroup}\index{Subgroup!normal} if for every $g \in G$ and for every $h \in H$, we have that $ghg^{-1} \in H$.  (Alternatively, we can write this condition as: $gHg^{-1} = H$.)
 \end{defn}
 
 \begin{exercise}{ghg-1_prove}
@@ -870,7 +870,7 @@ $3 {\mathbb Z}$ in ${\mathbb Z}$ were
 
 Now just for curiosity's sake, let's say we took \emph{every} element in $0 + 3 {\mathbb Z}$ and added them to \emph{every} element in $1 + 3 {\mathbb Z}$.  What would be the resulting set?  Try some examples: take an arbitrary element of $0 + 3 {\mathbb Z}$, and add to it an arbitrary element of $1 + 3 {\mathbb Z}$. You will find that the result is always in $1 + 3 {\mathbb Z}$. Let's give a proof of this. First let's give some notation:
 
-\begin{defn}\label{setplus}(\emph{Set addition})  Let $A$ and $B$ be two sets of real numbers.  Then the \bfii{sum}\index{Sum!of sets} $A + B$ is defined as the set:
+\begin{defn}\label{setplus}(\emph{Set addition})  Let $A$ and $B$ be two sets of real numbers.  Then the \term{sum}\index{Sum!of sets} $A + B$ is defined as the set:
 \[ A + B := \{a + b, \mathrm{~where~} a \in A \mathrm{~and~} b \in B\} .\]
 \end{defn}
 \noindent
@@ -919,7 +919,7 @@ Indeed we have closure.  It's beginning to look like we have a group here. Actua
 
  So \emph{this} is the grand revelation about normal subgroups: \emph{the cosets of a normal subgroup form a group}. But we shouldn't jump the gun: we've only shown it's true for a special case. Now we have to get down to the hard work of proving it in general. First we have to generalize Definition~\ref{setplus} to other group operations.
 
-\begin{defn}\label{setcomp}(\emph{Set composition})  Let $A$ and $B$ be two subsets of a group $G$.  Then the \bfii{composition}\index{Composition!of sets} $A \circ B$ (or $AB$)  is defined as the set:
+\begin{defn}\label{setcomp}(\emph{Set composition})  Let $A$ and $B$ be two subsets of a group $G$.  Then the \term{composition}\index{Composition!of sets} $A \circ B$ (or $AB$)  is defined as the set:
 \[ A \circ B := \{a b, \mathrm{~where~} a \in A \mathrm{~and~} b \in B\} .\]
 \end{defn}
 
@@ -949,7 +949,7 @@ Proposition~\ref{norm_comp} also gives us that $g^{-1}N \circ gN = gN \circ g^{-
 Let's define a special notation for our new discovery.
 
 \begin{defn}\label{factor_group} 
-If $N$ is a normal subgroup of a group $G$, then the group of cosets of $N$ under the operation of set composition is denoted as $G/N$\label{notefactor} This group is called the \bfii{factor}\index{Group!factor} or \bfii{quotient group}\index{Group!quotient} of $G$ and $N$. 
+If $N$ is a normal subgroup of a group $G$, then the group of cosets of $N$ under the operation of set composition is denoted as $G/N$\label{notefactor} This group is called the \term{factor}\index{Group!factor} or \term{quotient group}\index{Group!quotient} of $G$ and $N$. 
 \end{defn} 
 Note that the order of $G/N$ is $[G:N]$, the number of cosets of $N$ in $G$. 
 
@@ -1063,7 +1063,7 @@ Actually, in Exercise~\ref{exercise:cosets:e_normal} you've already answered tha
 \noindent
 Thus factoring a group by $\{e\}$ is kind of like dividing an integer by 1: it doesn't change anything. So let's change our question to:  Are there groups which have no \emph{nontrivial} subgroups? Such groups would be like prime numbers: they can't be factored any further.
 
-A group with no nontrivial normal subgroups is called a \bfii{simple group}\index{Group!simple}\index{Simple group}. In a way, simple groups are the ``prime  numbers'' in group theory. Just like any positive integer uniquely factors into a product of prime numbers,  it turns out that any group can be uniquely factored into a series of simple groups.  (Unfortunately, proving this is beyond the scope of this course.) 
+A group with no nontrivial normal subgroups is called a \term{simple group}\index{Group!simple}\index{Simple group}. In a way, simple groups are the ``prime  numbers'' in group theory. Just like any positive integer uniquely factors into a product of prime numbers,  it turns out that any group can be uniquely factored into a series of simple groups.  (Unfortunately, proving this is beyond the scope of this course.) 
 
 On the other hand, simple groups are somewhat more complicated than prime numbers. There are several classes of simple groups, and it's taken mathematicians hundreds of years to classify them. (Some simple groups defy classification: see the Historical Note at the end of this section.) We've already seen one such  class: the groups of prime order. As we noted following Exercise~\ref{exercise:cosets:prime_simple}, these groups are simple since they have
 no nontrivial proper subgroups. 
@@ -1395,7 +1395,7 @@ be a normal subgroup of $G$. Conclude that $S_n$ is not simple for $n \geq 3$.
 
 
 \item
-Define the \bfii{centralizer}\index{Element!centralizer
+Define the \term{centralizer}\index{Element!centralizer
 of}\index{Centralizer!of an element} of an element $g$ in a group $G$
 to be the set  
 \[
@@ -1406,7 +1406,7 @@ subgroup of $G$, prove that $C(g)$ is normal in $G$.
  
  
 \item
-Recall that the \bfii{center}\index{Group!center of} of a group $G$ is
+Recall that the \term{center}\index{Group!center of} of a group $G$ is
 the set 
 \[
 Z(G) = \{ x \in G : xg = gx \mbox{ for all $g \in G$ } \}.
@@ -1434,7 +1434,7 @@ $G$ of the form $aba^{-1}b^{-1}$.
 \begin{enumerate}
  \item
 Show that $G'$ is a subgroup of $G$. $G'$ is called the
-\bfii{commutator
+\term{commutator
 subgroup}\index{Subgroup!commutator}\label{commutatorsubgroup} of $G$.  
  \item
 Show that $G'$ is a normal subgroup of $G$.
@@ -1480,7 +1480,7 @@ If $[G : H] = 2$, prove that $gH = Hg$.
 Let $H$ and $K$ be subgroups of a group $G$.  Prove that $gH \cap gK$ is a coset of $H \cap K$ in $G$.  
  
 \item
-Let $H$ and $K$ be subgroups of a group $G$.  Define a relation $\sim$ on $G$ by $a \sim b$ if there exists an $h \in H$ and a $k \in K$ such that $hak = b$.  Show that this relation is an equivalence relation.  The corresponding equivalence classes are called \bfii{ double cosets}\index{Coset!double}.  In the case where $G = A_4$, compute the double cosets for:
+Let $H$ and $K$ be subgroups of a group $G$.  Define a relation $\sim$ on $G$ by $a \sim b$ if there exists an $h \in H$ and a $k \in K$ such that $hak = b$.  Show that this relation is an equivalence relation.  The corresponding equivalence classes are called \term{double cosets}\index{Coset!double}.  In the case where $G = A_4$, compute the double cosets for:
 \begin{enumerate}[(a)]
 \item
 $H = K =  \{ (1),(123), (132) \}$.
