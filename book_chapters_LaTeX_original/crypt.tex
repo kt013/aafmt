@@ -27,9 +27,9 @@ letters} or \term{characters}. Characters can include not only the
 familiar alphabetic characters A, $\ldots$, Z and a, $\ldots$, z but
 also digits, punctuation marks, and blanks. A \term{
 cryptosystem},\index{Cryptosystem!definition of} or \term{
-cipher},\index{Cipher}  has two parts: \term{encryption}, the process
+cipher},\index{Cipher}  has two parts: \term{encryption}\index{Encryption!definition}, the process
 of transforming a plaintext message to a ciphertext message, and \term{
-decryption}, the reverse transformation of changing a ciphertext
+decryption}\index{Decryption!definition}, the reverse transformation of changing a ciphertext
 message into a plaintext message.
  
  
@@ -64,12 +64,10 @@ In \term{single}\index{Key!single}\index{Cryptosystem!single key} or
 \term{private key
 cryptosystems}\index{Key!private}\index{Cryptosystem!private key}
 the same key is used for both encrypting and decrypting messages. To
-encrypt a  plaintext message, we apply to the message some function
-which is kept secret, say $f$. This function will yield an encrypted
-message.  Given the encrypted form of the message, we can recover the
-original message by applying the inverse transformation $f^{-1}$. The
-transformation $f$ must be relatively easy to compute, as must
-$f^{-1}$; however, $f$ must be extremely difficult to guess at if only
+encrypt a  plaintext message, we apply to the message some \emph{function}\index{Function!in cryptography}
+which is kept secret, say $f$. We'll have a lot more to say about functions in Chapter~\ref{functions}--but this point, you may just think of an \term{encryption function}\index{Encryption!function}\index{Function!encryption} as a procedure which transforms a  plaintext message into an encrypted message.  Given the encrypted form of the message, we can recover the
+original message by applying the \term{decryption function}\index{Decryption!function}\index{Function!decryption} $f^{-1}$, which basically undoes the transformation performed by the encryption function. Both the
+encryption function $f$ and the decryption function $f^{-1}$ must be relatively easy to compute; however, they must be virtually impossible to guess if only
 examples of coded messages are available.
  
 \subsection{Shift codes} 
@@ -103,7 +101,7 @@ message, we first represent it numerically:
 $$
 3, 14, 9, 7, 4, 20, 3.
 $$
-Next we apply the inverse transformation to get
+Next we apply the decryption function to get
 $$
 0, 11, 6, 4, 1, 17, 0,
 $$

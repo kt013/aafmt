@@ -92,6 +92,8 @@
 \indexentry{Ciphertext|hyperpage}{120}
 \indexentry{Cryptosystem!definition of|hyperpage}{120}
 \indexentry{Cipher|hyperpage}{120}
+\indexentry{Encryption!definition|hyperpage}{120}
+\indexentry{Decryption!definition|hyperpage}{120}
 \indexentry{Key!definition of|hyperpage}{120}
 \indexentry{Key!public|hyperpage}{121}
 \indexentry{Cryptosystem!public key|hyperpage}{121}
@@ -99,376 +101,381 @@
 \indexentry{Cryptosystem!single key|hyperpage}{121}
 \indexentry{Key!private|hyperpage}{121}
 \indexentry{Cryptosystem!private key|hyperpage}{121}
+\indexentry{Function!in cryptography|hyperpage}{121}
+\indexentry{Encryption!function|hyperpage}{121}
+\indexentry{Function!encryption|hyperpage}{121}
+\indexentry{Decryption!function|hyperpage}{121}
+\indexentry{Function!decryption|hyperpage}{121}
 \indexentry{Caesar, Julius|hyperpage}{121}
 \indexentry{Cryptanalysis|hyperpage}{123}
 \indexentry{Frequency analysis|hyperpage}{123}
-\indexentry{Cryptosystem!affine|hyperpage}{124}
-\indexentry{Cryptosystem!monoalphabetic|hyperpage}{127}
-\indexentry{Cryptoquip|hyperpage}{127}
+\indexentry{Cryptosystem!affine|hyperpage}{125}
+\indexentry{Cryptosystem!monoalphabetic|hyperpage}{128}
+\indexentry{Cryptoquip|hyperpage}{128}
 \indexentry{Cryptosystem!polyalphabetic|hyperpage}{128}
-\indexentry{Matrix!determinant|hyperpage}{130}
-\indexentry{Diffie, W.|hyperpage}{135}
-\indexentry{Hellman, M.|hyperpage}{135}
-\indexentry{Rivest, R.|hyperpage}{136}
-\indexentry{Shamir, A.|hyperpage}{136}
-\indexentry{Adleman, L.|hyperpage}{136}
-\indexentry{Ceiling!of a real number|hyperpage}{143}
-\indexentry{Euler! totient function|hyperpage}{144}
-\indexentry{Sieve of Eratosthenes|hyperpage}{144}
-\indexentry{Fermat!factorization algorithm|hyperpage}{144}
-\indexentry{Prime!Miller-Rabin test for|hyperpage}{147}
-\indexentry{Fermat!little theorem|hyperpage}{147}
+\indexentry{Matrix!determinant|hyperpage}{131}
+\indexentry{Diffie, W.|hyperpage}{137}
+\indexentry{Hellman, M.|hyperpage}{137}
+\indexentry{Rivest, R.|hyperpage}{137}
+\indexentry{Shamir, A.|hyperpage}{137}
+\indexentry{Adleman, L.|hyperpage}{137}
+\indexentry{Ceiling!of a real number|hyperpage}{144}
+\indexentry{Euler! totient function|hyperpage}{145}
+\indexentry{Sieve of Eratosthenes|hyperpage}{145}
+\indexentry{Fermat!factorization algorithm|hyperpage}{145}
+\indexentry{Prime!Miller-Rabin test for|hyperpage}{148}
+\indexentry{Fermat!little theorem|hyperpage}{148}
 \indexentry{Pseudoprime|hyperpage}{148}
-\indexentry{Carmichael numbers|hyperpage}{148}
-\indexentry{Set!definition of|hyperpage}{151}
-\indexentry{Element!of a set|hyperpage}{151}
-\indexentry{Set!elements|hyperpage}{151}
-\indexentry{Universal set|hyperpage}{154}
-\indexentry{Subset!definition of|hyperpage}{155}
-\indexentry{Subset!proper|hyperpage}{155}
-\indexentry{Empty set|hyperpage}{156}
-\indexentry{Set!empty set|hyperpage}{156}
-\indexentry{Set operations|hyperpage}{157}
-\indexentry{Set operations!union|hyperpage}{157}
-\indexentry{Union|hyperpage}{157}
-\indexentry{Set operations!intersection|hyperpage}{157}
-\indexentry{Intersection|hyperpage}{157}
-\indexentry{Sets!disjoint|hyperpage}{160}
-\indexentry{Set operations!disjoint|hyperpage}{160}
-\indexentry{Disjoint!definition of|hyperpage}{160}
-\indexentry{Complement!definition|hyperpage}{160}
-\indexentry{Set operations!complement|hyperpage}{160}
-\indexentry{Set operations!set difference|hyperpage}{160}
-\indexentry{Set difference|hyperpage}{160}
-\indexentry{Element by element proof|hyperpage}{163}
-\indexentry{De Morgan's laws for sets|hyperpage}{166}
-\indexentry{Set operations!De Morgan's laws for sets|hyperpage}{166}
-\indexentry{Group!definition|hyperpage}{168}
-\indexentry{Operation!definition of|hyperpage}{169}
-\indexentry{Set operations!symmetric difference|hyperpage}{171}
-\indexentry{Ordered pair!definition of|hyperpage}{172}
-\indexentry{Cartesian product!formal definition|hyperpage}{173}
-\indexentry{Domain|hyperpage}{176}
-\indexentry{Codomain|hyperpage}{176}
-\indexentry{Range|hyperpage}{178}
-\indexentry{Ordered pair!as a function|hyperpage}{181}
-\indexentry{Arrow diagram|hyperpage}{181}
-\indexentry{Function!formal definition|hyperpage}{182}
-\indexentry{Domain!of a function|hyperpage}{182}
-\indexentry{Codomain!of a function|hyperpage}{182}
-\indexentry{Image!of an element under a function|hyperpage}{182}
-\indexentry{One-to-one!informal definition|hyperpage}{187}
-\indexentry{One-to-one!definition|hyperpage}{189}
-\indexentry{Injective (one-to-one)|hyperpage}{189}
-\indexentry{Horizontal line test|hyperpage}{190}
-\indexentry{Horizontal line test|hyperpage}{190}
-\indexentry{One-to-one!horizontal line test|hyperpage}{190}
-\indexentry{Contrapositive|hyperpage}{192}
-\indexentry{One-to-one!alternate definition|hyperpage}{193}
-\indexentry{Onto|hyperpage}{194}
-\indexentry{Surjective!also see onto|hyperpage}{194}
-\indexentry{Function!onto|hyperpage}{194}
-\indexentry{Onto!formal definition|hyperpage}{195}
-\indexentry{Onto!horizontal line test|hyperpage}{197}
-\indexentry{Horizontal line test|hyperpage}{197}
-\indexentry{Bijection!definition of|hyperpage}{200}
-\indexentry{Composition!definition of|hyperpage}{206}
-\indexentry{Commutative property!for compositions|hyperpage}{207}
-\indexentry{Composition!Associative property|hyperpage}{207}
-\indexentry{Inverse!function|hyperpage}{213}
-\indexentry{Function!inverse of|hyperpage}{213}
-\indexentry{Function!as a bijection|hyperpage}{214}
-\indexentry{Bijection!relation to inverse functions|hyperpage}{214}
-\indexentry{Inverse function!relation to bijection|hyperpage}{214}
-\indexentry{Inverse function!notation|hyperpage}{215}
-\indexentry{Identity map|hyperpage}{216}
-\indexentry{Relation!definition of|hyperpage}{219}
-\indexentry{Binary Relation|hyperpage}{219}
-\indexentry{Relation!binary|hyperpage}{219}
-\indexentry{Digraph|hyperpage}{220}
-\indexentry{Power set|hyperpage}{222}
-\indexentry{Relation!reflexive|hyperpage}{223}
-\indexentry{Reflexive|hyperpage}{223}
-\indexentry{Relation!symmetric|hyperpage}{223}
-\indexentry{Symmetric|hyperpage}{223}
-\indexentry{Relation!transitive|hyperpage}{223}
-\indexentry{Transitive|hyperpage}{223}
-\indexentry{Equivalence relation|hyperpage}{228}
-\indexentry{Equivalence class|hyperpage}{231}
-\indexentry{Disjoint!applied to equivalence relations|hyperpage}{233}
-\indexentry{Integers mod $n$! as equivalence classes|hyperpage}{235}
-\indexentry{Modular arithmetic!on equivalence classes|hyperpage}{236}
-\indexentry{Integers modulo|hyperpage}{237}
-\indexentry{Well defined|hyperpage}{238}
-\indexentry{Partition!of a set|hyperpage}{241}
-\indexentry{Partition!definition of|hyperpage}{242}
-\indexentry{Equivalence relation!as a partition|hyperpage}{242}
-\indexentry{Partition!as an equivalence relation|hyperpage}{242}
-\indexentry{Symmetry!definition|hyperpage}{246}
-\indexentry{Rigid motion|hyperpage}{247}
-\indexentry{Rotation! as rigid motion|hyperpage}{247}
-\indexentry{Reflection (rigid motion)|hyperpage}{248}
-\indexentry{Translation!as a rigid motion|hyperpage}{248}
-\indexentry{Group!dihedral|hyperpage}{261}
-\indexentry{Wallpaper groups|hyperpage}{270}
-\indexentry{Group!wallpaper|hyperpage}{270}
-\indexentry{Permutation!definition of|hyperpage}{274}
-\indexentry{Bijection!as a permutation|hyperpage}{274}
-\indexentry{Composition!of symmetries|hyperpage}{275}
-\indexentry{Composition!of permutations|hyperpage}{276}
-\indexentry{Permutation!identity|hyperpage}{276}
-\indexentry{Identity!of a permutation|hyperpage}{276}
-\indexentry{Permutation!inverse|hyperpage}{276}
-\indexentry{Inverse!of permutations|hyperpage}{276}
-\indexentry{Order! of a set|hyperpage}{277}
-\indexentry{Group!symmetric|hyperpage}{278}
-\indexentry{Isomorphic groups|hyperpage}{278}
-\indexentry{Group!isomorphic|hyperpage}{278}
-\indexentry{Isomorphism!definition of|hyperpage}{278}
-\indexentry{Subgroup|hyperpage}{279}
-\indexentry{Group!permutation|hyperpage}{280}
-\indexentry{Permutation group|hyperpage}{280}
-\indexentry{Cycle notation|hyperpage}{281}
-\indexentry{Permutation!cycle|hyperpage}{281}
-\indexentry{Cycle!length of|hyperpage}{283}
-\indexentry{Permutation!identity|hyperpage}{284}
-\indexentry{Identity!of permutation groups|hyperpage}{284}
-\indexentry{Composition!of cycles|hyperpage}{285}
-\indexentry{Cycle!composition|hyperpage}{285}
-\indexentry{Cycle!disjoint|hyperpage}{288}
-\indexentry{Digraph!of a permutation|hyperpage}{289}
-\indexentry{Commutative property!of disjoint cycles|hyperpage}{290}
-\indexentry{Cycle!powers of|hyperpage}{297}
-\indexentry{Cycle!order of|hyperpage}{299}
-\indexentry{Order!of a cycle|hyperpage}{299}
-\indexentry{Order!of a permutation|hyperpage}{301}
-\indexentry{Disjoint cycles!powers of|hyperpage}{304}
-\indexentry{Order!disjoint cycles|hyperpage}{304}
-\indexentry{Disjoint cycles!order of|hyperpage}{304}
-\indexentry{Transposition!definition of|hyperpage}{305}
-\indexentry{Cycle!transposition|hyperpage}{305}
-\indexentry{Cycle!as products of transpositions|hyperpage}{305}
-\indexentry{Identity!of transpositions|hyperpage}{306}
-\indexentry{Inverse!of transpositions|hyperpage}{306}
-\indexentry{Inverse!of a cycle|hyperpage}{307}
-\indexentry{Cycle!inverse of|hyperpage}{307}
-\indexentry{Permutation!parity|hyperpage}{316}
-\indexentry{Permutation!odd and even|hyperpage}{317}
-\indexentry{Group!alternating|hyperpage}{319}
-\indexentry{Orbit|hyperpage}{322}
-\indexentry{Subgroup!transitive|hyperpage}{322}
-\indexentry{Binary!operation|hyperpage}{324}
-\indexentry{Operation!binary|hyperpage}{324}
-\indexentry{Composition!law of|hyperpage}{324}
-\indexentry{Operation!binary|hyperpage}{324}
-\indexentry{Group!definition of|hyperpage}{325}
-\indexentry{Element!identity|hyperpage}{325}
-\indexentry{Identity!element|hyperpage}{325}
-\indexentry{Element!inverse|hyperpage}{325}
-\indexentry{Inverse!element|hyperpage}{325}
-\indexentry{abelian group|hyperpage}{326}
-\indexentry{Group!abelian|hyperpage}{326}
-\indexentry{Group!commutative|hyperpage}{326}
-\indexentry{Group!non-abelian|hyperpage}{326}
-\indexentry{Group!noncommutative|hyperpage}{326}
-\indexentry{Group!finite|hyperpage}{326}
-\indexentry{Group!order of|hyperpage}{326}
-\indexentry{Group!infinite|hyperpage}{326}
-\indexentry{Group!trivial|hyperpage}{326}
-\indexentry{Product!of groups|hyperpage}{330}
-\indexentry{Cayley table|hyperpage}{330}
-\indexentry{Units! group of ($U(n)$)|hyperpage}{333}
-\indexentry{Group!of units $U(n)$|hyperpage}{333}
-\indexentry{Group!general linear $(GL_n(\mathbb{R}))$ |hyperpage}{335}
-\indexentry{Substitution property|hyperpage}{341}
-\indexentry{Law of cancellation|hyperpage}{342}
-\indexentry{Cancellation law!for groups|hyperpage}{342}
-\indexentry{Exponent laws|hyperpage}{342}
-\indexentry{Lagrange, Joseph-Louis|hyperpage}{344}
-\indexentry{Galois, \'{E}variste|hyperpage}{344}
-\indexentry{Klein, Felix|hyperpage}{344}
-\indexentry{Lie, Sophus|hyperpage}{344}
-\indexentry{Burnside, William|hyperpage}{344}
-\indexentry{Subgroup!definition of|hyperpage}{345}
-\indexentry{Subgroup!relation to subset|hyperpage}{345}
-\indexentry{Subgroup!necessary conditions|hyperpage}{347}
-\indexentry{Group!special linear $(SL_n(\mathbb{R}))$|hyperpage}{349}
-\indexentry{Set!generated by group element|hyperpage}{351}
-\indexentry{Orbit! of a group element|hyperpage}{351}
-\indexentry{Group!cyclic|hyperpage}{352}
-\indexentry{Cyclic group|hyperpage}{352}
-\indexentry{Generator! of a cyclic group|hyperpage}{352}
-\indexentry{Cyclic group!generator|hyperpage}{352}
-\indexentry{Subgroup!cyclic|hyperpage}{354}
-\indexentry{Element!order of|hyperpage}{355}
-\indexentry{Principle of Well-Ordering|hyperpage}{357}
-\indexentry{Group!Heisenberg|hyperpage}{359}
-\indexentry{Quaternion group ($Q_8$)|hyperpage}{361}
-\indexentry{Center!of a group|hyperpage}{361}
-\indexentry{Normalizer|hyperpage}{361}
-\indexentry{Coset!left|hyperpage}{364}
-\indexentry{Coset!representative|hyperpage}{364}
-\indexentry{Coset!right|hyperpage}{365}
-\indexentry{Index of a subgroup|hyperpage}{369}
-\indexentry{Subgroup!index of|hyperpage}{369}
-\indexentry{Lagrange's Theorem|hyperpage}{372}
-\indexentry{Lagrange, Joseph-Louis|hyperpage}{373}
-\indexentry{Euler, Leonhard|hyperpage}{373}
-\indexentry{Euler $\phi$-function|hyperpage}{374}
-\indexentry{Euler's theorem|hyperpage}{374}
-\indexentry{Fermat!little theorem|hyperpage}{375}
-\indexentry{Subgroup!normal|hyperpage}{376}
-\indexentry{Normal subgroup|hyperpage}{376}
+\indexentry{Carmichael numbers|hyperpage}{149}
+\indexentry{Set!definition of|hyperpage}{152}
+\indexentry{Element!of a set|hyperpage}{152}
+\indexentry{Set!elements|hyperpage}{152}
+\indexentry{Universal set|hyperpage}{155}
+\indexentry{Subset!definition of|hyperpage}{156}
+\indexentry{Subset!proper|hyperpage}{156}
+\indexentry{Empty set|hyperpage}{157}
+\indexentry{Set!empty set|hyperpage}{157}
+\indexentry{Set operations|hyperpage}{158}
+\indexentry{Set operations!union|hyperpage}{158}
+\indexentry{Union|hyperpage}{158}
+\indexentry{Set operations!intersection|hyperpage}{158}
+\indexentry{Intersection|hyperpage}{158}
+\indexentry{Sets!disjoint|hyperpage}{161}
+\indexentry{Set operations!disjoint|hyperpage}{161}
+\indexentry{Disjoint!definition of|hyperpage}{161}
+\indexentry{Complement!definition|hyperpage}{161}
+\indexentry{Set operations!complement|hyperpage}{161}
+\indexentry{Set operations!set difference|hyperpage}{161}
+\indexentry{Set difference|hyperpage}{161}
+\indexentry{Element by element proof|hyperpage}{164}
+\indexentry{De Morgan's laws for sets|hyperpage}{167}
+\indexentry{Set operations!De Morgan's laws for sets|hyperpage}{167}
+\indexentry{Group!definition|hyperpage}{169}
+\indexentry{Operation!definition of|hyperpage}{170}
+\indexentry{Set operations!symmetric difference|hyperpage}{172}
+\indexentry{Ordered pair!definition of|hyperpage}{173}
+\indexentry{Cartesian product!formal definition|hyperpage}{174}
+\indexentry{Domain|hyperpage}{177}
+\indexentry{Codomain|hyperpage}{177}
+\indexentry{Range|hyperpage}{179}
+\indexentry{Ordered pair!as a function|hyperpage}{182}
+\indexentry{Arrow diagram|hyperpage}{182}
+\indexentry{Function!formal definition|hyperpage}{183}
+\indexentry{Domain!of a function|hyperpage}{183}
+\indexentry{Codomain!of a function|hyperpage}{183}
+\indexentry{Image!of an element under a function|hyperpage}{183}
+\indexentry{One-to-one!informal definition|hyperpage}{188}
+\indexentry{One-to-one!definition|hyperpage}{190}
+\indexentry{Injective (one-to-one)|hyperpage}{190}
+\indexentry{Horizontal line test|hyperpage}{191}
+\indexentry{Horizontal line test|hyperpage}{191}
+\indexentry{One-to-one!horizontal line test|hyperpage}{191}
+\indexentry{Contrapositive|hyperpage}{193}
+\indexentry{One-to-one!alternate definition|hyperpage}{194}
+\indexentry{Onto|hyperpage}{195}
+\indexentry{Surjective!also see onto|hyperpage}{195}
+\indexentry{Function!onto|hyperpage}{195}
+\indexentry{Onto!formal definition|hyperpage}{196}
+\indexentry{Onto!horizontal line test|hyperpage}{198}
+\indexentry{Horizontal line test|hyperpage}{198}
+\indexentry{Bijection!definition of|hyperpage}{201}
+\indexentry{Composition!definition of|hyperpage}{207}
+\indexentry{Commutative property!for compositions|hyperpage}{208}
+\indexentry{Composition!Associative property|hyperpage}{208}
+\indexentry{Inverse!function|hyperpage}{214}
+\indexentry{Function!inverse of|hyperpage}{214}
+\indexentry{Function!as a bijection|hyperpage}{215}
+\indexentry{Bijection!relation to inverse functions|hyperpage}{215}
+\indexentry{Inverse function!relation to bijection|hyperpage}{215}
+\indexentry{Inverse function!notation|hyperpage}{216}
+\indexentry{Identity map|hyperpage}{217}
+\indexentry{Relation!definition of|hyperpage}{220}
+\indexentry{Binary Relation|hyperpage}{220}
+\indexentry{Relation!binary|hyperpage}{220}
+\indexentry{Digraph|hyperpage}{221}
+\indexentry{Power set|hyperpage}{223}
+\indexentry{Relation!reflexive|hyperpage}{224}
+\indexentry{Reflexive|hyperpage}{224}
+\indexentry{Relation!symmetric|hyperpage}{224}
+\indexentry{Symmetric|hyperpage}{224}
+\indexentry{Relation!transitive|hyperpage}{224}
+\indexentry{Transitive|hyperpage}{224}
+\indexentry{Equivalence relation|hyperpage}{229}
+\indexentry{Equivalence class|hyperpage}{232}
+\indexentry{Disjoint!applied to equivalence relations|hyperpage}{234}
+\indexentry{Integers mod $n$! as equivalence classes|hyperpage}{236}
+\indexentry{Modular arithmetic!on equivalence classes|hyperpage}{237}
+\indexentry{Integers modulo|hyperpage}{238}
+\indexentry{Well defined|hyperpage}{239}
+\indexentry{Partition!of a set|hyperpage}{242}
+\indexentry{Partition!definition of|hyperpage}{243}
+\indexentry{Equivalence relation!as a partition|hyperpage}{243}
+\indexentry{Partition!as an equivalence relation|hyperpage}{243}
+\indexentry{Symmetry!definition|hyperpage}{247}
+\indexentry{Rigid motion|hyperpage}{248}
+\indexentry{Rotation! as rigid motion|hyperpage}{248}
+\indexentry{Reflection (rigid motion)|hyperpage}{249}
+\indexentry{Translation!as a rigid motion|hyperpage}{249}
+\indexentry{Group!dihedral|hyperpage}{262}
+\indexentry{Wallpaper groups|hyperpage}{271}
+\indexentry{Group!wallpaper|hyperpage}{271}
+\indexentry{Permutation!definition of|hyperpage}{275}
+\indexentry{Bijection!as a permutation|hyperpage}{275}
+\indexentry{Composition!of symmetries|hyperpage}{276}
+\indexentry{Composition!of permutations|hyperpage}{277}
+\indexentry{Permutation!identity|hyperpage}{277}
+\indexentry{Identity!of a permutation|hyperpage}{277}
+\indexentry{Permutation!inverse|hyperpage}{277}
+\indexentry{Inverse!of permutations|hyperpage}{277}
+\indexentry{Order! of a set|hyperpage}{278}
+\indexentry{Group!symmetric|hyperpage}{279}
+\indexentry{Isomorphic groups|hyperpage}{279}
+\indexentry{Group!isomorphic|hyperpage}{279}
+\indexentry{Isomorphism!definition of|hyperpage}{279}
+\indexentry{Subgroup|hyperpage}{280}
+\indexentry{Group!permutation|hyperpage}{281}
+\indexentry{Permutation group|hyperpage}{281}
+\indexentry{Cycle notation|hyperpage}{282}
+\indexentry{Permutation!cycle|hyperpage}{282}
+\indexentry{Cycle!length of|hyperpage}{284}
+\indexentry{Permutation!identity|hyperpage}{285}
+\indexentry{Identity!of permutation groups|hyperpage}{285}
+\indexentry{Composition!of cycles|hyperpage}{286}
+\indexentry{Cycle!composition|hyperpage}{286}
+\indexentry{Cycle!disjoint|hyperpage}{289}
+\indexentry{Digraph!of a permutation|hyperpage}{290}
+\indexentry{Commutative property!of disjoint cycles|hyperpage}{291}
+\indexentry{Cycle!powers of|hyperpage}{298}
+\indexentry{Cycle!order of|hyperpage}{300}
+\indexentry{Order!of a cycle|hyperpage}{300}
+\indexentry{Order!of a permutation|hyperpage}{302}
+\indexentry{Disjoint cycles!powers of|hyperpage}{305}
+\indexentry{Order!disjoint cycles|hyperpage}{305}
+\indexentry{Disjoint cycles!order of|hyperpage}{305}
+\indexentry{Transposition!definition of|hyperpage}{306}
+\indexentry{Cycle!transposition|hyperpage}{306}
+\indexentry{Cycle!as products of transpositions|hyperpage}{306}
+\indexentry{Identity!of transpositions|hyperpage}{307}
+\indexentry{Inverse!of transpositions|hyperpage}{307}
+\indexentry{Inverse!of a cycle|hyperpage}{308}
+\indexentry{Cycle!inverse of|hyperpage}{308}
+\indexentry{Permutation!parity|hyperpage}{317}
+\indexentry{Permutation!odd and even|hyperpage}{318}
+\indexentry{Group!alternating|hyperpage}{320}
+\indexentry{Orbit|hyperpage}{323}
+\indexentry{Subgroup!transitive|hyperpage}{323}
+\indexentry{Binary!operation|hyperpage}{325}
+\indexentry{Operation!binary|hyperpage}{325}
+\indexentry{Composition!law of|hyperpage}{325}
+\indexentry{Operation!binary|hyperpage}{325}
+\indexentry{Group!definition of|hyperpage}{326}
+\indexentry{Element!identity|hyperpage}{326}
+\indexentry{Identity!element|hyperpage}{326}
+\indexentry{Element!inverse|hyperpage}{326}
+\indexentry{Inverse!element|hyperpage}{326}
+\indexentry{abelian group|hyperpage}{327}
+\indexentry{Group!abelian|hyperpage}{327}
+\indexentry{Group!commutative|hyperpage}{327}
+\indexentry{Group!non-abelian|hyperpage}{327}
+\indexentry{Group!noncommutative|hyperpage}{327}
+\indexentry{Group!finite|hyperpage}{327}
+\indexentry{Group!order of|hyperpage}{327}
+\indexentry{Group!infinite|hyperpage}{327}
+\indexentry{Group!trivial|hyperpage}{327}
+\indexentry{Product!of groups|hyperpage}{331}
+\indexentry{Cayley table|hyperpage}{331}
+\indexentry{Units! group of ($U(n)$)|hyperpage}{334}
+\indexentry{Group!of units $U(n)$|hyperpage}{334}
+\indexentry{Group!general linear $(GL_n(\mathbb{R}))$ |hyperpage}{336}
+\indexentry{Substitution property|hyperpage}{342}
+\indexentry{Law of cancellation|hyperpage}{343}
+\indexentry{Cancellation law!for groups|hyperpage}{343}
+\indexentry{Exponent laws|hyperpage}{343}
+\indexentry{Lagrange, Joseph-Louis|hyperpage}{345}
+\indexentry{Galois, \'{E}variste|hyperpage}{345}
+\indexentry{Klein, Felix|hyperpage}{345}
+\indexentry{Lie, Sophus|hyperpage}{345}
+\indexentry{Burnside, William|hyperpage}{345}
+\indexentry{Subgroup!definition of|hyperpage}{346}
+\indexentry{Subgroup!relation to subset|hyperpage}{346}
+\indexentry{Subgroup!necessary conditions|hyperpage}{348}
+\indexentry{Group!special linear $(SL_n(\mathbb{R}))$|hyperpage}{350}
+\indexentry{Set!generated by group element|hyperpage}{352}
+\indexentry{Orbit! of a group element|hyperpage}{352}
+\indexentry{Group!cyclic|hyperpage}{353}
+\indexentry{Cyclic group|hyperpage}{353}
+\indexentry{Generator! of a cyclic group|hyperpage}{353}
+\indexentry{Cyclic group!generator|hyperpage}{353}
+\indexentry{Subgroup!cyclic|hyperpage}{355}
+\indexentry{Element!order of|hyperpage}{356}
+\indexentry{Principle of Well-Ordering|hyperpage}{358}
+\indexentry{Group!Heisenberg|hyperpage}{360}
+\indexentry{Quaternion group ($Q_8$)|hyperpage}{362}
+\indexentry{Center!of a group|hyperpage}{362}
+\indexentry{Normalizer|hyperpage}{362}
+\indexentry{Coset!left|hyperpage}{365}
+\indexentry{Coset!representative|hyperpage}{365}
+\indexentry{Coset!right|hyperpage}{366}
+\indexentry{Index of a subgroup|hyperpage}{370}
+\indexentry{Subgroup!index of|hyperpage}{370}
+\indexentry{Lagrange's Theorem|hyperpage}{373}
+\indexentry{Lagrange, Joseph-Louis|hyperpage}{374}
+\indexentry{Euler, Leonhard|hyperpage}{374}
+\indexentry{Euler $\phi$-function|hyperpage}{375}
+\indexentry{Euler's theorem|hyperpage}{375}
+\indexentry{Fermat!little theorem|hyperpage}{376}
 \indexentry{Subgroup!normal|hyperpage}{377}
-\indexentry{Sum!of sets|hyperpage}{378}
-\indexentry{Composition!of sets|hyperpage}{380}
-\indexentry{Group!factor|hyperpage}{380}
-\indexentry{Group!quotient|hyperpage}{380}
-\indexentry{Group!simple|hyperpage}{382}
-\indexentry{Simple group|hyperpage}{382}
-\indexentry{Group!simple|hyperpage}{386}
-\indexentry{Jordan, C.|hyperpage}{386}
-\indexentry{Dickson, L. E.|hyperpage}{386}
-\indexentry{Burnside, William|hyperpage}{386}
-\indexentry{Feit, W.|hyperpage}{386}
-\indexentry{Thompson, J.|hyperpage}{386}
-\indexentry{Gorenstein, Daniel|hyperpage}{386}
-\indexentry{Greiss, R.|hyperpage}{386}
-\indexentry{Element!centralizer of|hyperpage}{387}
-\indexentry{Centralizer!of an element|hyperpage}{387}
-\indexentry{Group!center of|hyperpage}{387}
-\indexentry{Subgroup!commutator|hyperpage}{387}
-\indexentry{Coset!double|hyperpage}{388}
-\indexentry{Actions!group|hyperpage}{389}
+\indexentry{Normal subgroup|hyperpage}{377}
+\indexentry{Subgroup!normal|hyperpage}{378}
+\indexentry{Sum!of sets|hyperpage}{379}
+\indexentry{Composition!of sets|hyperpage}{381}
+\indexentry{Group!factor|hyperpage}{381}
+\indexentry{Group!quotient|hyperpage}{381}
+\indexentry{Group!simple|hyperpage}{383}
+\indexentry{Simple group|hyperpage}{383}
+\indexentry{Group!simple|hyperpage}{387}
+\indexentry{Jordan, C.|hyperpage}{387}
+\indexentry{Dickson, L. E.|hyperpage}{387}
+\indexentry{Burnside, William|hyperpage}{387}
+\indexentry{Feit, W.|hyperpage}{387}
+\indexentry{Thompson, J.|hyperpage}{387}
+\indexentry{Gorenstein, Daniel|hyperpage}{387}
+\indexentry{Greiss, R.|hyperpage}{387}
+\indexentry{Element!centralizer of|hyperpage}{388}
+\indexentry{Centralizer!of an element|hyperpage}{388}
+\indexentry{Group!center of|hyperpage}{388}
+\indexentry{Subgroup!commutator|hyperpage}{388}
+\indexentry{Coset!double|hyperpage}{389}
 \indexentry{Actions!group|hyperpage}{390}
-\indexentry{G-set@$G$-set|hyperpage}{390}
-\indexentry{Actions!left and right|hyperpage}{390}
-\indexentry{Polyhedron!regular|hyperpage}{391}
-\indexentry{G-equiv@$G$-equivalent|hyperpage}{392}
-\indexentry{Equivalence class|hyperpage}{393}
-\indexentry{Orbit!Of a $G$-set|hyperpage}{393}
-\indexentry{Subgroup!stabilizer|hyperpage}{394}
-\indexentry{Subgroup!isotropy|hyperpage}{394}
-\indexentry{Fixed point set!of a group element|hyperpage}{394}
-\indexentry{Platonic solids|hyperpage}{409}
-\indexentry{Soccer ball|hyperpage}{409}
-\indexentry{Stabilizer!counting formula|hyperpage}{411}
-\indexentry{Euler's formula|hyperpage}{412}
-\indexentry{Integer!lattice|hyperpage}{414}
-\indexentry{Commutative!diagram|hyperpage}{418}
-\indexentry{Conjugation!relabling method|hyperpage}{419}
-\indexentry{Permutation!conjugate|hyperpage}{419}
-\indexentry{Conjugation!of permutations|hyperpage}{419}
-\indexentry{Conjugate!element|hyperpage}{422}
-\indexentry{Conjugation!operation on groups|hyperpage}{422}
-\indexentry{Conjugacy!class|hyperpage}{426}
-\indexentry{Class equation|hyperpage}{426}
-\indexentry{Code!binary|hyperpage}{429}
-\indexentry{Code!ASCII|hyperpage}{429}
-\indexentry{Bits|hyperpage}{429}
-\indexentry{Message word|hyperpage}{429}
-\indexentry{Codeword|hyperpage}{429}
-\indexentry{Encoder|hyperpage}{429}
-\indexentry{Error|hyperpage}{429}
-\indexentry{Decoding scheme|hyperpage}{429}
-\indexentry{Decoding scheme!repetition|hyperpage}{431}
-\indexentry{Even parity!coding scheme|hyperpage}{431}
-\indexentry{Parity!even|hyperpage}{431}
-\indexentry{Parity!parity check bit|hyperpage}{431}
-\indexentry{Byte|hyperpage}{432}
-\indexentry{Parity!odd|hyperpage}{432}
-\indexentry{Maximum-likelihood decoding|hyperpage}{433}
-\indexentry{Binary symmetric channel|hyperpage}{433}
-\indexentry{Error!probability of|hyperpage}{433}
-\indexentry{Block code|hyperpage}{435}
-\indexentry{Encoding function|hyperpage}{435}
-\indexentry{Decoding function|hyperpage}{435}
-\indexentry{Codeword|hyperpage}{435}
+\indexentry{Actions!group|hyperpage}{391}
+\indexentry{G-set@$G$-set|hyperpage}{391}
+\indexentry{Actions!left and right|hyperpage}{391}
+\indexentry{Polyhedron!regular|hyperpage}{392}
+\indexentry{G-equiv@$G$-equivalent|hyperpage}{393}
+\indexentry{Equivalence class|hyperpage}{394}
+\indexentry{Orbit!Of a $G$-set|hyperpage}{394}
+\indexentry{Subgroup!stabilizer|hyperpage}{395}
+\indexentry{Subgroup!isotropy|hyperpage}{395}
+\indexentry{Fixed point set!of a group element|hyperpage}{395}
+\indexentry{Platonic solids|hyperpage}{410}
+\indexentry{Soccer ball|hyperpage}{410}
+\indexentry{Stabilizer!counting formula|hyperpage}{412}
+\indexentry{Euler's formula|hyperpage}{413}
+\indexentry{Integer!lattice|hyperpage}{415}
+\indexentry{Commutative!diagram|hyperpage}{419}
+\indexentry{Conjugation!relabling method|hyperpage}{420}
+\indexentry{Permutation!conjugate|hyperpage}{420}
+\indexentry{Conjugation!of permutations|hyperpage}{420}
+\indexentry{Conjugate!element|hyperpage}{423}
+\indexentry{Conjugation!operation on groups|hyperpage}{423}
+\indexentry{Conjugacy!class|hyperpage}{427}
+\indexentry{Class equation|hyperpage}{427}
+\indexentry{Code!binary|hyperpage}{430}
+\indexentry{Code!ASCII|hyperpage}{430}
+\indexentry{Bits|hyperpage}{430}
+\indexentry{Message word|hyperpage}{430}
+\indexentry{Codeword|hyperpage}{430}
+\indexentry{Encoder|hyperpage}{430}
+\indexentry{Error|hyperpage}{430}
+\indexentry{Decoding scheme|hyperpage}{430}
+\indexentry{Decoding scheme!repetition|hyperpage}{432}
+\indexentry{Even parity!coding scheme|hyperpage}{432}
+\indexentry{Parity!even|hyperpage}{432}
+\indexentry{Parity!parity check bit|hyperpage}{432}
+\indexentry{Byte|hyperpage}{433}
+\indexentry{Parity!odd|hyperpage}{433}
+\indexentry{Maximum-likelihood decoding|hyperpage}{434}
+\indexentry{Binary symmetric channel|hyperpage}{434}
+\indexentry{Error!probability of|hyperpage}{434}
+\indexentry{Block code|hyperpage}{436}
 \indexentry{Encoding function|hyperpage}{436}
-\indexentry{Hamming distance|hyperpage}{436}
-\indexentry{Code!minimum distance of|hyperpage}{436}
-\indexentry{Weight of a codeword|hyperpage}{436}
-\indexentry{Codeword!weight of|hyperpage}{436}
+\indexentry{Decoding function|hyperpage}{436}
+\indexentry{Codeword|hyperpage}{436}
+\indexentry{Encoding function|hyperpage}{437}
 \indexentry{Hamming distance|hyperpage}{437}
-\indexentry{Metric!definition|hyperpage}{438}
-\indexentry{Maximum-likelihood decoding|hyperpage}{439}
-\indexentry{Code!group|hyperpage}{442}
-\indexentry{Group code|hyperpage}{442}
-\indexentry{Minimum distance|hyperpage}{443}
-\indexentry{Codeword!weight of|hyperpage}{443}
-\indexentry{Inner product|hyperpage}{444}
-\indexentry{Matrix!null space of|hyperpage}{445}
-\indexentry{Null space!of a matrix|hyperpage}{445}
-\indexentry{Group code|hyperpage}{446}
-\indexentry{Code!linear|hyperpage}{446}
-\indexentry{Matrix!parity-check|hyperpage}{447}
-\indexentry{Parity!canonical parity-check matrix|hyperpage}{447}
-\indexentry{Block code|hyperpage}{449}
-\indexentry{Code! block code|hyperpage}{449}
-\indexentry{Bits!information bits|hyperpage}{449}
-\indexentry{Information bits|hyperpage}{449}
-\indexentry{Bits!check bits|hyperpage}{449}
-\indexentry{Check bits|hyperpage}{449}
-\indexentry{Matrix!generator|hyperpage}{449}
-\indexentry{Standard generator matrix|hyperpage}{449}
-\indexentry{Message block|hyperpage}{451}
-\indexentry{Syndrome of a code|hyperpage}{457}
-\indexentry{Coset!leader|hyperpage}{459}
-\indexentry{Representatives!as coset leaders|hyperpage}{459}
-\indexentry{Decoding table|hyperpage}{460}
-\indexentry{Code!dual|hyperpage}{461}
-\indexentry{Code!orthogonal|hyperpage}{461}
-\indexentry{Hamming code!definition|hyperpage}{462}
-\indexentry{Code!Hamming|hyperpage}{462}
-\indexentry{Hamming code!perfect|hyperpage}{462}
-\indexentry{Hamming code!shortened|hyperpage}{462}
-\indexentry{Shannon, C.|hyperpage}{463}
-\indexentry{Hamming, R.|hyperpage}{463}
-\indexentry{Commutative diagram|hyperpage}{466}
-\indexentry{Group!isomorphic|hyperpage}{469}
-\indexentry{Group!isomorphism of|hyperpage}{469}
-\indexentry{Isomorphism!of groups|hyperpage}{469}
-\indexentry{Quaternion group ($Q_8$)|hyperpage}{481}
-\indexentry{Cayley's Theorem|hyperpage}{484}
-\indexentry{Left regular representation|hyperpage}{485}
-\indexentry{Regular representation!left|hyperpage}{485}
-\indexentry{Right regular representation|hyperpage}{485}
-\indexentry{Regular representation!right|hyperpage}{485}
-\indexentry{Cayley, Arthur|hyperpage}{486}
-\indexentry{Direct product of groups!external|hyperpage}{487}
-\indexentry{External direct product|hyperpage}{487}
-\indexentry{Isomorphism!least common multiple theorem|hyperpage}{489}
-\indexentry{Direct product of groups!internal|hyperpage}{492}
-\indexentry{Internal direct product|hyperpage}{492}
-\indexentry{Automorphism!of a group|hyperpage}{496}
-\indexentry{Group!automorphism of|hyperpage}{496}
-\indexentry{Automorphism!inner|hyperpage}{496}
-\indexentry{Group!homomorphism of|hyperpage}{503}
-\indexentry{Homomorphism|hyperpage}{503}
-\indexentry{Homomorphic image|hyperpage}{503}
-\indexentry{Normal subgroup|hyperpage}{509}
-\indexentry{Kernel!of a homomorphism|hyperpage}{510}
-\indexentry{Homomorphism!kernel|hyperpage}{510}
-\indexentry{Kernel!as a normal subgroup|hyperpage}{510}
-\indexentry{First Isomorphism Theorem!for groups|hyperpage}{512}
-\indexentry{Homomorphism!surjective |hyperpage}{513}
-\indexentry{Summation notation|hyperpage}{514}
-\indexentry{Sigma notation|hyperpage}{514}
-\indexentry{Sum!divergent|hyperpage}{522}
-\indexentry{Matrix!identity ($I$)|hyperpage}{524}
-\indexentry{Kronecker delta|hyperpage}{524}
-\indexentry{Trace!of a matrix|hyperpage}{526}
-\indexentry{Matrices!similar|hyperpage}{528}
-\indexentry{Levi-Civita symbol!definition|hyperpage}{530}
-\indexentry{Permutation!even and odd|hyperpage}{532}
-\indexentry{BAC-CAB@$BAC-CAB$ rule|hyperpage}{536}
-\indexentry{FOIL (FLOI) method|hyperpage}{544}
-\indexentry{Polynomial!coefficients|hyperpage}{546}
-\indexentry{Polynomial! leading coefficient|hyperpage}{546}
-\indexentry{Degree!of a polynomial|hyperpage}{546}
-\indexentry{Polynomial!ring|hyperpage}{547}
-\indexentry{Ring!polynomial|hyperpage}{547}
-\indexentry{Equality!of polynomials|hyperpage}{548}
-\indexentry{Sum! of polynomials|hyperpage}{548}
-\indexentry{Product!of polynomials|hyperpage}{552}
-\indexentry{Division algorithm!for polynomials|hyperpage}{556}
+\indexentry{Code!minimum distance of|hyperpage}{437}
+\indexentry{Weight of a codeword|hyperpage}{437}
+\indexentry{Codeword!weight of|hyperpage}{437}
+\indexentry{Hamming distance|hyperpage}{438}
+\indexentry{Metric!definition|hyperpage}{439}
+\indexentry{Maximum-likelihood decoding|hyperpage}{440}
+\indexentry{Code!group|hyperpage}{443}
+\indexentry{Group code|hyperpage}{443}
+\indexentry{Minimum distance|hyperpage}{444}
+\indexentry{Codeword!weight of|hyperpage}{444}
+\indexentry{Inner product|hyperpage}{445}
+\indexentry{Matrix!null space of|hyperpage}{446}
+\indexentry{Null space!of a matrix|hyperpage}{446}
+\indexentry{Group code|hyperpage}{447}
+\indexentry{Code!linear|hyperpage}{447}
+\indexentry{Matrix!parity-check|hyperpage}{448}
+\indexentry{Parity!canonical parity-check matrix|hyperpage}{448}
+\indexentry{Block code|hyperpage}{450}
+\indexentry{Code! block code|hyperpage}{450}
+\indexentry{Bits!information bits|hyperpage}{450}
+\indexentry{Information bits|hyperpage}{450}
+\indexentry{Bits!check bits|hyperpage}{450}
+\indexentry{Check bits|hyperpage}{450}
+\indexentry{Matrix!generator|hyperpage}{450}
+\indexentry{Standard generator matrix|hyperpage}{450}
+\indexentry{Message block|hyperpage}{452}
+\indexentry{Syndrome of a code|hyperpage}{458}
+\indexentry{Coset!leader|hyperpage}{460}
+\indexentry{Representatives!as coset leaders|hyperpage}{460}
+\indexentry{Decoding table|hyperpage}{461}
+\indexentry{Code!dual|hyperpage}{462}
+\indexentry{Code!orthogonal|hyperpage}{462}
+\indexentry{Hamming code!definition|hyperpage}{463}
+\indexentry{Code!Hamming|hyperpage}{463}
+\indexentry{Hamming code!perfect|hyperpage}{463}
+\indexentry{Hamming code!shortened|hyperpage}{463}
+\indexentry{Shannon, C.|hyperpage}{464}
+\indexentry{Hamming, R.|hyperpage}{464}
+\indexentry{Commutative diagram|hyperpage}{467}
+\indexentry{Group!isomorphic|hyperpage}{470}
+\indexentry{Group!isomorphism of|hyperpage}{470}
+\indexentry{Isomorphism!of groups|hyperpage}{470}
+\indexentry{Quaternion group ($Q_8$)|hyperpage}{482}
+\indexentry{Cayley's Theorem|hyperpage}{485}
+\indexentry{Left regular representation|hyperpage}{486}
+\indexentry{Regular representation!left|hyperpage}{486}
+\indexentry{Right regular representation|hyperpage}{486}
+\indexentry{Regular representation!right|hyperpage}{486}
+\indexentry{Cayley, Arthur|hyperpage}{487}
+\indexentry{Direct product of groups!external|hyperpage}{488}
+\indexentry{External direct product|hyperpage}{488}
+\indexentry{Isomorphism!least common multiple theorem|hyperpage}{490}
+\indexentry{Direct product of groups!internal|hyperpage}{493}
+\indexentry{Internal direct product|hyperpage}{493}
+\indexentry{Automorphism!of a group|hyperpage}{497}
+\indexentry{Group!automorphism of|hyperpage}{497}
+\indexentry{Automorphism!inner|hyperpage}{497}
+\indexentry{Group!homomorphism of|hyperpage}{504}
+\indexentry{Homomorphism|hyperpage}{504}
+\indexentry{Homomorphic image|hyperpage}{504}
+\indexentry{Normal subgroup|hyperpage}{510}
+\indexentry{Kernel!of a homomorphism|hyperpage}{511}
+\indexentry{Homomorphism!kernel|hyperpage}{511}
+\indexentry{Kernel!as a normal subgroup|hyperpage}{511}
+\indexentry{First Isomorphism Theorem!for groups|hyperpage}{513}
+\indexentry{Homomorphism!surjective |hyperpage}{514}
+\indexentry{Summation notation|hyperpage}{515}
+\indexentry{Sigma notation|hyperpage}{515}
+\indexentry{Sum!divergent|hyperpage}{523}
+\indexentry{Matrix!identity ($I$)|hyperpage}{525}
+\indexentry{Kronecker delta|hyperpage}{525}
+\indexentry{Trace!of a matrix|hyperpage}{527}
+\indexentry{Matrices!similar|hyperpage}{529}
+\indexentry{Levi-Civita symbol!definition|hyperpage}{531}
+\indexentry{Permutation!even and odd|hyperpage}{533}
+\indexentry{BAC-CAB@$BAC-CAB$ rule|hyperpage}{537}
+\indexentry{FOIL (FLOI) method|hyperpage}{545}
+\indexentry{Polynomial!coefficients|hyperpage}{547}
+\indexentry{Polynomial! leading coefficient|hyperpage}{547}
+\indexentry{Degree!of a polynomial|hyperpage}{547}
+\indexentry{Polynomial!ring|hyperpage}{548}
+\indexentry{Ring!polynomial|hyperpage}{548}
+\indexentry{Equality!of polynomials|hyperpage}{549}
+\indexentry{Sum! of polynomials|hyperpage}{549}
+\indexentry{Product!of polynomials|hyperpage}{553}
+\indexentry{Division algorithm!for polynomials|hyperpage}{557}

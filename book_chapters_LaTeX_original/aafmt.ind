@@ -1,96 +1,96 @@
 \begin{theindex}
 
   \item abelian, \hyperpage{58}
-  \item abelian group, \hyperpage{326}
+  \item abelian group, \hyperpage{327}
   \item Actions
-    \subitem group, \hyperpage{389, 390}
-    \subitem left and right, \hyperpage{390}
-  \item Adleman, L., \hyperpage{136}
+    \subitem group, \hyperpage{390, 391}
+    \subitem left and right, \hyperpage{391}
+  \item Adleman, L., \hyperpage{137}
   \item Algebra
     \subitem high school and college, \hyperpage{6}
   \item Amplitude, \hyperpage{48}
   \item Argument
     \subitem of complex number, \hyperpage{35}
-  \item Arrow diagram, \hyperpage{181}
+  \item Arrow diagram, \hyperpage{182}
   \item Associative
     \subitem in ordinary arithmetic, \hyperpage{7}
   \item Associative property, \hyperpage{28}
     \subitem modular addition/multiplication, \hyperpage{94}
   \item Automorphism
-    \subitem inner, \hyperpage{496}
-    \subitem of a group, \hyperpage{496}
+    \subitem inner, \hyperpage{497}
+    \subitem of a group, \hyperpage{497}
   \item Axiom, \hyperpage{5}
 
   \indexspace
 
-  \item $BAC-CAB$ rule, \hyperpage{536}
+  \item $BAC-CAB$ rule, \hyperpage{537}
   \item Bijection
-    \subitem as a permutation, \hyperpage{274}
-    \subitem definition of, \hyperpage{200}
-    \subitem relation to inverse functions, \hyperpage{214}
+    \subitem as a permutation, \hyperpage{275}
+    \subitem definition of, \hyperpage{201}
+    \subitem relation to inverse functions, \hyperpage{215}
   \item Binary
-    \subitem operation, \hyperpage{324}
-  \item Binary Relation, \hyperpage{219}
-  \item Binary symmetric channel, \hyperpage{433}
-  \item Bits, \hyperpage{429}
-    \subitem check bits, \hyperpage{449}
-    \subitem information bits, \hyperpage{449}
-  \item Block code, \hyperpage{435}, \hyperpage{449}
-  \item Burnside, William, \hyperpage{344}, \hyperpage{386}
-  \item Byte, \hyperpage{432}
+    \subitem operation, \hyperpage{325}
+  \item Binary Relation, \hyperpage{220}
+  \item Binary symmetric channel, \hyperpage{434}
+  \item Bits, \hyperpage{430}
+    \subitem check bits, \hyperpage{450}
+    \subitem information bits, \hyperpage{450}
+  \item Block code, \hyperpage{436}, \hyperpage{450}
+  \item Burnside, William, \hyperpage{345}, \hyperpage{387}
+  \item Byte, \hyperpage{433}
 
   \indexspace
 
   \item Caesar, Julius, \hyperpage{121}
   \item Cancellation law
-    \subitem for groups, \hyperpage{342}
-  \item Carmichael numbers, \hyperpage{148}
+    \subitem for groups, \hyperpage{343}
+  \item Carmichael numbers, \hyperpage{149}
   \item Cartesian product
-    \subitem formal definition, \hyperpage{173}
-  \item Cayley table, \hyperpage{89}, \hyperpage{330}
-  \item Cayley's Theorem, \hyperpage{484}
-  \item Cayley, Arthur, \hyperpage{486}
+    \subitem formal definition, \hyperpage{174}
+  \item Cayley table, \hyperpage{89}, \hyperpage{331}
+  \item Cayley's Theorem, \hyperpage{485}
+  \item Cayley, Arthur, \hyperpage{487}
   \item Ceiling
-    \subitem of a real number, \hyperpage{143}
+    \subitem of a real number, \hyperpage{144}
   \item Center
-    \subitem of a group, \hyperpage{361}
+    \subitem of a group, \hyperpage{362}
   \item Centralizer
-    \subitem of an element, \hyperpage{387}
-  \item Check bits, \hyperpage{449}
+    \subitem of an element, \hyperpage{388}
+  \item Check bits, \hyperpage{450}
   \item Chinese Remainder Theorem, \hyperpage{116}
   \item Cipher, \hyperpage{120}
   \item Ciphertext, \hyperpage{120}
   \item Cis
     \subitem definition, \hyperpage{36}
-  \item Class equation, \hyperpage{426}
+  \item Class equation, \hyperpage{427}
   \item Closure
     \subitem integers mod n, \hyperpage{90}
   \item Code
-    \subitem  block code, \hyperpage{449}
-    \subitem ASCII, \hyperpage{429}
-    \subitem binary, \hyperpage{429}
-    \subitem dual, \hyperpage{461}
-    \subitem group, \hyperpage{442}
-    \subitem Hamming, \hyperpage{462}
+    \subitem  block code, \hyperpage{450}
+    \subitem ASCII, \hyperpage{430}
+    \subitem binary, \hyperpage{430}
+    \subitem dual, \hyperpage{462}
+    \subitem group, \hyperpage{443}
+    \subitem Hamming, \hyperpage{463}
     \subitem ISBN, \hyperpage{76}
-    \subitem linear, \hyperpage{446}
-    \subitem minimum distance of, \hyperpage{436}
-    \subitem orthogonal, \hyperpage{461}
+    \subitem linear, \hyperpage{447}
+    \subitem minimum distance of, \hyperpage{437}
+    \subitem orthogonal, \hyperpage{462}
     \subitem UPC, \hyperpage{75}
-  \item Codeword, \hyperpage{429}, \hyperpage{435}
-    \subitem weight of, \hyperpage{436}, \hyperpage{443}
-  \item Codomain, \hyperpage{176}
-    \subitem of a function, \hyperpage{182}
+  \item Codeword, \hyperpage{430}, \hyperpage{436}
+    \subitem weight of, \hyperpage{437}, \hyperpage{444}
+  \item Codomain, \hyperpage{177}
+    \subitem of a function, \hyperpage{183}
   \item Commutative
-    \subitem diagram, \hyperpage{418}
+    \subitem diagram, \hyperpage{419}
     \subitem in ordinary arithmetic, \hyperpage{7}
-  \item Commutative diagram, \hyperpage{466}
+  \item Commutative diagram, \hyperpage{467}
   \item Commutative property, \hyperpage{28}
-    \subitem for compositions, \hyperpage{207}
+    \subitem for compositions, \hyperpage{208}
     \subitem modular addition/multiplication, \hyperpage{94}
-    \subitem of disjoint cycles, \hyperpage{290}
+    \subitem of disjoint cycles, \hyperpage{291}
   \item Complement
-    \subitem definition, \hyperpage{160}
+    \subitem definition, \hyperpage{161}
   \item Complex numbers
     \subitem addition, \hyperpage{22}
     \subitem additive properties, \hyperpage{27, 28}
@@ -107,295 +107,304 @@
     \subitem vector representation, \hyperpage{34}
   \item Complex plane, \hyperpage{34}
   \item Composition
-    \subitem Associative property, \hyperpage{207}
-    \subitem definition of, \hyperpage{206}
-    \subitem law of, \hyperpage{324}
-    \subitem of cycles, \hyperpage{285}
-    \subitem of permutations, \hyperpage{276}
-    \subitem of sets, \hyperpage{380}
-    \subitem of symmetries, \hyperpage{275}
+    \subitem Associative property, \hyperpage{208}
+    \subitem definition of, \hyperpage{207}
+    \subitem law of, \hyperpage{325}
+    \subitem of cycles, \hyperpage{286}
+    \subitem of permutations, \hyperpage{277}
+    \subitem of sets, \hyperpage{381}
+    \subitem of symmetries, \hyperpage{276}
   \item Conjugacy
-    \subitem class, \hyperpage{426}
+    \subitem class, \hyperpage{427}
   \item Conjugate
-    \subitem element, \hyperpage{422}
+    \subitem element, \hyperpage{423}
   \item Conjugate, complex, \hyperpage{29}
   \item Conjugation
-    \subitem of permutations, \hyperpage{419}
-    \subitem operation on groups, \hyperpage{422}
-    \subitem relabling method, \hyperpage{419}
-  \item Contrapositive, \hyperpage{70}, \hyperpage{192}
+    \subitem of permutations, \hyperpage{420}
+    \subitem operation on groups, \hyperpage{423}
+    \subitem relabling method, \hyperpage{420}
+  \item Contrapositive, \hyperpage{70}, \hyperpage{193}
   \item Converse, \hyperpage{70}
   \item Coset
-    \subitem double, \hyperpage{388}
-    \subitem leader, \hyperpage{459}
-    \subitem left, \hyperpage{364}
-    \subitem representative, \hyperpage{364}
-    \subitem right, \hyperpage{365}
+    \subitem double, \hyperpage{389}
+    \subitem leader, \hyperpage{460}
+    \subitem left, \hyperpage{365}
+    \subitem representative, \hyperpage{365}
+    \subitem right, \hyperpage{366}
   \item Cryptanalysis, \hyperpage{123}
-  \item Cryptoquip, \hyperpage{127}
+  \item Cryptoquip, \hyperpage{128}
   \item Cryptosystem
-    \subitem affine, \hyperpage{124}
+    \subitem affine, \hyperpage{125}
     \subitem definition of, \hyperpage{120}
-    \subitem monoalphabetic, \hyperpage{127}
+    \subitem monoalphabetic, \hyperpage{128}
     \subitem polyalphabetic, \hyperpage{128}
     \subitem private key, \hyperpage{121}
     \subitem public key, \hyperpage{121}
     \subitem single key, \hyperpage{121}
   \item Cycle
-    \subitem as products of transpositions, \hyperpage{305}
-    \subitem composition, \hyperpage{285}
-    \subitem disjoint, \hyperpage{288}
-    \subitem inverse of, \hyperpage{307}
-    \subitem length of, \hyperpage{283}
-    \subitem order of, \hyperpage{299}
-    \subitem powers of, \hyperpage{297}
-    \subitem transposition, \hyperpage{305}
-  \item Cycle notation, \hyperpage{281}
-  \item Cyclic group, \hyperpage{352}
-    \subitem generator, \hyperpage{352}
+    \subitem as products of transpositions, \hyperpage{306}
+    \subitem composition, \hyperpage{286}
+    \subitem disjoint, \hyperpage{289}
+    \subitem inverse of, \hyperpage{308}
+    \subitem length of, \hyperpage{284}
+    \subitem order of, \hyperpage{300}
+    \subitem powers of, \hyperpage{298}
+    \subitem transposition, \hyperpage{306}
+  \item Cycle notation, \hyperpage{282}
+  \item Cyclic group, \hyperpage{353}
+    \subitem generator, \hyperpage{353}
 
   \indexspace
 
   \item De Moivre's Theorem, \hyperpage{42}
-  \item De Morgan's laws for sets, \hyperpage{166}
-  \item Decoding function, \hyperpage{435}
-  \item Decoding scheme, \hyperpage{429}
-    \subitem repetition, \hyperpage{431}
-  \item Decoding table, \hyperpage{460}
+  \item De Morgan's laws for sets, \hyperpage{167}
+  \item Decoding function, \hyperpage{436}
+  \item Decoding scheme, \hyperpage{430}
+    \subitem repetition, \hyperpage{432}
+  \item Decoding table, \hyperpage{461}
+  \item Decryption
+    \subitem definition, \hyperpage{120}
+    \subitem function, \hyperpage{121}
   \item Degree
-    \subitem of a polynomial, \hyperpage{546}
-  \item Dickson, L. E., \hyperpage{386}
-  \item Diffie, W., \hyperpage{135}
-  \item Digraph, \hyperpage{220}
-    \subitem of a permutation, \hyperpage{289}
+    \subitem of a polynomial, \hyperpage{547}
+  \item Dickson, L. E., \hyperpage{387}
+  \item Diffie, W., \hyperpage{137}
+  \item Digraph, \hyperpage{221}
+    \subitem of a permutation, \hyperpage{290}
   \item Direct product of groups
-    \subitem external, \hyperpage{487}
-    \subitem internal, \hyperpage{492}
+    \subitem external, \hyperpage{488}
+    \subitem internal, \hyperpage{493}
   \item Disjoint
-    \subitem applied to equivalence relations, \hyperpage{233}
-    \subitem definition of, \hyperpage{160}
+    \subitem applied to equivalence relations, \hyperpage{234}
+    \subitem definition of, \hyperpage{161}
   \item Disjoint cycles
-    \subitem order of, \hyperpage{304}
-    \subitem powers of, \hyperpage{304}
+    \subitem order of, \hyperpage{305}
+    \subitem powers of, \hyperpage{305}
   \item Distributive
     \subitem in ordinary arithmetic, \hyperpage{7}
   \item Distributive property
     \subitem modular addition/multiplication, \hyperpage{94}
   \item Division algorithm, \hyperpage{69}
-    \subitem for polynomials, \hyperpage{556}
-  \item Domain, \hyperpage{176}
-    \subitem of a function, \hyperpage{182}
+    \subitem for polynomials, \hyperpage{557}
+  \item Domain, \hyperpage{177}
+    \subitem of a function, \hyperpage{183}
 
   \indexspace
 
   \item Element
-    \subitem centralizer of, \hyperpage{387}
-    \subitem identity, \hyperpage{325}
-    \subitem inverse, \hyperpage{325}
-    \subitem of a set, \hyperpage{151}
-    \subitem order of, \hyperpage{355}
-  \item Element by element proof, \hyperpage{163}
-  \item Empty set, \hyperpage{156}
-  \item Encoder, \hyperpage{429}
-  \item Encoding function, \hyperpage{435, 436}
+    \subitem centralizer of, \hyperpage{388}
+    \subitem identity, \hyperpage{326}
+    \subitem inverse, \hyperpage{326}
+    \subitem of a set, \hyperpage{152}
+    \subitem order of, \hyperpage{356}
+  \item Element by element proof, \hyperpage{164}
+  \item Empty set, \hyperpage{157}
+  \item Encoder, \hyperpage{430}
+  \item Encoding function, \hyperpage{436, 437}
+  \item Encryption
+    \subitem definition, \hyperpage{120}
+    \subitem function, \hyperpage{121}
   \item Equality
-    \subitem of polynomials, \hyperpage{548}
-  \item Equivalence class, \hyperpage{231}, \hyperpage{393}
-  \item Equivalence relation, \hyperpage{228}
-    \subitem as a partition, \hyperpage{242}
-  \item Error, \hyperpage{429}
-    \subitem probability of, \hyperpage{433}
+    \subitem of polynomials, \hyperpage{549}
+  \item Equivalence class, \hyperpage{232}, \hyperpage{394}
+  \item Equivalence relation, \hyperpage{229}
+    \subitem as a partition, \hyperpage{243}
+  \item Error, \hyperpage{430}
+    \subitem probability of, \hyperpage{434}
   \item Error detection codes
     \subitem ISBN, \hyperpage{76}
   \item Euclid's lemma, \hyperpage{21}
     \subitem proof, \hyperpage{113}
   \item Euclidean algorithm, \hyperpage{102}
   \item Euler
-    \subitem  totient function, \hyperpage{144}
-  \item Euler $\phi$-function, \hyperpage{374}
-  \item Euler's formula, \hyperpage{412}
-  \item Euler's theorem, \hyperpage{374}
-  \item Euler, Leonhard, \hyperpage{373}
+    \subitem  totient function, \hyperpage{145}
+  \item Euler $\phi$-function, \hyperpage{375}
+  \item Euler's formula, \hyperpage{413}
+  \item Euler's theorem, \hyperpage{375}
+  \item Euler, Leonhard, \hyperpage{374}
   \item Even parity
-    \subitem coding scheme, \hyperpage{431}
-  \item Exponent laws, \hyperpage{342}
-  \item External direct product, \hyperpage{487}
+    \subitem coding scheme, \hyperpage{432}
+  \item Exponent laws, \hyperpage{343}
+  \item External direct product, \hyperpage{488}
 
   \indexspace
 
-  \item Feit, W., \hyperpage{386}
+  \item Feit, W., \hyperpage{387}
   \item Fermat
-    \subitem factorization algorithm, \hyperpage{144}
+    \subitem factorization algorithm, \hyperpage{145}
     \subitem last theorem, \hyperpage{47}
-    \subitem little theorem, \hyperpage{147}, \hyperpage{375}
+    \subitem little theorem, \hyperpage{148}, \hyperpage{376}
   \item First Isomorphism Theorem
-    \subitem for groups, \hyperpage{512}
+    \subitem for groups, \hyperpage{513}
   \item Fixed point set
-    \subitem of a group element, \hyperpage{394}
-  \item FOIL (FLOI) method, \hyperpage{23}, \hyperpage{544}
+    \subitem of a group element, \hyperpage{395}
+  \item FOIL (FLOI) method, \hyperpage{23}, \hyperpage{545}
   \item Frequency analysis, \hyperpage{123}
   \item Function
-    \subitem as a bijection, \hyperpage{214}
-    \subitem formal definition, \hyperpage{182}
-    \subitem inverse of, \hyperpage{213}
-    \subitem onto, \hyperpage{194}
+    \subitem as a bijection, \hyperpage{215}
+    \subitem decryption, \hyperpage{121}
+    \subitem encryption, \hyperpage{121}
+    \subitem formal definition, \hyperpage{183}
+    \subitem in cryptography, \hyperpage{121}
+    \subitem inverse of, \hyperpage{214}
+    \subitem onto, \hyperpage{195}
 
   \indexspace
 
-  \item $G$-equivalent, \hyperpage{392}
-  \item $G$-set, \hyperpage{390}
-  \item Galois, \'{E}variste, \hyperpage{344}
+  \item $G$-equivalent, \hyperpage{393}
+  \item $G$-set, \hyperpage{391}
+  \item Galois, \'{E}variste, \hyperpage{345}
   \item Generator
-    \subitem  of a cyclic group, \hyperpage{352}
-  \item Gorenstein, Daniel, \hyperpage{386}
-  \item Greiss, R., \hyperpage{386}
+    \subitem  of a cyclic group, \hyperpage{353}
+  \item Gorenstein, Daniel, \hyperpage{387}
+  \item Greiss, R., \hyperpage{387}
   \item Group
-    \subitem abelian, \hyperpage{326}
-    \subitem alternating, \hyperpage{319}
-    \subitem automorphism of, \hyperpage{496}
-    \subitem center of, \hyperpage{387}
-    \subitem commutative, \hyperpage{326}
-    \subitem cyclic, \hyperpage{352}
-    \subitem definition, \hyperpage{95}, \hyperpage{168}
-    \subitem definition of, \hyperpage{325}
-    \subitem dihedral, \hyperpage{261}
-    \subitem factor, \hyperpage{380}
-    \subitem finite, \hyperpage{326}
-    \subitem general linear $(GL_n(\mathbb{R}))$ , \hyperpage{335}
-    \subitem Heisenberg, \hyperpage{359}
-    \subitem homomorphism of, \hyperpage{503}
-    \subitem infinite, \hyperpage{326}
-    \subitem isomorphic, \hyperpage{278}, \hyperpage{469}
-    \subitem isomorphism of, \hyperpage{469}
-    \subitem non-abelian, \hyperpage{326}
-    \subitem noncommutative, \hyperpage{326}
-    \subitem of units $U(n)$, \hyperpage{333}
-    \subitem order of, \hyperpage{326}
-    \subitem permutation, \hyperpage{280}
-    \subitem quotient, \hyperpage{380}
-    \subitem simple, \hyperpage{382}, \hyperpage{386}
-    \subitem special linear $(SL_n(\mathbb{R}))$, \hyperpage{349}
-    \subitem symmetric, \hyperpage{278}
-    \subitem trivial, \hyperpage{326}
-    \subitem wallpaper, \hyperpage{270}
-  \item Group code, \hyperpage{442}, \hyperpage{446}
+    \subitem abelian, \hyperpage{327}
+    \subitem alternating, \hyperpage{320}
+    \subitem automorphism of, \hyperpage{497}
+    \subitem center of, \hyperpage{388}
+    \subitem commutative, \hyperpage{327}
+    \subitem cyclic, \hyperpage{353}
+    \subitem definition, \hyperpage{95}, \hyperpage{169}
+    \subitem definition of, \hyperpage{326}
+    \subitem dihedral, \hyperpage{262}
+    \subitem factor, \hyperpage{381}
+    \subitem finite, \hyperpage{327}
+    \subitem general linear $(GL_n(\mathbb{R}))$ , \hyperpage{336}
+    \subitem Heisenberg, \hyperpage{360}
+    \subitem homomorphism of, \hyperpage{504}
+    \subitem infinite, \hyperpage{327}
+    \subitem isomorphic, \hyperpage{279}, \hyperpage{470}
+    \subitem isomorphism of, \hyperpage{470}
+    \subitem non-abelian, \hyperpage{327}
+    \subitem noncommutative, \hyperpage{327}
+    \subitem of units $U(n)$, \hyperpage{334}
+    \subitem order of, \hyperpage{327}
+    \subitem permutation, \hyperpage{281}
+    \subitem quotient, \hyperpage{381}
+    \subitem simple, \hyperpage{383}, \hyperpage{387}
+    \subitem special linear $(SL_n(\mathbb{R}))$, \hyperpage{350}
+    \subitem symmetric, \hyperpage{279}
+    \subitem trivial, \hyperpage{327}
+    \subitem wallpaper, \hyperpage{271}
+  \item Group code, \hyperpage{443}, \hyperpage{447}
 
   \indexspace
 
   \item Hamming code
-    \subitem definition, \hyperpage{462}
-    \subitem perfect, \hyperpage{462}
-    \subitem shortened, \hyperpage{462}
-  \item Hamming distance, \hyperpage{436, 437}
-  \item Hamming, R., \hyperpage{463}
-  \item Hellman, M., \hyperpage{135}
-  \item Homomorphic image, \hyperpage{503}
-  \item Homomorphism, \hyperpage{503}
-    \subitem kernel, \hyperpage{510}
-    \subitem surjective , \hyperpage{513}
-  \item Horizontal line test, \hyperpage{190}, \hyperpage{197}
+    \subitem definition, \hyperpage{463}
+    \subitem perfect, \hyperpage{463}
+    \subitem shortened, \hyperpage{463}
+  \item Hamming distance, \hyperpage{437, 438}
+  \item Hamming, R., \hyperpage{464}
+  \item Hellman, M., \hyperpage{137}
+  \item Homomorphic image, \hyperpage{504}
+  \item Homomorphism, \hyperpage{504}
+    \subitem kernel, \hyperpage{511}
+    \subitem surjective , \hyperpage{514}
+  \item Horizontal line test, \hyperpage{191}, \hyperpage{198}
 
   \indexspace
 
   \item Identity
     \subitem additive, \hyperpage{27}
-    \subitem element, \hyperpage{325}
+    \subitem element, \hyperpage{326}
     \subitem in ordinary arithmetic, \hyperpage{7}
-    \subitem of a permutation, \hyperpage{276}
-    \subitem of permutation groups, \hyperpage{284}
-    \subitem of transpositions, \hyperpage{306}
-  \item Identity map, \hyperpage{216}
+    \subitem of a permutation, \hyperpage{277}
+    \subitem of permutation groups, \hyperpage{285}
+    \subitem of transpositions, \hyperpage{307}
+  \item Identity map, \hyperpage{217}
   \item Image
-    \subitem of an element under a function, \hyperpage{182}
+    \subitem of an element under a function, \hyperpage{183}
   \item Imaginary number, \hyperpage{17}
   \item Imaginary part, \hyperpage{17}
-  \item Index of a subgroup, \hyperpage{369}
+  \item Index of a subgroup, \hyperpage{370}
   \item Induction, \hyperpage{42}
   \item Inequality
     \subitem nonstrict, \hyperpage{10}
     \subitem strict, \hyperpage{10}
-  \item Information bits, \hyperpage{449}
-  \item Injective (one-to-one), \hyperpage{189}
-  \item Inner product, \hyperpage{444}
+  \item Information bits, \hyperpage{450}
+  \item Injective (one-to-one), \hyperpage{190}
+  \item Inner product, \hyperpage{445}
     \subitem notation, \hyperpage{75}
   \item Integer
-    \subitem lattice, \hyperpage{414}
+    \subitem lattice, \hyperpage{415}
   \item Integers mod $n$, \hyperpage{73}
-    \subitem  as equivalence classes, \hyperpage{235}
+    \subitem  as equivalence classes, \hyperpage{236}
   \item Integers mod n
     \subitem additive identity, \hyperpage{91}
-  \item Integers modulo, \hyperpage{237}
-  \item Internal direct product, \hyperpage{492}
-  \item Intersection, \hyperpage{157}
+  \item Integers modulo, \hyperpage{238}
+  \item Internal direct product, \hyperpage{493}
+  \item Intersection, \hyperpage{158}
   \item Inverse
     \subitem additive, \hyperpage{27}
-    \subitem element, \hyperpage{325}
-    \subitem function, \hyperpage{213}
+    \subitem element, \hyperpage{326}
+    \subitem function, \hyperpage{214}
     \subitem integers mod n, \hyperpage{92}
     \subitem multiplicative, \hyperpage{24}
-    \subitem of a cycle, \hyperpage{307}
-    \subitem of permutations, \hyperpage{276}
-    \subitem of transpositions, \hyperpage{306}
+    \subitem of a cycle, \hyperpage{308}
+    \subitem of permutations, \hyperpage{277}
+    \subitem of transpositions, \hyperpage{307}
   \item Inverse function
-    \subitem notation, \hyperpage{215}
-    \subitem relation to bijection, \hyperpage{214}
+    \subitem notation, \hyperpage{216}
+    \subitem relation to bijection, \hyperpage{215}
   \item Irrational number
     \subitem definition of, \hyperpage{18}
     \subitem existence proof, \hyperpage{18}
-  \item Isomorphic groups, \hyperpage{278}
+  \item Isomorphic groups, \hyperpage{279}
   \item Isomorphism
-    \subitem definition of, \hyperpage{278}
-    \subitem least common multiple theorem, \hyperpage{489}
-    \subitem of groups, \hyperpage{469}
+    \subitem definition of, \hyperpage{279}
+    \subitem least common multiple theorem, \hyperpage{490}
+    \subitem of groups, \hyperpage{470}
 
   \indexspace
 
-  \item Jordan, C., \hyperpage{386}
+  \item Jordan, C., \hyperpage{387}
 
   \indexspace
 
   \item Kernel
-    \subitem as a normal subgroup, \hyperpage{510}
-    \subitem of a homomorphism, \hyperpage{510}
+    \subitem as a normal subgroup, \hyperpage{511}
+    \subitem of a homomorphism, \hyperpage{511}
   \item Key
     \subitem definition of, \hyperpage{120}
     \subitem private, \hyperpage{121}
     \subitem public, \hyperpage{121}
     \subitem single, \hyperpage{121}
-  \item Klein, Felix, \hyperpage{344}
-  \item Kronecker delta, \hyperpage{524}
+  \item Klein, Felix, \hyperpage{345}
+  \item Kronecker delta, \hyperpage{525}
 
   \indexspace
 
-  \item Lagrange's Theorem, \hyperpage{372}
-  \item Lagrange, Joseph-Louis, \hyperpage{344}, \hyperpage{373}
-  \item Law of cancellation, \hyperpage{342}
+  \item Lagrange's Theorem, \hyperpage{373}
+  \item Lagrange, Joseph-Louis, \hyperpage{345}, \hyperpage{374}
+  \item Law of cancellation, \hyperpage{343}
   \item Law of cosines, \hyperpage{59}
-  \item Left regular representation, \hyperpage{485}
+  \item Left regular representation, \hyperpage{486}
   \item Levi-Civita symbol
-    \subitem definition, \hyperpage{530}
-  \item Lie, Sophus, \hyperpage{344}
+    \subitem definition, \hyperpage{531}
+  \item Lie, Sophus, \hyperpage{345}
 
   \indexspace
 
   \item Mandelbrot set, \hyperpage{32}
   \item Matrices
-    \subitem similar, \hyperpage{528}
+    \subitem similar, \hyperpage{529}
   \item Matrix
-    \subitem determinant, \hyperpage{130}
-    \subitem generator, \hyperpage{449}
-    \subitem identity ($I$), \hyperpage{524}
-    \subitem null space of, \hyperpage{445}
-    \subitem parity-check, \hyperpage{447}
-  \item Maximum-likelihood decoding, \hyperpage{433}, \hyperpage{439}
-  \item Message block, \hyperpage{451}
-  \item Message word, \hyperpage{429}
+    \subitem determinant, \hyperpage{131}
+    \subitem generator, \hyperpage{450}
+    \subitem identity ($I$), \hyperpage{525}
+    \subitem null space of, \hyperpage{446}
+    \subitem parity-check, \hyperpage{448}
+  \item Maximum-likelihood decoding, \hyperpage{434}, \hyperpage{440}
+  \item Message block, \hyperpage{452}
+  \item Message word, \hyperpage{430}
   \item Metric
-    \subitem definition, \hyperpage{438}
-  \item Minimum distance, \hyperpage{443}
+    \subitem definition, \hyperpage{439}
+  \item Minimum distance, \hyperpage{444}
   \item Modular addition, \hyperpage{84}
   \item Modular arithmetic, \hyperpage{66}
-    \subitem on equivalence classes, \hyperpage{236}
+    \subitem on equivalence classes, \hyperpage{237}
   \item Modular equations, \hyperpage{74}
     \subitem addition, \hyperpage{78}
   \item Modular equivalence, \hyperpage{68}
@@ -403,76 +412,76 @@
 
   \indexspace
 
-  \item Normal subgroup, \hyperpage{376}, \hyperpage{509}
-  \item Normalizer, \hyperpage{361}
+  \item Normal subgroup, \hyperpage{377}, \hyperpage{510}
+  \item Normalizer, \hyperpage{362}
   \item Null space
-    \subitem of a matrix, \hyperpage{445}
+    \subitem of a matrix, \hyperpage{446}
 
   \indexspace
 
   \item One-to-one
-    \subitem alternate definition, \hyperpage{193}
-    \subitem definition, \hyperpage{189}
-    \subitem horizontal line test, \hyperpage{190}
-    \subitem informal definition, \hyperpage{187}
-  \item Onto, \hyperpage{194}
-    \subitem formal definition, \hyperpage{195}
-    \subitem horizontal line test, \hyperpage{197}
+    \subitem alternate definition, \hyperpage{194}
+    \subitem definition, \hyperpage{190}
+    \subitem horizontal line test, \hyperpage{191}
+    \subitem informal definition, \hyperpage{188}
+  \item Onto, \hyperpage{195}
+    \subitem formal definition, \hyperpage{196}
+    \subitem horizontal line test, \hyperpage{198}
   \item Operation
-    \subitem binary, \hyperpage{324}
-    \subitem definition of, \hyperpage{169}
-  \item Orbit, \hyperpage{322}
-    \subitem  of a group element, \hyperpage{351}
-    \subitem Of a $G$-set, \hyperpage{393}
+    \subitem binary, \hyperpage{325}
+    \subitem definition of, \hyperpage{170}
+  \item Orbit, \hyperpage{323}
+    \subitem  of a group element, \hyperpage{352}
+    \subitem Of a $G$-set, \hyperpage{394}
   \item Order
-    \subitem  of a set, \hyperpage{277}
-    \subitem disjoint cycles, \hyperpage{304}
-    \subitem of a cycle, \hyperpage{299}
-    \subitem of a permutation, \hyperpage{301}
+    \subitem  of a set, \hyperpage{278}
+    \subitem disjoint cycles, \hyperpage{305}
+    \subitem of a cycle, \hyperpage{300}
+    \subitem of a permutation, \hyperpage{302}
   \item Ordered pair
-    \subitem as a function, \hyperpage{181}
-    \subitem definition of, \hyperpage{172}
+    \subitem as a function, \hyperpage{182}
+    \subitem definition of, \hyperpage{173}
 
   \indexspace
 
   \item Parity
-    \subitem canonical parity-check matrix, \hyperpage{447}
-    \subitem even, \hyperpage{431}
-    \subitem odd, \hyperpage{432}
-    \subitem parity check bit, \hyperpage{431}
+    \subitem canonical parity-check matrix, \hyperpage{448}
+    \subitem even, \hyperpage{432}
+    \subitem odd, \hyperpage{433}
+    \subitem parity check bit, \hyperpage{432}
   \item Partition
-    \subitem as an equivalence relation, \hyperpage{242}
-    \subitem definition of, \hyperpage{242}
-    \subitem of a set, \hyperpage{241}
+    \subitem as an equivalence relation, \hyperpage{243}
+    \subitem definition of, \hyperpage{243}
+    \subitem of a set, \hyperpage{242}
   \item Period, \hyperpage{48}
   \item Permutation
-    \subitem conjugate, \hyperpage{419}
-    \subitem cycle, \hyperpage{281}
-    \subitem definition of, \hyperpage{274}
-    \subitem even and odd, \hyperpage{532}
-    \subitem identity, \hyperpage{276}, \hyperpage{284}
-    \subitem inverse, \hyperpage{276}
-    \subitem odd and even, \hyperpage{317}
-    \subitem parity, \hyperpage{316}
-  \item Permutation group, \hyperpage{280}
+    \subitem conjugate, \hyperpage{420}
+    \subitem cycle, \hyperpage{282}
+    \subitem definition of, \hyperpage{275}
+    \subitem even and odd, \hyperpage{533}
+    \subitem identity, \hyperpage{277}, \hyperpage{285}
+    \subitem inverse, \hyperpage{277}
+    \subitem odd and even, \hyperpage{318}
+    \subitem parity, \hyperpage{317}
+  \item Permutation group, \hyperpage{281}
   \item Phase shift, \hyperpage{48}
   \item Phasor, \hyperpage{52}
   \item Plaintext, \hyperpage{120}
-  \item Platonic solids, \hyperpage{409}
+  \item Platonic solids, \hyperpage{410}
   \item Polar coordinates, \hyperpage{35}
   \item Polyhedron
-    \subitem regular, \hyperpage{391}
+    \subitem regular, \hyperpage{392}
   \item Polynomial
-    \subitem  leading coefficient, \hyperpage{546}
-    \subitem coefficients, \hyperpage{546}
-    \subitem ring, \hyperpage{547}
-  \item Power set, \hyperpage{222}
+    \subitem  leading coefficient, \hyperpage{547}
+    \subitem coefficients, \hyperpage{547}
+    \subitem ring, \hyperpage{548}
+  \item Power set, \hyperpage{223}
   \item Prime
-    \subitem Miller-Rabin test for, \hyperpage{147}
-  \item Principle of Well-Ordering, \hyperpage{357}
+    \subitem Miller-Rabin test for, \hyperpage{148}
+  \item Principle of Well-Ordering, \hyperpage{358}
   \item Product
-    \subitem of groups, \hyperpage{330}
-    \subitem of polynomials, \hyperpage{552}
+    \subitem of groups, \hyperpage{331}
+    \subitem of polynomials, \hyperpage{553}
   \item Proof by contradiction, \hyperpage{14}
   \item Proofs
     \subitem ``statement$-$reason'' format, \hyperpage{19}
@@ -482,119 +491,119 @@
 
   \indexspace
 
-  \item Quaternion group ($Q_8$), \hyperpage{361}, \hyperpage{481}
+  \item Quaternion group ($Q_8$), \hyperpage{362}, \hyperpage{482}
 
   \indexspace
 
-  \item Range, \hyperpage{178}
-  \item Reflection (rigid motion), \hyperpage{248}
-  \item Reflexive, \hyperpage{223}
+  \item Range, \hyperpage{179}
+  \item Reflection (rigid motion), \hyperpage{249}
+  \item Reflexive, \hyperpage{224}
   \item Regular representation
-    \subitem left, \hyperpage{485}
-    \subitem right, \hyperpage{485}
+    \subitem left, \hyperpage{486}
+    \subitem right, \hyperpage{486}
   \item Relation
-    \subitem binary, \hyperpage{219}
-    \subitem definition of, \hyperpage{219}
-    \subitem reflexive, \hyperpage{223}
-    \subitem symmetric, \hyperpage{223}
-    \subitem transitive, \hyperpage{223}
+    \subitem binary, \hyperpage{220}
+    \subitem definition of, \hyperpage{220}
+    \subitem reflexive, \hyperpage{224}
+    \subitem symmetric, \hyperpage{224}
+    \subitem transitive, \hyperpage{224}
   \item Remainder, \hyperpage{69}
   \item Representatives
-    \subitem as coset leaders, \hyperpage{459}
-  \item Right regular representation, \hyperpage{485}
-  \item Rigid motion, \hyperpage{247}
+    \subitem as coset leaders, \hyperpage{460}
+  \item Right regular representation, \hyperpage{486}
+  \item Rigid motion, \hyperpage{248}
   \item Ring
-    \subitem polynomial, \hyperpage{547}
-  \item Rivest, R., \hyperpage{136}
+    \subitem polynomial, \hyperpage{548}
+  \item Rivest, R., \hyperpage{137}
   \item Roots of unity, \hyperpage{53}
   \item Rotation
-    \subitem  as rigid motion, \hyperpage{247}
+    \subitem  as rigid motion, \hyperpage{248}
 
   \indexspace
 
   \item Set
-    \subitem definition of, \hyperpage{151}
-    \subitem elements, \hyperpage{151}
-    \subitem empty set, \hyperpage{156}
-    \subitem generated by group element, \hyperpage{351}
-  \item Set difference, \hyperpage{160}
-  \item Set operations, \hyperpage{157}
-    \subitem complement, \hyperpage{160}
-    \subitem De Morgan's laws for sets, \hyperpage{166}
-    \subitem disjoint, \hyperpage{160}
-    \subitem intersection, \hyperpage{157}
-    \subitem set difference, \hyperpage{160}
-    \subitem symmetric difference, \hyperpage{171}
-    \subitem union, \hyperpage{157}
+    \subitem definition of, \hyperpage{152}
+    \subitem elements, \hyperpage{152}
+    \subitem empty set, \hyperpage{157}
+    \subitem generated by group element, \hyperpage{352}
+  \item Set difference, \hyperpage{161}
+  \item Set operations, \hyperpage{158}
+    \subitem complement, \hyperpage{161}
+    \subitem De Morgan's laws for sets, \hyperpage{167}
+    \subitem disjoint, \hyperpage{161}
+    \subitem intersection, \hyperpage{158}
+    \subitem set difference, \hyperpage{161}
+    \subitem symmetric difference, \hyperpage{172}
+    \subitem union, \hyperpage{158}
   \item Sets
-    \subitem disjoint, \hyperpage{160}
-  \item Shamir, A., \hyperpage{136}
-  \item Shannon, C., \hyperpage{463}
-  \item Sieve of Eratosthenes, \hyperpage{144}
-  \item Sigma notation, \hyperpage{514}
-  \item Simple group, \hyperpage{382}
-  \item Soccer ball, \hyperpage{409}
+    \subitem disjoint, \hyperpage{161}
+  \item Shamir, A., \hyperpage{137}
+  \item Shannon, C., \hyperpage{464}
+  \item Sieve of Eratosthenes, \hyperpage{145}
+  \item Sigma notation, \hyperpage{515}
+  \item Simple group, \hyperpage{383}
+  \item Soccer ball, \hyperpage{410}
   \item Stabilizer
-    \subitem counting formula, \hyperpage{411}
-  \item Standard generator matrix, \hyperpage{449}
-  \item Subgroup, \hyperpage{279}
-    \subitem commutator, \hyperpage{387}
-    \subitem cyclic, \hyperpage{354}
-    \subitem definition of, \hyperpage{345}
-    \subitem index of, \hyperpage{369}
-    \subitem isotropy, \hyperpage{394}
-    \subitem necessary conditions, \hyperpage{347}
-    \subitem normal, \hyperpage{376, 377}
-    \subitem relation to subset, \hyperpage{345}
-    \subitem stabilizer, \hyperpage{394}
-    \subitem transitive, \hyperpage{322}
+    \subitem counting formula, \hyperpage{412}
+  \item Standard generator matrix, \hyperpage{450}
+  \item Subgroup, \hyperpage{280}
+    \subitem commutator, \hyperpage{388}
+    \subitem cyclic, \hyperpage{355}
+    \subitem definition of, \hyperpage{346}
+    \subitem index of, \hyperpage{370}
+    \subitem isotropy, \hyperpage{395}
+    \subitem necessary conditions, \hyperpage{348}
+    \subitem normal, \hyperpage{377, 378}
+    \subitem relation to subset, \hyperpage{346}
+    \subitem stabilizer, \hyperpage{395}
+    \subitem transitive, \hyperpage{323}
   \item Subset
-    \subitem definition of, \hyperpage{155}
-    \subitem proper, \hyperpage{155}
+    \subitem definition of, \hyperpage{156}
+    \subitem proper, \hyperpage{156}
   \item Substitution
     \subitem as proof technique, \hyperpage{20}
-  \item Substitution property, \hyperpage{341}
+  \item Substitution property, \hyperpage{342}
   \item Sum
-    \subitem  of polynomials, \hyperpage{548}
-    \subitem divergent, \hyperpage{522}
-    \subitem of sets, \hyperpage{378}
-  \item Summation notation, \hyperpage{514}
+    \subitem  of polynomials, \hyperpage{549}
+    \subitem divergent, \hyperpage{523}
+    \subitem of sets, \hyperpage{379}
+  \item Summation notation, \hyperpage{515}
   \item Surjective
-    \subitem also see onto, \hyperpage{194}
-  \item Symmetric, \hyperpage{223}
+    \subitem also see onto, \hyperpage{195}
+  \item Symmetric, \hyperpage{224}
   \item Symmetry
-    \subitem definition, \hyperpage{246}
-  \item Syndrome of a code, \hyperpage{457}
+    \subitem definition, \hyperpage{247}
+  \item Syndrome of a code, \hyperpage{458}
 
   \indexspace
 
   \item Table
     \subitem multiplication, \hyperpage{89, 90}
   \item Theorem, \hyperpage{6}
-  \item Thompson, J., \hyperpage{386}
+  \item Thompson, J., \hyperpage{387}
   \item Trace
-    \subitem of a matrix, \hyperpage{526}
-  \item Transitive, \hyperpage{223}
+    \subitem of a matrix, \hyperpage{527}
+  \item Transitive, \hyperpage{224}
   \item Translation
-    \subitem as a rigid motion, \hyperpage{248}
+    \subitem as a rigid motion, \hyperpage{249}
   \item Transposition
-    \subitem definition of, \hyperpage{305}
+    \subitem definition of, \hyperpage{306}
     \subitem error, \hyperpage{75}
 
   \indexspace
 
-  \item Union, \hyperpage{157}
+  \item Union, \hyperpage{158}
   \item Units
-    \subitem  group of ($U(n)$), \hyperpage{333}
-  \item Universal set, \hyperpage{154}
+    \subitem  group of ($U(n)$), \hyperpage{334}
+  \item Universal set, \hyperpage{155}
   \item UPC code, \hyperpage{75}
 
   \indexspace
 
-  \item Wallpaper groups, \hyperpage{270}
+  \item Wallpaper groups, \hyperpage{271}
   \item Wave superposition, \hyperpage{51}
   \item Wavelength, \hyperpage{48}
-  \item Weight of a codeword, \hyperpage{436}
-  \item Well defined, \hyperpage{238}
+  \item Weight of a codeword, \hyperpage{437}
+  \item Well defined, \hyperpage{239}
 
 \end{theindex}

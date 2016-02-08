@@ -54,193 +54,193 @@
 \contentsline {section}{\numberline {5.1}Private key cryptography}{121}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Shift codes}{121}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Affine codes}{124}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Monoalphabetic codes}{127}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Monoalphabetic codes}{128}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Polyalphabetic codes}{128}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Spreadsheet exercises}{131}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Public key cryptography}{135}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The RSA cryptosystem}{136}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Message verification}{139}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.1.5}Spreadsheet exercises}{132}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Public key cryptography}{137}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The RSA cryptosystem}{137}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Message verification}{140}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}RSA exercises}{140}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Additional exercises: identifying prime numbers}{142}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.4}Additional exercises: identifying prime numbers}{143}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}References and suggested readings}{150}{section.5.3}
-\contentsline {chapter}{\numberline {6}Set Theory}{151}{chapter.6}
-\contentsline {section}{\numberline {6.1}Set Basics}{151}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}What's a set? (mathematically speaking, that is)}{151}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}How to specify sets}{151}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Important sets of numbers}{154}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Operations on sets}{156}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Properties of set operations}{163}{section.6.2}
-\contentsline {section}{\numberline {6.3}Do the subsets of a set form a group?}{168}{section.6.3}
-\contentsline {chapter}{\numberline {7}Functions: basic concepts}{172}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Cartesian product: a different type of set operation}{172}{section.7.1}
-\contentsline {section}{\numberline {7.2}Introduction to functions}{175}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Informal look at functions}{175}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Official definition of functions}{182}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Summary of basic function concepts}{186}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}One-to-one functions}{186}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Concept and definition}{186}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Proving that a function is one-to-one}{189}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Onto functions}{194}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Concept and definition}{194}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Proving that a function is onto}{196}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}Bijections}{200}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Concept and definition}{200}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Proving that a function is a bijection}{202}{subsection.7.5.2}
-\contentsline {section}{\numberline {7.6}Composition of functions}{205}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Concept and definition}{205}{subsection.7.6.1}
-\contentsline {subsection}{\numberline {7.6.2}Proofs involving function composition}{209}{subsection.7.6.2}
-\contentsline {section}{\numberline {7.7}Inverse functions}{212}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Concept and definition}{212}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Which functions have inverses?}{214}{subsection.7.7.2}
-\contentsline {chapter}{\numberline {8}Equivalence Relations and Equivalence Classes}{217}{chapter.8}
-\contentsline {section}{\numberline {8.1}Binary relations}{217}{section.8.1}
-\contentsline {section}{\numberline {8.2}Definition and basic properties of equivalence relations}{227}{section.8.2}
-\contentsline {section}{\numberline {8.3}Equivalence classes}{231}{section.8.3}
-\contentsline {section}{\numberline {8.4}Modular arithmetic redux}{234}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}The integers modulo 3}{235}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}The integers modulo $n$}{237}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Something we have swept under the rug}{238}{subsection.8.4.3}
-\contentsline {section}{\numberline {8.5}Partitions}{241}{section.8.5}
-\contentsline {chapter}{\numberline {9}Symmetries of Plane Figures}{246}{chapter.9}
-\contentsline {section}{\numberline {9.1}Definition and examples}{246}{section.9.1}
-\contentsline {section}{\numberline {9.2}Composition of symmetries}{251}{section.9.2}
-\contentsline {section}{\numberline {9.3}Do the symmetries of an object form a group?}{255}{section.9.3}
-\contentsline {section}{\numberline {9.4}The dihedral groups}{260}{section.9.4}
-\contentsline {section}{\numberline {9.5}For further investigation}{270}{section.9.5}
-\contentsline {section}{\numberline {9.6}An unexplained miracle}{270}{section.9.6}
-\contentsline {chapter}{\numberline {10}Permutations}{273}{chapter.10}
-\contentsline {section}{\numberline {10.1}Introduction to permutations}{274}{section.10.1}
-\contentsline {section}{\numberline {10.2}Permutation groups and other generalizations}{275}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}The symmetric group of $n$ letters}{276}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Isomorphic groups}{278}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Subgroups and permutation groups}{279}{subsection.10.2.3}
-\contentsline {section}{\numberline {10.3}Cycle notation}{281}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Tableaus and cycles}{281}{subsection.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}Composition (a.k.a. product) of cycles}{285}{subsection.10.3.2}
-\contentsline {subsection}{\numberline {10.3.3}Product of disjoint cycles}{288}{subsection.10.3.3}
-\contentsline {subsection}{\numberline {10.3.4}Products of permutations using cycle notation}{292}{subsection.10.3.4}
-\contentsline {subsection}{\numberline {10.3.5}Cycle structure of permutations}{294}{subsection.10.3.5}
-\contentsline {section}{\numberline {10.4}Algebraic properties of cycles}{297}{section.10.4}
-\contentsline {subsection}{\numberline {10.4.1}Powers of cycles: definition of order}{297}{subsection.10.4.1}
-\contentsline {subsection}{\numberline {10.4.2}Powers and orders of permutations in general}{301}{subsection.10.4.2}
-\contentsline {subsection}{\numberline {10.4.3}Transpositions and inverses}{305}{subsection.10.4.3}
-\contentsline {section}{\numberline {10.5}``Switchyard" and generators of the permutation group}{308}{section.10.5}
-\contentsline {section}{\numberline {10.6}Other groups of permutations}{314}{section.10.6}
-\contentsline {subsection}{\numberline {10.6.1}Even and odd permutations}{314}{subsection.10.6.1}
-\contentsline {subsection}{\numberline {10.6.2}The alternating group}{318}{subsection.10.6.2}
-\contentsline {section}{\numberline {10.7}Additional exercises}{321}{section.10.7}
-\contentsline {chapter}{\numberline {11}Abstract Groups: Definitions and Basic Properties}{323}{chapter.11}
-\contentsline {section}{\numberline {11.1}Formal definition of a group}{324}{section.11.1}
-\contentsline {section}{\numberline {11.2}Examples}{326}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}The group of units of ${\mathbb Z}_n$ }{332}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Groups of matrices}{334}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}Basic properties of groups}{335}{section.11.3}
-\contentsline {section}{\numberline {11.4}Subgroups}{345}{section.11.4}
-\contentsline {section}{\numberline {11.5}Cyclic groups}{350}{section.11.5}
-\contentsline {subsection}{\numberline {11.5.1}Cyclic groups}{350}{subsection.11.5.1}
-\contentsline {subsection}{\numberline {11.5.2}Cyclic subgroups}{353}{subsection.11.5.2}
-\contentsline {subsection}{\numberline {11.5.3}Subgroups of cyclic groups}{357}{subsection.11.5.3}
-\contentsline {section}{\numberline {11.6}Additional group and subgroup exercises}{358}{section.11.6}
-\contentsline {chapter}{\numberline {12}Cosets and Factor Groups}{362}{chapter.12}
-\contentsline {section}{\numberline {12.1}Definition of cosets}{363}{section.12.1}
-\contentsline {section}{\numberline {12.2}Cosets and partitions of groups}{367}{section.12.2}
-\contentsline {section}{\numberline {12.3}Lagrange's theorem, and some consequences}{371}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}Lagrange's theorem}{371}{subsection.12.3.1}
-\contentsline {subsection}{\numberline {12.3.2}Orders of elements, Euler's theorem, Fermat's little theorem, and prime order}{373}{subsection.12.3.2}
-\contentsline {section}{\numberline {12.4}Factor groups and normal subgroups}{376}{section.12.4}
-\contentsline {subsection}{\numberline {12.4.1}Normal subgroups}{376}{subsection.12.4.1}
-\contentsline {subsection}{\numberline {12.4.2}Factor groups}{378}{subsection.12.4.2}
-\contentsline {section}{\numberline {12.5}The simplicity of the alternating group}{382}{section.12.5}
-\contentsline {chapter}{\numberline {13}Group Actions}{389}{chapter.13}
-\contentsline {section}{\numberline {13.1}Basic definitions}{389}{section.13.1}
-\contentsline {section}{\numberline {13.2}Group actions on regular polyhedra}{391}{section.13.2}
-\contentsline {subsection}{\numberline {13.2.1}G-equivalence and orbits}{391}{subsection.13.2.1}
-\contentsline {subsection}{\numberline {13.2.2}Stabilizers, stabilizer subgroups, and fixed point sets}{394}{subsection.13.2.2}
-\contentsline {subsection}{\numberline {13.2.3}Counting formula for the order of polyhedral rotational symmetry groups}{396}{subsection.13.2.3}
-\contentsline {subsection}{\numberline {13.2.4}Representing $G$ in terms of stabilizer subgroups}{398}{subsection.13.2.4}
-\contentsline {section}{\numberline {13.3}Examples of other regular polyhedral rotation groups}{400}{section.13.3}
-\contentsline {subsection}{\numberline {13.3.1}The tetrahedron}{400}{subsection.13.3.1}
-\contentsline {subsection}{\numberline {13.3.2}The octahedron}{403}{subsection.13.3.2}
-\contentsline {subsection}{\numberline {13.3.3}The dodecahedron}{406}{subsection.13.3.3}
-\contentsline {subsection}{\numberline {13.3.4}Soccer ball}{409}{subsection.13.3.4}
-\contentsline {section}{\numberline {13.4}Euler's formula for regular polyhedra}{410}{section.13.4}
-\contentsline {section}{\numberline {13.5}Closing comments on polyhedral symmetry groups}{412}{section.13.5}
-\contentsline {section}{\numberline {13.6}Group actions on subgroups and cosets}{412}{section.13.6}
-\contentsline {section}{\numberline {13.7}Conjugation}{418}{section.13.7}
-\contentsline {chapter}{\numberline {14}Algebraic Coding}{429}{chapter.14}
-\contentsline {section}{\numberline {14.1}Error-Detecting and Correcting Codes}{429}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}Maximum-Likelihood Decoding}{432}{subsection.14.1.1}
-\contentsline {subsection}{\numberline {14.1.2}Block Codes}{435}{subsection.14.1.2}
-\contentsline {section}{\numberline {14.2}Group codes and linear codes}{441}{section.14.2}
-\contentsline {section}{\numberline {14.3}Linear Block Codes}{443}{section.14.3}
-\contentsline {section}{\numberline {14.4}Code words and encoding in block linear codes}{447}{section.14.4}
-\contentsline {subsection}{\numberline {14.4.1}Canonical Parity-check matrices}{447}{subsection.14.4.1}
-\contentsline {subsection}{\numberline {14.4.2}Standard Generator Matrices}{449}{subsection.14.4.2}
-\contentsline {subsection}{\numberline {14.4.3}Error detection and correction}{453}{subsection.14.4.3}
-\contentsline {section}{\numberline {14.5}Efficient Decoding}{456}{section.14.5}
-\contentsline {subsection}{\numberline {14.5.1}Decoding using syndromes}{456}{subsection.14.5.1}
-\contentsline {subsection}{\numberline {14.5.2}Coset Decoding}{458}{subsection.14.5.2}
-\contentsline {section}{\numberline {14.6}Additional algebraic coding exercises}{461}{section.14.6}
-\contentsline {section}{\numberline {14.7}References and Suggested Readings}{463}{section.14.7}
-\contentsline {chapter}{\numberline {15}Isomorphisms of Groups}{465}{chapter.15}
-\contentsline {section}{\numberline {15.1}Preliminary examples}{465}{section.15.1}
-\contentsline {section}{\numberline {15.2}Formal definition and basic properties of isomorphisms}{469}{section.15.2}
-\contentsline {section}{\numberline {15.3}More Examples}{471}{section.15.3}
-\contentsline {section}{\numberline {15.4}More properties of isomorphisms}{479}{section.15.4}
-\contentsline {section}{\numberline {15.5}Classification up to isomorphism}{481}{section.15.5}
-\contentsline {subsection}{\numberline {15.5.1}Classifying cyclic groups}{481}{subsection.15.5.1}
-\contentsline {subsection}{\numberline {15.5.2}Characterizing all finite groups: Cayley's theorem}{483}{subsection.15.5.2}
-\contentsline {section}{\numberline {15.6}Direct Products}{486}{section.15.6}
-\contentsline {subsection}{\numberline {15.6.1}External Direct Products}{486}{subsection.15.6.1}
-\contentsline {subsection}{\numberline {15.6.2}Classifying abelian groups by factorization}{489}{subsection.15.6.2}
-\contentsline {subsection}{\numberline {15.6.3}Internal Direct Products}{492}{subsection.15.6.3}
-\contentsline {chapter}{\numberline {16}Homomorphisms of Groups}{497}{chapter.16}
-\contentsline {section}{\numberline {16.1}Preliminary examples}{497}{section.16.1}
-\contentsline {section}{\numberline {16.2}Definition and several more examples}{503}{section.16.2}
-\contentsline {section}{\numberline {16.3}Proofs of homomorphism properties}{508}{section.16.3}
-\contentsline {section}{\numberline {16.4}The First Isomorphism Theorem}{511}{section.16.4}
-\contentsline {chapter}{\numberline {17}Sigma Notation}{514}{chapter.17}
-\contentsline {section}{\numberline {17.1}Lots of examples}{514}{section.17.1}
-\contentsline {section}{\numberline {17.2}Sigma notation properties}{516}{section.17.2}
-\contentsline {section}{\numberline {17.3}Nested Sigmas}{518}{section.17.3}
-\contentsline {section}{\numberline {17.4}Common Sums}{520}{section.17.4}
-\contentsline {section}{\numberline {17.5}Sigma notation in linear algebra}{523}{section.17.5}
-\contentsline {subsection}{\numberline {17.5.1}Applications to matrices}{523}{subsection.17.5.1}
-\contentsline {subsection}{\numberline {17.5.2}Levi-Civita symbols}{529}{subsection.17.5.2}
-\contentsline {section}{\numberline {17.6}Summation by parts}{540}{section.17.6}
-\contentsline {chapter}{\numberline {18}Polynomials}{543}{chapter.18}
-\contentsline {section}{\numberline {18.1}Polynomials of various stripes}{543}{section.18.1}
-\contentsline {section}{\numberline {18.2}Polynomial rings}{546}{section.18.2}
-\contentsline {section}{\numberline {18.3}The Division Algorithm for Polynomials}{556}{section.18.3}
-\contentsline {section}{\numberline {18.4}Polynomial roots}{558}{section.18.4}
-\contentsline {section}{\numberline {18.5}Proof that $U(p)$ is cyclic}{561}{section.18.5}
-\contentsline {chapter}{\numberline {19}Appendix: Induction proofs--patterns and examples}{563}{chapter.19}
-\contentsline {section}{\numberline {19.1} Basic examples of induction proofs}{563}{section.19.1}
-\contentsline {section}{\numberline {19.2}Advice on writing up induction proofs}{564}{section.19.2}
-\contentsline {section}{\numberline {19.3}Induction proof patterns \& practice problems}{565}{section.19.3}
-\contentsline {section}{\numberline {19.4}Strong Induction, with applications}{570}{section.19.4}
-\contentsline {section}{\numberline {19.5}More advice on induction and strong induction proofs}{572}{section.19.5}
-\contentsline {section}{\numberline {19.6}Common mistakes}{573}{section.19.6}
-\contentsline {section}{\numberline {19.7}Strong induction practice problems}{574}{section.19.7}
-\contentsline {section}{\numberline {19.8}Non-formula induction proofs.}{576}{section.19.8}
-\contentsline {section}{\numberline {19.9}Practice problems for non-formula induction}{577}{section.19.9}
-\contentsline {section}{\numberline {19.10}\nobreakspace {}Fallacies and pitfalls }{577}{section.19.10}
-\contentsline {chapter}{\numberline {20}Hints}{581}{chapter.20}
-\contentsline {section}{\numberline {20.1}Hints for ``Complex Numbers'' exercises}{581}{section.20.1}
-\contentsline {section}{\numberline {20.2}Hints for ``Modular Arithmetic'' exercises}{582}{section.20.2}
-\contentsline {section}{\numberline {20.3}Hints for ``Introducction to Cryptography'' exercises}{583}{section.20.3}
-\contentsline {section}{\numberline {20.4}Hints for ``Set Theory'' exercises}{584}{section.20.4}
-\contentsline {section}{\numberline {20.5}Hints for ``Functions: basic concepts'' exercises}{584}{section.20.5}
-\contentsline {section}{\numberline {20.6}Hints for ``Equivalence Relations and Equivalence Classes'' exercises}{584}{section.20.6}
-\contentsline {section}{\numberline {20.7}Hints for ``Symmetries of Plane Figures'' exercises}{585}{section.20.7}
-\contentsline {section}{\numberline {20.8}Hints for ``Permutations'' exercises}{585}{section.20.8}
-\contentsline {section}{\numberline {20.9}Hints for ``Abstract Groups: Definitions and Basic Properties'' exercises}{586}{section.20.9}
-\contentsline {section}{\numberline {20.10}Hints for ``Cosets'' exercises}{587}{section.20.10}
-\contentsline {section}{\numberline {20.11}Hints for ``Group Actions'' exercises}{587}{section.20.11}
-\contentsline {section}{\numberline {20.12}Hints for ``Algebraic Coding'' exercises}{588}{section.20.12}
-\contentsline {section}{\numberline {20.13}Hints for ``Isomorphisms'' exercises}{588}{section.20.13}
-\contentsline {section}{\numberline {20.14}Hints for ``Homomorphism'' exercises}{589}{section.20.14}
-\contentsline {section}{\numberline {20.15}Hints for ``Sigma Notation'' exercises}{589}{section.20.15}
-\contentsline {section}{\numberline {20.16}Hints for ``Polynomial Rings'' exercises}{590}{section.20.16}
-\contentsline {chapter}{GNU Free Documentation License}{591}{chapter*.47}
-\contentsline {chapter}{Index}{600}{section*.58}
+\contentsline {chapter}{\numberline {6}Set Theory}{152}{chapter.6}
+\contentsline {section}{\numberline {6.1}Set Basics}{152}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}What's a set? (mathematically speaking, that is)}{152}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}How to specify sets}{152}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Important sets of numbers}{155}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Operations on sets}{157}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Properties of set operations}{164}{section.6.2}
+\contentsline {section}{\numberline {6.3}Do the subsets of a set form a group?}{169}{section.6.3}
+\contentsline {chapter}{\numberline {7}Functions: basic concepts}{173}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Cartesian product: a different type of set operation}{173}{section.7.1}
+\contentsline {section}{\numberline {7.2}Introduction to functions}{176}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Informal look at functions}{176}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Official definition of functions}{183}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Summary of basic function concepts}{187}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}One-to-one functions}{187}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Concept and definition}{187}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Proving that a function is one-to-one}{190}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Onto functions}{195}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Concept and definition}{195}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Proving that a function is onto}{197}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}Bijections}{201}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Concept and definition}{201}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Proving that a function is a bijection}{203}{subsection.7.5.2}
+\contentsline {section}{\numberline {7.6}Composition of functions}{206}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Concept and definition}{206}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Proofs involving function composition}{210}{subsection.7.6.2}
+\contentsline {section}{\numberline {7.7}Inverse functions}{213}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Concept and definition}{213}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Which functions have inverses?}{215}{subsection.7.7.2}
+\contentsline {chapter}{\numberline {8}Equivalence Relations and Equivalence Classes}{218}{chapter.8}
+\contentsline {section}{\numberline {8.1}Binary relations}{218}{section.8.1}
+\contentsline {section}{\numberline {8.2}Definition and basic properties of equivalence relations}{228}{section.8.2}
+\contentsline {section}{\numberline {8.3}Equivalence classes}{232}{section.8.3}
+\contentsline {section}{\numberline {8.4}Modular arithmetic redux}{235}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}The integers modulo 3}{236}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}The integers modulo $n$}{238}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Something we have swept under the rug}{239}{subsection.8.4.3}
+\contentsline {section}{\numberline {8.5}Partitions}{242}{section.8.5}
+\contentsline {chapter}{\numberline {9}Symmetries of Plane Figures}{247}{chapter.9}
+\contentsline {section}{\numberline {9.1}Definition and examples}{247}{section.9.1}
+\contentsline {section}{\numberline {9.2}Composition of symmetries}{252}{section.9.2}
+\contentsline {section}{\numberline {9.3}Do the symmetries of an object form a group?}{256}{section.9.3}
+\contentsline {section}{\numberline {9.4}The dihedral groups}{261}{section.9.4}
+\contentsline {section}{\numberline {9.5}For further investigation}{271}{section.9.5}
+\contentsline {section}{\numberline {9.6}An unexplained miracle}{271}{section.9.6}
+\contentsline {chapter}{\numberline {10}Permutations}{274}{chapter.10}
+\contentsline {section}{\numberline {10.1}Introduction to permutations}{275}{section.10.1}
+\contentsline {section}{\numberline {10.2}Permutation groups and other generalizations}{276}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}The symmetric group of $n$ letters}{277}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Isomorphic groups}{279}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Subgroups and permutation groups}{280}{subsection.10.2.3}
+\contentsline {section}{\numberline {10.3}Cycle notation}{282}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Tableaus and cycles}{282}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Composition (a.k.a. product) of cycles}{286}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Product of disjoint cycles}{289}{subsection.10.3.3}
+\contentsline {subsection}{\numberline {10.3.4}Products of permutations using cycle notation}{293}{subsection.10.3.4}
+\contentsline {subsection}{\numberline {10.3.5}Cycle structure of permutations}{295}{subsection.10.3.5}
+\contentsline {section}{\numberline {10.4}Algebraic properties of cycles}{298}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Powers of cycles: definition of order}{298}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Powers and orders of permutations in general}{302}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Transpositions and inverses}{306}{subsection.10.4.3}
+\contentsline {section}{\numberline {10.5}``Switchyard" and generators of the permutation group}{309}{section.10.5}
+\contentsline {section}{\numberline {10.6}Other groups of permutations}{315}{section.10.6}
+\contentsline {subsection}{\numberline {10.6.1}Even and odd permutations}{315}{subsection.10.6.1}
+\contentsline {subsection}{\numberline {10.6.2}The alternating group}{319}{subsection.10.6.2}
+\contentsline {section}{\numberline {10.7}Additional exercises}{322}{section.10.7}
+\contentsline {chapter}{\numberline {11}Abstract Groups: Definitions and Basic Properties}{324}{chapter.11}
+\contentsline {section}{\numberline {11.1}Formal definition of a group}{325}{section.11.1}
+\contentsline {section}{\numberline {11.2}Examples}{327}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}The group of units of ${\mathbb Z}_n$ }{333}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Groups of matrices}{335}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}Basic properties of groups}{336}{section.11.3}
+\contentsline {section}{\numberline {11.4}Subgroups}{346}{section.11.4}
+\contentsline {section}{\numberline {11.5}Cyclic groups}{351}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Cyclic groups}{351}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Cyclic subgroups}{354}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Subgroups of cyclic groups}{358}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Additional group and subgroup exercises}{359}{section.11.6}
+\contentsline {chapter}{\numberline {12}Cosets and Factor Groups}{363}{chapter.12}
+\contentsline {section}{\numberline {12.1}Definition of cosets}{364}{section.12.1}
+\contentsline {section}{\numberline {12.2}Cosets and partitions of groups}{368}{section.12.2}
+\contentsline {section}{\numberline {12.3}Lagrange's theorem, and some consequences}{372}{section.12.3}
+\contentsline {subsection}{\numberline {12.3.1}Lagrange's theorem}{372}{subsection.12.3.1}
+\contentsline {subsection}{\numberline {12.3.2}Orders of elements, Euler's theorem, Fermat's little theorem, and prime order}{374}{subsection.12.3.2}
+\contentsline {section}{\numberline {12.4}Factor groups and normal subgroups}{377}{section.12.4}
+\contentsline {subsection}{\numberline {12.4.1}Normal subgroups}{377}{subsection.12.4.1}
+\contentsline {subsection}{\numberline {12.4.2}Factor groups}{379}{subsection.12.4.2}
+\contentsline {section}{\numberline {12.5}The simplicity of the alternating group}{383}{section.12.5}
+\contentsline {chapter}{\numberline {13}Group Actions}{390}{chapter.13}
+\contentsline {section}{\numberline {13.1}Basic definitions}{390}{section.13.1}
+\contentsline {section}{\numberline {13.2}Group actions on regular polyhedra}{392}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}G-equivalence and orbits}{392}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}Stabilizers, stabilizer subgroups, and fixed point sets}{395}{subsection.13.2.2}
+\contentsline {subsection}{\numberline {13.2.3}Counting formula for the order of polyhedral rotational symmetry groups}{397}{subsection.13.2.3}
+\contentsline {subsection}{\numberline {13.2.4}Representing $G$ in terms of stabilizer subgroups}{399}{subsection.13.2.4}
+\contentsline {section}{\numberline {13.3}Examples of other regular polyhedral rotation groups}{401}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}The tetrahedron}{401}{subsection.13.3.1}
+\contentsline {subsection}{\numberline {13.3.2}The octahedron}{404}{subsection.13.3.2}
+\contentsline {subsection}{\numberline {13.3.3}The dodecahedron}{407}{subsection.13.3.3}
+\contentsline {subsection}{\numberline {13.3.4}Soccer ball}{410}{subsection.13.3.4}
+\contentsline {section}{\numberline {13.4}Euler's formula for regular polyhedra}{411}{section.13.4}
+\contentsline {section}{\numberline {13.5}Closing comments on polyhedral symmetry groups}{413}{section.13.5}
+\contentsline {section}{\numberline {13.6}Group actions on subgroups and cosets}{413}{section.13.6}
+\contentsline {section}{\numberline {13.7}Conjugation}{419}{section.13.7}
+\contentsline {chapter}{\numberline {14}Algebraic Coding}{430}{chapter.14}
+\contentsline {section}{\numberline {14.1}Error-Detecting and Correcting Codes}{430}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Maximum-Likelihood Decoding}{433}{subsection.14.1.1}
+\contentsline {subsection}{\numberline {14.1.2}Block Codes}{436}{subsection.14.1.2}
+\contentsline {section}{\numberline {14.2}Group codes and linear codes}{442}{section.14.2}
+\contentsline {section}{\numberline {14.3}Linear Block Codes}{444}{section.14.3}
+\contentsline {section}{\numberline {14.4}Code words and encoding in block linear codes}{448}{section.14.4}
+\contentsline {subsection}{\numberline {14.4.1}Canonical Parity-check matrices}{448}{subsection.14.4.1}
+\contentsline {subsection}{\numberline {14.4.2}Standard Generator Matrices}{450}{subsection.14.4.2}
+\contentsline {subsection}{\numberline {14.4.3}Error detection and correction}{454}{subsection.14.4.3}
+\contentsline {section}{\numberline {14.5}Efficient Decoding}{457}{section.14.5}
+\contentsline {subsection}{\numberline {14.5.1}Decoding using syndromes}{457}{subsection.14.5.1}
+\contentsline {subsection}{\numberline {14.5.2}Coset Decoding}{459}{subsection.14.5.2}
+\contentsline {section}{\numberline {14.6}Additional algebraic coding exercises}{462}{section.14.6}
+\contentsline {section}{\numberline {14.7}References and Suggested Readings}{464}{section.14.7}
+\contentsline {chapter}{\numberline {15}Isomorphisms of Groups}{466}{chapter.15}
+\contentsline {section}{\numberline {15.1}Preliminary examples}{466}{section.15.1}
+\contentsline {section}{\numberline {15.2}Formal definition and basic properties of isomorphisms}{470}{section.15.2}
+\contentsline {section}{\numberline {15.3}More Examples}{472}{section.15.3}
+\contentsline {section}{\numberline {15.4}More properties of isomorphisms}{480}{section.15.4}
+\contentsline {section}{\numberline {15.5}Classification up to isomorphism}{482}{section.15.5}
+\contentsline {subsection}{\numberline {15.5.1}Classifying cyclic groups}{482}{subsection.15.5.1}
+\contentsline {subsection}{\numberline {15.5.2}Characterizing all finite groups: Cayley's theorem}{484}{subsection.15.5.2}
+\contentsline {section}{\numberline {15.6}Direct Products}{487}{section.15.6}
+\contentsline {subsection}{\numberline {15.6.1}External Direct Products}{487}{subsection.15.6.1}
+\contentsline {subsection}{\numberline {15.6.2}Classifying abelian groups by factorization}{490}{subsection.15.6.2}
+\contentsline {subsection}{\numberline {15.6.3}Internal Direct Products}{493}{subsection.15.6.3}
+\contentsline {chapter}{\numberline {16}Homomorphisms of Groups}{498}{chapter.16}
+\contentsline {section}{\numberline {16.1}Preliminary examples}{498}{section.16.1}
+\contentsline {section}{\numberline {16.2}Definition and several more examples}{504}{section.16.2}
+\contentsline {section}{\numberline {16.3}Proofs of homomorphism properties}{509}{section.16.3}
+\contentsline {section}{\numberline {16.4}The First Isomorphism Theorem}{512}{section.16.4}
+\contentsline {chapter}{\numberline {17}Sigma Notation}{515}{chapter.17}
+\contentsline {section}{\numberline {17.1}Lots of examples}{515}{section.17.1}
+\contentsline {section}{\numberline {17.2}Sigma notation properties}{517}{section.17.2}
+\contentsline {section}{\numberline {17.3}Nested Sigmas}{519}{section.17.3}
+\contentsline {section}{\numberline {17.4}Common Sums}{521}{section.17.4}
+\contentsline {section}{\numberline {17.5}Sigma notation in linear algebra}{524}{section.17.5}
+\contentsline {subsection}{\numberline {17.5.1}Applications to matrices}{524}{subsection.17.5.1}
+\contentsline {subsection}{\numberline {17.5.2}Levi-Civita symbols}{530}{subsection.17.5.2}
+\contentsline {section}{\numberline {17.6}Summation by parts}{541}{section.17.6}
+\contentsline {chapter}{\numberline {18}Polynomials}{544}{chapter.18}
+\contentsline {section}{\numberline {18.1}Polynomials of various stripes}{544}{section.18.1}
+\contentsline {section}{\numberline {18.2}Polynomial rings}{547}{section.18.2}
+\contentsline {section}{\numberline {18.3}The Division Algorithm for Polynomials}{557}{section.18.3}
+\contentsline {section}{\numberline {18.4}Polynomial roots}{559}{section.18.4}
+\contentsline {section}{\numberline {18.5}Proof that $U(p)$ is cyclic}{562}{section.18.5}
+\contentsline {chapter}{\numberline {19}Appendix: Induction proofs--patterns and examples}{564}{chapter.19}
+\contentsline {section}{\numberline {19.1} Basic examples of induction proofs}{564}{section.19.1}
+\contentsline {section}{\numberline {19.2}Advice on writing up induction proofs}{565}{section.19.2}
+\contentsline {section}{\numberline {19.3}Induction proof patterns \& practice problems}{566}{section.19.3}
+\contentsline {section}{\numberline {19.4}Strong Induction, with applications}{571}{section.19.4}
+\contentsline {section}{\numberline {19.5}More advice on induction and strong induction proofs}{573}{section.19.5}
+\contentsline {section}{\numberline {19.6}Common mistakes}{574}{section.19.6}
+\contentsline {section}{\numberline {19.7}Strong induction practice problems}{575}{section.19.7}
+\contentsline {section}{\numberline {19.8}Non-formula induction proofs.}{577}{section.19.8}
+\contentsline {section}{\numberline {19.9}Practice problems for non-formula induction}{578}{section.19.9}
+\contentsline {section}{\numberline {19.10}\nobreakspace {}Fallacies and pitfalls }{578}{section.19.10}
+\contentsline {chapter}{\numberline {20}Hints}{582}{chapter.20}
+\contentsline {section}{\numberline {20.1}Hints for ``Complex Numbers'' exercises}{582}{section.20.1}
+\contentsline {section}{\numberline {20.2}Hints for ``Modular Arithmetic'' exercises}{583}{section.20.2}
+\contentsline {section}{\numberline {20.3}Hints for ``Introducction to Cryptography'' exercises}{584}{section.20.3}
+\contentsline {section}{\numberline {20.4}Hints for ``Set Theory'' exercises}{585}{section.20.4}
+\contentsline {section}{\numberline {20.5}Hints for ``Functions: basic concepts'' exercises}{585}{section.20.5}
+\contentsline {section}{\numberline {20.6}Hints for ``Equivalence Relations and Equivalence Classes'' exercises}{585}{section.20.6}
+\contentsline {section}{\numberline {20.7}Hints for ``Symmetries of Plane Figures'' exercises}{586}{section.20.7}
+\contentsline {section}{\numberline {20.8}Hints for ``Permutations'' exercises}{586}{section.20.8}
+\contentsline {section}{\numberline {20.9}Hints for ``Abstract Groups: Definitions and Basic Properties'' exercises}{587}{section.20.9}
+\contentsline {section}{\numberline {20.10}Hints for ``Cosets'' exercises}{588}{section.20.10}
+\contentsline {section}{\numberline {20.11}Hints for ``Group Actions'' exercises}{588}{section.20.11}
+\contentsline {section}{\numberline {20.12}Hints for ``Algebraic Coding'' exercises}{589}{section.20.12}
+\contentsline {section}{\numberline {20.13}Hints for ``Isomorphisms'' exercises}{589}{section.20.13}
+\contentsline {section}{\numberline {20.14}Hints for ``Homomorphism'' exercises}{590}{section.20.14}
+\contentsline {section}{\numberline {20.15}Hints for ``Sigma Notation'' exercises}{590}{section.20.15}
+\contentsline {section}{\numberline {20.16}Hints for ``Polynomial Rings'' exercises}{591}{section.20.16}
+\contentsline {chapter}{GNU Free Documentation License}{593}{chapter*.47}
+\contentsline {chapter}{Index}{602}{section*.58}
