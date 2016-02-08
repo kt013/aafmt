@@ -1225,14 +1225,8 @@ x^{3} & \mbox{if $|x| > 1$} \\
 x^{1/3} & \mbox{if $|x| \le 1$}
  . \end{cases} $$
 Prove or disprove:
-\begin{multicols}{2}
- \begin{enumerate}[(a)]
- \item \label{OntoCasesExer-gNotOnto}
- $h$ is onto;
- \item \label{OntoCasesExer-g11} 
- $h$ is one-to-one.
-\end{enumerate}
-\end{multicols}
+
+(a) \qquad  $h$ is onto; \qquad \qquad (b)  $h$ is one-to-one.
 \end{exercise}
 
 
@@ -1692,28 +1686,17 @@ To calculate the value of the function $g \compose f$ at the point~$a$, do \emph
 Fill in the blanks of the following proof to show that function composition is associative.\index{Composition!Associative property}
 
 \begin{proof}
-Suppose $f: X \to Y$, $g: Y \to W$, and $h: W \to Z$.  Now suppose $x \in X$, $y \in Y$, $w \in W$, and $z \in Z$ such that 
-\begin{itemize}
-\item
-$f(x) = y$;
-\item
-$g(y) = w$;
-\item 
-$h(w) = z$.
-\end{itemize}
-
-\noindent
+Suppose $f: X \to Y$, $g: Y \to W$, and $h: W \to Z$. 
 Then 
 \[
-(h \compose (g \compose f))(x) = h \compose (g(\_\_\_\_\_\_)) = h(g(\_\_\_\_\_\_)) = h(g(\_\_\_\_)) = h(\_\_\_\_) = \_\_\_\_ \]
+(h \compose (g \compose f))(x) = h((g \compose f)(x)) =\underline{~<1>~},\]
 
 \noindent
-andr
-\[
-((h \compose g) \compose f)(x) = (h \compose g)(\_\_\_\_\_\_) = h(g(\_\_\_\_\_\_)) = h(g(\_\_\_\_)) = h(\_\_\_\_) = \_\_\_\_ \]
+and
+\[ ((h \compose g) \compose f)(x) = (h \compose g)(\underline{~<2>~}) =  \underline{~<3>~}. \]
 
 \noindent
-Hence $(h \compose (g \compose f))(x) = ((h \compose g) \compose f)(x)$; in other words function composition is associative.
+Since the two right-hand sides are equal, it follows that $(h \compose (g \compose f))(x) = ((h \compose g) \compose f)(x)$; in other words function composition is associative.
 \end{proof}
 \end{exercise}
 
@@ -1968,7 +1951,7 @@ Prove part (b) of Example~\ref{example:functions:xgyInverseExer}.
 \end{exercise}
  \end{example}
 
-Finally, we can give the definition of an inverse function:\index{Function!inverse functions}\index{Inverse!of a function}\index{Inverse function!definition of}
+Finally, we can give the definition of an inverse function:
 
  \begin{defn}\label{def:invfna}
  Suppose 
@@ -1977,7 +1960,7 @@ Finally, we can give the definition of an inverse function:\index{Function!inver
  and
  \item $g \colon Y \to X$,
 \end{itemize}
-We say that $g$ is an \term{inverse} of~$f$ if and only if:
+We say that $g$ is an \term{inverse function }\index{Inverse!function}\index{Function!inverse of} for the function~$f$ if and only if:
  \begin{enumerate} \renewcommand{\theenumi}{\alph{enumi}}
  \item $f \bigl( g(y) \bigr) = y$ for all $y \in Y$,
  and

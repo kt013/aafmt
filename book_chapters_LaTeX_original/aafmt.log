@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.26)  3 FEB 2016 23:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.26)  7 FEB 2016 23:28
 entering extended mode
 **aafmt.tex
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\aafmt.tex
@@ -1263,12 +1263,6 @@ LaTeX Warning: Label `exercise:functions:' multiply defined.
 
 
 LaTeX Warning: Label `OntoCasesExer2' multiply defined.
-
-
-LaTeX Warning: Label `OntoCasesExer-gNotOnto' multiply defined.
-
-
-LaTeX Warning: Label `OntoCasesExer-g11' multiply defined.
 
 
 LaTeX Warning: Label `exercise:functions:' multiply defined.
@@ -2776,91 +2770,99 @@ m/n/10.95 3\OML/cmm/m/it/10.95 ; \OT1/cmss/m/n/10.95 a\OT1/cmr/m/n/10.95 )\OMS/
 cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
-[196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207]
-<images/arrowcompose.pdf, id=3852, 249.93375pt x 219.82124pt>
+[196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206]
+<images/arrowcompose.pdf, id=3843, 249.93375pt x 219.82124pt>
 File: images/arrowcompose.pdf Graphic file (type pdf)
 
 <use images/arrowcompose.pdf>
-Package pdftex.def Info: images/arrowcompose.pdf used on input line 1729.
+Package pdftex.def Info: images/arrowcompose.pdf used on input line 1712.
 (pdftex.def)             Requested size: 137.46397pt x 120.90204pt.
- [208 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/ar
-rowcompose.pdf>] [209] [210] [211] [212] [213]
-[214] [215] [216]) [217]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[207] [208 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
+es/arrowcompose.pdf>] [209] [210] [211] [212] [213] [214] [215]) [216]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\equivalencerela
 tions.tex
 Chapter 8.
-[218
+[217
 
 
 
-] [219]
+]
+Overfull \hbox (36.781pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 218 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
+D EQUIVALENCE CLASSES
+ []
+
+[218]
 Overfull \hbox (10.60522pt too wide) in paragraph at lines 87--89
 \OT1/cmr/bx/n/10.95 Example 6. \OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 A \O
 T1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f[]g$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m
 /it/10.95 B \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f[]g$\OT1/cmr/m/n/10.95 .
  []
 
+[219]
+
+pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
+ers_LaTeX_original/images/x2+y.pdf): PDF inclusion: found PDF version <1.6>, bu
+t at most version <1.5> allowed
+<images/x2+y.pdf, id=4015, 624.08156pt x 450.18187pt>
+File: images/x2+y.pdf Graphic file (type pdf)
+ <use images/x2+y.pdf>
+Package pdftex.def Info: images/x2+y.pdf used on input line 137.
+(pdftex.def)             Requested size: 249.62819pt x 180.06955pt.
 
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 220 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[220]
-
-pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
-ers_LaTeX_original/images/x2+y.pdf): PDF inclusion: found PDF version <1.6>, bu
-t at most version <1.5> allowed
-<images/x2+y.pdf, id=4021, 624.08156pt x 450.18187pt>
-File: images/x2+y.pdf Graphic file (type pdf)
- <use images/x2+y.pdf>
-Package pdftex.def Info: images/x2+y.pdf used on input line 137.
-(pdftex.def)             Requested size: 249.62819pt x 180.06955pt.
-
-[221]
+[220] [221 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
+es/x2+y.pdf>]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 222 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[222 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/x2+
-y.pdf>] [223]
+[222] [223]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 224 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[224] [225]
+[224]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
 ers_LaTeX_original/images/GraphRel.pdf): PDF inclusion: found PDF version <1.6>
 , but at most version <1.5> allowed
-<images/GraphRel.pdf, id=4087, 700.86844pt x 519.44063pt>
+<images/GraphRel.pdf, id=4081, 700.86844pt x 519.44063pt>
 File: images/GraphRel.pdf Graphic file (type pdf)
 
 <use images/GraphRel.pdf>
 Package pdftex.def Info: images/GraphRel.pdf used on input line 300.
 (pdftex.def)             Requested size: 175.21667pt x 129.85983pt.
-
+ [225 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Gr
+aphRel.pdf>]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 226 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[226 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Gra
-phRel.pdf>] [227]
+[226]
+Overfull \hbox (51.07443pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/sl/10.95 8.2   DEFINITION AND BASIC PROPERTIES OF EQUIVALENCE RELA
+TIONS \OT1/cmr/m/n/10.95 227
+ []
+
+[227]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 228 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
 [228]
-Overfull \hbox (51.07443pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 8.2   DEFINITION AND BASIC PROPERTIES OF EQUIVALENCE RELA
-TIONS \OT1/cmr/m/n/10.95 229
- []
-
-[229]
 Overfull \hbox (12.31146pt too wide) detected at line 523
 \OML/cmm/m/it/10.95 A \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 B[]\OMS/cmsy/m/
 n/10.95 j\OML/cmm/m/it/10.95 A\OMS/cmsy/m/n/10.95 j \OT1/cmr/m/n/10.95 = \OMS/c
@@ -2869,35 +2871,35 @@ A[]B[]
  []
 
 
+Overfull \hbox (51.07443pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/sl/10.95 8.2   DEFINITION AND BASIC PROPERTIES OF EQUIVALENCE RELA
+TIONS \OT1/cmr/m/n/10.95 229
+ []
+
+[229]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 230 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
 [230]
-Overfull \hbox (51.07443pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 8.2   DEFINITION AND BASIC PROPERTIES OF EQUIVALENCE RELA
-TIONS \OT1/cmr/m/n/10.95 231
- []
-
-[231]
 Overfull \hbox (27.5081pt too wide) in paragraph at lines 584--584
 [] 
  []
 
-
+[231]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 232 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[232] [233]
+[232]
 Overfull \hbox (13.91254pt too wide) in paragraph at lines 676--678
 []\OT1/cmr/m/n/10.95 Since the equiv-a-lence classes are not dis-joint, their i
 n-ter-sec-tion is nonempty:
  []
 
-
+[233]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 234 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
@@ -2909,7 +2911,7 @@ Overfull \hbox (36.781pt too wide) has occurred while \output is active
 D EQUIVALENCE CLASSES
  []
 
-[236] [237]
+[236]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 814.
@@ -2918,16 +2920,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 814.
 
-
+[237]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 238 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[238] [239]
+[238]
 Overfull \hbox (7.62993pt too wide) in paragraph at lines 890--892
 []\OT1/cmr/m/n/10.95 From the def-i-ni-tion of equiv-a-lence class, it fol-lows
  that $\OML/cmm/m/it/10.95 a[] \OMS/cmsy/m/n/10.95  []$
+ []
+
+[239]
+Overfull \hbox (3.85413pt too wide) in paragraph at lines 920--921
+[]\OT1/cmr/m/n/10.95 Show that ab-so-lute value does \OT1/cmr/m/it/10.95 not \O
+T1/cmr/m/n/10.95 pro-vide a well-defined func-tion from $\U/msb/m/n/10.95 Z[]$
  []
 
 
@@ -2937,63 +2945,51 @@ D EQUIVALENCE CLASSES
  []
 
 [240]
-Overfull \hbox (3.85413pt too wide) in paragraph at lines 920--921
-[]\OT1/cmr/m/n/10.95 Show that ab-so-lute value does \OT1/cmr/m/it/10.95 not \O
-T1/cmr/m/n/10.95 pro-vide a well-defined func-tion from $\U/msb/m/n/10.95 Z[]$
- []
-
-[241]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
 ers_LaTeX_original/images/partition.pdf): PDF inclusion: found PDF version <1.6
 >, but at most version <1.5> allowed
-<images/partition.pdf, id=4315, 777.65532pt x 476.53032pt>
+<images/partition.pdf, id=4308, 777.65532pt x 476.53032pt>
 File: images/partition.pdf Graphic file (type pdf)
 
 <use images/partition.pdf>
 Package pdftex.def Info: images/partition.pdf used on input line 962.
 (pdftex.def)             Requested size: 272.18344pt x 166.7881pt.
-
+ [241 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pa
+rtition.pdf>]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 242 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[242 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/par
-tition.pdf>] [243]
+[242] [243]
 Overfull \hbox (36.781pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 244 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
 D EQUIVALENCE CLASSES
  []
 
-[244] [245])
-Overfull \hbox (36.781pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 246 \OT1/cmr/m/sl/10.95 CHAPTER 8   EQUIVALENCE RELATIONS AN
-D EQUIVALENCE CLASSES
- []
-
-[246]
+[244]) [245]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\symmetries.tex
 Chapter 9.
-[247
+[246
 
 
 
-] <images/mercedes.jpg, id=4383, 224.84pt x 224.84pt>
+] <images/mercedes.jpg, id=4376, 224.84pt x 224.84pt>
 File: images/mercedes.jpg Graphic file (type jpg)
 
 <use images/mercedes.jpg>
 Package pdftex.def Info: images/mercedes.jpg used on input line 46.
 (pdftex.def)             Requested size: 78.69518pt x 78.69518pt.
- [248 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/me
+ [247 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/me
 rcedes.jpg>]
-<images/hexABCDEF.png, id=4395, 722.7pt x 542.025pt>
+<images/hexABCDEF.png, id=4389, 722.7pt x 542.025pt>
 File: images/hexABCDEF.png Graphic file (type png)
 
 <use images/hexABCDEF.png>
 Package pdftex.def Info: images/hexABCDEF.png used on input line 78.
 (pdftex.def)             Requested size: 144.53743pt x 108.40308pt.
- [249] [250 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ [248] [249 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
 ges/hexABCDEF.png>]
 Overfull \hbox (3.96266pt too wide) in paragraph at lines 121--123
 \OT1/cmr/bx/n/10.95 Exercise 8.[] \OT1/cmr/m/n/10.95 Cre-ate a bi-jec-tion from
@@ -3001,46 +2997,46 @@ Overfull \hbox (3.96266pt too wide) in paragraph at lines 121--123
 g ! f\OML/cmm/m/it/10.95 A; B; C; D; E; F\OMS/cmsy/m/n/10.95 g$
  []
 
-[251] [252] [253]
-<images/ChangingRoom.png, id=4448, 477.28313pt x 176.15813pt>
+[250] [251] [252]
+<images/ChangingRoom.png, id=4441, 477.28313pt x 176.15813pt>
 File: images/ChangingRoom.png Graphic file (type png)
 
 <use images/ChangingRoom.png>
 Package pdftex.def Info: images/ChangingRoom.png used on input line 268.
 (pdftex.def)             Requested size: 286.37207pt x 105.69568pt.
- [254 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Ch
-angingRoom.png>] [255] [256] [257] [258] [259]
-[260] <images/logos.png, id=4546, 575.14874pt x 336.25626pt>
+ [253 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Ch
+angingRoom.png>] [254] [255] [256] [257] [258]
+[259] <images/logos.png, id=4540, 575.14874pt x 336.25626pt>
 File: images/logos.png Graphic file (type png)
 
 <use images/logos.png>
 Package pdftex.def Info: images/logos.png used on input line 616.
 (pdftex.def)             Requested size: 201.30507pt x 117.69145pt.
- [261] [262 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
-ges/logos.png>] [263] [264] [265] [266] [267] [268]
-[269] [270] [271]
+ [260] [261 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ges/logos.png>] [262] [263] [264] [265] [266] [267]
+[268] [269] [270]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [272]
+ [271]
 Overfull \hbox (54.13329pt too wide) in paragraph at lines 1088--1088
 [][][]\OT1/cmr/m/n/9 The pa-per can be found at: http://www.dartmouth.edu/$\OMS
 /cmsy/m/n/9 $\OT1/cmr/m/n/9 matc/MathDrama/reading/Wigner.html| 
  []
 
-) [273]
+) [272]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\permute.tex
 Chapter 10.
-[274
+[273
 
 
 
-] [275]
+] [274]
 Overfull \hbox (3.37958pt too wide) in paragraph at lines 137--137
 []\OT1/cmr/bx/n/14.4 Permutation groups and other gen-er-al-iza-tions 
  []
 
-[276]
+[275]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 163.
@@ -3056,7 +3052,7 @@ t/10.95 A; B; C$ \OT1/cmr/m/n/10.95 or $1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
 95 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 3$ or $[]$
  []
 
-[277] [278] [279] [280]
+[276] [277] [278] [279]
 Overfull \hbox (2.07173pt too wide) in paragraph at lines 312--314
 []\OT1/cmr/m/n/10.95 Write the Cay-ley ta-ble for $\OML/cmm/m/it/10.95 G$ \OT1/
 cmr/m/n/10.95 (La-bel your rows and columns as: $[]\OML/cmm/m/it/10.95 ; ; ; 
@@ -3070,13 +3066,13 @@ cmr/m/n/10.95 (La-bel your rows and columns as: $[]\OML/cmm/m/it/10.95 ; ; ;
 $\OT1/cmr/m/n/10.95 ). 
  []
 
-[281] <images/perm_cycle.png, id=4791, 722.7pt x 542.025pt>
+[280] <images/perm_cycle.png, id=4785, 722.7pt x 542.025pt>
 File: images/perm_cycle.png Graphic file (type png)
 
 <use images/perm_cycle.png>
 Package pdftex.def Info: images/perm_cycle.png used on input line 383.
 (pdftex.def)             Requested size: 90.3375pt x 67.75294pt.
- [282] [283 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ [281] [282 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
 ges/perm_cycle.png>]
 Overfull \hbox (7.79865pt too wide) in paragraph at lines 464--467
 \OT1/cmr/m/n/10.95 For in-stance, the per-mu-ta-tion $(243)$ in Ex-am-ple [][]2
@@ -3086,66 +3082,66 @@ Overfull \hbox (7.79865pt too wide) in paragraph at lines 464--467
 m/it/10.95 ; \OT1/cmr/m/n/10.95 6\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
-[284] [285] <images/cycle_composition.png, id=4841, 597.73312pt x 328.97906pt>
+[283] [284] <images/cycle_composition.png, id=4835, 597.73312pt x 328.97906pt>
 File: images/cycle_composition.png Graphic file (type png)
 
 <use images/cycle_composition.png>
 Package pdftex.def Info: images/cycle_composition.png used on input line 512.
 (pdftex.def)             Requested size: 144.54pt x 79.54892pt.
 
-<images/cycle_composition_2.png, id=4844, 572.1375pt x 244.66406pt>
+<images/cycle_composition_2.png, id=4838, 572.1375pt x 244.66406pt>
 File: images/cycle_composition_2.png Graphic file (type png)
 
 <use images/cycle_composition_2.png>
 Package pdftex.def Info: images/cycle_composition_2.png used on input line 524.
 
 (pdftex.def)             Requested size: 144.54pt x 61.80798pt.
- [286 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
+ [285 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
 cle_composition.png>]
-<images/cycle_composition_finish.png, id=4859, 379.4175pt x 591.71063pt>
+<images/cycle_composition_finish.png, id=4853, 379.4175pt x 591.71063pt>
 File: images/cycle_composition_finish.png Graphic file (type png)
 
 <use images/cycle_composition_finish.png>
 Package pdftex.def Info: images/cycle_composition_finish.png used on input line
  535.
 (pdftex.def)             Requested size: 144.54pt x 225.41216pt.
- [287 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
+ [286 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
 cle_composition_2.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_o
-riginal/images/cycle_composition_finish.png>] [288] [289] <images/cycle_rep.png
-, id=4894, 572.89032pt x 261.97874pt>
+riginal/images/cycle_composition_finish.png>] [287] [288] <images/cycle_rep.png
+, id=4887, 572.89032pt x 261.97874pt>
 File: images/cycle_rep.png Graphic file (type png)
 
 <use images/cycle_rep.png>
 Package pdftex.def Info: images/cycle_rep.png used on input line 677.
 (pdftex.def)             Requested size: 162.6075pt x 74.3609pt.
- [290 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
-cle_rep.png>] [291] [292] [293] [294]
+ [289 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
+cle_rep.png>] [290] [291] [292] [293]
 Overfull \hbox (5.90022pt too wide) in paragraph at lines 958--960
 []$\OT1/cmr/m/n/10.95 (1423)(34)(56)(1324)$ 
  []
 
-[295]
+[294]
 Overfull \hbox (11.53181pt too wide) in paragraph at lines 1047--1052
 []\OT1/cmr/m/n/10.95 Continuing in the same man-ner, we can de-fine fi-nite dis
 -joint sets $\OML/cmm/m/it/10.95 X[]; X[]; []$\OT1/cmr/m/n/10.95 .
  []
 
-[296] <images/perm_square.png, id=4981, 266.49562pt x 120.45pt>
+[295] <images/perm_square.png, id=4975, 266.49562pt x 120.45pt>
 File: images/perm_square.png Graphic file (type png)
 
 <use images/perm_square.png>
 Package pdftex.def Info: images/perm_square.png used on input line 1129.
 (pdftex.def)             Requested size: 144.54pt x 65.33057pt.
- [297]
-<images/perm_square2.png, id=4992, 112.92188pt x 121.95563pt>
+ [296]
+<images/perm_square2.png, id=4986, 112.92188pt x 121.95563pt>
 File: images/perm_square2.png Graphic file (type png)
 
 <use images/perm_square2.png>
 Package pdftex.def Info: images/perm_square2.png used on input line 1147.
 (pdftex.def)             Requested size: 57.81621pt x 62.44217pt.
- [298 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pe
-rm_square.png>] [299 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_ori
-ginal/images/perm_square2.png>] [300] [301]
+ [297 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pe
+rm_square.png>] [298 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_ori
+ginal/images/perm_square2.png>] [299] [300]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 1346.
 
@@ -3182,14 +3178,14 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 1352.
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 1352.
 
-[302] <images/wheels1.png, id=5069, 1042.64531pt x 364.36125pt>
+[301] <images/wheels1.png, id=5063, 1042.64531pt x 364.36125pt>
 File: images/wheels1.png Graphic file (type png)
 
 <use images/wheels1.png>
 Package pdftex.def Info: images/wheels1.png used on input line 1390.
 (pdftex.def)             Requested size: 252.94499pt x 88.39363pt.
- [303 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/wh
-eels1.png>] [304]
+ [302 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/wh
+eels1.png>] [303]
 Overfull \hbox (23.73875pt too wide) in paragraph at lines 1478--1480
 \OT1/cmr/bx/n/10.95 Proposition 70.[][][] \OT1/cmr/m/n/10.95 Sup-pose $\OML/cmm
 /m/it/10.95 []; []; [] ; []$ \OT1/cmr/m/n/10.95 are $\OML/cmm/m/it/10.95 n$ 
@@ -3197,7 +3193,7 @@ Overfull \hbox (23.73875pt too wide) in paragraph at lines 1478--1480
  k[]$
  []
 
-[305] [306] [307]
+[304] [305] [306]
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 1651.
 
@@ -3224,29 +3220,29 @@ Overfull \hbox (4.9552pt too wide) in paragraph at lines 1671--1673
 ] = (1753)(1753) = (15)(37)$.
  []
 
-[308] <images/GrandviewYard.jpg, id=5166, 433.62pt x 321.24014pt>
+[307] <images/GrandviewYard.jpg, id=5160, 433.62pt x 321.24014pt>
 File: images/GrandviewYard.jpg Graphic file (type jpg)
 
 <use images/GrandviewYard.jpg>
 Package pdftex.def Info: images/GrandviewYard.jpg used on input line 1722.
 (pdftex.def)             Requested size: 289.07999pt x 214.17099pt.
 
-<images/switchyard.png, id=5170, 911.65594pt x 540.51938pt>
+<images/switchyard.png, id=5164, 911.65594pt x 540.51938pt>
 File: images/switchyard.png Graphic file (type png)
 
 <use images/switchyard.png>
 Package pdftex.def Info: images/switchyard.png used on input line 1730.
 (pdftex.def)             Requested size: 325.215pt x 192.82182pt.
-
+ [308 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Gr
+andviewYard.jpg>]
 Overfull \hbox (52.2923pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 10.5   ``SWITCHYARD" AND GENERATORS OF THE PERMUTATION GR
 OUP \OT1/cmr/m/n/10.95 309
  []
 
-[309 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Gra
-ndviewYard.jpg>] [310 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_or
-iginal/images/switchyard.png>]
-<images/switchyardHomeposition.jpg, id=5191, 750.805pt x 612.2875pt>
+[309 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/swi
+tchyard.png>]
+<images/switchyardHomeposition.jpg, id=5185, 750.805pt x 612.2875pt>
 File: images/switchyardHomeposition.jpg Graphic file (type jpg)
 
 <use images/switchyardHomeposition.jpg>
@@ -3254,59 +3250,58 @@ Package pdftex.def Info: images/switchyardHomeposition.jpg used on input line 1
 758.
 (pdftex.def)             Requested size: 180.67499pt x 147.33505pt.
 
-<images/switchyardCl4.jpg, id=5193, 1463.4675pt x 1243.64626pt>
+<images/switchyardCl4.jpg, id=5187, 1463.4675pt x 1243.64626pt>
 File: images/switchyardCl4.jpg Graphic file (type jpg)
 
 <use images/switchyardCl4.jpg>
 Package pdftex.def Info: images/switchyardCl4.jpg used on input line 1765.
 (pdftex.def)             Requested size: 180.67499pt x 153.51979pt.
 
-<images/switchyard_t.jpg, id=5195, 1511.6475pt x 1270.7475pt>
+<images/switchyard_t.jpg, id=5189, 1511.6475pt x 1270.7475pt>
 File: images/switchyard_t.jpg Graphic file (type jpg)
 
 <use images/switchyard_t.jpg>
 Package pdftex.def Info: images/switchyard_t.jpg used on input line 1773.
 (pdftex.def)             Requested size: 180.67499pt x 151.88202pt.
 
-<images/switchyardCCL4.jpg, id=5197, 588.69937pt x 472.01344pt>
+<images/switchyardCCL4.jpg, id=5191, 588.69937pt x 472.01344pt>
 File: images/switchyardCCL4.jpg Graphic file (type jpg)
 
 <use images/switchyardCCL4.jpg>
 Package pdftex.def Info: images/switchyardCCL4.jpg used on input line 1781.
 (pdftex.def)             Requested size: 180.67499pt x 144.86058pt.
-
+ [310]
 Overfull \hbox (52.2923pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 10.5   ``SWITCHYARD" AND GENERATORS OF THE PERMUTATION GR
 OUP \OT1/cmr/m/n/10.95 311
  []
 
-[311] [312 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
-es/switchyardHomeposition.jpg> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters
-_LaTeX_original/images/switchyardCl4.jpg>]
+[311 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/swi
+tchyardHomeposition.jpg> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX
+_original/images/switchyardCl4.jpg>] [312 <C:/Users/thron.AMCT/Desktop/aafmt/bo
+ok_chapters_LaTeX_original/images/switchyard_t.jpg> <C:/Users/thron.AMCT/Deskto
+p/aafmt/book_chapters_LaTeX_original/images/switchyardCCL4.jpg>]
 Overfull \hbox (52.2923pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 10.5   ``SWITCHYARD" AND GENERATORS OF THE PERMUTATION GR
 OUP \OT1/cmr/m/n/10.95 313
  []
 
-[313 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/swi
-tchyard_t.jpg> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/
-images/switchyardCCL4.jpg>] [314]
-<images/pearl_necklace.png, id=5238, 378.66469pt x 365.86688pt>
+[313] <images/pearl_necklace.png, id=5232, 378.66469pt x 365.86688pt>
 File: images/pearl_necklace.png Graphic file (type png)
 
 <use images/pearl_necklace.png>
 Package pdftex.def Info: images/pearl_necklace.png used on input line 1882.
 (pdftex.def)             Requested size: 108.405pt x 104.74208pt.
- [315]
-<images/abC.png, id=5247, 792.71156pt x 253.69781pt>
+ [314]
+<images/abC.png, id=5241, 792.71156pt x 253.69781pt>
 File: images/abC.png Graphic file (type png)
  <use images/abC.png>
 Package pdftex.def Info: images/abC.png used on input line 1892.
 (pdftex.def)             Requested size: 289.07999pt x 92.5157pt.
 
-[316 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pea
+[315 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pea
 rl_necklace.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_origina
-l/images/abC.png>] <images/abC2.png, id=5256, 864.22874pt x 411.03563pt>
+l/images/abC.png>] <images/abC2.png, id=5250, 864.22874pt x 411.03563pt>
 File: images/abC2.png Graphic file (type png)
 
 <use images/abC2.png>
@@ -3352,20 +3347,26 @@ Overfull \hbox (6.67033pt too wide) in paragraph at lines 1917--1935
 [][] 
  []
 
-[317 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/abC
-2.png>] [318] [319] [320]
+[316 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/abC
+2.png>] [317] [318] [319]
 Overfull \hbox (1.34999pt too wide) in paragraph at lines 2424--2425
 [] 
  []
 
-[321] [322]) [323]
+[320] [321]) [322]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\groups.tex
 Chapter 11.
-[324
+[323
 
 
 
-] [325]
+]
+Overfull \hbox (59.51746pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 324 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
+TIONS AND BASIC PROPERTIES
+ []
+
+[324] [325]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 326 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
@@ -3377,7 +3378,7 @@ Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 TIONS AND BASIC PROPERTIES
  []
 
-[328] [329]
+[328]
 Overfull \hbox (15.5966pt too wide) in paragraph at lines 245--246
 []\OT1/cmr/m/n/10.95 Define a bi-nary op-er-a-tion $\OMS/cmsy/m/n/10.95 $ \OT1
 /cmr/m/n/10.95 on $\OML/cmm/m/it/10.95 H$ \OT1/cmr/m/n/10.95 by $(\OML/cmm/m/it
@@ -3388,19 +3389,13 @@ cmm/m/it/10.95 c; d\OT1/cmr/m/n/10.95 ) = (\OML/cmm/m/it/10.95 ac; bd\OT1/cmr/m
 y/m/n/10.95 2$
  []
 
-
+[329]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 330 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
  []
 
 [330] [331]
-Overfull \hbox (59.51746pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 332 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
-TIONS AND BASIC PROPERTIES
- []
-
-[332]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 483.
@@ -3413,7 +3408,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 483.
 
-[333]
+
+Overfull \hbox (59.51746pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 332 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
+TIONS AND BASIC PROPERTIES
+ []
+
+[332] [333]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 334 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
@@ -3432,12 +3433,6 @@ TIONS AND BASIC PROPERTIES
  []
 
 [338] [339]
-Overfull \hbox (59.51746pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 340 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
-TIONS AND BASIC PROPERTIES
- []
-
-[340]
 Overfull \hbox (19.66618pt too wide) detected at line 818
 [] [] []\OML/cmm/m/it/10.95 ax \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 b  [] [
 ] []xa \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 b  [] [] []bx \OT1/cmr/m/n/10.9
@@ -3464,7 +3459,13 @@ Overfull \hbox (26.7534pt too wide) detected at line 838
 :  
  []
 
-[341]
+
+Overfull \hbox (59.51746pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 340 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
+TIONS AND BASIC PROPERTIES
+ []
+
+[340]
 Overfull \hbox (21.51653pt too wide) detected at line 848
 [] [] []\OT1/cmr/m/n/10.95 5\OML/cmm/m/it/10.95 x \OT1/cmr/m/n/10.95 = 8  [] []
  []\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 5 = 8  [] [] []8\OML/cmm/m/it/10.95 
@@ -3480,7 +3481,7 @@ Overfull \hbox (16.87779pt too wide) detected at line 869
 A:  
  []
 
-
+[341]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 342 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
@@ -3493,12 +3494,6 @@ TIONS AND BASIC PROPERTIES
  []
 
 [344] [345]
-Overfull \hbox (59.51746pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 346 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
-TIONS AND BASIC PROPERTIES
- []
-
-[346]
 Overfull \hbox (57.51309pt too wide) in paragraph at lines 1100--1102
 \OT1/cmr/bx/n/10.95 Exercise 62.[] \OT1/cmr/m/n/10.95 Given any fixed in-te-ger
  $\OML/cmm/m/it/10.95 m$ \OT1/cmr/m/n/10.95 Prove that $\OML/cmm/m/it/10.95 m\U
@@ -3509,7 +3504,13 @@ m/n/10.95  \OML/cmm/m/it/10.95 m; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; m;
 /10.95 ,
  []
 
-[347]
+
+Overfull \hbox (59.51746pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 346 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
+TIONS AND BASIC PROPERTIES
+ []
+
+[346] [347]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 348 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
@@ -3540,32 +3541,26 @@ TIONS AND BASIC PROPERTIES
  []
 
 [356] [357]
+Overfull \hbox (1.34999pt too wide) in paragraph at lines 1798--1799
+[] 
+ []
+
+
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 358 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
  []
 
-[358]
-Overfull \hbox (1.34999pt too wide) in paragraph at lines 1798--1799
-[] 
- []
-
-[359]
+[358] [359]
 Overfull \hbox (59.51746pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 360 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
 TIONS AND BASIC PROPERTIES
  []
 
-[360] [361])
-Overfull \hbox (59.51746pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 362 \OT1/cmr/m/sl/10.95 CHAPTER 11   ABSTRACT GROUPS: DEFINI
-TIONS AND BASIC PROPERTIES
- []
-
-[362]
+[360]) [361]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\cosets.tex
 Chapter 12.
-[363
+[362
 
 
 
@@ -3599,7 +3594,7 @@ m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; \OT1
  \OT1/cmr/m/n/10.95 11 []\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 :$
  []
 
-[364] [365]
+[363] [364]
 Overfull \hbox (22.53311pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 H$ \OT1/cmr/m/n/10.95 be the sub-
 group of $\OML/cmm/m/it/10.95 S[]$ \OT1/cmr/m/n/10.95 de-fined by the per-mu-ta
@@ -3617,7 +3612,7 @@ L/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (12)\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10
 .95 .
  []
 
-[366] [367] [368] [369]
+[365] [366] [367] [368]
 Overfull \hbox (30.03065pt too wide) in paragraph at lines 355--356
 []$\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 S[] \OT1/cmr/m/n/10.95 : \OMS/cmsy/m
 /n/10.95 f\OT1/cmr/m/n/10.95 (1)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (123)\
@@ -3638,28 +3633,28 @@ cmr/m/n/10.95 (12)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (13)\OML/cmm/m/it/10
 .95 ; \OT1/cmr/m/n/10.95 (14)\OMS/cmsy/m/n/10.95 g$
  []
 
-[370] [371] [372] [373] [374] [375]
+[369] [370] [371] [372] [373] [374]
 Underfull \hbox (badness 6944) in paragraph at lines 578--580
 []$[]   []$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 p$ \OT1/cmr/m/n/10 is
  []
 
-[376] [377] [378] [379] [380] [381] [382] [383] [384]
+[375] [376] [377] [378] [379] [380] [381] [382] [383]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1149.
 
- [385] [386]
+ [384] [385]
 Overfull \hbox (1.34999pt too wide) in paragraph at lines 1317--1318
 [] 
  []
 
-[387] [388]) [389]
+[386] [387]) [388]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\actions.tex
 Chapter 13.
-[390
+[389
 
 
 
-] [391] <images/AxesOfCube.png, id=6268, 1136.245pt x 1138.2525pt>
+] [390] <images/AxesOfCube.png, id=6261, 1136.245pt x 1138.2525pt>
 File: images/AxesOfCube.png Graphic file (type png)
 
 <use images/AxesOfCube.png>
@@ -3672,9 +3667,9 @@ Overfull \hbox (2.04271pt too wide) in paragraph at lines 78--80
 y[]$\OT1/cmr/m/n/10 . 
  []
 
-[392 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Axe
-sOfCube.png>] [393] [394] [395] [396]
-<images/CubeFold.png, id=6327, 469.755pt x 360.34625pt>
+[391 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Axe
+sOfCube.png>] [392] [393] [394] [395]
+<images/CubeFold.png, id=6321, 469.755pt x 360.34625pt>
 File: images/CubeFold.png Graphic file (type png)
 
 <use images/CubeFold.png>
@@ -3686,7 +3681,7 @@ Underfull \hbox (badness 7012) in paragraph at lines 288--288
  cut and fold from
  []
 
-[397] [398 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
+[396] [397 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
 es/CubeFold.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -3696,7 +3691,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 357.
 
-[399]
+[398]
 Underfull \hbox (badness 3189) in paragraph at lines 381--381
 [][][]\OT1/cmr/m/n/9 We re-fer the reader once more to the video: [][]$\OT1/cmt
 t/m/n/9 www . youtube . com / watch ? v =$
@@ -3707,14 +3702,14 @@ Overfull \hbox (1.91718pt too wide) in paragraph at lines 383--391
 [][]  $\U/msa/m/n/10 $ 
  []
 
-[400] <images/TetrahedronC.png, id=6381, 515.9275pt x 406.51875pt>
+[399] <images/TetrahedronC.png, id=6375, 515.9275pt x 406.51875pt>
 File: images/TetrahedronC.png Graphic file (type png)
 
 <use images/TetrahedronC.png>
 Package pdftex.def Info: images/TetrahedronC.png used on input line 407.
 (pdftex.def)             Requested size: 180.67499pt x 142.35812pt.
 
-<images/TetrahedronFold.png, id=6384, 350.30875pt x 322.20375pt>
+<images/TetrahedronFold.png, id=6378, 350.30875pt x 322.20375pt>
 File: images/TetrahedronFold.png Graphic file (type png)
 
 <use images/TetrahedronFold.png>
@@ -3726,66 +3721,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 423--423
 ut and fold from
  []
 
-
+[400 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Tet
+rahedronC.png>]
 Overfull \hbox (53.812pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
 PS \OT1/cmr/m/n/10.95 401
  []
 
 [401 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Tet
-rahedronC.png>] [402 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_ori
-ginal/images/TetrahedronFold.png>]
+rahedronFold.png>]
 Overfull \hbox (12.28406pt too wide) in paragraph at lines 477--480
 \OT1/cmr/bx/n/10 Exercise 32.[] \OT1/cmr/m/n/10 Find the sta-bi-lizer sub-group
 s for each of the fol-low-ing: $\OML/cmm/m/it/10 G[]; G[]; G[]; G[]$\OT1/cmr/m/
 n/10 ,
  []
 
-
-Overfull \hbox (53.812pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
-PS \OT1/cmr/m/n/10.95 403
- []
-
-[403]
+[402]
 Overfull \hbox (1.91718pt too wide) in paragraph at lines 504--509
 [][]  $\U/msa/m/n/10 $ 
  []
 
-<images/AxesOfOctahedron.png, id=6429, 513.92pt x 406.51875pt>
+<images/AxesOfOctahedron.png, id=6422, 513.92pt x 406.51875pt>
 File: images/AxesOfOctahedron.png Graphic file (type png)
 
 <use images/AxesOfOctahedron.png>
 Package pdftex.def Info: images/AxesOfOctahedron.png used on input line 523.
 (pdftex.def)             Requested size: 180.67499pt x 142.91638pt.
 
-<images/OctahedronFold.png, id=6432, 468.75125pt x 467.7475pt>
+<images/OctahedronFold.png, id=6425, 468.75125pt x 467.7475pt>
 File: images/OctahedronFold.png Graphic file (type png)
 
 <use images/OctahedronFold.png>
 Package pdftex.def Info: images/OctahedronFold.png used on input line 542.
 (pdftex.def)             Requested size: 180.67499pt x 180.28674pt.
- [404]
+
+Overfull \hbox (53.812pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
+PS \OT1/cmr/m/n/10.95 403
+ []
+
+[403] [404 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
+es/AxesOfOctahedron.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX
+_original/images/OctahedronFold.png>]
 Overfull \hbox (53.812pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
 PS \OT1/cmr/m/n/10.95 405
  []
 
-[405 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Axe
-sOfOctahedron.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_origi
-nal/images/OctahedronFold.png>] [406]
+[405]
 Overfull \hbox (1.91716pt too wide) in paragraph at lines 612--618
 [][]  $\U/msa/m/n/10 $ 
  []
 
-<images/Dodecahedron.png, id=6481, 850.17625pt x 832.10875pt>
+<images/Dodecahedron.png, id=6475, 850.17625pt x 832.10875pt>
 File: images/Dodecahedron.png Graphic file (type png)
 
 <use images/Dodecahedron.png>
 Package pdftex.def Info: images/Dodecahedron.png used on input line 632.
 (pdftex.def)             Requested size: 180.67499pt x 176.83029pt.
 
-<images/DodecahedronFold.png, id=6484, 376.40625pt x 421.575pt>
+<images/DodecahedronFold.png, id=6478, 376.40625pt x 421.575pt>
 File: images/DodecahedronFold.png Graphic file (type png)
 
 <use images/DodecahedronFold.png>
@@ -3797,103 +3792,98 @@ Underfull \hbox (badness 1038) in paragraph at lines 643--643
 rint, cut and fold (from [][]$\OT1/cmtt/m/n/10.95 www .$
  []
 
-
+[406]
 Overfull \hbox (53.812pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
 PS \OT1/cmr/m/n/10.95 407
  []
 
-[407] [408 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/imag
-es/Dodecahedron.png>]
+[407 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Dod
+ecahedron.png>]
 Overfull \hbox (3.3367pt too wide) in paragraph at lines 708--713
 [][] 
  []
 
+[408 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Dod
+ecahedronFold.png>] <images/Soccerball.png, id=6524, 91.34125pt x 93.34875pt>
+File: images/Soccerball.png Graphic file (type png)
+
+<use images/Soccerball.png>
+Package pdftex.def Info: images/Soccerball.png used on input line 727.
+(pdftex.def)             Requested size: 144.54pt x 147.73723pt.
 
 Overfull \hbox (53.812pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 13.3   EXAMPLES OF OTHER REGULAR POLYHEDRAL ROTATION GROU
 PS \OT1/cmr/m/n/10.95 409
  []
 
-[409 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Dod
-ecahedronFold.png>] <images/Soccerball.png, id=6531, 91.34125pt x 93.34875pt>
-File: images/Soccerball.png Graphic file (type png)
-
-<use images/Soccerball.png>
-Package pdftex.def Info: images/Soccerball.png used on input line 727.
-(pdftex.def)             Requested size: 144.54pt x 147.73723pt.
- [410 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/So
-ccerball.png>] [411] [412]
-Overfull \hbox (17.31322pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 13.5   CLOSING COMMENTS ON POLYHEDRAL SYMMETRY GROUPS \OT
-1/cmr/m/n/10.95 413
- []
-
-[413] [414]
+[409 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Soc
+cerball.png>] [410] [411] [412] [413]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
- <images/UnitSquare.png, id=6593, 666.49pt x 526.96875pt>
+
+<images/UnitSquare.png, id=6587, 666.49pt x 526.96875pt>
 File: images/UnitSquare.png Graphic file (type png)
 
 <use images/UnitSquare.png>
 Package pdftex.def Info: images/UnitSquare.png used on input line 891.
 (pdftex.def)             Requested size: 216.81pt x 171.42363pt.
 
-<images/IntLat1.png, id=6595, 5336.93875pt x 2257.43375pt>
+<images/IntLat1.png, id=6589, 5336.93875pt x 2257.43375pt>
 File: images/IntLat1.png Graphic file (type png)
 
 <use images/IntLat1.png>
 Package pdftex.def Info: images/IntLat1.png used on input line 901.
 (pdftex.def)             Requested size: 289.07999pt x 122.2475pt.
 
-<images/IntLat2.png, id=6598, 5196.41376pt x 2282.5275pt>
+<images/IntLat2.png, id=6592, 5196.41376pt x 2282.5275pt>
 File: images/IntLat2.png Graphic file (type png)
 
 <use images/IntLat2.png>
 Package pdftex.def Info: images/IntLat2.png used on input line 910.
 (pdftex.def)             Requested size: 289.07999pt x 126.94995pt.
 
-<images/IntLat3.png, id=6599, 5531.66624pt x 2235.35126pt>
+<images/IntLat3.png, id=6593, 5531.66624pt x 2235.35126pt>
 File: images/IntLat3.png Graphic file (type png)
 
 <use images/IntLat3.png>
 Package pdftex.def Info: images/IntLat3.png used on input line 919.
 (pdftex.def)             Requested size: 289.07999pt x 116.78809pt.
- [415] [416 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ [414] [415 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
 ges/UnitSquare.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_orig
-inal/images/IntLat1.png>] [417 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters
+inal/images/IntLat1.png>] [416 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters
 _LaTeX_original/images/IntLat2.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_cha
 pters_LaTeX_original/images/IntLat3.png>]
-<images/Torus1.png, id=6636, 963.6pt x 542.025pt>
+<images/Torus1.png, id=6630, 963.6pt x 542.025pt>
 File: images/Torus1.png Graphic file (type png)
  <use images/Torus1.png>
 Package pdftex.def Info: images/Torus1.png used on input line 941.
 (pdftex.def)             Requested size: 216.81pt x 121.95035pt.
 
-<images/Torus2.png, id=6637, 963.6pt x 542.025pt>
+<images/Torus2.png, id=6631, 963.6pt x 542.025pt>
 File: images/Torus2.png Graphic file (type png)
  <use images/Torus2.png>
 Package pdftex.def Info: images/Torus2.png used on input line 948.
 (pdftex.def)             Requested size: 216.81pt x 121.95035pt.
 
-[418 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Tor
+[417 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Tor
 us1.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images
-/Torus2.png>] <images/Commutative1.png, id=6647, 486.81876pt x 285.065pt>
+/Torus2.png>] <images/Commutative1.png, id=6641, 486.81876pt x 285.065pt>
 File: images/Commutative1.png Graphic file (type png)
 
 <use images/Commutative1.png>
 Package pdftex.def Info: images/Commutative1.png used on input line 983.
 (pdftex.def)             Requested size: 180.67499pt x 105.79427pt.
- [419]
-<images/Commutative2.png, id=6661, 542.025pt x 288.07625pt>
+ [418]
+<images/Commutative2.png, id=6655, 542.025pt x 288.07625pt>
 File: images/Commutative2.png Graphic file (type png)
 
 <use images/Commutative2.png>
 Package pdftex.def Info: images/Commutative2.png used on input line 1004.
 (pdftex.def)             Requested size: 216.81pt x 115.22844pt.
- [420 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Co
-mmutative1.png>] [421 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_or
+ [419 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Co
+mmutative1.png>] [420 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_or
 iginal/images/Commutative2.png>]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ¬ in font cmr10!
@@ -3905,20 +3895,20 @@ Missing character: There is no Â in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ¬ in font cmr10!
- [422] [423]
-[424] [425]
+ [421] [422]
+[423] [424]
 Overfull \hbox (37.22363pt too wide) in paragraph at lines 1197--1197
 [] 
  []
 
-[426] [427] [428]) [429]
+[425] [426] [427]) [428]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\algcodes.tex
 Chapter 14.
-[430
+[429
 
 
 
-] [431] [432] [433] [434]
+] [430] [431] [432] [433]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
@@ -3928,54 +3918,54 @@ Missing character: There is no ½ in font cmr10!
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
- [435] [436] [437] [438] [439] [440] [441]
-[442] [443] [444] [445] [446]
+ [434] [435] [436] [437] [438] [439] [440]
+[441] [442] [443] [444] [445]
 Overfull \hbox (18.2402pt too wide) in paragraph at lines 1112--1117
 \OT1/cmr/m/n/10 Hence, $\OT1/cmr/bx/n/10 x \OT1/cmr/m/n/10 + \OT1/cmr/bx/n/10 y
 $ \OT1/cmr/m/n/10 is in the null space of $\OML/cmm/m/it/10 H$ \OT1/cmr/m/n/10 
 and there-fore must be a code-word. []
  []
 
-[447]
+[446]
 Overfull \hbox (6.07957pt too wide) in paragraph at lines 1172--1172
 []\OT1/cmr/bx/n/14.4 Code words and en-cod-ing in block lin-ear codes 
  []
 
-[448] [449] [450] [451] [452] [453] [454] [455] [456] [457] [458] [459]
-[460] [461] [462] [463] [464]) [465]
+[447] [448] [449] [450] [451] [452] [453] [454] [455] [456] [457] [458]
+[459] [460] [461] [462] [463]) [464]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\isomorph.tex
 Chapter 15.
-[466
+[465
 
 
 
-] <images/CommDiag.png, id=7156, 578.16pt x 289.08pt>
+] <images/CommDiag.png, id=7150, 578.16pt x 289.08pt>
 File: images/CommDiag.png Graphic file (type png)
 
 <use images/CommDiag.png>
 Package pdftex.def Info: images/CommDiag.png used on input line 43.
 (pdftex.def)             Requested size: 289.07999pt x 144.53964pt.
- [467 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Co
-mmDiag.png>] [468] [469] [470]
+ [466 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Co
+mmDiag.png>] [467] [468]
 Overfull \hbox (46.51201pt too wide) has occurred while \output is active
 []\OT1/cmr/m/sl/10.95 15.2   FORMAL DEFINITION AND BASIC PROPERTIES OF ISOMORPH
-ISMS \OT1/cmr/m/n/10.95 471
+ISMS \OT1/cmr/m/n/10.95 469
  []
 
-[471] [472] [473] [474] [475] [476]
+[469] [470] [471] [472] [473] [474] [475]
 Overfull \hbox (12.36171pt too wide) in paragraph at lines 634--635
 []\OT1/cmr/m/n/10 We con-clude that it is more dif-fi-cult to use Cay-ley ta-bl
 es to prove non-isomorphism,
  []
 
-[477] [478] [479] [480] [481] [482] [483]
+[476] [477] [478] [479] [480] [481] [482]
 Overfull \hbox (2.11163pt too wide) in paragraph at lines 1007--1009
 \OT1/cmr/m/n/10 Notice the in-ter-est-ing ``co-in-ci-dence'' that the rows of t
 he Cay-ley ta-ble ( $(0 []1 []2)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (1 []2 []0)$
 
  []
 
-[484] [485] [486] [487] [488] [489] [490]
+[483] [484] [485] [486] [487] [488] [489]
 Overfull \hbox (1.58264pt too wide) in paragraph at lines 1277--1280
 \OT1/cmr/bx/n/10 Proposition 88.[] \OT1/cmr/m/n/10 The group $\U/msb/m/n/10 Z[]
  \OMS/cmsy/m/n/10  \U/msb/m/n/10 Z[]$ \OT1/cmr/m/n/10 is iso-mor-phic to $\U/m
@@ -3983,42 +3973,42 @@ sb/m/n/10 Z[]$ \OT1/cmr/m/n/10 if and only if $[](\OML/cmm/m/it/10 m; n\OT1/cmr
 /m/n/10 ) =$
  []
 
-[491] [492] [493] [494]
+[490] [491] [492] [493]
 Overfull \hbox (1.34999pt too wide) in paragraph at lines 1571--1572
 [] 
  []
 
-[495] [496]
+[494] [495]
 Overfull \hbox (5.82516pt too wide) in paragraph at lines 1735--1737
 []\OT1/cmr/m/n/10 What are the in-ner au-to-mor-phisms of the quater-nion group
  $\OML/cmm/m/it/10 Q[]$\OT1/cmr/m/n/10 ? Is $\OML/cmm/m/it/10 Inn\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 ) =$
  []
 
-) [497]
+) [496]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\homomorph.tex
 Chapter 16.
-[498
+[497
 
 
 
-] <images/homomorph1.png, id=7580, 612.2875pt x 131.49126pt>
+] <images/homomorph1.png, id=7574, 612.2875pt x 131.49126pt>
 File: images/homomorph1.png Graphic file (type png)
 
 <use images/homomorph1.png>
 Package pdftex.def Info: images/homomorph1.png used on input line 100.
 (pdftex.def)             Requested size: 289.07999pt x 62.07977pt.
- [499] [500 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
-ges/homomorph1.png>] [501]
-<images/homomorph2.png, id=7614, 528.97626pt x 205.76875pt>
+ [498] [499 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ges/homomorph1.png>] [500]
+<images/homomorph2.png, id=7608, 528.97626pt x 205.76875pt>
 File: images/homomorph2.png Graphic file (type png)
 
 <use images/homomorph2.png>
 Package pdftex.def Info: images/homomorph2.png used on input line 233.
 (pdftex.def)             Requested size: 216.81pt x 84.33746pt.
- [502 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/ho
-momorph2.png>] [503] [504] [505] [506] [507]
-[508]
+ [501 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/ho
+momorph2.png>] [502] [503] [504] [505] [506]
+[507]
 Overfull \hbox (5.39272pt too wide) in paragraph at lines 579--581
 []\OT1/cmr/m/n/10 In $\U/msb/m/n/10 C[]$\OT1/cmr/m/n/10 , $(\OML/cmm/m/it/10 r 
 [] \OT1/cmr/m/n/10 )[] = [] [](2\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm
@@ -4026,13 +4016,13 @@ Overfull \hbox (5.39272pt too wide) in paragraph at lines 579--581
 Ex-am-ple [][]15[][], does $\OML/cmm/m/it/10 f [] \OT1/cmr/m/n/10 =$
  []
 
-[509] [510] [511] <images/homomorph3.png, id=7759, 614.295pt x 438.63875pt>
+[508] [509] [510] <images/homomorph3.png, id=7752, 614.295pt x 438.63875pt>
 File: images/homomorph3.png Graphic file (type png)
 
 <use images/homomorph3.png>
 Package pdftex.def Info: images/homomorph3.png used on input line 916.
 (pdftex.def)             Requested size: 289.07999pt x 206.42126pt.
- [512]
+ [511]
 Overfull \hbox (1.37401pt too wide) detected at line 980
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]g[]\OT1/cmr/m/n/10 )) = 
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )\OML/cm
@@ -4044,30 +4034,30 @@ r/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 e[] \OMS/cms
 y/m/n/10 ) \OML/cmm/m/it/10 g[]g[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K:
  []
 
-[513 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/hom
+[512 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/hom
 omorph3.png>]
 Overfull \hbox (1.34999pt too wide) in paragraph at lines 1205--1206
 [] 
  []
 
-) [514]
+) [513]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\summation_notat
 ion.tex
 Chapter 17.
-[515
+[514
 
 
 
-] [516] [517] [518] [519]
-<images/i02j0igraph.png, id=7826, 657.95813pt x 441.14813pt>
+] [515] [516] [517] [518]
+<images/i02j0igraph.png, id=7820, 657.95813pt x 441.14813pt>
 File: images/i02j0igraph.png Graphic file (type png)
 
 <use images/i02j0igraph.png>
 Package pdftex.def Info: images/i02j0igraph.png used on input line 171.
 (pdftex.def)             Requested size: 216.81pt x 145.36392pt.
- [520] [521 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
-ges/i02j0igraph.png>] [522] [523] [524] [525]
-[526] [527] [528] [529] [530]
+ [519] [520 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
+ges/i02j0igraph.png>] [521] [522] [523] [524]
+[525] [526] [527] [528] [529]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¦ in font cmr10!
@@ -4095,15 +4085,15 @@ Missing character: There is no ¦ in font cmr5!
 Missing character: There is no â in font cmr7!
 Missing character: There is no € in font cmr7!
 Missing character: There is no ¦ in font cmr7!
- [531] [532] [533] [534] [535] [536] [537]
-[538] [539] [540] [541] [542]) [543]
+ [530] [531] [532] [533] [534] [535] [536]
+[537] [538] [539] [540] [541]) [542]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\polyrings.tex
 Chapter 18.
-[544
+[543
 
 
 
-] [545] [546] [547] [548] [549] [550] [551]
+] [544] [545] [546] [547] [548] [549] [550]
 Overfull \hbox (9.25047pt too wide) detected at line 328
 \OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[]x[]b[]x[] \OT1/cmr/m
 /n/10 + \OML/cmm/m/it/10 a[]x[]b[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[]
@@ -4114,7 +4104,7 @@ it/10 a[]b[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]b[]\OT1/cmr/m/n/10 )\OML/cmm
 L/cmm/m/it/10 a[]b[]
  []
 
-[552] [553] [554] [555] [556] [557] [558] [559] [560] [561]
+[551] [552] [553] [554] [555] [556] [557] [558] [559] [560]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1005.
@@ -4123,15 +4113,21 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1005.
 
-[562]) [563]
+[561]) [562]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\induction_appen
 dix.tex
 Chapter 19.
-[564
+[563
 
 
 
-] [565]
+]
+Overfull \hbox (66.59055pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 564 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
+OFS--PATTERNS AND EXAMPLES
+ []
+
+[564] [565]
 Overfull \hbox (66.59055pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 566 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
 OFS--PATTERNS AND EXAMPLES
@@ -4155,13 +4151,7 @@ Overfull \hbox (66.59055pt too wide) has occurred while \output is active
 OFS--PATTERNS AND EXAMPLES
  []
 
-[572]
-Overfull \hbox (42.63266pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 19.5   MORE ADVICE ON INDUCTION AND STRONG INDUCTION PROO
-FS \OT1/cmr/m/n/10.95 573
- []
-
-[573]
+[572] [573]
 Overfull \hbox (66.59055pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 574 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
 OFS--PATTERNS AND EXAMPLES
@@ -4174,29 +4164,29 @@ OFS--PATTERNS AND EXAMPLES
  []
 
 [576] [577]
-Overfull \hbox (66.59055pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10.95 578 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
-OFS--PATTERNS AND EXAMPLES
- []
-
-[578]
 Overfull \hbox (44.71355pt too wide) in paragraph at lines 1852--1855
 \OT1/cmr/m/n/10 Similarly, ap-ply-ing the in-duc-tion hy-poth-e-sis to the last
  $\OML/cmm/m/it/10 k$ \OT1/cmr/m/n/10 of these num-bers, $\OML/cmm/m/it/10 a[];
  a[]; [] ; a[]; a[]$\OT1/cmr/m/n/10 ,
  []
 
-[579]
+
+Overfull \hbox (66.59055pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10.95 578 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
+OFS--PATTERNS AND EXAMPLES
+ []
+
+[578] [579])
 Overfull \hbox (66.59055pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10.95 580 \OT1/cmr/m/sl/10.95 CHAPTER 19   APPENDIX: INDUCTION PRO
 OFS--PATTERNS AND EXAMPLES
  []
 
-[580]) [581]
+[580]
 Chapter 20.
 
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\complex_hints.t
-ex [582
+ex [581
 
 
 ])
@@ -4215,55 +4205,60 @@ Overfull \hbox (19.167pt too wide) in paragraph at lines 11--12
 0 e[]; e[]; [] e[]$
  []
 
-[583])
+[582])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\crypt_hints.tex
-[584])
+
+Overfull \hbox (36.09541pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/sl/10.95 20.3   HINTS FOR ``INTRODUCCTION TO CRYPTOGRAPHY'' EXERCI
+SES \OT1/cmr/m/n/10.95 583
+ []
+
+[583])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\set_chapter_hin
 ts.tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\functions_hints
 .tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\equivalencerela
-tions_hints.tex [585])
+tions_hints.tex [584])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\symmetries_hint
 s.tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\permute_hints.t
-ex [586])
+ex
+Overfull \hbox (7.50255pt too wide) has occurred while \output is active
+[]\OT1/cmr/m/sl/10.95 20.7   HINTS FOR ``SYMMETRIES OF PLANE FIGURES'' EXERCISE
+S \OT1/cmr/m/n/10.95 585
+ []
+
+[585])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\groups_hints.te
 x)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\cosets_hints.te
-x
-Overfull \hbox (148.78683pt too wide) has occurred while \output is active
-[]\OT1/cmr/m/sl/10.95 20.9   HINTS FOR ``ABSTRACT GROUPS: DEFINITIONS AND BASIC
- PROPERTIES'' EXERCISES \OT1/cmr/m/n/10.95 587
- []
-
-[587])
+x [586])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\actions_hints.t
-ex [588])
+ex [587])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\algcodes_hints.
 tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\isomorph_hints.
-tex [589])
+tex [588])
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\homomorph_hints
 .tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\summation_notat
 ion_hints.tex)
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\polyrings_hints
-.tex) [590] [591] [592
-
-]
+.tex) [589] [590]
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\gfdl.tex
-[593
+[591
 
 
-] [594]
+
+] [592]
 Overfull \hbox (0.26152pt too wide) in paragraph at lines 135--143
 \OT1/cmr/m/n/10 tioned be-low, such as ``\OT1/cmr/bx/n/10 Acknowledgements\OT1/
 cmr/m/n/10 '', ``\OT1/cmr/bx/n/10 Dedications\OT1/cmr/m/n/10 '', ``\OT1/cmr/bx/
 n/10 Endorsements\OT1/cmr/m/n/10 '',
  []
 
-[595] [596] [597] [598] [599] [600]) [601] [602
+[593] [594] [595] [596] [597] [598]) [599] [600
 
 
 
@@ -4272,9 +4267,9 @@ runsystem(makeindex aafmt.idx)...executed (allowed).
 
 
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\aafmt.ind
-[603
+[601
 
-] [604] [605] [606] [607] [608]) [609]
+] [602] [603] [604] [605] [606]) [607]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
 
@@ -4320,8 +4315,8 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 1570 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30748 strings out of 493921
- 562737 string characters out of 3144861
+ 30744 strings out of 493921
+ 562703 string characters out of 3144861
  595573 words of memory out of 3000000
  29119 multiletter control sequences out of 15000+200000
  26666 words of font info for 97 fonts, out of 3000000 for 9000
@@ -4365,9 +4360,9 @@ fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line
 sam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm7.pfb>
-Output written on aafmt.pdf (621 pages, 11112503 bytes).
+Output written on aafmt.pdf (619 pages, 11100084 bytes).
 PDF statistics:
- 10131 PDF objects out of 10688 (max. 8388607)
- 4256 named destinations out of 4296 (max. 500000)
+ 10118 PDF objects out of 10688 (max. 8388607)
+ 4252 named destinations out of 4296 (max. 500000)
  2421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
