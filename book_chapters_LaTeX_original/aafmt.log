@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.26)  7 FEB 2016 23:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.26)  8 FEB 2016 19:05
 entering extended mode
 **aafmt.tex
 (C:\Users\thron.AMCT\Desktop\aafmt\book_chapters_LaTeX_original\aafmt.tex
@@ -2771,7 +2771,7 @@ cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
 [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206]
-<images/arrowcompose.pdf, id=3843, 249.93375pt x 219.82124pt>
+<images/arrowcompose.pdf, id=3839, 249.93375pt x 219.82124pt>
 File: images/arrowcompose.pdf Graphic file (type pdf)
 
 <use images/arrowcompose.pdf>
@@ -2808,7 +2808,7 @@ T1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f[]g$ \OT1/cmr/m/n/10.95 and $\OML/cmm/m
 pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
 ers_LaTeX_original/images/x2+y.pdf): PDF inclusion: found PDF version <1.6>, bu
 t at most version <1.5> allowed
-<images/x2+y.pdf, id=4015, 624.08156pt x 450.18187pt>
+<images/x2+y.pdf, id=4011, 624.08156pt x 450.18187pt>
 File: images/x2+y.pdf Graphic file (type pdf)
  <use images/x2+y.pdf>
 Package pdftex.def Info: images/x2+y.pdf used on input line 137.
@@ -2837,7 +2837,7 @@ D EQUIVALENCE CLASSES
 pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
 ers_LaTeX_original/images/GraphRel.pdf): PDF inclusion: found PDF version <1.6>
 , but at most version <1.5> allowed
-<images/GraphRel.pdf, id=4081, 700.86844pt x 519.44063pt>
+<images/GraphRel.pdf, id=4077, 700.86844pt x 519.44063pt>
 File: images/GraphRel.pdf Graphic file (type pdf)
 
 <use images/GraphRel.pdf>
@@ -2949,7 +2949,7 @@ D EQUIVALENCE CLASSES
 pdfTeX warning: pdflatex.exe (file C:/Users/thron.AMCT/Desktop/aafmt/book_chapt
 ers_LaTeX_original/images/partition.pdf): PDF inclusion: found PDF version <1.6
 >, but at most version <1.5> allowed
-<images/partition.pdf, id=4308, 777.65532pt x 476.53032pt>
+<images/partition.pdf, id=4304, 777.65532pt x 476.53032pt>
 File: images/partition.pdf Graphic file (type pdf)
 
 <use images/partition.pdf>
@@ -2975,7 +2975,7 @@ Chapter 9.
 
 
 
-] <images/mercedes.jpg, id=4376, 224.84pt x 224.84pt>
+] <images/mercedes.jpg, id=4372, 224.84pt x 224.84pt>
 File: images/mercedes.jpg Graphic file (type jpg)
 
 <use images/mercedes.jpg>
@@ -2983,7 +2983,7 @@ Package pdftex.def Info: images/mercedes.jpg used on input line 46.
 (pdftex.def)             Requested size: 78.69518pt x 78.69518pt.
  [247 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/me
 rcedes.jpg>]
-<images/hexABCDEF.png, id=4389, 722.7pt x 542.025pt>
+<images/hexABCDEF.png, id=4385, 722.7pt x 542.025pt>
 File: images/hexABCDEF.png Graphic file (type png)
 
 <use images/hexABCDEF.png>
@@ -2998,7 +2998,7 @@ g ! f\OML/cmm/m/it/10.95 A; B; C; D; E; F\OMS/cmsy/m/n/10.95 g$
  []
 
 [250] [251] [252]
-<images/ChangingRoom.png, id=4441, 477.28313pt x 176.15813pt>
+<images/ChangingRoom.png, id=4437, 477.28313pt x 176.15813pt>
 File: images/ChangingRoom.png Graphic file (type png)
 
 <use images/ChangingRoom.png>
@@ -3006,7 +3006,7 @@ Package pdftex.def Info: images/ChangingRoom.png used on input line 268.
 (pdftex.def)             Requested size: 286.37207pt x 105.69568pt.
  [253 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Ch
 angingRoom.png>] [254] [255] [256] [257] [258]
-[259] <images/logos.png, id=4540, 575.14874pt x 336.25626pt>
+[259] <images/logos.png, id=4536, 575.14874pt x 336.25626pt>
 File: images/logos.png Graphic file (type png)
 
 <use images/logos.png>
@@ -3066,7 +3066,7 @@ cmr/m/n/10.95 (La-bel your rows and columns as: $[]\OML/cmm/m/it/10.95 ; ; ;
 $\OT1/cmr/m/n/10.95 ). 
  []
 
-[280] <images/perm_cycle.png, id=4785, 722.7pt x 542.025pt>
+[280] <images/perm_cycle.png, id=4781, 722.7pt x 542.025pt>
 File: images/perm_cycle.png Graphic file (type png)
 
 <use images/perm_cycle.png>
@@ -3082,14 +3082,14 @@ Overfull \hbox (7.79865pt too wide) in paragraph at lines 464--467
 m/it/10.95 ; \OT1/cmr/m/n/10.95 6\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
-[283] [284] <images/cycle_composition.png, id=4835, 597.73312pt x 328.97906pt>
+[283] [284] <images/cycle_composition.png, id=4831, 597.73312pt x 328.97906pt>
 File: images/cycle_composition.png Graphic file (type png)
 
 <use images/cycle_composition.png>
 Package pdftex.def Info: images/cycle_composition.png used on input line 512.
 (pdftex.def)             Requested size: 144.54pt x 79.54892pt.
 
-<images/cycle_composition_2.png, id=4838, 572.1375pt x 244.66406pt>
+<images/cycle_composition_2.png, id=4834, 572.1375pt x 244.66406pt>
 File: images/cycle_composition_2.png Graphic file (type png)
 
 <use images/cycle_composition_2.png>
@@ -3098,7 +3098,7 @@ Package pdftex.def Info: images/cycle_composition_2.png used on input line 524.
 (pdftex.def)             Requested size: 144.54pt x 61.80798pt.
  [285 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
 cle_composition.png>]
-<images/cycle_composition_finish.png, id=4853, 379.4175pt x 591.71063pt>
+<images/cycle_composition_finish.png, id=4849, 379.4175pt x 591.71063pt>
 File: images/cycle_composition_finish.png Graphic file (type png)
 
 <use images/cycle_composition_finish.png>
@@ -3108,7 +3108,7 @@ Package pdftex.def Info: images/cycle_composition_finish.png used on input line
  [286 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/cy
 cle_composition_2.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_o
 riginal/images/cycle_composition_finish.png>] [287] [288] <images/cycle_rep.png
-, id=4887, 572.89032pt x 261.97874pt>
+, id=4883, 572.89032pt x 261.97874pt>
 File: images/cycle_rep.png Graphic file (type png)
 
 <use images/cycle_rep.png>
@@ -3126,14 +3126,14 @@ Overfull \hbox (11.53181pt too wide) in paragraph at lines 1047--1052
 -joint sets $\OML/cmm/m/it/10.95 X[]; X[]; []$\OT1/cmr/m/n/10.95 .
  []
 
-[295] <images/perm_square.png, id=4975, 266.49562pt x 120.45pt>
+[295] <images/perm_square.png, id=4971, 266.49562pt x 120.45pt>
 File: images/perm_square.png Graphic file (type png)
 
 <use images/perm_square.png>
 Package pdftex.def Info: images/perm_square.png used on input line 1129.
 (pdftex.def)             Requested size: 144.54pt x 65.33057pt.
  [296]
-<images/perm_square2.png, id=4986, 112.92188pt x 121.95563pt>
+<images/perm_square2.png, id=4982, 112.92188pt x 121.95563pt>
 File: images/perm_square2.png Graphic file (type png)
 
 <use images/perm_square2.png>
@@ -3178,7 +3178,7 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 1352.
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 1352.
 
-[301] <images/wheels1.png, id=5063, 1042.64531pt x 364.36125pt>
+[301] <images/wheels1.png, id=5059, 1042.64531pt x 364.36125pt>
 File: images/wheels1.png Graphic file (type png)
 
 <use images/wheels1.png>
@@ -3220,14 +3220,14 @@ Overfull \hbox (4.9552pt too wide) in paragraph at lines 1671--1673
 ] = (1753)(1753) = (15)(37)$.
  []
 
-[307] <images/GrandviewYard.jpg, id=5160, 433.62pt x 321.24014pt>
+[307] <images/GrandviewYard.jpg, id=5156, 433.62pt x 321.24014pt>
 File: images/GrandviewYard.jpg Graphic file (type jpg)
 
 <use images/GrandviewYard.jpg>
 Package pdftex.def Info: images/GrandviewYard.jpg used on input line 1722.
 (pdftex.def)             Requested size: 289.07999pt x 214.17099pt.
 
-<images/switchyard.png, id=5164, 911.65594pt x 540.51938pt>
+<images/switchyard.png, id=5160, 911.65594pt x 540.51938pt>
 File: images/switchyard.png Graphic file (type png)
 
 <use images/switchyard.png>
@@ -3242,7 +3242,7 @@ OUP \OT1/cmr/m/n/10.95 309
 
 [309 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/swi
 tchyard.png>]
-<images/switchyardHomeposition.jpg, id=5185, 750.805pt x 612.2875pt>
+<images/switchyardHomeposition.jpg, id=5181, 750.805pt x 612.2875pt>
 File: images/switchyardHomeposition.jpg Graphic file (type jpg)
 
 <use images/switchyardHomeposition.jpg>
@@ -3250,21 +3250,21 @@ Package pdftex.def Info: images/switchyardHomeposition.jpg used on input line 1
 758.
 (pdftex.def)             Requested size: 180.67499pt x 147.33505pt.
 
-<images/switchyardCl4.jpg, id=5187, 1463.4675pt x 1243.64626pt>
+<images/switchyardCl4.jpg, id=5183, 1463.4675pt x 1243.64626pt>
 File: images/switchyardCl4.jpg Graphic file (type jpg)
 
 <use images/switchyardCl4.jpg>
 Package pdftex.def Info: images/switchyardCl4.jpg used on input line 1765.
 (pdftex.def)             Requested size: 180.67499pt x 153.51979pt.
 
-<images/switchyard_t.jpg, id=5189, 1511.6475pt x 1270.7475pt>
+<images/switchyard_t.jpg, id=5185, 1511.6475pt x 1270.7475pt>
 File: images/switchyard_t.jpg Graphic file (type jpg)
 
 <use images/switchyard_t.jpg>
 Package pdftex.def Info: images/switchyard_t.jpg used on input line 1773.
 (pdftex.def)             Requested size: 180.67499pt x 151.88202pt.
 
-<images/switchyardCCL4.jpg, id=5191, 588.69937pt x 472.01344pt>
+<images/switchyardCCL4.jpg, id=5187, 588.69937pt x 472.01344pt>
 File: images/switchyardCCL4.jpg Graphic file (type jpg)
 
 <use images/switchyardCCL4.jpg>
@@ -3286,14 +3286,14 @@ Overfull \hbox (52.2923pt too wide) has occurred while \output is active
 OUP \OT1/cmr/m/n/10.95 313
  []
 
-[313] <images/pearl_necklace.png, id=5232, 378.66469pt x 365.86688pt>
+[313] <images/pearl_necklace.png, id=5228, 378.66469pt x 365.86688pt>
 File: images/pearl_necklace.png Graphic file (type png)
 
 <use images/pearl_necklace.png>
 Package pdftex.def Info: images/pearl_necklace.png used on input line 1882.
 (pdftex.def)             Requested size: 108.405pt x 104.74208pt.
  [314]
-<images/abC.png, id=5241, 792.71156pt x 253.69781pt>
+<images/abC.png, id=5237, 792.71156pt x 253.69781pt>
 File: images/abC.png Graphic file (type png)
  <use images/abC.png>
 Package pdftex.def Info: images/abC.png used on input line 1892.
@@ -3301,7 +3301,7 @@ Package pdftex.def Info: images/abC.png used on input line 1892.
 
 [315 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/pea
 rl_necklace.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_origina
-l/images/abC.png>] <images/abC2.png, id=5250, 864.22874pt x 411.03563pt>
+l/images/abC.png>] <images/abC2.png, id=5246, 864.22874pt x 411.03563pt>
 File: images/abC2.png Graphic file (type png)
 
 <use images/abC2.png>
@@ -3654,7 +3654,7 @@ Chapter 13.
 
 
 
-] [390] <images/AxesOfCube.png, id=6261, 1136.245pt x 1138.2525pt>
+] [390] <images/AxesOfCube.png, id=6257, 1136.245pt x 1138.2525pt>
 File: images/AxesOfCube.png Graphic file (type png)
 
 <use images/AxesOfCube.png>
@@ -3669,7 +3669,7 @@ y[]$\OT1/cmr/m/n/10 .
 
 [391 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Axe
 sOfCube.png>] [392] [393] [394] [395]
-<images/CubeFold.png, id=6321, 469.755pt x 360.34625pt>
+<images/CubeFold.png, id=6317, 469.755pt x 360.34625pt>
 File: images/CubeFold.png Graphic file (type png)
 
 <use images/CubeFold.png>
@@ -3702,14 +3702,14 @@ Overfull \hbox (1.91718pt too wide) in paragraph at lines 383--391
 [][]  $\U/msa/m/n/10 $ 
  []
 
-[399] <images/TetrahedronC.png, id=6375, 515.9275pt x 406.51875pt>
+[399] <images/TetrahedronC.png, id=6371, 515.9275pt x 406.51875pt>
 File: images/TetrahedronC.png Graphic file (type png)
 
 <use images/TetrahedronC.png>
 Package pdftex.def Info: images/TetrahedronC.png used on input line 407.
 (pdftex.def)             Requested size: 180.67499pt x 142.35812pt.
 
-<images/TetrahedronFold.png, id=6378, 350.30875pt x 322.20375pt>
+<images/TetrahedronFold.png, id=6374, 350.30875pt x 322.20375pt>
 File: images/TetrahedronFold.png Graphic file (type png)
 
 <use images/TetrahedronFold.png>
@@ -3741,14 +3741,14 @@ Overfull \hbox (1.91718pt too wide) in paragraph at lines 504--509
 [][]  $\U/msa/m/n/10 $ 
  []
 
-<images/AxesOfOctahedron.png, id=6422, 513.92pt x 406.51875pt>
+<images/AxesOfOctahedron.png, id=6418, 513.92pt x 406.51875pt>
 File: images/AxesOfOctahedron.png Graphic file (type png)
 
 <use images/AxesOfOctahedron.png>
 Package pdftex.def Info: images/AxesOfOctahedron.png used on input line 523.
 (pdftex.def)             Requested size: 180.67499pt x 142.91638pt.
 
-<images/OctahedronFold.png, id=6425, 468.75125pt x 467.7475pt>
+<images/OctahedronFold.png, id=6421, 468.75125pt x 467.7475pt>
 File: images/OctahedronFold.png Graphic file (type png)
 
 <use images/OctahedronFold.png>
@@ -3773,14 +3773,14 @@ Overfull \hbox (1.91716pt too wide) in paragraph at lines 612--618
 [][]  $\U/msa/m/n/10 $ 
  []
 
-<images/Dodecahedron.png, id=6475, 850.17625pt x 832.10875pt>
+<images/Dodecahedron.png, id=6471, 850.17625pt x 832.10875pt>
 File: images/Dodecahedron.png Graphic file (type png)
 
 <use images/Dodecahedron.png>
 Package pdftex.def Info: images/Dodecahedron.png used on input line 632.
 (pdftex.def)             Requested size: 180.67499pt x 176.83029pt.
 
-<images/DodecahedronFold.png, id=6478, 376.40625pt x 421.575pt>
+<images/DodecahedronFold.png, id=6474, 376.40625pt x 421.575pt>
 File: images/DodecahedronFold.png Graphic file (type png)
 
 <use images/DodecahedronFold.png>
@@ -3805,7 +3805,7 @@ Overfull \hbox (3.3367pt too wide) in paragraph at lines 708--713
  []
 
 [408 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Dod
-ecahedronFold.png>] <images/Soccerball.png, id=6524, 91.34125pt x 93.34875pt>
+ecahedronFold.png>] <images/Soccerball.png, id=6520, 91.34125pt x 93.34875pt>
 File: images/Soccerball.png Graphic file (type png)
 
 <use images/Soccerball.png>
@@ -3823,28 +3823,28 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
 
-<images/UnitSquare.png, id=6587, 666.49pt x 526.96875pt>
+<images/UnitSquare.png, id=6583, 666.49pt x 526.96875pt>
 File: images/UnitSquare.png Graphic file (type png)
 
 <use images/UnitSquare.png>
 Package pdftex.def Info: images/UnitSquare.png used on input line 891.
 (pdftex.def)             Requested size: 216.81pt x 171.42363pt.
 
-<images/IntLat1.png, id=6589, 5336.93875pt x 2257.43375pt>
+<images/IntLat1.png, id=6585, 5336.93875pt x 2257.43375pt>
 File: images/IntLat1.png Graphic file (type png)
 
 <use images/IntLat1.png>
 Package pdftex.def Info: images/IntLat1.png used on input line 901.
 (pdftex.def)             Requested size: 289.07999pt x 122.2475pt.
 
-<images/IntLat2.png, id=6592, 5196.41376pt x 2282.5275pt>
+<images/IntLat2.png, id=6588, 5196.41376pt x 2282.5275pt>
 File: images/IntLat2.png Graphic file (type png)
 
 <use images/IntLat2.png>
 Package pdftex.def Info: images/IntLat2.png used on input line 910.
 (pdftex.def)             Requested size: 289.07999pt x 126.94995pt.
 
-<images/IntLat3.png, id=6593, 5531.66624pt x 2235.35126pt>
+<images/IntLat3.png, id=6589, 5531.66624pt x 2235.35126pt>
 File: images/IntLat3.png Graphic file (type png)
 
 <use images/IntLat3.png>
@@ -3855,13 +3855,13 @@ ges/UnitSquare.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_orig
 inal/images/IntLat1.png>] [416 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters
 _LaTeX_original/images/IntLat2.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_cha
 pters_LaTeX_original/images/IntLat3.png>]
-<images/Torus1.png, id=6630, 963.6pt x 542.025pt>
+<images/Torus1.png, id=6626, 963.6pt x 542.025pt>
 File: images/Torus1.png Graphic file (type png)
  <use images/Torus1.png>
 Package pdftex.def Info: images/Torus1.png used on input line 941.
 (pdftex.def)             Requested size: 216.81pt x 121.95035pt.
 
-<images/Torus2.png, id=6631, 963.6pt x 542.025pt>
+<images/Torus2.png, id=6627, 963.6pt x 542.025pt>
 File: images/Torus2.png Graphic file (type png)
  <use images/Torus2.png>
 Package pdftex.def Info: images/Torus2.png used on input line 948.
@@ -3869,14 +3869,14 @@ Package pdftex.def Info: images/Torus2.png used on input line 948.
 
 [417 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images/Tor
 us1.png> <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/images
-/Torus2.png>] <images/Commutative1.png, id=6641, 486.81876pt x 285.065pt>
+/Torus2.png>] <images/Commutative1.png, id=6637, 486.81876pt x 285.065pt>
 File: images/Commutative1.png Graphic file (type png)
 
 <use images/Commutative1.png>
 Package pdftex.def Info: images/Commutative1.png used on input line 983.
 (pdftex.def)             Requested size: 180.67499pt x 105.79427pt.
  [418]
-<images/Commutative2.png, id=6655, 542.025pt x 288.07625pt>
+<images/Commutative2.png, id=6651, 542.025pt x 288.07625pt>
 File: images/Commutative2.png Graphic file (type png)
 
 <use images/Commutative2.png>
@@ -3939,7 +3939,7 @@ Chapter 15.
 
 
 
-] <images/CommDiag.png, id=7150, 578.16pt x 289.08pt>
+] <images/CommDiag.png, id=7146, 578.16pt x 289.08pt>
 File: images/CommDiag.png Graphic file (type png)
 
 <use images/CommDiag.png>
@@ -3992,7 +3992,7 @@ Chapter 16.
 
 
 
-] <images/homomorph1.png, id=7574, 612.2875pt x 131.49126pt>
+] <images/homomorph1.png, id=7570, 612.2875pt x 131.49126pt>
 File: images/homomorph1.png Graphic file (type png)
 
 <use images/homomorph1.png>
@@ -4000,7 +4000,7 @@ Package pdftex.def Info: images/homomorph1.png used on input line 100.
 (pdftex.def)             Requested size: 289.07999pt x 62.07977pt.
  [498] [499 <C:/Users/thron.AMCT/Desktop/aafmt/book_chapters_LaTeX_original/ima
 ges/homomorph1.png>] [500]
-<images/homomorph2.png, id=7608, 528.97626pt x 205.76875pt>
+<images/homomorph2.png, id=7604, 528.97626pt x 205.76875pt>
 File: images/homomorph2.png Graphic file (type png)
 
 <use images/homomorph2.png>
@@ -4016,7 +4016,7 @@ Overfull \hbox (5.39272pt too wide) in paragraph at lines 579--581
 Ex-am-ple [][]15[][], does $\OML/cmm/m/it/10 f [] \OT1/cmr/m/n/10 =$
  []
 
-[508] [509] [510] <images/homomorph3.png, id=7752, 614.295pt x 438.63875pt>
+[508] [509] [510] <images/homomorph3.png, id=7748, 614.295pt x 438.63875pt>
 File: images/homomorph3.png Graphic file (type png)
 
 <use images/homomorph3.png>
@@ -4049,7 +4049,7 @@ Chapter 17.
 
 
 ] [515] [516] [517] [518]
-<images/i02j0igraph.png, id=7820, 657.95813pt x 441.14813pt>
+<images/i02j0igraph.png, id=7816, 657.95813pt x 441.14813pt>
 File: images/i02j0igraph.png Graphic file (type png)
 
 <use images/i02j0igraph.png>
@@ -4315,8 +4315,8 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 1570 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30744 strings out of 493921
- 562703 string characters out of 3144861
+ 30740 strings out of 493921
+ 562667 string characters out of 3144861
  595573 words of memory out of 3000000
  29119 multiletter control sequences out of 15000+200000
  26666 words of font info for 97 fonts, out of 3000000 for 9000
@@ -4360,9 +4360,9 @@ fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line
 sam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm7.pfb>
-Output written on aafmt.pdf (619 pages, 11100084 bytes).
+Output written on aafmt.pdf (619 pages, 11113017 bytes).
 PDF statistics:
- 10118 PDF objects out of 10688 (max. 8388607)
- 4252 named destinations out of 4296 (max. 500000)
+ 10112 PDF objects out of 10688 (max. 8388607)
+ 4248 named destinations out of 4296 (max. 500000)
  2421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
