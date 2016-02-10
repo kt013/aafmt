@@ -1,5 +1,0 @@
-\contentsline {chapter}{\numberline {1}Polynomials}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Polynomials of various stripes}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Polynomial rings}{5}{section.1.2}
-\contentsline {section}{\numberline {1.3}The Division Algorithm for Polynomials}{15}{section.1.3}
-\contentsline {chapter}{Index}{33}{Item.86}
