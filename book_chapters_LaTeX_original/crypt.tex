@@ -35,8 +35,8 @@ message into a plaintext message.
  
 There are many different families of cryptosystems, each distinguished
 by a particular encryption algorithm. Cryptosystems in a specified
-cryptographic family are distinguished from one another by a parameter
-to the encryption function called a \term{key}\index{Key!definition
+cryptographic family are distinguished from one another by a variable parameter
+called a \term{key}\index{Key!definition
 of}. A classical cryptosystem has a single key, which must be kept
 secret,  known only to the sender and the receiver of the message. If
 person $A$ wishes to send secret messages to two different people $B$
@@ -64,9 +64,8 @@ In \term{single}\index{Key!single}\index{Cryptosystem!single key} or
 \term{private key
 cryptosystems}\index{Key!private}\index{Cryptosystem!private key}
 the same key is used for both encrypting and decrypting messages. To
-encrypt a  plaintext message, we apply to the message some \emph{function}\index{Function!in cryptography}
-which is kept secret, say $f$. We'll have a lot more to say about functions in Chapter~\ref{functions}--but this point, you may just think of an \term{encryption function}\index{Encryption!function}\index{Function!encryption} as a procedure which transforms a  plaintext message into an encrypted message.  Given the encrypted form of the message, we can recover the
-original message by applying the \term{decryption function}\index{Decryption!function}\index{Function!decryption} $f^{-1}$, which basically undoes the transformation performed by the encryption function. Both the
+encrypt a  plaintext message, we apply to the message procedure which transforms a  plaintext message into an encrypted message.  We will call this procedure an \term{encryption function}\index{Encryption!function}\index{Function!encryption}some \emph{function}\index{Function!in cryptography}, and denote it by the letter $f$ (we'll have a lot more to say about functions in Chapter~\ref{functions}).  Given the encrypted form of the message, we can recover the 
+original message by applying the \term{decryption function}\index{Decryption!function}\index{Function!decryption} $f^{-1}$, which basically undoes the transformation performed by the encryption function.\footnote{In fact, $f^{-1}$ is the \emph{inverse}\index{Inverse function!in cryptography} of $f$--we will study inverse functions in general in Chapter~\ref{functions}.} Both the
 encryption function $f$ and the decryption function $f^{-1}$ must be relatively easy to compute; however, they must be virtually impossible to guess if only
 examples of coded messages are available.
  
