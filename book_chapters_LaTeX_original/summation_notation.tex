@@ -61,15 +61,15 @@ Likewise, if we were to also change the 10 to 6, it would lose the terms 10,9,8 
 %Calculate the following sums and combine like terms.
 Evaluate the following:
 %%% Change so that sums are in display format. The summation indices are too cramped, and the fraction is too small.
-\begin {enumerate}[(1)]
+\begin {enumerate}[(a)]
 \item
-$\sum _{i=0}^{400} \,2$
+$\displaystyle{\sum _{i=0}^{400} \,2}$
 \item
-$\sum_{j=17}^{20} \, \left(2j^2 - j \right)$
+$\displaystyle{ \sum_{j=17}^{20} \, 2j^2 - j}$
 \item
-$\sum_{k=0}^{4}(x^{2k} - k) $ (Your answer should be in terms of $x$).
+$\displaystyle{ \sum_{k=0}^{4}(x^{2k} - k)}$  \quad (Your answer should be in terms of  $x$).
 \item
-$\sum_{k=0}^{7} (-1)^k\frac{x^{k}}{(k+1)(k+2)}$ ~~(Your answer should be in terms of $x$).
+$\displaystyle{ \sum_{k=0}^{7} (-1)^k\frac{x^{k}}{(k+1)(k+2)}}$ \quad  (Your answer should be in terms of $x$).
 \end {enumerate}
 \end{exercise}
 
@@ -110,11 +110,11 @@ Let $j = i+1$, and solve for $i$: $i = j-1$. We then replace all $i$'s in the fo
 % Then with $i=2$ add 1 to each side to get $ i+1 = 3$ with $i=4$ add 1 to each side to get $ i+1 = 5$ with $i+2$ separate into $i+1+1$ then substitue $j$ for each $i+1$ to yield.
 \[\sum_{(j-1)=2}^{(j-1)=4}((j-1)+1)((j-1)+2),\]
 and after algebraic simplification we get
-\[\sum_{j=3}^{5}(j)(j+1),\]
+\[\sum_{j=3}^{5}j(j+1),\]
 as before.
 
-Occasionally, it may be necessary to add or remove a single term from the sum.  This can be done by changing the start value or end condition. For example,
-\[\sum_{i=1}^{10}i = 1 + \sum_{i=2}^{10} i = \sum_{i=1}^9 i.\]
+Occasionally, it may be necessary to add or remove a single term from the sum.  This can be done by changing the start value or end condition.The following example illustrates this, as well as demonstrating some of our summation manipulation rules:
+\[\sum_{i=1}^{10}i = 1 + \sum_{i=2}^{10} i = 1+ \sum_{i=1}^9 ( i+1) = 1 +  \sum_{i=1}^9  j +  \sum_{i=1}^9  1 =  \sum_{i=1}^9  j + 10.\]
 When removing a term from the middle, it may be necessary to split the sum into two separate sums.
 \[\sum_{i=1}^{10}i = \sum_{i=1}^{3}i + 4 + \sum_{i=5}^{10}i.\]
 %However adding a term to a sum can be quite difficult.  The formula has to account for the new term which is not always possible.  Take for example the sum off odd numbers from 1 to 51.
@@ -127,69 +127,91 @@ When removing a term from the middle, it may be necessary to split the sum into 
 Take the following Sigma notation examples and change the formula and final value so that the starting value becomes 0 and the sum maintains the same value.  Calculate the value of both the listed sum and the resulting sum to show that the value is the same.
 \begin {enumerate} [(a)]
  \item
-$\sum_{i=3}^{46}2i$
+$\displaystyle{\sum_{i=3}^{46}2i}$
 \item
-$\sum_{j=7}^{20}\cos(j\pi )$
+$\displaystyle{\sum_{j=7}^{20}\cos(j\pi )}$
 \item
-$\sum_{j=20}^{40}j-20$
+$\displaystyle{\sum_{j=20}^{40}j-20}$
 \end {enumerate}
 \end{exercise}
 
 \begin {exercise}{}
 We have shown that a ``sum rule'' holds for sigma notation.  Is there a corresponding ``product rule''? That is: is it true that
-\[ \sum_{i=0}^n \left(x_i +y_i \right) \stackrel{?}{=} \sum_{i=0}^n x_i + \sum_{i=0}^n y_i \]
+\[ \sum_{i=0}^n x_i y_i \stackrel{?}{=} \left(\sum_{i=0}^n x_i \right) \left(  \sum_{i=0}^n y_i \right). \]
 If true then prove it; if not, give a counterexample.
 \end{exercise}
 
 
 \section{Nested Sigmas}
-Since any pattern of sum can be replaced with Sigma notation, it is quite possible for one Sigma to end up inside another:
+Since any  patterned summation can be replaced with Sigma notation, it's quite possible for one Sigma to end up inside another:
 
-\[\sum_{i=0}^{3}\left( \sum_{j=0}^{2}(1)\right)\]
+\[\sum_{i=0}^{3}\left( \sum_{j=0}^{2}1\right)\]
 
 This means that for each value of the index of the outside Sigma, the entire sum of the inside Sigma must be calculated.  In this case, $\sum_{j=0}^{2}(1)=3$, so we have
 
-\[\sum_{i=0}^{3}\left( \sum_{j=0}^{2}(1)\right) =  \sum_{i=0}^{3}\left( 3 \right) = 3+3+3+3 = 12. \]
+\[\sum_{i=0}^{3}\left( \sum_{j=0}^{2}1\right) =  \sum_{i=0}^{3}\ 3  = 3+3+3+3 = 12. \]
 
 The situation becomes more interesting when the sum inside depends on the the index variable of the outside Sigma:
 
-\[\sum_{i=0}^{3}\left(\sum_{j=0}^{i}(1)\right)\]
+\[\sum_{i=0}^{3}\left(\sum_{j=0}^{i}1\right)\]
 
-Unlike the previous case, the inside sum will change depending on what $i$ is.  When $i=0$ then $\sum_{j=0}^{i}(1)=\sum_{j=0}^{0}(1)=1$ so 1 would be the first term in the outside sum.  When $i=1$ then $\sum_{j=0}^{i}(1)=\sum_{j=0}^{1}(1)=1+1=2$ so 2 would be the next term.  With each successive term, the inside sum increases by 1, so the result is $1+2+3+4 = 10$.
+Unlike the previous case, the inside sum will change depending on what $i$ is.  When $i=0$ then $\sum_{j=0}^{i}1=\sum_{j=0}^{0}1=1$ so 1 would be the first term in the outside sum.  When $i=1$ then $\sum_{j=0}^{i}1=\sum_{j=0}^{1}1=1+1=2$ so 2 would be the next term.  With each successive term, the inside sum increases by 1, so the result is $1+2+3+4 = 10$.
 
  Note that the index of the outer sum may appear in any or all parts of the inner sum. Here are some examples:  
 
-\[\sum_{i=0}^{3} \left(\sum_{j=i}^{10}(1)\right); \qquad
-\sum_{i=0}^{3} \left(\sum_{j=1}^{10}(i) \right); \qquad
-\sum_{i=0}^{3}\left(\sum_{j=i}^{2i}(3i+x^j)\right).\]
+\[\sum_{i=0}^{3} \left(\sum_{j=i}^{10}1\right); \qquad
+\sum_{i=0}^{3} \left(\sum_{j=1}^{10}i \right); \qquad
+\sum_{i=0}^{3}\left(\sum_{j=i}^{2i}3i+x^j\right).\]
 
 When using nested sums, it is possible to rearrange the order of summation.  Take for example:
-\[\sum_{i=0}^{2} \left( \sum_{j=0}^{i}(1) \right)\]
-The first term has $i=0$ and $j=0$: we write this as $(i,j)=(0,0)$. When $i=1$, then we have two terms:  $j=0$ and $j=1$. Finally, when $i=2$, we have $j=0,1,$ or 2.  Altogether we have the index pairs: $(0,0), (1,0), (1,1), (2,0), (2,1), (2,2)$. These index pairs may be displayed on a grid, as shown in Figure~\ref{fig:1}.
+\[\sum_{i=0}^{2} \left( \sum_{j=0}^{i}1 \right)\]
+The first term has $i=0$ and $j=0$: we write this as $(i,j)=(0,0)$. When $i=1$, then we have two terms:  $j=0$ and $j=1$. Finally, when $i=2$, we have $j=0,1,$ or 2.  Altogether we have the index pairs: $(0,0), (1,0), (1,1), (2,0), (2,1), (2,2)$. These index pairs may be displayed on a grid, as shown in Figure~\ref{fig:summation1}.
 \begin{figure}[htb]
 \begin{center}
 	\includegraphics[width=3.0in]{images/i02j0igraph.png}
-\label{fig:1}
+\caption{\label{fig:summation1} Grid points corresponding to the terms in the sum: $ \sum_{i=0}^{2} \left( \sum_{j=0}^{i}1 \right)$.}
 \end{center}
 \end{figure} 
 
 Alternatively, we can arrange these index pairs by $j$ coordinate.  When $j$ is 0, $i$ takes the values (0,1,2), when $j$ is 1, $i$ takes the values of (1,2) and when $j$ is 2 $i$ takes the value 2.  This can be expressed as the sum:
-\[\sum_{j=0}^{2}(\sum_{i=j}^{2}(i))\]
+\[\sum_{j=0}^{2} \left(\sum_{i=j}^{2}i \right)\]
 
-So far our examples have only two Sigmas, but it's quite possible to have an unlimited number of nested Sigmas.  Regardless of how many Sigmas, the process of calculation is the same as above: start with the outermost sum, pick the starting value and work your way inward.
+So far our examples have only two Sigmas, but it's quite possible to have an unlimited number of nested Sigmas. For example, with three nested Sigmas we would have grid points in three dimensions.  It doesn't matter what order you sum the terms in--as long as you include them all!
 
 %Another handy identity for more than one index:JW
 %\sum_{i=n}^s \sum_{j=m}^t a_{i,j} = \sum_{j=m}^t sum_{i=n}^s a_{i,j} 
 \begin {exercise}{}
-For each of the following nested sums, swap the sum indices and change the start value and end condition so the nested sum maintains the same value.
-\begin {enumerate}[(1)]
+Rewrite each of the following nested sums, exchanging the order of sums and changing the start values and end conditions as needed so that the nested sum maintains the same value. (In some cases, drawing a grid point diagram similar to Figure~\ref{fig:summation1} may be helpful.)
+\begin {enumerate}[(a)]
 \item
-$\sum_{i=0}^{4}(\sum_{j=0}^{8}(i))$
+$\displaystyle{\sum_{i=0}^{4}\left(\sum_{j=0}^{8}i\right)}$
 \item
-$\sum_{j=0}^{2}(\sum_{i=j}^{2j}(i+j))$
+$\displaystyle{\sum_{j=0}^{2}\left( \sum_{i=j}^{2j}i+j\right)}$
 \item
-$\sum_{k=0}^{17}(\sum_{i=0}^{2k}(2i+1))$
+$\displaystyle{\sum_{k=0}^{17}\left(\sum_{i=0}^{2k}2i+1 \right)}$
+\item
+$\displaystyle{\sum_{i=1}^{10}\left(\sum_{j=i}^{i} (i-j) \right)}$
+\item
+$\displaystyle{\sum_{i=1}^{10}\left(\sum_{j=i}^{10} ij \right)}$
+\item
+$\displaystyle{\sum_{i=m}^{n}\left(\sum_{j=i}^{p}jx^i \right)}$
+\item
+$\displaystyle{\sum_{i=m}^{n}\left(\sum_{j=q}^{i}(i-j)^2 \right)}$
 \end {enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+Using exchange of summation and other sum manipulation techniques, find the exact values of the following sums:
+\begin{enumerate}[(a)]
+\item
+$\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^{10} (j-i)}$
+\item
+$\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i \frac{1}{11-j}}$
+\item
+$\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i \frac{i}{j}}$
+\item
+$\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i (j+i)}$
+\end{enumerate}
 \end{exercise}
 
 \section{Common Sums}
@@ -208,7 +230,7 @@ If one were to take the first term 1 and add it to the last term $k$, we get $k+
 We can use the same reasoning to arrive at the following formula.
 
 \[\sum_{i=a}^{k}i=a+(a+1)+(a+2)\cdots+(k-1) + k = (k+a)*(k-a)/2,\] 
-where $a$ and $k$ are integers and $a<k$
+where $a$ and $k$ are integers and $a<k$.
 
 %%% Need a better example before these exercises. Students don't know how to represent an odd number.  You can also do exercises where you skip 3 numbers instead of 2
 \begin {exercise}{}
@@ -305,7 +327,7 @@ Show that matrix multiplication is \emph{associative}.
 \end{enumerate}
 \end{exercise}
 
-The {\bfi identity matrix}\index{Matrix!identity ($I$)} $I$ often comes up when working with matrices. You may remember that an identity matrix looks like:
+The \term{identity matrix}\index{Matrix!identity ($I$)} $I$ often comes up when working with matrices. You may remember that an identity matrix looks like:
 
 \[I = \left[ \begin{array}{ccccc}
 1 & 0  & \cdots & 0 & 0 \\
@@ -315,7 +337,7 @@ The {\bfi identity matrix}\index{Matrix!identity ($I$)} $I$ often comes up when 
 0 & 0  & \cdots & 0 & 1  \\
  \end{array} \right]. \]
 
-There is a summation notation counterpart, called the {\bfi Kronecker delta}\index{Kronecker delta}.\footnote{after Leopold Kronecker (1823-1891), a prominent German mathematician who made many contributions to abstract algebra and number theory. But outside of those areas, he is most famous for his strong opposition to the theory of infinite sets first proposed by Georg Cantor (1845-1918).  Most mathematicians today would say that Cantor was right, and Kronecker was wrong. This is an interesting topic that you can read about.} The Kronecker delta is written as $\delta_{i,j}$, and it takes the following values:
+There is a summation notation counterpart, called the \term{Kronecker delta}\index{Kronecker delta}.\footnote{After Leopold Kronecker (1823-1891), a prominent German mathematician who made many contributions to abstract algebra and number theory. But outside of those areas, he is most famous for his strong opposition to the theory of infinite sets first proposed by Georg Cantor (1845-1918).  Most mathematicians today would say that Cantor was right, and Kronecker was wrong. This is an interesting topic that you can read about.} The Kronecker delta is written as $\delta_{i,j}$, and it takes the following values:
 
 \[ \delta_{ij}=
 \begin{cases}
@@ -333,8 +355,7 @@ We know that if a matrix $B$ is the inverse of the $n \times n$ matrix $A$ then 
 \end{exercise}
 
 \begin{exercise}{}
-Show that:
-\[ \sum_k  \delta_{ik}\delta_{kj}=\delta_{ij}\]
+Show that: $\displaystyle{ \sum_k  \delta_{ik}\delta_{kj}=\delta_{ij}}.$
 \end{exercise}
 
 \begin{exercise}{kronecker}
@@ -383,7 +404,7 @@ Transpose defines an isomorphism from $GL_n(\mathbb{R})$ to $GL_n(\mathbb{R})$.
 \end{exercise}
 
 \subsubsection*{Matrix traces}
-Another cool application of summation notation with matrices is to prove things about the {\bfi trace}\index{Trace!of a matrix} of a matrix.  The trace only applies to square matrices (equal number of rows and columns) and is the sum of all the entries on the diagonal -- that is,  the sum of all entries with the same column and row number.  In summation notation, the trace of an $n \times n$ matrix as:
+Another cool application of summation notation with matrices is to prove things about the \term{trace}\index{Trace!of a matrix} of a matrix.  The trace only applies to square matrices (equal number of rows and columns) and is the sum of all the entries on the diagonal -- that is,  the sum of all entries with the same column and row number.  In summation notation, the trace of an $n \times n$ matrix as:
 
 \[ \text{Tr} \left( A \right)= a_{1,1} + a_{2,2} + \ldots + a_{n,n} = \sum_{i=1}^n a_{i,i} \] 
 This time we are using the index $i$ for both the row position and the column position, so its the position of the index that denotes row and column.  The formula for the product used two different letters for the indices because they were not always equal, but for trace the row and column number will always be equal, so we only need one letter.
@@ -441,7 +462,7 @@ as long as the matrices have dimensions so that all of these products are define
 \end{exercise}
 
 \begin {exercise}{linalg}
-In linear algebra, given two $n \times n$ matrices $A$ and $B$ we say that $A$ is {\bfi similar}\index{Matrices!similar} to $B$ if there exists an invertible matrix $S$ such that $B = S^{-1}AS$. 
+In linear algebra, given two $n \times n$ matrices $A$ and $B$ we say that $A$ is \term{similar}\index{Matrices!similar} to $B$ if there exists an invertible matrix $S$ such that $B = S^{-1}AS$. 
 \begin{enumerate}[(a)]
 \item
 Prove that if $A$ is similar to $B$, then $B$ is similar to $A$.
@@ -487,7 +508,7 @@ For an epsilon with three indices, each index can be either 1,2,or 3. The values
 What is the rule behind this definition?  Every \emph{permutation} of $(1,2,3)$.  corresponds to one possible rearrangement of the indices. For instance the permutation 
 $ \left( \begin{smallmatrix}  1 & 2 & 3  \\ 2 & 3 & 1  \end{smallmatrix} \right)$ corresponds to the rearrangement $(2,3,1)$.  Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ is \emph{even} (that is, it can be written as the product of an even number of transpositions), then the corresponding value of $\epsilon_{ijk}$ is 1. Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right)$ is \emph{odd} , then the corresponding value of $\epsilon_{ijk}$ is -1. Whenever any of the indices $i,j,k$  are repeated, then  $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ does not correspond to a permutation, and the value of $\epsilon_{ijk}$ is 0.
 
-This observation motivates the following general definition  of the {\bfi Levi-Civita symbol} with $n$ indices\index{Levi-Civita symbol!definition} as:
+This observation motivates the following general definition  of the \term{Levi-Civita symbol} with $n$ indices\index{Levi-Civita symbol!definition} as:
 
 \[ \epsilon_{i_1 i_2 i_3…i_n}=
 \begin{cases}
@@ -897,7 +918,6 @@ Prove the following equation using summation by parts:
 \[ \sum_{k=1}^n k^3 = \frac{n^4}{4} + \frac{n^3}{2} + \frac{n^2}{4} \]
 \end{exercise}
 
-\begin{exercise}{last} Evaluate the sum: 
-\[\sum_{k=1}^n k \cdot 2^k.\]
+\begin{exercise}{last} Evaluate the sum: $\displaystyle{\sum_{k=1}^n k \cdot 2^k.}$~~
 \hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
