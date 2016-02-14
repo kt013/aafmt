@@ -32,7 +32,7 @@ Then their product is
 p(x)  q(x) 
 & =  5x^3 3 x^2 \\
 & = (5 \cdot 3)x^{(3 + 2)},\\
-& = 15x^5
+& = 15x^5,
 \end{align*}
 where we combined the coefficients and the exponents (remember your exponent rules!).  
 
@@ -97,16 +97,16 @@ q(x) & = 3x^3 + 3x^2 + 2x +2.
 We may add them as follows:
 \begin{align*}
 p(x) + q(x) &= (1\oplus 3)x^3 + (0\oplus 3)x^2 + (3\oplus 2)x + (1\oplus 2)\\
-&= 3x^2 + x + 3,
+&= 3x^2 + x + 3.
 \end{align*}
-and multiply as folows:
+To multiply, we can't quite use the distributive law as before, because the additive operation on the coefficients of terms with like powers of $x$ is modular addition (that is, $\oplus$), while the regular `$+$' is used to add terms corresponding to different powers of $x$.  So we first group together all terms with like powers of $x$ and use modular arithmetic to combine  these terms into a single term.  The result is:
 \begin{align*}
 p(x)  q(x) 
-& =  (1 \odot 3)x^6 + (1 \odot 3)x^5 + (2\oplus 3\odot 3)x^4 + (1\odot 2 \oplus 3\odot 3 \oplus  1 \odot 3)x^3 \\
-&~~+ (3 \odot 2 \oplus  1 \odot 3)x^2 + (3 \odot 2) + 1 \odot 2)x + 1\odot 2 \\
+& =  (1 \odot 3)x^6 + (1 \odot 3)x^5 + (1\odot2~\oplus~ 3\odot 3)x^4 + (1\odot 2 ~\oplus~ 3\odot 3 ~\oplus~  1 \odot 3)x^3 \\
+&~~+ (3 \odot 2 ~\oplus~  1 \odot 3)x^2 + (3 \odot 2 ~+ ~1 \odot 2)x + 1\odot 2 \\
 & = 3x^6 + 3x^5 + 3x^4 + 2x^3 + 1x^2 + 2.
 \end{align*}
-Notice that arithmetic mod 4 is used on the \emph{coefficients} of each term, but the regular `+' sign is used to add terms themselves.  
+Notice that arithmetic mod 4 is used on the \emph{coefficients} of each power of $x$, but  the regular `+' sign is used to add terms corresponding to different powers of $x$.  
 
 It turns out that $\mathbb{Z}_2[x]$ is of great practical usefulness (in polynomial codes), so we include an exercise to get you warmed up.
 
@@ -125,13 +125,12 @@ $p(x)= x^4 + x^3+x^2+x+1$, $q(x)=p(x)$.
 Are these sets of polynomials ($\ZZ[x], \RR[x]$ and so on) also groups? I'm glad you asked! See if you can figure it out:
 
 \begin{exercise}{poly2}
-For each of the following parts, \emph{explain} your answer. 
 \begin{enumerate}[(a)]
 \item
-Which of the following are groups under addition: $\mathbb{N}[x], \mathbb{Z}[x], \mathbb{Q}[x], \mathbb{R}[x]$, $\mathbb{C}[x]$, $\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$? 
+Which of the following are groups under addition: $\mathbb{N}[x], \mathbb{Z}[x], \mathbb{Q}[x], \mathbb{R}[x]$, $\mathbb{C}[x]$, $\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$? \emph{Explain} your answers. 
 \item
 Which of the following are groups under multiplication: $\mathbb{N}[x]$, $\mathbb{Z}[x]$,$\mathbb{Q}[x]$,$\mathbb{R}[x]$, $\mathbb{C}[x]$, $\mathbb{Z}_5[x]$,$\mathbb{Z}_6[x]$? 
-
+\emph{Explain} your answers.
 \end{enumerate}
 \end{exercise}
 
@@ -151,7 +150,7 @@ In some sense, polynomials are more complicated than groups because they have tw
  We have noted above that polynomials can have different types of coefficients. 
 In this section we will  impose some properties on the coefficients that, although quite general, will enable us to prove several interesting properties. But first, let's relate polynomials to the summation notation that we discussed in the previous chapter:
 
-\begin{defn} (\emph{Polynomial notation}) A polynomial may be written as
+\begin{defn} (\emph{Summation notation}) A polynomial may be written as
 
 \[f(x) = a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n = \sum^{n}_{i=0} a_i x^i, \]
 
@@ -244,7 +243,12 @@ p(x) + q(x) =  \sum_{i=0}^{\max(m,n)} (a_i + b_i) x^i.
 \end{defn}
 Notice that we have taken the upper limit of the sum to $\max(n,m)$ in order to make sure to include all nonzero terms from both polynomials. 
 
-Throughout this book, we have encountered various mathematical structures and shown that in many cases they possess group properties. Let's now give polynomials that same treatment. Since we have two operations, addition and multiplication, it is possible that polynomials are groups under either or both of these operations. Of course, it's possible that polynomials may have have different properties depending on what type of coefficients they have, so all of the following proofs will depend \emph{only} on the coefficient properties listed in Definition 5.  
+\begin{rem}
+In this definition, we're working a little sleight-of-hand with the notation. (It's not our fault--everyone else does it, and we have to play along.)  Notice that the '+' used in adding the coefficients $a_i + b_i$ is not the same as the plus used in the summation. (We saw this earlier when we added polynomials with coefficients in $\ZZ_n$.) This won't cause a problem if you always remember that when you are adding coefficients, you always use the additive operation appropriate to that type of coefficient.  The same holds true for multiplication.
+\end{rem}
+
+
+Throughout this book, we have encountered various mathematical structures and shown that in many cases they possess group properties. Let's now give polynomials that same treatment. Since we have two operations, addition and multiplication, it is possible that polynomials are groups under either or both of these operations. Of course, it's possible that polynomials may have different properties depending on what type of coefficients they have, so all of the following proofs will depend \emph{only} on the coefficient properties listed in Definition 5.  
 
 First let us take a look at the commutativity and associativity of addition.  While commutativity is not a necessary property for groups, we include the following proof because it uses techniques that are useful in many polynomial proofs.
 
@@ -808,7 +812,7 @@ suppose that we divide $x^3 - x^2 + 2 x - 3$ by $x - 2$.
         &         &       &           &       &         &       &  $5$
 \end{tabular}
 \end{center}
-In the example, we need to take the leading power term of $x$ in the divisor and multiply by something that will make it equal to the the leading power term in the dividend.  In this case it is $x^2$.  This gives $x^2\cdot(x-2) = x^3 - 2x^2$  Subtract from the dividend to yield a remainder of $x^2 + 2x - 3$ and repeat until the remainder is of a degree less than the divisor.
+In the example, we need to take the leading power term of $x$ in the divisor and multiply by something that will make it equal to the the leading power term in the dividend.  In this case it's $x^2$.  This gives $x^2\cdot(x-2) = x^3 - 2x^2$  Subtract from the dividend to yield a remainder of $x^2 + 2x - 3$ and repeat until the remainder is of a degree less than the divisor.
  
 Hence, $x^3 - x^2 + 2 x - 3 = (x - 2) (x^2 + x + 4 ) + 5$.  And simply multiplying out the right side will show that these are indeed equal.
 \end{example}
@@ -886,12 +890,12 @@ x + \cdots + b_m x^m, \]
 where $a_n \neq 0$ and $b_m \neq 0$. 
 Taking a cue from the process of long division, we define a new polynomial $r'(x)$ by
 \begin{align*}
-r'(x) := r(x) - b_m(a_n^{-1}) x^{m-n}g(x)
+r'(x) := r(x) - b_m a_n^{-1} x^{m-n}g(x)
 \end{align*}
 It's tedious to write out all the terms of $r'(x)$. Fortunately, it's not really necessary. We only need to remark that the degree of $r'(x)$ is less than the degree of $r(x)$, since the leading-order terms of $r(x)$ and $b_m(a_n^{-1}) x^{m-n}g(x)$ are both $b_m x^m$, so they cancel. We may plug in $r(x) = f(x) - g(x) q(x)$ to obtain
 \begin{align*}
-r'(x) &:=  f(x) - g(x) q(x) - b_m(a_n^{-1}) x^{m-n}g(x)\\
-&= f(x) - g(x) \left( q(x) - b_m(a_n^{-1}) x^{m-n}\right).
+r'(x) &:=  f(x) - g(x) q(x) - b_m a_n^{-1}  x^{m-n}g(x)\\
+&= f(x) - g(x) \left( q(x) - b_m a_n^{-1}  x^{m-n}\right).
 \end{align*}
 This shows that $r'(x)$ is also in $S$  (look back at the definition and see!).  But 
 $\deg r'(x) < \deg r(x)$, which contradicts our condition that $r(x)$ is an element of $S$ with smallest degree. The rules of proof by contradiction allow us to conclude that our assumption is false: namely, it must be true that $\deg g(x) > \deg r(x)$.
@@ -906,16 +910,16 @@ This implies
 \[
 g(x) [q(x) - q'(x) ] = r'(x) - r(x).
 \]
-If $g$ is not the zero polynomial, then 
+If $q(x) - q'(x)$ is not the zero polynomial, then $ \deg( g(x) \leq \deg( g(x) [q(x) - q'(x) ])$ , which implies
 \[
-\deg( g(x) [q(x) - q'(x) ] )= \deg( r'(x) - r(x) ) \geq \deg g(x).
+\deg g(x) \leq \deg( g(x) [q(x) - q'(x) ] )= \deg( r'(x) - r(x) ).
 \]
 However, the degrees of both $r(x)$ and $r'(x)$ are strictly less than
-the degree of $g(x)$; therefore, $r(x) = r'(x)$ and $q(x) = q'(x)$.
+the degree of $g(x)$, so their difference can't have such a large degree.  It follows that $q(x) - q'(x) = 0$, which implies that $q(x)=q'(x)$ and $r(x)=r'(x)$.
 \end{proof}
 
 \section{Polynomial roots}
-The Fundamental Theorem of Algebra (discussed in Section~\ref{sec:FTOA}) asserts that a real polynomial of degree $n$ has at most $n$ roots. You may have learned this before from previous math classes, but you've probably never seen it proved. Seek no more: the proof is at hand. Not only that--our results will apply to  \emph{any} polynomial ring, including $\RR[x]$, $\CC[x]$, $\QQ[x]$, and $\ZZ_p[x]$.  
+The Fundamental Theorem of Algebra (discussed in Section~\ref{sec:FTOA}) asserts that a real polynomial of degree $n$ has at most $n$ roots. (Actually, this is just the easy part of the theorem, as we mentioned before.) You may have learned this before from previous math classes, but you've probably never seen it proved. Seek no more: the proof is at hand. Not only that--our results will apply to  \emph{any} polynomial ring, including $\RR[x]$, $\CC[x]$, $\QQ[x]$, and $\ZZ_p[x]$.  
 
 The following proposition gives us a way to relate polynomial values to polynomial remainders.
 
@@ -956,11 +960,11 @@ From Proposition~\ref{proposition:poly:polyremainder} $f(x) = (x-a) \cdot q(x) +
 %irreduceable polynomials
 %It is possible for a polynomial to always have a remainder regardless of which polynomial is used to divide it.  A polynomial that cannot be evenly divided cannot be further factored.  A polynomial that cannot be further factored we call an \term{irreducible polynomial}.  \index{Irreducible Polynomial} These polynomials serve a similar function for polynomials as prime numbers do for integers.  Since these polynomials cannot be reduced, we can make deductions as to the behavior of a product of irreducible polynomials.  For example the polynomial $(x+a)$ where $a$ is a real number cannot be factored any further, and the polynomial $mx+b$ where $m$ and $b$ are reals can only be factored into $(x+b/m)(m)$.  A like with real numbers, if we know that $f(x) \cdot g(x) = 0$ then either $f(x) = 0$ or $g(x) = 0$.  Now it is possible to get a higher degree polynomial to be irreducible, but the number set that is used can affect the irreducibility of a polynomial.  For example $x^2 + 1$ is irreducible over the reals, but could be factored over the complex numbers into $(x-i)(x+i)$.  
 
-We will need one more fact in order to prove the Fundamental Theorem of Algebra. From basic algebra, we know that if $ab=0$ then either $a=0$ or $b=0$ (see also 
+We will need one more fact in order to prove (the easy part of) the Fundamental Theorem of Algebra. From basic algebra, we know that if $ab=0$ then either $a=0$ or $b=0$ (see also 
 Proposition~\ref{proposition:complex:nonzero_complex_product} of Chapter~\ref{complex}).  It turns out that the same is true for polynomials, as we now show.
 
 \begin {prop}{polyremainder}
-Suppose $F(x)$ is a polynomial ring, and suppose $p(x),  q(x) \in F(x)$. Then $p(x)  q(x)=0$ iff either $p(x)=0$ or $q(x)=0$.
+Suppose $F[x]$ is a polynomial ring, and suppose $p(x),  q(x) \in F[x]$. Then $p(x)  q(x)=0$ iff either $p(x)=0$ or $q(x)=0$.
 \end {prop}
 \begin {proof}
 Since this is a ``iff'' proof, we must actually prove two things:  
@@ -985,22 +989,36 @@ $c_{m+n}x^{m+n}$, so $p(x)q(x) \neq 0$.    The proof is completed.
 And here's the result we've been waiting for. Now that we've prepared the ground, it's not so difficult to prove.
 
 \begin {prop}{FTOA}
-In any polynomial ring, the equation $x^m-c=0$ has at most $m$ solutions.
+In any polynomial ring, If $f(x)$ is a polynomial of degree $n$ then the equation $f(x)=0$ has at most $m$ solutions.
 \end {prop}
 
 
 \begin {proof}
-Suppose $a_1$ is a solution to $x^m-c=0$. Then by Proposition~\ref{proposition:poly:divide} it follows that $x-a_1$ divides $x^n-c$. Therefore $x^n-c = (x-a_1) g_{n-1}(x)$ where the degree of $g_{n-1}(x)=n-1$. 
+Suppose $a_1$ is a solution to $f(x)=0$. Then by Proposition~\ref{proposition:poly:divide} it follows that $x-a_1$ divides $f(x)$. Therefore $f(x) = (x-a_1) g_{n-1}(x)$ where the degree of $g_{n-1}(x)=n-1$. 
 
 Now if $a_2 \neq a_1$ is another solution then using our above result we have
-\[ {a_2}^n - c = (a_2 - a_1)g_{n-1}(a_2) = 0. \]
+\[ f(a_2) = (a_2 - a_1)g_{n-1}(a_2) = 0. \]
 Since $a_2 - a_1 \neq 0$, it follows that $g_{n-1}(a_2) = 0$. So we can write $g_{n - 1}(x) = (x-a_2)g_{n-2}(x)$ where the degree of $g_2(x) = n-2$. 
 
 Continuing in the same way, if there are distinct roots $a_1,a_2,...,a_n$ then 
 \[
-x^n - c = (x - a_1)(x - a_2)...(x - a_n)g_0,\]
+f(x) = (x - a_1)(x - a_2)...(x - a_n)g_0,\]
  where the degree of $g_0$ is 0 (in other words, $g_0$ is a constant.). So there can't be any more solutions, $a_{n+1}$, because $(x-a_{n+1})$ doesn't divide $g_0$.
 \end {proof}
+
+A special case of this theorem tells us something very, very important about the coefficients of a polynomial ring.  Recall that we're presuming that the set of coefficients is an Abelian group under $+$, and also the nonzero coefficients form an Abelian group under $\cdot$.  (A set that satisfies these properties is called a \term{field}\index{Field!definition}. The theory of fields is an important area of abstract algebra, but we won't get into that now.)   From the previous theorem we immediately have:
+
+\begin {prop}{FTOA}
+Let $R[x]$ be a polynomial ring, and let $c$ be any element $R$.  Then $c$ has at most $n$ $n^{\text{th}}$ roots.
+\end {prop}
+
+
+\begin {proof}
+By the previous proposition, the equation $x^n-c=0$ has at most $n$ solutions.  This is the same thing as saying that $c$ has at most $n$ $n^{\text{th}}$ roots.
+\end {proof}
+
+
+
 
 \section{Proof that $U(p)$ is cyclic}
 
@@ -1017,7 +1035,7 @@ Also, according to the factorization of Abelian groups (Proposition~\ref{Factora
 \[\phi: U(p)  \rightarrow {\mathbb{Z}_{{p_1}^{e_1}}}  \times   {\mathbb{Z}_{{p_2}^{e_2}}}  \times  ... \times   {\mathbb{Z}_{{p_k}^{e_k}}},\]
 where $p_1, p_2, \ldots, p_k$ are all primes.  It's not necessarily true a priori  that all of the $p_j$'s are distinct: but if they are, then Proposition~\ref{RelativelyPrime} tells us that $U(p)$ must be cyclic. 
 
-So it LL comes down to proving that all of the $p_j$'s are distinct. We will prove this by contradiction. Thus, we may suppose that $p_i = p_j$ for some $i \neq j$. 
+So it all comes down to proving that all of the $p_j$'s are distinct. We will prove this by contradiction. Thus, we may suppose that $p_i = p_j$ for some $i \neq j$. 
 Now consider the following two elements of the direct product:
 \[
 g_i = ( 0, \ldots ,\underbrace{p_i^{e_i-1}}_{i'\text{th place}},\ldots,0) \mathrm{~~and~~} g_j = ( 0, \ldots ,\underbrace{p_j^{e_j-1}}_{j'\text{th place}},\ldots,0).

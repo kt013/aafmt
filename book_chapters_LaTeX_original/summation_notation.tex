@@ -4,7 +4,7 @@
 %%% (CPT comments)
 % Move  section "common sums" before "iterated sums"
 % Add new section -- Matrix multiplication. Show how matrix multiplication is represented in summation notation.  Use to prove that (AB)^T = B^T A^T.  Introduce trace of a matrix, and prove that trace(AB) = trace(BA)  (when AB is square)  Exercise:  show that trace(ABC) = trace(CAB)
-% Introduce epsilon symbols (from physics), and relate to determinant of 3x3 matrix, and to vector cross product.  Show the BAC - CAB rule (I can show you this)
+% Introduce epsilon symbols (from physics), and relate to determinant of $3\times 3$ matrix, and to vector cross product.  Show the BAC - CAB rule (I can show you this)
 % Add new section -- summation by parts
 % Derive formula (Look at http://en.wikipedia.org/wiki/Summation_by_parts in method section)
 % Do example  sum of i^2
@@ -229,7 +229,7 @@ If one were to take the first term 1 and add it to the last term $k$, we get $k+
 
 We can use the same reasoning to arrive at the following formula.
 
-\[\sum_{i=a}^{k}i=a+(a+1)+(a+2)\cdots+(k-1) + k = (k+a)*(k-a)/2,\] 
+\[\sum_{i=a}^{k}i=a+(a+1)+(a+2)\cdots+(k-1) + k = (k+a)*(k-a+1)/2,\] 
 where $a$ and $k$ are integers and $a<k$.
 
 %%% Need a better example before these exercises. Students don't know how to represent an odd number.  You can also do exercises where you skip 3 numbers instead of 2
@@ -252,7 +252,7 @@ Give a formula for the sum that you wrote in (e).
 
 %%% Give the derivation of the geometric series for a finite number of terms.
 One infinite sum called the \emph{geometric series}, and is defined as the sum of integer powers of a common base.  For example, here is the geometric series when the base is 1/2:
-\[\sum_{i=0}^{\infty}({\dfrac{1}{2}})^i=({\dfrac{1}{2}})^0+({\dfrac{1}{2}})^1+({\dfrac{1}{2}})^2\cdots = 1 + {\dfrac{1}{2}} + {\dfrac{1}{4}} + {\dfrac{1}{8}}\cdots\]
+\[\sum_{i=0}^{\infty}\left({\dfrac{1}{2}}\right)^i=\left({\dfrac{1}{2}}\right)^0+\left({\dfrac{1}{2}}\right)^1+\left({\dfrac{1}{2}}\right)^2\cdots = 1 + {\dfrac{1}{2}} + {\dfrac{1}{4}} + {\dfrac{1}{8}}\cdots\]
 As we add the terms of the sum together it becomes apparent that the total sum gets closer to 2, but never quite gets there.  However if we add all the terms together, the sum approaches:
 \[\dfrac{1}{1-\dfrac{1}{2}}.\]
 More generally for any value $-1<x<1$ the series:
@@ -261,7 +261,7 @@ We can easily prove this using some fairly simple algebra.  Let $S$ be the value
  \[S=1+x+x^2+x^3+ \cdots \]
 \[xS=x+x^2+x^3+x^4+ \cdots \] 
 Subtracting these two equations gives $S-xS=1$, and solving for $S$ gives:
-\[s=\dfrac{1}{1-x}. \]
+\[S=\dfrac{1}{1-x}. \]
 This same technique can be used to prove the formula for a geometric series with a finite number of terms:
 \[ \sum_{i=0}^{n-1} ar^i = a \dfrac{1-r^n}{1-r} \]
 As before, we let $S$ be the value of this sum. We then compute $S - rS$ (most terms in the sums cancel) and solve for $S$.  See if you can do this for yourself.  (It may be on the test!)
@@ -506,14 +506,14 @@ For an epsilon with three indices, each index can be either 1,2,or 3. The values
 \end{cases} \]
 
 What is the rule behind this definition?  Every \emph{permutation} of $(1,2,3)$.  corresponds to one possible rearrangement of the indices. For instance the permutation 
-$ \left( \begin{smallmatrix}  1 & 2 & 3  \\ 2 & 3 & 1  \end{smallmatrix} \right)$ corresponds to the rearrangement $(2,3,1)$.  Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ is \emph{even} (that is, it can be written as the product of an even number of transpositions), then the corresponding value of $\epsilon_{ijk}$ is 1. Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right)$ is \emph{odd} , then the corresponding value of $\epsilon_{ijk}$ is -1. Whenever any of the indices $i,j,k$  are repeated, then  $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ does not correspond to a permutation, and the value of $\epsilon_{ijk}$ is 0.
+$ \left( \begin{smallmatrix}  1 & 2 & 3  \\ 2 & 3 & 1  \end{smallmatrix} \right)$ (in tableau notation) corresponds to the rearrangement $(2,3,1)$.  Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ is \emph{even} (that is, it can be written as the product of an even number of transpositions), then the corresponding value of $\epsilon_{ijk}$ is 1. Whenever this permutation $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right)$ is \emph{odd} , then the corresponding value of $\epsilon_{ijk}$ is -1. Whenever any of the indices $i,j,k$  are repeated, then  $\left( \begin{smallmatrix} 1 & 2 & 3  \\ i & j & k  \end{smallmatrix} \right) $ does not correspond to a permutation, and the value of $\epsilon_{ijk}$ is 0.
 
 This observation motivates the following general definition  of the \term{Levi-Civita symbol} with $n$ indices\index{Levi-Civita symbol!definition} as:
 
-\[ \epsilon_{i_1 i_2 i_3…i_n}=
+\[ \epsilon_{i_1 i_2 i_3 \ldots i_n}=
 \begin{cases}
-1 ~ \text{if $(i_1,i_2,i_3…,i_n)$ is an even permutation of $(1,2,3, \ldots n)$}\\
--1 ~ \text{if $(i_1,i_2,i_3…,i_n)$ is an odd permutation of $(1,2,3, \ldots n)$}\\
+1 ~ \text{if $(i_1,i_2,i_3 \ldots,i_n)$ is an even permutation of $(1,2,3, \ldots n)$}\\
+-1 ~ \text{if $(i_1,i_2,i_3 \ldots,i_n)$ is an odd permutation of $(1,2,3, \ldots n)$}\\
 0 ~ \text{for any repeated index}
 \end{cases} \]
 
@@ -534,8 +534,8 @@ This means that you may count all the elements contained in set $A$ or set $B$ b
 \begin{exercise}{split}
 \begin{enumerate}[(a)]
 \item
-Show that $1=|\epsilon_{ijk}|+\delta_{ij}+\delta_{jk}+\delta_{ik}-2\delta_{ij}\delta_{ik}$ 
-\hyperref[sec:sigma:hints]{(*Hint*)} 
+Show that for any values $i,j,k \in \{1,2,3\}$, it is always true that 
+\[ 1=|\epsilon_{ijk}|+\delta_{ij}+\delta_{jk}+\delta_{ik}-2\delta_{ij}\delta_{ik} \qquad \hyperref[sec:sigma:hints]{(*Hint*)}.\]   
 \item
 Show that 
 \[
@@ -547,47 +547,47 @@ Show that
 
 
 \subsubsection*{Levi-Civita symbols and determinants} 
-Now that we have defined what the Levi-Civita symbol is, we can actually use if for something!  The first application we'll look at is determinants.  Suppose you have a $2 \times 2 $ matrix $A$:
+Now that we have defined what the Levi-Civita symbol is, we can actually use if for something!  The first application we'll look at is determinants.  Suppose you have a $2 \times 2 $ matrix $A$:\footnote{Previously we wrote our matrix subscripts with a comma between, e.g. $a_{i,j}$. But from now on we'll leave out the comma (e.g. $a_{ij}$), which is the way most math books do it.}
 
 \[ A = \left( \begin{array}{cc}
-a_{1,1} & a_{1,2} \\
-a_{2,1} & a_{2,2} \end{array} \right) \]
+a_{11} & a_{12} \\
+a_{21} & a_{22} \end{array} \right) \]
 
 Then the determinant is:
 
 \[ \text{det} (A) = 
- \left| \begin{array}{cc} a_{1,1} & a_{1,2} \\
-a_{2,1} & a_{2,2} \end{array} \right|
-= a_{1,1}a_{2,2} - a_{1,2}a_{2,1} \]
+ \left| \begin{array}{cc} a_{11} & a_{12} \\
+a_{21} & a_{22} \end{array} \right|
+= a_{11}a_{22} - a_{12}a_{21} \]
 
 We can write this using the Levi-Civita symbol as:
 
-\[ \text{det} A = \sum_{i=1}^2 \sum_{j=1}^2 \epsilon_{ij} a_{1,i} a_{2,j} \]
+\[ \text{det} A = \sum_{i=1}^2 \sum_{j=1}^2 \epsilon_{ij} a_{1i} a_{2j} \]
 
 Let's check this by evaluating the nested sum:
 \begin{align}
-\text{det} A =& \sum_{i=1}^2 \sum_{j=1}^2 \epsilon_{ij} a_{1,i} a_{2,j} \\
-=& \sum_{i=1}^2 \left( \epsilon_{i,1} a_{1,i} a_{2,1} + \epsilon_{i,2} a_{1,i} a_{2,2} \right) \\
-=& \epsilon_{1,1} a_{1,1} a_{2,1} + \epsilon_{1,2} a_{1,1} a_{2,2} + \epsilon_{2,1} a_{1,2} a_{2,1} + \epsilon_{2,2} a_{1,2} a_{2,2}
+\text{det} A =& \sum_{i=1}^2 \sum_{j=1}^2 \epsilon_{ij} a_{1i} a_{2j} \\
+=& \sum_{i=1}^2 \left( \epsilon_{i1} a_{1i} a_{21} + \epsilon_{i2} a_{1i} a_{22} \right) \\
+=& \epsilon_{11} a_{11} a_{21} + \epsilon_{12} a_{11} a_{22} + \epsilon_{21} a_{12} a_{21} + \epsilon_{22} a_{12} a_{22}
 \end{align}
-Looking at the definition, we know that $\epsilon_{1,1}$ and $\epsilon_{2,2}$ equals zero, so the leftmost and rightmost terms go to zero.   For the remaining terms we have $\epsilon_{1,2}$ which equals 1, and $\epsilon_{2,1}$ which equals -1.  Therefore, we are left with:
-\[ \text{det} A = a_{1,1}a_{2,2} - a_{1,2}a_{2,1}, \]
+Looking at the definition, we know that $\epsilon_{11}$ and $\epsilon_{22}$ equals zero, so the leftmost and rightmost terms go to zero.   For the remaining terms we have $\epsilon_{12}$ which equals 1, and $\epsilon_{21}$ which equals -1.  Therefore, we are left with:
+\[ \text{det} A = a_{11}a_{22} - a_{12}a_{21}, \]
 which is exactly the definition you learned in linear algebra.   
 
 The natural generalization to a $3 \times 3$ matrix as:
 
-\[ \text{det} A = \sum_{i=1}^3 \sum_{j=1}^3 \sum_{k=1}^3 \epsilon_{ijk} a_{1,i} a_{2,j} a_{3,k} \]
+\[ \text{det} A = \sum_{i=1}^3 \sum_{j=1}^3 \sum_{k=1}^3 \epsilon_{ijk} a_{1i} a_{2j} a_{3k} \]
 
 \begin{exercise}{}
 Show that the above formula using $\epsilon_{ijk}$ does agree with the determinant formula that you obtain from row expansion.
 \end{exercise}
 
 \begin{exercise}{}
-There is a formula for the determinant of a $4 \times 4$  matrix in terms of a 4-index Levi-Civita symbol. Write down what you think the formula is? (You don't need to prove the formula.)
+There is a formula for the determinant of a $n \times n$  matrix in terms of a n-index Levi-Civita symbol. Write down what you think the formula is? (You don't need to prove the formula.)
 \end{exercise}
 
 \begin{exercise}{}
-Suppose $\sigma$ is a permutation in $S_4$. We can define a $4 \times 4$ matrix $P_{\sigma}$ using index notation as follows:  
+Suppose $\sigma$ is a permutation in $S_4$. We can define a $4 \times 4$ matrix $P_{\sigma}$ using index notation as follows\index{Permutation!matrix}:  
 \[ [P_{\sigma}]_{ij} = \begin{cases} 1 &\mbox{if } j = \sigma(i), \\ 
  0 &\mbox{if } j \neq  \sigma(i).  \end{cases} \]
 (Here $i$ and $j$ can take any values from 1 to 4.)  
@@ -599,19 +599,19 @@ Show that when you multiply the $4 \times 1$ row vector $[1~2~3~4]$ times the ma
 \item
 Using the formula that you guessed in the previous problem, evaluate $\det P_{\sigma}$ when: (i) $\sigma = (24)$; (ii) $\sigma = (143)$; (iii) $\sigma = (14)(23)$; (iv)  $\sigma = (1423)$.
 \item
-In the Permutations chapter we talked about |emph{even} and \emph{odd} permutations\index{Permutation!even and odd}.  How is the value of $\det P_{\sigma}$  related to the evenness or oddness of $\sigma$?
+How is the value of $\det P_{\sigma}$  related to the ``evenness'' or ``oddness'' of the permutation $\sigma$\index{Permutation matrix!determinant}?
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
-Use the Levi-Civita form of the determinant to prove that the determinant of any square matrix $A$ is equal to the determinant of its transpose.  That is, $\text{det} A = \text{det}A^{T}$.
+\begin{exercise}{detTrans}
+Use the Levi-Civita formula for the determinant to prove that the determinant of any square matrix $A$ is equal to the determinant of its transpose.  That is, $\text{det} A = \text{det}A^{T}$.~~\hyperref[sec:sigma:hints]{(*Hint*)} 
 \end{exercise}
 
-An important concept to keep in mind when dealing with these Levi-Civita symbols is what they mean based on when indicies are equal or unequal, and how that relates to permutations.  To see how this works, let's look at a proof to show that if any two rows in a 3x3 matrix are equal, the determinant is 0.  Based on our definition we start out with:
+An important concept to keep in mind when dealing with these Levi-Civita symbols is what they mean based on when indices are equal or unequal, and how that relates to permutations.  To see how this works, let's look at a proof to show that if any two rows in a $3 \times 3$ matrix are equal, the determinant is 0.  Based on our definition we start out with:
 \[
 \text{det} A = \sum_{i,j,k} \epsilon_{ijk} a_{1i} a_{2j} a_{3k}
 \]
-We want to show what happens when any two rows are equal, so lets do one case where row one equals row 2.  In that case $a_{2j}=a_{1j}$.  That means we can rewrite our determinant as:
+We want to show what happens when any two rows are equal, so lets do one case where row 1 equals row 2.  In that case $a_{2j}=a_{1j}$.  That means we can rewrite our determinant as:
 \[
 \text{det} A =  \sum_{i,j,k} \epsilon_{ijk} a_{1i} a_{1j} a_{3k}
 \]
@@ -623,13 +623,13 @@ Now remember what we discused earlier, if you interchange two indices (that is, 
 \[
 \sum_{j,i,k} \epsilon_{jik} a_{1j} a_{1i} a_{3k}=\sum_{j,i,k} - \epsilon_{ijk} a_{1i} a_{1j} a_{3k}
 \]
-First of all, lets not lose sight that both the left hand side and the right hand side represent the same determinant.  So what we see is that the determinant (a real number value) is equal to its negative.  There is only one real number that is equal to its negative and that is zero!  So to recap, if the first row is the same as the second row in a 3x3 matrix, the determinant is always zero.
+First of all, lets not lose sight that both the left hand side and the right hand side represent the same determinant.  So what we see is that the determinant (a real number value) is equal to its negative.  There is only one real number that is equal to its negative and that is zero!  So to recap, if the first row is the same as the second row in a $3\times 3$ matrix, the determinant is always zero.
 
 \begin{exercise}{}
-We showed that if the first and second row of a 3x3 matrix is the same, the determinant is zero.  Now finish the proof that the determinant of a 3x3 is always zero if \emph{any} two rows are the same; that is, prove it for the remaining cases.
+We showed that if the first and second row of a $3\times 3$ matrix is the same, the determinant is zero.  Now finish the proof that the determinant of a $3\times 3$ matrix is always zero if \emph{any} two rows are the same; that is, prove it for the remaining cases.
 \end{exercise}{} 
 
-We can take the notion of equal and unequal indices as step farther by proving that the determinant of a product of two matricies is equal to the product of their determinants.  Lets start with a simple 2x2 matrix.  If matrices $A$ and $B$ are both 2x2, we want to prove that $\text{det}(AB)=\text{det}A\\,text{det}B$.  We can write $\text{det}(AB)$ as:
+We can take the notion of equal and unequal indices as step farther by proving that the determinant of a product of two matricies is equal to the product of their determinants.  Lets start with a simple $2 \times 2$ matrix.  If matrices $A$ and $B$ are both 2x2, we want to prove that $\text{det}(AB)=\text{det}A\\,text{det}B$.  We can write $\text{det}(AB)$ as:
 \[
 \text{det}(AB)= \sum_{x,y} \epsilon_{xy} [AB]_{1x} [AB]_{2y}
 \]
@@ -739,7 +739,7 @@ Therefore:
 =& -14 \textbf{e}_1 + 2 \textbf{e}_2 + 6 \textbf{e}_3.
 \end{align}
 Or we can write the last line in a more familiar fashion:
-\[ [-14 ~ 2 ~ 6]. \] 
+\[ [-14, ~ 2, ~ 6]. \] 
 So all we have to do to define a cross product using the Levi-Civita symbol is to simply plug these terms into the formula for the $3 \times 3$ determinant from earlier:
 \[\textbf{a} \times \textbf{b} = \,\text{det} A = \sum_{i=1}^3 \sum_{j=1}^3 \sum_{k=1}^3 \epsilon_{ijk} \textbf{e}_i  a_j b_k \]
 Notice that we have dropped the first index on each term.  The reason is that the $\textbf{e}$ terms will always be on the first row, $a$ on the second, and $b$ on the third.  
@@ -750,7 +750,7 @@ So for example, the first component (intuitively the $x$ component, or as we wou
 Now see if you can find the equations for the second and third components.  For those of you who are familiar enough with cyclic permutations, this is a relatively easy exercise.  
 
 \begin{exercise}{}
-Use the Levi-Civita symbol to find the cross product of the vectors $\textbf{a}=[2~-3~2]$ and $\textbf{b}=[1~4~-3]$.
+Use the Levi-Civita symbol to find the cross product of the vectors $\textbf{a}=[2,~-3,~2]$ and $\textbf{b}=[1,~4,~-3]$.
 \end{exercise}
 
 \begin{exercise}{}
