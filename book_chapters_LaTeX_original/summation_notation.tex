@@ -69,7 +69,7 @@ $\displaystyle{ \sum_{j=17}^{20} \, 2j^2 - j}$
 \item
 $\displaystyle{ \sum_{k=0}^{4}(x^{2k} - k)}$  \quad (Your answer should be in terms of  $x$).
 \item
-$\displaystyle{ \sum_{k=0}^{7} (-1)^k\frac{x^{k}}{(k+1)(k+2)}}$ \quad  (Your answer should be in terms of $x$).
+$\displaystyle{ \sum_{k=0}^{100} \left(\frac{1}{k+2} - \frac{1}{k+1}\right)}$
 \end {enumerate}
 \end{exercise}
 
@@ -131,7 +131,7 @@ $\displaystyle{\sum_{i=3}^{46}2i}$
 \item
 $\displaystyle{\sum_{j=7}^{20}\cos(j\pi )}$
 \item
-$\displaystyle{\sum_{j=20}^{40}j-20}$
+$\displaystyle{\sum_{j=20}^{40}(j-20)}$
 \end {enumerate}
 \end{exercise}
 
@@ -186,11 +186,11 @@ Rewrite each of the following nested sums, exchanging the order of sums and chan
 \item
 $\displaystyle{\sum_{i=0}^{4}\left(\sum_{j=0}^{8}i\right)}$
 \item
-$\displaystyle{\sum_{j=0}^{2}\left( \sum_{i=j}^{2j}i+j\right)}$
+$\displaystyle{\sum_{j=0}^{3}\left( \sum_{i=j}^{j+3}i+j\right)}$~~(Write as the sum of two summations.)
 \item
-$\displaystyle{\sum_{k=0}^{17}\left(\sum_{i=0}^{2k}2i+1 \right)}$
+$\displaystyle{\sum_{k=0}^{17}\left(\sum_{i=0}^{k}2i+1 \right)}$
 \item
-$\displaystyle{\sum_{i=1}^{10}\left(\sum_{j=i}^{i} (i-j) \right)}$
+$\displaystyle{\sum_{i=1}^{10}\left(\sum_{j=i}^{i+1} (i-j) \right)}$~~(Write as a nested sum plus two additional terms.)
 \item
 $\displaystyle{\sum_{i=1}^{10}\left(\sum_{j=i}^{10} ij \right)}$
 \item
@@ -199,19 +199,28 @@ $\displaystyle{\sum_{i=m}^{n}\left(\sum_{j=i}^{p}jx^i \right)}$
 $\displaystyle{\sum_{i=m}^{n}\left(\sum_{j=q}^{i}(i-j)^2 \right)}$
 \end {enumerate}
 \end{exercise}
-
+Another useful fact: in a nested sum, the outer summation index can be treated as a constant in the inner summation.  So for example:
+\[ \sum_{i=1}^{9} \sum_{j=1}^7 ij = \sum_{i=1}^{9} i \sum_{j=1}^7 j = \sum_{i=1}^{9} i\left (\sum_{j=1}^7 j\right) = \left(\sum_{i=1}^{9} i\right) \left(\sum_{j=1}^7 j\right) = 40\cdot 28=1120. \]
 \begin{exercise}{}
 Using exchange of summation and other sum manipulation techniques, find the exact values of the following sums:
+
+
+\begin{multicols}{2}
 \begin{enumerate}[(a)]
+\item
+$\displaystyle{\sum_{i=1}^{9} \sum_{j=1}^{7} i(8-j)}$
 \item
 $\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^{10} (j-i)}$
 \item
 $\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i \frac{1}{11-j}}$
 \item
-$\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i \frac{i}{j}}$
+$\displaystyle{\sum_{i=1}^{10} \sum_{j=i}^{10} \frac{i}{j(j+1)}}$
+\item
+$\displaystyle{\sum_{i=1}^{20} \sum_{j=1}^i \frac{i}{400-j^2}}$
 \item
 $\displaystyle{\sum_{i=1}^{10} \sum_{j=1}^i (j+i)}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
 \section{Common Sums}
@@ -358,10 +367,6 @@ We know that if a matrix $B$ is the inverse of the $n \times n$ matrix $A$ then 
 Show that: $\displaystyle{ \sum_k  \delta_{ik}\delta_{kj}=\delta_{ij}}.$
 \end{exercise}
 
-\begin{exercise}{kronecker}
-The Kronecker delta can also be use to write a compact, summation notation version of the definition for dot product.  Guess what this formula is, and use it to find the dot product of the vectors $\textbf{a}=[5~1~-2]$ and $\textbf{b}=[3~2~-6]$.
-\hyperref[sec:sigma:hints]{(*Hint*)} 
-\end{exercise}
 
 \subsubsection*{Matrix transpose}
 Transpose is another operation on matrices that lends itself to summation notation.  Recall that the transpose of a matrix changes the rows to columns,so that the first row becomes the first column, the second row becomes the second column, and so on.   Using indices and recalling that first index is the row and the second is the column, we can state this as:
