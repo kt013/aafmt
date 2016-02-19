@@ -1583,7 +1583,7 @@ in the null space of $H$. We can split ${\bold y}$ into two parts as follows:
  {\bold y}_a \\
 {\bold y}_b
  \end{array} \right) \quad
-\mathrm{where~} {\bold y}_a := (y_1, \ldots, y_{n-k})^{\mathrm{T}} \text{ and } {\bold y}_b := (y_{n-k+1}, \ldots, y_n)^{\mathrm{T}}. \]
+\mathrm{where~} {\bold y}_a := (y_1, \ldots, y_{n-k})^{\mathrm{T}} \mathrm{~and~} {\bold y}_b := (y_{n-k+1}, \ldots, y_n)^{\mathrm{T}}. \]
 Since  ${\bold y}$ is in the null space of $H$ we have 
  $H
 {\bold y} = {\bold 0}$, which we can also write as (using partitioned matrix multiplication)

@@ -870,7 +870,7 @@ $3 {\mathbb Z}$ in ${\mathbb Z}$ were
 Now just for curiosity's sake, let's say we took \emph{every} element in $0 + 3 {\mathbb Z}$ and added them to \emph{every} element in $1 + 3 {\mathbb Z}$.  What would be the resulting set?  Try some examples: take an arbitrary element of $0 + 3 {\mathbb Z}$, and add to it an arbitrary element of $1 + 3 {\mathbb Z}$. You will find that the result is always in $1 + 3 {\mathbb Z}$. Let's give a proof of this. First let's give some notation:
 
 \begin{defn}\label{setplus}(\emph{Set addition})  Let $A$ and $B$ be two sets of real numbers.  Then the \term{sum}\index{Sum!of sets} $A + B$ is defined as the set:
-\[ A + B := \{a + b, \mathrm{~where~} a \in A \text{ and } b \in B\} .\]
+\[ A + B := \{a + b, \mathrm{~where~} a \in A \mathrm{~and~} b \in B\} .\]
 \end{defn}
 \noindent
 Notice that we are giving a \emph{new} meaning to the symbol `+', because we are applying it to \emph{sets} rather than \emph{numbers}. 
@@ -919,7 +919,7 @@ Indeed we have closure.  It's beginning to look like we have a group here. Actua
  So \emph{this} is the grand revelation about normal subgroups: \emph{the cosets of a normal subgroup form a group}. But we shouldn't jump the gun: we've only shown it's true for a special case. Now we have to get down to the hard work of proving it in general. First we have to generalize Definition~\ref{setplus} to other group operations.
 
 \begin{defn}\label{setcomp}(\emph{Set composition})  Let $A$ and $B$ be two subsets of a group $G$.  Then the \term{composition}\index{Composition!of sets} $A \circ B$ (or $AB$)  is defined as the set:
-\[ A \circ B := \{a b, \mathrm{~where~} a \in A \text{ and } b \in B\} .\]
+\[ A \circ B := \{a b, \mathrm{~where~} a \in A \mathrm{~and~} b \in B\} .\]
 \end{defn}
 
 The reason that normal subgroups are special is that set composition defines an operation on cosets:

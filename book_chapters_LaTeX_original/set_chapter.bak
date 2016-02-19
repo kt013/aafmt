@@ -576,8 +576,8 @@ But every $x \in U$ must satisfy either $x \in A$ or $x \notin A$. It follows th
 \noindent
 We also have 
 \begin{align*}
-A \cap A' & =  \{ x : x \in A \text{ and } x \in A' \}  & [\text{def. of } \cap ]\\
-& =  \{ x : x \in A \text{ and } x \notin A \}  & [\text{def. of complement} ]  \\
+A \cap A' & =  \{ x : x \in A \mathrm{~and~} x \in A' \}  & [\text{def. of } \cap ]\\
+& =  \{ x : x \in A \mathrm{~and~} x \notin A \}  & [\text{def. of complement} ]  \\
 \end{align*}
 But there is no element $x$ that is both in $A$ and not in $A$, it follows that there are no elements in $A \cap A'$; so $A \cap A' = \emptyset$.
 

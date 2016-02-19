@@ -1,0 +1,485 @@
+\chap{Polynomials, Vectors, Matrices, and Signals}{PolyVec}
+
+In this chapter, we will show how polynomials are used in modern communications technology: in particular, in the area of signal processing. But before we do this, we need to make some connection between polynomials and linear algebra.
+
+To understand this chapter you will need some background in linear algebra, because we will draw heavily on concepts from this area. In particular, you will need to understand algebraic operations on vectors and matrices. To jog your memory,  We'll first review some of the fundamental concepts of vectors and vector spaces. 
+
+\section{Definition of  vector space}
+%%% Needs new section and introduction -- relate polynomials to vector spaces. Assume students have seen vector space in linear algebr, but brief review.
+The most basic idea of a ``vector'' is  a quantity that has magnitude and direction, and which can be represented by an arrow. This simple representation was good enough for basic math and physics classes. However, in upper-level Linear Algebra class we discover that there's a lot more to vectors than this. Vectors are defined as objects in a \emph{vector space}, which can have $1,2,3, \ldots$ or millions of dimensions. Besides this, vectors in a vector space must have two operations called addition and scalar multiplication which must satisfy certain requirements. 
+
+Here is the formal definition:
+
+\begin{defn}
+A \term{vector space over the real numbers}\index{vector space! over $\mathbb{R}$} consists of a set $V$ along with two operations '+' and  ' $\cdot$ ', subject to the conditions that for all vectors $ \vec {v},\vec{w},\vec{u} \in V$ and all scalars $r, s$ $\in \mathbb{R}$:
+\begin {enumerate} [(1)]
+\item
+The set \emph{V} is closed under vector addition: \quad  $\vec{v} + \vec{w} \in V$
+\item
+Vector addition is commutative: \quad  $\vec{v} + \vec{w} = \vec{w} + \vec{v}$
+\item
+Vector addition is associative: \quad ($\vec{v} + \vec{w}) + \vec{u} = \vec{v} + (\vec{w} + \vec{u}$)
+\item
+There exists a \term{zero vector}\index{zero!vector} $\vec{0} \in$ \emph{V} such that $\vec{v} + \vec{0} = \vec{v}$ for all $\vec{v} \in \emph{V}$
+\item
+Each $\vec{v} \in \emph{V}$ has an additive inverse $\vec{w} \in \emph{V}$ such that $\vec{w} + \vec{v} = \vec{0}$
+\item
+The set \emph{V} is closed under scalar multiplication: \quad  $ r  \vec{v} \in V$
+\item
+Addition of scalars distributes over scalar multiplication: \quad $(r+ s) \cdot \vec{v} = r \cdot \vec{v} + s \cdot \vec{v}$
+\item
+Scalar multiplication distributes over vector addition: \quad $ r \cdot( \vec{v} + \vec{w}) = r \cdot \vec{v} + r \cdot \vec{w}$
+\item
+Ordinary multiplication of scalars associates with scalar multiplication: \quad $(rs) \cdot \vec{v} = r \cdot (s \cdot \vec{v})$
+\item
+Multiplication by the scalar 1 is an identity operation: $1 \cdot \vec{v} = \vec{v}$.
+\end{enumerate}
+
+\end{defn}
+Let us recall how these definitions apply to a familiar example.
+
+\begin {example}{}
+  The set $\mathbb{R}^3$ is a vector space if the operations '$ + $' and  '$\cdot$' have their usual meaning of vector addition and scalar multiplication, respectively:
+\[ \left(\begin{array}{c}x_1\\x_2\\x_3\end{array}\right)+ \left(\begin{array}{c}y_1\\y_2\\y_3\end{array}\right) = \left(\begin{array}{c}x_1+y_1\\x_2+y_2\\x_3+y_3\end{array}\right) \text{ and } r\cdot \left(\begin{array}{c}x_1\\x_2\\x_3\end{array}\right) = \left(\begin{array}{c}rx_1\\rx_2\\rx_3\end{array}\right).\]
+
+Let's check the 10 conditions. We'll take 
+\[
+\vec{v} := \left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right);\quad \vec{w} := \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right); \quad
+\vec{u} = \left(\begin{array}{c}u_1\\u_2\\u_3\end{array}\right)
+\]
+ as arbitrary vectors in $\mathbb{R}^3$ ($u_j, v_j$ and $w_j$ are real numbers for $j=1,2,3$).
+
+
+For (1) to show that vector addition is closed  we have
+
+\[ \left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) + \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right) = \left(\begin{array}{c}v_1+w_1\\v_2+w_2\\v_3+w_3\end{array}\right) \in\mathbb{R}^3,\]
+So addition is closed.
+
+For (2),we show addition of vectors commutes:
+
+\[ \left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) + \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right) = \left(\begin{array}{c}v_1+w_1\\v_2+w_2\\v_3+w_3\end{array}\right) 
+ =  \left(\begin{array}{c}w_1+v_1\\w_2+v_2\\w_3+v_3\end{array}\right) = \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right) +\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right).\]
+
+For (3), we show vector addition is associative:
+\begin{align*}
+\left( \left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) + \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right) \right) + \left(\begin{array}{c}u_1\\u_2\\u_3\end{array}\right) &= \left(\begin{array}{c}(v_1+w_1)+u_1\\(v_2+w_2)+u_2\\(v_3+w_3)+u_3\end{array}\right) \\
+&= \left(\begin{array}{c}v_1+(w_1+u_1)\\v_2+(w_2+u_2)\\v_3+(w_3+u_3)\end{array}\right) \\
+& =  \left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) + \left( \left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right)   + \left(\begin{array}{c}u_1\\u_2\\u_3\end{array}\right) \right).
+\end{align*}
+\end{example}
+
+Conditions 4,5,6,7 are reserved for exercises.
+
+%For (4), 
+% $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ $\mbox{~+~}$ $\left(\begin{array}{c}0\\0\\0\end{array}\right)$ = $\left(\begin{array}{c}v_1+0\\v_2+0\\v_3+0\end{array}\right)$ =
+% $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$
+%
+%For (5), For any $v_1,v_2,v_3$ $\in$ $\mathbb{R}$ we have
+%
+%$\left(\begin{array}{c}-v_1\\-v_2\\-v_3\end{array}\right)$ $\mbox{~+~}$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ =
+% $\left(\begin{array}{c}v_1-v_1\\v_2-v_2\\v_3-v_3\end{array}\right)$ =
+%$\left(\begin{array}{c}0\\0\\0\end{array}\right)$
+%
+%For (6), closure under scalar multiplication, where r,$v_1,v_2,v_3$ $\in$ $\mathbb{R}$,
+%
+%r $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ = $\left(\begin{array}{c}rv_1\\rv_2\\rv_3\end{array}\right)$ $\in$ $\mathbb{R}^3$
+%
+%For (7),
+%$( r + s )$ $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ = $\left(\begin{array}{c}( r + s )v_1\\( r + s )v_2\\( r + s )v_3\end{array}\right)$
+% = $\left(\begin{array}{c}rv_1+sv_1\\rv_2+sv_2\\rv_3+sv_3\end{array}\right)$ =
+%$\left(\begin{array}{c}rv_1\\rv_2\\rv_3\end{array}\right)$ $\mbox{~+~}$
+% $\left(\begin{array}{c}sv_1\\sv_2\\sv_3\end{array}\right)$
+%= r $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ + s $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$
+
+For (8), that scalar multiplication distributes from the left over vector addition, we have:
+
+\begin{align*}
+r \cdot \left(\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) ~+~\left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right) \right) &= \left(\begin{array}{c}r(v_1+w_1)\\r(v_2+w_2)\\r(v_3+w_3)\end{array}\right)\\
+ &= \left(\begin{array}{c}rv_1+rw_1\\rv_2+rw_2\\rv_3+rw_3\end{array}\right)\\
+& = r \cdot\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right) + r \cdot\left(\begin{array}{c}w_1\\w_2\\w_3\end{array}\right)
+\end{align*}
+
+%For the ninth condition,
+%
+%( rs ) $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ = $\left(\begin{array}{c}(rs)v_1\\(rs)v_2\\(rs)v_3\end{array}\right)$ = $\left(\begin{array}{c}r(sv_1)\\r(sv_2)\\r(sv_3)\end{array}\right)$ =  r$\cdot$(s  $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$)
+%
+%And the tenth condition,
+%1 $\cdot$ $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$ =  $\left(\begin{array}{c}1v_1\\1v_2\\1v_3\end{array}\right)$ =  $\left(\begin{array}{c}v_1\\v_2\\v_3\end{array}\right)$
+%\end {example}
+
+\begin{exercise}{}
+Prove conditions 4,5,6,7,9,10 for column vectors in $\RR^3$.
+\end{exercise}
+
+\section{Polynomials are vectors}\label{sec:polyAreVec}
+
+At this point the ``abstract''  of abstract algebra comes into play. Once we have defined vector space, then \emph{any} set of any objects that satisfies all ten requirements qualifies as a bona fide vector space, and objects in the set can be called vectors. Do polynomials qualify? We already know that we can add polynomials together, and we can also multiply polynomials by  scalars. To see whether or not the set of polynomials with real coefficients (that is, $\RR[x]$) is a vector space, we will need to check all 10 conditions: 
+\medskip{}
+
+\begin{exercise}{}
+Let $p(x)$, $q(x)$, and $r(x)$ be polynomials in $\mathbb{R}[x]$, and let $\alpha$, $\beta\in\mathbb{R}$ be scalars.  Write the 10 conditions in terms of  $p(x)$, $q(x)$, $r(x)$, $\alpha$, $\beta$.  For example, we have:
+
+1. (Closure under +) $p(x)+q(x)$ is in the set $\mathbb{R}[x]$.
+
+5. (Additive inverse) $p(x)+(-1)\cdot p(x)=0$
+
+8. $\alpha(p(x)+q(x))=\alpha p(x)+\alpha q(x)$
+
+\noindent
+To complete the exercise, write conditions 2,3,4,6,7,9,10. 
+\end{exercise}
+
+%2. (Commutative law) $p(x)+q(x)=q(x)+p(x)$\\
+%3. (Associative law)  $(p(x)+q(x))+r(x)=p(x)+(q(x)+r(x))$\\
+%4. $p(x)+0=p(x)$\\
+%6. (Closure under $\cdot$) $\alpha p(x)$ is also in $\mathbb{R}[x]$\\
+%7. $(\alpha+\beta)p(x)=\alpha p(x)+\beta p(x)$\\
+%
+%9. $(\alpha\beta)p(x)=\alpha(\beta p(x))$\\
+%10. $1p(x)=p(x)$\\
+
+\begin{exercise}{}
+Use summation notation to prove properties 5,7,8 for polynomials.
+\end{exercise}
+
+The preceding exercises show that  the set $\mathbb{R}[x]$ over $\mathbb{R}$ is a vector space, using the standard operations on polynomials. In fact, the polynomial ring $\mathbb{R}[x]$ is an \term{infinite-dimensional} vector space\index{Vector space!inifinte dimensional}. It's true that each individual polynomial has finite degree, but the set has no single bound on the degree of all of its members. For instance, We can think of $1 + 4x + 7x^2$ as corresponding to the vector $( 1, 4, 7, 0, 0,...)$.
+
+Another vector space that we will want to examine is the set of $n \times n$ matrices with real entries.
+
+\begin{exercise}{}
+Let $M$ be the set of $n \times n$ matrices with real entries. Let $A$, $B$, and $C$ be elements of $M$, and let $\alpha$, $\beta\in\mathbb{R}$ be scalars.  Write the 10 vector space conditions in terms of  $A,B,C,\alpha,\beta$. 
+\end{exercise}
+
+\section{Ring isomorphism between polynomials and banded lower-triangular matrices}\label{sec:ringIsoPolyMat}
+
+We have seen that both vectors and matrices define vectors spaces.  But matrices (in particular, square matrices) have something that vectors don't have: namely, two square matrices of the same size can be multiplied together to get a square matrix of the same size.  In contrast, we don't know of any way in general to multiply two $n \times 1$ vectors to obtain another $n \times 1$ vector. 
+
+Now recall that two polynomials can be multiplied together to obtain another polynomial. This suggests that polynomials are more like matrices than vectors. In fact, we will show in this section that the polynomials $\RR[x]$ are ``isomorphic'' to a particular set of matrices.  We put ``isomorphic'' in quotes because the isomorphism doesn't merely preserve a single operation, like the group isomorphisms  that we've seen up till now. Rather, this will be an \term{isomorphism of rings}\index{Isomorphism!of rings} (or \term{ring isomorphism}\index{Ring isomorphism}) that preserves both addition and multiplication.\\
+%We know that a matrix is a grid of numbers that are arranged in rows and columns. A matrix with $n$ rows and $m$ columns is called a $n \times m$ (n-by-m) matrix or a matrix of size $n \times m$ . From what we learned in previous math classes, we can add two same-size matrices and multiply two matrices together (under some condition). So we may guess that polynomials are more matrices-like than vectors-like because we do not multiply two vectors while we can do that for polynomials and matrices.\\
+%In a general vector space, you don't multiply vectors with each other (only scalar multiplication and addition). But we've seen that you can multiply polynomials. So it seems polynomials have more restrictions than a vector space.
+%There is an example of vector space that does have multiplication. Consider, for instance, vector space of $n \times n$ matrices. In this case we have a vector space with both ` + '  and ` $\cdot$ '.
+Let's begin with an example that shows how polynomials can be related to matrices:
+
+\begin{example}{}
+Let $p(x) = 3x^2 - 7x + 2$.  We may represent $p(x)$  as a column vector:
+\[
+p(x) \rightarrow  \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right],
+\]
+where the coefficients of $1,x,x^2 \ldots$ are listed from top to bottom. (We have added some extra zeros to 
+the bottom of the vector for a reason that will become clear later.) Now notice that 
+\[
+x \cdot p(x) \rightarrow \left[\begin{array}{c}0\\2\\-7\\3\\0\end{array}\right] =
+\left[\begin{array}{ccccc}0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 1 & 0\end{array}\right] \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right]. \]
+
+Thus  it seems that when we represent polynomials as column vectors, multiplying a polynomial by  $x$ corresponds to matrix multiplication by a matrix with 1's on the \term{subdiagonal}\index{Subdiagonal!of a matrix} (that is, the entries lying just below the diagonal). We may similarly verify that 
+\[
+x^2 \cdot p(x) \rightarrow  \left[\begin{array}{ccccc}0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0\end{array}\right]   \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right], \]
+where this time the 1's are on the sub-subdiagonal.  You may check that this matrix is in fact the square of the matrix that represents multiplication by $x$.
+\end{example}
+Let's generalize the previous example. Given any polynomial $p(x)=a_0+a_1x+a_2x^2+...+a_nx^n$, we can represent $p(x)$ as a column vector with $m$ entries $(m>n)$ as follows:\\
+\[p(x) \rightarrow \left[\begin{array}{c}a_0\\a_1\\a_2\\\vdots\\a_n\\0\\\vdots\\0\end{array}\right]\]
+\\
+\\
+Then in order to multiply $p(x)$ by $x$, we can represent $x$ as a $m\times m$ square matrix with 1's on the subdiagonal:
+\\
+\[x \rightarrow \left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]\]
+\\
+% Introduce the notation the matrix is $\phi_m(x)$.  The subscript $m$ indicates that it's a $m \times m$ matrix.
+% Example:  show how to construct matrix $\phi_5(x^2 + 3x + 7)$, and verify that it works.
+Now what do we really mean by ``$\rightarrow$''? Really we're talking about a mapping from polynomials to matrices--in other words, a \emph{function}. Accordingly we'll define a function  $\varphi_m: \RR[x] \rightarrow M_{m,m}$ such that $\varphi_m(x)$ is the $m\times m$  subdiagonal matrix that represents polynomial $x$.  (The Greek letter $\varphi$ is pronounced ``fee'' or ``fie''.\footnote{But not ``fo'' or ``fum''.})  The subscript ``$m$'' emphasizes that technically there is a different map for each matrix size.
+
+So far we've only defined $\varphi_m$ for the polynomial $x$, but we'd certainly like to define it for any polynomial. There is a natural way to do this. First let's consider the simplest nonzero polynomial we can think of, namely the constant $1$.  Since $1$ is the multiplicative identity for polynomials, it stands to reason that $\varphi_m(1)$ should be the multiplicative identity for matrices.  Accordingly we define
+\[ \varphi_m(1) := I_{m \times m},\]
+where  $I_{m \times m}$ is the $m \times m$ identity matrix.
+
+In light of our previous experience with isomorphisms of groups, it is then reasonable to impose the following requirements on $\varphi_m$:
+\[
+\varphi_m( p(x) + q(x)) = \varphi_m( p(x)) +\varphi_m(q(x)) \]
+\[
+\varphi_m( p(x)q(x)) = \varphi_m( p(x))\varphi_m(q(x)).
+\]
+
+\begin{example}{}
+To represent the polynomial $x^2+3x+3$ by a $6\times 6$ matrix, we will construct the matrix $\varphi_6(x^2 + 3x + 3)$ as follows:
+\begin{align*}
+\varphi_6(x^2 + 3x + 2) &=\varphi_6(x^2) + \varphi_6(3x) + \varphi_6(7) \\
+&=\varphi_6(x^2) + (\varphi_6(x) + \varphi_6(x)+ \varphi_6(x)) + (\varphi_6(1) + \varphi_6(1))\\
+&= \left[\begin{array}{cccccc}2 & 0 & 0 & 0 & 0 & 0\\3 & 2 & 0 & 0 & 0 & 0\\1 & 3 & 2 & 0 & 0 & 0\\0 & 1 & 3 & 2 & 0 & 0\\0 & 0 & 1 & 3 & 2 & 0\\0 & 0 & 0 & 1 & 3 & 2\end{array}\right]
+\end{align*}
+\end{example}
+% Exercises:  ask the students to find \varphi of some polynomials (including the constant polynomial 1)
+In view of the previous example, it seems more convenient to add the following requirementL
+\[
+\varphi_m(kp(x)) = k\cdot  \varphi_m(p(x)),\]
+where $k$ can be any real number.
+ 
+\begin{exercise}{}
+Find the matrix $\varphi_6$ related to each polynomial.
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item
+$7x^2 - 2x + 3$
+\item
+$3x^4 + 5x^2 - 2$
+\item
+$3x - 7$
+\item
+$-4x^3 + 4$ 
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+%  Exercise:  give several matrices and ask students whether or not they are banded subdiagonal matrices. If they are banded subdiagonal, find polynomial.
+% Example: compute the matrix for the sum of two polynomials, and show that it's the sum of the two matrices
+% exercise: ask the students to do something similar  (parts a,b,c)
+\begin{exercise}{}
+Find the polynomial related to the following matrix:
+\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\5 & 1 & 3 & 0 & 0 & 0\\0 & 5 & 1 & 3 & 0 & 0\\0 & 0 & 5 & 1 & 3 & 0\\0 & 0 & 0 & 5 & 1 & 3\end{array}\right]\]
+\end{exercise}
+
+\begin{exercise}{}
+Which of the following matrices are banded subdiagonal matrices? Find the polynomial associated with each banded subdiagonal matrix?
+\begin{enumerate}[(a)]
+	\item
+\[\left[\begin{array}{cccc}5 & 0 & 0 & 1\\5 & 3 & 0 & 0\\5 & 1 & 3 & 0\\0 & 5 & 1 & 3\end{array}\right]\]	
+	\item
+\[\left[\begin{array}{ccccc}-1 & 0 & 0 & 0 & 0\\2 & -1 & 0 & 0 & 0\\4 & 2 & -1 & 0 & 0\\0 & 4 & 2 & -1 & 0\\0 & 0 & 4 & 2 & -1\end{array}\right]\]
+\item
+\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\1 & 1 & 3 & 0 & 0 & 0\\4 & 1 & 1 & 3 & 0 & 0\\9 & 4 & 1 & 1 & 3 & 0\\0 & 9 & 4 & 1 & 1 & 3\end{array}\right]\]
+\end{enumerate}
+\end{exercise}
+
+\begin{example}{}
+We can also add two matrices by adding their corresponding matrices. For example, if $p(x)=2x^2+x+1$ and $q(x)=5x+6$ then $p(x)+q(x)=2x^2+6x+7$. We can also get the results by adding the matrices that represent $p(x)$ and $q(x)$ as follows:\\
+\[\left[\begin{array}{cccc}1 & 0 & 0 & 0\\1 & 1 & 0 & 0\\2 & 1 & 1 & 0\\0 & 2 & 1 & 1\end{array}\right]+\left[\begin{array}{cccc}6 & 0 & 0 & 0\\5 & 6 & 0 & 0\\0 & 5 & 6 & 0\\0 & 0 & 5 & 6\end{array}\right]=\left[\begin{array}{cccc}7 & 0 & 0 & 0\\6 & 7 & 0 & 0\\2 & 6 & 7 & 0\\0 & 2 & 6 & 7\end{array}\right]\]
+\end{example}
+
+\begin{exercise}{}
+Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case and find $p(x)+q(x)$ by adding their corresponding matrices.
+	\begin{enumerate}[(a)]
+		\item
+		$p(x)=x^5+1$ and $q(x)=x^3+5^2$
+		\item
+		$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3$
+		\item
+		$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$
+	\end{enumerate}
+\end{exercise}
+
+\begin{example}{}
+Use $6 \times 6$ matrices to show that the matrix related to $-4x^2 + 3x - 2$ multiplied by the matrix related to $7x^2 - 2x - 5$ is equal to the matrix related to $(-4x^2 + 3x - 2 )(7x^2 - 2x - 5)$.
+
+\[\left[\begin{array}{cccccc}-2 & 0 & 0 & 0 & 0 & 0\\3 & -2 & 0 & 0 & 0 & 0\\-4 & 3 & -2 & 0 & 0 & 0\\0 & -4 & 3 & -2 & 0 & 0\\0 & 0 & -4 & 3 & -2 & 0\\0 & 0 & 0 & -4 & 3 & -2\end{array}\right]\left[\begin{array}{cccccc}-5 & 0 & 0 & 0 & 0 & 0\\-2 & -5 & 0 & 0 & 0 & 0\\7 & -2 & -5 & 0 & 0 & 0\\0 & 7 & -2 & -5 & 0 & 0\\0 & 0 & 7 & -2 & -5 & 0\\0 & 0 & 0 & 7 & -2 & -5\end{array}\right]\]
+
+\[= \left[\begin{array}{cccccc}10 & 0 & 0 & 0 & 0 & 0\\-11 & 10 & 0 & 0 & 0 & 0\\0 & -11 & 10 & 0 & 0 & 0\\29 & 0 & -11 & 10 & 0 & 0\\-28 & 29 & 0 & -11 & 10 & 0\\0 & -28 & 29 & 0 & -11 & 10\end{array}\right]\]
+
+And we see that $(-4x^2 + 3x - 2 )(7x^2 - 2x - 5) =  -28x^4 + 29 x^3 - 11x + 10$, which can be represent by the matrix:
+
+\[\left[\begin{array}{cccccc}10 & 0 & 0 & 0 & 0 & 0\\-11 & 10 & 0 & 0 & 0 & 0\\0 & -11 & 10 & 0 & 0 & 0\\29 & 0 & -11 & 10 & 0 & 0\\-28 & 29 & 0 & -11 & 10 & 0\\0 & -28 & 29 & 0 & -11 & 10\end{array}\right]\]
+\end{example}
+% exercise -- ask the students to do something similar for mult. (parts a,b,c)
+\begin{exercise}{}
+Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case and find $p(x)\times q(x)$ by multiplying their corresponding matrices.
+\begin{enumerate}[(a)]
+	\item
+	$p(x)=x^5+1$ and $q(x)=x^3+5^2$
+	\item
+	$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3$
+	\item
+	$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$
+\end{enumerate}
+\end{exercise}
+In fact, we have here a mapping  between polynomials under multiplication and banded subdiagonal matrices.  Let's investigate properties of this map.
+% Give some example for a simple polynomial :  use ...
+Let $\varphi : P[x] \mapsto M_{\infty \times \infty}$ for a polynomial: \[p(x) = a_0+a_1x+a_2x^2+\dots+a_mx^m=\sum^ {N}_{m=0} a_{m}x^{m}\] then we have $\varphi(p(x))$ is a matrix $P$ with entries:\\
+\[[\varphi(p)]_{i,j} = \left\{\begin{array}{rcl}\ a_m  &\mbox{if}&   i - j = m,   m=0,... N \\  0 &\mbox{otherwise}& \end{array}\right.\]
+
+We will show that the map $\varphi$ is  1-1 as follows:\\
+Suppose $p(x)$ and $q(x)$ are polynomials and $p(x) \neq q(x)$. We can write
+% Put on same line with and between
+\[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text{and} \qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
+Since $p(x) \neq q(x)$, there must be some k such that $ a_k \neq b_k $.
+But then according to the definition it follows that:
+\[[\varphi(p)]_{k+1, 1} = a_k \qquad \text{and} \qquad [\varphi(q)]_{k+1, 1} = b_k\]
+Therefore, $\varphi(p) \neq \varphi(q)$ since $a_k \neq b_k$.\\
+It would be great if $\varphi$ were onto as well. However, the mapping $\varphi$ is \emph{not} onto for the codomain $M_{\infty \times \infty}$ which is a set of all infinite matrices.
+% Exercise:  given some matrices, find a polynomial p(x) such that \varphi(p(x) = matrix
+
+\begin{exercise}{}
+In each case, find the polynomial $p(x)$ such that $\varphi(p(x))$ equals the given matrix:
+\begin{enumerate}[(a)]
+	\item 
+\[\left[\begin{array}{cccc}9 & 0 & 0 & 0\\1 & 9 & 0 & 0\\7 & 1 & 9 & 0\\0 & 7 & 1 & 9\end{array}\right]\]	
+\item
+\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\6 & 1 & 3 & 0 & 0 & 0\\4 & 6 & 1 & 3 & 0 & 0\\8 & 4 & 6 & 1 & 3 & 0\\0 & 8 & 4 & 6 & 1 & 3\end{array}\right]\]
+\item
+\[\left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\4 & 0 & 1 & 0 & 0 & 0\\9 & 4 & 0 & 1 & 0 & 0\\0 & 9 & 4 & 0 & 1 & 0\end{array}\right]\]
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+Show that the mapping $\varphi$ is not onto for the codomain $M_{\infty \times \infty}$. (Hint: the range of $\varphi$ has only banded subdiagonal matrices.)
+\end{exercise}
+
+\begin{exercise}{}
+Find an infinite matrix $M$ such that $M \neq \varphi(p(x))$ for any polynomial $p(x)$.
+\end{exercise}
+
+\begin{exercise}{}
+Show that if $M = \varphi(p(x))$ for some polynomial $p(x)$ then $M$ is \emph{subdiagonal} that is, all entries above the diagonal are 0.
+\end{exercise}
+
+\begin{exercise}{}
+Show that if $M = \varphi(p(x))$ then M is \emph{banded} that is, $M_{i+k, j+k} = M_{i, j}$ for any positive integers i, j, k.
+\end{exercise}
+
+However, if we define $B$ as the set of all banded subdiagonal matrices, then $B\subset M_{\infty \times \infty}$. The previous 2 exercises have shown that $\varphi$ maps $P[x]$ into $B$. In fact, $\varphi$ maps $P[x]$ onto $B$.
+
+\begin{exercise}{}
+Let $M$ be an arbitrary matrix in $B$. Suppose the first column of $M$ is the column vector $\left(\begin{array}{c}v_1\\v_2\\v_3\\\vdots\end{array}\right)$. Find a polynomial $p(x)$ such that $\varphi(p(x)) = M$. (Hint: the diagonal and subdiagonals of $M$ will have the same values as the starting values in the first row because $M\subset B$)
+\end{exercise}
+So we have that $\varphi:P[x]\to B$ is a 1-1 and onto map.It turns out that $\varphi$ is an isomorphism between the additive group of polynomials   and the subdiagonal banded matrices $B$.\\
+\textbf{Note:} Let recall that isomorphism is a mathematical method for comparing two mathematical objects. From Ancient Greek, isos means equal and morphe means form or shape. So two mathematical objects are "in the same equal forms" if there is a isomorphism between them, which means there is a bijection (1-to-1 and onto function) that can help to map each element $x$ in $X$ mathematical object to each element $y$ in another $Y$ mathematical object and vice-versa.\\
+The next activities will help us to examine if $\varphi$ is, in fact, an additive isomorphism between two groups: polynomials and subdiagonal banded matrices.\\
+\\
+\begin{exercise}{}
+	Show that if $p(x) = 3x^2 - 7x + 4$ and $q(x) = 2x^3 + 2x - 2$, then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
+\end{exercise}
+
+\begin{exercise}{}
+	Show that $B$ ( that is, the subdiagonal banded matrices) is a group under addition.
+\end{exercise}
+
+\begin{exercise}{}
+	Show that $\varphi : P[x] \mapsto B$ is an isomorphism between the addition groups $( P[x] , +)$ and $(B, +)$.
+\end{exercise}
+\begin{prop}{}
+	Let  \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text{and}\qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
+	Then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
+	
+	Proof : We can suppose that $ N \geq N' $ ( if $N'> N$, we just exchange p and q in the proof). For all $b_j$ when $j>N'$, we have $b_j=0$. Then we will have:
+	\[p(x) + q(x) = \sum^ {N}_{m=0} a_{m}x^{m} + \sum^{N}_{m=0} b_{m}x^{m}\] 
+	\[=\sum^{N}_{m=0}(a_{m} + b_{m})x^{m}\]
+%	The reason we can replace the m' and N' in the second sum is that $N\geq N'$ ; the coefficients $b_j$ for $j > N'$ are just equal to 0.
+	
+	Now, using our formula for $\varphi$ we have
+	
+	$[\varphi(p + q)]_{i, j} = \left\{\begin{array}{rcl}\ a_m + b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
+	
+	Comparing this with the 2 formulas
+	
+	$[\varphi(p)]_{i, j} = \left\{\begin{array}{rcl}\ a_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
+	
+	and 
+	$[\varphi(q)]_{i, j} = \left\{\begin{array}{rcl}\ b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
+	
+	It's clear that $[\varphi(p + q)]_{i, j} = [\varphi(p)]_{i, j} + [\varphi(q)]_{i, j}$ for every i and j. In other words, all of the matrix entries  of $\varphi(p + q)$ are equal to the sum of corresponding entries of $\varphi(p)$ and $\varphi(q)$.
+	
+	Therefore $\varphi(p + q) = \varphi(p) + \varphi(q)$.
+\end{prop}
+%\begin{exercise}{}
+%Let \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\] and \[q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]. Show that $\varphi(p + q) = \varphi(p) + \varphi(q)$.
+%\end{exercise}
+\begin{exercise}{}
+Let $e$ is the additive identity polynomial in $P[x]$, can you show that $\varphi(e)$ is the additive identity matrix in $B$? (Hint: just write down as many zeros as you want.)
+\end{exercise}
+So it's true that $\varphi$ is an additive isomorphism. Let keep investigating if it's a multiplicative isomorphism. We can see that, under multiplication, a matrix does not always have its inverse so $\varphi$ can't be a real isomorphism. Still, let see if $\varphi$ has any special properties under multiplication.
+
+\begin{example}{}
+You can see that $\varphi(x)\varphi(x) = \varphi(x^2)$.
+\[\left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right] \left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right]
+=\left[\begin{array}{ccc}0 & 0 & 0 \\0 & 0 & 0 \\1 & 0 & 0 \end{array}\right]
+= \varphi(x^2)\]
+\end{example}
+
+\begin{example}{}
+You can see that $\varphi(x^2)\varphi(x) = \varphi(x^3)$.
+\[\left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \end{array}\right] \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\1 & 0 & 0 & 0 \\0 & 1 & 0 & 0\\0 & 0 & 1 & 0 \end{array}\right]
+= \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\0 & 0 & 0 & 0\\1 & 0 & 0 & 0 \end{array}\right]
+= \varphi(x^3)\]
+\end{example}
+The previous 2 examples show that $\varphi(x^m) \varphi(x) = \varphi(x^{m+1})$.
+% Do some infininite examples
+
+\begin{example}{}
+This example can shows that $\varphi(x)\varphi(x) = \varphi(x^2)$ is still true if we represent $x$ by a $m\times m$ matrix.
+\[\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]=\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 1 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\end{array}\right]\]
+\end{example}
+% convert to align*
+
+\begin{example}{}
+\begin{align*}
+\varphi(x^m)\varphi(x^n) &= \varphi(x^m)\varphi(x)\varphi(x^{n-1})\text{ (rule of composition of function)}\\
+&= \varphi(x^{m+1})\varphi(x^{n-1})\text{ (rule of composition of function)}\\
+&= \varphi(x^{m+1})\varphi(x)\varphi(x^{n-2})\\
+&= \varphi(x^{m+2})\varphi(x^{n-2})\\
+\end{align*}
+After repeating these steps, we have $\varphi(x^m)\varphi(x^n) = \varphi(x^{m+n})$
+\end{example}
+
+This example suggests $\varphi$ preserves the operation of multiplication that is,
+$ \varphi(pq) = \varphi(p)\varphi(q)$.
+
+Be careful here! On the left- hand side we're taking the product of polynomials and taking $\varphi$ of the result. On the right- hand side, we're converting 2 polynomials into matrices, and multiplying the matrices.
+So there are 2 different multiplication operations on the 2 sides of the equation.
+%So far we haven't proven that $\varphi$ preserves the operation of multiplication. We'll do that later - but first let's show some other properties of $\varphi$.
+%
+%We have proven $\varphi$ is 1-1 and onto earlier.
+%Remember that we are wanting to prove that $\varphi$ preserves the operation of multiplication that is, $ \varphi(pq) = \varphi(p)\varphi(q)$.
+%But, notice that both polynomials and matrices also have another operation in common, namely addition. We can therefore ask : Does $\varphi$ preserve the operation of addition? In other words, is it true that $\varphi(p + q) = \varphi(p) + \varphi(q)$?
+
+
+
+%The preceding exercise shows one particular example. We'd like to prove this in general.
+%
+%
+%
+%We have actually shown something is significant. Notice that polynomials and infinite matrices are both groups under addition.
+%So we have shown that $\varphi$ is an one-to-one map of one group into another group which preserves the group operation `+ '.
+%We can do even better than that.
+
+Now, with the following proposition, we can show that $\varphi$ does preserve multiplication operation.
+
+\begin{prop}{}
+	Let  \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text {and}  \qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
+	Then $\varphi(pq) = \varphi(p) \varphi(q)$.
+	
+	Proof : we'll start from the left-hand side of the equation $\varphi(pq) = \varphi(p) \varphi(q)$ and show it's equal to the right-hand side as in the next exercise.
+\end{prop}
+% Give reasons for each step in the following proof and fix parentheses
+% Provide hint to fill in the blanks.
+\begin{exercise}{}
+	Fill in the blanks the following proof. (Hint: Use distributive property, exponent rules, and properties of composition of function)
+\begin{align*}
+\varphi(pq) &= \varphi\Bigg(\Big(\sum^ {N}_{m=0} a_{m}x^{m}\Big)\Big( \sum^{N'}_{m'=0} b_{m'}x^{m'}\Big)\Bigg)\\
+&= \varphi\Bigg(\sum^ {N}_{m=0}\sum^{N'}_{m'=0} a_{m}b_{m'} x^{(~~~~~)} \Bigg)\\
+&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( a_{m}b_{m'} x^{(~~~~~)} \big)\\
+&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( ~~~~~~~ \big)\varphi\big(~~~~~~~\big)\\
+&= \Big(\sum^ {N}_{m=0}\varphi(~~~~~~~)\Big)\Big( \sum^{N'}_{m'=0}\varphi(~~~~~~~)\Big)\\
+&= \varphi \Big(\sum^ {N}_{m=0}(~~~~~~~)\Big)\varphi\Big( \sum^{N'}_{m'=0}(~~~~~~~)\Big)\\
+&= \varphi(~~~) \varphi(~~~)\\
+\end{align*}
+\end{exercise}
+
+So we finally proved that $\varphi$ preserves the operation of multiplication.
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+Show $\varphi(ax) \varphi(bx) = \varphi(abx^2)$
+\item
+Show $\varphi(ax) \varphi(bx^2) = \varphi(abx^3)$
+\item
+Show $\varphi(ax) \varphi(bx^3) = \varphi(abx^4)$
+\item
+Fill in the blank (You don't need to prove this, just follow the pattern of part (a), (b),(c)).
+$\varphi(ax) \varphi(bx^k) = \varphi(  ~~~~~~~~~~~         )$
+\item
+Using part (d) repeatedly with $a = b = 1$, show that $\varphi(x^k) = (\varphi(x))^k$.
+\item
+Using part (e), show that $\varphi(x^k) \varphi(x^l) = \varphi(x^{k + l})$.
+\item
+Using the fact that $\varphi(ax^k) = a\varphi(x^k)$, show that $\varphi(ax^k) \varphi(bx^l) = \varphi(abx^{k + l})$.
+\end{enumerate}
+\end{exercise}
+
+We have done amazing things in this chapter. We showed that polynomials rings are vector spaces and polynomials can be represented by subdiagonal banded matrices. Then you may ask: So what? Can we get anything useful and practical out of these facts? You will be surprised to see that there are, in fact, many real-life applications of polynomials. We will talk about one of them in the next chapter.

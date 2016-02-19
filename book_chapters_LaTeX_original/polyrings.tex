@@ -24,7 +24,7 @@ Notice that we have grouped together terms which have the same power of our vari
 
 Multiplication of polynomials is a bit more involved, so let us start with polynomials of single terms (monomials) and then move up from there.  Suppose we have,
 \begin{align*} 
-p(x)  = 5x^3~\text{and}~  
+p(x)  = 5x^3\text{ and }  
 q(x)  = 3x^2.
 \end{align*}
 Then their product is
@@ -38,7 +38,7 @@ where we combined the coefficients and the exponents (remember your exponent rul
 
 Let's extend ourselves and multiply a polynomial of two terms by a monomial:
 \begin{align*} 
-p(x)  = 5x^3 + 2x \text{~and~}
+p(x)  = 5x^3 + 2x \text{ and }
 q(x)  = 3x^2.
 \end{align*}
 According to the distributive law, we multiply each term in the first polynomial with the second polynomial:
@@ -51,7 +51,7 @@ p(x)  q(x)
 \end{align*}
 In order to  multiply a two term polynomial by another two term polynomial, e.g.
 \begin{align*} 
-p(x)  = 5x^3 + 2x \text{~and~} q(x)  = 3x^2 - 6x,
+p(x)  = 5x^3 + 2x \text{ and } q(x)  = 3x^2 - 6x,
 \end{align*}
 we extend the distributive law even further.  Like before, each term in the first polynomial is being multiplied by every term in the second polynomial,
 Then their product is
@@ -69,7 +69,7 @@ At this point we just have the sum of two monomials times a two term polynomial,
 This is just the same result as the FOIL method\index{FOIL (FLOI) method} you learned in high school, but thinking in terms of the distributive property has the advantage of being applicable to polynomials that have more than just two terms each.  
 For instance, with
 \begin{align*}
-p(x)  = 5x^3 + 4x^2 - 2x \text{~and~} q(x)  = 3x^2 - 6x,
+p(x)  = 5x^3 + 4x^2 - 2x \text{ and } q(x)  = 3x^2 - 6x,
 \end{align*}
 we obtain
 \begin{align*}
@@ -555,7 +555,7 @@ This  is indeed the exact same expression as before, so it is true that $(p(x)q(
 
 \begin {exercise}{polymult}
 Using summation notation, prove the following properties of polynomial multiplication:
-\begin {enumerate}[(1)]
+\begin {enumerate}[(a)]
 \item
 Commutativity:~~ 
 $p(x) q(x) = q(x) p(x)$;
@@ -973,7 +973,7 @@ First we prove the ``if'' part.  It is clear from the formula for multiplication
 
 The ``only if'' part is harder. We will prove the contrapositive, namely that  $p(x)\neq\ 0$ and  $ q(x)\neq\ 0$ implies that  $p(x)q(x) \neq 0$.
 Let 
-\[p(x) =  \sum_{i=0}^{m} a_i x^i \mathrm{~~and~~} q(x) =  \sum_{j=0}^{n} b_j x^j,\] 
+\[p(x) =  \sum_{i=0}^{m} a_i x^i \mathrm{~ and ~} q(x) =  \sum_{j=0}^{n} b_j x^j,\] 
 where $a_m \neq\ 0$ and $b_n\neq\ 0$.
 We can then write
  \[p(x) q(x) = \sum_{k=0}^{m+n} c_k, \mathrm{~~where~~} c_{k} =  \sum_{i=0}^{k}a_i b_{k-i}.\]
@@ -1038,10 +1038,10 @@ where $p_1, p_2, \ldots, p_k$ are all primes.  It's not necessarily true a prior
 So it all comes down to proving that all of the $p_j$'s are distinct. We will prove this by contradiction. Thus, we may suppose that $p_i = p_j$ for some $i \neq j$. 
 Now consider the following two elements of the direct product:
 \[
-g_i = ( 0, \ldots ,\underbrace{p_i^{e_i-1}}_{i'\text{th place}},\ldots,0) \mathrm{~~and~~} g_j = ( 0, \ldots ,\underbrace{p_j^{e_j-1}}_{j'\text{th place}},\ldots,0).
+g_i = ( 0, \ldots ,\underbrace{p_i^{e_i-1}}_{i'\text{th place}},\ldots,0) \mathrm{~ and ~} g_j = ( 0, \ldots ,\underbrace{p_j^{e_j-1}}_{j'\text{th place}},\ldots,0).
 \]
 It is then possible to prove that (recall that ``$|g|$ '' is the order of the group element $g$ )
-\[ |g_i| = p_i \mathrm{~~and~~}  |g_j| = p_j. \]
+\[ |g_i| = p_i \mathrm{~ and ~}  |g_j| = p_j. \]
 
 \begin{exercise}{orders}
 Given the above definitions of $g_i$ and $g_j$, show that   $|g_i| = p_i$ and  $|g_j| = p_j$.
@@ -1049,7 +1049,7 @@ Given the above definitions of $g_i$ and $g_j$, show that   $|g_i| = p_i$ and  $
 \end{exercise}
 As a result of the above exercise, Proposition~\ref{cosets_theorem_7} of the Cosets chapter  enables us to conclude that 
 \[
-|g_i^n| = p_i \mathrm{~~and~~} |g_j^n| = p_j \mathrm{~ for~~} (n = 1,...,p_j-1).
+|g_i^n| = p_i \mathrm{~ and ~} |g_j^n| = p_j \mathrm{~ for~~} (n = 1,...,p_j-1).
 \]
 Since $p_i = p_j$, we have at least $2(p_i-1)$ elements in ${\mathbb{Z}_{{p_1}^{e_1}}}  \times   {\mathbb{Z}_{{p_2}^{e_2}}}  \times  ... \times   {\mathbb{Z}_{{p_k}^{e_k}}}$ of order $p_i$. By 
 Proposition~\ref{isomorph_theorem_1} of the Isomorphisms chapter, this means there are  $2(p_i-1)$ elements of $U(p)$ which have order $p_i$, and all of these elements are solutions of the equation $x^{p_i}-1=0$ (Why?). 
