@@ -14,17 +14,17 @@ Here is the formal definition:
 A \term{vector space over the real numbers}\index{vector space! over $\mathbb{R}$} consists of a set $V$ along with two operations '+' and  ' $\cdot$ ', subject to the conditions that for all vectors $ \vec {v},\vec{w},\vec{u} \in V$ and all scalars $r, s$ $\in \mathbb{R}$:
 \begin {enumerate} [(1)]
 \item
-The set \emph{V} is closed under vector addition: \quad  $\vec{v} + \vec{w} \in V$
+The set $V$ is closed under vector addition: \quad  $\vec{v} + \vec{w} \in V$
 \item
 Vector addition is commutative: \quad  $\vec{v} + \vec{w} = \vec{w} + \vec{v}$
 \item
 Vector addition is associative: \quad ($\vec{v} + \vec{w}) + \vec{u} = \vec{v} + (\vec{w} + \vec{u}$)
 \item
-There exists a \term{zero vector}\index{zero!vector} $\vec{0} \in$ \emph{V} such that $\vec{v} + \vec{0} = \vec{v}$ for all $\vec{v} \in \emph{V}$
+There exists a \term{zero vector}\index{zero!vector} $\vec{0} \in V$ such that $\vec{v} + \vec{0} = \vec{v}$ for all $\vec{v} \in V$
 \item
-Each $\vec{v} \in \emph{V}$ has an additive inverse $\vec{w} \in \emph{V}$ such that $\vec{w} + \vec{v} = \vec{0}$
+Each $\vec{v} \in V$ has an additive inverse $\vec{w} \in V$ such that $\vec{w} + \vec{v} = \vec{0}$
 \item
-The set \emph{V} is closed under scalar multiplication: \quad  $ r  \vec{v} \in V$
+The set $V$ is closed under scalar multiplication: \quad  $ r  \vec{v} \in V$
 \item
 Addition of scalars distributes over scalar multiplication: \quad $(r+ s) \cdot \vec{v} = r \cdot \vec{v} + s \cdot \vec{v}$
 \item
@@ -160,125 +160,171 @@ Now recall that two polynomials can be multiplied together to obtain another pol
 %There is an example of vector space that does have multiplication. Consider, for instance, vector space of $n \times n$ matrices. In this case we have a vector space with both ` + '  and ` $\cdot$ '.
 Let's begin with an example that shows how polynomials can be related to matrices:
 
-\begin{example}{}
+\begin{example}{multx2}
 Let $p(x) = 3x^2 - 7x + 2$.  We may represent $p(x)$  as a column vector:
 \[
-p(x) \rightarrow  \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right],
+p(x) \rightarrow  \left[\begin{array}{c}2\\-7\\3\\0\\0\\0\end{array}\right],
 \]
 where the coefficients of $1,x,x^2 \ldots$ are listed from top to bottom. (We have added some extra zeros to 
 the bottom of the vector for a reason that will become clear later.) Now notice that 
 \[
-x \cdot p(x) \rightarrow \left[\begin{array}{c}0\\2\\-7\\3\\0\end{array}\right] =
-\left[\begin{array}{ccccc}0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 1 & 0\end{array}\right] \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right]. \]
+x \cdot p(x) \rightarrow \left[\begin{array}{c}0\\2\\-7\\3\\0\\0\end{array}\right] =
+\left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0& 0\\1 & 0 & 0 & 0 & 0& 0\\0 & 1 & 0 & 0 & 0& 0\\0 & 0 & 1 & 0 & 0& 0\\0 & 0 & 0 & 1 & 0& 0\\0 & 0 & 0 & 0 & 1& 0\end{array}\right] \left[\begin{array}{c}2\\-7\\3\\0\\0\\0\end{array}\right]. \]
 
 Thus  it seems that when we represent polynomials as column vectors, multiplying a polynomial by  $x$ corresponds to matrix multiplication by a matrix with 1's on the \term{subdiagonal}\index{Subdiagonal!of a matrix} (that is, the entries lying just below the diagonal). We may similarly verify that 
 \[
-x^2 \cdot p(x) \rightarrow  \left[\begin{array}{ccccc}0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0\end{array}\right]   \left[\begin{array}{c}2\\-7\\3\\0\\0\end{array}\right], \]
+x^2 \cdot p(x) \rightarrow  \left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0& 0\\0 & 0 & 0 & 0 & 0& 0\\1 & 0 & 0 & 0 & 0& 0\\0 & 1 & 0 & 0 & 0& 0\\0 & 0 & 1 & 0 & 0& 0\\0 & 0 & 0 & 1 & 0& 0\end{array}\right]   \left[\begin{array}{c}2\\-7\\3\\0\\0\\0\end{array}\right], \]
 where this time the 1's are on the sub-subdiagonal.  You may check that this matrix is in fact the square of the matrix that represents multiplication by $x$.
 \end{example}
+
+\begin{exercise}{multx3}
+Compute the vector representation of $x^3 \cdot p(x)$ for the polynomial in the previous example, and show that this vector can be obtained as a matrix-vector multiplication, where the matrix is the cube of the subdiagonal matrix that represents multiplication by $x$ and  the vector represents $p(x)$.
+\end{exercise}
+
+\begin{exercise}{}
+\begin{enumerate}[(a)]
+\item
+What matrix can we multiply the vector representation of $p(x)$ by to give the vector representation of $5 \cdot p(x)$?
+\item
+What matrix can we multiply the vector representation of $p(x)$ by to give the vector representation of $-8x \cdot p(x)$?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}
+Describe what happens when you try to represent $x^4 \cdot p(x)$ as a $6 \times 1$ vector, as in the previous exercises. How may the vector be changed to correct this?
+\end{exercise}
+
+
 Let's generalize the previous example. Given any polynomial $p(x)=a_0+a_1x+a_2x^2+...+a_nx^n$, we can represent $p(x)$ as a column vector with $m$ entries $(m>n)$ as follows:\\
 \[p(x) \rightarrow \left[\begin{array}{c}a_0\\a_1\\a_2\\\vdots\\a_n\\0\\\vdots\\0\end{array}\right]\]
-\\
-\\
+
 Then in order to multiply $p(x)$ by $x$, we can represent $x$ as a $m\times m$ square matrix with 1's on the subdiagonal:
-\\
-\[x \rightarrow \left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]\]
-\\
+
+\[x \rightarrow \left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right].\]
+
 % Introduce the notation the matrix is $\phi_m(x)$.  The subscript $m$ indicates that it's a $m \times m$ matrix.
 % Example:  show how to construct matrix $\phi_5(x^2 + 3x + 7)$, and verify that it works.
-Now what do we really mean by ``$\rightarrow$''? Really we're talking about a mapping from polynomials to matrices--in other words, a \emph{function}. Accordingly we'll define a function  $\varphi_m: \RR[x] \rightarrow M_{m,m}$ such that $\varphi_m(x)$ is the $m\times m$  subdiagonal matrix that represents polynomial $x$.  (The Greek letter $\varphi$ is pronounced ``fee'' or ``fie''.\footnote{But not ``fo'' or ``fum''.})  The subscript ``$m$'' emphasizes that technically there is a different map for each matrix size.
+Now what do we really mean by ``$\rightarrow$''? Really we're talking about a mapping from polynomials to matrices--in other words, a \emph{function}. Accordingly we'll define a function  $\varphi_m: \RR[x] \rightarrow M_{m,m}$ such that $\varphi_m(x)$ is the $m\times m$  subdiagonal matrix that represents polynomial $x$:
+
+\[\varphi_m(x) = \left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right].\]
+\noindent
+(Note that the Greek letter $\varphi$ is pronounced ``fee'' or ``fie'',\footnote{But not ``fo'' or ``fum''.}  the subscript ``$m$'' emphasizes that technically there is a different map for each matrix size.)
 
 So far we've only defined $\varphi_m$ for the polynomial $x$, but we'd certainly like to define it for any polynomial. There is a natural way to do this. First let's consider the simplest nonzero polynomial we can think of, namely the constant $1$.  Since $1$ is the multiplicative identity for polynomials, it stands to reason that $\varphi_m(1)$ should be the multiplicative identity for matrices.  Accordingly we define
 \[ \varphi_m(1) := I_{m \times m},\]
-where  $I_{m \times m}$ is the $m \times m$ identity matrix.
+where  $I_{m \times m}$ is the $m \times m$ identity matrix. 
 
-In light of our previous experience with isomorphisms of groups, it is then reasonable to impose the following requirements on $\varphi_m$:
+Constant polynomials are the next simplest case. It makes sense to map the constant polynomial $a$ to the matrix $aI_{m \times m}$, so that
+\[ \varphi_m(a) := aI_{m \times m},\]
+In view of the exercises that we did a little while ago, the next reasonable step is to define $\varphi_m(ax)$ as:
+\[  \varphi_m(ax) = \varphi_m(a) \cdot \varphi_m(x) = a \varphi_m(x). \]
+We also saw in Example~\ref{example:PolyVec:multx2} and Exercise~\ref{exercise:PolyVec:multx3} that $ \varphi_m(x^2) = \varphi_m(x)^2$ and; $\varphi_m(x^3) =   \varphi_m(x)^3$. This suggests the following general rule:
+\[ \varphi_m(ax^n) :=   \varphi_m(a) \cdot \varphi_m(x)^n =   a\varphi_m(x)^n. \]
+
+Finally, in light of our previous experience with isomorphisms of groups, it's reasonable to impose the following requirement on $\varphi_m$:
 \[
 \varphi_m( p(x) + q(x)) = \varphi_m( p(x)) +\varphi_m(q(x)) \]
-\[
-\varphi_m( p(x)q(x)) = \varphi_m( p(x))\varphi_m(q(x)).
-\]
+
+We now have enough rules so that we can build up $\varphi_m(p(x))$ for any polynomial $p(x)$.
 
 \begin{example}{}
-To represent the polynomial $x^2+3x+3$ by a $6\times 6$ matrix, we will construct the matrix $\varphi_6(x^2 + 3x + 3)$ as follows:
+We may find the $6\times 6$ matrix which represents the polynomial $x^2+3x-7$ as follows:
 \begin{align*}
-\varphi_6(x^2 + 3x + 2) &=\varphi_6(x^2) + \varphi_6(3x) + \varphi_6(7) \\
-&=\varphi_6(x^2) + (\varphi_6(x) + \varphi_6(x)+ \varphi_6(x)) + (\varphi_6(1) + \varphi_6(1))\\
-&= \left[\begin{array}{cccccc}2 & 0 & 0 & 0 & 0 & 0\\3 & 2 & 0 & 0 & 0 & 0\\1 & 3 & 2 & 0 & 0 & 0\\0 & 1 & 3 & 2 & 0 & 0\\0 & 0 & 1 & 3 & 2 & 0\\0 & 0 & 0 & 1 & 3 & 2\end{array}\right]
+\varphi_6(x^2 + 3x -7) &=\varphi_6(x^2) + \varphi_6(3x) + \varphi_6(-7) \\
+&=\varphi_6(x^2) + 3\varphi_6(x) + -7 \varphi_6(1))\\
+&= \left[\begin{array}{cccccc}-7 & 0 & 0 & 0 & 0 & 0\\3 & -7 & 0 & 0 & 0 & 0\\1 & 3 & -7 & 0 & 0 & 0\\0 & 1 & 3 & -7 & 0 & 0\\0 & 0 & 1 & 3 & -7 & 0\\0 & 0 & 0 & 1 & 3 & -7\end{array}\right]
 \end{align*}
 \end{example}
 % Exercises:  ask the students to find \varphi of some polynomials (including the constant polynomial 1)
-In view of the previous example, it seems more convenient to add the following requirementL
-\[
-\varphi_m(kp(x)) = k\cdot  \varphi_m(p(x)),\]
-where $k$ can be any real number.
  
 \begin{exercise}{}
-Find the matrix $\varphi_6$ related to each polynomial.
+Find the matrix $\varphi_6(p(x))$ related to each polynomial $p(x)$.
 \begin{multicols}{2}
 \begin{enumerate}[(a)]
 \item
-$7x^2 - 2x + 3$
+$p(x) = 7x^2 - 2x + 3$
 \item
-$3x^4 + 5x^2 - 2$
+$p(x) = 3x^4 + 5x^2 - 2$
 \item
-$3x - 7$
+$p(x) = 3x^5$
 \item
-$-4x^3 + 4$ 
+$p(x) = -4x^3 + 4$ 
 \end{enumerate}
 \end{multicols}
 \end{exercise}
-%  Exercise:  give several matrices and ask students whether or not they are banded subdiagonal matrices. If they are banded subdiagonal, find polynomial.
-% Example: compute the matrix for the sum of two polynomials, and show that it's the sum of the two matrices
-% exercise: ask the students to do something similar  (parts a,b,c)
-\begin{exercise}{}
-Find the polynomial related to the following matrix:
-\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\5 & 1 & 3 & 0 & 0 & 0\\0 & 5 & 1 & 3 & 0 & 0\\0 & 0 & 5 & 1 & 3 & 0\\0 & 0 & 0 & 5 & 1 & 3\end{array}\right]\]
-\end{exercise}
 
 \begin{exercise}{}
-Which of the following matrices are banded subdiagonal matrices? Find the polynomial associated with each banded subdiagonal matrix?
+In each case, find the polynomial $p(x)$ such that $\varphi(p(x))$ equals the given matrix:
 \begin{enumerate}[(a)]
-	\item
-\[\left[\begin{array}{cccc}5 & 0 & 0 & 1\\5 & 3 & 0 & 0\\5 & 1 & 3 & 0\\0 & 5 & 1 & 3\end{array}\right]\]	
-	\item
-\[\left[\begin{array}{ccccc}-1 & 0 & 0 & 0 & 0\\2 & -1 & 0 & 0 & 0\\4 & 2 & -1 & 0 & 0\\0 & 4 & 2 & -1 & 0\\0 & 0 & 4 & 2 & -1\end{array}\right]\]
 \item
-\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\1 & 1 & 3 & 0 & 0 & 0\\4 & 1 & 1 & 3 & 0 & 0\\9 & 4 & 1 & 1 & 3 & 0\\0 & 9 & 4 & 1 & 1 & 3\end{array}\right]\]
+\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\6 & 1 & 3 & 0 & 0 & 0\\4 & 6 & 1 & 3 & 0 & 0\\8 & 4 & 6 & 1 & 3 & 0\\0 & 8 & 4 & 6 & 1 & 3\end{array}\right]\]
+\item
+\[\left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\4 & 0 & 1 & 0 & 0 & 0\\9 & 4 & 0 & 1 & 0 & 0\\0 & 9 & 4 & 0 & 1 & 0\end{array}\right]\]
 \end{enumerate}
 \end{exercise}
+Notice the special structure of all these matrices. They all have no entries above the main diagonal. Furthermore they are constant along the subdiagonal, sub-subdiagonal, sub-sub-subdiagonal, and so on.
+By working with examples, you may see that these same properties will hold in general for any matrix that can be written as $\varphi_m(p(x))$ for some polynomial $p(x)$.
+
+
+\begin{exercise}{}
+For each of the following matrices, determine whether or not it corresponds to a polynomial.  If it does, give the polynomial; and if not, explain why not.
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+	\item
+\[\left[\begin{array}{cccc}5 & 0 & 0 & 1\\1 & 3 & 0 & 0\\5 & 1 & 3 & 0\\0 & 5 & 1 & 3\end{array}\right]\]	
+	\item 
+\[\left[\begin{array}{cccc}9 & 0 & 0 & 0\\1 & 9 & 0 & 0\\7 & 1 & 9 & 0\\0 & 7 & 1 & 9\end{array}\right]\]	
+	\item
+\[\left[\begin{array}{ccccc}-1 & 0 & 0 & 0 & 0\\2 & -1 & 0 & 0 & 0\\4 & 2 & -1 & 0 & 0\\0 & 4 & 2 & -1 & 0\\0 & 0 & 0 & 2 & -1\end{array}\right]\]
+%\item
+%\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\1 & 1 & 3 & 0 & 0 & 0\\4 & 1 & 1 & 3 & 0 & 0\\9 & 4 & 1 & 1 & 3 & 0\\0 & 9 & 4 & 1 & 1 & 3\end{array}\right]\]
+\item
+\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\5 & 1 & 3 & 0 & 0 & 0\\0 & 3 & 1 & 3 & 0 & 0\\0 & 0 & 3 & 1 & 3 & 0\\0 & 0 & 0 & 5 & 1 & 3\end{array}\right]\]
+\item
+\[\left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0 & 0\\ 2 & 1 & 0 & 0 & 0 & 0\\0 & 2 & 1 & 0 & 0 & 0\\-1 & 0 & 2 & 1 & 0 & 0\end{array}\right]\]
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+Now let's play around with polynomial arithmetic. Remember our basic rule for polynomial addition:
+\[
+\varphi_m( p(x) + q(x)) = \varphi_m( p(x)) +\varphi_m(q(x)). \]
+We may use this rule to easily find  the matrix for the sum of polynomials by adding the matrices for the individual polynomials.
 
 \begin{example}{}
-We can also add two matrices by adding their corresponding matrices. For example, if $p(x)=2x^2+x+1$ and $q(x)=5x+6$ then $p(x)+q(x)=2x^2+6x+7$. We can also get the results by adding the matrices that represent $p(x)$ and $q(x)$ as follows:\\
+Let $p(x)=2x^2+x+1$ and $q(x)=5x+6$: then $p(x)+q(x)=2x^2+6x+7$. We get the same result when we add the matrices that represent $p(x)$ and $q(x)$:\\
 \[\left[\begin{array}{cccc}1 & 0 & 0 & 0\\1 & 1 & 0 & 0\\2 & 1 & 1 & 0\\0 & 2 & 1 & 1\end{array}\right]+\left[\begin{array}{cccc}6 & 0 & 0 & 0\\5 & 6 & 0 & 0\\0 & 5 & 6 & 0\\0 & 0 & 5 & 6\end{array}\right]=\left[\begin{array}{cccc}7 & 0 & 0 & 0\\6 & 7 & 0 & 0\\2 & 6 & 7 & 0\\0 & 2 & 6 & 7\end{array}\right]\]
 \end{example}
 
 \begin{exercise}{}
-Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case and find $p(x)+q(x)$ by adding their corresponding matrices.
+Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case, and verify that the sum is equal to  $\varphi_m(p(x)+q(x))$ for the given $m$.
 	\begin{enumerate}[(a)]
 		\item
-		$p(x)=x^5+1$ and $q(x)=x^3+5^2$
+		$p(x)=x^5+1$ and $q(x)=x^3+5^2 \quad (m=7)$
 		\item
-		$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3$
+		$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3 \quad (m=5)$
 		\item
-		$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$
+		$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5 \quad(m=3)$
 	\end{enumerate}
 \end{exercise}
 
+It would be nice to do the same with multiplication. Our previous examples suggest the following rule:
+\[
+\varphi_m( p(x)q(x)) = \varphi_m( p(x))\varphi_m(q(x)),
+\]
+Let's see if this works.
+
 \begin{example}{}
-Use $6 \times 6$ matrices to show that the matrix related to $-4x^2 + 3x - 2$ multiplied by the matrix related to $7x^2 - 2x - 5$ is equal to the matrix related to $(-4x^2 + 3x - 2 )(7x^2 - 2x - 5)$.
+Let  $p(x)=-4x^2 + 3x - 2$ and $q(x)=7x^2 - 2x - 5$. Then multiplying $\varphi_6(p(x))\varphi_6(q(x))$ gives.
 
 \[\left[\begin{array}{cccccc}-2 & 0 & 0 & 0 & 0 & 0\\3 & -2 & 0 & 0 & 0 & 0\\-4 & 3 & -2 & 0 & 0 & 0\\0 & -4 & 3 & -2 & 0 & 0\\0 & 0 & -4 & 3 & -2 & 0\\0 & 0 & 0 & -4 & 3 & -2\end{array}\right]\left[\begin{array}{cccccc}-5 & 0 & 0 & 0 & 0 & 0\\-2 & -5 & 0 & 0 & 0 & 0\\7 & -2 & -5 & 0 & 0 & 0\\0 & 7 & -2 & -5 & 0 & 0\\0 & 0 & 7 & -2 & -5 & 0\\0 & 0 & 0 & 7 & -2 & -5\end{array}\right]\]
 
-\[= \left[\begin{array}{cccccc}10 & 0 & 0 & 0 & 0 & 0\\-11 & 10 & 0 & 0 & 0 & 0\\0 & -11 & 10 & 0 & 0 & 0\\29 & 0 & -11 & 10 & 0 & 0\\-28 & 29 & 0 & -11 & 10 & 0\\0 & -28 & 29 & 0 & -11 & 10\end{array}\right]\]
-
-And we see that $(-4x^2 + 3x - 2 )(7x^2 - 2x - 5) =  -28x^4 + 29 x^3 - 11x + 10$, which can be represent by the matrix:
-
-\[\left[\begin{array}{cccccc}10 & 0 & 0 & 0 & 0 & 0\\-11 & 10 & 0 & 0 & 0 & 0\\0 & -11 & 10 & 0 & 0 & 0\\29 & 0 & -11 & 10 & 0 & 0\\-28 & 29 & 0 & -11 & 10 & 0\\0 & -28 & 29 & 0 & -11 & 10\end{array}\right]\]
+\[= \left[\begin{array}{cccccc}10 & 0 & 0 & 0 & 0 & 0\\-11 & 10 & 0 & 0 & 0 & 0\\0 & -11 & 10 & 0 & 0 & 0\\29 & 0 & -11 & 10 & 0 & 0\\-28 & 29 & 0 & -11 & 10 & 0\\0 & -28 & 29 & 0 & -11 & 10\end{array}\right],\]
+which is the matrix that corresponds to $-28x^4 + 29 x^3 - 11x + 10$. You may verify that this polynomial is equal to the product of the two polynomials that we started out with. 
 \end{example}
-% exercise -- ask the students to do something similar for mult. (parts a,b,c)
+
 \begin{exercise}{}
-Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case and find $p(x)\times q(x)$ by multiplying their corresponding matrices.
+Find the matrices that represent the polynomials $p(x)$ and $q(x)$ and verify that the product of these two matrices is the matrix which represents $p(x)q(x)$.
 \begin{enumerate}[(a)]
 	\item
 	$p(x)=x^5+1$ and $q(x)=x^3+5^2$
@@ -288,70 +334,51 @@ Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case 
 	$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$
 \end{enumerate}
 \end{exercise}
-In fact, we have here a mapping  between polynomials under multiplication and banded subdiagonal matrices.  Let's investigate properties of this map.
-% Give some example for a simple polynomial :  use ...
-Let $\varphi : P[x] \mapsto M_{\infty \times \infty}$ for a polynomial: \[p(x) = a_0+a_1x+a_2x^2+\dots+a_mx^m=\sum^ {N}_{m=0} a_{m}x^{m}\] then we have $\varphi(p(x))$ is a matrix $P$ with entries:\\
+
+
+One  problem with our investigations so far is that $\varphi_m$ can't accommodate polynomials of degree greater than or equal to $m$. The only way to deal with this is to make the matrices infinitely large. So  let's define $\varphi : P[x] \mapsto M_{\infty \times \infty}$ as follows: given 
+\[p(x) =\sum^ {N}_{m=0} a_{m}x^{m}\] 
+then we define $\varphi(p(x))$ as a matrix with entries:
 \[[\varphi(p)]_{i,j} = \left\{\begin{array}{rcl}\ a_m  &\mbox{if}&   i - j = m,   m=0,... N \\  0 &\mbox{otherwise}& \end{array}\right.\]
 
-We will show that the map $\varphi$ is  1-1 as follows:\\
-Suppose $p(x)$ and $q(x)$ are polynomials and $p(x) \neq q(x)$. We can write
+We may  show that the map $\varphi$ is  1-1 as follows.
+Suppose $p(x)$ and $q(x)$ are polynomials and $p(x) \neq q(x)$. Then we can write
 % Put on same line with and between
 \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text{and} \qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
-Since $p(x) \neq q(x)$, there must be some k such that $ a_k \neq b_k $.
+Since $p(x) \neq q(x)$, there must be some $k$ such that $ a_k \neq b_k $.
 But then according to the definition it follows that:
 \[[\varphi(p)]_{k+1, 1} = a_k \qquad \text{and} \qquad [\varphi(q)]_{k+1, 1} = b_k\]
-Therefore, $\varphi(p) \neq \varphi(q)$ since $a_k \neq b_k$.\\
-It would be great if $\varphi$ were onto as well. However, the mapping $\varphi$ is \emph{not} onto for the codomain $M_{\infty \times \infty}$ which is a set of all infinite matrices.
-% Exercise:  given some matrices, find a polynomial p(x) such that \varphi(p(x) = matrix
+Therefore, $\varphi(p) \neq \varphi(q)$ since $a_k \neq b_k$.
 
+Is $\varphi$ onto? That's for you to find out:
+
+% Exercise:  given some matrices, find a polynomial p(x) such that \varphi(p(x) = matrix
 \begin{exercise}{}
-In each case, find the polynomial $p(x)$ such that $\varphi(p(x))$ equals the given matrix:
 \begin{enumerate}[(a)]
-	\item 
-\[\left[\begin{array}{cccc}9 & 0 & 0 & 0\\1 & 9 & 0 & 0\\7 & 1 & 9 & 0\\0 & 7 & 1 & 9\end{array}\right]\]	
 \item
-\[\left[\begin{array}{cccccc}3 & 0 & 0 & 0 & 0 & 0\\1 & 3 & 0 & 0 & 0 & 0\\6 & 1 & 3 & 0 & 0 & 0\\4 & 6 & 1 & 3 & 0 & 0\\8 & 4 & 6 & 1 & 3 & 0\\0 & 8 & 4 & 6 & 1 & 3\end{array}\right]\]
+Find an infinite matrix $M$ such that $M \neq \varphi(p(x))$ for any polynomial $p(x)$.  What does this tell you about whether or not $\varphi$ is onto?
 \item
-\[\left[\begin{array}{cccccc}0 & 0 & 0 & 0 & 0 & 0\\1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\4 & 0 & 1 & 0 & 0 & 0\\9 & 4 & 0 & 1 & 0 & 0\\0 & 9 & 4 & 0 & 1 & 0\end{array}\right]\]
+Show that if $M = \varphi(p(x))$ for some polynomial $p(x)$ then $M$ is \term{lower triangular}\index{Matrix!lower triangular}\index{Lower-triangular matrix} that is, all entries above the diagonal are 0.
+\item
+Show that if $M = \varphi(p(x))$ then $M$ is \term{banded},\index{Matrix!banded}\index{Banded matrix} that is, $M_{i+k, j+k} = M_{i, j}$ for any positive integers $i, j, k$.
 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}{}
-Show that the mapping $\varphi$ is not onto for the codomain $M_{\infty \times \infty}$. (Hint: the range of $\varphi$ has only banded subdiagonal matrices.)
-\end{exercise}
+ Let's  define $B\subset M_{\infty \times \infty}$ as the set of all banded subdiagonal matrices, then $B$. The previous exercise (parts (c),(d))  have shown that $\varphi$ maps $P[x]$ into $B$. In fact, $\varphi$ maps $P[x]$ onto $B$:
 
 \begin{exercise}{}
-Find an infinite matrix $M$ such that $M \neq \varphi(p(x))$ for any polynomial $p(x)$.
+Let $M$ be an arbitrary matrix in $B$. Suppose the first column of $M$ is the column vector:
+\[\left(\begin{array}{c}v_1\\v_2\\v_3\\\vdots\end{array}\right).\] 
+Find a polynomial $p(x)$ such that $\varphi(p(x)) = M$. (Hint: the diagonal and subdiagonals of $M$ will have the same values as the starting values in the first row because $M\subset B.$)
 \end{exercise}
+So we have that $\varphi:P[x]\to B$ is a 1-1 and onto map. In fact, $\varphi$ is an isomorphism between the additive group of polynomials   and the subdiagonal banded matrices $B$.\\
+%\textbf{Note:} Let recall that isomorphism is a mathematical method for comparing two mathematical objects. From Ancient Greek, isos means equal and morphe means form or shape. So two mathematical objects are "in the same equal forms" if there is a isomorphism between them, which means there is a bijection (1-to-1 and onto function) that can help to map each element $x$ in $X$ mathematical object to each element $y$ in another $Y$ mathematical object and vice-versa.\\
+%The next activities will help us to examine if $\varphi$ is, in fact, an additive isomorphism between two groups: polynomials and subdiagonal banded matrices.\\
+%\\
+%\begin{exercise}{}
+%	Show that if $p(x) = 3x^2 - 7x + 4$ and $q(x) = 2x^3 + 2x - 2$, then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
+%\end{exercise}
 
-\begin{exercise}{}
-Show that if $M = \varphi(p(x))$ for some polynomial $p(x)$ then $M$ is \emph{subdiagonal} that is, all entries above the diagonal are 0.
-\end{exercise}
-
-\begin{exercise}{}
-Show that if $M = \varphi(p(x))$ then M is \emph{banded} that is, $M_{i+k, j+k} = M_{i, j}$ for any positive integers i, j, k.
-\end{exercise}
-
-However, if we define $B$ as the set of all banded subdiagonal matrices, then $B\subset M_{\infty \times \infty}$. The previous 2 exercises have shown that $\varphi$ maps $P[x]$ into $B$. In fact, $\varphi$ maps $P[x]$ onto $B$.
-
-\begin{exercise}{}
-Let $M$ be an arbitrary matrix in $B$. Suppose the first column of $M$ is the column vector $\left(\begin{array}{c}v_1\\v_2\\v_3\\\vdots\end{array}\right)$. Find a polynomial $p(x)$ such that $\varphi(p(x)) = M$. (Hint: the diagonal and subdiagonals of $M$ will have the same values as the starting values in the first row because $M\subset B$)
-\end{exercise}
-So we have that $\varphi:P[x]\to B$ is a 1-1 and onto map.It turns out that $\varphi$ is an isomorphism between the additive group of polynomials   and the subdiagonal banded matrices $B$.\\
-\textbf{Note:} Let recall that isomorphism is a mathematical method for comparing two mathematical objects. From Ancient Greek, isos means equal and morphe means form or shape. So two mathematical objects are "in the same equal forms" if there is a isomorphism between them, which means there is a bijection (1-to-1 and onto function) that can help to map each element $x$ in $X$ mathematical object to each element $y$ in another $Y$ mathematical object and vice-versa.\\
-The next activities will help us to examine if $\varphi$ is, in fact, an additive isomorphism between two groups: polynomials and subdiagonal banded matrices.\\
-\\
-\begin{exercise}{}
-	Show that if $p(x) = 3x^2 - 7x + 4$ and $q(x) = 2x^3 + 2x - 2$, then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
-\end{exercise}
-
-\begin{exercise}{}
-	Show that $B$ ( that is, the subdiagonal banded matrices) is a group under addition.
-\end{exercise}
-
-\begin{exercise}{}
-	Show that $\varphi : P[x] \mapsto B$ is an isomorphism between the addition groups $( P[x] , +)$ and $(B, +)$.
-\end{exercise}
 \begin{prop}{}
 	Let  \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text{and}\qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
 	Then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
@@ -360,29 +387,41 @@ The next activities will help us to examine if $\varphi$ is, in fact, an additiv
 	\[p(x) + q(x) = \sum^ {N}_{m=0} a_{m}x^{m} + \sum^{N}_{m=0} b_{m}x^{m}\] 
 	\[=\sum^{N}_{m=0}(a_{m} + b_{m})x^{m}\]
 %	The reason we can replace the m' and N' in the second sum is that $N\geq N'$ ; the coefficients $b_j$ for $j > N'$ are just equal to 0.
+
+\noindent
+Now, using our formula for $\varphi$ we have
+\[[\varphi(p + q)]_{i, j} = \left\{\begin{array}{rcl}\ a_m + b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.\]
 	
-	Now, using our formula for $\varphi$ we have
+\noindent
+Comparing this with the 2 formulas
+\[[\varphi(p)]_{i, j} = \left\{\begin{array}{rcl}\ a_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.\]
 	
-	$[\varphi(p + q)]_{i, j} = \left\{\begin{array}{rcl}\ a_m + b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
+\noindent 
+and 
+\[[\varphi(q)]_{i, j} = \left\{\begin{array}{rcl}\ b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.\]
 	
-	Comparing this with the 2 formulas
-	
-	$[\varphi(p)]_{i, j} = \left\{\begin{array}{rcl}\ a_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
-	
-	and 
-	$[\varphi(q)]_{i, j} = \left\{\begin{array}{rcl}\ b_m   &\mbox{if}&   i - j = m,  m = 0,...N \\ 0   &\mbox{otherwise}& \end{array}\right.$
-	
-	It's clear that $[\varphi(p + q)]_{i, j} = [\varphi(p)]_{i, j} + [\varphi(q)]_{i, j}$ for every i and j. In other words, all of the matrix entries  of $\varphi(p + q)$ are equal to the sum of corresponding entries of $\varphi(p)$ and $\varphi(q)$.
+\noindent
+It's clear that $[\varphi(p + q)]_{i, j} = [\varphi(p)]_{i, j} + [\varphi(q)]_{i, j}$ for every i and j. In other words, all of the matrix entries  of $\varphi(p + q)$ are equal to the sum of corresponding entries of $\varphi(p)$ and $\varphi(q)$.
 	
 	Therefore $\varphi(p + q) = \varphi(p) + \varphi(q)$.
 \end{prop}
+
+
+\begin{exercise}{}
+	Show that $B$  (that is, the lower-triangular banded matrices) is a group under addition.
+\end{exercise}
+
+\begin{exercise}{}
+	Show that $\varphi : P[x] \mapsto B$ is an isomorphism between the addition groups $( P[x] , +)$ and $(B, +)$.
+\end{exercise}
+
 %\begin{exercise}{}
 %Let \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\] and \[q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]. Show that $\varphi(p + q) = \varphi(p) + \varphi(q)$.
 %\end{exercise}
-\begin{exercise}{}
-Let $e$ is the additive identity polynomial in $P[x]$, can you show that $\varphi(e)$ is the additive identity matrix in $B$? (Hint: just write down as many zeros as you want.)
-\end{exercise}
-So it's true that $\varphi$ is an additive isomorphism. Let keep investigating if it's a multiplicative isomorphism. We can see that, under multiplication, a matrix does not always have its inverse so $\varphi$ can't be a real isomorphism. Still, let see if $\varphi$ has any special properties under multiplication.
+%\begin{exercise}{}
+%Let $e$ is the additive identity polynomial in $P[x]$, can you show that $\varphi(e)$ is the additive identity matrix in $B$? (Hint: just write down as many zeros as you want.)
+%\end{exercise}
+So it's true that $\varphi$ is an additive isomorphism. It would be nice if it were a multiplicative isomorphism as well. Unfortunately this is impossible, since polynomials don't form a multiplicative group.  Still, let's see if $\varphi$ has any special properties under multiplication.
 
 \begin{example}{}
 You can see that $\varphi(x)\varphi(x) = \varphi(x^2)$.
@@ -448,15 +487,15 @@ Now, with the following proposition, we can show that $\varphi$ does preserve mu
 % Give reasons for each step in the following proof and fix parentheses
 % Provide hint to fill in the blanks.
 \begin{exercise}{}
-	Fill in the blanks the following proof. (Hint: Use distributive property, exponent rules, and properties of composition of function)
+	Fill in the blanks the following proof. (Hint: Use the distributive property, exponent rules, and the operation-preserving properties of $\varphi$)
 \begin{align*}
 \varphi(pq) &= \varphi\Bigg(\Big(\sum^ {N}_{m=0} a_{m}x^{m}\Big)\Big( \sum^{N'}_{m'=0} b_{m'}x^{m'}\Big)\Bigg)\\
-&= \varphi\Bigg(\sum^ {N}_{m=0}\sum^{N'}_{m'=0} a_{m}b_{m'} x^{(~~~~~)} \Bigg)\\
-&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( a_{m}b_{m'} x^{(~~~~~)} \big)\\
-&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( ~~~~~~~ \big)\varphi\big(~~~~~~~\big)\\
-&= \Big(\sum^ {N}_{m=0}\varphi(~~~~~~~)\Big)\Big( \sum^{N'}_{m'=0}\varphi(~~~~~~~)\Big)\\
-&= \varphi \Big(\sum^ {N}_{m=0}(~~~~~~~)\Big)\varphi\Big( \sum^{N'}_{m'=0}(~~~~~~~)\Big)\\
-&= \varphi(~~~) \varphi(~~~)\\
+&= \varphi\Bigg(\sum^ {N}_{m=0}\sum^{N'}_{m'=0} a_{m}b_{m'} x^{\underline{\text{ $<1>$ }}} \Bigg)\\
+&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( a_{m}b_{m'} x^{\underline{\text{ $<2>$ }}} \big)\\
+&= \sum^ {N}_{m=0}\sum^{N'}_{m'=0}\varphi\big( \underline{\text{ $<3>$ }} \big)\varphi\big(\underline{\text{ $<4>$ }}\big)\\
+&= \Big(\sum^ {N}_{m=0}\varphi(\underline{\text{ $<5>$ }})\Big)\Big( \sum^{N'}_{m'=0}\varphi(\underline{\text{ $<6>$ }})\Big)\\
+&= \varphi \Big(\sum^ {N}_{m=0}(\underline{\text{ $<7>$ }})\Big)\varphi\Big( \sum^{N'}_{m'=0}(\underline{\text{ $<8>$ }})\Big)\\
+&= \varphi(\underline{\text{ $<9>$ }}) \varphi(\underline{\text{ $<10>$ }})\\
 \end{align*}
 \end{exercise}
 
@@ -472,7 +511,7 @@ Show $\varphi(ax) \varphi(bx^2) = \varphi(abx^3)$
 Show $\varphi(ax) \varphi(bx^3) = \varphi(abx^4)$
 \item
 Fill in the blank (You don't need to prove this, just follow the pattern of part (a), (b),(c)).
-$\varphi(ax) \varphi(bx^k) = \varphi(  ~~~~~~~~~~~         )$
+$\varphi(ax) \varphi(bx^k) = \varphi(  \underline{\text{ $<1>$ }}    )$
 \item
 Using part (d) repeatedly with $a = b = 1$, show that $\varphi(x^k) = (\varphi(x))^k$.
 \item
