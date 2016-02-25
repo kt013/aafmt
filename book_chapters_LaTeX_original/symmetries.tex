@@ -70,13 +70,13 @@ This is not the first time we've played with symmetries of a figure.  At the end
 Let us investigate the hexagon a bit further.
 
 \begin{example}{hexagon}
-Figure~\ref{hex60rot}  shows a $60^\circ$ counterclockwise rotation of a regular hexagon.
+Figure~\ref{hex60rot}  shows a $60^\circ$ counterclockwise rotation of a regular hexagon where the vertices of the hexagon are labeled $A,B,C,D,E,F$. (Notice how the letters run \emph{counterclockwise} around the hexagon. We will consistently follow this pattern. The reason is that in mathematical convention, a counterclockwise rotation is considered as \emph{positive}, while a clockwise rotation is considered as \emph{negatve}.)
 
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.2]{images/hexABCDEF.png}
-\caption{Hexagon and  $60^\circ$ rotation}\label{hex60rot}
+\includegraphics[width=5in]{images/hexABCDEF_1.png}
+\caption{\label{hex60rot} Hexagon and  $60^\circ$ rotation}
 \end{center}
 \end{figure}
 
@@ -87,9 +87,10 @@ The rotation moves $A$ to $B$, $B$ to $C$, and so on.  Now of course there are o
 Now if we input a point from $\{A,B,C,D,E,F\}$, our rotation outputs a point from $\{A,B,C,D,E,F\}$.  We have used this ``input-output" language before, namely in the Functions chapter. 
 
 In fact, we can think of the $60$ degree rotation as a function $r_{60}$ from $\{A,B,C,D,E,F\} \to \{A,B,C,D,E,F\}$, where (using ordered pair notation)
-\medskip
+\[r_{60} = \{ (A,B), (B,C), (C,D), (D,E), (E,F), (F,A) \}.\]
+Before leaving this example, we make note of a peculiarity that has tripped up many a student. If you compare the 'before' hexagon (shown at left in Figure~\ref{hex60rot}) with the `after' hexagon (shown at right), it appears that the original vertex $B$ has been relabeled as' $A$, $C$ has been relabeled as $B$, and so on.  However, according to our function we say that $A$ goes to $B$, not $B$ goes to $A$. This is because we're thinking of symmetry as a \emph{motion} rather than a relabeling. The fact that original vertex $B$ is relabeled as $A$ means that $A$ moved to $B$, and not vice versa. So you should take care in future examples--whenever you see a vertex $X$ being relabeled as $Y$ this means that $Y \rightarrow X$, and not vice versa.\footnote{Actually, we could have defined symmetries as relabelings rather than motions, and all of the conclusions of this chapter would still hold. We'd just have to rewrite all of our tableaus to reflect this different convention.}
 
-$r_{60} = \{ (A,B), (B,C), (C,D), (D,E), (E,F), (F,A) \}$ 
+ 
 
 \end{example}
 
@@ -193,7 +194,7 @@ Figure~\ref{SymmOfRect} below shows all symmetries of a rectangle.
 \begin{exercise}{10}
 \begin{enumerate}[(a)]
 \item
-Explain why a $90^\circ$ rotation, a $270^\circ$ rotation, or reflection across a diagonal are not symmetries  of the rectangle ABCD.
+Explain why a $90^\circ$ rotation, a $270^\circ$ rotation, or reflection across a diagonal are not symmetries  of the rectangle $ABCD$.
 \item
 What subcategory of rectangle would have a $90^\circ$ rotation, $270^\circ$ rotation, and a reflection across a diagonal as symmetries?
 \item
@@ -333,7 +334,7 @@ $f=$rotation by $ 180^\circ, g=$reflection across the line $CF$
 With reference to the set of symmetries of a particular figure,  Proposition~\ref{proposition:symmetries:symcompclosed} tell us that this set is closed under the operation of composition. Given this fact, the next natural inquiry is to see if this set of symmetries forms a group under composition.  Let's look first at a particular example to see if it works.
 
 \begin{example}{symmsofeqtri}
-Figure~\ref{groups_s3_symmetry_fig} shows all the symmetries of an equilateral triangle:  ${\var id}$ is the identity  ; $\rho_1$ is the $120^\circ$ counterclockwise rotation; $\rho_2$ is the $240^\circ$ counterclockwise rotation; $\mu_1$ is the reflection across the median through $A$; $\mu_2$ is the reflection across the median through $B$; and $\mu_3$ is the reflection across the median through $C$.
+Figure~\ref{groups_s3_symmetry_fig} shows all the symmetries of an equilateral triangle:  ${\var id}$ is the identity  ; $\rho_1$ is the $120^\circ$ counterclockwise rotation; $\rho_2$ is the $240^\circ$ counterclockwise rotation; $\mu_1$ is the reflection across the median through $A$; $\mu_2$ is the reflection across the median through $B$; and $\mu_3$ is the reflection across the median through $C$. We remind the reader once again of the comment we made in Example~\ref{example:symmetries:hexagon}: for example, in the symmetry $\rho_1$ the triangle's vertices $A,B,C$ before the motion appear to be relabeled as $C,A,B$ respectively, which means that $C \rightarrow A$, $A \rightarrow B$, and $B \rightarrow C$ rather than vice-versa.
 
 \begin{figure}[htp] %Replaced diagram with a tikz figure - TWJ 5/5/2010
 \begin{center}

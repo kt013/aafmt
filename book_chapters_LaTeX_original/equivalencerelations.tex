@@ -881,7 +881,7 @@ Fortunately, these statements are all true, as you will show in the following ex
 \begin{exercise}{54} 
 \begin{enumerate}[(a)]
 \item 
-Fill in the blanks in the following proof of statement (a) above that $\mathbin{+}$ is well-defined: 
+Fill in the blanks in the following proof of statement (a) above that $\mathbin{+}$ is well-defined (that is, that  $\class{a_1} = \class{a_2}$ and $\class{b_1} = \class{b_2}$ implies that $\class{a_1} + \class{b_1} = \class{a_2} + \class{b_2}$):
 
 Suppose $\class{a_1} = \class{a_2}$ and $\class{b_1} = \class{b_2}$. 
 \begin{enumerate}[(i)]
@@ -897,7 +897,9 @@ Since $k_1 + k_2$ is an integer it follows from Definition~\ref{mod_eqiv_def_2} 
 \item 
 It follows from Proposition~\ref{EquivRelProps} part (d) that $\underline{~<9>~}$.
 \item
-By Definition~\ref{integ_mod_n} (c) then $\class{a_1} \mathbin{+} \class{b_1} =  \underline{~<10>~}$; so $\mathbin{+}$ is well-defined.
+By Definition~\ref{integ_mod_n} (c) then $\class{a_1} \mathbin{+} \class{b_1} =  \underline{~<10>~}$ and $\class{a_2} \mathbin{+} \class{b_2} =  \underline{~<11>~}$.
+\item
+By substitution we obtain that $\class{a_1} + \class{b_1} = \class{a_2} + \class{b_2}$, which implies that  $\mathbin{+}$ is well-defined on equivalence classes.
 \end{enumerate}
 \item By following the proof in part (a), prove that subtraction mod $n$ is well-defined.
 \item By following the proof in part (a), prove that multiplication mod $n$ is well-defined.
@@ -943,8 +945,7 @@ That is, show that if $[a]_n = [b]_n$, then $f \bigl( [a]_n \bigr) = f \bigl( [b
  Show that if we try to define a function $g \colon \integer_3 \to \integer_2$ by $g \bigl( [a]_3 \bigr) = [a]_2$, then the result is \emph{not} well-defined. That is, show that $\exists a, b \in \integer$ such that
 $[a]_3 = [b]_3$  but $[a]_2 \neq [b]_2.$
 \item
-Generalize part (a) by showing that 
-if $m$ does not divide $n$, then the function 
+Generalize part (a) by showing that $m, n$ are integers and $m$ does not divide $n$, then the function 
 $f: \integer_n \to \integer_m$  given by $f \bigl( [a]_n \bigr) = [a]_m$ is \emph{not} well-defined.
 That is, show that there exists integers $a$, $b$ such that $[a]_n = [b]_n$ and $f \bigl( [a]_n \bigr) \neq f \bigl( [b]_n \bigr)$.
 \end{enumerate}
