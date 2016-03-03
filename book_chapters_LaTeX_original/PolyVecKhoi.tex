@@ -310,9 +310,24 @@ Find the matrices that represent the polynomials $p(x)$ and $q(x)$ in each case,
 
 It would be nice to do the same with multiplication. Our previous examples suggest the following rule:
 \[
-\varphi_m( p(x)q(x)) = \varphi_m( p(x))\varphi_m(q(x)),
+\varphi_m( p(x))\varphi_m(q(x))=\varphi_m( p(x)q(x)) 
 \]
-Let's see if this works.
+Let's see if this works.\\
+
+\begin{example}{}
+	You can see that $\varphi(x)\varphi(x) = \varphi(x^2)$.
+	\[\left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right] \left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right]
+	=\left[\begin{array}{ccc}0 & 0 & 0 \\0 & 0 & 0 \\1 & 0 & 0 \end{array}\right]
+	= \varphi(x^2)\]
+\end{example}
+
+\begin{example}{}
+	You can see that $\varphi(x^2)\varphi(x) = \varphi(x^3)$.
+	\[\left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \end{array}\right] \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\1 & 0 & 0 & 0 \\0 & 1 & 0 & 0\\0 & 0 & 1 & 0 \end{array}\right]
+	= \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\0 & 0 & 0 & 0\\1 & 0 & 0 & 0 \end{array}\right]
+	= \varphi(x^3)\]
+\end{example}
+The previous 2 examples show that $\varphi(x^m) \varphi(x) = \varphi(x^{m+1})$.
 
 \begin{example}{}
 Let  $p(x)=-4x^2 + 3x - 2$ and $q(x)=7x^2 - 2x - 5$. Then multiplying $\varphi_6(p(x))\varphi_6(q(x))$ gives.
@@ -324,15 +339,16 @@ which is the matrix that corresponds to $-28x^4 + 29 x^3 - 11x + 10$. You may ve
 \end{example}
 
 \begin{exercise}{}
-Find the matrices that represent the polynomials $p(x)$ and $q(x)$ and verify that the product of these two matrices is the matrix which represents $p(x)q(x)$.
+Find the $m\times m$ matrices that represent the polynomials $p(x)$ and $q(x)$ and verify that the product of these two matrices is the matrix which represents $p(x)q(x)$.
 \begin{enumerate}[(a)]
 	\item
-	$p(x)=x^5+1$ and $q(x)=x^3+5^2$
+	$p(x)=x^5+1$ and $q(x)=x^3+5^2$ (with $m=10$)
 	\item
-	$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3$
+	$p(x)=7x^4+1$ and $q(x)=x^3+5^2+10x-3$ (with $m=8$)
 	\item
-	$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$
+	$p(x)=2x^2-2x+5$ and $q(x)=x^2+2x-5$ (with $m=7$)
 \end{enumerate}
+Can you choose different value of $m$ in part (a), (b), and (c)? What is the minimum value you can choose for $m$ in each part?
 \end{exercise}
 
 
@@ -383,7 +399,7 @@ So we have that $\varphi:P[x]\to B$ is a 1-1 and onto map. In fact, $\varphi$ is
 	Let  \[p(x) = \sum^ {N}_{m=0} a_{m}x^{m}\qquad \text{and}\qquad q(x) = \sum^ {N'}_{m'=0} b_{m'}x^{m'}\]
 	Then $\varphi(p + q) = \varphi(p) + \varphi(q)$.
 	
-	Proof : We can suppose that $ N \geq N' $ ( if $N'> N$, we just exchange p and q in the proof). For all $b_j$ when $j>N'$, we have $b_j=0$. Then we will have:
+	Proof : We can suppose that $ N \geq N' $ ( if $N'> N$, we just exchange $p$ and $q$ in the proof). For all $b_j$ when $j>N'$, we have $b_j=0$. Then we will have:
 	\[p(x) + q(x) = \sum^ {N}_{m=0} a_{m}x^{m} + \sum^{N}_{m=0} b_{m}x^{m}\] 
 	\[=\sum^{N}_{m=0}(a_{m} + b_{m})x^{m}\]
 %	The reason we can replace the m' and N' in the second sum is that $N\geq N'$ ; the coefficients $b_j$ for $j > N'$ are just equal to 0.
@@ -422,40 +438,23 @@ It's clear that $[\varphi(p + q)]_{i, j} = [\varphi(p)]_{i, j} + [\varphi(q)]_{i
 %Let $e$ is the additive identity polynomial in $P[x]$, can you show that $\varphi(e)$ is the additive identity matrix in $B$? (Hint: just write down as many zeros as you want.)
 %\end{exercise}
 So it's true that $\varphi$ is an additive isomorphism. It would be nice if it were a multiplicative isomorphism as well. Unfortunately this is impossible, since polynomials don't form a multiplicative group.  Still, let's see if $\varphi$ has any special properties under multiplication.
-
-\begin{example}{}
-You can see that $\varphi(x)\varphi(x) = \varphi(x^2)$.
-\[\left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right] \left[\begin{array}{ccc}0 & 0 & 0 \\1 & 0 & 0 \\0 & 1 & 0 \end{array}\right]
-=\left[\begin{array}{ccc}0 & 0 & 0 \\0 & 0 & 0 \\1 & 0 & 0 \end{array}\right]
-= \varphi(x^2)\]
-\end{example}
-
-\begin{example}{}
-You can see that $\varphi(x^2)\varphi(x) = \varphi(x^3)$.
-\[\left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \end{array}\right] \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\1 & 0 & 0 & 0 \\0 & 1 & 0 & 0\\0 & 0 & 1 & 0 \end{array}\right]
-= \left[\begin{array}{cccc}0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\0 & 0 & 0 & 0\\1 & 0 & 0 & 0 \end{array}\right]
-= \varphi(x^3)\]
-\end{example}
-The previous 2 examples show that $\varphi(x^m) \varphi(x) = \varphi(x^{m+1})$.
 % Do some infininite examples
 
 \begin{example}{}
 This example can shows that $\varphi(x)\varphi(x) = \varphi(x^2)$ is still true if we represent $x$ by a $m\times m$ matrix.
-\[\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]=\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\0 & 0 & 1 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\end{array}\right]\]
+\[\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\0 & 1 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 1 & 0\end{array}\right]=\left[\begin{array}{cccccc}0 & 0 & 0 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\\1 & 0 & 0 & \hdots & 0 & 0\\\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\0 & 0 & 1 & \hdots & 0 & 0\\0 & 0 & 0 & \hdots & 0 & 0\end{array}\right]\]
 \end{example}
 % convert to align*
 
-\begin{example}{}
-\begin{align*}
-\varphi(x^m)\varphi(x^n) &= \varphi(x^m)\varphi(x)\varphi(x^{n-1})\text{ (rule of composition of function)}\\
-&= \varphi(x^{m+1})\varphi(x^{n-1})\text{ (rule of composition of function)}\\
-&= \varphi(x^{m+1})\varphi(x)\varphi(x^{n-2})\\
-&= \varphi(x^{m+2})\varphi(x^{n-2})\\
-\end{align*}
-After repeating these steps, we have $\varphi(x^m)\varphi(x^n) = \varphi(x^{m+n})$
-\end{example}
-
-This example suggests $\varphi$ preserves the operation of multiplication that is,
+%\begin{example}{}
+%\begin{align*}
+%\varphi(x^m)\varphi(x^n) &= \varphi(x^m)\varphi(x)\varphi(x^{n-1})\text{ (rule of composition of function)}\\
+%&= \varphi(x^{m+1})\varphi(x^{n-1})\text{ (rule of composition of function)}\\
+%&= \varphi(x^{m+1})\varphi(x)\varphi(x^{n-2})\\
+%&= \varphi(x^{m+2})\varphi(x^{n-2})\\
+%\end{align*}
+%\end{example}
+In general, we have $\varphi(x^m)\varphi(x^n) = \varphi(x^{m+n})$. It also suggests that $\varphi$ preserves the operation of multiplication that is,
 $ \varphi(pq) = \varphi(p)\varphi(q)$.
 
 Be careful here! On the left- hand side we're taking the product of polynomials and taking $\varphi$ of the result. On the right- hand side, we're converting 2 polynomials into matrices, and multiplying the matrices.
@@ -486,8 +485,10 @@ Now, with the following proposition, we can show that $\varphi$ does preserve mu
 \end{prop}
 % Give reasons for each step in the following proof and fix parentheses
 % Provide hint to fill in the blanks.
+
 \begin{exercise}{}
-	Fill in the blanks the following proof. (Hint: Use the distributive property, exponent rules, and the operation-preserving properties of $\varphi$)
+Fill in the blanks the following proof. (Hint: Use the distributive property, exponent rules, and the operation-preserving properties of $\varphi$)
+
 \begin{align*}
 \varphi(pq) &= \varphi\Bigg(\Big(\sum^ {N}_{m=0} a_{m}x^{m}\Big)\Big( \sum^{N'}_{m'=0} b_{m'}x^{m'}\Big)\Bigg)\\
 &= \varphi\Bigg(\sum^ {N}_{m=0}\sum^{N'}_{m'=0} a_{m}b_{m'} x^{\underline{\text{ $<1>$ }}} \Bigg)\\
@@ -499,26 +500,25 @@ Now, with the following proposition, we can show that $\varphi$ does preserve mu
 \end{align*}
 \end{exercise}
 
-So we finally proved that $\varphi$ preserves the operation of multiplication.
+So we finally proved that $\varphi$ preserves the operation of multiplication.\\
 
-\begin{exercise}{}
-\begin{enumerate}[(a)]
-\item
-Show $\varphi(ax) \varphi(bx) = \varphi(abx^2)$
-\item
-Show $\varphi(ax) \varphi(bx^2) = \varphi(abx^3)$
-\item
-Show $\varphi(ax) \varphi(bx^3) = \varphi(abx^4)$
-\item
-Fill in the blank (You don't need to prove this, just follow the pattern of part (a), (b),(c)).
-$\varphi(ax) \varphi(bx^k) = \varphi(  \underline{\text{ $<1>$ }}    )$
-\item
-Using part (d) repeatedly with $a = b = 1$, show that $\varphi(x^k) = (\varphi(x))^k$.
-\item
-Using part (e), show that $\varphi(x^k) \varphi(x^l) = \varphi(x^{k + l})$.
-\item
-Using the fact that $\varphi(ax^k) = a\varphi(x^k)$, show that $\varphi(ax^k) \varphi(bx^l) = \varphi(abx^{k + l})$.
-\end{enumerate}
-\end{exercise}
-
+%\begin{exercise}{}
+%\begin{enumerate}[(a)]
+%\item
+%Show $\varphi(ax) \varphi(bx) = \varphi(abx^2)$
+%\item
+%Show $\varphi(ax) \varphi(bx^2) = \varphi(abx^3)$
+%\item
+%Show $\varphi(ax) \varphi(bx^3) = \varphi(abx^4)$
+%\item
+%Fill in the blank (You don't need to prove this, just follow the pattern of part (a), (b),(c)).
+%$\varphi(ax) \varphi(bx^k) = \varphi(  \underline{\text{ $<1>$ }}    )$
+%\item
+%Using part (d) repeatedly with $a = b = 1$, show that $\varphi(x^k) = (\varphi(x))^k$.
+%\item
+%Using part (e), show that $\varphi(x^k) \varphi(x^l) = \varphi(x^{k + l})$.
+%\item
+%Using the fact that $\varphi(ax^k) = a\varphi(x^k)$, show that $\varphi(ax^k) \varphi(bx^l) = \varphi(abx^{k + l})$.
+%\end{enumerate}
+%\end{exercise}
 We have done amazing things in this chapter. We showed that polynomials rings are vector spaces and polynomials can be represented by subdiagonal banded matrices. Then you may ask: So what? Can we get anything useful and practical out of these facts? You will be surprised to see that there are, in fact, many real-life applications of polynomials. We will talk about one of them in the next chapter.
